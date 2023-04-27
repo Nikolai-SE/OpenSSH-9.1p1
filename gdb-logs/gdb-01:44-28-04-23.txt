@@ -1,0 +1,951 @@
+Already logging to gdb.txt.
+[Switching to Thread 0x7ffff7a5d740 (LWP 32716)]
+
+Thread 2.1 "sshd" hit Breakpoint 1, compat_kex_proposal (ssh=ssh@entry=0x555555677cb0, p=0x555555664760 "sntrup761x25519-sha512@openssh.com,curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group14-sha256") at compat.c:208
+208			free(cp);
+[ Legend: Modified register | Code | Heap | Stack | String ]
+────────────────────────────────────────────────────────────────────── registers ────
+$rax   : 0x0000555555664760  →  "sntrup761x25519-sha512@openssh.com,curve25519-sha2[...]"
+$rbx   : 0x00005555556730e0  →  0x0000555555673b00  →  0x0000000000000000
+$rcx   : 0x000055555565a010  →  0x0007000500070007
+$rdx   : 0x10              
+$rsp   : 0x00007fffffffe300  →  0x00005555555fe4ad  →  " rdomain ""
+$rbp   : 0x00005555556604c0  →  "sntrup761x25519-sha512@openssh.com,curve25519-sha2[...]"
+$rsi   : 0x00005555555bbecf  →  <compat_kex_proposal+239> mov r12, rax
+$rdi   : 0x00005555555bfff0  →  <match_filter_denylist+0> push r12
+$rip   : 0x00005555555bbedb  →  <compat_kex_proposal+251> mov rdi, rbp
+$r8    : 0x0               
+$r9    : 0x00005555556604c0  →  "sntrup761x25519-sha512@openssh.com,curve25519-sha2[...]"
+$r10   : 0x00007fffffffe1e0  →  0x0000003000000030 ("0"?)
+$r11   : 0x00005555556603a0  →  0x0000000000000000
+$r12   : 0x0000555555664760  →  "sntrup761x25519-sha512@openssh.com,curve25519-sha2[...]"
+$r13   : 0xc3b8            
+$r14   : 0x0000555555673180  →  "127.0.0.1"
+$r15   : 0x00005555555fe4ad  →  " rdomain ""
+$eflags: [zero carry PARITY adjust sign trap INTERRUPT direction overflow resume virtualx86 identification]
+$cs: 0x33 $ss: 0x2b $ds: 0x00 $es: 0x00 $fs: 0x00 $gs: 0x00 
+────────────────────────────────────────────────────────────────────────── stack ────
+0x00007fffffffe300│+0x0000: 0x00005555555fe4ad  →  " rdomain ""	 ← $rsp
+0x00007fffffffe308│+0x0008: 0x0000555555677cb0  →  0x0000555555673310  →  0x0000000300000003
+0x00007fffffffe310│+0x0010: 0x00005555556797f0  →  0x0000000000000000
+0x00007fffffffe318│+0x0018: 0x0000555555563f5c  →  <do_ssh2_kex+156> mov rsi, QWORD PTR [rip+0xf1a15]        # 0x555555655978 <options+1208>
+0x00007fffffffe320│+0x0020: 0x00005555555feb38  →  "sntrup761x25519-sha512@openssh.com,curve25519-sha2[...]"
+0x00007fffffffe328│+0x0028: 0x00005555555fec48  →  "ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp2[...]"
+0x00007fffffffe330│+0x0030: 0x00005555555fee18  →  "chacha20-poly1305@openssh.com,aes128-ctr,aes192-ct[...]"
+0x00007fffffffe338│+0x0038: 0x00005555555fee18  →  "chacha20-poly1305@openssh.com,aes128-ctr,aes192-ct[...]"
+──────────────────────────────────────────────────────────────────── code:x86:64 ────
+   0x5555555bbecf <compat_kex_proposal+239> mov    r12, rax
+   0x5555555bbed2 <compat_kex_proposal+242> test   rax, rax
+   0x5555555bbed5 <compat_kex_proposal+245> je     0x5555555bbf5e <compat_kex_proposal+382>
+ → 0x5555555bbedb <compat_kex_proposal+251> mov    rdi, rbp
+   0x5555555bbede <compat_kex_proposal+254> call   0x55555555e910 <free@plt>
+   0x5555555bbee3 <compat_kex_proposal+259> jmp    0x5555555bbe60 <compat_kex_proposal+128>
+   0x5555555bbee8 <compat_kex_proposal+264> nop    DWORD PTR [rax+rax*1+0x0]
+   0x5555555bbef0 <compat_kex_proposal+272> mov    rdi, rbp
+   0x5555555bbef3 <compat_kex_proposal+275> lea    rsi, [rip+0x52c58]        # 0x55555560eb52
+──────────────────────────────────────────────────────────── source:compat.c+208 ────
+    203	 		cp = p;
+    204	 		if ((p = match_filter_denylist(p,
+    205	 		    "diffie-hellman-group-exchange-sha256,"
+    206	 		    "diffie-hellman-group-exchange-sha1")) == NULL)
+    207	 			fatal("match_filter_denylist failed");
+●→  208	 		free(cp);
+    209	 	}
+    210	 	debug2_f("compat KEX proposal: %s", p);
+    211	 	if (*p == '\0')
+    212	 		fatal("No supported key exchange algorithms found");
+    213	 	return p;
+──────────────────────────────────────────────────────────────────────── threads ────
+[#0] Id 1, Name: "sshd", stopped 0x5555555bbedb in compat_kex_proposal (), reason: BREAKPOINT
+────────────────────────────────────────────────────────────────────────── trace ────
+[#0] 0x5555555bbedb → compat_kex_proposal(ssh=0x555555677cb0, p=0x555555664760 "sntrup761x25519-sha512@openssh.com,curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group14-sha256")
+[#1] 0x555555563f5c → do_ssh2_kex(ssh=0x555555677cb0)
+[#2] 0x5555555615ec → main(ac=0x6, av=0x55555565a2c0)
+─────────────────────────────────────────────────────────────────────────────────────
+[ Legend: Modified register | Code | Heap | Stack | String ]
+────────────────────────────────────────────────────────────────────── registers ────
+$rax   : 0x0000555555664760  →  "sntrup761x25519-sha512@openssh.com,curve25519-sha2[...]"
+$rbx   : 0x00005555556730e0  →  0x0000555555673b00  →  0x0000000000000000
+$rcx   : 0x000055555565a010  →  0x0007000500070007
+$rdx   : 0x10              
+$rsp   : 0x00007fffffffe300  →  0x00005555555fe4ad  →  " rdomain ""
+$rbp   : 0x00005555556604c0  →  "sntrup761x25519-sha512@openssh.com,curve25519-sha2[...]"
+$rsi   : 0x00005555555bbecf  →  <compat_kex_proposal+239> mov r12, rax
+$rdi   : 0x00005555555bfff0  →  <match_filter_denylist+0> push r12
+$rip   : 0x00005555555bbedb  →  <compat_kex_proposal+251> mov rdi, rbp
+$r8    : 0x0               
+$r9    : 0x00005555556604c0  →  "sntrup761x25519-sha512@openssh.com,curve25519-sha2[...]"
+$r10   : 0x00007fffffffe1e0  →  0x0000003000000030 ("0"?)
+$r11   : 0x00005555556603a0  →  0x0000000000000000
+$r12   : 0x0000555555664760  →  "sntrup761x25519-sha512@openssh.com,curve25519-sha2[...]"
+$r13   : 0xc3b8            
+$r14   : 0x0000555555673180  →  "127.0.0.1"
+$r15   : 0x00005555555fe4ad  →  " rdomain ""
+$eflags: [zero carry PARITY adjust sign trap INTERRUPT direction overflow resume virtualx86 identification]
+$cs: 0x33 $ss: 0x2b $ds: 0x00 $es: 0x00 $fs: 0x00 $gs: 0x00 
+────────────────────────────────────────────────────────────────────────── stack ────
+0x00007fffffffe300│+0x0000: 0x00005555555fe4ad  →  " rdomain ""	 ← $rsp
+0x00007fffffffe308│+0x0008: 0x0000555555677cb0  →  0x0000555555673310  →  0x0000000300000003
+0x00007fffffffe310│+0x0010: 0x00005555556797f0  →  0x0000000000000000
+0x00007fffffffe318│+0x0018: 0x0000555555563f5c  →  <do_ssh2_kex+156> mov rsi, QWORD PTR [rip+0xf1a15]        # 0x555555655978 <options+1208>
+0x00007fffffffe320│+0x0020: 0x00005555555feb38  →  "sntrup761x25519-sha512@openssh.com,curve25519-sha2[...]"
+0x00007fffffffe328│+0x0028: 0x00005555555fec48  →  "ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp2[...]"
+0x00007fffffffe330│+0x0030: 0x00005555555fee18  →  "chacha20-poly1305@openssh.com,aes128-ctr,aes192-ct[...]"
+0x00007fffffffe338│+0x0038: 0x00005555555fee18  →  "chacha20-poly1305@openssh.com,aes128-ctr,aes192-ct[...]"
+──────────────────────────────────────────────────────────────────── code:x86:64 ────
+   0x5555555bbecf <compat_kex_proposal+239> mov    r12, rax
+   0x5555555bbed2 <compat_kex_proposal+242> test   rax, rax
+   0x5555555bbed5 <compat_kex_proposal+245> je     0x5555555bbf5e <compat_kex_proposal+382>
+ → 0x5555555bbedb <compat_kex_proposal+251> mov    rdi, rbp
+   0x5555555bbede <compat_kex_proposal+254> call   0x55555555e910 <free@plt>
+   0x5555555bbee3 <compat_kex_proposal+259> jmp    0x5555555bbe60 <compat_kex_proposal+128>
+   0x5555555bbee8 <compat_kex_proposal+264> nop    DWORD PTR [rax+rax*1+0x0]
+   0x5555555bbef0 <compat_kex_proposal+272> mov    rdi, rbp
+   0x5555555bbef3 <compat_kex_proposal+275> lea    rsi, [rip+0x52c58]        # 0x55555560eb52
+──────────────────────────────────────────────────────────── source:compat.c+208 ────
+    203	 		cp = p;
+    204	 		if ((p = match_filter_denylist(p,
+    205	 		    "diffie-hellman-group-exchange-sha256,"
+    206	 		    "diffie-hellman-group-exchange-sha1")) == NULL)
+    207	 			fatal("match_filter_denylist failed");
+●→  208	 		free(cp);
+    209	 	}
+    210	 	debug2_f("compat KEX proposal: %s", p);
+    211	 	if (*p == '\0')
+    212	 		fatal("No supported key exchange algorithms found");
+    213	 	return p;
+──────────────────────────────────────────────────────────────────────── threads ────
+[#0] Id 1, Name: "sshd", stopped 0x5555555bbedb in compat_kex_proposal (), reason: BREAKPOINT
+────────────────────────────────────────────────────────────────────────── trace ────
+[#0] 0x5555555bbedb → compat_kex_proposal(ssh=0x555555677cb0, p=0x555555664760 "sntrup761x25519-sha512@openssh.com,curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group14-sha256")
+[#1] 0x555555563f5c → do_ssh2_kex(ssh=0x555555677cb0)
+[#2] 0x5555555615ec → main(ac=0x6, av=0x55555565a2c0)
+─────────────────────────────────────────────────────────────────────────────────────
+[ Legend: Modified register | Code | Heap | Stack | String ]
+────────────────────────────────────────────────────────────────────── registers ────
+$rax   : 0x0000555555664760  →  "sntrup761x25519-sha512@openssh.com,curve25519-sha2[...]"
+$rbx   : 0x00005555556730e0  →  0x0000555555673b00  →  0x0000000000000000
+$rcx   : 0x000055555565a010  →  0x0007000500070007
+$rdx   : 0x10              
+$rsp   : 0x00007fffffffe300  →  0x00005555555fe4ad  →  " rdomain ""
+$rbp   : 0x00005555556604c0  →  "sntrup761x25519-sha512@openssh.com,curve25519-sha2[...]"
+$rsi   : 0x00005555555bbecf  →  <compat_kex_proposal+239> mov r12, rax
+$rdi   : 0x00005555555bfff0  →  <match_filter_denylist+0> push r12
+$rip   : 0x00005555555bbedb  →  <compat_kex_proposal+251> mov rdi, rbp
+$r8    : 0x0               
+$r9    : 0x00005555556604c0  →  "sntrup761x25519-sha512@openssh.com,curve25519-sha2[...]"
+$r10   : 0x00007fffffffe1e0  →  0x0000003000000030 ("0"?)
+$r11   : 0x00005555556603a0  →  0x0000000000000000
+$r12   : 0x0000555555664760  →  "sntrup761x25519-sha512@openssh.com,curve25519-sha2[...]"
+$r13   : 0xc3b8            
+$r14   : 0x0000555555673180  →  "127.0.0.1"
+$r15   : 0x00005555555fe4ad  →  " rdomain ""
+$eflags: [zero carry PARITY adjust sign trap INTERRUPT direction overflow resume virtualx86 identification]
+$cs: 0x33 $ss: 0x2b $ds: 0x00 $es: 0x00 $fs: 0x00 $gs: 0x00 
+────────────────────────────────────────────────────────────────────────── stack ────
+0x00007fffffffe300│+0x0000: 0x00005555555fe4ad  →  " rdomain ""	 ← $rsp
+0x00007fffffffe308│+0x0008: 0x0000555555677cb0  →  0x0000555555673310  →  0x0000000300000003
+0x00007fffffffe310│+0x0010: 0x00005555556797f0  →  0x0000000000000000
+0x00007fffffffe318│+0x0018: 0x0000555555563f5c  →  <do_ssh2_kex+156> mov rsi, QWORD PTR [rip+0xf1a15]        # 0x555555655978 <options+1208>
+0x00007fffffffe320│+0x0020: 0x00005555555feb38  →  "sntrup761x25519-sha512@openssh.com,curve25519-sha2[...]"
+0x00007fffffffe328│+0x0028: 0x00005555555fec48  →  "ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp2[...]"
+0x00007fffffffe330│+0x0030: 0x00005555555fee18  →  "chacha20-poly1305@openssh.com,aes128-ctr,aes192-ct[...]"
+0x00007fffffffe338│+0x0038: 0x00005555555fee18  →  "chacha20-poly1305@openssh.com,aes128-ctr,aes192-ct[...]"
+──────────────────────────────────────────────────────────────────── code:x86:64 ────
+   0x5555555bbecf <compat_kex_proposal+239> mov    r12, rax
+   0x5555555bbed2 <compat_kex_proposal+242> test   rax, rax
+   0x5555555bbed5 <compat_kex_proposal+245> je     0x5555555bbf5e <compat_kex_proposal+382>
+ → 0x5555555bbedb <compat_kex_proposal+251> mov    rdi, rbp
+   0x5555555bbede <compat_kex_proposal+254> call   0x55555555e910 <free@plt>
+   0x5555555bbee3 <compat_kex_proposal+259> jmp    0x5555555bbe60 <compat_kex_proposal+128>
+   0x5555555bbee8 <compat_kex_proposal+264> nop    DWORD PTR [rax+rax*1+0x0]
+   0x5555555bbef0 <compat_kex_proposal+272> mov    rdi, rbp
+   0x5555555bbef3 <compat_kex_proposal+275> lea    rsi, [rip+0x52c58]        # 0x55555560eb52
+──────────────────────────────────────────────────────────── source:compat.c+208 ────
+    203	 		cp = p;
+    204	 		if ((p = match_filter_denylist(p,
+    205	 		    "diffie-hellman-group-exchange-sha256,"
+    206	 		    "diffie-hellman-group-exchange-sha1")) == NULL)
+    207	 			fatal("match_filter_denylist failed");
+●→  208	 		free(cp);
+    209	 	}
+    210	 	debug2_f("compat KEX proposal: %s", p);
+    211	 	if (*p == '\0')
+    212	 		fatal("No supported key exchange algorithms found");
+    213	 	return p;
+──────────────────────────────────────────────────────────────────────── threads ────
+[#0] Id 1, Name: "sshd", stopped 0x5555555bbedb in compat_kex_proposal (), reason: BREAKPOINT
+────────────────────────────────────────────────────────────────────────── trace ────
+[#0] 0x5555555bbedb → compat_kex_proposal(ssh=0x555555677cb0, p=0x555555664760 "sntrup761x25519-sha512@openssh.com,curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group14-sha256")
+[#1] 0x555555563f5c → do_ssh2_kex(ssh=0x555555677cb0)
+[#2] 0x5555555615ec → main(ac=0x6, av=0x55555565a2c0)
+─────────────────────────────────────────────────────────────────────────────────────
+Already logging to gdb.txt.
+Undefined set logging command: "enabled on".  Try "help set logging".
+Undefined set logging command: "enable on".  Try "help set logging".
+Continuing.
+
+Thread 2.1 "sshd" hit Breakpoint 2, kex_assemble_names (listp=0x7fffffffe150, listp@entry=0x555555655978 <options+1208>, def=def@entry=0x555555660c40 "chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com", all=all@entry=0x55555566baa0 "3des-cbc,aes128-cbc,aes192-cbc,aes256-cbc,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,chacha20-poly1305@openssh.com") at kex.c:315
+315		free(list);
+[ Legend: Modified register | Code | Heap | Stack | String ]
+────────────────────────────────────────────────────────────────────── registers ────
+$rax   : 0x0               
+$rbx   : 0x000055555566baa0  →  "3des-cbc,aes128-cbc,aes192-cbc,aes256-cbc,aes128-c[...]"
+$rcx   : 0x000055555565a010  →  0x0007000400070002
+$rdx   : 0x6               
+$rsp   : 0x00007fffffffe130  →  0x0000000000000000
+$rbp   : 0x000055555565fab0  →  0x0000555555673940  →  0x00005555556739e0  →  0x0000000000000000
+$rsi   : 0x1               
+$rdi   : 0x0000555555668b50  →  0x0000000000000000
+$rip   : 0x00005555555df3f2  →  <kex_assemble_names+370> mov rdi, r13
+$r8    : 0x0               
+$r9    : 0x00007ffff7c59be0  →  0x0000555555679cd0  →  0x0000000000000000
+$r10   : 0x0000555555677ca0  →  0x0000000000001490
+$r11   : 0x0               
+$r12   : 0x0               
+$r13   : 0x0000555555660160  →  "chacha20-poly1305@openssh.com,aes128-ctr,aes192-ct[...]"
+$r14   : 0x0               
+$r15   : 0x00007fffffffe150  →  0x0000000000000000
+$eflags: [zero carry parity adjust sign trap INTERRUPT direction overflow resume virtualx86 identification]
+$cs: 0x33 $ss: 0x2b $ds: 0x00 $es: 0x00 $fs: 0x00 $gs: 0x00 
+────────────────────────────────────────────────────────────────────────── stack ────
+0x00007fffffffe130│+0x0000: 0x0000000000000000	 ← $rsp
+0x00007fffffffe138│+0x0008: 0x00005555556767a0  →  "chacha20-poly1305@openssh.com,aes128-ctr,aes192-ct[...]"
+0x00007fffffffe140│+0x0010: 0x0000555555655978  →  0x00005555556767a0  →  "chacha20-poly1305@openssh.com,aes128-ctr,aes192-ct[...]"
+0x00007fffffffe148│+0x0018: 0x0000555555668b50  →  0x0000000000000000
+0x00007fffffffe150│+0x0020: 0x0000000000000000	 ← $r15
+0x00007fffffffe158│+0x0028: 0x3df9d071c6427b00
+0x00007fffffffe160│+0x0030: 0x000055555566baa0  →  "3des-cbc,aes128-cbc,aes192-cbc,aes256-cbc,aes128-c[...]"
+0x00007fffffffe168│+0x0038: 0x00005555556554c0  →  <options+0> add DWORD PTR [rax], eax
+──────────────────────────────────────────────────────────────────── code:x86:64 ────
+   0x5555555df3e3 <kex_assemble_names+355> call   0x55555555e910 <free@plt>
+   0x5555555df3e8 <kex_assemble_names+360> mov    rdi, QWORD PTR [rsp+0x18]
+   0x5555555df3ed <kex_assemble_names+365> call   0x55555555e910 <free@plt>
+ → 0x5555555df3f2 <kex_assemble_names+370> mov    rdi, r13
+   0x5555555df3f5 <kex_assemble_names+373> call   0x55555555e910 <free@plt>
+   0x5555555df3fa <kex_assemble_names+378> mov    rdi, r12
+   0x5555555df3fd <kex_assemble_names+381> call   0x55555555e910 <free@plt>
+   0x5555555df402 <kex_assemble_names+386> jmp    0x5555555df423 <kex_assemble_names+419>
+   0x5555555df404 <kex_assemble_names+388> nop    DWORD PTR [rax+0x0]
+─────────────────────────────────────────────────────────────── source:kex.c+315 ────
+    310	 	r = 0;
+    311	 
+    312	  fail:
+    313	 	free(matching);
+    314	 	free(opatterns);
+●→  315	 	free(list);
+    316	 	free(ret);
+    317	 	return r;
+    318	 }
+    319	 
+    320	 /* put algorithm proposal into buffer */
+──────────────────────────────────────────────────────────────────────── threads ────
+[#0] Id 1, Name: "sshd", stopped 0x5555555df3f2 in kex_assemble_names (), reason: BREAKPOINT
+────────────────────────────────────────────────────────────────────────── trace ────
+[#0] 0x5555555df3f2 → kex_assemble_names(listp=0x7fffffffe150, def=0x555555660c40 "chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com", all=0x55555566baa0 "3des-cbc,aes128-cbc,aes192-cbc,aes256-cbc,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,chacha20-poly1305@openssh.com")
+[#1] 0x555555567454 → assemble_algorithms(o=0x5555556554c0 <options>)
+[#2] 0x55555556bd5e → copy_set_server_options(dst=0x5555556554c0 <options>, src=0x55555566e5b0, preauth=0x1)
+[#3] 0x55555558b9f6 → mm_getpwnamallow(ssh=0x555555677cb0, username=<optimized out>)
+[#4] 0x5555555770b5 → input_userauth_request(type=<optimized out>, seq=<optimized out>, ssh=0x555555677cb0)
+[#5] 0x5555555cdb36 → ssh_dispatch_run(ssh=0x555555677cb0, mode=0x0, done=0x5555556797f0)
+[#6] 0x5555555cdc4d → ssh_dispatch_run_fatal(ssh=0x555555677cb0, mode=0x0, done=0x5555556797f0)
+[#7] 0x5555555750c2 → do_authentication2(ssh=0x555555677cb0)
+[#8] 0x5555555615f4 → main(ac=0x6, av=0x55555565a2c0)
+─────────────────────────────────────────────────────────────────────────────────────
+[ Legend: Modified register | Code | Heap | Stack | String ]
+────────────────────────────────────────────────────────────────────── registers ────
+$rax   : 0x0               
+$rbx   : 0x000055555566baa0  →  "3des-cbc,aes128-cbc,aes192-cbc,aes256-cbc,aes128-c[...]"
+$rcx   : 0x000055555565a010  →  0x0007000400070002
+$rdx   : 0x6               
+$rsp   : 0x00007fffffffe130  →  0x0000000000000000
+$rbp   : 0x000055555565fab0  →  0x0000555555673940  →  0x00005555556739e0  →  0x0000000000000000
+$rsi   : 0x1               
+$rdi   : 0x0000555555668b50  →  0x0000000000000000
+$rip   : 0x00005555555df3f2  →  <kex_assemble_names+370> mov rdi, r13
+$r8    : 0x0               
+$r9    : 0x00007ffff7c59be0  →  0x0000555555679cd0  →  0x0000000000000000
+$r10   : 0x0000555555677ca0  →  0x0000000000001490
+$r11   : 0x0               
+$r12   : 0x0               
+$r13   : 0x0000555555660160  →  "chacha20-poly1305@openssh.com,aes128-ctr,aes192-ct[...]"
+$r14   : 0x0               
+$r15   : 0x00007fffffffe150  →  0x0000000000000000
+$eflags: [zero carry parity adjust sign trap INTERRUPT direction overflow resume virtualx86 identification]
+$cs: 0x33 $ss: 0x2b $ds: 0x00 $es: 0x00 $fs: 0x00 $gs: 0x00 
+────────────────────────────────────────────────────────────────────────── stack ────
+0x00007fffffffe130│+0x0000: 0x0000000000000000	 ← $rsp
+0x00007fffffffe138│+0x0008: 0x00005555556767a0  →  "chacha20-poly1305@openssh.com,aes128-ctr,aes192-ct[...]"
+0x00007fffffffe140│+0x0010: 0x0000555555655978  →  0x00005555556767a0  →  "chacha20-poly1305@openssh.com,aes128-ctr,aes192-ct[...]"
+0x00007fffffffe148│+0x0018: 0x0000555555668b50  →  0x0000000000000000
+0x00007fffffffe150│+0x0020: 0x0000000000000000	 ← $r15
+0x00007fffffffe158│+0x0028: 0x3df9d071c6427b00
+0x00007fffffffe160│+0x0030: 0x000055555566baa0  →  "3des-cbc,aes128-cbc,aes192-cbc,aes256-cbc,aes128-c[...]"
+0x00007fffffffe168│+0x0038: 0x00005555556554c0  →  <options+0> add DWORD PTR [rax], eax
+──────────────────────────────────────────────────────────────────── code:x86:64 ────
+   0x5555555df3e3 <kex_assemble_names+355> call   0x55555555e910 <free@plt>
+   0x5555555df3e8 <kex_assemble_names+360> mov    rdi, QWORD PTR [rsp+0x18]
+   0x5555555df3ed <kex_assemble_names+365> call   0x55555555e910 <free@plt>
+ → 0x5555555df3f2 <kex_assemble_names+370> mov    rdi, r13
+   0x5555555df3f5 <kex_assemble_names+373> call   0x55555555e910 <free@plt>
+   0x5555555df3fa <kex_assemble_names+378> mov    rdi, r12
+   0x5555555df3fd <kex_assemble_names+381> call   0x55555555e910 <free@plt>
+   0x5555555df402 <kex_assemble_names+386> jmp    0x5555555df423 <kex_assemble_names+419>
+   0x5555555df404 <kex_assemble_names+388> nop    DWORD PTR [rax+0x0]
+─────────────────────────────────────────────────────────────── source:kex.c+315 ────
+    310	 	r = 0;
+    311	 
+    312	  fail:
+    313	 	free(matching);
+    314	 	free(opatterns);
+●→  315	 	free(list);
+    316	 	free(ret);
+    317	 	return r;
+    318	 }
+    319	 
+    320	 /* put algorithm proposal into buffer */
+──────────────────────────────────────────────────────────────────────── threads ────
+[#0] Id 1, Name: "sshd", stopped 0x5555555df3f2 in kex_assemble_names (), reason: BREAKPOINT
+────────────────────────────────────────────────────────────────────────── trace ────
+[#0] 0x5555555df3f2 → kex_assemble_names(listp=0x7fffffffe150, def=0x555555660c40 "chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com", all=0x55555566baa0 "3des-cbc,aes128-cbc,aes192-cbc,aes256-cbc,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,chacha20-poly1305@openssh.com")
+[#1] 0x555555567454 → assemble_algorithms(o=0x5555556554c0 <options>)
+[#2] 0x55555556bd5e → copy_set_server_options(dst=0x5555556554c0 <options>, src=0x55555566e5b0, preauth=0x1)
+[#3] 0x55555558b9f6 → mm_getpwnamallow(ssh=0x555555677cb0, username=<optimized out>)
+[#4] 0x5555555770b5 → input_userauth_request(type=<optimized out>, seq=<optimized out>, ssh=0x555555677cb0)
+[#5] 0x5555555cdb36 → ssh_dispatch_run(ssh=0x555555677cb0, mode=0x0, done=0x5555556797f0)
+[#6] 0x5555555cdc4d → ssh_dispatch_run_fatal(ssh=0x555555677cb0, mode=0x0, done=0x5555556797f0)
+[#7] 0x5555555750c2 → do_authentication2(ssh=0x555555677cb0)
+[#8] 0x5555555615f4 → main(ac=0x6, av=0x55555565a2c0)
+─────────────────────────────────────────────────────────────────────────────────────
+[ Legend: Modified register | Code | Heap | Stack | String ]
+────────────────────────────────────────────────────────────────────── registers ────
+$rax   : 0x0               
+$rbx   : 0x000055555566baa0  →  "3des-cbc,aes128-cbc,aes192-cbc,aes256-cbc,aes128-c[...]"
+$rcx   : 0x000055555565a010  →  0x0007000400070002
+$rdx   : 0x6               
+$rsp   : 0x00007fffffffe130  →  0x0000000000000000
+$rbp   : 0x000055555565fab0  →  0x0000555555673940  →  0x00005555556739e0  →  0x0000000000000000
+$rsi   : 0x1               
+$rdi   : 0x0000555555668b50  →  0x0000000000000000
+$rip   : 0x00005555555df3f2  →  <kex_assemble_names+370> mov rdi, r13
+$r8    : 0x0               
+$r9    : 0x00007ffff7c59be0  →  0x0000555555679cd0  →  0x0000000000000000
+$r10   : 0x0000555555677ca0  →  0x0000000000001490
+$r11   : 0x0               
+$r12   : 0x0               
+$r13   : 0x0000555555660160  →  "chacha20-poly1305@openssh.com,aes128-ctr,aes192-ct[...]"
+$r14   : 0x0               
+$r15   : 0x00007fffffffe150  →  0x0000000000000000
+$eflags: [zero carry parity adjust sign trap INTERRUPT direction overflow resume virtualx86 identification]
+$cs: 0x33 $ss: 0x2b $ds: 0x00 $es: 0x00 $fs: 0x00 $gs: 0x00 
+────────────────────────────────────────────────────────────────────────── stack ────
+0x00007fffffffe130│+0x0000: 0x0000000000000000	 ← $rsp
+0x00007fffffffe138│+0x0008: 0x00005555556767a0  →  "chacha20-poly1305@openssh.com,aes128-ctr,aes192-ct[...]"
+0x00007fffffffe140│+0x0010: 0x0000555555655978  →  0x00005555556767a0  →  "chacha20-poly1305@openssh.com,aes128-ctr,aes192-ct[...]"
+0x00007fffffffe148│+0x0018: 0x0000555555668b50  →  0x0000000000000000
+0x00007fffffffe150│+0x0020: 0x0000000000000000	 ← $r15
+0x00007fffffffe158│+0x0028: 0x3df9d071c6427b00
+0x00007fffffffe160│+0x0030: 0x000055555566baa0  →  "3des-cbc,aes128-cbc,aes192-cbc,aes256-cbc,aes128-c[...]"
+0x00007fffffffe168│+0x0038: 0x00005555556554c0  →  <options+0> add DWORD PTR [rax], eax
+──────────────────────────────────────────────────────────────────── code:x86:64 ────
+   0x5555555df3e3 <kex_assemble_names+355> call   0x55555555e910 <free@plt>
+   0x5555555df3e8 <kex_assemble_names+360> mov    rdi, QWORD PTR [rsp+0x18]
+   0x5555555df3ed <kex_assemble_names+365> call   0x55555555e910 <free@plt>
+ → 0x5555555df3f2 <kex_assemble_names+370> mov    rdi, r13
+   0x5555555df3f5 <kex_assemble_names+373> call   0x55555555e910 <free@plt>
+   0x5555555df3fa <kex_assemble_names+378> mov    rdi, r12
+   0x5555555df3fd <kex_assemble_names+381> call   0x55555555e910 <free@plt>
+   0x5555555df402 <kex_assemble_names+386> jmp    0x5555555df423 <kex_assemble_names+419>
+   0x5555555df404 <kex_assemble_names+388> nop    DWORD PTR [rax+0x0]
+─────────────────────────────────────────────────────────────── source:kex.c+315 ────
+    310	 	r = 0;
+    311	 
+    312	  fail:
+    313	 	free(matching);
+    314	 	free(opatterns);
+●→  315	 	free(list);
+    316	 	free(ret);
+    317	 	return r;
+    318	 }
+    319	 
+    320	 /* put algorithm proposal into buffer */
+──────────────────────────────────────────────────────────────────────── threads ────
+[#0] Id 1, Name: "sshd", stopped 0x5555555df3f2 in kex_assemble_names (), reason: BREAKPOINT
+────────────────────────────────────────────────────────────────────────── trace ────
+[#0] 0x5555555df3f2 → kex_assemble_names(listp=0x7fffffffe150, def=0x555555660c40 "chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com", all=0x55555566baa0 "3des-cbc,aes128-cbc,aes192-cbc,aes256-cbc,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,chacha20-poly1305@openssh.com")
+[#1] 0x555555567454 → assemble_algorithms(o=0x5555556554c0 <options>)
+[#2] 0x55555556bd5e → copy_set_server_options(dst=0x5555556554c0 <options>, src=0x55555566e5b0, preauth=0x1)
+[#3] 0x55555558b9f6 → mm_getpwnamallow(ssh=0x555555677cb0, username=<optimized out>)
+[#4] 0x5555555770b5 → input_userauth_request(type=<optimized out>, seq=<optimized out>, ssh=0x555555677cb0)
+[#5] 0x5555555cdb36 → ssh_dispatch_run(ssh=0x555555677cb0, mode=0x0, done=0x5555556797f0)
+[#6] 0x5555555cdc4d → ssh_dispatch_run_fatal(ssh=0x555555677cb0, mode=0x0, done=0x5555556797f0)
+[#7] 0x5555555750c2 → do_authentication2(ssh=0x555555677cb0)
+[#8] 0x5555555615f4 → main(ac=0x6, av=0x55555565a2c0)
+─────────────────────────────────────────────────────────────────────────────────────
+Continuing.
+
+Thread 2.1 "sshd" hit Breakpoint 2, kex_assemble_names (listp=0x7fffffffe150, listp@entry=0x555555655980 <options+1216>, def=def@entry=0x5555556601e0 "umac-64-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,umac-64@openssh.com,umac-128@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1", all=all@entry=0x5555556760b0 "hmac-sha1,hmac-sha1-96,hmac-sha2-256,hmac-sha2-512,hmac-md5,hmac-md5-96,umac-64@openssh.com,umac-128@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha1-96-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-md5-etm@openssh.com,hmac-md5-96-etm@openssh.com,umac-64-etm@openssh.com,umac-128-etm@openssh.com") at kex.c:315
+315		free(list);
+[ Legend: Modified register | Code | Heap | Stack | String ]
+────────────────────────────────────────────────────────────────────── registers ────
+$rax   : 0x0               
+$rbx   : 0x00005555556760b0  →  "hmac-sha1,hmac-sha1-96,hmac-sha2-256,hmac-sha2-512[...]"
+$rcx   : 0x000055555565a010  →  0x0007000500070002
+$rdx   : 0xc               
+$rsp   : 0x00007fffffffe130  →  0x0000000000000000
+$rbp   : 0x000055555565fb50  →  0x0000555555676820  →  0x0000000000000000
+$rsi   : 0x3               
+$rdi   : 0x00005555556686e0  →  0x0000555555676d10  →  0x0000555555678fd0  →  0x0000000000000000
+$rip   : 0x00005555555df3f2  →  <kex_assemble_names+370> mov rdi, r13
+$r8    : 0x0000555555676d10  →  0x0000555555678fd0  →  0x0000000000000000
+$r9    : 0x00007ffff7c59be0  →  0x0000555555679cd0  →  0x0000000000000000
+$r10   : 0x2000            
+$r11   : 0x0               
+$r12   : 0x0               
+$r13   : 0x00005555556602c0  →  "umac-64-etm@openssh.com,umac-128-etm@openssh.com,h[...]"
+$r14   : 0x0               
+$r15   : 0x00007fffffffe150  →  0x0000000000000000
+$eflags: [zero carry parity adjust sign trap INTERRUPT direction overflow resume virtualx86 identification]
+$cs: 0x33 $ss: 0x2b $ds: 0x00 $es: 0x00 $fs: 0x00 $gs: 0x00 
+────────────────────────────────────────────────────────────────────────── stack ────
+0x00007fffffffe130│+0x0000: 0x0000000000000000	 ← $rsp
+0x00007fffffffe138│+0x0008: 0x0000555555676df0  →  "umac-64-etm@openssh.com,umac-128-etm@openssh.com,h[...]"
+0x00007fffffffe140│+0x0010: 0x0000555555655980  →  0x0000555555676df0  →  "umac-64-etm@openssh.com,umac-128-etm@openssh.com,h[...]"
+0x00007fffffffe148│+0x0018: 0x00005555556686e0  →  0x0000555555676d10  →  0x0000555555678fd0  →  0x0000000000000000
+0x00007fffffffe150│+0x0020: 0x0000000000000000	 ← $r15
+0x00007fffffffe158│+0x0028: 0x3df9d071c6427b00
+0x00007fffffffe160│+0x0030: 0x000055555566baa0  →  "3des-cbc,aes128-cbc,aes192-cbc,aes256-cbc,aes128-c[...]"
+0x00007fffffffe168│+0x0038: 0x00005555556554c0  →  <options+0> add DWORD PTR [rax], eax
+──────────────────────────────────────────────────────────────────── code:x86:64 ────
+   0x5555555df3e3 <kex_assemble_names+355> call   0x55555555e910 <free@plt>
+   0x5555555df3e8 <kex_assemble_names+360> mov    rdi, QWORD PTR [rsp+0x18]
+   0x5555555df3ed <kex_assemble_names+365> call   0x55555555e910 <free@plt>
+ → 0x5555555df3f2 <kex_assemble_names+370> mov    rdi, r13
+   0x5555555df3f5 <kex_assemble_names+373> call   0x55555555e910 <free@plt>
+   0x5555555df3fa <kex_assemble_names+378> mov    rdi, r12
+   0x5555555df3fd <kex_assemble_names+381> call   0x55555555e910 <free@plt>
+   0x5555555df402 <kex_assemble_names+386> jmp    0x5555555df423 <kex_assemble_names+419>
+   0x5555555df404 <kex_assemble_names+388> nop    DWORD PTR [rax+0x0]
+─────────────────────────────────────────────────────────────── source:kex.c+315 ────
+    310	 	r = 0;
+    311	 
+    312	  fail:
+    313	 	free(matching);
+    314	 	free(opatterns);
+●→  315	 	free(list);
+    316	 	free(ret);
+    317	 	return r;
+    318	 }
+    319	 
+    320	 /* put algorithm proposal into buffer */
+──────────────────────────────────────────────────────────────────────── threads ────
+[#0] Id 1, Name: "sshd", stopped 0x5555555df3f2 in kex_assemble_names (), reason: BREAKPOINT
+────────────────────────────────────────────────────────────────────────── trace ────
+[#0] 0x5555555df3f2 → kex_assemble_names(listp=0x7fffffffe150, def=0x5555556601e0 "umac-64-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,umac-64@openssh.com,umac-128@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1", all=0x5555556760b0 "hmac-sha1,hmac-sha1-96,hmac-sha2-256,hmac-sha2-512,hmac-md5,hmac-md5-96,umac-64@openssh.com,umac-128@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha1-96-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-md5-etm@openssh.com,hmac-md5-96-etm@openssh.com,umac-64-etm@openssh.com,umac-128-etm@openssh.com")
+[#1] 0x555555567470 → assemble_algorithms(o=0x5555556554c0 <options>)
+[#2] 0x55555556bd5e → copy_set_server_options(dst=0x5555556554c0 <options>, src=0x55555566e5b0, preauth=0x1)
+[#3] 0x55555558b9f6 → mm_getpwnamallow(ssh=0x555555677cb0, username=<optimized out>)
+[#4] 0x5555555770b5 → input_userauth_request(type=<optimized out>, seq=<optimized out>, ssh=0x555555677cb0)
+[#5] 0x5555555cdb36 → ssh_dispatch_run(ssh=0x555555677cb0, mode=0x0, done=0x5555556797f0)
+[#6] 0x5555555cdc4d → ssh_dispatch_run_fatal(ssh=0x555555677cb0, mode=0x0, done=0x5555556797f0)
+[#7] 0x5555555750c2 → do_authentication2(ssh=0x555555677cb0)
+[#8] 0x5555555615f4 → main(ac=0x6, av=0x55555565a2c0)
+─────────────────────────────────────────────────────────────────────────────────────
+[ Legend: Modified register | Code | Heap | Stack | String ]
+────────────────────────────────────────────────────────────────────── registers ────
+$rax   : 0x0               
+$rbx   : 0x00005555556760b0  →  "hmac-sha1,hmac-sha1-96,hmac-sha2-256,hmac-sha2-512[...]"
+$rcx   : 0x000055555565a010  →  0x0007000500070002
+$rdx   : 0xc               
+$rsp   : 0x00007fffffffe130  →  0x0000000000000000
+$rbp   : 0x000055555565fb50  →  0x0000555555676820  →  0x0000000000000000
+$rsi   : 0x3               
+$rdi   : 0x00005555556686e0  →  0x0000555555676d10  →  0x0000555555678fd0  →  0x0000000000000000
+$rip   : 0x00005555555df3f2  →  <kex_assemble_names+370> mov rdi, r13
+$r8    : 0x0000555555676d10  →  0x0000555555678fd0  →  0x0000000000000000
+$r9    : 0x00007ffff7c59be0  →  0x0000555555679cd0  →  0x0000000000000000
+$r10   : 0x2000            
+$r11   : 0x0               
+$r12   : 0x0               
+$r13   : 0x00005555556602c0  →  "umac-64-etm@openssh.com,umac-128-etm@openssh.com,h[...]"
+$r14   : 0x0               
+$r15   : 0x00007fffffffe150  →  0x0000000000000000
+$eflags: [zero carry parity adjust sign trap INTERRUPT direction overflow resume virtualx86 identification]
+$cs: 0x33 $ss: 0x2b $ds: 0x00 $es: 0x00 $fs: 0x00 $gs: 0x00 
+────────────────────────────────────────────────────────────────────────── stack ────
+0x00007fffffffe130│+0x0000: 0x0000000000000000	 ← $rsp
+0x00007fffffffe138│+0x0008: 0x0000555555676df0  →  "umac-64-etm@openssh.com,umac-128-etm@openssh.com,h[...]"
+0x00007fffffffe140│+0x0010: 0x0000555555655980  →  0x0000555555676df0  →  "umac-64-etm@openssh.com,umac-128-etm@openssh.com,h[...]"
+0x00007fffffffe148│+0x0018: 0x00005555556686e0  →  0x0000555555676d10  →  0x0000555555678fd0  →  0x0000000000000000
+0x00007fffffffe150│+0x0020: 0x0000000000000000	 ← $r15
+0x00007fffffffe158│+0x0028: 0x3df9d071c6427b00
+0x00007fffffffe160│+0x0030: 0x000055555566baa0  →  "3des-cbc,aes128-cbc,aes192-cbc,aes256-cbc,aes128-c[...]"
+0x00007fffffffe168│+0x0038: 0x00005555556554c0  →  <options+0> add DWORD PTR [rax], eax
+──────────────────────────────────────────────────────────────────── code:x86:64 ────
+   0x5555555df3e3 <kex_assemble_names+355> call   0x55555555e910 <free@plt>
+   0x5555555df3e8 <kex_assemble_names+360> mov    rdi, QWORD PTR [rsp+0x18]
+   0x5555555df3ed <kex_assemble_names+365> call   0x55555555e910 <free@plt>
+ → 0x5555555df3f2 <kex_assemble_names+370> mov    rdi, r13
+   0x5555555df3f5 <kex_assemble_names+373> call   0x55555555e910 <free@plt>
+   0x5555555df3fa <kex_assemble_names+378> mov    rdi, r12
+   0x5555555df3fd <kex_assemble_names+381> call   0x55555555e910 <free@plt>
+   0x5555555df402 <kex_assemble_names+386> jmp    0x5555555df423 <kex_assemble_names+419>
+   0x5555555df404 <kex_assemble_names+388> nop    DWORD PTR [rax+0x0]
+─────────────────────────────────────────────────────────────── source:kex.c+315 ────
+    310	 	r = 0;
+    311	 
+    312	  fail:
+    313	 	free(matching);
+    314	 	free(opatterns);
+●→  315	 	free(list);
+    316	 	free(ret);
+    317	 	return r;
+    318	 }
+    319	 
+    320	 /* put algorithm proposal into buffer */
+──────────────────────────────────────────────────────────────────────── threads ────
+[#0] Id 1, Name: "sshd", stopped 0x5555555df3f2 in kex_assemble_names (), reason: BREAKPOINT
+────────────────────────────────────────────────────────────────────────── trace ────
+[#0] 0x5555555df3f2 → kex_assemble_names(listp=0x7fffffffe150, def=0x5555556601e0 "umac-64-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,umac-64@openssh.com,umac-128@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1", all=0x5555556760b0 "hmac-sha1,hmac-sha1-96,hmac-sha2-256,hmac-sha2-512,hmac-md5,hmac-md5-96,umac-64@openssh.com,umac-128@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha1-96-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-md5-etm@openssh.com,hmac-md5-96-etm@openssh.com,umac-64-etm@openssh.com,umac-128-etm@openssh.com")
+[#1] 0x555555567470 → assemble_algorithms(o=0x5555556554c0 <options>)
+[#2] 0x55555556bd5e → copy_set_server_options(dst=0x5555556554c0 <options>, src=0x55555566e5b0, preauth=0x1)
+[#3] 0x55555558b9f6 → mm_getpwnamallow(ssh=0x555555677cb0, username=<optimized out>)
+[#4] 0x5555555770b5 → input_userauth_request(type=<optimized out>, seq=<optimized out>, ssh=0x555555677cb0)
+[#5] 0x5555555cdb36 → ssh_dispatch_run(ssh=0x555555677cb0, mode=0x0, done=0x5555556797f0)
+[#6] 0x5555555cdc4d → ssh_dispatch_run_fatal(ssh=0x555555677cb0, mode=0x0, done=0x5555556797f0)
+[#7] 0x5555555750c2 → do_authentication2(ssh=0x555555677cb0)
+[#8] 0x5555555615f4 → main(ac=0x6, av=0x55555565a2c0)
+─────────────────────────────────────────────────────────────────────────────────────
+[ Legend: Modified register | Code | Heap | Stack | String ]
+────────────────────────────────────────────────────────────────────── registers ────
+$rax   : 0x0               
+$rbx   : 0x00005555556760b0  →  "hmac-sha1,hmac-sha1-96,hmac-sha2-256,hmac-sha2-512[...]"
+$rcx   : 0x000055555565a010  →  0x0007000500070002
+$rdx   : 0xc               
+$rsp   : 0x00007fffffffe130  →  0x0000000000000000
+$rbp   : 0x000055555565fb50  →  0x0000555555676820  →  0x0000000000000000
+$rsi   : 0x3               
+$rdi   : 0x00005555556686e0  →  0x0000555555676d10  →  0x0000555555678fd0  →  0x0000000000000000
+$rip   : 0x00005555555df3f2  →  <kex_assemble_names+370> mov rdi, r13
+$r8    : 0x0000555555676d10  →  0x0000555555678fd0  →  0x0000000000000000
+$r9    : 0x00007ffff7c59be0  →  0x0000555555679cd0  →  0x0000000000000000
+$r10   : 0x2000            
+$r11   : 0x0               
+$r12   : 0x0               
+$r13   : 0x00005555556602c0  →  "umac-64-etm@openssh.com,umac-128-etm@openssh.com,h[...]"
+$r14   : 0x0               
+$r15   : 0x00007fffffffe150  →  0x0000000000000000
+$eflags: [zero carry parity adjust sign trap INTERRUPT direction overflow resume virtualx86 identification]
+$cs: 0x33 $ss: 0x2b $ds: 0x00 $es: 0x00 $fs: 0x00 $gs: 0x00 
+────────────────────────────────────────────────────────────────────────── stack ────
+0x00007fffffffe130│+0x0000: 0x0000000000000000	 ← $rsp
+0x00007fffffffe138│+0x0008: 0x0000555555676df0  →  "umac-64-etm@openssh.com,umac-128-etm@openssh.com,h[...]"
+0x00007fffffffe140│+0x0010: 0x0000555555655980  →  0x0000555555676df0  →  "umac-64-etm@openssh.com,umac-128-etm@openssh.com,h[...]"
+0x00007fffffffe148│+0x0018: 0x00005555556686e0  →  0x0000555555676d10  →  0x0000555555678fd0  →  0x0000000000000000
+0x00007fffffffe150│+0x0020: 0x0000000000000000	 ← $r15
+0x00007fffffffe158│+0x0028: 0x3df9d071c6427b00
+0x00007fffffffe160│+0x0030: 0x000055555566baa0  →  "3des-cbc,aes128-cbc,aes192-cbc,aes256-cbc,aes128-c[...]"
+0x00007fffffffe168│+0x0038: 0x00005555556554c0  →  <options+0> add DWORD PTR [rax], eax
+──────────────────────────────────────────────────────────────────── code:x86:64 ────
+   0x5555555df3e3 <kex_assemble_names+355> call   0x55555555e910 <free@plt>
+   0x5555555df3e8 <kex_assemble_names+360> mov    rdi, QWORD PTR [rsp+0x18]
+   0x5555555df3ed <kex_assemble_names+365> call   0x55555555e910 <free@plt>
+ → 0x5555555df3f2 <kex_assemble_names+370> mov    rdi, r13
+   0x5555555df3f5 <kex_assemble_names+373> call   0x55555555e910 <free@plt>
+   0x5555555df3fa <kex_assemble_names+378> mov    rdi, r12
+   0x5555555df3fd <kex_assemble_names+381> call   0x55555555e910 <free@plt>
+   0x5555555df402 <kex_assemble_names+386> jmp    0x5555555df423 <kex_assemble_names+419>
+   0x5555555df404 <kex_assemble_names+388> nop    DWORD PTR [rax+0x0]
+─────────────────────────────────────────────────────────────── source:kex.c+315 ────
+    310	 	r = 0;
+    311	 
+    312	  fail:
+    313	 	free(matching);
+    314	 	free(opatterns);
+●→  315	 	free(list);
+    316	 	free(ret);
+    317	 	return r;
+    318	 }
+    319	 
+    320	 /* put algorithm proposal into buffer */
+──────────────────────────────────────────────────────────────────────── threads ────
+[#0] Id 1, Name: "sshd", stopped 0x5555555df3f2 in kex_assemble_names (), reason: BREAKPOINT
+────────────────────────────────────────────────────────────────────────── trace ────
+[#0] 0x5555555df3f2 → kex_assemble_names(listp=0x7fffffffe150, def=0x5555556601e0 "umac-64-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,umac-64@openssh.com,umac-128@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1", all=0x5555556760b0 "hmac-sha1,hmac-sha1-96,hmac-sha2-256,hmac-sha2-512,hmac-md5,hmac-md5-96,umac-64@openssh.com,umac-128@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha1-96-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-md5-etm@openssh.com,hmac-md5-96-etm@openssh.com,umac-64-etm@openssh.com,umac-128-etm@openssh.com")
+[#1] 0x555555567470 → assemble_algorithms(o=0x5555556554c0 <options>)
+[#2] 0x55555556bd5e → copy_set_server_options(dst=0x5555556554c0 <options>, src=0x55555566e5b0, preauth=0x1)
+[#3] 0x55555558b9f6 → mm_getpwnamallow(ssh=0x555555677cb0, username=<optimized out>)
+[#4] 0x5555555770b5 → input_userauth_request(type=<optimized out>, seq=<optimized out>, ssh=0x555555677cb0)
+[#5] 0x5555555cdb36 → ssh_dispatch_run(ssh=0x555555677cb0, mode=0x0, done=0x5555556797f0)
+[#6] 0x5555555cdc4d → ssh_dispatch_run_fatal(ssh=0x555555677cb0, mode=0x0, done=0x5555556797f0)
+[#7] 0x5555555750c2 → do_authentication2(ssh=0x555555677cb0)
+[#8] 0x5555555615f4 → main(ac=0x6, av=0x55555565a2c0)
+─────────────────────────────────────────────────────────────────────────────────────
+Continuing.
+
+Thread 2.1 "sshd" hit Breakpoint 2, kex_assemble_names (listp=0x7fffffffe150, listp@entry=0x555555655988 <options+1224>, def=def@entry=0x555555664760 "sntrup761x25519-sha512@openssh.com,curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group14-sha256", all=all@entry=0x555555676210 "diffie-hellman-group1-sha1,diffie-hellman-group14-sha1,diffie-hellman-group14-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group-exchange-sha1,diffie-hellman-group-exchange-sha256,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,curve25519-sha256,curve25519-sha256@libssh.org,sntrup761x25519-sha512@openssh.com") at kex.c:315
+315		free(list);
+[ Legend: Modified register | Code | Heap | Stack | String ]
+────────────────────────────────────────────────────────────────────── registers ────
+$rax   : 0x0               
+$rbx   : 0x0000555555676210  →  "diffie-hellman-group1-sha1,diffie-hellman-group14-[...]"
+$rcx   : 0x000055555565a010  →  0x0007000500070001
+$rdx   : 0x0               
+$rsp   : 0x00007fffffffe130  →  0x0000000000000000
+$rbp   : 0x000055555565fcb0  →  0x0000555555661320  →  0x0000000000000000
+$rsi   : 0x1               
+$rdi   : 0x00005555556607e0  →  0x0000000000000000
+$rip   : 0x00005555555df3f2  →  <kex_assemble_names+370> mov rdi, r13
+$r8    : 0x0               
+$r9    : 0x00007ffff7c59be0  →  0x0000555555679cd0  →  0x0000000000000000
+$r10   : 0x2000            
+$r11   : 0x0000555555661320  →  0x0000000000000000
+$r12   : 0x00005555556658c0  →  0x0000000000000000
+$r13   : 0x00005555556604c0  →  0x00005555556603a0  →  0x0000000000000000
+$r14   : 0xfffffff6        
+$r15   : 0x00007fffffffe150  →  0x0000000000000000
+$eflags: [zero carry parity adjust sign trap INTERRUPT direction overflow resume virtualx86 identification]
+$cs: 0x33 $ss: 0x2b $ds: 0x00 $es: 0x00 $fs: 0x00 $gs: 0x00 
+────────────────────────────────────────────────────────────────────────── stack ────
+0x00007fffffffe130│+0x0000: 0x0000000000000000	 ← $rsp
+0x00007fffffffe138│+0x0008: 0x00005555556658c0  →  0x0000000000000000
+0x00007fffffffe140│+0x0010: 0x0000555555655988  →  <options+1224> add BYTE PTR [rax], al
+0x00007fffffffe148│+0x0018: 0x00005555556607e0  →  0x0000000000000000
+0x00007fffffffe150│+0x0020: 0x0000000000000000	 ← $r15
+0x00007fffffffe158│+0x0028: 0x3df9d071c6427b00
+0x00007fffffffe160│+0x0030: 0x000055555566baa0  →  "3des-cbc,aes128-cbc,aes192-cbc,aes256-cbc,aes128-c[...]"
+0x00007fffffffe168│+0x0038: 0x00005555556554c0  →  <options+0> add DWORD PTR [rax], eax
+──────────────────────────────────────────────────────────────────── code:x86:64 ────
+   0x5555555df3e3 <kex_assemble_names+355> call   0x55555555e910 <free@plt>
+   0x5555555df3e8 <kex_assemble_names+360> mov    rdi, QWORD PTR [rsp+0x18]
+   0x5555555df3ed <kex_assemble_names+365> call   0x55555555e910 <free@plt>
+ → 0x5555555df3f2 <kex_assemble_names+370> mov    rdi, r13
+   0x5555555df3f5 <kex_assemble_names+373> call   0x55555555e910 <free@plt>
+   0x5555555df3fa <kex_assemble_names+378> mov    rdi, r12
+   0x5555555df3fd <kex_assemble_names+381> call   0x55555555e910 <free@plt>
+   0x5555555df402 <kex_assemble_names+386> jmp    0x5555555df423 <kex_assemble_names+419>
+   0x5555555df404 <kex_assemble_names+388> nop    DWORD PTR [rax+0x0]
+─────────────────────────────────────────────────────────────── source:kex.c+315 ────
+    310	 	r = 0;
+    311	 
+    312	  fail:
+    313	 	free(matching);
+    314	 	free(opatterns);
+●→  315	 	free(list);
+    316	 	free(ret);
+    317	 	return r;
+    318	 }
+    319	 
+    320	 /* put algorithm proposal into buffer */
+──────────────────────────────────────────────────────────────────────── threads ────
+[#0] Id 1, Name: "sshd", stopped 0x5555555df3f2 in kex_assemble_names (), reason: BREAKPOINT
+────────────────────────────────────────────────────────────────────────── trace ────
+[#0] 0x5555555df3f2 → kex_assemble_names(listp=0x7fffffffe150, def=0x555555664760 "sntrup761x25519-sha512@openssh.com,curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group14-sha256", all=0x555555676210 "diffie-hellman-group1-sha1,diffie-hellman-group14-sha1,diffie-hellman-group14-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group-exchange-sha1,diffie-hellman-group-exchange-sha256,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,curve25519-sha256,curve25519-sha256@libssh.org,sntrup761x25519-sha512@openssh.com")
+[#1] 0x55555556748c → assemble_algorithms(o=0x5555556554c0 <options>)
+[#2] 0x55555556bd5e → copy_set_server_options(dst=0x5555556554c0 <options>, src=0x55555566e5b0, preauth=0x1)
+[#3] 0x55555558b9f6 → mm_getpwnamallow(ssh=0x555555677cb0, username=<optimized out>)
+[#4] 0x5555555770b5 → input_userauth_request(type=<optimized out>, seq=<optimized out>, ssh=0x555555677cb0)
+[#5] 0x5555555cdb36 → ssh_dispatch_run(ssh=0x555555677cb0, mode=0x0, done=0x5555556797f0)
+[#6] 0x5555555cdc4d → ssh_dispatch_run_fatal(ssh=0x555555677cb0, mode=0x0, done=0x5555556797f0)
+[#7] 0x5555555750c2 → do_authentication2(ssh=0x555555677cb0)
+[#8] 0x5555555615f4 → main(ac=0x6, av=0x55555565a2c0)
+─────────────────────────────────────────────────────────────────────────────────────
+[ Legend: Modified register | Code | Heap | Stack | String ]
+────────────────────────────────────────────────────────────────────── registers ────
+$rax   : 0x0               
+$rbx   : 0x0000555555676210  →  "diffie-hellman-group1-sha1,diffie-hellman-group14-[...]"
+$rcx   : 0x000055555565a010  →  0x0007000500070001
+$rdx   : 0x0               
+$rsp   : 0x00007fffffffe130  →  0x0000000000000000
+$rbp   : 0x000055555565fcb0  →  0x0000555555661320  →  0x0000000000000000
+$rsi   : 0x1               
+$rdi   : 0x00005555556607e0  →  0x0000000000000000
+$rip   : 0x00005555555df3f2  →  <kex_assemble_names+370> mov rdi, r13
+$r8    : 0x0               
+$r9    : 0x00007ffff7c59be0  →  0x0000555555679cd0  →  0x0000000000000000
+$r10   : 0x2000            
+$r11   : 0x0000555555661320  →  0x0000000000000000
+$r12   : 0x00005555556658c0  →  0x0000000000000000
+$r13   : 0x00005555556604c0  →  0x00005555556603a0  →  0x0000000000000000
+$r14   : 0xfffffff6        
+$r15   : 0x00007fffffffe150  →  0x0000000000000000
+$eflags: [zero carry parity adjust sign trap INTERRUPT direction overflow resume virtualx86 identification]
+$cs: 0x33 $ss: 0x2b $ds: 0x00 $es: 0x00 $fs: 0x00 $gs: 0x00 
+────────────────────────────────────────────────────────────────────────── stack ────
+0x00007fffffffe130│+0x0000: 0x0000000000000000	 ← $rsp
+0x00007fffffffe138│+0x0008: 0x00005555556658c0  →  0x0000000000000000
+0x00007fffffffe140│+0x0010: 0x0000555555655988  →  <options+1224> add BYTE PTR [rax], al
+0x00007fffffffe148│+0x0018: 0x00005555556607e0  →  0x0000000000000000
+0x00007fffffffe150│+0x0020: 0x0000000000000000	 ← $r15
+0x00007fffffffe158│+0x0028: 0x3df9d071c6427b00
+0x00007fffffffe160│+0x0030: 0x000055555566baa0  →  "3des-cbc,aes128-cbc,aes192-cbc,aes256-cbc,aes128-c[...]"
+0x00007fffffffe168│+0x0038: 0x00005555556554c0  →  <options+0> add DWORD PTR [rax], eax
+──────────────────────────────────────────────────────────────────── code:x86:64 ────
+   0x5555555df3e3 <kex_assemble_names+355> call   0x55555555e910 <free@plt>
+   0x5555555df3e8 <kex_assemble_names+360> mov    rdi, QWORD PTR [rsp+0x18]
+   0x5555555df3ed <kex_assemble_names+365> call   0x55555555e910 <free@plt>
+ → 0x5555555df3f2 <kex_assemble_names+370> mov    rdi, r13
+   0x5555555df3f5 <kex_assemble_names+373> call   0x55555555e910 <free@plt>
+   0x5555555df3fa <kex_assemble_names+378> mov    rdi, r12
+   0x5555555df3fd <kex_assemble_names+381> call   0x55555555e910 <free@plt>
+   0x5555555df402 <kex_assemble_names+386> jmp    0x5555555df423 <kex_assemble_names+419>
+   0x5555555df404 <kex_assemble_names+388> nop    DWORD PTR [rax+0x0]
+─────────────────────────────────────────────────────────────── source:kex.c+315 ────
+    310	 	r = 0;
+    311	 
+    312	  fail:
+    313	 	free(matching);
+    314	 	free(opatterns);
+●→  315	 	free(list);
+    316	 	free(ret);
+    317	 	return r;
+    318	 }
+    319	 
+    320	 /* put algorithm proposal into buffer */
+──────────────────────────────────────────────────────────────────────── threads ────
+[#0] Id 1, Name: "sshd", stopped 0x5555555df3f2 in kex_assemble_names (), reason: BREAKPOINT
+────────────────────────────────────────────────────────────────────────── trace ────
+[#0] 0x5555555df3f2 → kex_assemble_names(listp=0x7fffffffe150, def=0x555555664760 "sntrup761x25519-sha512@openssh.com,curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group14-sha256", all=0x555555676210 "diffie-hellman-group1-sha1,diffie-hellman-group14-sha1,diffie-hellman-group14-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group-exchange-sha1,diffie-hellman-group-exchange-sha256,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,curve25519-sha256,curve25519-sha256@libssh.org,sntrup761x25519-sha512@openssh.com")
+[#1] 0x55555556748c → assemble_algorithms(o=0x5555556554c0 <options>)
+[#2] 0x55555556bd5e → copy_set_server_options(dst=0x5555556554c0 <options>, src=0x55555566e5b0, preauth=0x1)
+[#3] 0x55555558b9f6 → mm_getpwnamallow(ssh=0x555555677cb0, username=<optimized out>)
+[#4] 0x5555555770b5 → input_userauth_request(type=<optimized out>, seq=<optimized out>, ssh=0x555555677cb0)
+[#5] 0x5555555cdb36 → ssh_dispatch_run(ssh=0x555555677cb0, mode=0x0, done=0x5555556797f0)
+[#6] 0x5555555cdc4d → ssh_dispatch_run_fatal(ssh=0x555555677cb0, mode=0x0, done=0x5555556797f0)
+[#7] 0x5555555750c2 → do_authentication2(ssh=0x555555677cb0)
+[#8] 0x5555555615f4 → main(ac=0x6, av=0x55555565a2c0)
+─────────────────────────────────────────────────────────────────────────────────────
+[ Legend: Modified register | Code | Heap | Stack | String ]
+────────────────────────────────────────────────────────────────────── registers ────
+$rax   : 0x0               
+$rbx   : 0x0000555555676210  →  "diffie-hellman-group1-sha1,diffie-hellman-group14-[...]"
+$rcx   : 0x000055555565a010  →  0x0007000500070001
+$rdx   : 0x0               
+$rsp   : 0x00007fffffffe130  →  0x0000000000000000
+$rbp   : 0x000055555565fcb0  →  0x0000555555661320  →  0x0000000000000000
+$rsi   : 0x1               
+$rdi   : 0x00005555556607e0  →  0x0000000000000000
+$rip   : 0x00005555555df3f2  →  <kex_assemble_names+370> mov rdi, r13
+$r8    : 0x0               
+$r9    : 0x00007ffff7c59be0  →  0x0000555555679cd0  →  0x0000000000000000
+$r10   : 0x2000            
+$r11   : 0x0000555555661320  →  0x0000000000000000
+$r12   : 0x00005555556658c0  →  0x0000000000000000
+$r13   : 0x00005555556604c0  →  0x00005555556603a0  →  0x0000000000000000
+$r14   : 0xfffffff6        
+$r15   : 0x00007fffffffe150  →  0x0000000000000000
+$eflags: [zero carry parity adjust sign trap INTERRUPT direction overflow resume virtualx86 identification]
+$cs: 0x33 $ss: 0x2b $ds: 0x00 $es: 0x00 $fs: 0x00 $gs: 0x00 
+────────────────────────────────────────────────────────────────────────── stack ────
+0x00007fffffffe130│+0x0000: 0x0000000000000000	 ← $rsp
+0x00007fffffffe138│+0x0008: 0x00005555556658c0  →  0x0000000000000000
+0x00007fffffffe140│+0x0010: 0x0000555555655988  →  <options+1224> add BYTE PTR [rax], al
+0x00007fffffffe148│+0x0018: 0x00005555556607e0  →  0x0000000000000000
+0x00007fffffffe150│+0x0020: 0x0000000000000000	 ← $r15
+0x00007fffffffe158│+0x0028: 0x3df9d071c6427b00
+0x00007fffffffe160│+0x0030: 0x000055555566baa0  →  "3des-cbc,aes128-cbc,aes192-cbc,aes256-cbc,aes128-c[...]"
+0x00007fffffffe168│+0x0038: 0x00005555556554c0  →  <options+0> add DWORD PTR [rax], eax
+──────────────────────────────────────────────────────────────────── code:x86:64 ────
+   0x5555555df3e3 <kex_assemble_names+355> call   0x55555555e910 <free@plt>
+   0x5555555df3e8 <kex_assemble_names+360> mov    rdi, QWORD PTR [rsp+0x18]
+   0x5555555df3ed <kex_assemble_names+365> call   0x55555555e910 <free@plt>
+ → 0x5555555df3f2 <kex_assemble_names+370> mov    rdi, r13
+   0x5555555df3f5 <kex_assemble_names+373> call   0x55555555e910 <free@plt>
+   0x5555555df3fa <kex_assemble_names+378> mov    rdi, r12
+   0x5555555df3fd <kex_assemble_names+381> call   0x55555555e910 <free@plt>
+   0x5555555df402 <kex_assemble_names+386> jmp    0x5555555df423 <kex_assemble_names+419>
+   0x5555555df404 <kex_assemble_names+388> nop    DWORD PTR [rax+0x0]
+─────────────────────────────────────────────────────────────── source:kex.c+315 ────
+    310	 	r = 0;
+    311	 
+    312	  fail:
+    313	 	free(matching);
+    314	 	free(opatterns);
+●→  315	 	free(list);
+    316	 	free(ret);
+    317	 	return r;
+    318	 }
+    319	 
+    320	 /* put algorithm proposal into buffer */
+──────────────────────────────────────────────────────────────────────── threads ────
+[#0] Id 1, Name: "sshd", stopped 0x5555555df3f2 in kex_assemble_names (), reason: BREAKPOINT
+────────────────────────────────────────────────────────────────────────── trace ────
+[#0] 0x5555555df3f2 → kex_assemble_names(listp=0x7fffffffe150, def=0x555555664760 "sntrup761x25519-sha512@openssh.com,curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group14-sha256", all=0x555555676210 "diffie-hellman-group1-sha1,diffie-hellman-group14-sha1,diffie-hellman-group14-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group-exchange-sha1,diffie-hellman-group-exchange-sha256,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,curve25519-sha256,curve25519-sha256@libssh.org,sntrup761x25519-sha512@openssh.com")
+[#1] 0x55555556748c → assemble_algorithms(o=0x5555556554c0 <options>)
+[#2] 0x55555556bd5e → copy_set_server_options(dst=0x5555556554c0 <options>, src=0x55555566e5b0, preauth=0x1)
+[#3] 0x55555558b9f6 → mm_getpwnamallow(ssh=0x555555677cb0, username=<optimized out>)
+[#4] 0x5555555770b5 → input_userauth_request(type=<optimized out>, seq=<optimized out>, ssh=0x555555677cb0)
+[#5] 0x5555555cdb36 → ssh_dispatch_run(ssh=0x555555677cb0, mode=0x0, done=0x5555556797f0)
+[#6] 0x5555555cdc4d → ssh_dispatch_run_fatal(ssh=0x555555677cb0, mode=0x0, done=0x5555556797f0)
+[#7] 0x5555555750c2 → do_authentication2(ssh=0x555555677cb0)
+[#8] 0x5555555615f4 → main(ac=0x6, av=0x55555565a2c0)
+─────────────────────────────────────────────────────────────────────────────────────
+Continuing.
+
+Thread 2.1 "sshd" received signal SIGSYS, Bad system call.
+writev_for_fatal (total=<optimized out>, niov=0x2, iov=0x7fffffffdf90, fd=0x2) at ../sysdeps/unix/sysv/linux/libc_fatal.c:29
+29	../sysdeps/unix/sysv/linux/libc_fatal.c: Нет такого файла или каталога.
+[ Legend: Modified register | Code | Heap | Stack | String ]
+────────────────────────────────────────────────────────────────────── registers ────
+$rax   : 0x14              
+$rbx   : 0x00007fffffffdf90  →  0x00007ffff7c256f0  →  "free(): double free detected in tcache 2"
+$rcx   : 0x00007ffff7b05690  →  <__libc_message+384> cmp rax, 0xfffffffffffffffc
+$rdx   : 0x2               
+$rsp   : 0x00007fffffffdf90  →  0x00007ffff7c256f0  →  "free(): double free detected in tcache 2"
+$rbp   : 0x00007fffffffe090  →  0x00007ffff7c59b80  →  0x0000000000000000
+$rsi   : 0x00007fffffffdf90  →  0x00007ffff7c256f0  →  "free(): double free detected in tcache 2"
+$rdi   : 0x2               
+$rip   : 0x00007ffff7b05690  →  <__libc_message+384> cmp rax, 0xfffffffffffffffc
+$r8    : 0x2               
+$r9    : 0x29              
+$r10   : 0x14              
+$r11   : 0x246             
+$r12   : 0x00007fffffffdf90  →  0x00007ffff7c256f0  →  "free(): double free detected in tcache 2"
+$r13   : 0x0               
+$r14   : 0x10              
+$r15   : 0x1               
+$eflags: [ZERO carry PARITY adjust sign trap INTERRUPT direction overflow resume virtualx86 identification]
+$cs: 0x33 $ss: 0x2b $ds: 0x00 $es: 0x00 $fs: 0x00 $gs: 0x00 
+────────────────────────────────────────────────────────────────────────── stack ────
+0x00007fffffffdf90│+0x0000: 0x00007ffff7c256f0  →  "free(): double free detected in tcache 2"	 ← $rbx, $rsp, $rsi, $r12
+0x00007fffffffdf98│+0x0008: 0x0000000000000028 ("("?)
+0x00007fffffffdfa0│+0x0010: 0x00007ffff7c233a7  →  0x203a646d6372000a ("\n"?)
+0x00007fffffffdfa8│+0x0018: 0x0000000000000001
+0x00007fffffffdfb0│+0x0020: 0x0000555555665880  →  0x0000000000000002
+0x00007fffffffdfb8│+0x0028: 0x0000000000000000
+0x00007fffffffdfc0│+0x0030: 0x00007ffff7c233a7  →  0x203a646d6372000a ("\n"?)
+0x00007fffffffdfc8│+0x0038: 0x0000000000000001
+──────────────────────────────────────────────────────────────────── code:x86:64 ────
+   0x7ffff7b05686 <__libc_message+374> mov    edi, 0x2
+   0x7ffff7b0568b <__libc_message+379> mov    eax, r10d
+   0x7ffff7b0568e <__libc_message+382> syscall 
+ → 0x7ffff7b05690 <__libc_message+384> cmp    rax, 0xfffffffffffffffc
+   0x7ffff7b05694 <__libc_message+388> je     0x7ffff7b05680 <__libc_message+368>
+   0x7ffff7b05696 <__libc_message+390> test   r15d, r15d
+   0x7ffff7b05699 <__libc_message+393> jne    0x7ffff7b056e1 <__libc_message+465>
+   0x7ffff7b0569b <__libc_message+395> mov    rax, QWORD PTR [rbp-0x68]
+   0x7ffff7b0569f <__libc_message+399> sub    rax, QWORD PTR fs:0x28
+──────────────────────────────────────────────────────────────────────── threads ────
+[#0] Id 1, Name: "sshd", stopped 0x7ffff7b05690 in writev_for_fatal (), reason: SIGSYS
+────────────────────────────────────────────────────────────────────────── trace ────
+[#0] 0x7ffff7b05690 → writev_for_fatal(total=<optimized out>, niov=0x2, iov=0x7fffffffdf90, fd=0x2)
+[#1] 0x7ffff7b05690 → __libc_message(action=do_abort, fmt=0x7ffff7c233a5 "%s\n")
+[#2] 0x7ffff7b0ca5a → malloc_printerr(str=0x7ffff7c256f0 "free(): double free detected in tcache 2")
+[#3] 0x7ffff7b0e055 → _int_free(av=0x7ffff7c59b80 <main_arena>, p=0x5555556604b0, have_lock=0x0)
+[#4] 0x5555555df3fa → kex_assemble_names(listp=0x7fffffffe150, def=0x555555664760 "sntrup761x25519-sha512@openssh.com,curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group14-sha256", all=0x555555676210 "diffie-hellman-group1-sha1,diffie-hellman-group14-sha1,diffie-hellman-group14-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group-exchange-sha1,diffie-hellman-group-exchange-sha256,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,curve25519-sha256,curve25519-sha256@libssh.org,sntrup761x25519-sha512@openssh.com")
+[#5] 0x55555556748c → assemble_algorithms(o=0x5555556554c0 <options>)
+[#6] 0x55555556bd5e → copy_set_server_options(dst=0x5555556554c0 <options>, src=0x55555566e5b0, preauth=0x1)
+[#7] 0x55555558b9f6 → mm_getpwnamallow(ssh=0x555555677cb0, username=<optimized out>)
+[#8] 0x5555555770b5 → input_userauth_request(type=<optimized out>, seq=<optimized out>, ssh=0x555555677cb0)
+[#9] 0x5555555cdb36 → ssh_dispatch_run(ssh=0x555555677cb0, mode=0x0, done=0x5555556797f0)
+─────────────────────────────────────────────────────────────────────────────────────
+[ Legend: Modified register | Code | Heap | Stack | String ]
+────────────────────────────────────────────────────────────────────── registers ────
+$rax   : 0x14              
+$rbx   : 0x00007fffffffdf90  →  0x00007ffff7c256f0  →  "free(): double free detected in tcache 2"
+$rcx   : 0x00007ffff7b05690  →  <__libc_message+384> cmp rax, 0xfffffffffffffffc
+$rdx   : 0x2               
+$rsp   : 0x00007fffffffdf90  →  0x00007ffff7c256f0  →  "free(): double free detected in tcache 2"
+$rbp   : 0x00007fffffffe090  →  0x00007ffff7c59b80  →  0x0000000000000000
+$rsi   : 0x00007fffffffdf90  →  0x00007ffff7c256f0  →  "free(): double free detected in tcache 2"
+$rdi   : 0x2               
+$rip   : 0x00007ffff7b05690  →  <__libc_message+384> cmp rax, 0xfffffffffffffffc
+$r8    : 0x2               
+$r9    : 0x29              
+$r10   : 0x14              
+$r11   : 0x246             
+$r12   : 0x00007fffffffdf90  →  0x00007ffff7c256f0  →  "free(): double free detected in tcache 2"
+$r13   : 0x0               
+$r14   : 0x10              
+$r15   : 0x1               
+$eflags: [ZERO carry PARITY adjust sign trap INTERRUPT direction overflow resume virtualx86 identification]
+$cs: 0x33 $ss: 0x2b $ds: 0x00 $es: 0x00 $fs: 0x00 $gs: 0x00 
+────────────────────────────────────────────────────────────────────────── stack ────
+0x00007fffffffdf90│+0x0000: 0x00007ffff7c256f0  →  "free(): double free detected in tcache 2"	 ← $rbx, $rsp, $rsi, $r12
+0x00007fffffffdf98│+0x0008: 0x0000000000000028 ("("?)
+0x00007fffffffdfa0│+0x0010: 0x00007ffff7c233a7  →  0x203a646d6372000a ("\n"?)
+0x00007fffffffdfa8│+0x0018: 0x0000000000000001
+0x00007fffffffdfb0│+0x0020: 0x0000555555665880  →  0x0000000000000002
+0x00007fffffffdfb8│+0x0028: 0x0000000000000000
+0x00007fffffffdfc0│+0x0030: 0x00007ffff7c233a7  →  0x203a646d6372000a ("\n"?)
+0x00007fffffffdfc8│+0x0038: 0x0000000000000001
+──────────────────────────────────────────────────────────────────── code:x86:64 ────
+   0x7ffff7b05686 <__libc_message+374> mov    edi, 0x2
+   0x7ffff7b0568b <__libc_message+379> mov    eax, r10d
+   0x7ffff7b0568e <__libc_message+382> syscall 
+ → 0x7ffff7b05690 <__libc_message+384> cmp    rax, 0xfffffffffffffffc
+   0x7ffff7b05694 <__libc_message+388> je     0x7ffff7b05680 <__libc_message+368>
+   0x7ffff7b05696 <__libc_message+390> test   r15d, r15d
+   0x7ffff7b05699 <__libc_message+393> jne    0x7ffff7b056e1 <__libc_message+465>
+   0x7ffff7b0569b <__libc_message+395> mov    rax, QWORD PTR [rbp-0x68]
+   0x7ffff7b0569f <__libc_message+399> sub    rax, QWORD PTR fs:0x28
+──────────────────────────────────────────────────────────────────────── threads ────
+[#0] Id 1, Name: "sshd", stopped 0x7ffff7b05690 in writev_for_fatal (), reason: SIGSYS
+────────────────────────────────────────────────────────────────────────── trace ────
+[#0] 0x7ffff7b05690 → writev_for_fatal(total=<optimized out>, niov=0x2, iov=0x7fffffffdf90, fd=0x2)
+[#1] 0x7ffff7b05690 → __libc_message(action=do_abort, fmt=0x7ffff7c233a5 "%s\n")
+[#2] 0x7ffff7b0ca5a → malloc_printerr(str=0x7ffff7c256f0 "free(): double free detected in tcache 2")
+[#3] 0x7ffff7b0e055 → _int_free(av=0x7ffff7c59b80 <main_arena>, p=0x5555556604b0, have_lock=0x0)
+[#4] 0x5555555df3fa → kex_assemble_names(listp=0x7fffffffe150, def=0x555555664760 "sntrup761x25519-sha512@openssh.com,curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group14-sha256", all=0x555555676210 "diffie-hellman-group1-sha1,diffie-hellman-group14-sha1,diffie-hellman-group14-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group-exchange-sha1,diffie-hellman-group-exchange-sha256,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,curve25519-sha256,curve25519-sha256@libssh.org,sntrup761x25519-sha512@openssh.com")
+[#5] 0x55555556748c → assemble_algorithms(o=0x5555556554c0 <options>)
+[#6] 0x55555556bd5e → copy_set_server_options(dst=0x5555556554c0 <options>, src=0x55555566e5b0, preauth=0x1)
+[#7] 0x55555558b9f6 → mm_getpwnamallow(ssh=0x555555677cb0, username=<optimized out>)
+[#8] 0x5555555770b5 → input_userauth_request(type=<optimized out>, seq=<optimized out>, ssh=0x555555677cb0)
+[#9] 0x5555555cdb36 → ssh_dispatch_run(ssh=0x555555677cb0, mode=0x0, done=0x5555556797f0)
+─────────────────────────────────────────────────────────────────────────────────────
+[ Legend: Modified register | Code | Heap | Stack | String ]
+────────────────────────────────────────────────────────────────────── registers ────
+$rax   : 0x14              
+$rbx   : 0x00007fffffffdf90  →  0x00007ffff7c256f0  →  "free(): double free detected in tcache 2"
+$rcx   : 0x00007ffff7b05690  →  <__libc_message+384> cmp rax, 0xfffffffffffffffc
+$rdx   : 0x2               
+$rsp   : 0x00007fffffffdf90  →  0x00007ffff7c256f0  →  "free(): double free detected in tcache 2"
+$rbp   : 0x00007fffffffe090  →  0x00007ffff7c59b80  →  0x0000000000000000
+$rsi   : 0x00007fffffffdf90  →  0x00007ffff7c256f0  →  "free(): double free detected in tcache 2"
+$rdi   : 0x2               
+$rip   : 0x00007ffff7b05690  →  <__libc_message+384> cmp rax, 0xfffffffffffffffc
+$r8    : 0x2               
+$r9    : 0x29              
+$r10   : 0x14              
+$r11   : 0x246             
+$r12   : 0x00007fffffffdf90  →  0x00007ffff7c256f0  →  "free(): double free detected in tcache 2"
+$r13   : 0x0               
+$r14   : 0x10              
+$r15   : 0x1               
+$eflags: [ZERO carry PARITY adjust sign trap INTERRUPT direction overflow resume virtualx86 identification]
+$cs: 0x33 $ss: 0x2b $ds: 0x00 $es: 0x00 $fs: 0x00 $gs: 0x00 
+────────────────────────────────────────────────────────────────────────── stack ────
+0x00007fffffffdf90│+0x0000: 0x00007ffff7c256f0  →  "free(): double free detected in tcache 2"	 ← $rbx, $rsp, $rsi, $r12
+0x00007fffffffdf98│+0x0008: 0x0000000000000028 ("("?)
+0x00007fffffffdfa0│+0x0010: 0x00007ffff7c233a7  →  0x203a646d6372000a ("\n"?)
+0x00007fffffffdfa8│+0x0018: 0x0000000000000001
+0x00007fffffffdfb0│+0x0020: 0x0000555555665880  →  0x0000000000000002
+0x00007fffffffdfb8│+0x0028: 0x0000000000000000
+0x00007fffffffdfc0│+0x0030: 0x00007ffff7c233a7  →  0x203a646d6372000a ("\n"?)
+0x00007fffffffdfc8│+0x0038: 0x0000000000000001
+──────────────────────────────────────────────────────────────────── code:x86:64 ────
+   0x7ffff7b05686 <__libc_message+374> mov    edi, 0x2
+   0x7ffff7b0568b <__libc_message+379> mov    eax, r10d
+   0x7ffff7b0568e <__libc_message+382> syscall 
+ → 0x7ffff7b05690 <__libc_message+384> cmp    rax, 0xfffffffffffffffc
+   0x7ffff7b05694 <__libc_message+388> je     0x7ffff7b05680 <__libc_message+368>
+   0x7ffff7b05696 <__libc_message+390> test   r15d, r15d
+   0x7ffff7b05699 <__libc_message+393> jne    0x7ffff7b056e1 <__libc_message+465>
+   0x7ffff7b0569b <__libc_message+395> mov    rax, QWORD PTR [rbp-0x68]
+   0x7ffff7b0569f <__libc_message+399> sub    rax, QWORD PTR fs:0x28
+──────────────────────────────────────────────────────────────────────── threads ────
+[#0] Id 1, Name: "sshd", stopped 0x7ffff7b05690 in writev_for_fatal (), reason: SIGSYS
+────────────────────────────────────────────────────────────────────────── trace ────
+[#0] 0x7ffff7b05690 → writev_for_fatal(total=<optimized out>, niov=0x2, iov=0x7fffffffdf90, fd=0x2)
+[#1] 0x7ffff7b05690 → __libc_message(action=do_abort, fmt=0x7ffff7c233a5 "%s\n")
+[#2] 0x7ffff7b0ca5a → malloc_printerr(str=0x7ffff7c256f0 "free(): double free detected in tcache 2")
+[#3] 0x7ffff7b0e055 → _int_free(av=0x7ffff7c59b80 <main_arena>, p=0x5555556604b0, have_lock=0x0)
+[#4] 0x5555555df3fa → kex_assemble_names(listp=0x7fffffffe150, def=0x555555664760 "sntrup761x25519-sha512@openssh.com,curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group14-sha256", all=0x555555676210 "diffie-hellman-group1-sha1,diffie-hellman-group14-sha1,diffie-hellman-group14-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group-exchange-sha1,diffie-hellman-group-exchange-sha256,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,curve25519-sha256,curve25519-sha256@libssh.org,sntrup761x25519-sha512@openssh.com")
+[#5] 0x55555556748c → assemble_algorithms(o=0x5555556554c0 <options>)
+[#6] 0x55555556bd5e → copy_set_server_options(dst=0x5555556554c0 <options>, src=0x55555566e5b0, preauth=0x1)
+[#7] 0x55555558b9f6 → mm_getpwnamallow(ssh=0x555555677cb0, username=<optimized out>)
+[#8] 0x5555555770b5 → input_userauth_request(type=<optimized out>, seq=<optimized out>, ssh=0x555555677cb0)
+[#9] 0x5555555cdb36 → ssh_dispatch_run(ssh=0x555555677cb0, mode=0x0, done=0x5555556797f0)
+─────────────────────────────────────────────────────────────────────────────────────
+Continuing.
+[Inferior 2 (process 32716) exited with code 01]
