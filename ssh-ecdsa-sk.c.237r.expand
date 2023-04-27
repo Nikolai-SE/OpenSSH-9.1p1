@@ -1,0 +1,3079 @@
+
+;; Function ssh_ecdsa_sk_verify (ssh_ecdsa_sk_verify, funcdef_no=371, decl_uid=16064, cgraph_uid=372, symbol_order=371)
+
+Partition 5: size 32 align 16
+	sighash
+Partition 4: size 32 align 16
+	apphash
+Partition 3: size 32 align 16
+	msghash
+Partition 11: size 8 align 8
+	webauthn_origin
+Partition 10: size 8 align 8
+	ktype
+Partition 9: size 8 align 8
+	webauthn_exts
+Partition 8: size 8 align 8
+	webauthn_wrapper
+Partition 7: size 8 align 8
+	sigbuf
+Partition 1: size 8 align 8
+	sig_s
+Partition 0: size 8 align 8
+	sig_r
+Partition 6: size 4 align 4
+	sig_counter
+Partition 2: size 1 align 1
+	sig_flags
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+
+;; Generating RTL for gimple basic block 11
+
+;; Generating RTL for gimple basic block 12
+
+;; Generating RTL for gimple basic block 13
+
+;; Generating RTL for gimple basic block 14
+
+;; Generating RTL for gimple basic block 15
+
+;; Generating RTL for gimple basic block 16
+
+;; Generating RTL for gimple basic block 17
+
+;; Generating RTL for gimple basic block 18
+
+;; Generating RTL for gimple basic block 19
+
+;; Generating RTL for gimple basic block 20
+
+;; Generating RTL for gimple basic block 21
+
+;; Generating RTL for gimple basic block 22
+
+;; Generating RTL for gimple basic block 23
+
+;; Generating RTL for gimple basic block 24
+
+;; Generating RTL for gimple basic block 25
+
+;; Generating RTL for gimple basic block 26
+
+;; Generating RTL for gimple basic block 27
+
+;; Generating RTL for gimple basic block 28
+
+;; Generating RTL for gimple basic block 29
+
+;; Generating RTL for gimple basic block 30
+
+;; Generating RTL for gimple basic block 31
+
+;; Generating RTL for gimple basic block 32
+
+;; Generating RTL for gimple basic block 33
+
+;; Generating RTL for gimple basic block 34
+
+;; Generating RTL for gimple basic block 35
+
+;; Generating RTL for gimple basic block 36
+
+;; Generating RTL for gimple basic block 37
+
+;; Generating RTL for gimple basic block 38
+
+;; Generating RTL for gimple basic block 39
+
+;; Generating RTL for gimple basic block 40
+
+;; Generating RTL for gimple basic block 41
+
+;; Generating RTL for gimple basic block 42
+
+;; Generating RTL for gimple basic block 43
+
+;; Generating RTL for gimple basic block 44
+
+;; Generating RTL for gimple basic block 45
+
+;; Generating RTL for gimple basic block 46
+
+;; Generating RTL for gimple basic block 47
+
+;; Generating RTL for gimple basic block 48
+
+;; Generating RTL for gimple basic block 49
+
+;; Generating RTL for gimple basic block 50
+
+;; Generating RTL for gimple basic block 51
+
+;; Generating RTL for gimple basic block 52
+
+;; Generating RTL for gimple basic block 53
+
+;; Generating RTL for gimple basic block 54
+
+;; Generating RTL for gimple basic block 55
+
+;; Generating RTL for gimple basic block 56
+
+;; Generating RTL for gimple basic block 57
+
+;; Generating RTL for gimple basic block 58
+Edge 9->55 redirected to 64
+Edge 10->55 redirected to 65
+Edge 11->54 redirected to 66
+Edge 12->54 redirected to 67
+Edge 13->15 redirected to 69
+Edge 14->54 redirected to 70
+Edge 15->54 redirected to 71
+Edge 16->54 redirected to 72
+Edge 17->54 redirected to 73
+Edge 19->54 redirected to 74
+Edge 20->54 redirected to 75
+Edge 21->54 redirected to 76
+Edge 22->54 redirected to 77
+Edge 23->54 redirected to 78
+Edge 24->54 redirected to 79
+Edge 25->54 redirected to 80
+Edge 26->54 redirected to 81
+Edge 27->54 redirected to 82
+Edge 28->54 redirected to 83
+Edge 32->57 redirected to 84
+Edge 33->57 redirected to 85
+Edge 34->57 redirected to 86
+Edge 50->54 redirected to 87
+Edge 51->54 redirected to 88
+Predictions for insn 777 bb 63
+  first match heuristics: 99.96%  exec 1073741824 (estimated locally) hit 2147483640 (estimated locally) (200.0%)
+  combined heuristics: 99.96%  exec 1073741824 (estimated locally) hit 2147483640 (estimated locally) (200.0%)
+  noreturn call heuristics: 99.96%  exec 1073741824 (estimated locally) hit 2147483640 (estimated locally) (200.0%)
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Redirecting jump 105 from 82 to 89.
+Forwarding edge 16->17 to 19 failed.
+Forwarding edge 23->24 to 29 failed.
+Forwarding edge 27->28 to 23 failed.
+Forwarding edge 47->48 to 88 failed.
+Redirecting jump 784 from 82 to 89.
+Redirecting jump 788 from 82 to 89.
+Merging block 82 into block 81...
+Merged blocks 81 and 82.
+Merged 81 and 82 without moving.
+
+
+try_optimize_cfg iteration 2
+
+Forwarding edge 16->17 to 19 failed.
+Forwarding edge 23->24 to 29 failed.
+Forwarding edge 27->28 to 23 failed.
+Forwarding edge 47->48 to 88 failed.
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 68 NOTE_INSN_DELETED)
+(note 68 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 68 3 2 (set (reg/v/f:DI 146 [ key ])
+        (reg:DI 5 di [ key ])) "ssh-ecdsa-sk.c":146:1 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v/f:DI 147 [ signature ])
+        (reg:DI 4 si [ signature ])) "ssh-ecdsa-sk.c":146:1 -1
+     (nil))
+(insn 4 3 5 2 (set (reg/v:DI 148 [ signaturelen ])
+        (reg:DI 1 dx [ signaturelen ])) "ssh-ecdsa-sk.c":146:1 -1
+     (nil))
+(insn 5 4 6 2 (set (reg/v/f:DI 149 [ data ])
+        (reg:DI 2 cx [ data ])) "ssh-ecdsa-sk.c":146:1 -1
+     (nil))
+(insn 6 5 7 2 (set (reg/v:DI 150 [ datalen ])
+        (reg:DI 36 r8 [ datalen ])) "ssh-ecdsa-sk.c":146:1 -1
+     (nil))
+(insn 7 6 8 2 (set (reg/v:SI 151 [ compat ])
+        (reg:SI 37 r9 [ compat ])) "ssh-ecdsa-sk.c":146:1 -1
+     (nil))
+(insn 8 7 9 2 (set (reg/v/f:DI 152 [ detailsp ])
+        (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [15 detailsp+0 S8 A64])) "ssh-ecdsa-sk.c":146:1 -1
+     (nil))
+(note 9 8 10 2 NOTE_INSN_FUNCTION_BEG)
+(insn 10 9 11 2 (set (reg/f:DI 153)
+        (const_int 40 [0x28])) "ssh-ecdsa-sk.c":146:1 -1
+     (nil))
+(insn 11 10 70 2 (parallel [
+            (set (mem/v/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                        (const_int -8 [0xfffffffffffffff8])) [8 D.16283+0 S8 A64])
+                (unspec:DI [
+                        (mem/v/f:DI (reg/f:DI 153) [0 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_SET))
+            (set (scratch:DI)
+                (const_int 0 [0]))
+            (clobber (reg:CC 17 flags))
+        ]) "ssh-ecdsa-sk.c":146:1 -1
+     (nil))
+(debug_insn 70 11 71 2 (debug_marker) "ssh-ecdsa-sk.c":147:2 -1
+     (nil))
+(debug_insn 71 70 72 2 (var_location:DI sig (const_int 0 [0])) "ssh-ecdsa-sk.c":147:13 -1
+     (nil))
+(debug_insn 72 71 73 2 (debug_marker) "ssh-ecdsa-sk.c":148:2 -1
+     (nil))
+(insn 73 72 74 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -168 [0xffffffffffffff58])) [12 sig_r+0 S8 A64])
+        (const_int 0 [0])) "ssh-ecdsa-sk.c":148:10 -1
+     (nil))
+(insn 74 73 75 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -160 [0xffffffffffffff60])) [12 sig_s+0 S8 A64])
+        (const_int 0 [0])) "ssh-ecdsa-sk.c":148:25 -1
+     (nil))
+(debug_insn 75 74 76 2 (debug_marker) "ssh-ecdsa-sk.c":149:2 -1
+     (nil))
+(debug_insn 76 75 77 2 (debug_marker) "ssh-ecdsa-sk.c":150:2 -1
+     (nil))
+(debug_insn 77 76 78 2 (debug_marker) "ssh-ecdsa-sk.c":151:2 -1
+     (nil))
+(debug_insn 78 77 79 2 (debug_marker) "ssh-ecdsa-sk.c":152:2 -1
+     (nil))
+(debug_insn 79 78 80 2 (var_location:SI is_webauthn (const_int 0 [0])) "ssh-ecdsa-sk.c":152:6 -1
+     (nil))
+(debug_insn 80 79 81 2 (var_location:SI ret (const_int -1 [0xffffffffffffffff])) "ssh-ecdsa-sk.c":152:23 -1
+     (nil))
+(debug_insn 81 80 82 2 (debug_marker) "ssh-ecdsa-sk.c":153:2 -1
+     (nil))
+(debug_insn 82 81 83 2 (var_location:DI b (const_int 0 [0])) "ssh-ecdsa-sk.c":153:17 -1
+     (nil))
+(insn 83 82 84 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -152 [0xffffffffffffff68])) [9 sigbuf+0 S8 A64])
+        (const_int 0 [0])) "ssh-ecdsa-sk.c":153:28 -1
+     (nil))
+(debug_insn 84 83 85 2 (var_location:DI original_signed (const_int 0 [0])) "ssh-ecdsa-sk.c":153:44 -1
+     (nil))
+(debug_insn 85 84 86 2 (debug_marker) "ssh-ecdsa-sk.c":154:2 -1
+     (nil))
+(insn 86 85 87 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -144 [0xffffffffffffff70])) [9 webauthn_wrapper+0 S8 A64])
+        (const_int 0 [0])) "ssh-ecdsa-sk.c":154:17 -1
+     (nil))
+(insn 87 86 88 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -136 [0xffffffffffffff78])) [9 webauthn_exts+0 S8 A64])
+        (const_int 0 [0])) "ssh-ecdsa-sk.c":154:43 -1
+     (nil))
+(debug_insn 88 87 89 2 (debug_marker) "ssh-ecdsa-sk.c":155:2 -1
+     (nil))
+(insn 89 88 90 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -128 [0xffffffffffffff80])) [1 ktype+0 S8 A64])
+        (const_int 0 [0])) "ssh-ecdsa-sk.c":155:8 -1
+     (nil))
+(insn 90 89 91 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -120 [0xffffffffffffff88])) [1 webauthn_origin+0 S8 A64])
+        (const_int 0 [0])) "ssh-ecdsa-sk.c":155:23 -1
+     (nil))
+(debug_insn 91 90 92 2 (debug_marker) "ssh-ecdsa-sk.c":156:2 -1
+     (nil))
+(debug_insn 92 91 93 2 (var_location:DI details (const_int 0 [0])) "ssh-ecdsa-sk.c":156:29 -1
+     (nil))
+(debug_insn 93 92 94 2 (debug_marker) "ssh-ecdsa-sk.c":161:2 -1
+     (nil))
+(insn 94 93 95 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 152 [ detailsp ])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":161:5 -1
+     (nil))
+(jump_insn 95 94 96 2 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 99)
+            (pc))) "ssh-ecdsa-sk.c":161:5 -1
+     (int_list:REG_BR_PROB 322122548 (nil))
+ -> 99)
+(note 96 95 97 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 97 96 98 4 (debug_marker) "ssh-ecdsa-sk.c":162:3 -1
+     (nil))
+(insn 98 97 99 4 (set (mem/f:DI (reg/v/f:DI 152 [ detailsp ]) [13 *detailsp_75(D)+0 S8 A64])
+        (const_int 0 [0])) "ssh-ecdsa-sk.c":162:13 -1
+     (nil))
+(code_label 99 98 100 5 2 (nil) [1 uses])
+(note 100 99 101 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 101 100 102 5 (debug_marker) "ssh-ecdsa-sk.c":163:2 -1
+     (nil))
+(insn 102 101 103 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 146 [ key ])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":163:5 -1
+     (nil))
+(jump_insn 103 102 109 5 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 107)
+            (pc))) "ssh-ecdsa-sk.c":163:5 -1
+     (int_list:REG_BR_PROB 1068909988 (nil))
+ -> 107)
+(code_label 109 103 104 6 5 (nil) [4 uses])
+(note 104 109 60 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 60 104 105 6 (set (reg/v:SI 145 [ <retval> ])
+        (const_int -10 [0xfffffffffffffff6])) "ssh-ecdsa-sk.c":166:10 -1
+     (nil))
+(jump_insn 105 60 106 6 (set (pc)
+        (label_ref:DI 774)) 737 {jump}
+     (nil)
+ -> 774)
+(barrier 106 105 107)
+(code_label 107 106 108 7 3 (nil) [1 uses])
+(note 108 107 110 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 110 108 111 7 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/f:DI (plus:DI (reg/v/f:DI 146 [ key ])
+                    (const_int 32 [0x20])) [6 key_77(D)->ecdsa+0 S8 A64])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":163:18 -1
+     (nil))
+(jump_insn 111 110 112 7 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 109)
+            (pc))) "ssh-ecdsa-sk.c":163:18 -1
+     (int_list:REG_BR_PROB 9771052 (nil))
+ -> 109)
+(note 112 111 113 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 113 112 114 8 (set (reg:SI 5 di)
+        (mem:SI (reg/v/f:DI 146 [ key ]) [3 key_77(D)->type+0 S4 A64])) "ssh-ecdsa-sk.c":164:6 -1
+     (nil))
+(call_insn 114 113 115 8 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshkey_type_plain") [flags 0x41]  <function_decl 0x7f5e43267300 sshkey_type_plain>) [0 sshkey_type_plain S1 A8])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":164:6 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshkey_type_plain") [flags 0x41]  <function_decl 0x7f5e43267300 sshkey_type_plain>)
+        (nil))
+    (expr_list:SI (use (reg:SI 5 di))
+        (nil)))
+(insn 115 114 116 8 (set (reg:SI 84 [ _3 ])
+        (reg:SI 0 ax)) "ssh-ecdsa-sk.c":164:6 -1
+     (nil))
+(insn 116 115 117 8 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 84 [ _3 ])
+            (const_int 10 [0xa]))) "ssh-ecdsa-sk.c":163:40 -1
+     (nil))
+(jump_insn 117 116 118 8 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 109)
+            (pc))) "ssh-ecdsa-sk.c":163:40 -1
+     (int_list:REG_BR_PROB 21474844 (nil))
+ -> 109)
+(note 118 117 119 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 119 118 120 9 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 147 [ signature ])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":165:16 -1
+     (nil))
+(insn 120 119 121 9 (set (reg:QI 155)
+        (eq:QI (reg:CCZ 17 flags)
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":165:16 -1
+     (nil))
+(insn 121 120 122 9 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 155)
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":165:24 -1
+     (nil))
+(jump_insn 122 121 881 9 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 109)
+            (pc))) "ssh-ecdsa-sk.c":165:24 -1
+     (int_list:REG_BR_PROB 5583460 (nil))
+ -> 109)
+(note 881 122 123 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 123 881 124 10 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:DI 148 [ signaturelen ])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":165:40 -1
+     (nil))
+(insn 124 123 125 10 (set (reg:QI 157)
+        (eq:QI (reg:CCZ 17 flags)
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":165:40 -1
+     (nil))
+(insn 125 124 126 10 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 157)
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":165:24 -1
+     (nil))
+(jump_insn 126 125 127 10 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 109)
+            (pc))) "ssh-ecdsa-sk.c":165:24 -1
+     (int_list:REG_BR_PROB 5612644 (nil))
+ -> 109)
+(note 127 126 128 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 128 127 129 11 (debug_marker) "ssh-ecdsa-sk.c":168:2 -1
+     (nil))
+(insn 129 128 130 11 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem:SI (plus:DI (reg/v/f:DI 146 [ key ])
+                    (const_int 24 [0x18])) [3 key_77(D)->ecdsa_nid+0 S4 A64])
+            (const_int 415 [0x19f]))) "ssh-ecdsa-sk.c":168:5 -1
+     (nil))
+(jump_insn 130 129 131 11 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 787)
+            (pc))) "ssh-ecdsa-sk.c":168:5 736 {*jcc}
+     (int_list:REG_BR_PROB 42734932 (nil))
+ -> 787)
+(note 131 130 132 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 132 131 133 12 (debug_marker) "ssh-ecdsa-sk.c":172:2 -1
+     (nil))
+(insn 133 132 134 12 (set (reg:DI 4 si)
+        (reg/v:DI 148 [ signaturelen ])) "ssh-ecdsa-sk.c":172:11 -1
+     (nil))
+(insn 134 133 135 12 (set (reg:DI 5 di)
+        (reg/v/f:DI 147 [ signature ])) "ssh-ecdsa-sk.c":172:11 -1
+     (nil))
+(call_insn 135 134 136 12 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshbuf_from") [flags 0x41]  <function_decl 0x7f5e436b0f00 sshbuf_from>) [0 sshbuf_from S1 A8])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":172:11 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_from") [flags 0x41]  <function_decl 0x7f5e436b0f00 sshbuf_from>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 136 135 137 12 (set (reg/v/f:DI 133 [ b ])
+        (reg:DI 0 ax)) "ssh-ecdsa-sk.c":172:11 -1
+     (nil))
+(debug_insn 137 136 138 12 (var_location:DI b (reg/v/f:DI 133 [ b ])) "ssh-ecdsa-sk.c":172:11 -1
+     (nil))
+(insn 138 137 139 12 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 133 [ b ])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":172:5 -1
+     (nil))
+(jump_insn 139 138 140 12 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 791)
+            (pc))) "ssh-ecdsa-sk.c":172:5 736 {*jcc}
+     (int_list:REG_BR_PROB 9771052 (nil))
+ -> 791)
+(note 140 139 141 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 141 140 142 13 (debug_marker) "ssh-ecdsa-sk.c":174:2 -1
+     (nil))
+(insn 142 141 143 13 (set (reg:DI 4 si)
+        (const_int 8 [0x8])) "ssh-ecdsa-sk.c":174:17 -1
+     (nil))
+(insn 143 142 144 13 (set (reg:DI 5 di)
+        (const_int 1 [0x1])) "ssh-ecdsa-sk.c":174:17 -1
+     (nil))
+(call_insn 144 143 145 13 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("calloc") [flags 0x41]  <function_decl 0x7f5e43f30300 calloc>) [0 __builtin_calloc S1 A8])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":174:17 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("calloc") [flags 0x41]  <function_decl 0x7f5e43f30300 calloc>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 145 144 146 13 (set (reg/f:DI 158)
+        (reg:DI 0 ax)) "ssh-ecdsa-sk.c":174:17 -1
+     (expr_list:REG_NOALIAS (reg/f:DI 158)
+        (nil)))
+(insn 146 145 147 13 (set (reg/v/f:DI 132 [ details ])
+        (reg/f:DI 158)) "ssh-ecdsa-sk.c":174:17 -1
+     (nil))
+(debug_insn 147 146 148 13 (var_location:DI details (reg/v/f:DI 132 [ details ])) "ssh-ecdsa-sk.c":174:17 -1
+     (nil))
+(insn 148 147 149 13 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 132 [ details ])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":174:5 -1
+     (nil))
+(jump_insn 149 148 150 13 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 795)
+            (pc))) "ssh-ecdsa-sk.c":174:5 736 {*jcc}
+     (int_list:REG_BR_PROB 429500 (nil))
+ -> 795)
+(note 150 149 151 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 151 150 152 14 (debug_marker) "ssh-ecdsa-sk.c":178:2 -1
+     (nil))
+(insn 152 151 153 14 (parallel [
+            (set (reg:DI 159)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -128 [0xffffffffffffff80])))
+            (clobber (reg:CC 17 flags))
+        ]) "ssh-ecdsa-sk.c":178:6 -1
+     (nil))
+(insn 153 152 154 14 (set (reg:DI 1 dx)
+        (const_int 0 [0])) "ssh-ecdsa-sk.c":178:6 -1
+     (nil))
+(insn 154 153 155 14 (set (reg:DI 4 si)
+        (reg:DI 159)) "ssh-ecdsa-sk.c":178:6 -1
+     (nil))
+(insn 155 154 156 14 (set (reg:DI 5 di)
+        (reg/v/f:DI 133 [ b ])) "ssh-ecdsa-sk.c":178:6 -1
+     (nil))
+(call_insn 156 155 157 14 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshbuf_get_cstring") [flags 0x41]  <function_decl 0x7f5e436c3200 sshbuf_get_cstring>) [0 sshbuf_get_cstring S1 A8])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":178:6 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_get_cstring") [flags 0x41]  <function_decl 0x7f5e436c3200 sshbuf_get_cstring>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(insn 157 156 158 14 (set (reg:SI 89 [ _8 ])
+        (reg:SI 0 ax)) "ssh-ecdsa-sk.c":178:6 -1
+     (nil))
+(insn 158 157 159 14 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 89 [ _8 ])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":178:5 -1
+     (nil))
+(jump_insn 159 158 160 14 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 799)
+            (pc))) "ssh-ecdsa-sk.c":178:5 736 {*jcc}
+     (int_list:REG_BR_PROB 365072228 (nil))
+ -> 799)
+(note 160 159 161 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 161 160 162 15 (debug_marker) "ssh-ecdsa-sk.c":182:2 -1
+     (nil))
+(insn 162 161 163 15 (set (reg/f:DI 90 [ ktype.0_9 ])
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -128 [0xffffffffffffff80])) [1 ktype+0 S8 A64])) "ssh-ecdsa-sk.c":182:6 -1
+     (nil))
+(insn 163 162 164 15 (set (reg/f:DI 160)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f5e432cdd80 *.LC0>)) "ssh-ecdsa-sk.c":182:6 -1
+     (nil))
+(insn 164 163 165 15 (set (reg:DI 161)
+        (reg/f:DI 90 [ ktype.0_9 ])) "ssh-ecdsa-sk.c":182:6 -1
+     (nil))
+(insn 165 164 166 15 (set (reg:DI 162)
+        (reg/f:DI 160)) "ssh-ecdsa-sk.c":182:6 -1
+     (nil))
+(insn 166 165 167 15 (set (reg:DI 163)
+        (const_int 44 [0x2c])) "ssh-ecdsa-sk.c":182:6 -1
+     (nil))
+(insn 167 166 168 15 (parallel [
+            (set (reg:CC 17 flags)
+                (compare:CC (mem:BLK (reg:DI 161) [0 MEM <char[1:]> [(void *)ktype.0_9]+0 A8])
+                    (mem/u/c:BLK (reg:DI 162) [0 MEM <char[1:]> [(void *)"webauthn-sk-ecdsa-sha2-nistp256@openssh.com"]+0 A64])))
+            (use (reg:DI 163))
+            (use (const_int 1 [0x1]))
+            (clobber (reg:DI 161))
+            (clobber (reg:DI 162))
+            (clobber (reg:DI 163))
+        ]) "ssh-ecdsa-sk.c":182:6 -1
+     (nil))
+(insn 168 167 169 15 (set (reg:QI 164)
+        (gtu:QI (reg:CC 17 flags)
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":182:6 -1
+     (nil))
+(insn 169 168 170 15 (set (reg:QI 165)
+        (ltu:QI (reg:CC 17 flags)
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":182:6 -1
+     (nil))
+(insn 170 169 171 15 (parallel [
+            (set (subreg:QI (reg:SI 91 [ _10 ]) 0)
+                (minus:QI (reg:QI 164)
+                    (reg:QI 165)))
+            (clobber (reg:CC 17 flags))
+        ]) "ssh-ecdsa-sk.c":182:6 -1
+     (nil))
+(insn 171 170 172 15 (set (reg:SI 91 [ _10 ])
+        (sign_extend:SI (subreg:QI (reg:SI 91 [ _10 ]) 0))) "ssh-ecdsa-sk.c":182:6 -1
+     (nil))
+(insn 172 171 173 15 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 91 [ _10 ])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":182:5 -1
+     (nil))
+(jump_insn 173 172 174 15 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 804)
+            (pc))) "ssh-ecdsa-sk.c":182:5 736 {*jcc}
+     (int_list:REG_BR_PROB 354334804 (nil))
+ -> 804)
+(note 174 173 175 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 175 174 176 16 (debug_marker) "ssh-ecdsa-sk.c":184:7 -1
+     (nil))
+(insn 176 175 177 16 (set (reg/f:DI 166)
+        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7f5e432cde10 *.LC1>)) "ssh-ecdsa-sk.c":184:11 -1
+     (nil))
+(insn 177 176 178 16 (set (reg:DI 167)
+        (reg/f:DI 90 [ ktype.0_9 ])) "ssh-ecdsa-sk.c":184:11 -1
+     (nil))
+(insn 178 177 179 16 (set (reg:DI 168)
+        (reg/f:DI 166)) "ssh-ecdsa-sk.c":184:11 -1
+     (nil))
+(insn 179 178 180 16 (set (reg:DI 169)
+        (const_int 35 [0x23])) "ssh-ecdsa-sk.c":184:11 -1
+     (nil))
+(insn 180 179 181 16 (parallel [
+            (set (reg:CC 17 flags)
+                (compare:CC (mem:BLK (reg:DI 167) [0 MEM <char[1:]> [(void *)ktype.0_9]+0 A8])
+                    (mem/u/c:BLK (reg:DI 168) [0 MEM <char[1:]> [(void *)"sk-ecdsa-sha2-nistp256@openssh.com"]+0 A64])))
+            (use (reg:DI 169))
+            (use (const_int 1 [0x1]))
+            (clobber (reg:DI 167))
+            (clobber (reg:DI 168))
+            (clobber (reg:DI 169))
+        ]) "ssh-ecdsa-sk.c":184:11 -1
+     (nil))
+(insn 181 180 182 16 (set (reg:QI 170)
+        (gtu:QI (reg:CC 17 flags)
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":184:11 -1
+     (nil))
+(insn 182 181 183 16 (set (reg:QI 171)
+        (ltu:QI (reg:CC 17 flags)
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":184:11 -1
+     (nil))
+(insn 183 182 184 16 (parallel [
+            (set (subreg:QI (reg/v:SI 92 [ is_webauthn ]) 0)
+                (minus:QI (reg:QI 170)
+                    (reg:QI 171)))
+            (clobber (reg:CC 17 flags))
+        ]) "ssh-ecdsa-sk.c":184:11 -1
+     (nil))
+(insn 184 183 185 16 (set (reg/v:SI 92 [ is_webauthn ])
+        (sign_extend:SI (subreg:QI (reg/v:SI 92 [ is_webauthn ]) 0))) "ssh-ecdsa-sk.c":184:11 -1
+     (nil))
+(insn 185 184 186 16 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 92 [ is_webauthn ])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":184:10 -1
+     (nil))
+(jump_insn 186 185 800 16 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 808)
+            (pc))) "ssh-ecdsa-sk.c":184:10 736 {*jcc}
+     (int_list:REG_BR_PROB 365072228 (nil))
+ -> 808)
+(note 800 186 801 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 801 800 802 17 (set (pc)
+        (label_ref 187)) -1
+     (nil)
+ -> 187)
+(barrier 802 801 804)
+(code_label 804 802 803 18 21 (nil) [1 uses])
+(note 803 804 12 18 [bb 18] NOTE_INSN_BASIC_BLOCK)
+(insn 12 803 187 18 (set (reg/v:SI 92 [ is_webauthn ])
+        (const_int 1 [0x1])) "ssh-ecdsa-sk.c":183:15 -1
+     (nil))
+(code_label 187 12 188 19 7 (nil) [1 uses])
+(note 188 187 189 19 [bb 19] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 189 188 190 19 (var_location:SI is_webauthn (reg/v:SI 92 [ is_webauthn ])) -1
+     (nil))
+(debug_insn 190 189 191 19 (debug_marker) "ssh-ecdsa-sk.c":188:2 -1
+     (nil))
+(insn 191 190 192 19 (parallel [
+            (set (reg:DI 172)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -152 [0xffffffffffffff68])))
+            (clobber (reg:CC 17 flags))
+        ]) "ssh-ecdsa-sk.c":188:6 -1
+     (nil))
+(insn 192 191 193 19 (set (reg:DI 4 si)
+        (reg:DI 172)) "ssh-ecdsa-sk.c":188:6 -1
+     (nil))
+(insn 193 192 194 19 (set (reg:DI 5 di)
+        (reg/v/f:DI 133 [ b ])) "ssh-ecdsa-sk.c":188:6 -1
+     (nil))
+(call_insn 194 193 195 19 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshbuf_froms") [flags 0x41]  <function_decl 0x7f5e436b0b00 sshbuf_froms>) [0 sshbuf_froms S1 A8])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":188:6 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_froms") [flags 0x41]  <function_decl 0x7f5e436b0b00 sshbuf_froms>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 195 194 196 19 (set (reg:SI 93 [ _12 ])
+        (reg:SI 0 ax)) "ssh-ecdsa-sk.c":188:6 -1
+     (nil))
+(insn 196 195 197 19 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 93 [ _12 ])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":188:5 -1
+     (nil))
+(jump_insn 197 196 198 19 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 812)
+            (pc))) "ssh-ecdsa-sk.c":188:5 736 {*jcc}
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 812)
+(note 198 197 199 20 [bb 20] NOTE_INSN_BASIC_BLOCK)
+(insn 199 198 200 20 (parallel [
+            (set (reg:DI 173)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -173 [0xffffffffffffff53])))
+            (clobber (reg:CC 17 flags))
+        ]) "ssh-ecdsa-sk.c":189:6 -1
+     (nil))
+(insn 200 199 201 20 (set (reg:DI 4 si)
+        (reg:DI 173)) "ssh-ecdsa-sk.c":189:6 -1
+     (nil))
+(insn 201 200 202 20 (set (reg:DI 5 di)
+        (reg/v/f:DI 133 [ b ])) "ssh-ecdsa-sk.c":189:6 -1
+     (nil))
+(call_insn 202 201 203 20 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshbuf_get_u8") [flags 0x41]  <function_decl 0x7f5e436bc300 sshbuf_get_u8>) [0 sshbuf_get_u8 S1 A8])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":189:6 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_get_u8") [flags 0x41]  <function_decl 0x7f5e436bc300 sshbuf_get_u8>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 203 202 204 20 (set (reg:SI 94 [ _13 ])
+        (reg:SI 0 ax)) "ssh-ecdsa-sk.c":189:6 -1
+     (nil))
+(insn 204 203 205 20 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 94 [ _13 ])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":188:36 -1
+     (nil))
+(jump_insn 205 204 206 20 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 816)
+            (pc))) "ssh-ecdsa-sk.c":188:36 736 {*jcc}
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 816)
+(note 206 205 207 21 [bb 21] NOTE_INSN_BASIC_BLOCK)
+(insn 207 206 208 21 (parallel [
+            (set (reg:DI 174)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -172 [0xffffffffffffff54])))
+            (clobber (reg:CC 17 flags))
+        ]) "ssh-ecdsa-sk.c":190:6 -1
+     (nil))
+(insn 208 207 209 21 (set (reg:DI 4 si)
+        (reg:DI 174)) "ssh-ecdsa-sk.c":190:6 -1
+     (nil))
+(insn 209 208 210 21 (set (reg:DI 5 di)
+        (reg/v/f:DI 133 [ b ])) "ssh-ecdsa-sk.c":190:6 -1
+     (nil))
+(call_insn 210 209 211 21 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshbuf_get_u32") [flags 0x41]  <function_decl 0x7f5e436bc100 sshbuf_get_u32>) [0 sshbuf_get_u32 S1 A8])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":190:6 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_get_u32") [flags 0x41]  <function_decl 0x7f5e436bc100 sshbuf_get_u32>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 211 210 212 21 (set (reg:SI 95 [ _14 ])
+        (reg:SI 0 ax)) "ssh-ecdsa-sk.c":190:6 -1
+     (nil))
+(insn 212 211 213 21 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 95 [ _14 ])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":189:40 -1
+     (nil))
+(jump_insn 213 212 214 21 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 820)
+            (pc))) "ssh-ecdsa-sk.c":189:40 736 {*jcc}
+     (int_list:REG_BR_PROB 365072228 (nil))
+ -> 820)
+(note 214 213 215 22 [bb 22] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 215 214 216 22 (debug_marker) "ssh-ecdsa-sk.c":194:2 -1
+     (nil))
+(insn 216 215 217 22 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 92 [ is_webauthn ])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":194:5 -1
+     (nil))
+(jump_insn 217 216 255 22 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 228)
+            (pc))) "ssh-ecdsa-sk.c":194:5 -1
+     (int_list:REG_BR_PROB 536870916 (nil))
+ -> 228)
+(code_label 255 217 218 23 10 (nil) [1 uses])
+(note 218 255 219 23 [bb 23] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 219 218 220 23 (debug_marker) "ssh-ecdsa-sk.c":202:2 -1
+     (nil))
+(insn 220 219 221 23 (set (reg:DI 5 di)
+        (reg/v/f:DI 133 [ b ])) "ssh-ecdsa-sk.c":202:6 -1
+     (nil))
+(call_insn 221 220 222 23 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshbuf_len") [flags 0x41]  <function_decl 0x7f5e436b8200 sshbuf_len>) [0 sshbuf_len S1 A8])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":202:6 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_len") [flags 0x41]  <function_decl 0x7f5e436b8200 sshbuf_len>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 222 221 223 23 (set (reg:DI 99 [ _18 ])
+        (reg:DI 0 ax)) "ssh-ecdsa-sk.c":202:6 -1
+     (nil))
+(insn 223 222 224 23 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:DI 99 [ _18 ])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":202:5 -1
+     (nil))
+(jump_insn 224 223 227 23 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 824)
+            (pc))) "ssh-ecdsa-sk.c":202:5 736 {*jcc}
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 824)
+(note 227 224 225 24 [bb 24] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 225 227 226 24 (set (pc)
+        (label_ref 259)) -1
+     (nil)
+ -> 259)
+(barrier 226 225 228)
+(code_label 228 226 229 25 8 (nil) [1 uses])
+(note 229 228 230 25 [bb 25] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 230 229 231 25 (debug_marker) "ssh-ecdsa-sk.c":195:3 -1
+     (nil))
+(insn 231 230 232 25 (parallel [
+            (set (reg:DI 175)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -120 [0xffffffffffffff88])))
+            (clobber (reg:CC 17 flags))
+        ]) "ssh-ecdsa-sk.c":195:7 -1
+     (nil))
+(insn 232 231 233 25 (set (reg:DI 1 dx)
+        (const_int 0 [0])) "ssh-ecdsa-sk.c":195:7 -1
+     (nil))
+(insn 233 232 234 25 (set (reg:DI 4 si)
+        (reg:DI 175)) "ssh-ecdsa-sk.c":195:7 -1
+     (nil))
+(insn 234 233 235 25 (set (reg:DI 5 di)
+        (reg/v/f:DI 133 [ b ])) "ssh-ecdsa-sk.c":195:7 -1
+     (nil))
+(call_insn 235 234 236 25 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshbuf_get_cstring") [flags 0x41]  <function_decl 0x7f5e436c3200 sshbuf_get_cstring>) [0 sshbuf_get_cstring S1 A8])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":195:7 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_get_cstring") [flags 0x41]  <function_decl 0x7f5e436c3200 sshbuf_get_cstring>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(insn 236 235 237 25 (set (reg:SI 96 [ _15 ])
+        (reg:SI 0 ax)) "ssh-ecdsa-sk.c":195:7 -1
+     (nil))
+(insn 237 236 238 25 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 96 [ _15 ])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":195:6 -1
+     (nil))
+(jump_insn 238 237 239 25 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 828)
+            (pc))) "ssh-ecdsa-sk.c":195:6 736 {*jcc}
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 828)
+(note 239 238 240 26 [bb 26] NOTE_INSN_BASIC_BLOCK)
+(insn 240 239 241 26 (parallel [
+            (set (reg:DI 176)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -144 [0xffffffffffffff70])))
+            (clobber (reg:CC 17 flags))
+        ]) "ssh-ecdsa-sk.c":196:7 -1
+     (nil))
+(insn 241 240 242 26 (set (reg:DI 4 si)
+        (reg:DI 176)) "ssh-ecdsa-sk.c":196:7 -1
+     (nil))
+(insn 242 241 243 26 (set (reg:DI 5 di)
+        (reg/v/f:DI 133 [ b ])) "ssh-ecdsa-sk.c":196:7 -1
+     (nil))
+(call_insn 243 242 244 26 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshbuf_froms") [flags 0x41]  <function_decl 0x7f5e436b0b00 sshbuf_froms>) [0 sshbuf_froms S1 A8])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":196:7 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_froms") [flags 0x41]  <function_decl 0x7f5e436b0b00 sshbuf_froms>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 244 243 245 26 (set (reg:SI 97 [ _16 ])
+        (reg:SI 0 ax)) "ssh-ecdsa-sk.c":196:7 -1
+     (nil))
+(insn 245 244 246 26 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 97 [ _16 ])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":195:58 -1
+     (nil))
+(jump_insn 246 245 247 26 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 832)
+            (pc))) "ssh-ecdsa-sk.c":195:58 736 {*jcc}
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 832)
+(note 247 246 248 27 [bb 27] NOTE_INSN_BASIC_BLOCK)
+(insn 248 247 249 27 (parallel [
+            (set (reg:DI 177)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -136 [0xffffffffffffff78])))
+            (clobber (reg:CC 17 flags))
+        ]) "ssh-ecdsa-sk.c":197:7 -1
+     (nil))
+(insn 249 248 250 27 (set (reg:DI 4 si)
+        (reg:DI 177)) "ssh-ecdsa-sk.c":197:7 -1
+     (nil))
+(insn 250 249 251 27 (set (reg:DI 5 di)
+        (reg/v/f:DI 133 [ b ])) "ssh-ecdsa-sk.c":197:7 -1
+     (nil))
+(call_insn 251 250 252 27 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshbuf_froms") [flags 0x41]  <function_decl 0x7f5e436b0b00 sshbuf_froms>) [0 sshbuf_froms S1 A8])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":197:7 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_froms") [flags 0x41]  <function_decl 0x7f5e436b0b00 sshbuf_froms>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 252 251 253 27 (set (reg:SI 98 [ _17 ])
+        (reg:SI 0 ax)) "ssh-ecdsa-sk.c":197:7 -1
+     (nil))
+(insn 253 252 254 27 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 98 [ _17 ])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":196:47 -1
+     (nil))
+(jump_insn 254 253 258 27 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 836)
+            (pc))) "ssh-ecdsa-sk.c":196:47 736 {*jcc}
+     (int_list:REG_BR_PROB 365072228 (nil))
+ -> 836)
+(note 258 254 256 28 [bb 28] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 256 258 257 28 (set (pc)
+        (label_ref 255)) -1
+     (nil)
+ -> 255)
+(barrier 257 256 259)
+(code_label 259 257 260 29 9 (nil) [1 uses])
+(note 260 259 261 29 [bb 29] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 261 260 262 29 (debug_marker) "ssh-ecdsa-sk.c":208:2 -1
+     (nil))
+(insn 262 261 263 29 (parallel [
+            (set (reg:DI 178)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -168 [0xffffffffffffff58])))
+            (clobber (reg:CC 17 flags))
+        ]) "ssh-ecdsa-sk.c":208:6 -1
+     (nil))
+(insn 263 262 264 29 (set (reg:DI 179)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -152 [0xffffffffffffff68])) [9 sigbuf+0 S8 A64])) "ssh-ecdsa-sk.c":208:6 -1
+     (nil))
+(insn 264 263 265 29 (set (reg:DI 4 si)
+        (reg:DI 178)) "ssh-ecdsa-sk.c":208:6 -1
+     (nil))
+(insn 265 264 266 29 (set (reg:DI 5 di)
+        (reg:DI 179)) "ssh-ecdsa-sk.c":208:6 -1
+     (nil))
+(call_insn 266 265 267 29 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshbuf_get_bignum2") [flags 0x41]  <function_decl 0x7f5e436c3c00 sshbuf_get_bignum2>) [0 sshbuf_get_bignum2 S1 A8])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":208:6 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_get_bignum2") [flags 0x41]  <function_decl 0x7f5e436c3c00 sshbuf_get_bignum2>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 267 266 268 29 (set (reg:SI 101 [ _20 ])
+        (reg:SI 0 ax)) "ssh-ecdsa-sk.c":208:6 -1
+     (nil))
+(insn 268 267 269 29 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 101 [ _20 ])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":208:5 -1
+     (nil))
+(jump_insn 269 268 270 29 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 840)
+            (pc))) "ssh-ecdsa-sk.c":208:5 736 {*jcc}
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 840)
+(note 270 269 271 30 [bb 30] NOTE_INSN_BASIC_BLOCK)
+(insn 271 270 272 30 (parallel [
+            (set (reg:DI 180)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -160 [0xffffffffffffff60])))
+            (clobber (reg:CC 17 flags))
+        ]) "ssh-ecdsa-sk.c":209:6 -1
+     (nil))
+(insn 272 271 273 30 (set (reg:DI 181)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -152 [0xffffffffffffff68])) [9 sigbuf+0 S8 A64])) "ssh-ecdsa-sk.c":209:6 -1
+     (nil))
+(insn 273 272 274 30 (set (reg:DI 4 si)
+        (reg:DI 180)) "ssh-ecdsa-sk.c":209:6 -1
+     (nil))
+(insn 274 273 275 30 (set (reg:DI 5 di)
+        (reg:DI 181)) "ssh-ecdsa-sk.c":209:6 -1
+     (nil))
+(call_insn 275 274 276 30 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshbuf_get_bignum2") [flags 0x41]  <function_decl 0x7f5e436c3c00 sshbuf_get_bignum2>) [0 sshbuf_get_bignum2 S1 A8])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":209:6 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_get_bignum2") [flags 0x41]  <function_decl 0x7f5e436c3c00 sshbuf_get_bignum2>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 276 275 277 30 (set (reg:SI 103 [ _22 ])
+        (reg:SI 0 ax)) "ssh-ecdsa-sk.c":209:6 -1
+     (nil))
+(insn 277 276 278 30 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 103 [ _22 ])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":208:46 -1
+     (nil))
+(jump_insn 278 277 279 30 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 844)
+            (pc))) "ssh-ecdsa-sk.c":208:46 736 {*jcc}
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 844)
+(note 279 278 280 31 [bb 31] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 280 279 281 31 (debug_marker) "ssh-ecdsa-sk.c":213:2 -1
+     (nil))
+(insn 281 280 282 31 (set (reg:DI 182)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -152 [0xffffffffffffff68])) [9 sigbuf+0 S8 A64])) "ssh-ecdsa-sk.c":213:6 -1
+     (nil))
+(insn 282 281 283 31 (set (reg:DI 5 di)
+        (reg:DI 182)) "ssh-ecdsa-sk.c":213:6 -1
+     (nil))
+(call_insn 283 282 284 31 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshbuf_len") [flags 0x41]  <function_decl 0x7f5e436b8200 sshbuf_len>) [0 sshbuf_len S1 A8])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":213:6 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_len") [flags 0x41]  <function_decl 0x7f5e436b8200 sshbuf_len>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 284 283 285 31 (set (reg:DI 105 [ _24 ])
+        (reg:DI 0 ax)) "ssh-ecdsa-sk.c":213:6 -1
+     (nil))
+(insn 285 284 286 31 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:DI 105 [ _24 ])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":213:5 -1
+     (nil))
+(jump_insn 286 285 287 31 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 848)
+            (pc))) "ssh-ecdsa-sk.c":213:5 736 {*jcc}
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 848)
+(note 287 286 288 32 [bb 32] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 288 287 289 32 (debug_marker) "ssh-ecdsa-sk.c":234:2 -1
+     (nil))
+(call_insn 289 288 290 32 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("ECDSA_SIG_new") [flags 0x41]  <function_decl 0x7f5e439a7400 ECDSA_SIG_new>) [0 ECDSA_SIG_new S1 A8])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":234:13 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("ECDSA_SIG_new") [flags 0x41]  <function_decl 0x7f5e439a7400 ECDSA_SIG_new>)
+        (nil))
+    (nil))
+(insn 290 289 291 32 (set (reg/v/f:DI 130 [ sig ])
+        (reg:DI 0 ax)) "ssh-ecdsa-sk.c":234:13 -1
+     (nil))
+(debug_insn 291 290 292 32 (var_location:DI sig (reg/v/f:DI 130 [ sig ])) "ssh-ecdsa-sk.c":234:13 -1
+     (nil))
+(insn 292 291 293 32 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 130 [ sig ])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":234:5 -1
+     (nil))
+(jump_insn 293 292 294 32 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 852)
+            (pc))) "ssh-ecdsa-sk.c":234:5 736 {*jcc}
+     (int_list:REG_BR_PROB 332323100 (nil))
+ -> 852)
+(note 294 293 295 33 [bb 33] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 295 294 296 33 (debug_marker) "ssh-ecdsa-sk.c":238:2 -1
+     (nil))
+(insn 296 295 297 33 (set (reg:DI 183)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -160 [0xffffffffffffff60])) [12 sig_s+0 S8 A64])) "ssh-ecdsa-sk.c":238:7 -1
+     (nil))
+(insn 297 296 298 33 (set (reg:DI 184)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -168 [0xffffffffffffff58])) [12 sig_r+0 S8 A64])) "ssh-ecdsa-sk.c":238:7 -1
+     (nil))
+(insn 298 297 299 33 (set (reg:DI 1 dx)
+        (reg:DI 183)) "ssh-ecdsa-sk.c":238:7 -1
+     (nil))
+(insn 299 298 300 33 (set (reg:DI 4 si)
+        (reg:DI 184)) "ssh-ecdsa-sk.c":238:7 -1
+     (nil))
+(insn 300 299 301 33 (set (reg:DI 5 di)
+        (reg/v/f:DI 130 [ sig ])) "ssh-ecdsa-sk.c":238:7 -1
+     (nil))
+(call_insn 301 300 302 33 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("ECDSA_SIG_set0") [flags 0x41]  <function_decl 0x7f5e439a7b00 ECDSA_SIG_set0>) [0 ECDSA_SIG_set0 S1 A8])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":238:7 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("ECDSA_SIG_set0") [flags 0x41]  <function_decl 0x7f5e439a7b00 ECDSA_SIG_set0>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(insn 302 301 303 33 (set (reg:SI 108 [ _27 ])
+        (reg:SI 0 ax)) "ssh-ecdsa-sk.c":238:7 -1
+     (nil))
+(insn 303 302 304 33 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 108 [ _27 ])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":238:5 -1
+     (nil))
+(jump_insn 304 303 305 33 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 856)
+            (pc))) "ssh-ecdsa-sk.c":238:5 736 {*jcc}
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 856)
+(note 305 304 306 34 [bb 34] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 306 305 307 34 (debug_marker) "ssh-ecdsa-sk.c":242:2 -1
+     (nil))
+(insn 307 306 308 34 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -160 [0xffffffffffffff60])) [12 sig_s+0 S8 A64])
+        (const_int 0 [0])) "ssh-ecdsa-sk.c":242:16 -1
+     (nil))
+(insn 308 307 309 34 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -168 [0xffffffffffffff58])) [12 sig_r+0 S8 A64])
+        (const_int 0 [0])) "ssh-ecdsa-sk.c":242:8 -1
+     (nil))
+(debug_insn 309 308 310 34 (debug_marker) "ssh-ecdsa-sk.c":245:2 -1
+     (nil))
+(call_insn 310 309 311 34 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshbuf_new") [flags 0x41]  <function_decl 0x7f5e436b0e00 sshbuf_new>) [0 sshbuf_new S1 A8])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":245:25 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_new") [flags 0x41]  <function_decl 0x7f5e436b0e00 sshbuf_new>)
+        (nil))
+    (nil))
+(insn 311 310 312 34 (set (reg/v/f:DI 131 [ original_signed ])
+        (reg:DI 0 ax)) "ssh-ecdsa-sk.c":245:25 -1
+     (nil))
+(debug_insn 312 311 313 34 (var_location:DI original_signed (reg/v/f:DI 131 [ original_signed ])) "ssh-ecdsa-sk.c":245:25 -1
+     (nil))
+(insn 313 312 314 34 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 131 [ original_signed ])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":245:5 -1
+     (nil))
+(jump_insn 314 313 315 34 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 860)
+            (pc))) "ssh-ecdsa-sk.c":245:5 736 {*jcc}
+     (int_list:REG_BR_PROB 194239900 (nil))
+ -> 860)
+(note 315 314 316 35 [bb 35] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 316 315 317 35 (debug_marker) "ssh-ecdsa-sk.c":249:2 -1
+     (nil))
+(insn 317 316 318 35 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 92 [ is_webauthn ])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":249:5 -1
+     (nil))
+(jump_insn 318 317 319 35 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 461)
+            (pc))) "ssh-ecdsa-sk.c":249:5 -1
+     (int_list:REG_BR_PROB 536870916 (nil))
+ -> 461)
+(note 319 318 320 36 [bb 36] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 320 319 321 36 (debug_marker) "ssh-ecdsa-sk.c":250:3 -1
+     (nil))
+(insn 321 320 322 36 (set (reg/f:DI 109 [ webauthn_exts.8_28 ])
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -136 [0xffffffffffffff78])) [9 webauthn_exts+0 S8 A64])) "ssh-ecdsa-sk.c":250:14 -1
+     (nil))
+(insn 322 321 323 36 (set (reg:QI 110 [ sig_flags.9_29 ])
+        (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -173 [0xffffffffffffff53])) [0 sig_flags+0 S1 A8])) "ssh-ecdsa-sk.c":250:14 -1
+     (nil))
+(insn 323 322 324 36 (set (reg/f:DI 111 [ webauthn_wrapper.10_31 ])
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -144 [0xffffffffffffff70])) [9 webauthn_wrapper+0 S8 A64])) "ssh-ecdsa-sk.c":250:14 -1
+     (nil))
+(insn 324 323 325 36 (set (reg/f:DI 112 [ webauthn_origin.11_32 ])
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -120 [0xffffffffffffff88])) [1 webauthn_origin+0 S8 A64])) "ssh-ecdsa-sk.c":250:14 -1
+     (nil))
+(debug_insn 325 324 326 36 (var_location:DI D#1 (const_int 32 [0x20])) "ssh-ecdsa-sk.c":250:14 -1
+     (nil))
+(debug_insn 326 325 327 36 (var_location:DI data (reg/v/f:DI 149 [ data ])) "ssh-ecdsa-sk.c":250:14 -1
+     (nil))
+(debug_insn 327 326 328 36 (var_location:DI datalen (reg/v:DI 150 [ datalen ])) "ssh-ecdsa-sk.c":250:14 -1
+     (nil))
+(debug_insn 328 327 329 36 (var_location:DI origin (reg/f:DI 112 [ webauthn_origin.11_32 ])) "ssh-ecdsa-sk.c":250:14 -1
+     (nil))
+(debug_insn 329 328 330 36 (var_location:DI wrapper (reg/f:DI 111 [ webauthn_wrapper.10_31 ])) "ssh-ecdsa-sk.c":250:14 -1
+     (nil))
+(debug_insn 330 329 331 36 (var_location:QI flags (reg:QI 110 [ sig_flags.9_29 ])) -1
+     (nil))
+(debug_insn 331 330 332 36 (var_location:DI extensions (reg/f:DI 109 [ webauthn_exts.8_28 ])) -1
+     (nil))
+(debug_insn 332 331 333 36 (var_location:DI msghash (plus:DI (reg/f:DI 77 virtual-stack-vars)
+        (const_int -112 [0xffffffffffffff90]))) -1
+     (nil))
+(debug_insn 333 332 334 36 (debug_marker:BLK) "ssh-ecdsa-sk.c":77:1 -1
+     (nil))
+(debug_insn 334 333 335 36 (var_location:DI msghashlen (const_int 32 [0x20])) -1
+     (nil))
+(debug_insn 335 334 336 36 (debug_marker) "ssh-ecdsa-sk.c":82:2 -1
+     (nil))
+(debug_insn 336 335 337 36 (var_location:SI r (const_int -1 [0xffffffffffffffff])) "ssh-ecdsa-sk.c":82:6 -1
+     (nil))
+(debug_insn 337 336 338 36 (debug_marker) "ssh-ecdsa-sk.c":83:2 -1
+     (nil))
+(debug_insn 338 337 339 36 (var_location:DI chall (const_int 0 [0])) "ssh-ecdsa-sk.c":83:17 -1
+     (nil))
+(debug_insn 339 338 340 36 (var_location:DI m (const_int 0 [0])) "ssh-ecdsa-sk.c":83:32 -1
+     (nil))
+(debug_insn 340 339 341 36 (debug_marker) "ssh-ecdsa-sk.c":85:2 -1
+     (nil))
+(call_insn 341 340 342 36 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshbuf_new") [flags 0x41]  <function_decl 0x7f5e436b0e00 sshbuf_new>) [0 sshbuf_new S1 A8])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":85:11 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_new") [flags 0x41]  <function_decl 0x7f5e436b0e00 sshbuf_new>)
+        (nil))
+    (nil))
+(insn 342 341 343 36 (set (reg/v/f:DI 134 [ m ])
+        (reg:DI 0 ax)) "ssh-ecdsa-sk.c":85:11 -1
+     (nil))
+(debug_insn 343 342 344 36 (var_location:DI m (reg/v/f:DI 134 [ m ])) "ssh-ecdsa-sk.c":85:11 -1
+     (nil))
+(insn 344 343 345 36 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 134 [ m ])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":85:5 -1
+     (nil))
+(jump_insn 345 344 346 36 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 721)
+            (pc))) "ssh-ecdsa-sk.c":85:5 -1
+     (int_list:REG_BR_PROB 9771052 (nil))
+ -> 721)
+(note 346 345 347 37 [bb 37] NOTE_INSN_BASIC_BLOCK)
+(insn 347 346 348 37 (set (reg:DI 4 si)
+        (reg/v:DI 150 [ datalen ])) "ssh-ecdsa-sk.c":86:15 -1
+     (nil))
+(insn 348 347 349 37 (set (reg:DI 5 di)
+        (reg/v/f:DI 149 [ data ])) "ssh-ecdsa-sk.c":86:15 -1
+     (nil))
+(call_insn 349 348 350 37 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshbuf_from") [flags 0x41]  <function_decl 0x7f5e436b0f00 sshbuf_from>) [0 sshbuf_from S1 A8])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":86:15 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_from") [flags 0x41]  <function_decl 0x7f5e436b0f00 sshbuf_from>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 350 349 351 37 (set (reg/v/f:DI 135 [ chall ])
+        (reg:DI 0 ax)) "ssh-ecdsa-sk.c":86:15 -1
+     (nil))
+(debug_insn 351 350 352 37 (var_location:DI chall (reg/v/f:DI 135 [ chall ])) "ssh-ecdsa-sk.c":86:15 -1
+     (nil))
+(insn 352 351 353 37 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 135 [ chall ])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":85:33 -1
+     (nil))
+(jump_insn 353 352 354 37 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 721)
+            (pc))) "ssh-ecdsa-sk.c":85:33 -1
+     (int_list:REG_BR_PROB 4831844 (nil))
+ -> 721)
+(note 354 353 355 38 [bb 38] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 355 354 356 38 (debug_marker) "ssh-ecdsa-sk.c":94:2 -1
+     (nil))
+(insn 356 355 357 38 (set (reg:SI 4 si)
+        (const_int 34 [0x22])) "ssh-ecdsa-sk.c":94:6 -1
+     (nil))
+(insn 357 356 358 38 (set (reg:DI 5 di)
+        (reg/f:DI 112 [ webauthn_origin.11_32 ])) "ssh-ecdsa-sk.c":94:6 -1
+     (nil))
+(call_insn/i 358 357 359 38 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strchr") [flags 0x41]  <function_decl 0x7f5e43f14900 strchr>) [0 __builtin_strchr S1 A8])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":94:6 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("strchr") [flags 0x41]  <function_decl 0x7f5e43f14900 strchr>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (nil))))
+(insn 359 358 360 38 (set (reg/f:DI 136 [ _158 ])
+        (reg:DI 0 ax)) "ssh-ecdsa-sk.c":94:6 -1
+     (nil))
+(insn 360 359 361 38 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/f:DI 136 [ _158 ])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":94:5 -1
+     (nil))
+(jump_insn 361 360 362 38 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 864)
+            (pc))) "ssh-ecdsa-sk.c":94:5 736 {*jcc}
+     (int_list:REG_BR_PROB 25662436 (nil))
+ -> 864)
+(note 362 361 363 39 [bb 39] NOTE_INSN_BASIC_BLOCK)
+(insn 363 362 364 39 (parallel [
+            (set (reg:QI 185)
+                (and:QI (reg:QI 110 [ sig_flags.9_29 ])
+                    (const_int 64 [0x40])))
+            (clobber (reg:CC 17 flags))
+        ]) "ssh-ecdsa-sk.c":94:35 -1
+     (nil))
+(insn 364 363 365 39 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 185)
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":94:35 -1
+     (nil))
+(jump_insn 365 364 366 39 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 868)
+            (pc))) "ssh-ecdsa-sk.c":94:35 736 {*jcc}
+     (int_list:REG_BR_PROB 22441212 (nil))
+ -> 868)
+(note 366 365 367 40 [bb 40] NOTE_INSN_BASIC_BLOCK)
+(insn 367 366 368 40 (set (reg:DI 5 di)
+        (reg/f:DI 109 [ webauthn_exts.8_28 ])) "ssh-ecdsa-sk.c":96:41 -1
+     (nil))
+(call_insn 368 367 369 40 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshbuf_len") [flags 0x41]  <function_decl 0x7f5e436b8200 sshbuf_len>) [0 sshbuf_len S1 A8])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":96:41 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_len") [flags 0x41]  <function_decl 0x7f5e436b8200 sshbuf_len>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 369 368 372 40 (set (reg:DI 140 [ _162 ])
+        (reg:DI 0 ax)) "ssh-ecdsa-sk.c":96:41 -1
+     (nil))
+(insn 372 369 373 40 (set (reg:QI 187)
+        (not:QI (reg:QI 110 [ sig_flags.9_29 ]))) "ssh-ecdsa-sk.c":96:37 -1
+     (nil))
+(insn 373 372 374 40 (parallel [
+            (set (reg:QI 186)
+                (lshiftrt:QI (reg:QI 187)
+                    (const_int 7 [0x7])))
+            (clobber (reg:CC 17 flags))
+        ]) "ssh-ecdsa-sk.c":96:37 -1
+     (nil))
+(insn 374 373 375 40 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:DI 140 [ _162 ])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":96:37 -1
+     (nil))
+(insn 375 374 376 40 (set (reg:QI 189)
+        (eq:QI (reg:CCZ 17 flags)
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":96:37 -1
+     (nil))
+(insn 376 375 377 40 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 186)
+            (reg:QI 189))) "ssh-ecdsa-sk.c":95:35 -1
+     (nil))
+(jump_insn 377 376 378 40 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 872)
+            (pc))) "ssh-ecdsa-sk.c":95:35 736 {*jcc}
+     (int_list:REG_BR_PROB 42734932 (nil))
+ -> 872)
+(note 378 377 379 41 [bb 41] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 379 378 380 41 (debug_marker) "ssh-ecdsa-sk.c":110:2 -1
+     (nil))
+(insn 380 379 381 41 (set (reg:DI 1 dx)
+        (const_int 36 [0x24])) "ssh-ecdsa-sk.c":110:11 -1
+     (nil))
+(insn 381 380 382 41 (set (reg:DI 4 si)
+        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7f5e432cdea0 *.LC2>)) "ssh-ecdsa-sk.c":110:11 -1
+     (nil))
+(insn 382 381 383 41 (set (reg:DI 5 di)
+        (reg/v/f:DI 134 [ m ])) "ssh-ecdsa-sk.c":110:11 -1
+     (nil))
+(call_insn 383 382 384 41 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshbuf_put") [flags 0x41]  <function_decl 0x7f5e436b8c00 sshbuf_put>) [0 sshbuf_put S1 A8])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":110:11 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_put") [flags 0x41]  <function_decl 0x7f5e436b8c00 sshbuf_put>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(insn 384 383 385 41 (set (reg/v:SI 145 [ <retval> ])
+        (reg:SI 0 ax)) "ssh-ecdsa-sk.c":110:11 -1
+     (nil))
+(debug_insn 385 384 386 41 (var_location:SI r (reg/v:SI 145 [ <retval> ])) "ssh-ecdsa-sk.c":110:11 -1
+     (nil))
+(insn 386 385 387 41 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 145 [ <retval> ])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":110:5 -1
+     (nil))
+(jump_insn 387 386 388 41 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 723)
+            (pc))) "ssh-ecdsa-sk.c":110:5 -1
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 723)
+(note 388 387 389 42 [bb 42] NOTE_INSN_BASIC_BLOCK)
+(insn 389 388 390 42 (set (reg:SI 1 dx)
+        (const_int 0 [0])) "ssh-ecdsa-sk.c":111:11 -1
+     (nil))
+(insn 390 389 391 42 (set (reg:DI 4 si)
+        (reg/v/f:DI 134 [ m ])) "ssh-ecdsa-sk.c":111:11 -1
+     (nil))
+(insn 391 390 392 42 (set (reg:DI 5 di)
+        (reg/v/f:DI 135 [ chall ])) "ssh-ecdsa-sk.c":111:11 -1
+     (nil))
+(call_insn 392 391 393 42 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshbuf_dtourlb64") [flags 0x41]  <function_decl 0x7f5e43247700 sshbuf_dtourlb64>) [0 sshbuf_dtourlb64 S1 A8])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":111:11 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_dtourlb64") [flags 0x41]  <function_decl 0x7f5e43247700 sshbuf_dtourlb64>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:SI (use (reg:SI 1 dx))
+                (nil)))))
+(insn 393 392 394 42 (set (reg/v:SI 145 [ <retval> ])
+        (reg:SI 0 ax)) "ssh-ecdsa-sk.c":111:11 -1
+     (nil))
+(debug_insn 394 393 395 42 (var_location:SI r (reg/v:SI 145 [ <retval> ])) "ssh-ecdsa-sk.c":111:11 -1
+     (nil))
+(insn 395 394 396 42 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 145 [ <retval> ])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":110:67 -1
+     (nil))
+(jump_insn 396 395 397 42 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 723)
+            (pc))) "ssh-ecdsa-sk.c":110:67 -1
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 723)
+(note 397 396 398 43 [bb 43] NOTE_INSN_BASIC_BLOCK)
+(insn 398 397 399 43 (set (reg:DI 1 dx)
+        (const_int 12 [0xc])) "ssh-ecdsa-sk.c":112:11 -1
+     (nil))
+(insn 399 398 400 43 (set (reg:DI 4 si)
+        (symbol_ref/f:DI ("*.LC3") [flags 0x2]  <var_decl 0x7f5e432cdf30 *.LC3>)) "ssh-ecdsa-sk.c":112:11 -1
+     (nil))
+(insn 400 399 401 43 (set (reg:DI 5 di)
+        (reg/v/f:DI 134 [ m ])) "ssh-ecdsa-sk.c":112:11 -1
+     (nil))
+(call_insn 401 400 402 43 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshbuf_put") [flags 0x41]  <function_decl 0x7f5e436b8c00 sshbuf_put>) [0 sshbuf_put S1 A8])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":112:11 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_put") [flags 0x41]  <function_decl 0x7f5e436b8c00 sshbuf_put>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(insn 402 401 403 43 (set (reg/v:SI 145 [ <retval> ])
+        (reg:SI 0 ax)) "ssh-ecdsa-sk.c":112:11 -1
+     (nil))
+(debug_insn 403 402 404 43 (var_location:SI r (reg/v:SI 145 [ <retval> ])) "ssh-ecdsa-sk.c":112:11 -1
+     (nil))
+(insn 404 403 405 43 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 145 [ <retval> ])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":111:47 -1
+     (nil))
+(jump_insn 405 404 406 43 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 723)
+            (pc))) "ssh-ecdsa-sk.c":111:47 -1
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 723)
+(note 406 405 407 44 [bb 44] NOTE_INSN_BASIC_BLOCK)
+(insn 407 406 408 44 (set (reg:DI 5 di)
+        (reg/f:DI 112 [ webauthn_origin.11_32 ])) "ssh-ecdsa-sk.c":113:11 -1
+     (nil))
+(call_insn/i 408 407 409 44 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x7f5e43f16500 strlen>) [0 __builtin_strlen S1 A8])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":113:11 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x7f5e43f16500 strlen>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 409 408 410 44 (set (reg:DI 191)
+        (reg:DI 0 ax)) "ssh-ecdsa-sk.c":113:11 -1
+     (nil))
+(insn 410 409 411 44 (set (reg:DI 192)
+        (reg:DI 191)) "ssh-ecdsa-sk.c":113:11 -1
+     (nil))
+(insn 411 410 412 44 (set (reg:DI 142 [ _167 ])
+        (reg:DI 192)) "ssh-ecdsa-sk.c":113:11 -1
+     (nil))
+(insn 412 411 413 44 (set (reg:DI 1 dx)
+        (reg:DI 142 [ _167 ])) "ssh-ecdsa-sk.c":113:11 -1
+     (nil))
+(insn 413 412 414 44 (set (reg:DI 4 si)
+        (reg/f:DI 112 [ webauthn_origin.11_32 ])) "ssh-ecdsa-sk.c":113:11 -1
+     (nil))
+(insn 414 413 415 44 (set (reg:DI 5 di)
+        (reg/v/f:DI 134 [ m ])) "ssh-ecdsa-sk.c":113:11 -1
+     (nil))
+(call_insn 415 414 416 44 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshbuf_put") [flags 0x41]  <function_decl 0x7f5e436b8c00 sshbuf_put>) [0 sshbuf_put S1 A8])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":113:11 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_put") [flags 0x41]  <function_decl 0x7f5e436b8c00 sshbuf_put>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(insn 416 415 417 44 (set (reg/v:SI 145 [ <retval> ])
+        (reg:SI 0 ax)) "ssh-ecdsa-sk.c":113:11 -1
+     (nil))
+(debug_insn 417 416 418 44 (var_location:SI r (reg/v:SI 145 [ <retval> ])) "ssh-ecdsa-sk.c":113:11 -1
+     (nil))
+(insn 418 417 419 44 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 145 [ <retval> ])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":112:67 -1
+     (nil))
+(jump_insn 419 418 420 44 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 723)
+            (pc))) "ssh-ecdsa-sk.c":112:67 -1
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 723)
+(note 420 419 421 45 [bb 45] NOTE_INSN_BASIC_BLOCK)
+(insn 421 420 422 45 (set (reg:DI 1 dx)
+        (const_int 1 [0x1])) "ssh-ecdsa-sk.c":114:11 -1
+     (nil))
+(insn 422 421 423 45 (set (reg:DI 4 si)
+        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f5e432cd7e0 *.LC4>)) "ssh-ecdsa-sk.c":114:11 -1
+     (nil))
+(insn 423 422 424 45 (set (reg:DI 5 di)
+        (reg/v/f:DI 134 [ m ])) "ssh-ecdsa-sk.c":114:11 -1
+     (nil))
+(call_insn 424 423 425 45 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshbuf_put") [flags 0x41]  <function_decl 0x7f5e436b8c00 sshbuf_put>) [0 sshbuf_put S1 A8])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":114:11 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_put") [flags 0x41]  <function_decl 0x7f5e436b8c00 sshbuf_put>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(insn 425 424 426 45 (set (reg/v:SI 145 [ <retval> ])
+        (reg:SI 0 ax)) "ssh-ecdsa-sk.c":114:11 -1
+     (nil))
+(debug_insn 426 425 427 45 (var_location:SI r (reg/v:SI 145 [ <retval> ])) "ssh-ecdsa-sk.c":114:11 -1
+     (nil))
+(insn 427 426 428 45 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 145 [ <retval> ])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":113:55 -1
+     (nil))
+(jump_insn 428 427 429 45 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 723)
+            (pc))) "ssh-ecdsa-sk.c":113:55 -1
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 723)
+(note 429 428 430 46 [bb 46] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 430 429 431 46 (debug_marker) "ssh-ecdsa-sk.c":124:2 -1
+     (nil))
+(insn 431 430 432 46 (set (reg:DI 5 di)
+        (reg/v/f:DI 134 [ m ])) "ssh-ecdsa-sk.c":124:11 -1
+     (nil))
+(call_insn 432 431 433 46 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshbuf_len") [flags 0x41]  <function_decl 0x7f5e436b8200 sshbuf_len>) [0 sshbuf_len S1 A8])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":124:11 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_len") [flags 0x41]  <function_decl 0x7f5e436b8200 sshbuf_len>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 433 432 434 46 (set (reg:DI 143 [ _170 ])
+        (reg:DI 0 ax)) "ssh-ecdsa-sk.c":124:11 -1
+     (nil))
+(insn 434 433 435 46 (set (reg:DI 5 di)
+        (reg/v/f:DI 134 [ m ])) "ssh-ecdsa-sk.c":124:34 -1
+     (nil))
+(call_insn 435 434 436 46 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshbuf_ptr") [flags 0x41]  <function_decl 0x7f5e436b8400 sshbuf_ptr>) [0 sshbuf_ptr S1 A8])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":124:34 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_ptr") [flags 0x41]  <function_decl 0x7f5e436b8400 sshbuf_ptr>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 436 435 437 46 (set (reg/f:DI 144 [ _171 ])
+        (reg:DI 0 ax)) "ssh-ecdsa-sk.c":124:34 -1
+     (nil))
+(insn 437 436 438 46 (set (reg:DI 2 cx)
+        (reg:DI 143 [ _170 ])) "ssh-ecdsa-sk.c":124:11 -1
+     (nil))
+(insn 438 437 439 46 (set (reg:DI 1 dx)
+        (reg/f:DI 144 [ _171 ])) "ssh-ecdsa-sk.c":124:11 -1
+     (nil))
+(insn 439 438 440 46 (set (reg:DI 4 si)
+        (const_int 0 [0])) "ssh-ecdsa-sk.c":124:11 -1
+     (nil))
+(insn 440 439 441 46 (set (reg:DI 5 di)
+        (reg/f:DI 111 [ webauthn_wrapper.10_31 ])) "ssh-ecdsa-sk.c":124:11 -1
+     (nil))
+(call_insn 441 440 442 46 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshbuf_cmp") [flags 0x41]  <function_decl 0x7f5e43247900 sshbuf_cmp>) [0 sshbuf_cmp S1 A8])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":124:11 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_cmp") [flags 0x41]  <function_decl 0x7f5e43247900 sshbuf_cmp>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (expr_list:DI (use (reg:DI 2 cx))
+                    (nil))))))
+(insn 442 441 443 46 (set (reg/v:SI 145 [ <retval> ])
+        (reg:SI 0 ax)) "ssh-ecdsa-sk.c":124:11 -1
+     (nil))
+(debug_insn 443 442 444 46 (var_location:SI r (reg/v:SI 145 [ <retval> ])) "ssh-ecdsa-sk.c":124:11 -1
+     (nil))
+(insn 444 443 445 46 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 145 [ <retval> ])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":124:5 -1
+     (nil))
+(jump_insn 445 444 446 46 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 723)
+            (pc))) "ssh-ecdsa-sk.c":124:5 -1
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 723)
+(note 446 445 447 47 [bb 47] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 447 446 448 47 (debug_marker) "ssh-ecdsa-sk.c":128:2 -1
+     (nil))
+(insn 448 447 449 47 (parallel [
+            (set (reg:DI 193)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -112 [0xffffffffffffff90])))
+            (clobber (reg:CC 17 flags))
+        ]) "ssh-ecdsa-sk.c":128:11 -1
+     (nil))
+(insn 449 448 450 47 (set (reg:DI 2 cx)
+        (const_int 32 [0x20])) "ssh-ecdsa-sk.c":128:11 -1
+     (nil))
+(insn 450 449 451 47 (set (reg:DI 1 dx)
+        (reg:DI 193)) "ssh-ecdsa-sk.c":128:11 -1
+     (nil))
+(insn 451 450 452 47 (set (reg:DI 4 si)
+        (reg/f:DI 111 [ webauthn_wrapper.10_31 ])) "ssh-ecdsa-sk.c":128:11 -1
+     (nil))
+(insn 452 451 453 47 (set (reg:SI 5 di)
+        (const_int 2 [0x2])) "ssh-ecdsa-sk.c":128:11 -1
+     (nil))
+(call_insn 453 452 454 47 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("ssh_digest_buffer") [flags 0x41]  <function_decl 0x7f5e43252700 ssh_digest_buffer>) [0 ssh_digest_buffer S1 A8])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":128:11 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("ssh_digest_buffer") [flags 0x41]  <function_decl 0x7f5e43252700 ssh_digest_buffer>)
+        (nil))
+    (expr_list:SI (use (reg:SI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (expr_list:DI (use (reg:DI 2 cx))
+                    (nil))))))
+(insn 454 453 455 47 (set (reg/v:SI 145 [ <retval> ])
+        (reg:SI 0 ax)) "ssh-ecdsa-sk.c":128:11 -1
+     (nil))
+(debug_insn 455 454 456 47 (var_location:SI r (reg/v:SI 145 [ <retval> ])) "ssh-ecdsa-sk.c":128:11 -1
+     (nil))
+(insn 456 455 457 47 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 145 [ <retval> ])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":128:5 -1
+     (nil))
+(jump_insn 457 456 460 47 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 723)
+            (pc))) "ssh-ecdsa-sk.c":128:5 -1
+     (int_list:REG_BR_PROB 365072228 (nil))
+ -> 723)
+(note 460 457 458 48 [bb 48] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 458 460 459 48 (set (pc)
+        (label_ref 748)) -1
+     (nil)
+ -> 748)
+(barrier 459 458 461)
+(code_label 461 459 462 49 11 (nil) [1 uses])
+(note 462 461 463 49 [bb 49] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 463 462 464 49 (debug_marker) "ssh-ecdsa-sk.c":254:9 -1
+     (nil))
+(insn 464 463 465 49 (parallel [
+            (set (reg:DI 194)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -112 [0xffffffffffffff90])))
+            (clobber (reg:CC 17 flags))
+        ]) "ssh-ecdsa-sk.c":254:20 -1
+     (nil))
+(insn 465 464 466 49 (set (reg:DI 36 r8)
+        (const_int 32 [0x20])) "ssh-ecdsa-sk.c":254:20 -1
+     (nil))
+(insn 466 465 467 49 (set (reg:DI 2 cx)
+        (reg:DI 194)) "ssh-ecdsa-sk.c":254:20 -1
+     (nil))
+(insn 467 466 468 49 (set (reg:DI 1 dx)
+        (reg/v:DI 150 [ datalen ])) "ssh-ecdsa-sk.c":254:20 -1
+     (nil))
+(insn 468 467 469 49 (set (reg:DI 4 si)
+        (reg/v/f:DI 149 [ data ])) "ssh-ecdsa-sk.c":254:20 -1
+     (nil))
+(insn 469 468 470 49 (set (reg:SI 5 di)
+        (const_int 2 [0x2])) "ssh-ecdsa-sk.c":254:20 -1
+     (nil))
+(call_insn 470 469 471 49 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("ssh_digest_memory") [flags 0x41]  <function_decl 0x7f5e43252600 ssh_digest_memory>) [0 ssh_digest_memory S1 A8])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":254:20 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("ssh_digest_memory") [flags 0x41]  <function_decl 0x7f5e43252600 ssh_digest_memory>)
+        (nil))
+    (expr_list:SI (use (reg:SI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (expr_list:DI (use (reg:DI 2 cx))
+                    (expr_list:DI (use (reg:DI 36 r8))
+                        (nil)))))))
+(insn 471 470 472 49 (set (reg/v:SI 145 [ <retval> ])
+        (reg:SI 0 ax)) "ssh-ecdsa-sk.c":254:20 -1
+     (nil))
+(debug_insn 472 471 473 49 (var_location:SI ret (reg/v:SI 145 [ <retval> ])) "ssh-ecdsa-sk.c":254:20 -1
+     (nil))
+(insn 473 472 474 49 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 145 [ <retval> ])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":254:12 -1
+     (nil))
+(jump_insn 474 473 771 49 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 599)
+            (pc))) "ssh-ecdsa-sk.c":254:12 -1
+     (int_list:REG_BR_PROB 365072228 (nil))
+ -> 599)
+(code_label 771 474 475 50 15 (nil) [1 uses])
+(note 475 771 476 50 [bb 50] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 476 475 477 50 (var_location:DI data (clobber (const_int 0 [0]))) "ssh-ecdsa-sk.c":250:14 -1
+     (nil))
+(debug_insn 477 476 478 50 (var_location:DI datalen (clobber (const_int 0 [0]))) "ssh-ecdsa-sk.c":250:14 -1
+     (nil))
+(debug_insn 478 477 479 50 (var_location:DI origin (clobber (const_int 0 [0]))) "ssh-ecdsa-sk.c":250:14 -1
+     (nil))
+(debug_insn 479 478 480 50 (var_location:DI wrapper (clobber (const_int 0 [0]))) "ssh-ecdsa-sk.c":250:14 -1
+     (nil))
+(debug_insn 480 479 481 50 (var_location:QI flags (clobber (const_int 0 [0]))) "ssh-ecdsa-sk.c":250:14 -1
+     (nil))
+(debug_insn 481 480 482 50 (var_location:DI extensions (clobber (const_int 0 [0]))) "ssh-ecdsa-sk.c":250:14 -1
+     (nil))
+(debug_insn 482 481 483 50 (var_location:DI msghash (clobber (const_int 0 [0]))) "ssh-ecdsa-sk.c":250:14 -1
+     (nil))
+(debug_insn 483 482 484 50 (var_location:SI r (clobber (const_int 0 [0]))) "ssh-ecdsa-sk.c":250:14 -1
+     (nil))
+(debug_insn 484 483 485 50 (var_location:DI chall (clobber (const_int 0 [0]))) "ssh-ecdsa-sk.c":250:14 -1
+     (nil))
+(debug_insn 485 484 486 50 (var_location:DI m (clobber (const_int 0 [0]))) "ssh-ecdsa-sk.c":250:14 -1
+     (nil))
+(debug_insn 486 485 487 50 (var_location:DI msghashlen (clobber (const_int 0 [0]))) "ssh-ecdsa-sk.c":250:14 -1
+     (nil))
+(debug_insn 487 486 488 50 (var_location:SI ret (clobber (const_int 0 [0]))) "ssh-ecdsa-sk.c":250:14 -1
+     (nil))
+(debug_insn 488 487 489 50 (debug_marker) "ssh-ecdsa-sk.c":258:2 -1
+     (nil))
+(insn 489 488 490 50 (set (reg/f:DI 113 [ _33 ])
+        (mem/f:DI (plus:DI (reg/v/f:DI 146 [ key ])
+                (const_int 96 [0x60])) [1 key_77(D)->sk_application+0 S8 A64])) "ssh-ecdsa-sk.c":259:16 -1
+     (nil))
+(insn 490 489 491 50 (set (reg:DI 5 di)
+        (reg/f:DI 113 [ _33 ])) "ssh-ecdsa-sk.c":258:13 -1
+     (nil))
+(call_insn/i 491 490 492 50 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x7f5e43f16500 strlen>) [0 __builtin_strlen S1 A8])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":258:13 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x7f5e43f16500 strlen>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 492 491 493 50 (set (reg:DI 196)
+        (reg:DI 0 ax)) "ssh-ecdsa-sk.c":258:13 -1
+     (nil))
+(insn 493 492 494 50 (set (reg:DI 197)
+        (reg:DI 196)) "ssh-ecdsa-sk.c":258:13 -1
+     (nil))
+(insn 494 493 495 50 (set (reg:DI 114 [ _34 ])
+        (reg:DI 197)) "ssh-ecdsa-sk.c":258:13 -1
+     (nil))
+(insn 495 494 496 50 (parallel [
+            (set (reg:DI 198)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -80 [0xffffffffffffffb0])))
+            (clobber (reg:CC 17 flags))
+        ]) "ssh-ecdsa-sk.c":258:13 -1
+     (nil))
+(insn 496 495 497 50 (set (reg:DI 36 r8)
+        (const_int 32 [0x20])) "ssh-ecdsa-sk.c":258:13 -1
+     (nil))
+(insn 497 496 498 50 (set (reg:DI 2 cx)
+        (reg:DI 198)) "ssh-ecdsa-sk.c":258:13 -1
+     (nil))
+(insn 498 497 499 50 (set (reg:DI 1 dx)
+        (reg:DI 114 [ _34 ])) "ssh-ecdsa-sk.c":258:13 -1
+     (nil))
+(insn 499 498 500 50 (set (reg:DI 4 si)
+        (reg/f:DI 113 [ _33 ])) "ssh-ecdsa-sk.c":258:13 -1
+     (nil))
+(insn 500 499 501 50 (set (reg:SI 5 di)
+        (const_int 2 [0x2])) "ssh-ecdsa-sk.c":258:13 -1
+     (nil))
+(call_insn 501 500 502 50 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("ssh_digest_memory") [flags 0x41]  <function_decl 0x7f5e43252600 ssh_digest_memory>) [0 ssh_digest_memory S1 A8])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":258:13 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("ssh_digest_memory") [flags 0x41]  <function_decl 0x7f5e43252600 ssh_digest_memory>)
+        (nil))
+    (expr_list:SI (use (reg:SI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (expr_list:DI (use (reg:DI 2 cx))
+                    (expr_list:DI (use (reg:DI 36 r8))
+                        (nil)))))))
+(insn 502 501 503 50 (set (reg/v:SI 145 [ <retval> ])
+        (reg:SI 0 ax)) "ssh-ecdsa-sk.c":258:13 -1
+     (nil))
+(debug_insn 503 502 504 50 (var_location:SI ret (reg/v:SI 145 [ <retval> ])) "ssh-ecdsa-sk.c":258:13 -1
+     (nil))
+(insn 504 503 505 50 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 145 [ <retval> ])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":258:5 -1
+     (nil))
+(jump_insn 505 504 506 50 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 599)
+            (pc))) "ssh-ecdsa-sk.c":258:5 -1
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 599)
+(note 506 505 507 51 [bb 51] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 507 506 508 51 (debug_marker) "ssh-ecdsa-sk.c":267:2 -1
+     (nil))
+(insn 508 507 509 51 (parallel [
+            (set (reg:DI 199)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -80 [0xffffffffffffffb0])))
+            (clobber (reg:CC 17 flags))
+        ]) "ssh-ecdsa-sk.c":267:13 -1
+     (nil))
+(insn 509 508 510 51 (set (reg:DI 1 dx)
+        (const_int 32 [0x20])) "ssh-ecdsa-sk.c":267:13 -1
+     (nil))
+(insn 510 509 511 51 (set (reg:DI 4 si)
+        (reg:DI 199)) "ssh-ecdsa-sk.c":267:13 -1
+     (nil))
+(insn 511 510 512 51 (set (reg:DI 5 di)
+        (reg/v/f:DI 131 [ original_signed ])) "ssh-ecdsa-sk.c":267:13 -1
+     (nil))
+(call_insn 512 511 513 51 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshbuf_put") [flags 0x41]  <function_decl 0x7f5e436b8c00 sshbuf_put>) [0 sshbuf_put S1 A8])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":267:13 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_put") [flags 0x41]  <function_decl 0x7f5e436b8c00 sshbuf_put>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(insn 513 512 514 51 (set (reg/v:SI 145 [ <retval> ])
+        (reg:SI 0 ax)) "ssh-ecdsa-sk.c":267:13 -1
+     (nil))
+(debug_insn 514 513 515 51 (var_location:SI ret (reg/v:SI 145 [ <retval> ])) "ssh-ecdsa-sk.c":267:13 -1
+     (nil))
+(insn 515 514 516 51 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 145 [ <retval> ])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":267:5 -1
+     (nil))
+(jump_insn 516 515 517 51 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 599)
+            (pc))) "ssh-ecdsa-sk.c":267:5 -1
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 599)
+(note 517 516 518 52 [bb 52] NOTE_INSN_BASIC_BLOCK)
+(insn 518 517 519 52 (set (reg:SI 200)
+        (zero_extend:SI (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -173 [0xffffffffffffff53])) [0 sig_flags+0 S1 A8]))) "ssh-ecdsa-sk.c":269:13 -1
+     (nil))
+(insn 519 518 520 52 (set (reg:SI 4 si)
+        (reg:SI 200)) "ssh-ecdsa-sk.c":269:13 -1
+     (nil))
+(insn 520 519 521 52 (set (reg:DI 5 di)
+        (reg/v/f:DI 131 [ original_signed ])) "ssh-ecdsa-sk.c":269:13 -1
+     (nil))
+(call_insn 521 520 522 52 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshbuf_put_u8") [flags 0x41]  <function_decl 0x7f5e436bc700 sshbuf_put_u8>) [0 sshbuf_put_u8 S1 A8])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":269:13 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_put_u8") [flags 0x41]  <function_decl 0x7f5e436bc700 sshbuf_put_u8>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (nil))))
+(insn 522 521 523 52 (set (reg/v:SI 145 [ <retval> ])
+        (reg:SI 0 ax)) "ssh-ecdsa-sk.c":269:13 -1
+     (nil))
+(debug_insn 523 522 524 52 (var_location:SI ret (reg/v:SI 145 [ <retval> ])) "ssh-ecdsa-sk.c":269:13 -1
+     (nil))
+(insn 524 523 525 52 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 145 [ <retval> ])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":268:38 -1
+     (nil))
+(jump_insn 525 524 526 52 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 599)
+            (pc))) "ssh-ecdsa-sk.c":268:38 -1
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 599)
+(note 526 525 527 53 [bb 53] NOTE_INSN_BASIC_BLOCK)
+(insn 527 526 528 53 (set (reg:SI 201)
+        (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -172 [0xffffffffffffff54])) [3 sig_counter+0 S4 A32])) "ssh-ecdsa-sk.c":270:13 -1
+     (nil))
+(insn 528 527 529 53 (set (reg:SI 4 si)
+        (reg:SI 201)) "ssh-ecdsa-sk.c":270:13 -1
+     (nil))
+(insn 529 528 530 53 (set (reg:DI 5 di)
+        (reg/v/f:DI 131 [ original_signed ])) "ssh-ecdsa-sk.c":270:13 -1
+     (nil))
+(call_insn 530 529 531 53 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshbuf_put_u32") [flags 0x41]  <function_decl 0x7f5e436bc500 sshbuf_put_u32>) [0 sshbuf_put_u32 S1 A8])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":270:13 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_put_u32") [flags 0x41]  <function_decl 0x7f5e436bc500 sshbuf_put_u32>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (nil))))
+(insn 531 530 532 53 (set (reg/v:SI 145 [ <retval> ])
+        (reg:SI 0 ax)) "ssh-ecdsa-sk.c":270:13 -1
+     (nil))
+(debug_insn 532 531 533 53 (var_location:SI ret (reg/v:SI 145 [ <retval> ])) "ssh-ecdsa-sk.c":270:13 -1
+     (nil))
+(insn 533 532 534 53 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 145 [ <retval> ])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":269:61 -1
+     (nil))
+(jump_insn 534 533 535 53 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 599)
+            (pc))) "ssh-ecdsa-sk.c":269:61 -1
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 599)
+(note 535 534 536 54 [bb 54] NOTE_INSN_BASIC_BLOCK)
+(insn 536 535 537 54 (set (reg:DI 202)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -136 [0xffffffffffffff78])) [9 webauthn_exts+0 S8 A64])) "ssh-ecdsa-sk.c":271:13 -1
+     (nil))
+(insn 537 536 538 54 (set (reg:DI 4 si)
+        (reg:DI 202)) "ssh-ecdsa-sk.c":271:13 -1
+     (nil))
+(insn 538 537 539 54 (set (reg:DI 5 di)
+        (reg/v/f:DI 131 [ original_signed ])) "ssh-ecdsa-sk.c":271:13 -1
+     (nil))
+(call_insn 539 538 540 54 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshbuf_putb") [flags 0x41]  <function_decl 0x7f5e436b8d00 sshbuf_putb>) [0 sshbuf_putb S1 A8])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":271:13 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_putb") [flags 0x41]  <function_decl 0x7f5e436b8d00 sshbuf_putb>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 540 539 541 54 (set (reg/v:SI 145 [ <retval> ])
+        (reg:SI 0 ax)) "ssh-ecdsa-sk.c":271:13 -1
+     (nil))
+(debug_insn 541 540 542 54 (var_location:SI ret (reg/v:SI 145 [ <retval> ])) "ssh-ecdsa-sk.c":271:13 -1
+     (nil))
+(insn 542 541 543 54 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 145 [ <retval> ])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":270:64 -1
+     (nil))
+(jump_insn 543 542 544 54 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 599)
+            (pc))) "ssh-ecdsa-sk.c":270:64 -1
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 599)
+(note 544 543 545 55 [bb 55] NOTE_INSN_BASIC_BLOCK)
+(insn 545 544 546 55 (parallel [
+            (set (reg:DI 203)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -112 [0xffffffffffffff90])))
+            (clobber (reg:CC 17 flags))
+        ]) "ssh-ecdsa-sk.c":272:13 -1
+     (nil))
+(insn 546 545 547 55 (set (reg:DI 1 dx)
+        (const_int 32 [0x20])) "ssh-ecdsa-sk.c":272:13 -1
+     (nil))
+(insn 547 546 548 55 (set (reg:DI 4 si)
+        (reg:DI 203)) "ssh-ecdsa-sk.c":272:13 -1
+     (nil))
+(insn 548 547 549 55 (set (reg:DI 5 di)
+        (reg/v/f:DI 131 [ original_signed ])) "ssh-ecdsa-sk.c":272:13 -1
+     (nil))
+(call_insn 549 548 550 55 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshbuf_put") [flags 0x41]  <function_decl 0x7f5e436b8c00 sshbuf_put>) [0 sshbuf_put S1 A8])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":272:13 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_put") [flags 0x41]  <function_decl 0x7f5e436b8c00 sshbuf_put>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(insn 550 549 551 55 (set (reg/v:SI 145 [ <retval> ])
+        (reg:SI 0 ax)) "ssh-ecdsa-sk.c":272:13 -1
+     (nil))
+(debug_insn 551 550 552 55 (var_location:SI ret (reg/v:SI 145 [ <retval> ])) "ssh-ecdsa-sk.c":272:13 -1
+     (nil))
+(insn 552 551 553 55 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 145 [ <retval> ])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":271:63 -1
+     (nil))
+(jump_insn 553 552 554 55 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 599)
+            (pc))) "ssh-ecdsa-sk.c":271:63 -1
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 599)
+(note 554 553 555 56 [bb 56] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 555 554 556 56 (debug_marker) "ssh-ecdsa-sk.c":275:2 -1
+     (nil))
+(insn 556 555 557 56 (parallel [
+            (set (reg:DI 204)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -48 [0xffffffffffffffd0])))
+            (clobber (reg:CC 17 flags))
+        ]) "ssh-ecdsa-sk.c":275:13 -1
+     (nil))
+(insn 557 556 558 56 (set (reg:DI 2 cx)
+        (const_int 32 [0x20])) "ssh-ecdsa-sk.c":275:13 -1
+     (nil))
+(insn 558 557 559 56 (set (reg:DI 1 dx)
+        (reg:DI 204)) "ssh-ecdsa-sk.c":275:13 -1
+     (nil))
+(insn 559 558 560 56 (set (reg:DI 4 si)
+        (reg/v/f:DI 131 [ original_signed ])) "ssh-ecdsa-sk.c":275:13 -1
+     (nil))
+(insn 560 559 561 56 (set (reg:SI 5 di)
+        (const_int 2 [0x2])) "ssh-ecdsa-sk.c":275:13 -1
+     (nil))
+(call_insn 561 560 562 56 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("ssh_digest_buffer") [flags 0x41]  <function_decl 0x7f5e43252700 ssh_digest_buffer>) [0 ssh_digest_buffer S1 A8])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":275:13 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("ssh_digest_buffer") [flags 0x41]  <function_decl 0x7f5e43252700 ssh_digest_buffer>)
+        (nil))
+    (expr_list:SI (use (reg:SI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (expr_list:DI (use (reg:DI 2 cx))
+                    (nil))))))
+(insn 562 561 563 56 (set (reg/v:SI 145 [ <retval> ])
+        (reg:SI 0 ax)) "ssh-ecdsa-sk.c":275:13 -1
+     (nil))
+(debug_insn 563 562 564 56 (var_location:SI ret (reg/v:SI 145 [ <retval> ])) "ssh-ecdsa-sk.c":275:13 -1
+     (nil))
+(insn 564 563 565 56 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 145 [ <retval> ])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":275:5 -1
+     (nil))
+(jump_insn 565 564 566 56 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 599)
+            (pc))) "ssh-ecdsa-sk.c":275:5 -1
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 599)
+(note 566 565 567 57 [bb 57] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 567 566 568 57 (debug_marker) "ssh-ecdsa-sk.c":278:2 -1
+     (nil))
+(insn 568 567 569 57 (set (reg:SI 205)
+        (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -172 [0xffffffffffffff54])) [3 sig_counter+0 S4 A32])) "ssh-ecdsa-sk.c":278:22 -1
+     (nil))
+(insn 569 568 570 57 (set (mem:SI (reg/v/f:DI 132 [ details ]) [3 details_84->sk_counter+0 S4 A64])
+        (reg:SI 205)) "ssh-ecdsa-sk.c":278:22 -1
+     (nil))
+(debug_insn 570 569 571 57 (debug_marker) "ssh-ecdsa-sk.c":279:2 -1
+     (nil))
+(insn 571 570 572 57 (set (reg:QI 206)
+        (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -173 [0xffffffffffffff53])) [0 sig_flags+0 S1 A8])) "ssh-ecdsa-sk.c":279:20 -1
+     (nil))
+(insn 572 571 573 57 (set (mem:QI (plus:DI (reg/v/f:DI 132 [ details ])
+                (const_int 4 [0x4])) [0 details_84->sk_flags+0 S1 A32])
+        (reg:QI 206)) "ssh-ecdsa-sk.c":279:20 -1
+     (nil))
+(debug_insn 573 572 574 57 (debug_marker) "ssh-ecdsa-sk.c":288:2 -1
+     (nil))
+(insn 574 573 575 57 (set (reg:DI 207)
+        (mem/f:DI (plus:DI (reg/v/f:DI 146 [ key ])
+                (const_int 32 [0x20])) [6 key_77(D)->ecdsa+0 S8 A64])) "ssh-ecdsa-sk.c":288:10 -1
+     (nil))
+(insn 575 574 576 57 (parallel [
+            (set (reg:DI 208)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -48 [0xffffffffffffffd0])))
+            (clobber (reg:CC 17 flags))
+        ]) "ssh-ecdsa-sk.c":288:10 -1
+     (nil))
+(insn 576 575 577 57 (set (reg:DI 2 cx)
+        (reg:DI 207)) "ssh-ecdsa-sk.c":288:10 -1
+     (nil))
+(insn 577 576 578 57 (set (reg:DI 1 dx)
+        (reg/v/f:DI 130 [ sig ])) "ssh-ecdsa-sk.c":288:10 -1
+     (nil))
+(insn 578 577 579 57 (set (reg:SI 4 si)
+        (const_int 32 [0x20])) "ssh-ecdsa-sk.c":288:10 -1
+     (nil))
+(insn 579 578 580 57 (set (reg:DI 5 di)
+        (reg:DI 208)) "ssh-ecdsa-sk.c":288:10 -1
+     (nil))
+(call_insn 580 579 581 57 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("ECDSA_do_verify") [flags 0x41]  <function_decl 0x7f5e439a7e00 ECDSA_do_verify>) [0 ECDSA_do_verify S1 A8])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":288:10 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("ECDSA_do_verify") [flags 0x41]  <function_decl 0x7f5e439a7e00 ECDSA_do_verify>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (expr_list:DI (use (reg:DI 2 cx))
+                    (nil))))))
+(insn 581 580 582 57 (set (reg:SI 122 [ _42 ])
+        (reg:SI 0 ax)) "ssh-ecdsa-sk.c":288:10 -1
+     (nil))
+(insn 582 581 583 57 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 122 [ _42 ])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":288:2 -1
+     (nil))
+(jump_insn 583 582 584 57 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 876)
+            (pc))) "ssh-ecdsa-sk.c":288:2 736 {*jcc}
+     (int_list:REG_BR_PROB 357913950 (nil))
+ -> 876)
+(note 584 583 585 58 [bb 58] NOTE_INSN_BASIC_BLOCK)
+(insn 585 584 586 58 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 122 [ _42 ])
+            (const_int 1 [0x1]))) "ssh-ecdsa-sk.c":288:2 -1
+     (nil))
+(jump_insn 586 585 587 58 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 880)
+            (pc))) "ssh-ecdsa-sk.c":288:2 736 {*jcc}
+     (int_list:REG_BR_PROB 536870918 (nil))
+ -> 880)
+(note 587 586 588 59 [bb 59] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 588 587 589 59 (debug_marker) "ssh-ecdsa-sk.c":290:3 -1
+     (nil))
+(debug_insn 589 588 590 59 (var_location:SI ret (const_int 0 [0])) "ssh-ecdsa-sk.c":290:7 -1
+     (nil))
+(debug_insn 590 589 591 59 (debug_marker) "ssh-ecdsa-sk.c":291:3 -1
+     (nil))
+(debug_insn 591 590 592 59 (debug_marker) "ssh-ecdsa-sk.c":300:2 -1
+     (nil))
+(insn 592 591 593 59 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 152 [ detailsp ])
+            (const_int 0 [0]))) "ssh-ecdsa-sk.c":300:5 -1
+     (nil))
+(jump_insn 593 592 594 59 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 599)
+            (pc))) "ssh-ecdsa-sk.c":300:5 -1
+     (int_list:REG_BR_PROB 322122548 (nil))
+ -> 599)
+(note 594 593 595 60 [bb 60] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 595 594 596 60 (debug_marker) "ssh-ecdsa-sk.c":301:3 -1
+     (nil))
+(insn 596 595 597 60 (set (mem/f:DI (reg/v/f:DI 152 [ detailsp ]) [13 *detailsp_75(D)+0 S8 A64])
+        (reg/v/f:DI 132 [ details ])) "ssh-ecdsa-sk.c":301:13 -1
+     (nil))
+(debug_insn 597 596 598 60 (debug_marker) "ssh-ecdsa-sk.c":302:3 -1
+     (nil))
+(debug_insn 598 597 45 60 (var_location:DI details (const_int 0 [0])) "ssh-ecdsa-sk.c":302:11 -1
+     (nil))
+(insn 45 598 792 60 (set (reg/v/f:DI 132 [ details ])
+        (const_int 0 [0])) "ssh-ecdsa-sk.c":302:11 -1
+     (nil))
+(jump_insn 792 45 793 60 (set (pc)
+        (label_ref 599)) -1
+     (nil)
+ -> 599)
+(barrier 793 792 795)
+(code_label 795 793 794 61 19 (nil) [1 uses])
+(note 794 795 17 61 [bb 61] NOTE_INSN_BASIC_BLOCK)
+(insn 17 794 18 61 (set (reg/v/f:DI 131 [ original_signed ])
+        (reg/v/f:DI 132 [ details ])) "ssh-ecdsa-sk.c":153:44 -1
+     (nil))
+(insn 18 17 19 61 (set (reg/v/f:DI 130 [ sig ])
+        (reg/v/f:DI 132 [ details ])) "ssh-ecdsa-sk.c":147:13 -1
+     (nil))
+(insn 19 18 796 61 (set (reg/v:SI 145 [ <retval> ])
+        (const_int -2 [0xfffffffffffffffe])) "ssh-ecdsa-sk.c":175:7 -1
+     (nil))
+(jump_insn 796 19 797 61 (set (pc)
+        (label_ref 599)) -1
+     (nil)
+ -> 599)
+(barrier 797 796 799)
+(code_label 799 797 798 62 20 (nil) [1 uses])
+(note 798 799 57 62 [bb 62] NOTE_INSN_BASIC_BLOCK)
+(insn 57 798 58 62 (set (reg/v/f:DI 131 [ original_signed ])
+        (const_int 0 [0])) "ssh-ecdsa-sk.c":153:44 -1
+     (nil))
+(insn 58 57 59 62 (set (reg/v:SI 145 [ <retval> ])
+        (const_int -4 [0xfffffffffffffffc])) "ssh-ecdsa-sk.c":179:7 -1
+     (nil))
+(insn 59 58 805 62 (set (reg/v/f:DI 130 [ sig ])
+        (const_int 0 [0])) "ssh-ecdsa-sk.c":147:13 -1
+     (nil))
+(jump_insn 805 59 806 62 (set (pc)
+        (label_ref 599)) -1
+     (nil)
+ -> 599)
+(barrier 806 805 808)
+(code_label 808 806 807 63 22 (nil) [1 uses])
+(note 807 808 20 63 [bb 63] NOTE_INSN_BASIC_BLOCK)
+(insn 20 807 21 63 (set (reg/v/f:DI 131 [ original_signed ])
+        (const_int 0 [0])) "ssh-ecdsa-sk.c":153:44 -1
+     (nil))
+(insn 21 20 22 63 (set (reg/v:SI 145 [ <retval> ])
+        (const_int -4 [0xfffffffffffffffc])) "ssh-ecdsa-sk.c":185:7 -1
+     (nil))
+(insn 22 21 809 63 (set (reg/v/f:DI 130 [ sig ])
+        (const_int 0 [0])) "ssh-ecdsa-sk.c":147:13 -1
+     (nil))
+(jump_insn 809 22 810 63 (set (pc)
+        (label_ref 599)) -1
+     (nil)
+ -> 599)
+(barrier 810 809 812)
+(code_label 812 810 811 64 23 (nil) [1 uses])
+(note 811 812 13 64 [bb 64] NOTE_INSN_BASIC_BLOCK)
+(insn 13 811 14 64 (set (reg/v/f:DI 131 [ original_signed ])
+        (const_int 0 [0])) "ssh-ecdsa-sk.c":153:44 -1
+     (nil))
+(insn 14 13 15 64 (set (reg/v:SI 145 [ <retval> ])
+        (const_int -4 [0xfffffffffffffffc])) "ssh-ecdsa-sk.c":191:7 -1
+     (nil))
+(insn 15 14 813 64 (set (reg/v/f:DI 130 [ sig ])
+        (const_int 0 [0])) "ssh-ecdsa-sk.c":147:13 -1
+     (nil))
+(jump_insn 813 15 814 64 (set (pc)
+        (label_ref 599)) -1
+     (nil)
+ -> 599)
+(barrier 814 813 816)
+(code_label 816 814 815 65 24 (nil) [1 uses])
+(note 815 816 51 65 [bb 65] NOTE_INSN_BASIC_BLOCK)
+(insn 51 815 52 65 (set (reg/v/f:DI 131 [ original_signed ])
+        (const_int 0 [0])) "ssh-ecdsa-sk.c":153:44 -1
+     (nil))
+(insn 52 51 53 65 (set (reg/v:SI 145 [ <retval> ])
+        (const_int -4 [0xfffffffffffffffc])) "ssh-ecdsa-sk.c":191:7 -1
+     (nil))
+(insn 53 52 817 65 (set (reg/v/f:DI 130 [ sig ])
+        (const_int 0 [0])) "ssh-ecdsa-sk.c":147:13 -1
+     (nil))
+(jump_insn 817 53 818 65 (set (pc)
+        (label_ref 599)) -1
+     (nil)
+ -> 599)
+(barrier 818 817 820)
+(code_label 820 818 819 66 25 (nil) [1 uses])
+(note 819 820 48 66 [bb 66] NOTE_INSN_BASIC_BLOCK)
+(insn 48 819 49 66 (set (reg/v/f:DI 131 [ original_signed ])
+        (const_int 0 [0])) "ssh-ecdsa-sk.c":153:44 -1
+     (nil))
+(insn 49 48 50 66 (set (reg/v:SI 145 [ <retval> ])
+        (const_int -4 [0xfffffffffffffffc])) "ssh-ecdsa-sk.c":191:7 -1
+     (nil))
+(insn 50 49 821 66 (set (reg/v/f:DI 130 [ sig ])
+        (const_int 0 [0])) "ssh-ecdsa-sk.c":147:13 -1
+     (nil))
+(jump_insn 821 50 822 66 (set (pc)
+        (label_ref 599)) -1
+     (nil)
+ -> 599)
+(barrier 822 821 824)
+(code_label 824 822 823 67 26 (nil) [1 uses])
+(note 823 824 23 67 [bb 67] NOTE_INSN_BASIC_BLOCK)
+(insn 23 823 24 67 (set (reg/v/f:DI 131 [ original_signed ])
+        (const_int 0 [0])) "ssh-ecdsa-sk.c":153:44 -1
+     (nil))
+(insn 24 23 25 67 (set (reg/v:SI 145 [ <retval> ])
+        (const_int -23 [0xffffffffffffffe9])) "ssh-ecdsa-sk.c":203:7 -1
+     (nil))
+(insn 25 24 825 67 (set (reg/v/f:DI 130 [ sig ])
+        (const_int 0 [0])) "ssh-ecdsa-sk.c":147:13 -1
+     (nil))
+(jump_insn 825 25 826 67 (set (pc)
+        (label_ref 599)) -1
+     (nil)
+ -> 599)
+(barrier 826 825 828)
+(code_label 828 826 827 68 27 (nil) [1 uses])
+(note 827 828 54 68 [bb 68] NOTE_INSN_BASIC_BLOCK)
+(insn 54 827 55 68 (set (reg/v/f:DI 131 [ original_signed ])
+        (const_int 0 [0])) "ssh-ecdsa-sk.c":153:44 -1
+     (nil))
+(insn 55 54 56 68 (set (reg/v:SI 145 [ <retval> ])
+        (const_int -4 [0xfffffffffffffffc])) "ssh-ecdsa-sk.c":198:8 -1
+     (nil))
+(insn 56 55 829 68 (set (reg/v/f:DI 130 [ sig ])
+        (const_int 0 [0])) "ssh-ecdsa-sk.c":147:13 -1
+     (nil))
+(jump_insn 829 56 830 68 (set (pc)
+        (label_ref 599)) -1
+     (nil)
+ -> 599)
+(barrier 830 829 832)
+(code_label 832 830 831 69 28 (nil) [1 uses])
+(note 831 832 26 69 [bb 69] NOTE_INSN_BASIC_BLOCK)
+(insn 26 831 27 69 (set (reg/v/f:DI 131 [ original_signed ])
+        (const_int 0 [0])) "ssh-ecdsa-sk.c":153:44 -1
+     (nil))
+(insn 27 26 28 69 (set (reg/v:SI 145 [ <retval> ])
+        (const_int -4 [0xfffffffffffffffc])) "ssh-ecdsa-sk.c":198:8 -1
+     (nil))
+(insn 28 27 833 69 (set (reg/v/f:DI 130 [ sig ])
+        (const_int 0 [0])) "ssh-ecdsa-sk.c":147:13 -1
+     (nil))
+(jump_insn 833 28 834 69 (set (pc)
+        (label_ref 599)) -1
+     (nil)
+ -> 599)
+(barrier 834 833 836)
+(code_label 836 834 835 70 29 (nil) [1 uses])
+(note 835 836 29 70 [bb 70] NOTE_INSN_BASIC_BLOCK)
+(insn 29 835 30 70 (set (reg/v/f:DI 131 [ original_signed ])
+        (const_int 0 [0])) "ssh-ecdsa-sk.c":153:44 -1
+     (nil))
+(insn 30 29 31 70 (set (reg/v:SI 145 [ <retval> ])
+        (const_int -4 [0xfffffffffffffffc])) "ssh-ecdsa-sk.c":198:8 -1
+     (nil))
+(insn 31 30 837 70 (set (reg/v/f:DI 130 [ sig ])
+        (const_int 0 [0])) "ssh-ecdsa-sk.c":147:13 -1
+     (nil))
+(jump_insn 837 31 838 70 (set (pc)
+        (label_ref 599)) -1
+     (nil)
+ -> 599)
+(barrier 838 837 840)
+(code_label 840 838 839 71 30 (nil) [1 uses])
+(note 839 840 32 71 [bb 71] NOTE_INSN_BASIC_BLOCK)
+(insn 32 839 33 71 (set (reg/v/f:DI 131 [ original_signed ])
+        (const_int 0 [0])) "ssh-ecdsa-sk.c":153:44 -1
+     (nil))
+(insn 33 32 34 71 (set (reg/v:SI 145 [ <retval> ])
+        (const_int -4 [0xfffffffffffffffc])) "ssh-ecdsa-sk.c":210:7 -1
+     (nil))
+(insn 34 33 841 71 (set (reg/v/f:DI 130 [ sig ])
+        (const_int 0 [0])) "ssh-ecdsa-sk.c":147:13 -1
+     (nil))
+(jump_insn 841 34 842 71 (set (pc)
+        (label_ref 599)) -1
+     (nil)
+ -> 599)
+(barrier 842 841 844)
+(code_label 844 842 843 72 31 (nil) [1 uses])
+(note 843 844 35 72 [bb 72] NOTE_INSN_BASIC_BLOCK)
+(insn 35 843 36 72 (set (reg/v/f:DI 131 [ original_signed ])
+        (const_int 0 [0])) "ssh-ecdsa-sk.c":153:44 -1
+     (nil))
+(insn 36 35 37 72 (set (reg/v:SI 145 [ <retval> ])
+        (const_int -4 [0xfffffffffffffffc])) "ssh-ecdsa-sk.c":210:7 -1
+     (nil))
+(insn 37 36 845 72 (set (reg/v/f:DI 130 [ sig ])
+        (const_int 0 [0])) "ssh-ecdsa-sk.c":147:13 -1
+     (nil))
+(jump_insn 845 37 846 72 (set (pc)
+        (label_ref 599)) -1
+     (nil)
+ -> 599)
+(barrier 846 845 848)
+(code_label 848 846 847 73 32 (nil) [1 uses])
+(note 847 848 40 73 [bb 73] NOTE_INSN_BASIC_BLOCK)
+(insn 40 847 41 73 (set (reg/v/f:DI 131 [ original_signed ])
+        (const_int 0 [0])) "ssh-ecdsa-sk.c":153:44 -1
+     (nil))
+(insn 41 40 42 73 (set (reg/v:SI 145 [ <retval> ])
+        (const_int -23 [0xffffffffffffffe9])) "ssh-ecdsa-sk.c":214:7 -1
+     (nil))
+(insn 42 41 849 73 (set (reg/v/f:DI 130 [ sig ])
+        (const_int 0 [0])) "ssh-ecdsa-sk.c":147:13 -1
+     (nil))
+(jump_insn 849 42 850 73 (set (pc)
+        (label_ref 599)) -1
+     (nil)
+ -> 599)
+(barrier 850 849 852)
+(code_label 852 850 851 74 33 (nil) [1 uses])
+(note 851 852 38 74 [bb 74] NOTE_INSN_BASIC_BLOCK)
+(insn 38 851 39 74 (set (reg/v/f:DI 131 [ original_signed ])
+        (reg/v/f:DI 130 [ sig ])) "ssh-ecdsa-sk.c":153:44 -1
+     (nil))
+(insn 39 38 853 74 (set (reg/v:SI 145 [ <retval> ])
+        (const_int -2 [0xfffffffffffffffe])) "ssh-ecdsa-sk.c":235:7 -1
+     (nil))
+(jump_insn 853 39 854 74 (set (pc)
+        (label_ref 599)) -1
+     (nil)
+ -> 599)
+(barrier 854 853 856)
+(code_label 856 854 855 75 34 (nil) [1 uses])
+(note 855 856 46 75 [bb 75] NOTE_INSN_BASIC_BLOCK)
+(insn 46 855 47 75 (set (reg/v/f:DI 131 [ original_signed ])
+        (const_int 0 [0])) "ssh-ecdsa-sk.c":153:44 -1
+     (nil))
+(insn 47 46 857 75 (set (reg/v:SI 145 [ <retval> ])
+        (const_int -22 [0xffffffffffffffea])) "ssh-ecdsa-sk.c":239:7 -1
+     (nil))
+(jump_insn 857 47 858 75 (set (pc)
+        (label_ref 599)) -1
+     (nil)
+ -> 599)
+(barrier 858 857 860)
+(code_label 860 858 859 76 35 (nil) [1 uses])
+(note 859 860 43 76 [bb 76] NOTE_INSN_BASIC_BLOCK)
+(insn 43 859 873 76 (set (reg/v:SI 145 [ <retval> ])
+        (const_int -2 [0xfffffffffffffffe])) "ssh-ecdsa-sk.c":246:7 -1
+     (nil))
+(jump_insn 873 43 874 76 (set (pc)
+        (label_ref 599)) -1
+     (nil)
+ -> 599)
+(barrier 874 873 876)
+(code_label 876 874 875 77 39 (nil) [1 uses])
+(note 875 876 44 77 [bb 77] NOTE_INSN_BASIC_BLOCK)
+(insn 44 875 877 77 (set (reg/v:SI 145 [ <retval> ])
+        (const_int -21 [0xffffffffffffffeb])) "ssh-ecdsa-sk.c":293:7 -1
+     (nil))
+(jump_insn 877 44 878 77 (set (pc)
+        (label_ref 599)) -1
+     (nil)
+ -> 599)
+(barrier 878 877 880)
+(code_label 880 878 879 78 40 (nil) [1 uses])
+(note 879 880 16 78 [bb 78] NOTE_INSN_BASIC_BLOCK)
+(insn 16 879 599 78 (set (reg/v:SI 145 [ <retval> ])
+        (const_int -22 [0xffffffffffffffea])) "ssh-ecdsa-sk.c":288:2 -1
+     (nil))
+(code_label 599 16 600 79 6 ("out") [28 uses])
+(note 600 599 601 79 [bb 79] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 601 600 602 79 (var_location:DI data (clobber (const_int 0 [0]))) "ssh-ecdsa-sk.c":250:14 -1
+     (nil))
+(debug_insn 602 601 603 79 (var_location:DI datalen (clobber (const_int 0 [0]))) "ssh-ecdsa-sk.c":250:14 -1
+     (nil))
+(debug_insn 603 602 604 79 (var_location:DI origin (clobber (const_int 0 [0]))) "ssh-ecdsa-sk.c":250:14 -1
+     (nil))
+(debug_insn 604 603 605 79 (var_location:DI wrapper (clobber (const_int 0 [0]))) "ssh-ecdsa-sk.c":250:14 -1
+     (nil))
+(debug_insn 605 604 606 79 (var_location:QI flags (clobber (const_int 0 [0]))) "ssh-ecdsa-sk.c":250:14 -1
+     (nil))
+(debug_insn 606 605 607 79 (var_location:DI extensions (clobber (const_int 0 [0]))) "ssh-ecdsa-sk.c":250:14 -1
+     (nil))
+(debug_insn 607 606 608 79 (var_location:DI msghash (clobber (const_int 0 [0]))) "ssh-ecdsa-sk.c":250:14 -1
+     (nil))
+(debug_insn 608 607 609 79 (var_location:SI r (clobber (const_int 0 [0]))) "ssh-ecdsa-sk.c":250:14 -1
+     (nil))
+(debug_insn 609 608 610 79 (var_location:DI chall (clobber (const_int 0 [0]))) "ssh-ecdsa-sk.c":250:14 -1
+     (nil))
+(debug_insn 610 609 611 79 (var_location:DI m (clobber (const_int 0 [0]))) "ssh-ecdsa-sk.c":250:14 -1
+     (nil))
+(debug_insn 611 610 612 79 (var_location:DI msghashlen (clobber (const_int 0 [0]))) "ssh-ecdsa-sk.c":250:14 -1
+     (nil))
+(debug_insn 612 611 613 79 (var_location:DI details (reg/v/f:DI 132 [ details ])) -1
+     (nil))
+(debug_insn 613 612 614 79 (var_location:DI original_signed (reg/v/f:DI 131 [ original_signed ])) -1
+     (nil))
+(debug_insn 614 613 615 79 (var_location:SI ret (reg/v:SI 145 [ <retval> ])) -1
+     (nil))
+(debug_insn 615 614 616 79 (var_location:DI sig (reg/v/f:DI 130 [ sig ])) -1
+     (nil))
+(debug_insn 616 615 617 79 (debug_marker) "ssh-ecdsa-sk.c":305:2 -1
+     (nil))
+(debug_insn 617 616 618 79 (var_location:DI __dest (plus:DI (reg/f:DI 77 virtual-stack-vars)
+        (const_int -173 [0xffffffffffffff53]))) "ssh-ecdsa-sk.c":305:2 -1
+     (nil))
+(debug_insn 618 617 619 79 (var_location:DI __len (const_int 1 [0x1])) "ssh-ecdsa-sk.c":305:2 -1
+     (nil))
+(debug_insn 619 618 620 79 (debug_marker:BLK) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":81:1 -1
+     (nil))
+(debug_insn 620 619 621 79 (debug_marker) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":83:3 -1
+     (nil))
+(insn 621 620 622 79 (parallel [
+            (set (reg:DI 209)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -173 [0xffffffffffffff53])))
+            (clobber (reg:CC 17 flags))
+        ]) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":83:3 -1
+     (nil))
+(insn 622 621 623 79 (set (reg:DI 1 dx)
+        (const_int 1 [0x1])) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":83:3 -1
+     (nil))
+(insn 623 622 624 79 (set (reg:DI 4 si)
+        (const_int 1 [0x1])) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":83:3 -1
+     (nil))
+(insn 624 623 625 79 (set (reg:DI 5 di)
+        (reg:DI 209)) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":83:3 -1
+     (nil))
+(call_insn 625 624 626 79 (call (mem:QI (symbol_ref:DI ("__explicit_bzero_chk") [flags 0x41]  <function_decl 0x7f5e4362c300 __explicit_bzero_chk>) [0 __explicit_bzero_chk S1 A8])
+        (const_int 0 [0])) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":83:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__explicit_bzero_chk") [flags 0x41]  <function_decl 0x7f5e4362c300 __explicit_bzero_chk>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(debug_insn 626 625 627 79 (var_location:DI __dest (clobber (const_int 0 [0]))) "ssh-ecdsa-sk.c":305:2 -1
+     (nil))
+(debug_insn 627 626 628 79 (var_location:DI __len (clobber (const_int 0 [0]))) "ssh-ecdsa-sk.c":305:2 -1
+     (nil))
+(debug_insn 628 627 629 79 (debug_marker) "ssh-ecdsa-sk.c":306:2 -1
+     (nil))
+(debug_insn 629 628 630 79 (var_location:DI __dest (plus:DI (reg/f:DI 77 virtual-stack-vars)
+        (const_int -172 [0xffffffffffffff54]))) "ssh-ecdsa-sk.c":306:2 -1
+     (nil))
+(debug_insn 630 629 631 79 (var_location:DI __len (const_int 4 [0x4])) "ssh-ecdsa-sk.c":306:2 -1
+     (nil))
+(debug_insn 631 630 632 79 (debug_marker:BLK) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":81:1 -1
+     (nil))
+(debug_insn 632 631 633 79 (debug_marker) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":83:3 -1
+     (nil))
+(insn 633 632 634 79 (parallel [
+            (set (reg:DI 210)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -172 [0xffffffffffffff54])))
+            (clobber (reg:CC 17 flags))
+        ]) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":83:3 -1
+     (nil))
+(insn 634 633 635 79 (set (reg:DI 1 dx)
+        (const_int 4 [0x4])) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":83:3 -1
+     (nil))
+(insn 635 634 636 79 (set (reg:DI 4 si)
+        (const_int 4 [0x4])) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":83:3 -1
+     (nil))
+(insn 636 635 637 79 (set (reg:DI 5 di)
+        (reg:DI 210)) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":83:3 -1
+     (nil))
+(call_insn 637 636 638 79 (call (mem:QI (symbol_ref:DI ("__explicit_bzero_chk") [flags 0x41]  <function_decl 0x7f5e4362c300 __explicit_bzero_chk>) [0 __explicit_bzero_chk S1 A8])
+        (const_int 0 [0])) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":83:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__explicit_bzero_chk") [flags 0x41]  <function_decl 0x7f5e4362c300 __explicit_bzero_chk>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(debug_insn 638 637 639 79 (var_location:DI __dest (clobber (const_int 0 [0]))) "ssh-ecdsa-sk.c":306:2 -1
+     (nil))
+(debug_insn 639 638 640 79 (var_location:DI __len (clobber (const_int 0 [0]))) "ssh-ecdsa-sk.c":306:2 -1
+     (nil))
+(debug_insn 640 639 641 79 (debug_marker) "ssh-ecdsa-sk.c":307:2 -1
+     (nil))
+(debug_insn 641 640 642 79 (var_location:DI __dest (plus:DI (reg/f:DI 77 virtual-stack-vars)
+        (const_int -112 [0xffffffffffffff90]))) "ssh-ecdsa-sk.c":307:2 -1
+     (nil))
+(debug_insn 642 641 643 79 (var_location:DI __len (const_int 32 [0x20])) "ssh-ecdsa-sk.c":307:2 -1
+     (nil))
+(debug_insn 643 642 644 79 (debug_marker:BLK) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":81:1 -1
+     (nil))
+(debug_insn 644 643 645 79 (debug_marker) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":83:3 -1
+     (nil))
+(insn 645 644 646 79 (parallel [
+            (set (reg:DI 211)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -112 [0xffffffffffffff90])))
+            (clobber (reg:CC 17 flags))
+        ]) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":83:3 -1
+     (nil))
+(insn 646 645 647 79 (set (reg:DI 1 dx)
+        (const_int 32 [0x20])) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":83:3 -1
+     (nil))
+(insn 647 646 648 79 (set (reg:DI 4 si)
+        (const_int 32 [0x20])) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":83:3 -1
+     (nil))
+(insn 648 647 649 79 (set (reg:DI 5 di)
+        (reg:DI 211)) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":83:3 -1
+     (nil))
+(call_insn 649 648 650 79 (call (mem:QI (symbol_ref:DI ("__explicit_bzero_chk") [flags 0x41]  <function_decl 0x7f5e4362c300 __explicit_bzero_chk>) [0 __explicit_bzero_chk S1 A8])
+        (const_int 0 [0])) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":83:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__explicit_bzero_chk") [flags 0x41]  <function_decl 0x7f5e4362c300 __explicit_bzero_chk>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(debug_insn 650 649 651 79 (var_location:DI __dest (clobber (const_int 0 [0]))) "ssh-ecdsa-sk.c":307:2 -1
+     (nil))
+(debug_insn 651 650 652 79 (var_location:DI __len (clobber (const_int 0 [0]))) "ssh-ecdsa-sk.c":307:2 -1
+     (nil))
+(debug_insn 652 651 653 79 (debug_marker) "ssh-ecdsa-sk.c":308:2 -1
+     (nil))
+(debug_insn 653 652 654 79 (var_location:DI __dest (plus:DI (reg/f:DI 77 virtual-stack-vars)
+        (const_int -48 [0xffffffffffffffd0]))) "ssh-ecdsa-sk.c":308:2 -1
+     (nil))
+(debug_insn 654 653 655 79 (var_location:DI __len (const_int 32 [0x20])) "ssh-ecdsa-sk.c":308:2 -1
+     (nil))
+(debug_insn 655 654 656 79 (debug_marker:BLK) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":81:1 -1
+     (nil))
+(debug_insn 656 655 657 79 (debug_marker) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":83:3 -1
+     (nil))
+(insn 657 656 658 79 (parallel [
+            (set (reg:DI 212)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -48 [0xffffffffffffffd0])))
+            (clobber (reg:CC 17 flags))
+        ]) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":83:3 -1
+     (nil))
+(insn 658 657 659 79 (set (reg:DI 1 dx)
+        (const_int 32 [0x20])) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":83:3 -1
+     (nil))
+(insn 659 658 660 79 (set (reg:DI 4 si)
+        (const_int 32 [0x20])) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":83:3 -1
+     (nil))
+(insn 660 659 661 79 (set (reg:DI 5 di)
+        (reg:DI 212)) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":83:3 -1
+     (nil))
+(call_insn 661 660 662 79 (call (mem:QI (symbol_ref:DI ("__explicit_bzero_chk") [flags 0x41]  <function_decl 0x7f5e4362c300 __explicit_bzero_chk>) [0 __explicit_bzero_chk S1 A8])
+        (const_int 0 [0])) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":83:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__explicit_bzero_chk") [flags 0x41]  <function_decl 0x7f5e4362c300 __explicit_bzero_chk>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(debug_insn 662 661 663 79 (var_location:DI __dest (clobber (const_int 0 [0]))) "ssh-ecdsa-sk.c":308:2 -1
+     (nil))
+(debug_insn 663 662 664 79 (var_location:DI __len (clobber (const_int 0 [0]))) "ssh-ecdsa-sk.c":308:2 -1
+     (nil))
+(debug_insn 664 663 665 79 (debug_marker) "ssh-ecdsa-sk.c":309:2 -1
+     (nil))
+(debug_insn 665 664 666 79 (var_location:DI __dest (plus:DI (reg/f:DI 77 virtual-stack-vars)
+        (const_int -80 [0xffffffffffffffb0]))) "ssh-ecdsa-sk.c":309:2 -1
+     (nil))
+(debug_insn 666 665 667 79 (var_location:DI __len (const_int 32 [0x20])) "ssh-ecdsa-sk.c":309:2 -1
+     (nil))
+(debug_insn 667 666 668 79 (debug_marker:BLK) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":81:1 -1
+     (nil))
+(debug_insn 668 667 669 79 (debug_marker) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":83:3 -1
+     (nil))
+(insn 669 668 670 79 (parallel [
+            (set (reg:DI 213)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -80 [0xffffffffffffffb0])))
+            (clobber (reg:CC 17 flags))
+        ]) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":83:3 -1
+     (nil))
+(insn 670 669 671 79 (set (reg:DI 1 dx)
+        (const_int 32 [0x20])) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":83:3 -1
+     (nil))
+(insn 671 670 672 79 (set (reg:DI 4 si)
+        (const_int 32 [0x20])) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":83:3 -1
+     (nil))
+(insn 672 671 673 79 (set (reg:DI 5 di)
+        (reg:DI 213)) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":83:3 -1
+     (nil))
+(call_insn 673 672 674 79 (call (mem:QI (symbol_ref:DI ("__explicit_bzero_chk") [flags 0x41]  <function_decl 0x7f5e4362c300 __explicit_bzero_chk>) [0 __explicit_bzero_chk S1 A8])
+        (const_int 0 [0])) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":83:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__explicit_bzero_chk") [flags 0x41]  <function_decl 0x7f5e4362c300 __explicit_bzero_chk>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(debug_insn 674 673 675 79 (var_location:DI __dest (clobber (const_int 0 [0]))) "ssh-ecdsa-sk.c":309:2 -1
+     (nil))
+(debug_insn 675 674 676 79 (var_location:DI __len (clobber (const_int 0 [0]))) "ssh-ecdsa-sk.c":309:2 -1
+     (nil))
+(debug_insn 676 675 677 79 (debug_marker) "ssh-ecdsa-sk.c":310:2 -1
+     (nil))
+(insn 677 676 678 79 (set (reg:DI 5 di)
+        (reg/v/f:DI 132 [ details ])) "ssh-ecdsa-sk.c":310:2 -1
+     (nil))
+(call_insn 678 677 679 79 (call (mem:QI (symbol_ref:DI ("sshkey_sig_details_free") [flags 0x41]  <function_decl 0x7f5e43276b00 sshkey_sig_details_free>) [0 sshkey_sig_details_free S1 A8])
+        (const_int 0 [0])) "ssh-ecdsa-sk.c":310:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshkey_sig_details_free") [flags 0x41]  <function_decl 0x7f5e43276b00 sshkey_sig_details_free>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(debug_insn 679 678 680 79 (debug_marker) "ssh-ecdsa-sk.c":311:2 -1
+     (nil))
+(insn 680 679 681 79 (set (reg:DI 214)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -144 [0xffffffffffffff70])) [9 webauthn_wrapper+0 S8 A64])) "ssh-ecdsa-sk.c":311:2 -1
+     (nil))
+(insn 681 680 682 79 (set (reg:DI 5 di)
+        (reg:DI 214)) "ssh-ecdsa-sk.c":311:2 -1
+     (nil))
+(call_insn 682 681 683 79 (call (mem:QI (symbol_ref:DI ("sshbuf_free") [flags 0x41]  <function_decl 0x7f5e436b0c00 sshbuf_free>) [0 sshbuf_free S1 A8])
+        (const_int 0 [0])) "ssh-ecdsa-sk.c":311:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_free") [flags 0x41]  <function_decl 0x7f5e436b0c00 sshbuf_free>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(debug_insn 683 682 684 79 (debug_marker) "ssh-ecdsa-sk.c":312:2 -1
+     (nil))
+(insn 684 683 685 79 (set (reg:DI 215)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -136 [0xffffffffffffff78])) [9 webauthn_exts+0 S8 A64])) "ssh-ecdsa-sk.c":312:2 -1
+     (nil))
+(insn 685 684 686 79 (set (reg:DI 5 di)
+        (reg:DI 215)) "ssh-ecdsa-sk.c":312:2 -1
+     (nil))
+(call_insn 686 685 687 79 (call (mem:QI (symbol_ref:DI ("sshbuf_free") [flags 0x41]  <function_decl 0x7f5e436b0c00 sshbuf_free>) [0 sshbuf_free S1 A8])
+        (const_int 0 [0])) "ssh-ecdsa-sk.c":312:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_free") [flags 0x41]  <function_decl 0x7f5e436b0c00 sshbuf_free>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(debug_insn 687 686 688 79 (debug_marker) "ssh-ecdsa-sk.c":313:2 -1
+     (nil))
+(insn 688 687 689 79 (set (reg:DI 216)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -120 [0xffffffffffffff88])) [1 webauthn_origin+0 S8 A64])) "ssh-ecdsa-sk.c":313:2 -1
+     (nil))
+(insn 689 688 690 79 (set (reg:DI 5 di)
+        (reg:DI 216)) "ssh-ecdsa-sk.c":313:2 -1
+     (nil))
+(call_insn 690 689 691 79 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x7f5e43f36900 free>) [0 __builtin_free S1 A8])
+        (const_int 0 [0])) "ssh-ecdsa-sk.c":313:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x7f5e43f36900 free>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(debug_insn 691 690 692 79 (debug_marker) "ssh-ecdsa-sk.c":314:2 -1
+     (nil))
+(insn 692 691 693 79 (set (reg:DI 5 di)
+        (reg/v/f:DI 131 [ original_signed ])) "ssh-ecdsa-sk.c":314:2 -1
+     (nil))
+(call_insn 693 692 694 79 (call (mem:QI (symbol_ref:DI ("sshbuf_free") [flags 0x41]  <function_decl 0x7f5e436b0c00 sshbuf_free>) [0 sshbuf_free S1 A8])
+        (const_int 0 [0])) "ssh-ecdsa-sk.c":314:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_free") [flags 0x41]  <function_decl 0x7f5e436b0c00 sshbuf_free>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(debug_insn 694 693 695 79 (debug_marker) "ssh-ecdsa-sk.c":315:2 -1
+     (nil))
+(insn 695 694 696 79 (set (reg:DI 217)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -152 [0xffffffffffffff68])) [9 sigbuf+0 S8 A64])) "ssh-ecdsa-sk.c":315:2 -1
+     (nil))
+(insn 696 695 697 79 (set (reg:DI 5 di)
+        (reg:DI 217)) "ssh-ecdsa-sk.c":315:2 -1
+     (nil))
+(call_insn 697 696 698 79 (call (mem:QI (symbol_ref:DI ("sshbuf_free") [flags 0x41]  <function_decl 0x7f5e436b0c00 sshbuf_free>) [0 sshbuf_free S1 A8])
+        (const_int 0 [0])) "ssh-ecdsa-sk.c":315:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_free") [flags 0x41]  <function_decl 0x7f5e436b0c00 sshbuf_free>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(debug_insn 698 697 699 79 (debug_marker) "ssh-ecdsa-sk.c":316:2 -1
+     (nil))
+(insn 699 698 700 79 (set (reg:DI 5 di)
+        (reg/v/f:DI 133 [ b ])) "ssh-ecdsa-sk.c":316:2 -1
+     (nil))
+(call_insn 700 699 701 79 (call (mem:QI (symbol_ref:DI ("sshbuf_free") [flags 0x41]  <function_decl 0x7f5e436b0c00 sshbuf_free>) [0 sshbuf_free S1 A8])
+        (const_int 0 [0])) "ssh-ecdsa-sk.c":316:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_free") [flags 0x41]  <function_decl 0x7f5e436b0c00 sshbuf_free>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(debug_insn 701 700 702 79 (debug_marker) "ssh-ecdsa-sk.c":317:2 -1
+     (nil))
+(insn 702 701 703 79 (set (reg:DI 5 di)
+        (reg/v/f:DI 130 [ sig ])) "ssh-ecdsa-sk.c":317:2 -1
+     (nil))
+(call_insn 703 702 704 79 (call (mem:QI (symbol_ref:DI ("ECDSA_SIG_free") [flags 0x41]  <function_decl 0x7f5e439a7500 ECDSA_SIG_free>) [0 ECDSA_SIG_free S1 A8])
+        (const_int 0 [0])) "ssh-ecdsa-sk.c":317:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("ECDSA_SIG_free") [flags 0x41]  <function_decl 0x7f5e439a7500 ECDSA_SIG_free>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(debug_insn 704 703 705 79 (debug_marker) "ssh-ecdsa-sk.c":318:2 -1
+     (nil))
+(insn 705 704 706 79 (set (reg:DI 218)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -168 [0xffffffffffffff58])) [12 sig_r+0 S8 A64])) "ssh-ecdsa-sk.c":318:2 -1
+     (nil))
+(insn 706 705 707 79 (set (reg:DI 5 di)
+        (reg:DI 218)) "ssh-ecdsa-sk.c":318:2 -1
+     (nil))
+(call_insn 707 706 708 79 (call (mem:QI (symbol_ref:DI ("BN_clear_free") [flags 0x41]  <function_decl 0x7f5e43be9d00 BN_clear_free>) [0 BN_clear_free S1 A8])
+        (const_int 0 [0])) "ssh-ecdsa-sk.c":318:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("BN_clear_free") [flags 0x41]  <function_decl 0x7f5e43be9d00 BN_clear_free>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(debug_insn 708 707 709 79 (debug_marker) "ssh-ecdsa-sk.c":319:2 -1
+     (nil))
+(insn 709 708 710 79 (set (reg:DI 219)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -160 [0xffffffffffffff60])) [12 sig_s+0 S8 A64])) "ssh-ecdsa-sk.c":319:2 -1
+     (nil))
+(insn 710 709 711 79 (set (reg:DI 5 di)
+        (reg:DI 219)) "ssh-ecdsa-sk.c":319:2 -1
+     (nil))
+(call_insn 711 710 712 79 (call (mem:QI (symbol_ref:DI ("BN_clear_free") [flags 0x41]  <function_decl 0x7f5e43be9d00 BN_clear_free>) [0 BN_clear_free S1 A8])
+        (const_int 0 [0])) "ssh-ecdsa-sk.c":319:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("BN_clear_free") [flags 0x41]  <function_decl 0x7f5e43be9d00 BN_clear_free>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(debug_insn 712 711 713 79 (debug_marker) "ssh-ecdsa-sk.c":320:2 -1
+     (nil))
+(insn 713 712 714 79 (set (reg:DI 220)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -128 [0xffffffffffffff80])) [1 ktype+0 S8 A64])) "ssh-ecdsa-sk.c":320:2 -1
+     (nil))
+(insn 714 713 715 79 (set (reg:DI 5 di)
+        (reg:DI 220)) "ssh-ecdsa-sk.c":320:2 -1
+     (nil))
+(call_insn 715 714 716 79 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x7f5e43f36900 free>) [0 __builtin_free S1 A8])
+        (const_int 0 [0])) "ssh-ecdsa-sk.c":320:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x7f5e43f36900 free>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(debug_insn 716 715 784 79 (debug_marker) "ssh-ecdsa-sk.c":321:2 -1
+     (nil))
+(jump_insn 784 716 785 79 (set (pc)
+        (label_ref:DI 774)) "ssh-ecdsa-sk.c":321:9 737 {jump}
+     (nil)
+ -> 774)
+(barrier 785 784 787)
+(code_label 787 785 786 80 17 (nil) [1 uses])
+(note 786 787 61 80 [bb 80] NOTE_INSN_BASIC_BLOCK)
+(insn 61 786 788 80 (set (reg/v:SI 145 [ <retval> ])
+        (const_int -1 [0xffffffffffffffff])) "ssh-ecdsa-sk.c":169:10 -1
+     (nil))
+(jump_insn 788 61 789 80 (set (pc)
+        (label_ref:DI 774)) 737 {jump}
+     (nil)
+ -> 774)
+(barrier 789 788 791)
+(code_label 791 789 790 81 18 (nil) [1 uses])
+(note 790 791 62 81 [bb 81] NOTE_INSN_BASIC_BLOCK)
+(insn 62 790 719 81 (set (reg/v:SI 145 [ <retval> ])
+        (const_int -2 [0xfffffffffffffffe])) "ssh-ecdsa-sk.c":173:10 -1
+     (nil))
+(jump_insn 719 62 720 81 (set (pc)
+        (label_ref 774)) "ssh-ecdsa-sk.c":322:1 -1
+     (nil)
+ -> 774)
+(barrier 720 719 721)
+(code_label 721 720 722 83 12 (nil) [2 uses])
+(note 722 721 65 83 [bb 83] NOTE_INSN_BASIC_BLOCK)
+(insn 65 722 66 83 (set (reg/v/f:DI 135 [ chall ])
+        (const_int 0 [0])) "ssh-ecdsa-sk.c":83:17 -1
+     (nil))
+(insn 66 65 861 83 (set (reg/v:SI 145 [ <retval> ])
+        (const_int -2 [0xfffffffffffffffe])) "ssh-ecdsa-sk.c":87:5 -1
+     (nil))
+(jump_insn 861 66 862 83 (set (pc)
+        (label_ref 723)) -1
+     (nil)
+ -> 723)
+(barrier 862 861 864)
+(code_label 864 862 863 84 36 (nil) [1 uses])
+(note 863 864 63 84 [bb 84] NOTE_INSN_BASIC_BLOCK)
+(insn 63 863 865 84 (set (reg/v:SI 145 [ <retval> ])
+        (const_int -4 [0xfffffffffffffffc])) "ssh-ecdsa-sk.c":97:5 -1
+     (nil))
+(jump_insn 865 63 866 84 (set (pc)
+        (label_ref 723)) -1
+     (nil)
+ -> 723)
+(barrier 866 865 868)
+(code_label 868 866 867 85 37 (nil) [1 uses])
+(note 867 868 67 85 [bb 85] NOTE_INSN_BASIC_BLOCK)
+(insn 67 867 869 85 (set (reg/v:SI 145 [ <retval> ])
+        (const_int -4 [0xfffffffffffffffc])) "ssh-ecdsa-sk.c":97:5 -1
+     (nil))
+(jump_insn 869 67 870 85 (set (pc)
+        (label_ref 723)) -1
+     (nil)
+ -> 723)
+(barrier 870 869 872)
+(code_label 872 870 871 86 38 (nil) [1 uses])
+(note 871 872 64 86 [bb 86] NOTE_INSN_BASIC_BLOCK)
+(insn 64 871 723 86 (set (reg/v:SI 145 [ <retval> ])
+        (const_int -4 [0xfffffffffffffffc])) "ssh-ecdsa-sk.c":97:5 -1
+     (nil))
+(code_label 723 64 724 87 13 (nil) [10 uses])
+(note 724 723 725 87 [bb 87] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 725 724 726 87 (var_location:DI chall (reg/v/f:DI 135 [ chall ])) -1
+     (nil))
+(debug_insn 726 725 727 87 (var_location:SI r (reg/v:SI 145 [ <retval> ])) -1
+     (nil))
+(debug_insn 727 726 728 87 (debug_marker) "ssh-ecdsa-sk.c":135:2 -1
+     (nil))
+(insn 728 727 729 87 (set (reg:DI 5 di)
+        (reg/v/f:DI 135 [ chall ])) "ssh-ecdsa-sk.c":135:2 -1
+     (nil))
+(call_insn 729 728 730 87 (call (mem:QI (symbol_ref:DI ("sshbuf_free") [flags 0x41]  <function_decl 0x7f5e436b0c00 sshbuf_free>) [0 sshbuf_free S1 A8])
+        (const_int 0 [0])) "ssh-ecdsa-sk.c":135:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_free") [flags 0x41]  <function_decl 0x7f5e436b0c00 sshbuf_free>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(debug_insn 730 729 731 87 (debug_marker) "ssh-ecdsa-sk.c":136:2 -1
+     (nil))
+(insn 731 730 732 87 (set (reg:DI 5 di)
+        (reg/v/f:DI 134 [ m ])) "ssh-ecdsa-sk.c":136:2 -1
+     (nil))
+(call_insn 732 731 733 87 (call (mem:QI (symbol_ref:DI ("sshbuf_free") [flags 0x41]  <function_decl 0x7f5e436b0c00 sshbuf_free>) [0 sshbuf_free S1 A8])
+        (const_int 0 [0])) "ssh-ecdsa-sk.c":136:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_free") [flags 0x41]  <function_decl 0x7f5e436b0c00 sshbuf_free>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(debug_insn 733 732 734 87 (debug_marker) "ssh-ecdsa-sk.c":137:2 -1
+     (nil))
+(debug_insn 734 733 735 87 (var_location:DI data (clobber (const_int 0 [0]))) "ssh-ecdsa-sk.c":250:14 -1
+     (nil))
+(debug_insn 735 734 736 87 (var_location:DI datalen (clobber (const_int 0 [0]))) "ssh-ecdsa-sk.c":250:14 -1
+     (nil))
+(debug_insn 736 735 737 87 (var_location:DI origin (clobber (const_int 0 [0]))) "ssh-ecdsa-sk.c":250:14 -1
+     (nil))
+(debug_insn 737 736 738 87 (var_location:DI wrapper (clobber (const_int 0 [0]))) "ssh-ecdsa-sk.c":250:14 -1
+     (nil))
+(debug_insn 738 737 739 87 (var_location:QI flags (clobber (const_int 0 [0]))) "ssh-ecdsa-sk.c":250:14 -1
+     (nil))
+(debug_insn 739 738 740 87 (var_location:DI extensions (clobber (const_int 0 [0]))) "ssh-ecdsa-sk.c":250:14 -1
+     (nil))
+(debug_insn 740 739 741 87 (var_location:DI msghash (clobber (const_int 0 [0]))) "ssh-ecdsa-sk.c":250:14 -1
+     (nil))
+(debug_insn 741 740 742 87 (var_location:SI r (clobber (const_int 0 [0]))) "ssh-ecdsa-sk.c":250:14 -1
+     (nil))
+(debug_insn 742 741 743 87 (var_location:DI chall (clobber (const_int 0 [0]))) "ssh-ecdsa-sk.c":250:14 -1
+     (nil))
+(debug_insn 743 742 744 87 (var_location:DI m (clobber (const_int 0 [0]))) "ssh-ecdsa-sk.c":250:14 -1
+     (nil))
+(debug_insn 744 743 745 87 (var_location:DI msghashlen (clobber (const_int 0 [0]))) "ssh-ecdsa-sk.c":250:14 -1
+     (nil))
+(debug_insn 745 744 746 87 (var_location:SI ret (reg/v:SI 145 [ <retval> ])) "ssh-ecdsa-sk.c":250:14 -1
+     (nil))
+(jump_insn 746 745 747 87 (set (pc)
+        (label_ref 599)) "ssh-ecdsa-sk.c":136:2 -1
+     (nil)
+ -> 599)
+(barrier 747 746 748)
+(code_label 748 747 749 88 14 (nil) [1 uses])
+(note 749 748 750 88 [bb 88] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 750 749 751 88 (var_location:DI chall (reg/v/f:DI 135 [ chall ])) -1
+     (nil))
+(debug_insn 751 750 752 88 (var_location:SI r (const_int 0 [0])) -1
+     (nil))
+(debug_insn 752 751 753 88 (debug_marker) "ssh-ecdsa-sk.c":135:2 -1
+     (nil))
+(insn 753 752 754 88 (set (reg:DI 5 di)
+        (reg/v/f:DI 135 [ chall ])) "ssh-ecdsa-sk.c":135:2 -1
+     (nil))
+(call_insn 754 753 755 88 (call (mem:QI (symbol_ref:DI ("sshbuf_free") [flags 0x41]  <function_decl 0x7f5e436b0c00 sshbuf_free>) [0 sshbuf_free S1 A8])
+        (const_int 0 [0])) "ssh-ecdsa-sk.c":135:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_free") [flags 0x41]  <function_decl 0x7f5e436b0c00 sshbuf_free>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(debug_insn 755 754 756 88 (debug_marker) "ssh-ecdsa-sk.c":136:2 -1
+     (nil))
+(insn 756 755 757 88 (set (reg:DI 5 di)
+        (reg/v/f:DI 134 [ m ])) "ssh-ecdsa-sk.c":136:2 -1
+     (nil))
+(call_insn 757 756 758 88 (call (mem:QI (symbol_ref:DI ("sshbuf_free") [flags 0x41]  <function_decl 0x7f5e436b0c00 sshbuf_free>) [0 sshbuf_free S1 A8])
+        (const_int 0 [0])) "ssh-ecdsa-sk.c":136:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_free") [flags 0x41]  <function_decl 0x7f5e436b0c00 sshbuf_free>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(debug_insn 758 757 759 88 (debug_marker) "ssh-ecdsa-sk.c":137:2 -1
+     (nil))
+(debug_insn 759 758 760 88 (var_location:DI data (clobber (const_int 0 [0]))) "ssh-ecdsa-sk.c":250:14 -1
+     (nil))
+(debug_insn 760 759 761 88 (var_location:DI datalen (clobber (const_int 0 [0]))) "ssh-ecdsa-sk.c":250:14 -1
+     (nil))
+(debug_insn 761 760 762 88 (var_location:DI origin (clobber (const_int 0 [0]))) "ssh-ecdsa-sk.c":250:14 -1
+     (nil))
+(debug_insn 762 761 763 88 (var_location:DI wrapper (clobber (const_int 0 [0]))) "ssh-ecdsa-sk.c":250:14 -1
+     (nil))
+(debug_insn 763 762 764 88 (var_location:QI flags (clobber (const_int 0 [0]))) "ssh-ecdsa-sk.c":250:14 -1
+     (nil))
+(debug_insn 764 763 765 88 (var_location:DI extensions (clobber (const_int 0 [0]))) "ssh-ecdsa-sk.c":250:14 -1
+     (nil))
+(debug_insn 765 764 766 88 (var_location:DI msghash (clobber (const_int 0 [0]))) "ssh-ecdsa-sk.c":250:14 -1
+     (nil))
+(debug_insn 766 765 767 88 (var_location:SI r (clobber (const_int 0 [0]))) "ssh-ecdsa-sk.c":250:14 -1
+     (nil))
+(debug_insn 767 766 768 88 (var_location:DI chall (clobber (const_int 0 [0]))) "ssh-ecdsa-sk.c":250:14 -1
+     (nil))
+(debug_insn 768 767 769 88 (var_location:DI m (clobber (const_int 0 [0]))) "ssh-ecdsa-sk.c":250:14 -1
+     (nil))
+(debug_insn 769 768 770 88 (var_location:DI msghashlen (clobber (const_int 0 [0]))) "ssh-ecdsa-sk.c":250:14 -1
+     (nil))
+(debug_insn 770 769 772 88 (var_location:SI ret (const_int 0 [0])) "ssh-ecdsa-sk.c":250:14 -1
+     (nil))
+(jump_insn 772 770 773 88 (set (pc)
+        (label_ref 771)) "ssh-ecdsa-sk.c":136:2 -1
+     (nil)
+ -> 771)
+(barrier 773 772 774)
+(code_label 774 773 783 89 1 (nil) [4 uses])
+(note 783 774 775 89 [bb 89] NOTE_INSN_BASIC_BLOCK)
+(insn 775 783 776 89 (set (reg/f:DI 222)
+        (const_int 40 [0x28])) "ssh-ecdsa-sk.c":322:1 -1
+     (nil))
+(insn 776 775 777 89 (parallel [
+            (set (reg:CCZ 17 flags)
+                (unspec:CCZ [
+                        (mem/v/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                                (const_int -8 [0xfffffffffffffff8])) [8 D.16283+0 S8 A64])
+                        (mem/v/f:DI (reg/f:DI 222) [0 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_TEST))
+            (clobber (scratch:DI))
+        ]) "ssh-ecdsa-sk.c":322:1 -1
+     (nil))
+(jump_insn 777 776 882 89 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 780)
+            (pc))) "ssh-ecdsa-sk.c":322:1 -1
+     (int_list:REG_BR_PROB 1073312332 (nil))
+ -> 780)
+(note 882 777 778 90 [bb 90] NOTE_INSN_BASIC_BLOCK)
+(call_insn 778 882 779 90 (call (mem:QI (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7f5e432bab00 __stack_chk_fail>) [0 __stack_chk_fail S1 A8])
+        (const_int 0 [0])) "ssh-ecdsa-sk.c":322:1 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7f5e432bab00 __stack_chk_fail>)
+        (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+            (expr_list:REG_NORETURN (const_int 0 [0])
+                (expr_list:REG_EH_REGION (const_int 0 [0])
+                    (nil)))))
+    (nil))
+(barrier 779 778 780)
+(code_label 780 779 883 91 16 (nil) [1 uses])
+(note 883 780 781 91 [bb 91] NOTE_INSN_BASIC_BLOCK)
+(insn 781 883 782 91 (set (reg/i:SI 0 ax)
+        (reg/v:SI 145 [ <retval> ])) "ssh-ecdsa-sk.c":322:1 -1
+     (nil))
+(insn 782 781 0 91 (use (reg/i:SI 0 ax)) "ssh-ecdsa-sk.c":322:1 -1
+     (nil))

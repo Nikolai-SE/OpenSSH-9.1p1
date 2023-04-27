@@ -1,0 +1,173 @@
+
+;; Function platform_disable_tracing (platform_disable_tracing, funcdef_no=77, decl_uid=4598, cgraph_uid=78, symbol_order=77)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Edge 2->6 redirected to 7
+Edge 4->6 redirected to 7
+deleting block 6
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (reg/v:SI 89 [ strict ])
+        (reg:SI 5 di [ strict ])) "platform-tracing.c":40:1 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 6 3 7 2 (debug_marker) "platform-tracing.c":51:2 -1
+     (nil))
+(insn 7 6 8 2 (set (reg:SI 4 si)
+        (const_int 0 [0])) "platform-tracing.c":51:6 -1
+     (nil))
+(insn 8 7 9 2 (set (reg:SI 5 di)
+        (const_int 4 [0x4])) "platform-tracing.c":51:6 -1
+     (nil))
+(insn 9 8 10 2 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "platform-tracing.c":51:6 -1
+     (nil))
+(call_insn 10 9 11 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("prctl") [flags 0x41]  <function_decl 0x7fabd6ef2000 prctl>) [0 prctl S1 A8])
+            (const_int 0 [0]))) "platform-tracing.c":51:6 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("prctl") [flags 0x41]  <function_decl 0x7fabd6ef2000 prctl>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:SI (use (reg:SI 5 di))
+            (expr_list:SI (use (reg:SI 4 si))
+                (nil)))))
+(insn 11 10 12 2 (set (reg:SI 82 [ _1 ])
+        (reg:SI 0 ax)) "platform-tracing.c":51:6 -1
+     (nil))
+(insn 12 11 13 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 89 [ strict ])
+            (const_int 0 [0]))) "platform-tracing.c":51:37 -1
+     (nil))
+(insn 13 12 14 2 (set (reg:QI 91)
+        (ne:QI (reg:CCZ 17 flags)
+            (const_int 0 [0]))) "platform-tracing.c":51:37 -1
+     (nil))
+(insn 14 13 15 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 91)
+            (const_int 0 [0]))) "platform-tracing.c":51:37 -1
+     (nil))
+(jump_insn 15 14 43 2 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 41)
+            (pc))) "platform-tracing.c":51:37 736 {*jcc}
+     (int_list:REG_BR_PROB 536763548 (nil))
+ -> 41)
+(note 43 15 16 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 16 43 17 4 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 82 [ _1 ])
+            (const_int 0 [0]))) "platform-tracing.c":51:5 -1
+     (nil))
+(insn 17 16 18 4 (set (reg:QI 93)
+        (ne:QI (reg:CCZ 17 flags)
+            (const_int 0 [0]))) "platform-tracing.c":51:5 -1
+     (nil))
+(insn 18 17 19 4 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 93)
+            (const_int 0 [0]))) "platform-tracing.c":51:37 -1
+     (nil))
+(jump_insn 19 18 20 4 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 41)
+            (pc))) "platform-tracing.c":51:37 736 {*jcc}
+     (int_list:REG_BR_PROB 1073312428 (nil))
+ -> 41)
+(note 20 19 21 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 21 20 22 5 (debug_marker) "platform-tracing.c":52:3 -1
+     (nil))
+(call_insn/u 22 21 23 5 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__errno_location") [flags 0x41]  <function_decl 0x7fabd71f6b00 __errno_location>) [0 __errno_location S1 A8])
+            (const_int 0 [0]))) "platform-tracing.c":52:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__errno_location") [flags 0x41]  <function_decl 0x7fabd71f6b00 __errno_location>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (nil))
+(insn 23 22 24 5 (set (reg/f:DI 83 [ _2 ])
+        (reg:DI 0 ax)) "platform-tracing.c":52:3 -1
+     (nil))
+(insn 24 23 25 5 (set (reg:SI 5 di)
+        (mem:SI (reg/f:DI 83 [ _2 ]) [1 *_2+0 S4 A32])) "platform-tracing.c":52:3 -1
+     (nil))
+(call_insn 25 24 26 5 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strerror") [flags 0x41]  <function_decl 0x7fabd6f12600 strerror>) [0 strerror S1 A8])
+            (const_int 0 [0]))) "platform-tracing.c":52:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("strerror") [flags 0x41]  <function_decl 0x7fabd6f12600 strerror>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:SI (use (reg:SI 5 di))
+        (nil)))
+(insn 26 25 27 5 (set (reg/f:DI 85 [ _4 ])
+        (reg:DI 0 ax)) "platform-tracing.c":52:3 -1
+     (nil))
+(insn 27 26 28 5 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [2  S8 A64])
+        (reg/f:DI 85 [ _4 ])) "platform-tracing.c":52:3 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 28 27 29 5 (set (reg/f:DI 94)
+        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7fabd6ef1e10 *.LC1>)) "platform-tracing.c":52:3 -1
+     (nil))
+(insn 29 28 30 5 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [2  S8 A64])
+        (reg/f:DI 94)) "platform-tracing.c":52:3 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 30 29 31 5 (set (reg:DI 37 r9)
+        (const_int 0 [0])) "platform-tracing.c":52:3 -1
+     (nil))
+(insn 31 30 32 5 (set (reg:SI 36 r8)
+        (const_int 1 [0x1])) "platform-tracing.c":52:3 -1
+     (nil))
+(insn 32 31 33 5 (set (reg:SI 2 cx)
+        (const_int 0 [0])) "platform-tracing.c":52:3 -1
+     (nil))
+(insn 33 32 34 5 (set (reg:SI 1 dx)
+        (const_int 52 [0x34])) "platform-tracing.c":52:3 -1
+     (nil))
+(insn 34 33 35 5 (set (reg:DI 4 si)
+        (symbol_ref:DI ("__func__.0") [flags 0x2]  <var_decl 0x7fabd6ef1900 __func__>)) "platform-tracing.c":52:3 -1
+     (nil))
+(insn 35 34 36 5 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7fabd6ef1d80 *.LC0>)) "platform-tracing.c":52:3 -1
+     (nil))
+(insn 36 35 37 5 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "platform-tracing.c":52:3 -1
+     (nil))
+(call_insn 37 36 38 5 (call (mem:QI (symbol_ref:DI ("sshfatal") [flags 0x41]  <function_decl 0x7fabd6f30700 sshfatal>) [0 sshfatal S1 A8])
+        (const_int 16 [0x10])) "platform-tracing.c":52:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshfatal") [flags 0x41]  <function_decl 0x7fabd6f30700 sshfatal>)
+        (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+            (expr_list:REG_NORETURN (const_int 0 [0])
+                (nil))))
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (expr_list:SI (use (reg:SI 1 dx))
+                    (expr_list:SI (use (reg:SI 2 cx))
+                        (expr_list:SI (use (reg:SI 36 r8))
+                            (expr_list:DI (use (reg:DI 37 r9))
+                                (nil)))))))))
+(barrier 38 37 41)
+(code_label 41 38 42 7 1 (nil) [2 uses])
+(note 42 41 0 7 [bb 7] NOTE_INSN_BASIC_BLOCK)

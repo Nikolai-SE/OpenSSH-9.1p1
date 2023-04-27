@@ -1,0 +1,1880 @@
+
+;; Function ssh_ed25519_sign (ssh_ed25519_sign, funcdef_no=370, decl_uid=14207, cgraph_uid=371, symbol_order=370)
+
+Partition 0: size 8 align 8
+	smlen
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+
+;; Generating RTL for gimple basic block 11
+
+;; Generating RTL for gimple basic block 12
+
+;; Generating RTL for gimple basic block 13
+
+;; Generating RTL for gimple basic block 14
+
+;; Generating RTL for gimple basic block 15
+
+;; Generating RTL for gimple basic block 16
+
+;; Generating RTL for gimple basic block 17
+
+;; Generating RTL for gimple basic block 18
+Selected stringop expansion strategy: libcall
+
+;; Generating RTL for gimple basic block 19
+
+;; Generating RTL for gimple basic block 20
+
+;; Generating RTL for gimple basic block 21
+
+;; Generating RTL for gimple basic block 22
+Edge 10->22 redirected to 25
+Edge 11->21 redirected to 26
+Edge 12->21 redirected to 27
+Edge 13->21 redirected to 28
+Edge 17->21 redirected to 29
+Predictions for insn 196 bb 24
+  first match heuristics: 99.96%  exec 1073741824 (estimated locally) hit 2147483640 (estimated locally) (200.0%)
+  combined heuristics: 99.96%  exec 1073741824 (estimated locally) hit 2147483640 (estimated locally) (200.0%)
+  noreturn call heuristics: 99.96%  exec 1073741824 (estimated locally) hit 2147483640 (estimated locally) (200.0%)
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Redirecting jump 49 from 29 to 30.
+Redirecting jump 203 from 29 to 30.
+Merging block 29 into block 28...
+Merged blocks 28 and 29.
+Merged 28 and 29 without moving.
+Removing jump 191.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 19 NOTE_INSN_DELETED)
+(note 19 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 19 3 2 (set (reg/v/f:DI 100 [ key ])
+        (reg:DI 5 di [ key ])) "ssh-ed25519.c":38:1 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v/f:DI 101 [ sigp ])
+        (reg:DI 4 si [ sigp ])) "ssh-ed25519.c":38:1 -1
+     (nil))
+(insn 4 3 5 2 (set (reg/v/f:DI 102 [ lenp ])
+        (reg:DI 1 dx [ lenp ])) "ssh-ed25519.c":38:1 -1
+     (nil))
+(insn 5 4 6 2 (set (reg/v/f:DI 103 [ data ])
+        (reg:DI 2 cx [ data ])) "ssh-ed25519.c":38:1 -1
+     (nil))
+(insn 6 5 7 2 (set (reg/v:DI 104 [ datalen ])
+        (reg:DI 36 r8 [ datalen ])) "ssh-ed25519.c":38:1 -1
+     (nil))
+(insn 7 6 8 2 (set (reg/v:SI 105 [ compat ])
+        (reg:SI 37 r9 [ compat ])) "ssh-ed25519.c":38:1 -1
+     (nil))
+(note 8 7 9 2 NOTE_INSN_FUNCTION_BEG)
+(insn 9 8 10 2 (set (reg/f:DI 106)
+        (const_int 40 [0x28])) "ssh-ed25519.c":38:1 -1
+     (nil))
+(insn 10 9 21 2 (parallel [
+            (set (mem/v/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                        (const_int -8 [0xfffffffffffffff8])) [9 D.14371+0 S8 A64])
+                (unspec:DI [
+                        (mem/v/f:DI (reg/f:DI 106) [0 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_SET))
+            (set (scratch:DI)
+                (const_int 0 [0]))
+            (clobber (reg:CC 17 flags))
+        ]) "ssh-ed25519.c":38:1 -1
+     (nil))
+(debug_insn 21 10 22 2 (debug_marker) "ssh-ed25519.c":39:2 -1
+     (nil))
+(debug_insn 22 21 23 2 (var_location:DI sig (const_int 0 [0])) "ssh-ed25519.c":39:10 -1
+     (nil))
+(debug_insn 23 22 24 2 (debug_marker) "ssh-ed25519.c":40:2 -1
+     (nil))
+(debug_insn 24 23 25 2 (var_location:DI slen (const_int 0 [0])) "ssh-ed25519.c":40:9 -1
+     (nil))
+(debug_insn 25 24 26 2 (debug_marker) "ssh-ed25519.c":41:2 -1
+     (nil))
+(debug_insn 26 25 27 2 (debug_marker) "ssh-ed25519.c":42:2 -1
+     (nil))
+(debug_insn 27 26 28 2 (debug_marker) "ssh-ed25519.c":43:2 -1
+     (nil))
+(debug_insn 28 27 29 2 (var_location:DI b (const_int 0 [0])) "ssh-ed25519.c":43:17 -1
+     (nil))
+(debug_insn 29 28 30 2 (debug_marker) "ssh-ed25519.c":45:2 -1
+     (nil))
+(insn 30 29 31 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 102 [ lenp ])
+            (const_int 0 [0]))) "ssh-ed25519.c":45:5 -1
+     (nil))
+(jump_insn 31 30 32 2 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 35)
+            (pc))) "ssh-ed25519.c":45:5 -1
+     (int_list:REG_BR_PROB 322122548 (nil))
+ -> 35)
+(note 32 31 33 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 33 32 34 4 (debug_marker) "ssh-ed25519.c":46:3 -1
+     (nil))
+(insn 34 33 35 4 (set (mem:DI (reg/v/f:DI 102 [ lenp ]) [1 *lenp_21(D)+0 S8 A64])
+        (const_int 0 [0])) "ssh-ed25519.c":46:9 -1
+     (nil))
+(code_label 35 34 36 5 2 (nil) [1 uses])
+(note 36 35 37 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 37 36 38 5 (debug_marker) "ssh-ed25519.c":47:2 -1
+     (nil))
+(insn 38 37 39 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 101 [ sigp ])
+            (const_int 0 [0]))) "ssh-ed25519.c":47:5 -1
+     (nil))
+(jump_insn 39 38 40 5 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 43)
+            (pc))) "ssh-ed25519.c":47:5 -1
+     (int_list:REG_BR_PROB 322122548 (nil))
+ -> 43)
+(note 40 39 41 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 41 40 42 6 (debug_marker) "ssh-ed25519.c":48:3 -1
+     (nil))
+(insn 42 41 43 6 (set (mem/f:DI (reg/v/f:DI 101 [ sigp ]) [7 *sigp_24(D)+0 S8 A64])
+        (const_int 0 [0])) "ssh-ed25519.c":48:9 -1
+     (nil))
+(code_label 43 42 44 7 3 (nil) [1 uses])
+(note 44 43 45 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 45 44 46 7 (debug_marker) "ssh-ed25519.c":50:2 -1
+     (nil))
+(insn 46 45 47 7 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 100 [ key ])
+            (const_int 0 [0]))) "ssh-ed25519.c":50:5 -1
+     (nil))
+(jump_insn 47 46 56 7 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 51)
+            (pc))) "ssh-ed25519.c":50:5 -1
+     (int_list:REG_BR_PROB 1063970780 (nil))
+ -> 51)
+(code_label 56 47 48 8 6 (nil) [3 uses])
+(note 48 56 17 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 17 48 49 8 (set (reg/v:SI 99 [ <retval> ])
+        (const_int -10 [0xfffffffffffffff6])) "ssh-ed25519.c":54:10 -1
+     (nil))
+(jump_insn 49 17 50 8 (set (pc)
+        (label_ref:DI 193)) 737 {jump}
+     (nil)
+ -> 193)
+(barrier 50 49 51)
+(code_label 51 50 52 9 4 (nil) [1 uses])
+(note 52 51 53 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 53 52 54 9 (set (reg:SI 5 di)
+        (mem:SI (reg/v/f:DI 100 [ key ]) [3 key_26(D)->type+0 S4 A64])) "ssh-ed25519.c":51:6 -1
+     (nil))
+(call_insn 54 53 55 9 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshkey_type_plain") [flags 0x41]  <function_decl 0x7f8f0917c200 sshkey_type_plain>) [0 sshkey_type_plain S1 A8])
+            (const_int 0 [0]))) "ssh-ed25519.c":51:6 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshkey_type_plain") [flags 0x41]  <function_decl 0x7f8f0917c200 sshkey_type_plain>)
+        (nil))
+    (expr_list:SI (use (reg:SI 5 di))
+        (nil)))
+(insn 55 54 57 9 (set (reg:SI 83 [ _2 ])
+        (reg:SI 0 ax)) "ssh-ed25519.c":51:6 -1
+     (nil))
+(insn 57 55 58 9 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 83 [ _2 ])
+            (const_int 3 [0x3]))) "ssh-ed25519.c":50:18 -1
+     (nil))
+(jump_insn 58 57 59 9 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 56)
+            (pc))) "ssh-ed25519.c":50:18 -1
+     (int_list:REG_BR_PROB 21474844 (nil))
+ -> 56)
+(note 59 58 60 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 60 59 63 10 (set (reg/f:DI 84 [ _3 ])
+        (mem/f:DI (plus:DI (reg/v/f:DI 100 [ key ])
+                (const_int 40 [0x28])) [7 key_26(D)->ed25519_sk+0 S8 A64])) "ssh-ed25519.c":52:9 -1
+     (nil))
+(insn 63 60 64 10 (set (reg:CC 17 flags)
+        (compare:CC (reg/v:DI 104 [ datalen ])
+            (const_int 2147483582 [0x7fffffbe]))) "ssh-ed25519.c":52:30 -1
+     (nil))
+(insn 64 63 65 10 (set (reg:QI 108)
+        (gtu:QI (reg:CC 17 flags)
+            (const_int 0 [0]))) "ssh-ed25519.c":52:30 -1
+     (nil))
+(insn 65 64 66 10 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 108)
+            (const_int 0 [0]))) "ssh-ed25519.c":52:30 -1
+     (nil))
+(jump_insn 66 65 223 10 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 56)
+            (pc))) "ssh-ed25519.c":52:30 -1
+     (int_list:REG_BR_PROB 13586036 (nil))
+ -> 56)
+(note 223 66 67 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 67 223 68 11 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/f:DI 84 [ _3 ])
+            (const_int 0 [0]))) "ssh-ed25519.c":51:50 -1
+     (nil))
+(insn 68 67 69 11 (set (reg:QI 110)
+        (eq:QI (reg:CCZ 17 flags)
+            (const_int 0 [0]))) "ssh-ed25519.c":51:50 -1
+     (nil))
+(insn 69 68 70 11 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 110)
+            (const_int 0 [0]))) "ssh-ed25519.c":52:30 -1
+     (nil))
+(jump_insn 70 69 71 11 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 56)
+            (pc))) "ssh-ed25519.c":52:30 -1
+     (int_list:REG_BR_PROB 13760140 (nil))
+ -> 56)
+(note 71 70 72 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 72 71 73 12 (debug_marker) "ssh-ed25519.c":55:2 -1
+     (nil))
+(insn 73 72 74 12 (parallel [
+            (set (reg/v:DI 92 [ slen ])
+                (plus:DI (reg/v:DI 104 [ datalen ])
+                    (const_int 64 [0x40])))
+            (clobber (reg:CC 17 flags))
+        ]) "ssh-ed25519.c":55:15 -1
+     (nil))
+(debug_insn 74 73 75 12 (var_location:DI slen (reg/v:DI 92 [ slen ])) "ssh-ed25519.c":55:15 -1
+     (nil))
+(insn 75 74 76 12 (set (mem/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [12 smlen+0 S8 A64])
+        (reg/v:DI 92 [ slen ])) "ssh-ed25519.c":55:8 -1
+     (nil))
+(debug_insn 76 75 77 12 (debug_marker) "ssh-ed25519.c":56:2 -1
+     (nil))
+(insn 77 76 78 12 (set (reg:DI 5 di)
+        (reg/v:DI 92 [ slen ])) "ssh-ed25519.c":56:13 -1
+     (nil))
+(call_insn 78 77 79 12 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x7f8f09af9400 malloc>) [0 __builtin_malloc S1 A8])
+            (const_int 0 [0]))) "ssh-ed25519.c":56:13 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x7f8f09af9400 malloc>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 79 78 80 12 (set (reg/f:DI 111)
+        (reg:DI 0 ax)) "ssh-ed25519.c":56:13 -1
+     (expr_list:REG_NOALIAS (reg/f:DI 111)
+        (nil)))
+(insn 80 79 81 12 (set (reg/v/f:DI 93 [ sig ])
+        (reg/f:DI 111)) "ssh-ed25519.c":56:13 -1
+     (nil))
+(debug_insn 81 80 82 12 (var_location:DI sig (reg/v/f:DI 93 [ sig ])) "ssh-ed25519.c":56:13 -1
+     (nil))
+(insn 82 81 83 12 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 93 [ sig ])
+            (const_int 0 [0]))) "ssh-ed25519.c":56:5 -1
+     (nil))
+(jump_insn 83 82 84 12 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 206)
+            (pc))) "ssh-ed25519.c":56:5 736 {*jcc}
+     (int_list:REG_BR_PROB 429500 (nil))
+ -> 206)
+(note 84 83 85 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 85 84 86 13 (debug_marker) "ssh-ed25519.c":59:2 -1
+     (nil))
+(insn 86 85 87 13 (parallel [
+            (set (reg:DI 112)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -16 [0xfffffffffffffff0])))
+            (clobber (reg:CC 17 flags))
+        ]) "ssh-ed25519.c":59:13 -1
+     (nil))
+(insn 87 86 88 13 (set (reg:DI 36 r8)
+        (reg/f:DI 84 [ _3 ])) "ssh-ed25519.c":59:13 -1
+     (nil))
+(insn 88 87 89 13 (set (reg:DI 2 cx)
+        (reg/v:DI 104 [ datalen ])) "ssh-ed25519.c":59:13 -1
+     (nil))
+(insn 89 88 90 13 (set (reg:DI 1 dx)
+        (reg/v/f:DI 103 [ data ])) "ssh-ed25519.c":59:13 -1
+     (nil))
+(insn 90 89 91 13 (set (reg:DI 4 si)
+        (reg:DI 112)) "ssh-ed25519.c":59:13 -1
+     (nil))
+(insn 91 90 92 13 (set (reg:DI 5 di)
+        (reg/v/f:DI 93 [ sig ])) "ssh-ed25519.c":59:13 -1
+     (nil))
+(call_insn 92 91 93 13 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("crypto_sign_ed25519") [flags 0x41]  <function_decl 0x7f8f09678100 crypto_sign_ed25519>) [0 crypto_sign_ed25519 S1 A8])
+            (const_int 0 [0]))) "ssh-ed25519.c":59:13 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("crypto_sign_ed25519") [flags 0x41]  <function_decl 0x7f8f09678100 crypto_sign_ed25519>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (expr_list:DI (use (reg:DI 2 cx))
+                    (expr_list:DI (use (reg:DI 36 r8))
+                        (nil)))))))
+(insn 93 92 94 13 (set (reg/v:SI 94 [ ret ])
+        (reg:SI 0 ax)) "ssh-ed25519.c":59:13 -1
+     (nil))
+(debug_insn 94 93 95 13 (var_location:SI ret (reg/v:SI 94 [ ret ])) "ssh-ed25519.c":59:13 -1
+     (nil))
+(insn 95 94 96 13 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 94 [ ret ])
+            (const_int 0 [0]))) "ssh-ed25519.c":59:5 -1
+     (nil))
+(jump_insn 96 95 97 13 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 210)
+            (pc))) "ssh-ed25519.c":59:5 736 {*jcc}
+     (int_list:REG_BR_PROB 365072228 (nil))
+ -> 210)
+(note 97 96 98 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 98 97 99 14 (set (reg:CC 17 flags)
+        (compare:CC (mem/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -16 [0xfffffffffffffff0])) [12 smlen+0 S8 A64])
+            (reg/v:DI 104 [ datalen ]))) "ssh-ed25519.c":60:29 -1
+     (nil))
+(jump_insn 99 98 100 14 (set (pc)
+        (if_then_else (leu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 214)
+            (pc))) "ssh-ed25519.c":60:29 736 {*jcc}
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 214)
+(note 100 99 101 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 101 100 102 15 (debug_marker) "ssh-ed25519.c":65:2 -1
+     (nil))
+(call_insn 102 101 103 15 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshbuf_new") [flags 0x41]  <function_decl 0x7f8f090bef00 sshbuf_new>) [0 sshbuf_new S1 A8])
+            (const_int 0 [0]))) "ssh-ed25519.c":65:11 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_new") [flags 0x41]  <function_decl 0x7f8f090bef00 sshbuf_new>)
+        (nil))
+    (nil))
+(insn 103 102 104 15 (set (reg/v/f:DI 91 [ b ])
+        (reg:DI 0 ax)) "ssh-ed25519.c":65:11 -1
+     (nil))
+(debug_insn 104 103 105 15 (var_location:DI b (reg/v/f:DI 91 [ b ])) "ssh-ed25519.c":65:11 -1
+     (nil))
+(insn 105 104 106 15 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 91 [ b ])
+            (const_int 0 [0]))) "ssh-ed25519.c":65:5 -1
+     (nil))
+(jump_insn 106 105 107 15 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 218)
+            (pc))) "ssh-ed25519.c":65:5 736 {*jcc}
+     (int_list:REG_BR_PROB 332323100 (nil))
+ -> 218)
+(note 107 106 108 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 108 107 109 16 (debug_marker) "ssh-ed25519.c":69:2 -1
+     (nil))
+(insn 109 108 110 16 (set (reg:DI 4 si)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f8f0919fcf0 *.LC0>)) "ssh-ed25519.c":69:11 -1
+     (nil))
+(insn 110 109 111 16 (set (reg:DI 5 di)
+        (reg/v/f:DI 91 [ b ])) "ssh-ed25519.c":69:11 -1
+     (nil))
+(call_insn 111 110 112 16 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshbuf_put_cstring") [flags 0x41]  <function_decl 0x7f8f090dba00 sshbuf_put_cstring>) [0 sshbuf_put_cstring S1 A8])
+            (const_int 0 [0]))) "ssh-ed25519.c":69:11 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_put_cstring") [flags 0x41]  <function_decl 0x7f8f090dba00 sshbuf_put_cstring>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 112 111 113 16 (set (reg/v:SI 99 [ <retval> ])
+        (reg:SI 0 ax)) "ssh-ed25519.c":69:11 -1
+     (nil))
+(debug_insn 113 112 114 16 (var_location:SI r (reg/v:SI 99 [ <retval> ])) "ssh-ed25519.c":69:11 -1
+     (nil))
+(insn 114 113 115 16 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 99 [ <retval> ])
+            (const_int 0 [0]))) "ssh-ed25519.c":69:5 -1
+     (nil))
+(jump_insn 115 114 116 16 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 176)
+            (pc))) "ssh-ed25519.c":69:5 -1
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 176)
+(note 116 115 117 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
+(insn 117 116 118 17 (set (reg:DI 114)
+        (mem/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [12 smlen+0 S8 A64])) "ssh-ed25519.c":70:43 -1
+     (nil))
+(insn 118 117 119 17 (parallel [
+            (set (reg:DI 113)
+                (minus:DI (reg:DI 114)
+                    (reg/v:DI 104 [ datalen ])))
+            (clobber (reg:CC 17 flags))
+        ]) "ssh-ed25519.c":70:43 -1
+     (expr_list:REG_EQUAL (minus:DI (mem/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -16 [0xfffffffffffffff0])) [12 smlen+0 S8 A64])
+            (reg/v:DI 104 [ datalen ]))
+        (nil)))
+(insn 119 118 120 17 (set (reg:DI 1 dx)
+        (reg:DI 113)) "ssh-ed25519.c":70:11 -1
+     (nil))
+(insn 120 119 121 17 (set (reg:DI 4 si)
+        (reg/v/f:DI 93 [ sig ])) "ssh-ed25519.c":70:11 -1
+     (nil))
+(insn 121 120 122 17 (set (reg:DI 5 di)
+        (reg/v/f:DI 91 [ b ])) "ssh-ed25519.c":70:11 -1
+     (nil))
+(call_insn 122 121 123 17 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshbuf_put_string") [flags 0x41]  <function_decl 0x7f8f090db900 sshbuf_put_string>) [0 sshbuf_put_string S1 A8])
+            (const_int 0 [0]))) "ssh-ed25519.c":70:11 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_put_string") [flags 0x41]  <function_decl 0x7f8f090db900 sshbuf_put_string>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(insn 123 122 124 17 (set (reg/v:SI 99 [ <retval> ])
+        (reg:SI 0 ax)) "ssh-ed25519.c":70:11 -1
+     (nil))
+(debug_insn 124 123 125 17 (var_location:SI r (reg/v:SI 99 [ <retval> ])) "ssh-ed25519.c":70:11 -1
+     (nil))
+(insn 125 124 126 17 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 99 [ <retval> ])
+            (const_int 0 [0]))) "ssh-ed25519.c":69:54 -1
+     (nil))
+(jump_insn 126 125 127 17 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 176)
+            (pc))) "ssh-ed25519.c":69:54 -1
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 176)
+(note 127 126 128 18 [bb 18] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 128 127 129 18 (debug_marker) "ssh-ed25519.c":72:2 -1
+     (nil))
+(insn 129 128 130 18 (set (reg:DI 5 di)
+        (reg/v/f:DI 91 [ b ])) "ssh-ed25519.c":72:8 -1
+     (nil))
+(call_insn 130 129 131 18 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshbuf_len") [flags 0x41]  <function_decl 0x7f8f090d3700 sshbuf_len>) [0 sshbuf_len S1 A8])
+            (const_int 0 [0]))) "ssh-ed25519.c":72:8 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_len") [flags 0x41]  <function_decl 0x7f8f090d3700 sshbuf_len>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 131 130 132 18 (set (reg/v:DI 95 [ len ])
+        (reg:DI 0 ax)) "ssh-ed25519.c":72:8 -1
+     (nil))
+(debug_insn 132 131 133 18 (var_location:DI len (reg/v:DI 95 [ len ])) "ssh-ed25519.c":72:8 -1
+     (nil))
+(debug_insn 133 132 134 18 (debug_marker) "ssh-ed25519.c":73:2 -1
+     (nil))
+(insn 134 133 135 18 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 101 [ sigp ])
+            (const_int 0 [0]))) "ssh-ed25519.c":73:5 -1
+     (nil))
+(jump_insn 135 134 136 18 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 165)
+            (pc))) "ssh-ed25519.c":73:5 -1
+     (int_list:REG_BR_PROB 499612076 (nil))
+ -> 165)
+(note 136 135 137 19 [bb 19] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 137 136 138 19 (debug_marker) "ssh-ed25519.c":74:3 -1
+     (nil))
+(insn 138 137 139 19 (set (reg:DI 5 di)
+        (reg/v:DI 95 [ len ])) "ssh-ed25519.c":74:16 -1
+     (nil))
+(call_insn 139 138 140 19 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x7f8f09af9400 malloc>) [0 __builtin_malloc S1 A8])
+            (const_int 0 [0]))) "ssh-ed25519.c":74:16 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x7f8f09af9400 malloc>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 140 139 141 19 (set (reg/f:DI 115)
+        (reg:DI 0 ax)) "ssh-ed25519.c":74:16 -1
+     (expr_list:REG_NOALIAS (reg/f:DI 115)
+        (nil)))
+(insn 141 140 142 19 (set (reg/f:DI 88 [ _7 ])
+        (reg/f:DI 115)) "ssh-ed25519.c":74:16 -1
+     (nil))
+(insn 142 141 143 19 (set (mem/f:DI (reg/v/f:DI 101 [ sigp ]) [7 *sigp_24(D)+0 S8 A64])
+        (reg/f:DI 88 [ _7 ])) "ssh-ed25519.c":74:14 -1
+     (nil))
+(insn 143 142 144 19 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/f:DI 88 [ _7 ])
+            (const_int 0 [0]))) "ssh-ed25519.c":74:6 -1
+     (nil))
+(jump_insn 144 143 145 19 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 222)
+            (pc))) "ssh-ed25519.c":74:6 736 {*jcc}
+     (int_list:REG_BR_PROB 429500 (nil))
+ -> 222)
+(note 145 144 146 20 [bb 20] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 146 145 147 20 (debug_marker) "ssh-ed25519.c":78:3 -1
+     (nil))
+(insn 147 146 148 20 (set (reg:DI 5 di)
+        (reg/v/f:DI 91 [ b ])) "ssh-ed25519.c":78:17 -1
+     (nil))
+(call_insn 148 147 149 20 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshbuf_ptr") [flags 0x41]  <function_decl 0x7f8f090d3900 sshbuf_ptr>) [0 sshbuf_ptr S1 A8])
+            (const_int 0 [0]))) "ssh-ed25519.c":78:17 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_ptr") [flags 0x41]  <function_decl 0x7f8f090d3900 sshbuf_ptr>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 149 148 150 20 (set (reg/f:DI 89 [ _8 ])
+        (reg:DI 0 ax)) "ssh-ed25519.c":78:17 -1
+     (nil))
+(debug_insn 150 149 151 20 (var_location:DI __dest (mem/f:DI (reg/v/f:DI 101 [ sigp ]) [7 *sigp_24(D)+0 S8 A64])) "ssh-ed25519.c":78:3 -1
+     (nil))
+(debug_insn 151 150 152 20 (var_location:DI __src (reg/f:DI 89 [ _8 ])) "ssh-ed25519.c":78:3 -1
+     (nil))
+(debug_insn 152 151 153 20 (var_location:DI __len (reg/v:DI 95 [ len ])) "ssh-ed25519.c":78:3 -1
+     (nil))
+(debug_insn 153 152 154 20 (debug_marker:BLK) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":31:1 -1
+     (nil))
+(debug_insn 154 153 155 20 (debug_marker) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:3 -1
+     (nil))
+(insn 155 154 156 20 (set (reg/f:DI 116)
+        (mem/f:DI (reg/v/f:DI 101 [ sigp ]) [7 *sigp_24(D)+0 S8 A64])) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (nil))
+(insn 156 155 157 20 (set (reg:DI 117)
+        (reg/f:DI 116)) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (nil))
+(insn 157 156 158 20 (set (reg:DI 118)
+        (reg/f:DI 89 [ _8 ])) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (nil))
+(insn 158 157 159 20 (set (reg:DI 119)
+        (reg/v:DI 95 [ len ])) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (nil))
+(insn 159 158 160 20 (set (reg:DI 1 dx)
+        (reg:DI 119)) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (nil))
+(insn 160 159 161 20 (set (reg:DI 4 si)
+        (reg:DI 118)) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (nil))
+(insn 161 160 162 20 (set (reg:DI 5 di)
+        (reg:DI 117)) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (nil))
+(call_insn 162 161 163 20 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("memcpy") [flags 0x41]  <function_decl 0x7f8f09acd700 __builtin_memcpy>) [0 __builtin_memcpy S1 A8])
+            (const_int 0 [0]))) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("memcpy") [flags 0x41]  <function_decl 0x7f8f09acd700 __builtin_memcpy>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (set (reg:DI 0 ax)
+            (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (expr_list:DI (use (reg:DI 1 dx))
+                    (nil))))))
+(insn 163 162 164 20 (set (reg:DI 120)
+        (reg:DI 0 ax)) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (nil))
+(insn 164 163 165 20 (set (reg:DI 121)
+        (reg:DI 120)) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (nil))
+(code_label 165 164 166 21 8 (nil) [1 uses])
+(note 166 165 167 21 [bb 21] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 167 166 168 21 (var_location:DI __dest (clobber (const_int 0 [0]))) "ssh-ed25519.c":78:3 -1
+     (nil))
+(debug_insn 168 167 169 21 (var_location:DI __src (clobber (const_int 0 [0]))) "ssh-ed25519.c":78:3 -1
+     (nil))
+(debug_insn 169 168 170 21 (var_location:DI __len (clobber (const_int 0 [0]))) "ssh-ed25519.c":78:3 -1
+     (nil))
+(debug_insn 170 169 171 21 (debug_marker) "ssh-ed25519.c":80:2 -1
+     (nil))
+(insn 171 170 172 21 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 102 [ lenp ])
+            (const_int 0 [0]))) "ssh-ed25519.c":80:5 -1
+     (nil))
+(jump_insn 172 171 173 21 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 176)
+            (pc))) "ssh-ed25519.c":80:5 -1
+     (int_list:REG_BR_PROB 322122548 (nil))
+ -> 176)
+(note 173 172 174 22 [bb 22] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 174 173 175 22 (debug_marker) "ssh-ed25519.c":81:3 -1
+     (nil))
+(insn 175 174 207 22 (set (mem:DI (reg/v/f:DI 102 [ lenp ]) [1 *lenp_21(D)+0 S8 A64])
+        (reg/v:DI 95 [ len ])) "ssh-ed25519.c":81:9 -1
+     (nil))
+(jump_insn 207 175 208 22 (set (pc)
+        (label_ref 176)) -1
+     (nil)
+ -> 176)
+(barrier 208 207 210)
+(code_label 210 208 209 23 11 (nil) [1 uses])
+(note 209 210 11 23 [bb 23] NOTE_INSN_BASIC_BLOCK)
+(insn 11 209 12 23 (set (reg/v/f:DI 91 [ b ])
+        (const_int 0 [0])) "ssh-ed25519.c":43:17 -1
+     (nil))
+(insn 12 11 211 23 (set (reg/v:SI 99 [ <retval> ])
+        (const_int -10 [0xfffffffffffffff6])) "ssh-ed25519.c":61:5 -1
+     (nil))
+(jump_insn 211 12 212 23 (set (pc)
+        (label_ref 176)) -1
+     (nil)
+ -> 176)
+(barrier 212 211 214)
+(code_label 214 212 213 24 12 (nil) [1 uses])
+(note 213 214 15 24 [bb 24] NOTE_INSN_BASIC_BLOCK)
+(insn 15 213 16 24 (set (reg/v/f:DI 91 [ b ])
+        (const_int 0 [0])) "ssh-ed25519.c":43:17 -1
+     (nil))
+(insn 16 15 215 24 (set (reg/v:SI 99 [ <retval> ])
+        (const_int -10 [0xfffffffffffffff6])) "ssh-ed25519.c":61:5 -1
+     (nil))
+(jump_insn 215 16 216 24 (set (pc)
+        (label_ref 176)) -1
+     (nil)
+ -> 176)
+(barrier 216 215 218)
+(code_label 218 216 217 25 13 (nil) [1 uses])
+(note 217 218 14 25 [bb 25] NOTE_INSN_BASIC_BLOCK)
+(insn 14 217 219 25 (set (reg/v:SI 99 [ <retval> ])
+        (const_int -2 [0xfffffffffffffffe])) "ssh-ed25519.c":66:5 -1
+     (nil))
+(jump_insn 219 14 220 25 (set (pc)
+        (label_ref 176)) -1
+     (nil)
+ -> 176)
+(barrier 220 219 222)
+(code_label 222 220 221 26 14 (nil) [1 uses])
+(note 221 222 13 26 [bb 26] NOTE_INSN_BASIC_BLOCK)
+(insn 13 221 176 26 (set (reg/v:SI 99 [ <retval> ])
+        (const_int -2 [0xfffffffffffffffe])) "ssh-ed25519.c":75:6 -1
+     (nil))
+(code_label 176 13 177 27 7 ("out") [7 uses])
+(note 177 176 178 27 [bb 27] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 178 177 179 27 (var_location:DI b (reg/v/f:DI 91 [ b ])) -1
+     (nil))
+(debug_insn 179 178 180 27 (var_location:SI r (reg/v:SI 99 [ <retval> ])) -1
+     (nil))
+(debug_insn 180 179 181 27 (debug_marker) "ssh-ed25519.c":85:2 -1
+     (nil))
+(insn 181 180 182 27 (set (reg:DI 5 di)
+        (reg/v/f:DI 91 [ b ])) "ssh-ed25519.c":85:2 -1
+     (nil))
+(call_insn 182 181 183 27 (call (mem:QI (symbol_ref:DI ("sshbuf_free") [flags 0x41]  <function_decl 0x7f8f090d3300 sshbuf_free>) [0 sshbuf_free S1 A8])
+        (const_int 0 [0])) "ssh-ed25519.c":85:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_free") [flags 0x41]  <function_decl 0x7f8f090d3300 sshbuf_free>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(debug_insn 183 182 184 27 (debug_marker) "ssh-ed25519.c":86:2 -1
+     (nil))
+(debug_insn 184 183 185 27 (debug_marker) "ssh-ed25519.c":87:3 -1
+     (nil))
+(insn 185 184 186 27 (set (reg:DI 4 si)
+        (reg/v:DI 92 [ slen ])) "ssh-ed25519.c":87:3 -1
+     (nil))
+(insn 186 185 187 27 (set (reg:DI 5 di)
+        (reg/v/f:DI 93 [ sig ])) "ssh-ed25519.c":87:3 -1
+     (nil))
+(call_insn 187 186 188 27 (call (mem:QI (symbol_ref:DI ("freezero") [flags 0x41]  <function_decl 0x7f8f09668b00 freezero>) [0 freezero S1 A8])
+        (const_int 0 [0])) "ssh-ed25519.c":87:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("freezero") [flags 0x41]  <function_decl 0x7f8f09668b00 freezero>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(debug_insn 188 187 203 27 (debug_marker) "ssh-ed25519.c":89:2 -1
+     (nil))
+(jump_insn 203 188 204 27 (set (pc)
+        (label_ref:DI 193)) "ssh-ed25519.c":89:9 737 {jump}
+     (nil)
+ -> 193)
+(barrier 204 203 206)
+(code_label 206 204 205 28 10 (nil) [1 uses])
+(note 205 206 18 28 [bb 28] NOTE_INSN_BASIC_BLOCK)
+(insn 18 205 193 28 (set (reg/v:SI 99 [ <retval> ])
+        (const_int -2 [0xfffffffffffffffe])) "ssh-ed25519.c":57:10 -1
+     (nil))
+(code_label 193 18 202 30 1 (nil) [2 uses])
+(note 202 193 194 30 [bb 30] NOTE_INSN_BASIC_BLOCK)
+(insn 194 202 195 30 (set (reg/f:DI 123)
+        (const_int 40 [0x28])) "ssh-ed25519.c":90:1 -1
+     (nil))
+(insn 195 194 196 30 (parallel [
+            (set (reg:CCZ 17 flags)
+                (unspec:CCZ [
+                        (mem/v/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                                (const_int -8 [0xfffffffffffffff8])) [9 D.14371+0 S8 A64])
+                        (mem/v/f:DI (reg/f:DI 123) [0 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_TEST))
+            (clobber (scratch:DI))
+        ]) "ssh-ed25519.c":90:1 -1
+     (nil))
+(jump_insn 196 195 224 30 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 199)
+            (pc))) "ssh-ed25519.c":90:1 -1
+     (int_list:REG_BR_PROB 1073312332 (nil))
+ -> 199)
+(note 224 196 197 31 [bb 31] NOTE_INSN_BASIC_BLOCK)
+(call_insn 197 224 198 31 (call (mem:QI (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7f8f09190d00 __stack_chk_fail>) [0 __stack_chk_fail S1 A8])
+        (const_int 0 [0])) "ssh-ed25519.c":90:1 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7f8f09190d00 __stack_chk_fail>)
+        (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+            (expr_list:REG_NORETURN (const_int 0 [0])
+                (expr_list:REG_EH_REGION (const_int 0 [0])
+                    (nil)))))
+    (nil))
+(barrier 198 197 199)
+(code_label 199 198 225 32 9 (nil) [1 uses])
+(note 225 199 200 32 [bb 32] NOTE_INSN_BASIC_BLOCK)
+(insn 200 225 201 32 (set (reg/i:SI 0 ax)
+        (reg/v:SI 99 [ <retval> ])) "ssh-ed25519.c":90:1 -1
+     (nil))
+(insn 201 200 0 32 (use (reg/i:SI 0 ax)) "ssh-ed25519.c":90:1 -1
+     (nil))
+
+;; Function ssh_ed25519_verify (ssh_ed25519_verify, funcdef_no=371, decl_uid=14214, cgraph_uid=372, symbol_order=371)
+
+Partition 3: size 8 align 8
+	mlen
+Partition 2: size 8 align 8
+	len
+Partition 1: size 8 align 8
+	sigblob
+Partition 0: size 8 align 8
+	ktype
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+
+;; Generating RTL for gimple basic block 11
+
+;; Generating RTL for gimple basic block 12
+
+;; Generating RTL for gimple basic block 13
+
+;; Generating RTL for gimple basic block 14
+
+;; Generating RTL for gimple basic block 15
+Selected stringop expansion strategy: libcall
+Selected stringop expansion strategy: libcall
+
+;; Generating RTL for gimple basic block 16
+
+;; Generating RTL for gimple basic block 17
+
+;; Generating RTL for gimple basic block 18
+
+;; Generating RTL for gimple basic block 19
+
+;; Generating RTL for gimple basic block 20
+
+;; Generating RTL for gimple basic block 21
+
+;; Generating RTL for gimple basic block 22
+Edge 7->18 redirected to 25
+Edge 10->17 redirected to 26
+Edge 11->17 redirected to 27
+Edge 12->17 redirected to 28
+Edge 13->17 redirected to 29
+Predictions for insn 298 bb 24
+  first match heuristics: 99.96%  exec 1073741824 (estimated locally) hit 2147483640 (estimated locally) (200.0%)
+  combined heuristics: 99.96%  exec 1073741824 (estimated locally) hit 2147483640 (estimated locally) (200.0%)
+  noreturn call heuristics: 99.96%  exec 1073741824 (estimated locally) hit 2147483640 (estimated locally) (200.0%)
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Redirecting jump 39 from 25 to 30.
+Redirecting jump 305 from 25 to 30.
+Merging block 25 into block 24...
+Merged blocks 24 and 25.
+Merged 24 and 25 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 20 NOTE_INSN_DELETED)
+(note 20 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 20 3 2 (set (reg/v/f:DI 104 [ key ])
+        (reg:DI 5 di [ key ])) "ssh-ed25519.c":96:1 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v/f:DI 105 [ signature ])
+        (reg:DI 4 si [ signature ])) "ssh-ed25519.c":96:1 -1
+     (nil))
+(insn 4 3 5 2 (set (reg/v:DI 106 [ signaturelen ])
+        (reg:DI 1 dx [ signaturelen ])) "ssh-ed25519.c":96:1 -1
+     (nil))
+(insn 5 4 6 2 (set (reg/v/f:DI 107 [ data ])
+        (reg:DI 2 cx [ data ])) "ssh-ed25519.c":96:1 -1
+     (nil))
+(insn 6 5 7 2 (set (reg/v:DI 108 [ datalen ])
+        (reg:DI 36 r8 [ datalen ])) "ssh-ed25519.c":96:1 -1
+     (nil))
+(insn 7 6 8 2 (set (reg/v:SI 109 [ compat ])
+        (reg:SI 37 r9 [ compat ])) "ssh-ed25519.c":96:1 -1
+     (nil))
+(note 8 7 9 2 NOTE_INSN_FUNCTION_BEG)
+(insn 9 8 10 2 (set (reg/f:DI 110)
+        (const_int 40 [0x28])) "ssh-ed25519.c":96:1 -1
+     (nil))
+(insn 10 9 22 2 (parallel [
+            (set (mem/v/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                        (const_int -8 [0xfffffffffffffff8])) [9 D.14385+0 S8 A64])
+                (unspec:DI [
+                        (mem/v/f:DI (reg/f:DI 110) [0 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_SET))
+            (set (scratch:DI)
+                (const_int 0 [0]))
+            (clobber (reg:CC 17 flags))
+        ]) "ssh-ed25519.c":96:1 -1
+     (nil))
+(debug_insn 22 10 23 2 (debug_marker) "ssh-ed25519.c":97:2 -1
+     (nil))
+(debug_insn 23 22 24 2 (var_location:DI b (const_int 0 [0])) "ssh-ed25519.c":97:17 -1
+     (nil))
+(debug_insn 24 23 25 2 (debug_marker) "ssh-ed25519.c":98:2 -1
+     (nil))
+(insn 25 24 26 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -40 [0xffffffffffffffd8])) [8 ktype+0 S8 A64])
+        (const_int 0 [0])) "ssh-ed25519.c":98:8 -1
+     (nil))
+(debug_insn 26 25 27 2 (debug_marker) "ssh-ed25519.c":99:2 -1
+     (nil))
+(debug_insn 27 26 28 2 (debug_marker) "ssh-ed25519.c":100:2 -1
+     (nil))
+(debug_insn 28 27 29 2 (var_location:DI sm (const_int 0 [0])) "ssh-ed25519.c":100:10 -1
+     (nil))
+(debug_insn 29 28 30 2 (var_location:DI m (const_int 0 [0])) "ssh-ed25519.c":100:22 -1
+     (nil))
+(debug_insn 30 29 31 2 (debug_marker) "ssh-ed25519.c":101:2 -1
+     (nil))
+(debug_insn 31 30 32 2 (debug_marker) "ssh-ed25519.c":102:2 -1
+     (nil))
+(debug_insn 32 31 33 2 (var_location:DI smlen (const_int 0 [0])) "ssh-ed25519.c":102:21 -1
+     (nil))
+(insn 33 32 34 2 (set (mem/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [12 mlen+0 S8 A64])
+        (const_int 0 [0])) "ssh-ed25519.c":102:32 -1
+     (nil))
+(debug_insn 34 33 35 2 (debug_marker) "ssh-ed25519.c":103:2 -1
+     (nil))
+(debug_insn 35 34 36 2 (debug_marker) "ssh-ed25519.c":105:2 -1
+     (nil))
+(insn 36 35 37 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 104 [ key ])
+            (const_int 0 [0]))) "ssh-ed25519.c":105:5 -1
+     (nil))
+(jump_insn 37 36 46 2 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 41)
+            (pc))) "ssh-ed25519.c":105:5 -1
+     (int_list:REG_BR_PROB 1063970780 (nil))
+ -> 41)
+(code_label 46 37 38 4 35 (nil) [4 uses])
+(note 38 46 16 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 16 38 39 4 (set (reg/v:SI 103 [ <retval> ])
+        (const_int -10 [0xfffffffffffffff6])) "ssh-ed25519.c":110:10 -1
+     (nil))
+(jump_insn 39 16 40 4 (set (pc)
+        (label_ref:DI 295)) 737 {jump}
+     (nil)
+ -> 295)
+(barrier 40 39 41)
+(code_label 41 40 42 5 33 (nil) [1 uses])
+(note 42 41 43 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 43 42 44 5 (set (reg:SI 5 di)
+        (mem:SI (reg/v/f:DI 104 [ key ]) [3 key_34(D)->type+0 S4 A64])) "ssh-ed25519.c":106:6 -1
+     (nil))
+(call_insn 44 43 45 5 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshkey_type_plain") [flags 0x41]  <function_decl 0x7f8f0917c200 sshkey_type_plain>) [0 sshkey_type_plain S1 A8])
+            (const_int 0 [0]))) "ssh-ed25519.c":106:6 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshkey_type_plain") [flags 0x41]  <function_decl 0x7f8f0917c200 sshkey_type_plain>)
+        (nil))
+    (expr_list:SI (use (reg:SI 5 di))
+        (nil)))
+(insn 45 44 47 5 (set (reg:SI 83 [ _2 ])
+        (reg:SI 0 ax)) "ssh-ed25519.c":106:6 -1
+     (nil))
+(insn 47 45 48 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 83 [ _2 ])
+            (const_int 3 [0x3]))) "ssh-ed25519.c":105:18 -1
+     (nil))
+(jump_insn 48 47 49 5 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 46)
+            (pc))) "ssh-ed25519.c":105:18 -1
+     (int_list:REG_BR_PROB 21474844 (nil))
+ -> 46)
+(note 49 48 50 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 50 49 51 6 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/f:DI (plus:DI (reg/v/f:DI 104 [ key ])
+                    (const_int 48 [0x30])) [7 key_34(D)->ed25519_pk+0 S8 A64])
+            (const_int 0 [0]))) "ssh-ed25519.c":106:50 -1
+     (nil))
+(jump_insn 51 50 52 6 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 46)
+            (pc))) "ssh-ed25519.c":106:50 -1
+     (int_list:REG_BR_PROB 4831844 (nil))
+ -> 46)
+(note 52 51 55 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 55 52 56 7 (set (reg:CC 17 flags)
+        (compare:CC (reg/v:DI 108 [ datalen ])
+            (const_int 2147483582 [0x7fffffbe]))) "ssh-ed25519.c":108:14 -1
+     (nil))
+(insn 56 55 57 7 (set (reg:QI 112)
+        (gtu:QI (reg:CC 17 flags)
+            (const_int 0 [0]))) "ssh-ed25519.c":108:14 -1
+     (nil))
+(insn 57 56 58 7 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 105 [ signature ])
+            (const_int 0 [0]))) "ssh-ed25519.c":109:16 -1
+     (nil))
+(insn 58 57 59 7 (set (reg:QI 114)
+        (eq:QI (reg:CCZ 17 flags)
+            (const_int 0 [0]))) "ssh-ed25519.c":109:16 -1
+     (nil))
+(insn 59 58 60 7 (parallel [
+            (set (reg:QI 115)
+                (ior:QI (reg:QI 112)
+                    (reg:QI 114)))
+            (clobber (reg:CC 17 flags))
+        ]) "ssh-ed25519.c":108:53 -1
+     (nil))
+(insn 60 59 61 7 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 115)
+            (const_int 0 [0]))) "ssh-ed25519.c":109:24 -1
+     (nil))
+(jump_insn 61 60 323 7 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 46)
+            (pc))) "ssh-ed25519.c":109:24 -1
+     (int_list:REG_BR_PROB 16687372 (nil))
+ -> 46)
+(note 323 61 62 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 62 323 63 8 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:DI 106 [ signaturelen ])
+            (const_int 0 [0]))) "ssh-ed25519.c":109:24 -1
+     (nil))
+(insn 63 62 64 8 (set (reg:QI 117)
+        (eq:QI (reg:CCZ 17 flags)
+            (const_int 0 [0]))) "ssh-ed25519.c":109:24 -1
+     (nil))
+(insn 64 63 65 8 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 117)
+            (const_int 0 [0]))) "ssh-ed25519.c":109:24 -1
+     (nil))
+(jump_insn 65 64 66 8 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 46)
+            (pc))) "ssh-ed25519.c":109:24 -1
+     (int_list:REG_BR_PROB 16950804 (nil))
+ -> 46)
+(note 66 65 67 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 67 66 68 9 (debug_marker) "ssh-ed25519.c":112:2 -1
+     (nil))
+(insn 68 67 69 9 (set (reg:DI 4 si)
+        (reg/v:DI 106 [ signaturelen ])) "ssh-ed25519.c":112:11 -1
+     (nil))
+(insn 69 68 70 9 (set (reg:DI 5 di)
+        (reg/v/f:DI 105 [ signature ])) "ssh-ed25519.c":112:11 -1
+     (nil))
+(call_insn 70 69 71 9 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshbuf_from") [flags 0x41]  <function_decl 0x7f8f090d3000 sshbuf_from>) [0 sshbuf_from S1 A8])
+            (const_int 0 [0]))) "ssh-ed25519.c":112:11 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_from") [flags 0x41]  <function_decl 0x7f8f090d3000 sshbuf_from>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 71 70 72 9 (set (reg/v/f:DI 97 [ b ])
+        (reg:DI 0 ax)) "ssh-ed25519.c":112:11 -1
+     (nil))
+(debug_insn 72 71 73 9 (var_location:DI b (reg/v/f:DI 97 [ b ])) "ssh-ed25519.c":112:11 -1
+     (nil))
+(insn 73 72 74 9 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 97 [ b ])
+            (const_int 0 [0]))) "ssh-ed25519.c":112:5 -1
+     (nil))
+(jump_insn 74 73 75 9 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 308)
+            (pc))) "ssh-ed25519.c":112:5 736 {*jcc}
+     (int_list:REG_BR_PROB 9771052 (nil))
+ -> 308)
+(note 75 74 76 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 76 75 77 10 (debug_marker) "ssh-ed25519.c":114:2 -1
+     (nil))
+(insn 77 76 78 10 (parallel [
+            (set (reg:DI 118)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -40 [0xffffffffffffffd8])))
+            (clobber (reg:CC 17 flags))
+        ]) "ssh-ed25519.c":114:11 -1
+     (nil))
+(insn 78 77 79 10 (set (reg:DI 1 dx)
+        (const_int 0 [0])) "ssh-ed25519.c":114:11 -1
+     (nil))
+(insn 79 78 80 10 (set (reg:DI 4 si)
+        (reg:DI 118)) "ssh-ed25519.c":114:11 -1
+     (nil))
+(insn 80 79 81 10 (set (reg:DI 5 di)
+        (reg/v/f:DI 97 [ b ])) "ssh-ed25519.c":114:11 -1
+     (nil))
+(call_insn 81 80 82 10 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshbuf_get_cstring") [flags 0x41]  <function_decl 0x7f8f090db700 sshbuf_get_cstring>) [0 sshbuf_get_cstring S1 A8])
+            (const_int 0 [0]))) "ssh-ed25519.c":114:11 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_get_cstring") [flags 0x41]  <function_decl 0x7f8f090db700 sshbuf_get_cstring>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(insn 82 81 83 10 (set (reg/v:SI 103 [ <retval> ])
+        (reg:SI 0 ax)) "ssh-ed25519.c":114:11 -1
+     (nil))
+(debug_insn 83 82 84 10 (var_location:SI r (reg/v:SI 103 [ <retval> ])) "ssh-ed25519.c":114:11 -1
+     (nil))
+(insn 84 83 85 10 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 103 [ <retval> ])
+            (const_int 0 [0]))) "ssh-ed25519.c":114:5 -1
+     (nil))
+(jump_insn 85 84 86 10 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 217)
+            (pc))) "ssh-ed25519.c":114:5 -1
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 217)
+(note 86 85 87 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 87 86 88 11 (parallel [
+            (set (reg:DI 119)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -24 [0xffffffffffffffe8])))
+            (clobber (reg:CC 17 flags))
+        ]) "ssh-ed25519.c":115:11 -1
+     (nil))
+(insn 88 87 89 11 (parallel [
+            (set (reg:DI 120)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -32 [0xffffffffffffffe0])))
+            (clobber (reg:CC 17 flags))
+        ]) "ssh-ed25519.c":115:11 -1
+     (nil))
+(insn 89 88 90 11 (set (reg:DI 1 dx)
+        (reg:DI 119)) "ssh-ed25519.c":115:11 -1
+     (nil))
+(insn 90 89 91 11 (set (reg:DI 4 si)
+        (reg:DI 120)) "ssh-ed25519.c":115:11 -1
+     (nil))
+(insn 91 90 92 11 (set (reg:DI 5 di)
+        (reg/v/f:DI 97 [ b ])) "ssh-ed25519.c":115:11 -1
+     (nil))
+(call_insn 92 91 93 11 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshbuf_get_string_direct") [flags 0x41]  <function_decl 0x7f8f090dbc00 sshbuf_get_string_direct>) [0 sshbuf_get_string_direct S1 A8])
+            (const_int 0 [0]))) "ssh-ed25519.c":115:11 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_get_string_direct") [flags 0x41]  <function_decl 0x7f8f090dbc00 sshbuf_get_string_direct>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(insn 93 92 94 11 (set (reg/v:SI 103 [ <retval> ])
+        (reg:SI 0 ax)) "ssh-ed25519.c":115:11 -1
+     (nil))
+(debug_insn 94 93 95 11 (var_location:SI r (reg/v:SI 103 [ <retval> ])) "ssh-ed25519.c":115:11 -1
+     (nil))
+(insn 95 94 96 11 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 103 [ <retval> ])
+            (const_int 0 [0]))) "ssh-ed25519.c":114:53 -1
+     (nil))
+(jump_insn 96 95 97 11 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 217)
+            (pc))) "ssh-ed25519.c":114:53 -1
+     (int_list:REG_BR_PROB 365072228 (nil))
+ -> 217)
+(note 97 96 98 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 98 97 99 12 (debug_marker) "ssh-ed25519.c":117:2 -1
+     (nil))
+(insn 99 98 100 12 (set (reg/f:DI 121)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f8f0919fcf0 *.LC0>)) "ssh-ed25519.c":117:6 -1
+     (nil))
+(insn 100 99 101 12 (set (reg/f:DI 122)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -40 [0xffffffffffffffd8])) [8 ktype+0 S8 A64])) "ssh-ed25519.c":117:6 -1
+     (nil))
+(insn 101 100 102 12 (set (reg:DI 123)
+        (reg/f:DI 121)) "ssh-ed25519.c":117:6 -1
+     (nil))
+(insn 102 101 103 12 (set (reg:DI 124)
+        (reg/f:DI 122)) "ssh-ed25519.c":117:6 -1
+     (nil))
+(insn 103 102 104 12 (set (reg:DI 125)
+        (const_int 12 [0xc])) "ssh-ed25519.c":117:6 -1
+     (nil))
+(insn 104 103 105 12 (parallel [
+            (set (reg:CC 17 flags)
+                (compare:CC (mem/u/c:BLK (reg:DI 123) [0 MEM <char[1:]> [(void *)"ssh-ed25519"]+0 A8])
+                    (mem:BLK (reg:DI 124) [0 MEM <char[1:]> [(void *)ktype.2_7]+0 A8])))
+            (use (reg:DI 125))
+            (use (const_int 1 [0x1]))
+            (clobber (reg:DI 123))
+            (clobber (reg:DI 124))
+            (clobber (reg:DI 125))
+        ]) "ssh-ed25519.c":117:6 -1
+     (nil))
+(insn 105 104 106 12 (set (reg:QI 126)
+        (gtu:QI (reg:CC 17 flags)
+            (const_int 0 [0]))) "ssh-ed25519.c":117:6 -1
+     (nil))
+(insn 106 105 107 12 (set (reg:QI 127)
+        (ltu:QI (reg:CC 17 flags)
+            (const_int 0 [0]))) "ssh-ed25519.c":117:6 -1
+     (nil))
+(insn 107 106 108 12 (parallel [
+            (set (subreg:QI (reg:SI 89 [ _8 ]) 0)
+                (minus:QI (reg:QI 126)
+                    (reg:QI 127)))
+            (clobber (reg:CC 17 flags))
+        ]) "ssh-ed25519.c":117:6 -1
+     (nil))
+(insn 108 107 109 12 (set (reg:SI 89 [ _8 ])
+        (sign_extend:SI (subreg:QI (reg:SI 89 [ _8 ]) 0))) "ssh-ed25519.c":117:6 -1
+     (nil))
+(insn 109 108 110 12 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 89 [ _8 ])
+            (const_int 0 [0]))) "ssh-ed25519.c":117:5 -1
+     (nil))
+(jump_insn 110 109 111 12 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 310)
+            (pc))) "ssh-ed25519.c":117:5 736 {*jcc}
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 310)
+(note 111 110 112 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 112 111 113 13 (debug_marker) "ssh-ed25519.c":121:2 -1
+     (nil))
+(insn 113 112 114 13 (set (reg:DI 5 di)
+        (reg/v/f:DI 97 [ b ])) "ssh-ed25519.c":121:6 -1
+     (nil))
+(call_insn 114 113 115 13 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshbuf_len") [flags 0x41]  <function_decl 0x7f8f090d3700 sshbuf_len>) [0 sshbuf_len S1 A8])
+            (const_int 0 [0]))) "ssh-ed25519.c":121:6 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_len") [flags 0x41]  <function_decl 0x7f8f090d3700 sshbuf_len>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 115 114 116 13 (set (reg:DI 90 [ _9 ])
+        (reg:DI 0 ax)) "ssh-ed25519.c":121:6 -1
+     (nil))
+(insn 116 115 117 13 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:DI 90 [ _9 ])
+            (const_int 0 [0]))) "ssh-ed25519.c":121:5 -1
+     (nil))
+(jump_insn 117 116 118 13 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 314)
+            (pc))) "ssh-ed25519.c":121:5 736 {*jcc}
+     (int_list:REG_BR_PROB 365072228 (nil))
+ -> 314)
+(note 118 117 119 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 119 118 120 14 (debug_marker) "ssh-ed25519.c":125:2 -1
+     (nil))
+(insn 120 119 123 14 (set (reg:DI 91 [ len.3_10 ])
+        (mem/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [1 len+0 S8 A64])) "ssh-ed25519.c":125:10 -1
+     (nil))
+(insn 123 120 124 14 (set (reg:CC 17 flags)
+        (compare:CC (reg:DI 91 [ len.3_10 ])
+            (const_int 64 [0x40]))) "ssh-ed25519.c":125:5 -1
+     (nil))
+(jump_insn 124 123 125 14 (set (pc)
+        (if_then_else (gtu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 318)
+            (pc))) "ssh-ed25519.c":125:5 736 {*jcc}
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 318)
+(note 125 124 126 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 126 125 127 15 (debug_marker) "ssh-ed25519.c":129:2 -1
+     (nil))
+(debug_insn 127 126 128 15 (debug_marker) "ssh-ed25519.c":133:2 -1
+     (nil))
+(insn 128 127 129 15 (parallel [
+            (set (reg/v:DI 98 [ smlen ])
+                (plus:DI (reg:DI 91 [ len.3_10 ])
+                    (reg/v:DI 108 [ datalen ])))
+            (clobber (reg:CC 17 flags))
+        ]) "ssh-ed25519.c":133:8 -1
+     (nil))
+(debug_insn 129 128 130 15 (var_location:DI smlen (reg/v:DI 98 [ smlen ])) "ssh-ed25519.c":133:8 -1
+     (nil))
+(debug_insn 130 129 131 15 (debug_marker) "ssh-ed25519.c":134:2 -1
+     (nil))
+(insn 131 130 132 15 (set (mem/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [12 mlen+0 S8 A64])
+        (reg/v:DI 98 [ smlen ])) "ssh-ed25519.c":134:7 -1
+     (nil))
+(debug_insn 132 131 133 15 (debug_marker) "ssh-ed25519.c":135:2 -1
+     (nil))
+(insn 133 132 134 15 (set (reg:DI 5 di)
+        (reg/v:DI 98 [ smlen ])) "ssh-ed25519.c":135:12 -1
+     (nil))
+(call_insn 134 133 135 15 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x7f8f09af9400 malloc>) [0 __builtin_malloc S1 A8])
+            (const_int 0 [0]))) "ssh-ed25519.c":135:12 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x7f8f09af9400 malloc>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 135 134 136 15 (set (reg/f:DI 128)
+        (reg:DI 0 ax)) "ssh-ed25519.c":135:12 -1
+     (expr_list:REG_NOALIAS (reg/f:DI 128)
+        (nil)))
+(insn 136 135 137 15 (set (reg/v/f:DI 99 [ sm ])
+        (reg/f:DI 128)) "ssh-ed25519.c":135:12 -1
+     (nil))
+(debug_insn 137 136 138 15 (var_location:DI sm (reg/v/f:DI 99 [ sm ])) "ssh-ed25519.c":135:12 -1
+     (nil))
+(insn 138 137 139 15 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 99 [ sm ])
+            (const_int 0 [0]))) "ssh-ed25519.c":135:5 -1
+     (nil))
+(jump_insn 139 138 140 15 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 322)
+            (pc))) "ssh-ed25519.c":135:5 736 {*jcc}
+     (int_list:REG_BR_PROB 429500 (nil))
+ -> 322)
+(note 140 139 141 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(insn 141 140 142 16 (set (reg:DI 5 di)
+        (reg/v:DI 98 [ smlen ])) "ssh-ed25519.c":135:43 -1
+     (nil))
+(call_insn 142 141 143 16 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x7f8f09af9400 malloc>) [0 __builtin_malloc S1 A8])
+            (const_int 0 [0]))) "ssh-ed25519.c":135:43 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x7f8f09af9400 malloc>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 143 142 144 16 (set (reg/f:DI 129)
+        (reg:DI 0 ax)) "ssh-ed25519.c":135:43 -1
+     (expr_list:REG_NOALIAS (reg/f:DI 129)
+        (nil)))
+(insn 144 143 145 16 (set (reg/v/f:DI 100 [ m ])
+        (reg/f:DI 129)) "ssh-ed25519.c":135:43 -1
+     (nil))
+(debug_insn 145 144 146 16 (var_location:DI m (reg/v/f:DI 100 [ m ])) "ssh-ed25519.c":135:43 -1
+     (nil))
+(insn 146 145 147 16 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 100 [ m ])
+            (const_int 0 [0]))) "ssh-ed25519.c":135:35 -1
+     (nil))
+(jump_insn 147 146 148 16 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 235)
+            (pc))) "ssh-ed25519.c":135:35 -1
+     (int_list:REG_BR_PROB 429500 (nil))
+ -> 235)
+(note 148 147 149 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 149 148 150 17 (debug_marker) "ssh-ed25519.c":139:2 -1
+     (nil))
+(debug_insn 150 149 151 17 (var_location:DI __dest (reg/v/f:DI 99 [ sm ])) "ssh-ed25519.c":139:2 -1
+     (nil))
+(debug_insn 151 150 152 17 (var_location:DI __src (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+            (const_int -32 [0xffffffffffffffe0])) [7 sigblob+0 S8 A64])) "ssh-ed25519.c":139:2 -1
+     (nil))
+(debug_insn 152 151 153 17 (var_location:DI __len (reg:DI 91 [ len.3_10 ])) "ssh-ed25519.c":139:2 -1
+     (nil))
+(debug_insn 153 152 154 17 (debug_marker:BLK) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":31:1 -1
+     (nil))
+(debug_insn 154 153 155 17 (debug_marker) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:3 -1
+     (nil))
+(insn 155 154 156 17 (set (reg/f:DI 130)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [7 sigblob+0 S8 A64])) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (nil))
+(insn 156 155 157 17 (set (reg:DI 131)
+        (reg/v/f:DI 99 [ sm ])) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (nil))
+(insn 157 156 158 17 (set (reg:DI 132)
+        (reg/f:DI 130)) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (nil))
+(insn 158 157 159 17 (set (reg:DI 133)
+        (reg:DI 91 [ len.3_10 ])) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (nil))
+(insn 159 158 160 17 (set (reg:DI 1 dx)
+        (reg:DI 133)) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (nil))
+(insn 160 159 161 17 (set (reg:DI 4 si)
+        (reg:DI 132)) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (nil))
+(insn 161 160 162 17 (set (reg:DI 5 di)
+        (reg:DI 131)) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (nil))
+(call_insn 162 161 163 17 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("memcpy") [flags 0x41]  <function_decl 0x7f8f09acd700 __builtin_memcpy>) [0 __builtin_memcpy S1 A8])
+            (const_int 0 [0]))) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("memcpy") [flags 0x41]  <function_decl 0x7f8f09acd700 __builtin_memcpy>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (set (reg:DI 0 ax)
+            (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (expr_list:DI (use (reg:DI 1 dx))
+                    (nil))))))
+(insn 163 162 164 17 (set (reg:DI 134)
+        (reg:DI 0 ax)) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (nil))
+(insn 164 163 165 17 (set (reg:DI 135)
+        (reg:DI 134)) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (nil))
+(debug_insn 165 164 166 17 (var_location:DI __dest (clobber (const_int 0 [0]))) "ssh-ed25519.c":139:2 -1
+     (nil))
+(debug_insn 166 165 167 17 (var_location:DI __src (clobber (const_int 0 [0]))) "ssh-ed25519.c":139:2 -1
+     (nil))
+(debug_insn 167 166 168 17 (var_location:DI __len (clobber (const_int 0 [0]))) "ssh-ed25519.c":139:2 -1
+     (nil))
+(debug_insn 168 167 169 17 (debug_marker) "ssh-ed25519.c":140:2 -1
+     (nil))
+(debug_insn 169 168 170 17 (var_location:DI __dest (plus:DI (reg/v/f:DI 99 [ sm ])
+        (reg:DI 91 [ len.3_10 ]))) "ssh-ed25519.c":140:11 -1
+     (nil))
+(debug_insn 170 169 171 17 (var_location:DI __src (reg/v/f:DI 107 [ data ])) "ssh-ed25519.c":140:11 -1
+     (nil))
+(debug_insn 171 170 172 17 (var_location:DI __len (reg/v:DI 108 [ datalen ])) "ssh-ed25519.c":140:11 -1
+     (nil))
+(debug_insn 172 171 173 17 (debug_marker:BLK) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":31:1 -1
+     (nil))
+(debug_insn 173 172 174 17 (debug_marker) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:3 -1
+     (nil))
+(insn 174 173 175 17 (parallel [
+            (set (reg:DI 136)
+                (plus:DI (reg/v/f:DI 99 [ sm ])
+                    (reg:DI 91 [ len.3_10 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "ssh-ed25519.c":140:11 -1
+     (nil))
+(insn 175 174 176 17 (set (reg:DI 137)
+        (reg:DI 136)) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (nil))
+(insn 176 175 177 17 (set (reg:DI 138)
+        (reg/v/f:DI 107 [ data ])) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (nil))
+(insn 177 176 178 17 (set (reg:DI 139)
+        (reg/v:DI 108 [ datalen ])) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (nil))
+(insn 178 177 179 17 (set (reg:DI 1 dx)
+        (reg:DI 139)) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (nil))
+(insn 179 178 180 17 (set (reg:DI 4 si)
+        (reg:DI 138)) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (nil))
+(insn 180 179 181 17 (set (reg:DI 5 di)
+        (reg:DI 137)) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (nil))
+(call_insn 181 180 182 17 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("memcpy") [flags 0x41]  <function_decl 0x7f8f09acd700 __builtin_memcpy>) [0 __builtin_memcpy S1 A8])
+            (const_int 0 [0]))) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("memcpy") [flags 0x41]  <function_decl 0x7f8f09acd700 __builtin_memcpy>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (set (reg:DI 0 ax)
+            (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (expr_list:DI (use (reg:DI 1 dx))
+                    (nil))))))
+(insn 182 181 183 17 (set (reg:DI 140)
+        (reg:DI 0 ax)) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (nil))
+(insn 183 182 184 17 (set (reg:DI 141)
+        (reg:DI 140)) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (nil))
+(debug_insn 184 183 185 17 (var_location:DI __dest (clobber (const_int 0 [0]))) "ssh-ed25519.c":140:2 -1
+     (nil))
+(debug_insn 185 184 186 17 (var_location:DI __src (clobber (const_int 0 [0]))) "ssh-ed25519.c":140:2 -1
+     (nil))
+(debug_insn 186 185 187 17 (var_location:DI __len (clobber (const_int 0 [0]))) "ssh-ed25519.c":140:2 -1
+     (nil))
+(debug_insn 187 186 188 17 (debug_marker) "ssh-ed25519.c":141:2 -1
+     (nil))
+(insn 188 187 189 17 (set (reg:DI 142)
+        (mem/f:DI (plus:DI (reg/v/f:DI 104 [ key ])
+                (const_int 48 [0x30])) [7 key_34(D)->ed25519_pk+0 S8 A64])) "ssh-ed25519.c":141:13 -1
+     (nil))
+(insn 189 188 190 17 (parallel [
+            (set (reg:DI 143)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -16 [0xfffffffffffffff0])))
+            (clobber (reg:CC 17 flags))
+        ]) "ssh-ed25519.c":141:13 -1
+     (nil))
+(insn 190 189 191 17 (set (reg:DI 36 r8)
+        (reg:DI 142)) "ssh-ed25519.c":141:13 -1
+     (nil))
+(insn 191 190 192 17 (set (reg:DI 2 cx)
+        (reg/v:DI 98 [ smlen ])) "ssh-ed25519.c":141:13 -1
+     (nil))
+(insn 192 191 193 17 (set (reg:DI 1 dx)
+        (reg/v/f:DI 99 [ sm ])) "ssh-ed25519.c":141:13 -1
+     (nil))
+(insn 193 192 194 17 (set (reg:DI 4 si)
+        (reg:DI 143)) "ssh-ed25519.c":141:13 -1
+     (nil))
+(insn 194 193 195 17 (set (reg:DI 5 di)
+        (reg/v/f:DI 100 [ m ])) "ssh-ed25519.c":141:13 -1
+     (nil))
+(call_insn 195 194 196 17 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("crypto_sign_ed25519_open") [flags 0x41]  <function_decl 0x7f8f09678200 crypto_sign_ed25519_open>) [0 crypto_sign_ed25519_open S1 A8])
+            (const_int 0 [0]))) "ssh-ed25519.c":141:13 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("crypto_sign_ed25519_open") [flags 0x41]  <function_decl 0x7f8f09678200 crypto_sign_ed25519_open>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (expr_list:DI (use (reg:DI 2 cx))
+                    (expr_list:DI (use (reg:DI 36 r8))
+                        (nil)))))))
+(insn 196 195 197 17 (set (reg/v:SI 103 [ <retval> ])
+        (reg:SI 0 ax)) "ssh-ed25519.c":141:13 -1
+     (nil))
+(debug_insn 197 196 198 17 (var_location:SI ret (reg/v:SI 103 [ <retval> ])) "ssh-ed25519.c":141:13 -1
+     (nil))
+(insn 198 197 199 17 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 103 [ <retval> ])
+            (const_int 0 [0]))) "ssh-ed25519.c":141:5 -1
+     (nil))
+(jump_insn 199 198 200 17 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 287)
+            (pc))) "ssh-ed25519.c":141:5 -1
+     (int_list:REG_BR_PROB 719407028 (nil))
+ -> 287)
+(note 200 199 201 18 [bb 18] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 201 200 202 18 (debug_marker) "ssh-ed25519.c":143:3 -1
+     (nil))
+(insn 202 201 203 18 (set (mem:SI (pre_modify:DI (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8]))) [3  S4 A32])
+        (reg/v:SI 103 [ <retval> ])) "ssh-ed25519.c":143:3 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 203 202 204 18 (set (reg/f:DI 144)
+        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7f8f091eb870 *.LC2>)) "ssh-ed25519.c":143:3 -1
+     (nil))
+(insn 204 203 205 18 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [8  S8 A64])
+        (reg/f:DI 144)) "ssh-ed25519.c":143:3 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 205 204 206 18 (set (reg:DI 37 r9)
+        (const_int 0 [0])) "ssh-ed25519.c":143:3 -1
+     (nil))
+(insn 206 205 207 18 (set (reg:SI 36 r8)
+        (const_int 6 [0x6])) "ssh-ed25519.c":143:3 -1
+     (nil))
+(insn 207 206 208 18 (set (reg:SI 2 cx)
+        (const_int 1 [0x1])) "ssh-ed25519.c":143:3 -1
+     (nil))
+(insn 208 207 209 18 (set (reg:SI 1 dx)
+        (const_int 143 [0x8f])) "ssh-ed25519.c":143:3 -1
+     (nil))
+(insn 209 208 210 18 (set (reg:DI 4 si)
+        (symbol_ref:DI ("__func__.0") [flags 0x2]  <var_decl 0x7f8f0919f000 __func__>)) "ssh-ed25519.c":143:3 -1
+     (nil))
+(insn 210 209 211 18 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7f8f091eb7e0 *.LC1>)) "ssh-ed25519.c":143:3 -1
+     (nil))
+(insn 211 210 212 18 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "ssh-ed25519.c":143:3 -1
+     (nil))
+(call_insn 212 211 213 18 (call (mem:QI (symbol_ref:DI ("sshlog") [flags 0x41]  <function_decl 0x7f8f096a7800 sshlog>) [0 sshlog S1 A8])
+        (const_int 16 [0x10])) "ssh-ed25519.c":143:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshlog") [flags 0x41]  <function_decl 0x7f8f096a7800 sshlog>)
+        (nil))
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (expr_list:SI (use (reg:SI 1 dx))
+                    (expr_list:SI (use (reg:SI 2 cx))
+                        (expr_list:SI (use (reg:SI 36 r8))
+                            (expr_list:DI (use (reg:DI 37 r9))
+                                (nil)))))))))
+(debug_insn 213 212 214 18 (debug_marker) "ssh-ed25519.c":145:2 -1
+     (nil))
+(insn 214 213 18 18 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "ssh-ed25519.c":143:3 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 18 214 215 18 (set (reg/v:SI 103 [ <retval> ])
+        (const_int -21 [0xffffffffffffffeb])) "ssh-ed25519.c":146:5 -1
+     (nil))
+(jump_insn 215 18 216 18 (set (pc)
+        (label_ref 257)) "ssh-ed25519.c":143:3 -1
+     (nil)
+ -> 257)
+(barrier 216 215 310)
+(code_label 310 216 309 19 42 (nil) [1 uses])
+(note 309 310 14 19 [bb 19] NOTE_INSN_BASIC_BLOCK)
+(insn 14 309 311 19 (set (reg/v:SI 103 [ <retval> ])
+        (const_int -13 [0xfffffffffffffff3])) "ssh-ed25519.c":118:5 -1
+     (nil))
+(jump_insn 311 14 312 19 (set (pc)
+        (label_ref 217)) -1
+     (nil)
+ -> 217)
+(barrier 312 311 314)
+(code_label 314 312 313 20 43 (nil) [1 uses])
+(note 313 314 12 20 [bb 20] NOTE_INSN_BASIC_BLOCK)
+(insn 12 313 315 20 (set (reg/v:SI 103 [ <retval> ])
+        (const_int -23 [0xffffffffffffffe9])) "ssh-ed25519.c":122:5 -1
+     (nil))
+(jump_insn 315 12 316 20 (set (pc)
+        (label_ref 217)) -1
+     (nil)
+ -> 217)
+(barrier 316 315 318)
+(code_label 318 316 317 21 44 (nil) [1 uses])
+(note 317 318 13 21 [bb 21] NOTE_INSN_BASIC_BLOCK)
+(insn 13 317 319 21 (set (reg/v:SI 103 [ <retval> ])
+        (const_int -4 [0xfffffffffffffffc])) "ssh-ed25519.c":126:5 -1
+     (nil))
+(jump_insn 319 13 320 21 (set (pc)
+        (label_ref 217)) -1
+     (nil)
+ -> 217)
+(barrier 320 319 322)
+(code_label 322 320 321 22 45 (nil) [1 uses])
+(note 321 322 15 22 [bb 22] NOTE_INSN_BASIC_BLOCK)
+(insn 15 321 217 22 (set (reg/v:SI 103 [ <retval> ])
+        (const_int -2 [0xfffffffffffffffe])) "ssh-ed25519.c":136:5 -1
+     (nil))
+(code_label 217 15 218 23 36 (nil) [7 uses])
+(note 218 217 219 23 [bb 23] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 219 218 220 23 (var_location:SI r (clobber (const_int 0 [0]))) -1
+     (nil))
+(debug_insn 220 219 221 23 (var_location:DI smlen (clobber (const_int 0 [0]))) -1
+     (nil))
+(debug_insn 221 220 222 23 (var_location:DI m (clobber (const_int 0 [0]))) -1
+     (nil))
+(debug_insn 222 221 223 23 (var_location:DI sm (clobber (const_int 0 [0]))) -1
+     (nil))
+(debug_insn 223 222 224 23 (debug_marker) "ssh-ed25519.c":157:2 -1
+     (nil))
+(insn 224 223 225 23 (set (reg:DI 5 di)
+        (reg/v/f:DI 97 [ b ])) "ssh-ed25519.c":157:2 -1
+     (nil))
+(call_insn 225 224 226 23 (call (mem:QI (symbol_ref:DI ("sshbuf_free") [flags 0x41]  <function_decl 0x7f8f090d3300 sshbuf_free>) [0 sshbuf_free S1 A8])
+        (const_int 0 [0])) "ssh-ed25519.c":157:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_free") [flags 0x41]  <function_decl 0x7f8f090d3300 sshbuf_free>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(debug_insn 226 225 227 23 (debug_marker) "ssh-ed25519.c":158:2 -1
+     (nil))
+(insn 227 226 228 23 (set (reg:DI 145)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -40 [0xffffffffffffffd8])) [8 ktype+0 S8 A64])) "ssh-ed25519.c":158:2 -1
+     (nil))
+(insn 228 227 229 23 (set (reg:DI 5 di)
+        (reg:DI 145)) "ssh-ed25519.c":158:2 -1
+     (nil))
+(call_insn 229 228 230 23 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x7f8f09af1900 free>) [0 __builtin_free S1 A8])
+        (const_int 0 [0])) "ssh-ed25519.c":158:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x7f8f09af1900 free>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(debug_insn 230 229 305 23 (debug_marker) "ssh-ed25519.c":159:2 -1
+     (nil))
+(jump_insn 305 230 306 23 (set (pc)
+        (label_ref:DI 295)) "ssh-ed25519.c":159:9 737 {jump}
+     (nil)
+ -> 295)
+(barrier 306 305 308)
+(code_label 308 306 307 24 41 (nil) [1 uses])
+(note 307 308 17 24 [bb 24] NOTE_INSN_BASIC_BLOCK)
+(insn 17 307 233 24 (set (reg/v:SI 103 [ <retval> ])
+        (const_int -2 [0xfffffffffffffffe])) "ssh-ed25519.c":113:10 -1
+     (nil))
+(jump_insn 233 17 234 24 (set (pc)
+        (label_ref 295)) "ssh-ed25519.c":160:1 -1
+     (nil)
+ -> 295)
+(barrier 234 233 235)
+(code_label 235 234 236 26 37 (nil) [1 uses])
+(note 236 235 237 26 [bb 26] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 237 236 238 26 (var_location:SI r (const_int -2 [0xfffffffffffffffe])) -1
+     (nil))
+(debug_insn 238 237 239 26 (var_location:DI smlen (reg/v:DI 98 [ smlen ])) -1
+     (nil))
+(debug_insn 239 238 240 26 (var_location:DI m (const_int 0 [0])) -1
+     (nil))
+(debug_insn 240 239 241 26 (var_location:DI sm (reg/v/f:DI 99 [ sm ])) -1
+     (nil))
+(debug_insn 241 240 242 26 (debug_marker) "ssh-ed25519.c":153:2 -1
+     (nil))
+(debug_insn 242 241 243 26 (var_location:SI r (const_int -2 [0xfffffffffffffffe])) -1
+     (nil))
+(debug_insn 243 242 244 26 (var_location:DI smlen (reg/v:DI 98 [ smlen ])) -1
+     (nil))
+(debug_insn 244 243 245 26 (var_location:DI m (const_int 0 [0])) -1
+     (nil))
+(debug_insn 245 244 246 26 (var_location:DI sm (reg/v/f:DI 99 [ sm ])) -1
+     (nil))
+(debug_insn 246 245 247 26 (debug_marker) "ssh-ed25519.c":154:3 -1
+     (nil))
+(insn 247 246 248 26 (set (reg:DI 4 si)
+        (reg/v:DI 98 [ smlen ])) "ssh-ed25519.c":154:3 -1
+     (nil))
+(insn 248 247 249 26 (set (reg:DI 5 di)
+        (reg/v/f:DI 99 [ sm ])) "ssh-ed25519.c":154:3 -1
+     (nil))
+(call_insn 249 248 250 26 (call (mem:QI (symbol_ref:DI ("freezero") [flags 0x41]  <function_decl 0x7f8f09668b00 freezero>) [0 freezero S1 A8])
+        (const_int 0 [0])) "ssh-ed25519.c":154:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("freezero") [flags 0x41]  <function_decl 0x7f8f09668b00 freezero>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(debug_insn 250 249 251 26 (var_location:SI r (clobber (const_int 0 [0]))) -1
+     (nil))
+(debug_insn 251 250 252 26 (var_location:DI smlen (clobber (const_int 0 [0]))) -1
+     (nil))
+(debug_insn 252 251 253 26 (var_location:DI m (clobber (const_int 0 [0]))) -1
+     (nil))
+(debug_insn 253 252 254 26 (var_location:DI sm (clobber (const_int 0 [0]))) -1
+     (nil))
+(debug_insn 254 253 11 26 (debug_marker) "ssh-ed25519.c":155:2 -1
+     (nil))
+(insn 11 254 255 26 (set (reg/v:SI 103 [ <retval> ])
+        (const_int -2 [0xfffffffffffffffe])) "ssh-ed25519.c":136:5 -1
+     (nil))
+(jump_insn 255 11 256 26 (set (pc)
+        (label_ref 217)) "ssh-ed25519.c":154:3 -1
+     (nil)
+ -> 217)
+(barrier 256 255 257)
+(code_label 257 256 258 27 39 (nil) [3 uses])
+(note 258 257 259 27 [bb 27] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 259 258 260 27 (var_location:SI r (reg/v:SI 103 [ <retval> ])) -1
+     (nil))
+(debug_insn 260 259 261 27 (var_location:DI smlen (reg/v:DI 98 [ smlen ])) -1
+     (nil))
+(debug_insn 261 260 262 27 (var_location:DI m (reg/v/f:DI 100 [ m ])) -1
+     (nil))
+(debug_insn 262 261 263 27 (var_location:DI sm (reg/v/f:DI 99 [ sm ])) -1
+     (nil))
+(debug_insn 263 262 264 27 (debug_marker) "ssh-ed25519.c":153:2 -1
+     (nil))
+(debug_insn 264 263 265 27 (var_location:SI r (reg/v:SI 103 [ <retval> ])) -1
+     (nil))
+(debug_insn 265 264 266 27 (var_location:DI smlen (reg/v:DI 98 [ smlen ])) -1
+     (nil))
+(debug_insn 266 265 267 27 (var_location:DI m (reg/v/f:DI 100 [ m ])) -1
+     (nil))
+(debug_insn 267 266 268 27 (var_location:DI sm (reg/v/f:DI 99 [ sm ])) -1
+     (nil))
+(debug_insn 268 267 269 27 (debug_marker) "ssh-ed25519.c":154:3 -1
+     (nil))
+(insn 269 268 270 27 (set (reg:DI 4 si)
+        (reg/v:DI 98 [ smlen ])) "ssh-ed25519.c":154:3 -1
+     (nil))
+(insn 270 269 271 27 (set (reg:DI 5 di)
+        (reg/v/f:DI 99 [ sm ])) "ssh-ed25519.c":154:3 -1
+     (nil))
+(call_insn 271 270 272 27 (call (mem:QI (symbol_ref:DI ("freezero") [flags 0x41]  <function_decl 0x7f8f09668b00 freezero>) [0 freezero S1 A8])
+        (const_int 0 [0])) "ssh-ed25519.c":154:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("freezero") [flags 0x41]  <function_decl 0x7f8f09668b00 freezero>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(debug_insn 272 271 273 27 (var_location:SI r (clobber (const_int 0 [0]))) -1
+     (nil))
+(debug_insn 273 272 274 27 (var_location:DI smlen (clobber (const_int 0 [0]))) -1
+     (nil))
+(debug_insn 274 273 275 27 (var_location:DI m (clobber (const_int 0 [0]))) -1
+     (nil))
+(debug_insn 275 274 276 27 (var_location:DI sm (clobber (const_int 0 [0]))) -1
+     (nil))
+(debug_insn 276 275 277 27 (debug_marker) "ssh-ed25519.c":155:2 -1
+     (nil))
+(debug_insn 277 276 278 27 (var_location:SI r (clobber (const_int 0 [0]))) -1
+     (nil))
+(debug_insn 278 277 279 27 (var_location:DI smlen (clobber (const_int 0 [0]))) -1
+     (nil))
+(debug_insn 279 278 280 27 (var_location:DI m (clobber (const_int 0 [0]))) -1
+     (nil))
+(debug_insn 280 279 281 27 (var_location:DI sm (clobber (const_int 0 [0]))) -1
+     (nil))
+(debug_insn 281 280 282 27 (debug_marker) "ssh-ed25519.c":156:3 -1
+     (nil))
+(insn 282 281 283 27 (set (reg:DI 4 si)
+        (reg/v:DI 98 [ smlen ])) "ssh-ed25519.c":156:3 -1
+     (nil))
+(insn 283 282 284 27 (set (reg:DI 5 di)
+        (reg/v/f:DI 100 [ m ])) "ssh-ed25519.c":156:3 -1
+     (nil))
+(call_insn 284 283 285 27 (call (mem:QI (symbol_ref:DI ("freezero") [flags 0x41]  <function_decl 0x7f8f09668b00 freezero>) [0 freezero S1 A8])
+        (const_int 0 [0])) "ssh-ed25519.c":156:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("freezero") [flags 0x41]  <function_decl 0x7f8f09668b00 freezero>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(jump_insn 285 284 286 27 (set (pc)
+        (label_ref 217)) "ssh-ed25519.c":156:3 -1
+     (nil)
+ -> 217)
+(barrier 286 285 287)
+(code_label 287 286 288 28 38 (nil) [1 uses])
+(note 288 287 289 28 [bb 28] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 289 288 290 28 (debug_marker) "ssh-ed25519.c":145:2 -1
+     (nil))
+(insn 290 289 291 28 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -16 [0xfffffffffffffff0])) [12 mlen+0 S8 A64])
+            (reg/v:DI 108 [ datalen ]))) "ssh-ed25519.c":145:15 -1
+     (nil))
+(jump_insn 291 290 292 28 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 257)
+            (pc))) "ssh-ed25519.c":145:15 -1
+     (int_list:REG_BR_PROB 536870916 (nil))
+ -> 257)
+(note 292 291 19 29 [bb 29] NOTE_INSN_BASIC_BLOCK)
+(insn 19 292 293 29 (set (reg/v:SI 103 [ <retval> ])
+        (const_int -21 [0xffffffffffffffeb])) "ssh-ed25519.c":146:5 -1
+     (nil))
+(jump_insn 293 19 294 29 (set (pc)
+        (label_ref 257)) -1
+     (nil)
+ -> 257)
+(barrier 294 293 295)
+(code_label 295 294 304 30 32 (nil) [3 uses])
+(note 304 295 296 30 [bb 30] NOTE_INSN_BASIC_BLOCK)
+(insn 296 304 297 30 (set (reg/f:DI 147)
+        (const_int 40 [0x28])) "ssh-ed25519.c":160:1 -1
+     (nil))
+(insn 297 296 298 30 (parallel [
+            (set (reg:CCZ 17 flags)
+                (unspec:CCZ [
+                        (mem/v/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                                (const_int -8 [0xfffffffffffffff8])) [9 D.14385+0 S8 A64])
+                        (mem/v/f:DI (reg/f:DI 147) [0 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_TEST))
+            (clobber (scratch:DI))
+        ]) "ssh-ed25519.c":160:1 -1
+     (nil))
+(jump_insn 298 297 324 30 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 301)
+            (pc))) "ssh-ed25519.c":160:1 -1
+     (int_list:REG_BR_PROB 1073312332 (nil))
+ -> 301)
+(note 324 298 299 31 [bb 31] NOTE_INSN_BASIC_BLOCK)
+(call_insn 299 324 300 31 (call (mem:QI (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7f8f09190d00 __stack_chk_fail>) [0 __stack_chk_fail S1 A8])
+        (const_int 0 [0])) "ssh-ed25519.c":160:1 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7f8f09190d00 __stack_chk_fail>)
+        (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+            (expr_list:REG_NORETURN (const_int 0 [0])
+                (expr_list:REG_EH_REGION (const_int 0 [0])
+                    (nil)))))
+    (nil))
+(barrier 300 299 301)
+(code_label 301 300 325 32 40 (nil) [1 uses])
+(note 325 301 302 32 [bb 32] NOTE_INSN_BASIC_BLOCK)
+(insn 302 325 303 32 (set (reg/i:SI 0 ax)
+        (reg/v:SI 103 [ <retval> ])) "ssh-ed25519.c":160:1 -1
+     (nil))
+(insn 303 302 0 32 (use (reg/i:SI 0 ax)) "ssh-ed25519.c":160:1 -1
+     (nil))

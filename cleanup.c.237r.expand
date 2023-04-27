@@ -1,0 +1,43 @@
+
+;; Function cleanup_exit (cleanup_exit, funcdef_no=79, decl_uid=7604, cgraph_uid=80, symbol_order=79) (executed once)
+
+
+;; Generating RTL for gimple basic block 2
+deleting block 4
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (reg/v:SI 82 [ i ])
+        (reg:SI 5 di [ i ])) "cleanup.c":30:1 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 6 3 7 2 (debug_marker) "cleanup.c":31:2 -1
+     (nil))
+(insn 7 6 8 2 (set (reg:SI 5 di)
+        (reg/v:SI 82 [ i ])) "cleanup.c":31:2 -1
+     (nil))
+(call_insn 8 7 9 2 (call (mem:QI (symbol_ref:DI ("_exit") [flags 0x41]  <function_decl 0x7f166f475500 _exit>) [0 __builtin__exit S1 A8])
+        (const_int 0 [0])) "cleanup.c":31:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("_exit") [flags 0x41]  <function_decl 0x7f166f475500 _exit>)
+        (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+            (expr_list:REG_NORETURN (const_int 0 [0])
+                (expr_list:REG_EH_REGION (const_int 0 [0])
+                    (nil)))))
+    (expr_list:SI (use (reg:SI 5 di))
+        (nil)))
+(barrier 9 8 0)

@@ -1,0 +1,1901 @@
+
+;; Function atomiciov6.part.0 (atomiciov6.part.0, funcdef_no=94, decl_uid=8053, cgraph_uid=107, symbol_order=106)
+
+Partition 0: size 16384 align 16
+	iov_array
+Partition 1: size 8 align 4
+	pfd
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+
+;; Generating RTL for gimple basic block 11
+
+;; Generating RTL for gimple basic block 12
+
+;; Generating RTL for gimple basic block 13
+
+;; Generating RTL for gimple basic block 14
+
+;; Generating RTL for gimple basic block 15
+
+;; Generating RTL for gimple basic block 16
+
+;; Generating RTL for gimple basic block 17
+
+;; Generating RTL for gimple basic block 18
+
+;; Generating RTL for gimple basic block 19
+
+;; Generating RTL for gimple basic block 20
+
+;; Generating RTL for gimple basic block 21
+
+;; Generating RTL for gimple basic block 22
+
+;; Generating RTL for gimple basic block 23
+
+;; Generating RTL for gimple basic block 24
+
+;; Generating RTL for gimple basic block 25
+
+;; Generating RTL for gimple basic block 26
+
+;; Generating RTL for gimple basic block 27
+Edge 2->4 redirected to 33
+Edge 4->22 redirected to 34
+Predictions for insn 265 bb 32
+  first match heuristics: 99.96%  exec 211599488 (estimated locally) hit 423198974 (estimated locally) (200.0%)
+  combined heuristics: 99.96%  exec 211599488 (estimated locally) hit 423198974 (estimated locally) (200.0%)
+  noreturn call heuristics: 99.96%  exec 211599488 (estimated locally) hit 423198974 (estimated locally) (200.0%)
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Redirecting jump 58 from 28 to 34.
+Forwarding edge 9->10 to 18 failed.
+Redirecting jump 100 from 28 to 34.
+Redirecting jump 136 from 28 to 34.
+Forwarding edge 20->21 to 23 failed.
+Redirecting jump 190 from 28 to 34.
+Redirecting jump 216 from 28 to 34.
+Forwarding edge 27->28 to 34 failed.
+Edge 30->28 redirected to 34
+Forwarding edge 31->32 to 34 failed.
+Redirecting jump 251 from 28 to 34.
+
+
+try_optimize_cfg iteration 2
+
+Forwarding edge 9->10 to 18 failed.
+Forwarding edge 20->21 to 23 failed.
+Forwarding edge 27->28 to 34 failed.
+Deleted label in block 28.
+Forwarding edge 31->32 to 34 failed.
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 18 NOTE_INSN_DELETED)
+(note 18 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 18 3 2 (set (reg/v/f:DI 103 [ f ])
+        (reg:DI 5 di [ f ])) "atomicio.c":105:1 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v:SI 104 [ fd ])
+        (reg:SI 4 si [ fd ])) "atomicio.c":105:1 -1
+     (nil))
+(insn 4 3 5 2 (set (reg/v/f:DI 105 [ _iov ])
+        (reg:DI 1 dx [ _iov ])) "atomicio.c":105:1 -1
+     (nil))
+(insn 5 4 6 2 (set (reg/v:SI 106 [ iovcnt ])
+        (reg:SI 2 cx [ iovcnt ])) "atomicio.c":105:1 -1
+     (nil))
+(insn 6 5 7 2 (set (reg/v/f:DI 107 [ cb ])
+        (reg:DI 36 r8 [ cb ])) "atomicio.c":105:1 -1
+     (nil))
+(insn 7 6 8 2 (set (reg/v/f:DI 108 [ cb_arg ])
+        (reg:DI 37 r9 [ cb_arg ])) "atomicio.c":105:1 -1
+     (nil))
+(note 8 7 9 2 NOTE_INSN_FUNCTION_BEG)
+(insn 9 8 10 2 (set (reg/f:DI 109)
+        (const_int 40 [0x28])) "atomicio.c":105:1 -1
+     (nil))
+(insn 10 9 20 2 (parallel [
+            (set (mem/v/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                        (const_int -8 [0xfffffffffffffff8])) [2 D.8092+0 S8 A64])
+                (unspec:DI [
+                        (mem/v/f:DI (reg/f:DI 109) [0 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_SET))
+            (set (scratch:DI)
+                (const_int 0 [0]))
+            (clobber (reg:CC 17 flags))
+        ]) "atomicio.c":105:1 -1
+     (nil))
+(debug_insn 20 10 21 2 (debug_marker) "atomicio.c":119:2 -1
+     (nil))
+(debug_insn 21 20 22 2 (var_location:DI __dest (plus:DI (reg/f:DI 77 virtual-stack-vars)
+        (const_int -16400 [0xffffffffffffbff0]))) "atomicio.c":119:2 -1
+     (nil))
+(debug_insn 22 21 23 2 (var_location:DI __src (reg/v/f:DI 105 [ _iov ])) "atomicio.c":119:2 -1
+     (nil))
+(debug_insn 23 22 24 2 (var_location:DI __len (ashift:DI (sign_extend:DI (reg/v:SI 106 [ iovcnt ]))
+        (const_int 4 [0x4]))) "atomicio.c":119:2 -1
+     (nil))
+(debug_insn 24 23 25 2 (debug_marker:BLK) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":31:1 -1
+     (nil))
+(debug_insn 25 24 26 2 (debug_marker) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:3 -1
+     (nil))
+(insn 26 25 27 2 (set (reg:DI 110)
+        (sign_extend:DI (reg/v:SI 106 [ iovcnt ]))) "atomicio.c":119:20 -1
+     (nil))
+(insn 27 26 28 2 (parallel [
+            (set (reg:DI 111)
+                (ashift:DI (reg:DI 110)
+                    (const_int 4 [0x4])))
+            (clobber (reg:CC 17 flags))
+        ]) "atomicio.c":119:2 -1
+     (nil))
+(insn 28 27 29 2 (parallel [
+            (set (reg:DI 112)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -16400 [0xffffffffffffbff0])))
+            (clobber (reg:CC 17 flags))
+        ]) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (nil))
+(insn 29 28 30 2 (set (reg:DI 2 cx)
+        (const_int 16384 [0x4000])) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (nil))
+(insn 30 29 31 2 (set (reg:DI 1 dx)
+        (reg:DI 111)) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (nil))
+(insn 31 30 32 2 (set (reg:DI 4 si)
+        (reg/v/f:DI 105 [ _iov ])) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (nil))
+(insn 32 31 33 2 (set (reg:DI 5 di)
+        (reg:DI 112)) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (nil))
+(call_insn 33 32 34 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__memcpy_chk") [flags 0x41]  <function_decl 0x7fca1ce2f900 __builtin___memcpy_chk>) [0 __builtin___memcpy_chk S1 A8])
+            (const_int 0 [0]))) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__memcpy_chk") [flags 0x41]  <function_decl 0x7fca1ce2f900 __builtin___memcpy_chk>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (set (reg:DI 0 ax)
+            (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (expr_list:DI (use (reg:DI 1 dx))
+                    (expr_list:DI (use (reg:DI 2 cx))
+                        (nil)))))))
+(debug_insn 34 33 35 2 (var_location:DI __dest (clobber (const_int 0 [0]))) "atomicio.c":119:2 -1
+     (nil))
+(debug_insn 35 34 36 2 (var_location:DI __src (clobber (const_int 0 [0]))) "atomicio.c":119:2 -1
+     (nil))
+(debug_insn 36 35 37 2 (var_location:DI __len (clobber (const_int 0 [0]))) "atomicio.c":119:2 -1
+     (nil))
+(debug_insn 37 36 38 2 (debug_marker) "atomicio.c":121:2 -1
+     (nil))
+(insn 38 37 39 2 (set (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16408 [0xffffffffffffbfe8])) [5 pfd.fd+0 S4 A64])
+        (reg/v:SI 104 [ fd ])) "atomicio.c":121:9 -1
+     (nil))
+(debug_insn 39 38 40 2 (debug_marker) "atomicio.c":123:2 -1
+     (nil))
+(insn 40 39 41 2 (set (reg:DI 114)
+        (mem/u/c:DI (const:DI (unspec:DI [
+                        (symbol_ref:DI ("readv") [flags 0x41]  <function_decl 0x7fca1c9a3f00 readv>)
+                    ] UNSPEC_GOTPCREL)) [7  S8 A8])) "atomicio.c":123:13 -1
+     (nil))
+(insn 41 40 42 2 (set (reg:DI 113)
+        (reg:DI 114)) "atomicio.c":123:13 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("readv") [flags 0x41]  <function_decl 0x7fca1c9a3f00 readv>)
+        (nil)))
+(insn 42 41 43 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 103 [ f ])
+            (reg:DI 113))) "atomicio.c":123:13 -1
+     (nil))
+(jump_insn 43 42 44 2 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 275)
+            (pc))) "atomicio.c":123:13 736 {*jcc}
+     (int_list:REG_BR_PROB 322122548 (nil))
+ -> 275)
+(note 44 43 12 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 12 44 272 4 (set (reg:HI 84 [ iftmp.4_7 ])
+        (const_int 4 [0x4])) "atomicio.c":123:13 -1
+     (nil))
+(jump_insn 272 12 273 4 (set (pc)
+        (label_ref 45)) -1
+     (nil)
+ -> 45)
+(barrier 273 272 275)
+(code_label 275 273 274 5 19 (nil) [1 uses])
+(note 274 275 11 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 11 274 45 5 (set (reg:HI 84 [ iftmp.4_7 ])
+        (const_int 1 [0x1])) "atomicio.c":123:13 -1
+     (nil))
+(code_label 45 11 46 6 2 (nil) [1 uses])
+(note 46 45 47 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 47 46 48 6 (set (mem/c:HI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16404 [0xffffffffffffbfec])) [6 pfd.events+0 S2 A32])
+        (reg:HI 84 [ iftmp.4_7 ])) "atomicio.c":123:13 -1
+     (nil))
+(debug_insn 48 47 49 6 (debug_marker) "atomicio.c":127:2 -1
+     (nil))
+(debug_insn 49 48 50 6 (var_location:DI iov (plus:DI (reg/f:DI 77 virtual-stack-vars)
+        (const_int -16400 [0xffffffffffffbff0]))) -1
+     (nil))
+(debug_insn 50 49 51 6 (var_location:DI pos (const_int 0 [0])) -1
+     (nil))
+(debug_insn 51 50 52 6 (var_location:SI iovcnt (reg/v:SI 106 [ iovcnt ])) -1
+     (nil))
+(debug_insn 52 51 55 6 (debug_marker) "atomicio.c":127:9 -1
+     (nil))
+(insn 55 52 56 6 (set (reg:CCNO 17 flags)
+        (compare:CCNO (reg/v:SI 106 [ iovcnt ])
+            (const_int 0 [0]))) "atomicio.c":127:2 -1
+     (nil))
+(jump_insn 56 55 105 6 (set (pc)
+        (if_then_else (gt (reg:CCNO 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 277)
+            (pc))) "atomicio.c":127:2 736 {*jcc}
+     (int_list:REG_BR_PROB 1052266988 (nil))
+ -> 277)
+(code_label 105 56 57 7 10 (nil) [1 uses])
+(note 57 105 17 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 17 57 58 7 (set (reg/v:DI 102 [ <retval> ])
+        (const_int 0 [0])) "atomicio.c":109:9 -1
+     (nil))
+(jump_insn 58 17 59 7 (set (pc)
+        (label_ref:DI 262)) "atomicio.c":127:2 737 {jump}
+     (nil)
+ -> 262)
+(barrier 59 58 223)
+(code_label 223 59 60 8 15 (nil) [1 uses])
+(note 60 223 61 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 61 60 62 8 (debug_marker) "atomicio.c":128:3 -1
+     (nil))
+(insn 62 61 63 8 (set (reg:SI 1 dx)
+        (reg/v:SI 106 [ iovcnt ])) "atomicio.c":128:9 -1
+     (nil))
+(insn 63 62 64 8 (set (reg:DI 4 si)
+        (reg/v/f:DI 100 [ iov ])) "atomicio.c":128:9 -1
+     (nil))
+(insn 64 63 65 8 (set (reg:SI 5 di)
+        (reg/v:SI 104 [ fd ])) "atomicio.c":128:9 -1
+     (nil))
+(call_insn 65 64 66 8 (set (reg:DI 0 ax)
+        (call (mem:QI (reg/v/f:DI 103 [ f ]) [0 *f_6(D) S1 A8])
+            (const_int 0 [0]))) "atomicio.c":128:9 -1
+     (expr_list:REG_CALL_DECL (nil)
+        (nil))
+    (expr_list:SI (use (reg:SI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:SI (use (reg:SI 1 dx))
+                (nil)))))
+(insn 66 65 67 8 (set (reg/v:DI 85 [ res ])
+        (reg:DI 0 ax)) "atomicio.c":128:9 -1
+     (nil))
+(debug_insn 67 66 68 8 (var_location:DI res (reg/v:DI 85 [ res ])) "atomicio.c":128:9 -1
+     (nil))
+(debug_insn 68 67 69 8 (debug_marker) "atomicio.c":129:3 -1
+     (nil))
+(insn 69 68 70 8 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:DI 85 [ res ])
+            (const_int -1 [0xffffffffffffffff]))) "atomicio.c":129:3 -1
+     (nil))
+(jump_insn 70 69 71 8 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 77)
+            (pc))) "atomicio.c":129:3 -1
+     (int_list:REG_BR_PROB 357913950 (nil))
+ -> 77)
+(note 71 70 72 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 72 71 73 9 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:DI 85 [ res ])
+            (const_int 0 [0]))) "atomicio.c":129:3 -1
+     (nil))
+(jump_insn 73 72 76 9 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 129)
+            (pc))) "atomicio.c":129:3 -1
+     (int_list:REG_BR_PROB 536870918 (nil))
+ -> 129)
+(note 76 73 74 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 74 76 75 10 (set (pc)
+        (label_ref 138)) "atomicio.c":129:3 -1
+     (nil)
+ -> 138)
+(barrier 75 74 77)
+(code_label 77 75 78 11 5 (nil) [1 uses])
+(note 78 77 79 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 79 78 80 11 (debug_marker) "atomicio.c":131:4 -1
+     (nil))
+(call_insn/u 80 79 81 11 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__errno_location") [flags 0x41]  <function_decl 0x7fca1ccb5b00 __errno_location>) [0 __errno_location S1 A8])
+            (const_int 0 [0]))) "atomicio.c":131:8 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__errno_location") [flags 0x41]  <function_decl 0x7fca1ccb5b00 __errno_location>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (nil))
+(insn 81 80 82 11 (set (reg/f:DI 86 [ _11 ])
+        (reg:DI 0 ax)) "atomicio.c":131:8 -1
+     (nil))
+(insn 82 81 83 11 (set (reg:SI 87 [ _12 ])
+        (mem:SI (reg/f:DI 86 [ _11 ]) [5 *_11+0 S4 A32])) "atomicio.c":131:8 -1
+     (nil))
+(insn 83 82 84 11 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 87 [ _12 ])
+            (const_int 4 [0x4]))) "atomicio.c":131:7 -1
+     (nil))
+(jump_insn 84 83 85 11 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 102)
+            (pc))) "atomicio.c":131:7 -1
+     (int_list:REG_BR_PROB 708669604 (nil))
+ -> 102)
+(note 85 84 86 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 86 85 87 12 (debug_marker) "atomicio.c":133:5 -1
+     (nil))
+(insn 87 86 88 12 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 107 [ cb ])
+            (const_int 0 [0]))) "atomicio.c":133:8 -1
+     (nil))
+(jump_insn 88 87 89 12 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 254)
+            (pc))) "atomicio.c":133:8 -1
+     (int_list:REG_BR_PROB 187153204 (nil))
+ -> 254)
+(note 89 88 90 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 90 89 91 13 (set (reg:DI 4 si)
+        (const_int 0 [0])) "atomicio.c":133:23 -1
+     (nil))
+(insn 91 90 92 13 (set (reg:DI 5 di)
+        (reg/v/f:DI 108 [ cb_arg ])) "atomicio.c":133:23 -1
+     (nil))
+(call_insn 92 91 93 13 (set (reg:SI 0 ax)
+        (call (mem:QI (reg/v/f:DI 107 [ cb ]) [0 *cb_13(D) S1 A8])
+            (const_int 0 [0]))) "atomicio.c":133:23 -1
+     (expr_list:REG_CALL_DECL (nil)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 93 92 94 13 (set (reg:SI 88 [ _15 ])
+        (reg:SI 0 ax)) "atomicio.c":133:23 -1
+     (nil))
+(insn 94 93 95 13 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 88 [ _15 ])
+            (const_int -1 [0xffffffffffffffff]))) "atomicio.c":133:20 -1
+     (nil))
+(jump_insn 95 94 96 13 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 254)
+            (pc))) "atomicio.c":133:20 -1
+     (int_list:REG_BR_PROB 697824812 (nil))
+ -> 254)
+(note 96 95 97 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 97 96 98 14 (debug_marker) "atomicio.c":134:6 -1
+     (nil))
+(insn 98 97 99 14 (set (mem:SI (reg/f:DI 86 [ _11 ]) [5 *_11+0 S4 A32])
+        (const_int 4 [0x4])) "atomicio.c":134:12 -1
+     (nil))
+(debug_insn 99 98 100 14 (debug_marker) "atomicio.c":135:6 -1
+     (nil))
+(jump_insn 100 99 101 14 (set (pc)
+        (label_ref:DI 262)) "atomicio.c":135:13 737 {jump}
+     (nil)
+ -> 262)
+(barrier 101 100 102)
+(code_label 102 101 103 15 8 (nil) [1 uses])
+(note 103 102 104 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 104 103 106 15 (debug_marker) "atomicio.c":138:11 -1
+     (nil))
+(insn 106 104 107 15 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 87 [ _12 ])
+            (const_int 11 [0xb]))) "atomicio.c":138:14 -1
+     (nil))
+(jump_insn 107 106 108 15 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 105)
+            (pc))) "atomicio.c":138:14 -1
+     (int_list:REG_BR_PROB 954449108 (nil))
+ -> 105)
+(note 108 107 109 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 109 108 110 16 (debug_marker) "atomicio.c":139:5 -1
+     (nil))
+(debug_insn 110 109 111 16 (var_location:DI __fds (plus:DI (reg/f:DI 77 virtual-stack-vars)
+        (const_int -16408 [0xffffffffffffbfe8]))) "atomicio.c":139:5 -1
+     (nil))
+(debug_insn 111 110 112 16 (var_location:DI __nfds (const_int 1 [0x1])) "atomicio.c":139:5 -1
+     (nil))
+(debug_insn 112 111 113 16 (var_location:SI __timeout (const_int -1 [0xffffffffffffffff])) "atomicio.c":139:5 -1
+     (nil))
+(debug_insn 113 112 114 16 (debug_marker:BLK) "/usr/include/x86_64-linux-gnu/bits/poll2.h":36:1 -1
+     (nil))
+(debug_insn 114 113 115 16 (debug_marker) "/usr/include/x86_64-linux-gnu/bits/poll2.h":38:3 -1
+     (nil))
+(debug_insn 115 114 116 16 (debug_marker) "/usr/include/x86_64-linux-gnu/bits/poll2.h":40:7 -1
+     (nil))
+(debug_insn 116 115 117 16 (debug_marker) "/usr/include/x86_64-linux-gnu/bits/poll2.h":42:12 -1
+     (nil))
+(debug_insn 117 116 118 16 (debug_marker) "/usr/include/x86_64-linux-gnu/bits/poll2.h":46:3 -1
+     (nil))
+(insn 118 117 119 16 (parallel [
+            (set (reg:DI 115)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -16408 [0xffffffffffffbfe8])))
+            (clobber (reg:CC 17 flags))
+        ]) "/usr/include/x86_64-linux-gnu/bits/poll2.h":46:10 -1
+     (nil))
+(insn 119 118 120 16 (set (reg:SI 1 dx)
+        (const_int -1 [0xffffffffffffffff])) "/usr/include/x86_64-linux-gnu/bits/poll2.h":46:10 -1
+     (nil))
+(insn 120 119 121 16 (set (reg:DI 4 si)
+        (const_int 1 [0x1])) "/usr/include/x86_64-linux-gnu/bits/poll2.h":46:10 -1
+     (nil))
+(insn 121 120 122 16 (set (reg:DI 5 di)
+        (reg:DI 115)) "/usr/include/x86_64-linux-gnu/bits/poll2.h":46:10 -1
+     (nil))
+(call_insn 122 121 123 16 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("*poll") [flags 0x41]  <function_decl 0x7fca1c993b00 __poll_alias>) [0 __poll_alias S1 A8])
+            (const_int 0 [0]))) "/usr/include/x86_64-linux-gnu/bits/poll2.h":46:10 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("*poll") [flags 0x41]  <function_decl 0x7fca1c993b00 __poll_alias>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:SI (use (reg:SI 1 dx))
+                (nil)))))
+(debug_insn 123 122 124 16 (var_location:DI __fds (clobber (const_int 0 [0]))) "atomicio.c":139:11 -1
+     (nil))
+(debug_insn 124 123 125 16 (var_location:DI __nfds (clobber (const_int 0 [0]))) "atomicio.c":139:11 -1
+     (nil))
+(debug_insn 125 124 126 16 (var_location:SI __timeout (clobber (const_int 0 [0]))) "atomicio.c":139:11 -1
+     (nil))
+(debug_insn 126 125 127 16 (debug_marker) "atomicio.c":140:5 -1
+     (nil))
+(jump_insn 127 126 128 16 (set (pc)
+        (label_ref 254)) "atomicio.c":140:5 -1
+     (nil)
+ -> 254)
+(barrier 128 127 129)
+(code_label 129 128 130 17 6 (nil) [1 uses])
+(note 130 129 131 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 131 130 132 17 (debug_marker) "atomicio.c":144:4 -1
+     (nil))
+(call_insn/u 132 131 133 17 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__errno_location") [flags 0x41]  <function_decl 0x7fca1ccb5b00 __errno_location>) [0 __errno_location S1 A8])
+            (const_int 0 [0]))) "atomicio.c":144:4 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__errno_location") [flags 0x41]  <function_decl 0x7fca1ccb5b00 __errno_location>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (nil))
+(insn 133 132 134 17 (set (reg/f:DI 89 [ _17 ])
+        (reg:DI 0 ax)) "atomicio.c":144:4 -1
+     (nil))
+(insn 134 133 135 17 (set (mem:SI (reg/f:DI 89 [ _17 ]) [5 *_17+0 S4 A32])
+        (const_int 32 [0x20])) "atomicio.c":144:10 -1
+     (nil))
+(debug_insn 135 134 136 17 (debug_marker) "atomicio.c":145:4 -1
+     (nil))
+(jump_insn 136 135 137 17 (set (pc)
+        (label_ref:DI 262)) "atomicio.c":145:11 737 {jump}
+     (nil)
+ -> 262)
+(barrier 137 136 138)
+(code_label 138 137 139 18 7 (nil) [1 uses])
+(note 139 138 140 18 [bb 18] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 140 139 141 18 (debug_marker) "atomicio.c":147:4 -1
+     (nil))
+(insn 141 140 142 18 (set (reg/v:DI 90 [ rem ])
+        (reg/v:DI 85 [ res ])) "atomicio.c":147:8 -1
+     (nil))
+(debug_insn 142 141 143 18 (var_location:DI rem (reg/v:DI 90 [ rem ])) "atomicio.c":147:8 -1
+     (nil))
+(debug_insn 143 142 144 18 (debug_marker) "atomicio.c":148:4 -1
+     (nil))
+(insn 144 143 145 18 (parallel [
+            (set (reg/v:DI 102 [ <retval> ])
+                (plus:DI (reg/v:DI 102 [ <retval> ])
+                    (reg/v:DI 90 [ rem ])))
+            (clobber (reg:CC 17 flags))
+        ]) "atomicio.c":148:8 -1
+     (nil))
+(debug_insn 145 144 146 18 (var_location:DI pos (reg/v:DI 102 [ <retval> ])) "atomicio.c":148:8 -1
+     (nil))
+(debug_insn 146 145 147 18 (debug_marker) "atomicio.c":150:4 -1
+     (nil))
+(debug_insn 147 146 148 18 (var_location:DI iov (reg/v/f:DI 100 [ iov ])) -1
+     (nil))
+(debug_insn 148 147 149 18 (var_location:DI rem (reg/v:DI 90 [ rem ])) -1
+     (nil))
+(debug_insn 149 148 150 18 (var_location:SI iovcnt (reg/v:SI 106 [ iovcnt ])) -1
+     (nil))
+(debug_insn 150 149 13 18 (debug_marker) "atomicio.c":150:10 -1
+     (nil))
+(insn 13 150 151 18 (set (reg/v:DI 92 [ rem ])
+        (reg/v:DI 90 [ rem ])) "atomicio.c":147:8 -1
+     (nil))
+(jump_insn 151 13 152 18 (set (pc)
+        (label_ref 172)) "atomicio.c":148:8 -1
+     (nil)
+ -> 172)
+(barrier 152 151 178)
+(code_label 178 152 153 19 13 (nil) [1 uses])
+(note 153 178 154 19 [bb 19] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 154 153 155 19 (debug_marker) "atomicio.c":151:5 -1
+     (nil))
+(insn 155 154 156 19 (parallel [
+            (set (reg/v:DI 92 [ rem ])
+                (minus:DI (reg/v:DI 92 [ rem ])
+                    (reg:DI 91 [ _22 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "atomicio.c":151:9 -1
+     (nil))
+(debug_insn 156 155 157 19 (var_location:DI rem (reg/v:DI 92 [ rem ])) "atomicio.c":151:9 -1
+     (nil))
+(debug_insn 157 156 158 19 (debug_marker) "atomicio.c":152:5 -1
+     (nil))
+(insn 158 157 159 19 (parallel [
+            (set (reg/v/f:DI 100 [ iov ])
+                (plus:DI (reg/v/f:DI 100 [ iov ])
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "atomicio.c":152:8 -1
+     (nil))
+(debug_insn 159 158 160 19 (var_location:DI iov (reg/v/f:DI 100 [ iov ])) "atomicio.c":152:8 -1
+     (nil))
+(debug_insn 160 159 161 19 (debug_marker) "atomicio.c":153:5 -1
+     (nil))
+(insn 161 160 162 19 (set (reg:SI 4 si)
+        (const_int -1 [0xffffffffffffffff])) "atomicio.c":153:11 -1
+     (nil))
+(insn 162 161 163 19 (set (reg:SI 5 di)
+        (reg/v:SI 106 [ iovcnt ])) "atomicio.c":153:11 -1
+     (nil))
+(call_insn/u 163 162 164 19 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__addvsi3") [flags 0x41]  <function_decl 0x7fca1caa6300 __addvsi3>) [0  S1 A8])
+            (const_int 0 [0]))) "atomicio.c":153:11 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__addvsi3") [flags 0x41]  <function_decl 0x7fca1caa6300 __addvsi3>)
+        (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+            (nil)))
+    (expr_list (use (reg:SI 4 si))
+        (expr_list (use (reg:SI 5 di))
+            (nil))))
+(insn 164 163 165 19 (set (reg:SI 116)
+        (reg:SI 0 ax)) "atomicio.c":153:11 -1
+     (nil))
+(insn 165 164 166 19 (set (reg/v:SI 106 [ iovcnt ])
+        (reg:SI 116)) "atomicio.c":153:11 -1
+     (nil))
+(debug_insn 166 165 167 19 (var_location:DI iov (reg/v/f:DI 100 [ iov ])) -1
+     (nil))
+(debug_insn 167 166 168 19 (var_location:DI rem (reg/v:DI 92 [ rem ])) -1
+     (nil))
+(debug_insn 168 167 169 19 (var_location:SI iovcnt (reg/v:SI 106 [ iovcnt ])) -1
+     (nil))
+(debug_insn 169 168 170 19 (debug_marker) "atomicio.c":150:10 -1
+     (nil))
+(insn 170 169 171 19 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 106 [ iovcnt ])
+            (const_int 0 [0]))) "atomicio.c":150:10 -1
+     (nil))
+(jump_insn 171 170 172 19 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 233)
+            (pc))) "atomicio.c":150:10 -1
+     (int_list:REG_BR_PROB 66130068 (nil))
+ -> 233)
+(code_label 172 171 173 20 11 (nil) [1 uses])
+(note 173 172 174 20 [bb 20] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 174 173 175 20 (var_location:DI iov (reg/v/f:DI 100 [ iov ])) -1
+     (nil))
+(debug_insn 175 174 176 20 (var_location:DI rem (reg/v:DI 92 [ rem ])) -1
+     (nil))
+(debug_insn 176 175 177 20 (var_location:SI iovcnt (reg/v:SI 106 [ iovcnt ])) -1
+     (nil))
+(insn 177 176 179 20 (set (reg:DI 91 [ _22 ])
+        (mem:DI (plus:DI (reg/v/f:DI 100 [ iov ])
+                (const_int 8 [0x8])) [0 MEM[base: iov_100, offset: 8B]+0 S8 A64])) "atomicio.c":150:38 -1
+     (nil))
+(insn 179 177 180 20 (set (reg:CC 17 flags)
+        (compare:CC (reg:DI 91 [ _22 ])
+            (reg/v:DI 92 [ rem ]))) "atomicio.c":150:22 -1
+     (nil))
+(jump_insn 180 179 183 20 (set (pc)
+        (if_then_else (leu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 178)
+            (pc))) "atomicio.c":150:22 -1
+     (int_list:REG_BR_PROB 1014686028 (nil))
+ -> 178)
+(note 183 180 181 21 [bb 21] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 181 183 182 21 (set (pc)
+        (label_ref 192)) -1
+     (nil)
+ -> 192)
+(barrier 182 181 236)
+(code_label 236 182 184 22 16 (nil) [1 uses])
+(note 184 236 185 22 [bb 22] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 185 184 186 22 (debug_marker) "atomicio.c":157:5 -1
+     (nil))
+(call_insn/u 186 185 187 22 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__errno_location") [flags 0x41]  <function_decl 0x7fca1ccb5b00 __errno_location>) [0 __errno_location S1 A8])
+            (const_int 0 [0]))) "atomicio.c":157:5 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__errno_location") [flags 0x41]  <function_decl 0x7fca1ccb5b00 __errno_location>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (nil))
+(insn 187 186 188 22 (set (reg/f:DI 93 [ _32 ])
+        (reg:DI 0 ax)) "atomicio.c":157:5 -1
+     (nil))
+(insn 188 187 189 22 (set (mem:SI (reg/f:DI 93 [ _32 ]) [5 *_32+0 S4 A32])
+        (const_int 14 [0xe])) "atomicio.c":157:11 -1
+     (nil))
+(debug_insn 189 188 16 22 (debug_marker) "atomicio.c":158:5 -1
+     (nil))
+(insn 16 189 190 22 (set (reg/v:DI 102 [ <retval> ])
+        (const_int 0 [0])) "atomicio.c":158:12 -1
+     (nil))
+(jump_insn 190 16 191 22 (set (pc)
+        (label_ref:DI 262)) "atomicio.c":158:12 737 {jump}
+     (nil)
+ -> 262)
+(barrier 191 190 192)
+(code_label 192 191 193 23 14 (nil) [1 uses])
+(note 193 192 194 23 [bb 23] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 194 193 195 23 (debug_marker) "atomicio.c":156:4 -1
+     (nil))
+(debug_insn 195 194 196 23 (debug_marker) "atomicio.c":163:4 -1
+     (nil))
+(insn 196 195 197 23 (parallel [
+            (set (mem/f:DI (reg/v/f:DI 100 [ iov ]) [2 iov_100->iov_base+0 S8 A64])
+                (plus:DI (mem/f:DI (reg/v/f:DI 100 [ iov ]) [2 iov_100->iov_base+0 S8 A64])
+                    (reg/v:DI 92 [ rem ])))
+            (clobber (reg:CC 17 flags))
+        ]) "atomicio.c":163:48 -1
+     (nil))
+(debug_insn 197 196 198 23 (debug_marker) "atomicio.c":164:4 -1
+     (nil))
+(insn 198 197 199 23 (parallel [
+            (set (reg:DI 117)
+                (minus:DI (reg:DI 91 [ _22 ])
+                    (reg/v:DI 92 [ rem ])))
+            (clobber (reg:CC 17 flags))
+        ]) "atomicio.c":164:19 -1
+     (nil))
+(insn 199 198 200 23 (set (mem:DI (plus:DI (reg/v/f:DI 100 [ iov ])
+                (const_int 8 [0x8])) [3 iov_100->iov_len+0 S8 A64])
+        (reg:DI 117)) "atomicio.c":164:19 -1
+     (nil))
+(debug_insn 200 199 201 23 (debug_marker) "atomicio.c":166:3 -1
+     (nil))
+(insn 201 200 202 23 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 107 [ cb ])
+            (const_int 0 [0]))) "atomicio.c":166:6 -1
+     (nil))
+(jump_insn 202 201 203 23 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 254)
+            (pc))) "atomicio.c":166:6 -1
+     (int_list:REG_BR_PROB 600216916 (nil))
+ -> 254)
+(note 203 202 204 24 [bb 24] NOTE_INSN_BASIC_BLOCK)
+(insn 204 203 205 24 (set (reg:DI 4 si)
+        (reg/v:DI 90 [ rem ])) "atomicio.c":166:21 -1
+     (nil))
+(insn 205 204 206 24 (set (reg:DI 5 di)
+        (reg/v/f:DI 108 [ cb_arg ])) "atomicio.c":166:21 -1
+     (nil))
+(call_insn 206 205 207 24 (set (reg:SI 0 ax)
+        (call (mem:QI (reg/v/f:DI 107 [ cb ]) [0 *cb_13(D) S1 A8])
+            (const_int 0 [0]))) "atomicio.c":166:21 -1
+     (expr_list:REG_CALL_DECL (nil)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 207 206 208 24 (set (reg:SI 97 [ _37 ])
+        (reg:SI 0 ax)) "atomicio.c":166:21 -1
+     (nil))
+(insn 208 207 209 24 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 97 [ _37 ])
+            (const_int -1 [0xffffffffffffffff]))) "atomicio.c":166:18 -1
+     (nil))
+(jump_insn 209 208 248 24 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 254)
+            (pc))) "atomicio.c":166:18 -1
+     (int_list:REG_BR_PROB 1073741828 (nil))
+ -> 254)
+(code_label 248 209 210 25 17 (nil) [1 uses])
+(note 210 248 211 25 [bb 25] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 211 210 212 25 (debug_marker) "atomicio.c":167:4 -1
+     (nil))
+(call_insn/u 212 211 213 25 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__errno_location") [flags 0x41]  <function_decl 0x7fca1ccb5b00 __errno_location>) [0 __errno_location S1 A8])
+            (const_int 0 [0]))) "atomicio.c":167:4 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__errno_location") [flags 0x41]  <function_decl 0x7fca1ccb5b00 __errno_location>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (nil))
+(insn 213 212 214 25 (set (reg/f:DI 98 [ _38 ])
+        (reg:DI 0 ax)) "atomicio.c":167:4 -1
+     (nil))
+(insn 214 213 215 25 (set (mem:SI (reg/f:DI 98 [ _38 ]) [5 *_38+0 S4 A32])
+        (const_int 4 [0x4])) "atomicio.c":167:10 -1
+     (nil))
+(debug_insn 215 214 216 25 (debug_marker) "atomicio.c":168:4 -1
+     (nil))
+(jump_insn 216 215 217 25 (set (pc)
+        (label_ref:DI 262)) "atomicio.c":168:11 737 {jump}
+     (nil)
+ -> 262)
+(barrier 217 216 277)
+(code_label 277 217 276 26 20 (nil) [1 uses])
+(note 276 277 14 26 [bb 26] NOTE_INSN_BASIC_BLOCK)
+(insn 14 276 15 26 (set (reg/v:DI 102 [ <retval> ])
+        (const_int 0 [0])) "atomicio.c":109:9 -1
+     (nil))
+(insn 15 14 218 26 (parallel [
+            (set (reg/v/f:DI 100 [ iov ])
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -16400 [0xffffffffffffbff0])))
+            (clobber (reg:CC 17 flags))
+        ]) "atomicio.c":111:36 -1
+     (nil))
+(code_label 218 15 219 27 3 (nil) [1 uses])
+(note 219 218 220 27 [bb 27] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 220 219 221 27 (var_location:DI iov (reg/v/f:DI 100 [ iov ])) -1
+     (nil))
+(debug_insn 221 220 222 27 (var_location:DI pos (reg/v:DI 102 [ <retval> ])) -1
+     (nil))
+(debug_insn 222 221 224 27 (var_location:SI iovcnt (reg/v:SI 106 [ iovcnt ])) -1
+     (nil))
+(insn 224 222 225 27 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem:DI (plus:DI (reg/v/f:DI 100 [ iov ])
+                    (const_int 8 [0x8])) [3 iov_94->iov_len+0 S8 A64])
+            (const_int 0 [0]))) "atomicio.c":127:20 -1
+     (nil))
+(jump_insn 225 224 227 27 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 223)
+            (pc))) "atomicio.c":127:20 -1
+     (int_list:REG_BR_PROB 1052266988 (nil))
+ -> 223)
+(note 227 225 228 28 [bb 28] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 228 227 229 28 (var_location:DI iov (clobber (const_int 0 [0]))) -1
+     (nil))
+(debug_insn 229 228 230 28 (var_location:DI pos (clobber (const_int 0 [0]))) -1
+     (nil))
+(debug_insn 230 229 231 28 (var_location:SI iovcnt (clobber (const_int 0 [0]))) -1
+     (nil))
+(jump_insn 231 230 232 28 (set (pc)
+        (label_ref 262)) "atomicio.c":172:1 -1
+     (nil)
+ -> 262)
+(barrier 232 231 233)
+(code_label 233 232 234 29 12 (nil) [1 uses])
+(note 234 233 235 29 [bb 29] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 235 234 237 29 (debug_marker) "atomicio.c":156:4 -1
+     (nil))
+(insn 237 235 238 29 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:DI 92 [ rem ])
+            (const_int 0 [0]))) "atomicio.c":156:7 -1
+     (nil))
+(jump_insn 238 237 239 29 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 236)
+            (pc))) "atomicio.c":156:7 -1
+     (int_list:REG_BR_PROB 20884276 (nil))
+ -> 236)
+(note 239 238 240 30 [bb 30] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 240 239 241 30 (debug_marker) "atomicio.c":166:3 -1
+     (nil))
+(insn 241 240 242 30 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 107 [ cb ])
+            (const_int 0 [0]))) "atomicio.c":166:6 -1
+     (nil))
+(jump_insn 242 241 243 30 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 262)
+            (pc))) "atomicio.c":166:6 736 {*jcc}
+     (int_list:REG_BR_PROB 55040732 (nil))
+ -> 262)
+(note 243 242 244 31 [bb 31] NOTE_INSN_BASIC_BLOCK)
+(insn 244 243 245 31 (set (reg:DI 4 si)
+        (reg/v:DI 90 [ rem ])) "atomicio.c":166:21 -1
+     (nil))
+(insn 245 244 246 31 (set (reg:DI 5 di)
+        (reg/v/f:DI 108 [ cb_arg ])) "atomicio.c":166:21 -1
+     (nil))
+(call_insn 246 245 247 31 (set (reg:SI 0 ax)
+        (call (mem:QI (reg/v/f:DI 107 [ cb ]) [0 *cb_13(D) S1 A8])
+            (const_int 0 [0]))) "atomicio.c":166:21 -1
+     (expr_list:REG_CALL_DECL (nil)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 247 246 249 31 (set (reg:SI 101 [ _106 ])
+        (reg:SI 0 ax)) "atomicio.c":166:21 -1
+     (nil))
+(insn 249 247 250 31 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 101 [ _106 ])
+            (const_int -1 [0xffffffffffffffff]))) "atomicio.c":166:18 -1
+     (nil))
+(jump_insn 250 249 253 31 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 248)
+            (pc))) "atomicio.c":166:18 -1
+     (int_list:REG_BR_PROB 1073741828 (nil))
+ -> 248)
+(note 253 250 251 32 [bb 32] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 251 253 252 32 (set (pc)
+        (label_ref:DI 262)) "atomicio.c":166:18 737 {jump}
+     (nil)
+ -> 262)
+(barrier 252 251 254)
+(code_label 254 252 255 33 9 (nil) [5 uses])
+(note 255 254 256 33 [bb 33] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 256 255 257 33 (var_location:DI iov (reg/v/f:DI 100 [ iov ])) -1
+     (nil))
+(debug_insn 257 256 258 33 (var_location:DI pos (reg/v:DI 102 [ <retval> ])) -1
+     (nil))
+(debug_insn 258 257 259 33 (var_location:SI iovcnt (reg/v:SI 106 [ iovcnt ])) -1
+     (nil))
+(debug_insn 259 258 260 33 (debug_marker) "atomicio.c":127:9 -1
+     (nil))
+(jump_insn 260 259 261 33 (set (pc)
+        (label_ref 218)) "atomicio.c":166:18 -1
+     (nil)
+ -> 218)
+(barrier 261 260 262)
+(code_label 262 261 271 34 1 (nil) [8 uses])
+(note 271 262 263 34 [bb 34] NOTE_INSN_BASIC_BLOCK)
+(insn 263 271 264 34 (set (reg/f:DI 119)
+        (const_int 40 [0x28])) "atomicio.c":172:1 -1
+     (nil))
+(insn 264 263 265 34 (parallel [
+            (set (reg:CCZ 17 flags)
+                (unspec:CCZ [
+                        (mem/v/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                                (const_int -8 [0xfffffffffffffff8])) [2 D.8092+0 S8 A64])
+                        (mem/v/f:DI (reg/f:DI 119) [0 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_TEST))
+            (clobber (scratch:DI))
+        ]) "atomicio.c":172:1 -1
+     (nil))
+(jump_insn 265 264 278 34 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 268)
+            (pc))) "atomicio.c":172:1 -1
+     (int_list:REG_BR_PROB 1073312332 (nil))
+ -> 268)
+(note 278 265 266 35 [bb 35] NOTE_INSN_BASIC_BLOCK)
+(call_insn 266 278 267 35 (call (mem:QI (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7fca1caa6400 __stack_chk_fail>) [0 __stack_chk_fail S1 A8])
+        (const_int 0 [0])) "atomicio.c":172:1 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7fca1caa6400 __stack_chk_fail>)
+        (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+            (expr_list:REG_NORETURN (const_int 0 [0])
+                (expr_list:REG_EH_REGION (const_int 0 [0])
+                    (nil)))))
+    (nil))
+(barrier 267 266 268)
+(code_label 268 267 279 36 18 (nil) [1 uses])
+(note 279 268 269 36 [bb 36] NOTE_INSN_BASIC_BLOCK)
+(insn 269 279 270 36 (set (reg/i:DI 0 ax)
+        (reg/v:DI 102 [ <retval> ])) "atomicio.c":172:1 -1
+     (nil))
+(insn 270 269 0 36 (use (reg/i:DI 0 ax)) "atomicio.c":172:1 -1
+     (nil))
+
+;; Function atomicio6 (atomicio6, funcdef_no=90, decl_uid=7856, cgraph_uid=91, symbol_order=90)
+
+Partition 0: size 8 align 4
+	pfd
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+
+;; Generating RTL for gimple basic block 11
+
+;; Generating RTL for gimple basic block 12
+
+;; Generating RTL for gimple basic block 13
+
+;; Generating RTL for gimple basic block 14
+
+;; Generating RTL for gimple basic block 15
+
+;; Generating RTL for gimple basic block 16
+
+;; Generating RTL for gimple basic block 17
+
+;; Generating RTL for gimple basic block 18
+
+;; Generating RTL for gimple basic block 19
+Edge 2->4 redirected to 24
+Predictions for insn 162 bb 23
+  first match heuristics: 99.96%  exec 618816189 (estimated locally) hit 1237632373 (estimated locally) (200.0%)
+  combined heuristics: 99.96%  exec 618816189 (estimated locally) hit 1237632373 (estimated locally) (200.0%)
+  noreturn call heuristics: 99.96%  exec 618816189 (estimated locally) hit 1237632373 (estimated locally) (200.0%)
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Forwarding edge 9->10 to 18 failed.
+Redirecting jump 82 from 24 to 25.
+Redirecting jump 117 from 24 to 25.
+Redirecting jump 141 from 24 to 25.
+Forwarding edge 21->22 to 25 failed.
+Redirecting jump 150 from 24 to 25.
+Merging block 24 into block 23...
+Merged blocks 23 and 24.
+Merged 23 and 24 without moving.
+Removing jump 157.
+
+
+try_optimize_cfg iteration 2
+
+Forwarding edge 9->10 to 18 failed.
+Forwarding edge 21->22 to 25 failed.
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 15 NOTE_INSN_DELETED)
+(note 15 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 15 3 2 (set (reg/v/f:DI 94 [ f ])
+        (reg:DI 5 di [ f ])) "atomicio.c":53:1 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v:SI 95 [ fd ])
+        (reg:SI 4 si [ fd ])) "atomicio.c":53:1 -1
+     (nil))
+(insn 4 3 5 2 (set (reg/v/f:DI 96 [ _s ])
+        (reg:DI 1 dx [ _s ])) "atomicio.c":53:1 -1
+     (nil))
+(insn 5 4 6 2 (set (reg/v:DI 97 [ n ])
+        (reg:DI 2 cx [ n ])) "atomicio.c":53:1 -1
+     (nil))
+(insn 6 5 7 2 (set (reg/v/f:DI 98 [ cb ])
+        (reg:DI 36 r8 [ cb ])) "atomicio.c":53:1 -1
+     (nil))
+(insn 7 6 8 2 (set (reg/v/f:DI 99 [ cb_arg ])
+        (reg:DI 37 r9 [ cb_arg ])) "atomicio.c":53:1 -1
+     (nil))
+(note 8 7 9 2 NOTE_INSN_FUNCTION_BEG)
+(insn 9 8 10 2 (set (reg/f:DI 100)
+        (const_int 40 [0x28])) "atomicio.c":53:1 -1
+     (nil))
+(insn 10 9 17 2 (parallel [
+            (set (mem/v/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                        (const_int -8 [0xfffffffffffffff8])) [2 D.8100+0 S8 A64])
+                (unspec:DI [
+                        (mem/v/f:DI (reg/f:DI 100) [0 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_SET))
+            (set (scratch:DI)
+                (const_int 0 [0]))
+            (clobber (reg:CC 17 flags))
+        ]) "atomicio.c":53:1 -1
+     (nil))
+(debug_insn 17 10 18 2 (debug_marker) "atomicio.c":54:2 -1
+     (nil))
+(debug_insn 18 17 19 2 (var_location:DI s (reg/v/f:DI 96 [ _s ])) "atomicio.c":54:8 -1
+     (nil))
+(debug_insn 19 18 20 2 (debug_marker) "atomicio.c":55:2 -1
+     (nil))
+(debug_insn 20 19 21 2 (var_location:DI pos (const_int 0 [0])) "atomicio.c":55:9 -1
+     (nil))
+(debug_insn 21 20 22 2 (debug_marker) "atomicio.c":56:2 -1
+     (nil))
+(debug_insn 22 21 23 2 (debug_marker) "atomicio.c":57:2 -1
+     (nil))
+(debug_insn 23 22 24 2 (debug_marker) "atomicio.c":59:2 -1
+     (nil))
+(insn 24 23 25 2 (set (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [5 pfd.fd+0 S4 A64])
+        (reg/v:SI 95 [ fd ])) "atomicio.c":59:9 -1
+     (nil))
+(debug_insn 25 24 26 2 (debug_marker) "atomicio.c":61:2 -1
+     (nil))
+(insn 26 25 27 2 (set (reg:DI 102)
+        (mem/u/c:DI (const:DI (unspec:DI [
+                        (symbol_ref:DI ("read") [flags 0x41]  <function_decl 0x7fca1c9d5600 read>)
+                    ] UNSPEC_GOTPCREL)) [7  S8 A8])) "atomicio.c":61:13 -1
+     (nil))
+(insn 27 26 28 2 (set (reg:DI 101)
+        (reg:DI 102)) "atomicio.c":61:13 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("read") [flags 0x41]  <function_decl 0x7fca1c9d5600 read>)
+        (nil)))
+(insn 28 27 29 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 94 [ f ])
+            (reg:DI 101))) "atomicio.c":61:13 -1
+     (nil))
+(jump_insn 29 28 30 2 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 172)
+            (pc))) "atomicio.c":61:13 736 {*jcc}
+     (int_list:REG_BR_PROB 322122548 (nil))
+ -> 172)
+(note 30 29 12 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 12 30 169 4 (set (reg:HI 91 [ iftmp.0_15 ])
+        (const_int 4 [0x4])) "atomicio.c":61:13 -1
+     (nil))
+(jump_insn 169 12 170 4 (set (pc)
+        (label_ref 31)) -1
+     (nil)
+ -> 31)
+(barrier 170 169 172)
+(code_label 172 170 171 5 53 (nil) [1 uses])
+(note 171 172 11 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 11 171 31 5 (set (reg:HI 91 [ iftmp.0_15 ])
+        (const_int 1 [0x1])) "atomicio.c":61:13 -1
+     (nil))
+(code_label 31 11 32 6 43 (nil) [1 uses])
+(note 32 31 33 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 33 32 34 6 (set (mem/c:HI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [6 pfd.events+0 S2 A32])
+        (reg:HI 91 [ iftmp.0_15 ])) "atomicio.c":61:13 -1
+     (nil))
+(debug_insn 34 33 35 6 (debug_marker) "atomicio.c":65:2 -1
+     (nil))
+(debug_insn 35 34 36 6 (var_location:DI pos (const_int 0 [0])) -1
+     (nil))
+(debug_insn 36 35 37 6 (debug_marker) "atomicio.c":65:8 -1
+     (nil))
+(insn 37 36 38 6 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:DI 97 [ n ])
+            (const_int 0 [0]))) "atomicio.c":65:8 -1
+     (nil))
+(jump_insn 38 37 173 6 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 153)
+            (pc))) "atomicio.c":65:8 -1
+     (int_list:REG_BR_PROB 23622324 (nil))
+ -> 153)
+(note 173 38 13 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 13 173 147 7 (set (reg/v:DI 93 [ <retval> ])
+        (const_int 0 [0])) "atomicio.c":55:9 -1
+     (nil))
+(code_label 147 13 39 8 51 (nil) [1 uses])
+(note 39 147 40 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 40 39 41 8 (var_location:DI pos (reg/v:DI 93 [ <retval> ])) -1
+     (nil))
+(debug_insn 41 40 42 8 (debug_marker) "atomicio.c":66:3 -1
+     (nil))
+(insn 42 41 43 8 (parallel [
+            (set (reg:DI 103)
+                (minus:DI (reg/v:DI 97 [ n ])
+                    (reg/v:DI 93 [ <retval> ])))
+            (clobber (reg:CC 17 flags))
+        ]) "atomicio.c":66:9 -1
+     (nil))
+(insn 43 42 44 8 (parallel [
+            (set (reg:DI 104)
+                (plus:DI (reg/v/f:DI 96 [ _s ])
+                    (reg/v:DI 93 [ <retval> ])))
+            (clobber (reg:CC 17 flags))
+        ]) "atomicio.c":66:20 -1
+     (nil))
+(insn 44 43 45 8 (set (reg:DI 1 dx)
+        (reg:DI 103)) "atomicio.c":66:9 -1
+     (nil))
+(insn 45 44 46 8 (set (reg:DI 4 si)
+        (reg:DI 104)) "atomicio.c":66:9 -1
+     (nil))
+(insn 46 45 47 8 (set (reg:SI 5 di)
+        (reg/v:SI 95 [ fd ])) "atomicio.c":66:9 -1
+     (nil))
+(call_insn 47 46 48 8 (set (reg:DI 0 ax)
+        (call (mem:QI (reg/v/f:DI 94 [ f ]) [0 *f_24(D) S1 A8])
+            (const_int 0 [0]))) "atomicio.c":66:9 -1
+     (expr_list:REG_CALL_DECL (nil)
+        (nil))
+    (expr_list:SI (use (reg:SI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(insn 48 47 49 8 (set (reg/v:DI 92 [ res ])
+        (reg:DI 0 ax)) "atomicio.c":66:9 -1
+     (nil))
+(debug_insn 49 48 50 8 (var_location:DI res (reg/v:DI 92 [ res ])) "atomicio.c":66:9 -1
+     (nil))
+(debug_insn 50 49 51 8 (debug_marker) "atomicio.c":67:3 -1
+     (nil))
+(insn 51 50 52 8 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:DI 92 [ res ])
+            (const_int -1 [0xffffffffffffffff]))) "atomicio.c":67:3 -1
+     (nil))
+(jump_insn 52 51 53 8 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 59)
+            (pc))) "atomicio.c":67:3 -1
+     (int_list:REG_BR_PROB 357913950 (nil))
+ -> 59)
+(note 53 52 54 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 54 53 55 9 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:DI 92 [ res ])
+            (const_int 0 [0]))) "atomicio.c":67:3 -1
+     (nil))
+(jump_insn 55 54 58 9 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 110)
+            (pc))) "atomicio.c":67:3 -1
+     (int_list:REG_BR_PROB 536870918 (nil))
+ -> 110)
+(note 58 55 56 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 56 58 57 10 (set (pc)
+        (label_ref 119)) "atomicio.c":67:3 -1
+     (nil)
+ -> 119)
+(barrier 57 56 59)
+(code_label 59 57 60 11 45 (nil) [1 uses])
+(note 60 59 61 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 61 60 62 11 (debug_marker) "atomicio.c":69:4 -1
+     (nil))
+(call_insn/u 62 61 63 11 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__errno_location") [flags 0x41]  <function_decl 0x7fca1ccb5b00 __errno_location>) [0 __errno_location S1 A8])
+            (const_int 0 [0]))) "atomicio.c":69:8 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__errno_location") [flags 0x41]  <function_decl 0x7fca1ccb5b00 __errno_location>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (nil))
+(insn 63 62 64 11 (set (reg/f:DI 84 [ _3 ])
+        (reg:DI 0 ax)) "atomicio.c":69:8 -1
+     (nil))
+(insn 64 63 65 11 (set (reg:SI 85 [ _4 ])
+        (mem:SI (reg/f:DI 84 [ _3 ]) [5 *_3+0 S4 A32])) "atomicio.c":69:8 -1
+     (nil))
+(insn 65 64 66 11 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 85 [ _4 ])
+            (const_int 4 [0x4]))) "atomicio.c":69:7 -1
+     (nil))
+(jump_insn 66 65 67 11 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 84)
+            (pc))) "atomicio.c":69:7 -1
+     (int_list:REG_BR_PROB 708669604 (nil))
+ -> 84)
+(note 67 66 68 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 68 67 69 12 (debug_marker) "atomicio.c":71:5 -1
+     (nil))
+(insn 69 68 70 12 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 98 [ cb ])
+            (const_int 0 [0]))) "atomicio.c":71:8 -1
+     (nil))
+(jump_insn 70 69 71 12 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 143)
+            (pc))) "atomicio.c":71:8 -1
+     (int_list:REG_BR_PROB 187153204 (nil))
+ -> 143)
+(note 71 70 72 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 72 71 73 13 (set (reg:DI 4 si)
+        (const_int 0 [0])) "atomicio.c":71:23 -1
+     (nil))
+(insn 73 72 74 13 (set (reg:DI 5 di)
+        (reg/v/f:DI 99 [ cb_arg ])) "atomicio.c":71:23 -1
+     (nil))
+(call_insn 74 73 75 13 (set (reg:SI 0 ax)
+        (call (mem:QI (reg/v/f:DI 98 [ cb ]) [0 *cb_32(D) S1 A8])
+            (const_int 0 [0]))) "atomicio.c":71:23 -1
+     (expr_list:REG_CALL_DECL (nil)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 75 74 76 13 (set (reg:SI 86 [ _5 ])
+        (reg:SI 0 ax)) "atomicio.c":71:23 -1
+     (nil))
+(insn 76 75 77 13 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 86 [ _5 ])
+            (const_int -1 [0xffffffffffffffff]))) "atomicio.c":71:20 -1
+     (nil))
+(jump_insn 77 76 78 13 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 143)
+            (pc))) "atomicio.c":71:20 -1
+     (int_list:REG_BR_PROB 697824812 (nil))
+ -> 143)
+(note 78 77 79 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 79 78 80 14 (debug_marker) "atomicio.c":72:6 -1
+     (nil))
+(insn 80 79 81 14 (set (mem:SI (reg/f:DI 84 [ _3 ]) [5 *_3+0 S4 A32])
+        (const_int 4 [0x4])) "atomicio.c":72:12 -1
+     (nil))
+(debug_insn 81 80 82 14 (debug_marker) "atomicio.c":73:6 -1
+     (nil))
+(jump_insn 82 81 83 14 (set (pc)
+        (label_ref:DI 159)) "atomicio.c":73:13 737 {jump}
+     (nil)
+ -> 159)
+(barrier 83 82 84)
+(code_label 84 83 85 15 48 (nil) [1 uses])
+(note 85 84 86 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 86 85 87 15 (debug_marker) "atomicio.c":76:11 -1
+     (nil))
+(insn 87 86 88 15 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 85 [ _4 ])
+            (const_int 11 [0xb]))) "atomicio.c":76:14 -1
+     (nil))
+(jump_insn 88 87 89 15 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 153)
+            (pc))) "atomicio.c":76:14 -1
+     (int_list:REG_BR_PROB 954449108 (nil))
+ -> 153)
+(note 89 88 90 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 90 89 91 16 (debug_marker) "atomicio.c":77:5 -1
+     (nil))
+(debug_insn 91 90 92 16 (var_location:DI __fds (plus:DI (reg/f:DI 77 virtual-stack-vars)
+        (const_int -16 [0xfffffffffffffff0]))) "atomicio.c":77:5 -1
+     (nil))
+(debug_insn 92 91 93 16 (var_location:DI __nfds (const_int 1 [0x1])) "atomicio.c":77:5 -1
+     (nil))
+(debug_insn 93 92 94 16 (var_location:SI __timeout (const_int -1 [0xffffffffffffffff])) "atomicio.c":77:5 -1
+     (nil))
+(debug_insn 94 93 95 16 (debug_marker:BLK) "/usr/include/x86_64-linux-gnu/bits/poll2.h":36:1 -1
+     (nil))
+(debug_insn 95 94 96 16 (debug_marker) "/usr/include/x86_64-linux-gnu/bits/poll2.h":38:3 -1
+     (nil))
+(debug_insn 96 95 97 16 (debug_marker) "/usr/include/x86_64-linux-gnu/bits/poll2.h":40:7 -1
+     (nil))
+(debug_insn 97 96 98 16 (debug_marker) "/usr/include/x86_64-linux-gnu/bits/poll2.h":42:12 -1
+     (nil))
+(debug_insn 98 97 99 16 (debug_marker) "/usr/include/x86_64-linux-gnu/bits/poll2.h":46:3 -1
+     (nil))
+(insn 99 98 100 16 (parallel [
+            (set (reg:DI 105)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -16 [0xfffffffffffffff0])))
+            (clobber (reg:CC 17 flags))
+        ]) "/usr/include/x86_64-linux-gnu/bits/poll2.h":46:10 -1
+     (nil))
+(insn 100 99 101 16 (set (reg:SI 1 dx)
+        (const_int -1 [0xffffffffffffffff])) "/usr/include/x86_64-linux-gnu/bits/poll2.h":46:10 -1
+     (nil))
+(insn 101 100 102 16 (set (reg:DI 4 si)
+        (const_int 1 [0x1])) "/usr/include/x86_64-linux-gnu/bits/poll2.h":46:10 -1
+     (nil))
+(insn 102 101 103 16 (set (reg:DI 5 di)
+        (reg:DI 105)) "/usr/include/x86_64-linux-gnu/bits/poll2.h":46:10 -1
+     (nil))
+(call_insn 103 102 104 16 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("*poll") [flags 0x41]  <function_decl 0x7fca1c993b00 __poll_alias>) [0 __poll_alias S1 A8])
+            (const_int 0 [0]))) "/usr/include/x86_64-linux-gnu/bits/poll2.h":46:10 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("*poll") [flags 0x41]  <function_decl 0x7fca1c993b00 __poll_alias>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:SI (use (reg:SI 1 dx))
+                (nil)))))
+(debug_insn 104 103 105 16 (var_location:DI __fds (clobber (const_int 0 [0]))) "atomicio.c":77:11 -1
+     (nil))
+(debug_insn 105 104 106 16 (var_location:DI __nfds (clobber (const_int 0 [0]))) "atomicio.c":77:11 -1
+     (nil))
+(debug_insn 106 105 107 16 (var_location:SI __timeout (clobber (const_int 0 [0]))) "atomicio.c":77:11 -1
+     (nil))
+(debug_insn 107 106 108 16 (debug_marker) "atomicio.c":78:5 -1
+     (nil))
+(jump_insn 108 107 109 16 (set (pc)
+        (label_ref 143)) "atomicio.c":78:5 -1
+     (nil)
+ -> 143)
+(barrier 109 108 110)
+(code_label 110 109 111 17 46 (nil) [1 uses])
+(note 111 110 112 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 112 111 113 17 (debug_marker) "atomicio.c":82:4 -1
+     (nil))
+(call_insn/u 113 112 114 17 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__errno_location") [flags 0x41]  <function_decl 0x7fca1ccb5b00 __errno_location>) [0 __errno_location S1 A8])
+            (const_int 0 [0]))) "atomicio.c":82:4 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__errno_location") [flags 0x41]  <function_decl 0x7fca1ccb5b00 __errno_location>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (nil))
+(insn 114 113 115 17 (set (reg/f:DI 87 [ _9 ])
+        (reg:DI 0 ax)) "atomicio.c":82:4 -1
+     (nil))
+(insn 115 114 116 17 (set (mem:SI (reg/f:DI 87 [ _9 ]) [5 *_9+0 S4 A32])
+        (const_int 32 [0x20])) "atomicio.c":82:10 -1
+     (nil))
+(debug_insn 116 115 117 17 (debug_marker) "atomicio.c":83:4 -1
+     (nil))
+(jump_insn 117 116 118 17 (set (pc)
+        (label_ref:DI 159)) "atomicio.c":83:11 737 {jump}
+     (nil)
+ -> 159)
+(barrier 118 117 119)
+(code_label 119 118 120 18 47 (nil) [1 uses])
+(note 120 119 121 18 [bb 18] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 121 120 122 18 (debug_marker) "atomicio.c":85:4 -1
+     (nil))
+(insn 122 121 123 18 (set (reg:DI 88 [ res.1_10 ])
+        (reg/v:DI 92 [ res ])) "atomicio.c":85:11 -1
+     (nil))
+(insn 123 122 124 18 (parallel [
+            (set (reg/v:DI 93 [ <retval> ])
+                (plus:DI (reg/v:DI 93 [ <retval> ])
+                    (reg:DI 88 [ res.1_10 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "atomicio.c":85:8 -1
+     (nil))
+(debug_insn 124 123 125 18 (var_location:DI pos (reg/v:DI 93 [ <retval> ])) "atomicio.c":85:8 -1
+     (nil))
+(debug_insn 125 124 126 18 (debug_marker) "atomicio.c":86:4 -1
+     (nil))
+(insn 126 125 127 18 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 98 [ cb ])
+            (const_int 0 [0]))) "atomicio.c":86:7 -1
+     (nil))
+(jump_insn 127 126 128 18 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 143)
+            (pc))) "atomicio.c":86:7 -1
+     (int_list:REG_BR_PROB 322122548 (nil))
+ -> 143)
+(note 128 127 129 19 [bb 19] NOTE_INSN_BASIC_BLOCK)
+(insn 129 128 130 19 (set (reg:DI 4 si)
+        (reg:DI 88 [ res.1_10 ])) "atomicio.c":86:22 -1
+     (nil))
+(insn 130 129 131 19 (set (reg:DI 5 di)
+        (reg/v/f:DI 99 [ cb_arg ])) "atomicio.c":86:22 -1
+     (nil))
+(call_insn 131 130 132 19 (set (reg:SI 0 ax)
+        (call (mem:QI (reg/v/f:DI 98 [ cb ]) [0 *cb_32(D) S1 A8])
+            (const_int 0 [0]))) "atomicio.c":86:22 -1
+     (expr_list:REG_CALL_DECL (nil)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 132 131 133 19 (set (reg:SI 89 [ _12 ])
+        (reg:SI 0 ax)) "atomicio.c":86:22 -1
+     (nil))
+(insn 133 132 134 19 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 89 [ _12 ])
+            (const_int -1 [0xffffffffffffffff]))) "atomicio.c":86:19 -1
+     (nil))
+(jump_insn 134 133 135 19 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 143)
+            (pc))) "atomicio.c":86:19 -1
+     (int_list:REG_BR_PROB 1050119508 (nil))
+ -> 143)
+(note 135 134 136 20 [bb 20] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 136 135 137 20 (debug_marker) "atomicio.c":87:5 -1
+     (nil))
+(call_insn/u 137 136 138 20 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__errno_location") [flags 0x41]  <function_decl 0x7fca1ccb5b00 __errno_location>) [0 __errno_location S1 A8])
+            (const_int 0 [0]))) "atomicio.c":87:5 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__errno_location") [flags 0x41]  <function_decl 0x7fca1ccb5b00 __errno_location>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (nil))
+(insn 138 137 139 20 (set (reg/f:DI 90 [ _13 ])
+        (reg:DI 0 ax)) "atomicio.c":87:5 -1
+     (nil))
+(insn 139 138 140 20 (set (mem:SI (reg/f:DI 90 [ _13 ]) [5 *_13+0 S4 A32])
+        (const_int 4 [0x4])) "atomicio.c":87:11 -1
+     (nil))
+(debug_insn 140 139 141 20 (debug_marker) "atomicio.c":88:5 -1
+     (nil))
+(jump_insn 141 140 142 20 (set (pc)
+        (label_ref:DI 159)) "atomicio.c":88:12 737 {jump}
+     (nil)
+ -> 159)
+(barrier 142 141 143)
+(code_label 143 142 144 21 49 (nil) [5 uses])
+(note 144 143 145 21 [bb 21] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 145 144 146 21 (var_location:DI pos (reg/v:DI 93 [ <retval> ])) -1
+     (nil))
+(debug_insn 146 145 148 21 (debug_marker) "atomicio.c":65:8 -1
+     (nil))
+(insn 148 146 149 21 (set (reg:CC 17 flags)
+        (compare:CC (reg/v:DI 93 [ <retval> ])
+            (reg/v:DI 97 [ n ]))) "atomicio.c":65:8 -1
+     (nil))
+(jump_insn 149 148 152 21 (set (pc)
+        (if_then_else (ltu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 147)
+            (pc))) "atomicio.c":65:8 -1
+     (int_list:REG_BR_PROB 1050119508 (nil))
+ -> 147)
+(note 152 149 150 22 [bb 22] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 150 152 151 22 (set (pc)
+        (label_ref:DI 159)) 737 {jump}
+     (nil)
+ -> 159)
+(barrier 151 150 153)
+(code_label 153 151 154 23 44 (nil) [2 uses])
+(note 154 153 14 23 [bb 23] NOTE_INSN_BASIC_BLOCK)
+(insn 14 154 159 23 (set (reg/v:DI 93 [ <retval> ])
+        (const_int 0 [0])) "atomicio.c":55:9 -1
+     (nil))
+(code_label 159 14 168 25 42 (nil) [4 uses])
+(note 168 159 160 25 [bb 25] NOTE_INSN_BASIC_BLOCK)
+(insn 160 168 161 25 (set (reg/f:DI 107)
+        (const_int 40 [0x28])) "atomicio.c":93:1 -1
+     (nil))
+(insn 161 160 162 25 (parallel [
+            (set (reg:CCZ 17 flags)
+                (unspec:CCZ [
+                        (mem/v/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                                (const_int -8 [0xfffffffffffffff8])) [2 D.8100+0 S8 A64])
+                        (mem/v/f:DI (reg/f:DI 107) [0 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_TEST))
+            (clobber (scratch:DI))
+        ]) "atomicio.c":93:1 -1
+     (nil))
+(jump_insn 162 161 174 25 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 165)
+            (pc))) "atomicio.c":93:1 -1
+     (int_list:REG_BR_PROB 1073312332 (nil))
+ -> 165)
+(note 174 162 163 26 [bb 26] NOTE_INSN_BASIC_BLOCK)
+(call_insn 163 174 164 26 (call (mem:QI (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7fca1caa6400 __stack_chk_fail>) [0 __stack_chk_fail S1 A8])
+        (const_int 0 [0])) "atomicio.c":93:1 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7fca1caa6400 __stack_chk_fail>)
+        (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+            (expr_list:REG_NORETURN (const_int 0 [0])
+                (expr_list:REG_EH_REGION (const_int 0 [0])
+                    (nil)))))
+    (nil))
+(barrier 164 163 165)
+(code_label 165 164 175 27 52 (nil) [1 uses])
+(note 175 165 166 27 [bb 27] NOTE_INSN_BASIC_BLOCK)
+(insn 166 175 167 27 (set (reg/i:DI 0 ax)
+        (reg/v:DI 93 [ <retval> ])) "atomicio.c":93:1 -1
+     (nil))
+(insn 167 166 0 27 (use (reg/i:DI 0 ax)) "atomicio.c":93:1 -1
+     (nil))
+
+;; Function atomicio (atomicio, funcdef_no=91, decl_uid=7864, cgraph_uid=92, symbol_order=91)
+
+
+;; Generating RTL for gimple basic block 2
+deleting block 4
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 7 NOTE_INSN_DELETED)
+(note 7 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 7 3 2 (set (reg/v/f:DI 83 [ f ])
+        (reg:DI 5 di [ f ])) "atomicio.c":97:1 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v:SI 84 [ fd ])
+        (reg:SI 4 si [ fd ])) "atomicio.c":97:1 -1
+     (nil))
+(insn 4 3 5 2 (set (reg/v/f:DI 85 [ _s ])
+        (reg:DI 1 dx [ _s ])) "atomicio.c":97:1 -1
+     (nil))
+(insn 5 4 6 2 (set (reg/v:DI 86 [ n ])
+        (reg:DI 2 cx [ n ])) "atomicio.c":97:1 -1
+     (nil))
+(note 6 5 9 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 9 6 10 2 (debug_marker) "atomicio.c":98:2 -1
+     (nil))
+(insn 10 9 11 2 (set (reg:DI 37 r9)
+        (const_int 0 [0])) "atomicio.c":98:9 -1
+     (nil))
+(insn 11 10 12 2 (set (reg:DI 36 r8)
+        (const_int 0 [0])) "atomicio.c":98:9 -1
+     (nil))
+(insn 12 11 13 2 (set (reg:DI 2 cx)
+        (reg/v:DI 86 [ n ])) "atomicio.c":98:9 -1
+     (nil))
+(insn 13 12 14 2 (set (reg:DI 1 dx)
+        (reg/v/f:DI 85 [ _s ])) "atomicio.c":98:9 -1
+     (nil))
+(insn 14 13 15 2 (set (reg:SI 4 si)
+        (reg/v:SI 84 [ fd ])) "atomicio.c":98:9 -1
+     (nil))
+(insn 15 14 16 2 (set (reg:DI 5 di)
+        (reg/v/f:DI 83 [ f ])) "atomicio.c":98:9 -1
+     (nil))
+(call_insn/j 16 15 17 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("atomicio6") [flags 0x3]  <function_decl 0x7fca1ca52700 atomicio6>) [0 atomicio6 S1 A8])
+            (const_int 0 [0]))) "atomicio.c":98:9 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("atomicio6") [flags 0x3]  <function_decl 0x7fca1ca52700 atomicio6>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (expr_list:DI (use (reg:DI 2 cx))
+                    (expr_list:DI (use (reg:DI 36 r8))
+                        (expr_list:DI (use (reg:DI 37 r9))
+                            (nil))))))))
+(barrier 17 16 0)
+
+;; Function atomiciov6 (atomiciov6, funcdef_no=92, decl_uid=7876, cgraph_uid=93, symbol_order=92)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Removing jump 44.
+Merging block 7 into block 6...
+Merged blocks 6 and 7.
+Merged 6 and 7 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 10 NOTE_INSN_DELETED)
+(note 10 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 10 3 2 (set (reg/v/f:DI 85 [ f ])
+        (reg:DI 5 di [ f ])) "atomicio.c":108:1 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v:SI 86 [ fd ])
+        (reg:SI 4 si [ fd ])) "atomicio.c":108:1 -1
+     (nil))
+(insn 4 3 5 2 (set (reg/v/f:DI 87 [ _iov ])
+        (reg:DI 1 dx [ _iov ])) "atomicio.c":108:1 -1
+     (nil))
+(insn 5 4 6 2 (set (reg/v:SI 88 [ iovcnt ])
+        (reg:SI 2 cx [ iovcnt ])) "atomicio.c":108:1 -1
+     (nil))
+(insn 6 5 7 2 (set (reg/v/f:DI 89 [ cb ])
+        (reg:DI 36 r8 [ cb ])) "atomicio.c":108:1 -1
+     (nil))
+(insn 7 6 8 2 (set (reg/v/f:DI 90 [ cb_arg ])
+        (reg:DI 37 r9 [ cb_arg ])) "atomicio.c":108:1 -1
+     (nil))
+(note 8 7 12 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 12 8 13 2 (debug_marker) "atomicio.c":109:2 -1
+     (nil))
+(debug_insn 13 12 14 2 (var_location:DI pos (const_int 0 [0])) "atomicio.c":109:9 -1
+     (nil))
+(debug_insn 14 13 15 2 (debug_marker) "atomicio.c":110:2 -1
+     (nil))
+(debug_insn 15 14 16 2 (debug_marker) "atomicio.c":111:2 -1
+     (nil))
+(debug_insn 16 15 17 2 (var_location:DI iov (clobber (const_int 0 [0]))) "atomicio.c":111:36 -1
+     (nil))
+(debug_insn 17 16 18 2 (debug_marker) "atomicio.c":112:2 -1
+     (nil))
+(debug_insn 18 17 21 2 (debug_marker) "atomicio.c":114:2 -1
+     (nil))
+(insn 21 18 22 2 (set (reg:CC 17 flags)
+        (compare:CC (reg/v:SI 88 [ iovcnt ])
+            (const_int 1024 [0x400]))) "atomicio.c":114:5 -1
+     (nil))
+(jump_insn 22 21 23 2 (set (pc)
+        (if_then_else (leu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 31)
+            (pc))) "atomicio.c":114:5 -1
+     (int_list:REG_BR_PROB 524845004 (nil))
+ -> 31)
+(note 23 22 24 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 24 23 25 4 (debug_marker) "atomicio.c":115:3 -1
+     (nil))
+(call_insn/u 25 24 26 4 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__errno_location") [flags 0x41]  <function_decl 0x7fca1ccb5b00 __errno_location>) [0 __errno_location S1 A8])
+            (const_int 0 [0]))) "atomicio.c":115:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__errno_location") [flags 0x41]  <function_decl 0x7fca1ccb5b00 __errno_location>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (nil))
+(insn 26 25 27 4 (set (reg/f:DI 83 [ _2 ])
+        (reg:DI 0 ax)) "atomicio.c":115:3 -1
+     (nil))
+(insn 27 26 28 4 (set (mem:SI (reg/f:DI 83 [ _2 ]) [5 *_2+0 S4 A32])
+        (const_int 22 [0x16])) "atomicio.c":115:9 -1
+     (nil))
+(debug_insn 28 27 29 4 (debug_marker) "atomicio.c":116:3 -1
+     (nil))
+(jump_insn 29 28 30 4 (set (pc)
+        (label_ref 42)) "atomicio.c":116:10 -1
+     (nil)
+ -> 42)
+(barrier 30 29 31)
+(code_label 31 30 32 5 72 (nil) [1 uses])
+(note 32 31 33 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 33 32 34 5 (set (reg:DI 37 r9)
+        (reg/v/f:DI 90 [ cb_arg ])) -1
+     (nil))
+(insn 34 33 35 5 (set (reg:DI 36 r8)
+        (reg/v/f:DI 89 [ cb ])) -1
+     (nil))
+(insn 35 34 36 5 (set (reg:SI 2 cx)
+        (reg/v:SI 88 [ iovcnt ])) -1
+     (nil))
+(insn 36 35 37 5 (set (reg:DI 1 dx)
+        (reg/v/f:DI 87 [ _iov ])) -1
+     (nil))
+(insn 37 36 38 5 (set (reg:SI 4 si)
+        (reg/v:SI 86 [ fd ])) -1
+     (nil))
+(insn 38 37 39 5 (set (reg:DI 5 di)
+        (reg/v/f:DI 85 [ f ])) -1
+     (nil))
+(call_insn/j 39 38 40 5 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("atomiciov6.part.0") [flags 0x3]  <function_decl 0x7fca1ca93800 atomiciov6.part.0>) [0 atomiciov6.part.0 S1 A8])
+            (const_int 0 [0]))) -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("atomiciov6.part.0") [flags 0x3]  <function_decl 0x7fca1ca93800 atomiciov6.part.0>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (expr_list:SI (use (reg:SI 2 cx))
+                    (expr_list:DI (use (reg:DI 36 r8))
+                        (expr_list:DI (use (reg:DI 37 r9))
+                            (nil))))))))
+(barrier 40 39 42)
+(code_label 42 40 43 6 73 (nil) [1 uses])
+(note 43 42 9 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 9 43 47 6 (set (reg:DI 84 [ <retval> ])
+        (const_int 0 [0])) "atomicio.c":116:10 -1
+     (nil))
+(insn 47 9 48 6 (set (reg/i:DI 0 ax)
+        (reg:DI 84 [ <retval> ])) "atomicio.c":172:1 -1
+     (nil))
+(insn 48 47 0 6 (use (reg/i:DI 0 ax)) "atomicio.c":172:1 -1
+     (nil))
+
+;; Function atomiciov (atomiciov, funcdef_no=93, decl_uid=7884, cgraph_uid=94, symbol_order=93)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Removing jump 56.
+Merging block 7 into block 6...
+Merged blocks 6 and 7.
+Merged 6 and 7 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 8 NOTE_INSN_DELETED)
+(note 8 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 8 3 2 (set (reg/v/f:DI 85 [ f ])
+        (reg:DI 5 di [ f ])) "atomicio.c":177:1 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v:SI 86 [ fd ])
+        (reg:SI 4 si [ fd ])) "atomicio.c":177:1 -1
+     (nil))
+(insn 4 3 5 2 (set (reg/v/f:DI 87 [ _iov ])
+        (reg:DI 1 dx [ _iov ])) "atomicio.c":177:1 -1
+     (nil))
+(insn 5 4 6 2 (set (reg/v:SI 88 [ iovcnt ])
+        (reg:SI 2 cx [ iovcnt ])) "atomicio.c":177:1 -1
+     (nil))
+(note 6 5 10 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 10 6 11 2 (debug_marker) "atomicio.c":178:2 -1
+     (nil))
+(debug_insn 11 10 12 2 (var_location:DI f (reg/v/f:DI 85 [ f ])) "atomicio.c":178:2 -1
+     (nil))
+(debug_insn 12 11 13 2 (var_location:SI fd (reg/v:SI 86 [ fd ])) "atomicio.c":178:2 -1
+     (nil))
+(debug_insn 13 12 14 2 (var_location:DI _iov (reg/v/f:DI 87 [ _iov ])) "atomicio.c":178:2 -1
+     (nil))
+(debug_insn 14 13 15 2 (var_location:SI iovcnt (reg/v:SI 88 [ iovcnt ])) "atomicio.c":178:2 -1
+     (nil))
+(debug_insn 15 14 16 2 (var_location:DI cb (const_int 0 [0])) "atomicio.c":178:2 -1
+     (nil))
+(debug_insn 16 15 17 2 (var_location:DI cb_arg (const_int 0 [0])) "atomicio.c":178:2 -1
+     (nil))
+(debug_insn 17 16 18 2 (debug_marker:BLK) "atomicio.c":105:1 -1
+     (nil))
+(debug_insn 18 17 19 2 (debug_marker) "atomicio.c":109:2 -1
+     (nil))
+(debug_insn 19 18 20 2 (var_location:DI pos (const_int 0 [0])) "atomicio.c":109:9 -1
+     (nil))
+(debug_insn 20 19 21 2 (debug_marker) "atomicio.c":110:2 -1
+     (nil))
+(debug_insn 21 20 22 2 (debug_marker) "atomicio.c":111:2 -1
+     (nil))
+(debug_insn 22 21 23 2 (var_location:DI iov (clobber (const_int 0 [0]))) "atomicio.c":111:36 -1
+     (nil))
+(debug_insn 23 22 24 2 (debug_marker) "atomicio.c":112:2 -1
+     (nil))
+(debug_insn 24 23 27 2 (debug_marker) "atomicio.c":114:2 -1
+     (nil))
+(insn 27 24 28 2 (set (reg:CC 17 flags)
+        (compare:CC (reg/v:SI 88 [ iovcnt ])
+            (const_int 1024 [0x400]))) "atomicio.c":114:5 -1
+     (nil))
+(jump_insn 28 27 29 2 (set (pc)
+        (if_then_else (leu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 37)
+            (pc))) "atomicio.c":114:5 -1
+     (int_list:REG_BR_PROB 524845004 (nil))
+ -> 37)
+(note 29 28 30 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 30 29 31 4 (debug_marker) "atomicio.c":115:3 -1
+     (nil))
+(call_insn/u 31 30 32 4 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__errno_location") [flags 0x41]  <function_decl 0x7fca1ccb5b00 __errno_location>) [0 __errno_location S1 A8])
+            (const_int 0 [0]))) "atomicio.c":115:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__errno_location") [flags 0x41]  <function_decl 0x7fca1ccb5b00 __errno_location>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (nil))
+(insn 32 31 33 4 (set (reg/f:DI 83 [ _9 ])
+        (reg:DI 0 ax)) "atomicio.c":115:3 -1
+     (nil))
+(insn 33 32 34 4 (set (mem:SI (reg/f:DI 83 [ _9 ]) [5 *_9+0 S4 A32])
+        (const_int 22 [0x16])) "atomicio.c":115:9 -1
+     (nil))
+(debug_insn 34 33 35 4 (debug_marker) "atomicio.c":116:3 -1
+     (nil))
+(jump_insn 35 34 36 4 (set (pc)
+        (label_ref 48)) "atomicio.c":116:10 -1
+     (nil)
+ -> 48)
+(barrier 36 35 37)
+(code_label 37 36 38 5 80 (nil) [1 uses])
+(note 38 37 39 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 39 38 40 5 (set (reg:DI 37 r9)
+        (const_int 0 [0])) -1
+     (nil))
+(insn 40 39 41 5 (set (reg:DI 36 r8)
+        (const_int 0 [0])) -1
+     (nil))
+(insn 41 40 42 5 (set (reg:SI 2 cx)
+        (reg/v:SI 88 [ iovcnt ])) -1
+     (nil))
+(insn 42 41 43 5 (set (reg:DI 1 dx)
+        (reg/v/f:DI 87 [ _iov ])) -1
+     (nil))
+(insn 43 42 44 5 (set (reg:SI 4 si)
+        (reg/v:SI 86 [ fd ])) -1
+     (nil))
+(insn 44 43 45 5 (set (reg:DI 5 di)
+        (reg/v/f:DI 85 [ f ])) -1
+     (nil))
+(call_insn/j 45 44 46 5 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("atomiciov6.part.0") [flags 0x3]  <function_decl 0x7fca1ca93800 atomiciov6.part.0>) [0 atomiciov6.part.0 S1 A8])
+            (const_int 0 [0]))) -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("atomiciov6.part.0") [flags 0x3]  <function_decl 0x7fca1ca93800 atomiciov6.part.0>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (expr_list:SI (use (reg:SI 2 cx))
+                    (expr_list:DI (use (reg:DI 36 r8))
+                        (expr_list:DI (use (reg:DI 37 r9))
+                            (nil))))))))
+(barrier 46 45 48)
+(code_label 48 46 49 6 81 (nil) [1 uses])
+(note 49 48 7 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 7 49 50 6 (set (reg:DI 84 [ <retval> ])
+        (const_int 0 [0])) "atomicio.c":116:10 -1
+     (nil))
+(debug_insn 50 7 51 6 (var_location:DI f (clobber (const_int 0 [0]))) "atomicio.c":178:9 -1
+     (nil))
+(debug_insn 51 50 52 6 (var_location:SI fd (clobber (const_int 0 [0]))) "atomicio.c":178:9 -1
+     (nil))
+(debug_insn 52 51 53 6 (var_location:DI _iov (clobber (const_int 0 [0]))) "atomicio.c":178:9 -1
+     (nil))
+(debug_insn 53 52 54 6 (var_location:SI iovcnt (clobber (const_int 0 [0]))) "atomicio.c":178:9 -1
+     (nil))
+(debug_insn 54 53 55 6 (var_location:DI cb (clobber (const_int 0 [0]))) "atomicio.c":178:9 -1
+     (nil))
+(debug_insn 55 54 59 6 (var_location:DI cb_arg (clobber (const_int 0 [0]))) "atomicio.c":178:9 -1
+     (nil))
+(insn 59 55 60 6 (set (reg/i:DI 0 ax)
+        (reg:DI 84 [ <retval> ])) "atomicio.c":179:1 -1
+     (nil))
+(insn 60 59 0 6 (use (reg/i:DI 0 ax)) "atomicio.c":179:1 -1
+     (nil))

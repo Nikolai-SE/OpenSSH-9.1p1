@@ -1,0 +1,1524 @@
+
+;; Function xmalloc (xmalloc, funcdef_no=77, decl_uid=6868, cgraph_uid=78, symbol_order=77)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Edge 5->7 redirected to 8
+deleting block 7
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (reg/v:DI 83 [ size ])
+        (reg:DI 5 di [ size ])) "xmalloc.c":35:1 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 6 3 7 2 (debug_marker) "xmalloc.c":36:2 -1
+     (nil))
+(debug_insn 7 6 8 2 (debug_marker) "xmalloc.c":38:2 -1
+     (nil))
+(insn 8 7 9 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:DI 83 [ size ])
+            (const_int 0 [0]))) "xmalloc.c":38:5 -1
+     (nil))
+(jump_insn 9 8 10 2 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 24)
+            (pc))) "xmalloc.c":38:5 -1
+     (int_list:REG_BR_PROB 1073312332 (nil))
+ -> 24)
+(note 10 9 11 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 11 10 12 4 (debug_marker) "xmalloc.c":39:3 -1
+     (nil))
+(insn 12 11 13 4 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "xmalloc.c":39:3 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 13 12 14 4 (set (reg/f:DI 84)
+        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7fd823b45900 *.LC1>)) "xmalloc.c":39:3 -1
+     (nil))
+(insn 14 13 15 4 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [1  S8 A64])
+        (reg/f:DI 84)) "xmalloc.c":39:3 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 15 14 16 4 (set (reg:DI 37 r9)
+        (const_int 0 [0])) "xmalloc.c":39:3 -1
+     (nil))
+(insn 16 15 17 4 (set (reg:SI 36 r8)
+        (const_int 1 [0x1])) "xmalloc.c":39:3 -1
+     (nil))
+(insn 17 16 18 4 (set (reg:SI 2 cx)
+        (const_int 0 [0])) "xmalloc.c":39:3 -1
+     (nil))
+(insn 18 17 19 4 (set (reg:SI 1 dx)
+        (const_int 39 [0x27])) "xmalloc.c":39:3 -1
+     (nil))
+(insn 19 18 20 4 (set (reg:DI 4 si)
+        (symbol_ref:DI ("__func__.4") [flags 0x2]  <var_decl 0x7fd823a42ea0 __func__>)) "xmalloc.c":39:3 -1
+     (nil))
+(insn 20 19 21 4 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7fd823b45870 *.LC0>)) "xmalloc.c":39:3 -1
+     (nil))
+(insn 21 20 22 4 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "xmalloc.c":39:3 -1
+     (nil))
+(call_insn 22 21 23 4 (call (mem:QI (symbol_ref:DI ("sshfatal") [flags 0x41]  <function_decl 0x7fd823b13b00 sshfatal>) [0 sshfatal S1 A8])
+        (const_int 16 [0x10])) "xmalloc.c":39:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshfatal") [flags 0x41]  <function_decl 0x7fd823b13b00 sshfatal>)
+        (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+            (expr_list:REG_NORETURN (const_int 0 [0])
+                (nil))))
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (expr_list:SI (use (reg:SI 1 dx))
+                    (expr_list:SI (use (reg:SI 2 cx))
+                        (expr_list:SI (use (reg:SI 36 r8))
+                            (expr_list:DI (use (reg:DI 37 r9))
+                                (nil)))))))))
+(barrier 23 22 24)
+(code_label 24 23 25 5 2 (nil) [1 uses])
+(note 25 24 26 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 26 25 27 5 (debug_marker) "xmalloc.c":40:2 -1
+     (nil))
+(insn 27 26 28 5 (set (reg:DI 5 di)
+        (reg/v:DI 83 [ size ])) "xmalloc.c":40:8 -1
+     (nil))
+(call_insn 28 27 29 5 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x7fd823f6a400 malloc>) [0 __builtin_malloc S1 A8])
+            (const_int 0 [0]))) "xmalloc.c":40:8 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x7fd823f6a400 malloc>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 29 28 30 5 (set (reg/f:DI 85)
+        (reg:DI 0 ax)) "xmalloc.c":40:8 -1
+     (expr_list:REG_NOALIAS (reg/f:DI 85)
+        (nil)))
+(insn 30 29 31 5 (set (reg/v/f:DI 82 [ <retval> ])
+        (reg/f:DI 85)) "xmalloc.c":40:8 -1
+     (nil))
+(debug_insn 31 30 32 5 (var_location:DI ptr (reg/v/f:DI 82 [ <retval> ])) "xmalloc.c":40:8 -1
+     (nil))
+(debug_insn 32 31 33 5 (debug_marker) "xmalloc.c":41:2 -1
+     (nil))
+(insn 33 32 34 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 82 [ <retval> ])
+            (const_int 0 [0]))) "xmalloc.c":41:5 -1
+     (nil))
+(jump_insn 34 33 35 5 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 54)
+            (pc))) "xmalloc.c":41:5 736 {*jcc}
+     (int_list:REG_BR_PROB 1073312332 (nil))
+ -> 54)
+(note 35 34 36 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 36 35 37 6 (debug_marker) "xmalloc.c":42:3 -1
+     (nil))
+(insn 37 36 38 6 (set (mem:DI (pre_dec:DI (reg/f:DI 7 sp)) [2  S8 A64])
+        (reg/v:DI 83 [ size ])) "xmalloc.c":42:3 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 38 37 39 6 (set (reg/f:DI 86)
+        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7fd823b45990 *.LC2>)) "xmalloc.c":42:3 -1
+     (nil))
+(insn 39 38 40 6 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [1  S8 A64])
+        (reg/f:DI 86)) "xmalloc.c":42:3 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 40 39 41 6 (set (reg:DI 37 r9)
+        (const_int 0 [0])) "xmalloc.c":42:3 -1
+     (nil))
+(insn 41 40 42 6 (set (reg:SI 36 r8)
+        (const_int 1 [0x1])) "xmalloc.c":42:3 -1
+     (nil))
+(insn 42 41 43 6 (set (reg:SI 2 cx)
+        (const_int 0 [0])) "xmalloc.c":42:3 -1
+     (nil))
+(insn 43 42 44 6 (set (reg:SI 1 dx)
+        (const_int 42 [0x2a])) "xmalloc.c":42:3 -1
+     (nil))
+(insn 44 43 45 6 (set (reg:DI 4 si)
+        (symbol_ref:DI ("__func__.4") [flags 0x2]  <var_decl 0x7fd823a42ea0 __func__>)) "xmalloc.c":42:3 -1
+     (nil))
+(insn 45 44 46 6 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7fd823b45870 *.LC0>)) "xmalloc.c":42:3 -1
+     (nil))
+(insn 46 45 47 6 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "xmalloc.c":42:3 -1
+     (nil))
+(call_insn 47 46 48 6 (call (mem:QI (symbol_ref:DI ("sshfatal") [flags 0x41]  <function_decl 0x7fd823b13b00 sshfatal>) [0 sshfatal S1 A8])
+        (const_int 16 [0x10])) "xmalloc.c":42:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshfatal") [flags 0x41]  <function_decl 0x7fd823b13b00 sshfatal>)
+        (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+            (expr_list:REG_NORETURN (const_int 0 [0])
+                (nil))))
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (expr_list:SI (use (reg:SI 1 dx))
+                    (expr_list:SI (use (reg:SI 2 cx))
+                        (expr_list:SI (use (reg:SI 36 r8))
+                            (expr_list:DI (use (reg:DI 37 r9))
+                                (nil)))))))))
+(barrier 48 47 54)
+(code_label 54 48 57 8 1 (nil) [1 uses])
+(note 57 54 55 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 55 57 56 8 (set (reg/i:DI 0 ax)
+        (reg/v/f:DI 82 [ <retval> ])) "xmalloc.c":44:1 -1
+     (nil))
+(insn 56 55 0 8 (use (reg/i:DI 0 ax)) "xmalloc.c":44:1 -1
+     (nil))
+
+;; Function xcalloc (xcalloc, funcdef_no=78, decl_uid=6871, cgraph_uid=79, symbol_order=78)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+Purged non-fallthru edges from bb 12
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Edge 2->5 redirected to 6
+Forwarding edge 4->5 to 6 failed.
+Deleted label in block 5.
+Forwarding edge 7->8 to 10 failed.
+Edge 12->14 redirected to 15
+deleting block 14
+
+
+try_optimize_cfg iteration 2
+
+Forwarding edge 4->5 to 6 failed.
+Forwarding edge 7->8 to 10 failed.
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 5 NOTE_INSN_DELETED)
+(note 5 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 5 3 2 (set (reg/v:DI 90 [ nmemb ])
+        (reg:DI 5 di [ nmemb ])) "xmalloc.c":48:1 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v:DI 91 [ size ])
+        (reg:DI 4 si [ size ])) "xmalloc.c":48:1 -1
+     (nil))
+(note 4 3 7 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 7 4 8 2 (debug_marker) "xmalloc.c":49:2 -1
+     (nil))
+(debug_insn 8 7 9 2 (debug_marker) "xmalloc.c":51:2 -1
+     (nil))
+(insn 9 8 10 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:DI 91 [ size ])
+            (const_int 0 [0]))) "xmalloc.c":51:11 -1
+     (nil))
+(insn 10 9 11 2 (set (reg:QI 93)
+        (eq:QI (reg:CCZ 17 flags)
+            (const_int 0 [0]))) "xmalloc.c":51:11 -1
+     (nil))
+(insn 11 10 12 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 93)
+            (const_int 0 [0]))) "xmalloc.c":51:5 -1
+     (nil))
+(jump_insn 12 11 96 2 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 101)
+            (pc))) "xmalloc.c":51:5 736 {*jcc}
+     (int_list:REG_BR_PROB 214756 (nil))
+ -> 101)
+(note 96 12 13 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 13 96 14 4 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:DI 90 [ nmemb ])
+            (const_int 0 [0]))) "xmalloc.c":51:25 -1
+     (nil))
+(insn 14 13 15 4 (set (reg:QI 95)
+        (eq:QI (reg:CCZ 17 flags)
+            (const_int 0 [0]))) "xmalloc.c":51:25 -1
+     (nil))
+(insn 15 14 16 4 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 95)
+            (const_int 0 [0]))) "xmalloc.c":51:5 -1
+     (nil))
+(jump_insn 16 15 97 4 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 32)
+            (pc))) "xmalloc.c":51:5 -1
+     (int_list:REG_BR_PROB 1073527044 (nil))
+ -> 32)
+(note 97 16 101 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(code_label 101 97 18 6 15 (nil) [1 uses])
+(note 18 101 19 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 19 18 20 6 (debug_marker) "xmalloc.c":52:3 -1
+     (nil))
+(insn 20 19 21 6 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "xmalloc.c":52:3 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 21 20 22 6 (set (reg/f:DI 96)
+        (symbol_ref/f:DI ("*.LC3") [flags 0x2]  <var_decl 0x7fd823b59240 *.LC3>)) "xmalloc.c":52:3 -1
+     (nil))
+(insn 22 21 23 6 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [1  S8 A64])
+        (reg/f:DI 96)) "xmalloc.c":52:3 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 23 22 24 6 (set (reg:DI 37 r9)
+        (const_int 0 [0])) "xmalloc.c":52:3 -1
+     (nil))
+(insn 24 23 25 6 (set (reg:SI 36 r8)
+        (const_int 1 [0x1])) "xmalloc.c":52:3 -1
+     (nil))
+(insn 25 24 26 6 (set (reg:SI 2 cx)
+        (const_int 0 [0])) "xmalloc.c":52:3 -1
+     (nil))
+(insn 26 25 27 6 (set (reg:SI 1 dx)
+        (const_int 52 [0x34])) "xmalloc.c":52:3 -1
+     (nil))
+(insn 27 26 28 6 (set (reg:DI 4 si)
+        (symbol_ref:DI ("__func__.3") [flags 0x2]  <var_decl 0x7fd823b22090 __func__>)) "xmalloc.c":52:3 -1
+     (nil))
+(insn 28 27 29 6 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7fd823b45870 *.LC0>)) "xmalloc.c":52:3 -1
+     (nil))
+(insn 29 28 30 6 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "xmalloc.c":52:3 -1
+     (nil))
+(call_insn 30 29 31 6 (call (mem:QI (symbol_ref:DI ("sshfatal") [flags 0x41]  <function_decl 0x7fd823b13b00 sshfatal>) [0 sshfatal S1 A8])
+        (const_int 16 [0x10])) "xmalloc.c":52:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshfatal") [flags 0x41]  <function_decl 0x7fd823b13b00 sshfatal>)
+        (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+            (expr_list:REG_NORETURN (const_int 0 [0])
+                (nil))))
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (expr_list:SI (use (reg:SI 1 dx))
+                    (expr_list:SI (use (reg:SI 2 cx))
+                        (expr_list:SI (use (reg:SI 36 r8))
+                            (expr_list:DI (use (reg:DI 37 r9))
+                                (nil)))))))))
+(barrier 31 30 32)
+(code_label 32 31 33 7 9 (nil) [1 uses])
+(note 33 32 34 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 34 33 35 7 (debug_marker) "xmalloc.c":53:2 -1
+     (nil))
+(insn 35 34 36 7 (set (reg:DI 86 [ _4+8 ])
+        (const_int 0 [0])) "xmalloc.c":53:23 -1
+     (nil))
+(insn 36 35 37 7 (parallel [
+            (set (reg:CCO 17 flags)
+                (eq:CCO (mult:TI (zero_extend:TI (reg/v:DI 91 [ size ]))
+                        (zero_extend:TI (reg/v:DI 90 [ nmemb ])))
+                    (zero_extend:TI (mult:DI (reg/v:DI 91 [ size ])
+                            (reg/v:DI 90 [ nmemb ])))))
+            (set (reg:DI 97)
+                (mult:DI (reg/v:DI 91 [ size ])
+                    (reg/v:DI 90 [ nmemb ])))
+            (clobber (scratch:DI))
+        ]) "xmalloc.c":53:23 -1
+     (nil))
+(jump_insn 37 36 98 7 (set (pc)
+        (if_then_else (eq (reg:CCO 17 flags)
+                (const_int 0 [0]))
+            (label_ref 40)
+            (pc))) "xmalloc.c":53:23 -1
+     (int_list:REG_BR_PROB 536868 (nil))
+ -> 40)
+(note 98 37 38 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 38 98 39 8 (set (pc)
+        (label_ref 42)) "xmalloc.c":53:23 -1
+     (nil)
+ -> 42)
+(barrier 39 38 40)
+(code_label 40 39 99 9 12 (nil) [1 uses])
+(note 99 40 41 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 41 99 42 9 (set (reg:DI 86 [ _4+8 ])
+        (const_int 1 [0x1])) "xmalloc.c":53:23 -1
+     (nil))
+(code_label 42 41 100 10 11 (nil) [1 uses])
+(note 100 42 43 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 43 100 44 10 (set (reg:DI 85 [ _4 ])
+        (reg:DI 97)) "xmalloc.c":53:23 -1
+     (nil))
+(insn 44 43 45 10 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:DI 86 [ _4+8 ])
+            (const_int 0 [0]))) "xmalloc.c":53:5 -1
+     (nil))
+(jump_insn 45 44 46 10 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 60)
+            (pc))) "xmalloc.c":53:5 -1
+     (int_list:REG_BR_PROB 1073312332 (nil))
+ -> 60)
+(note 46 45 47 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 47 46 48 11 (debug_marker) "xmalloc.c":54:3 -1
+     (nil))
+(insn 48 47 49 11 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "xmalloc.c":54:3 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 49 48 50 11 (set (reg/f:DI 98)
+        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7fd823b592d0 *.LC4>)) "xmalloc.c":54:3 -1
+     (nil))
+(insn 50 49 51 11 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [1  S8 A64])
+        (reg/f:DI 98)) "xmalloc.c":54:3 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 51 50 52 11 (set (reg:DI 37 r9)
+        (const_int 0 [0])) "xmalloc.c":54:3 -1
+     (nil))
+(insn 52 51 53 11 (set (reg:SI 36 r8)
+        (const_int 1 [0x1])) "xmalloc.c":54:3 -1
+     (nil))
+(insn 53 52 54 11 (set (reg:SI 2 cx)
+        (const_int 0 [0])) "xmalloc.c":54:3 -1
+     (nil))
+(insn 54 53 55 11 (set (reg:SI 1 dx)
+        (const_int 54 [0x36])) "xmalloc.c":54:3 -1
+     (nil))
+(insn 55 54 56 11 (set (reg:DI 4 si)
+        (symbol_ref:DI ("__func__.3") [flags 0x2]  <var_decl 0x7fd823b22090 __func__>)) "xmalloc.c":54:3 -1
+     (nil))
+(insn 56 55 57 11 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7fd823b45870 *.LC0>)) "xmalloc.c":54:3 -1
+     (nil))
+(insn 57 56 58 11 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "xmalloc.c":54:3 -1
+     (nil))
+(call_insn 58 57 59 11 (call (mem:QI (symbol_ref:DI ("sshfatal") [flags 0x41]  <function_decl 0x7fd823b13b00 sshfatal>) [0 sshfatal S1 A8])
+        (const_int 16 [0x10])) "xmalloc.c":54:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshfatal") [flags 0x41]  <function_decl 0x7fd823b13b00 sshfatal>)
+        (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+            (expr_list:REG_NORETURN (const_int 0 [0])
+                (nil))))
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (expr_list:SI (use (reg:SI 1 dx))
+                    (expr_list:SI (use (reg:SI 2 cx))
+                        (expr_list:SI (use (reg:SI 36 r8))
+                            (expr_list:DI (use (reg:DI 37 r9))
+                                (nil)))))))))
+(barrier 59 58 60)
+(code_label 60 59 61 12 13 (nil) [1 uses])
+(note 61 60 62 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 62 61 63 12 (debug_marker) "xmalloc.c":55:2 -1
+     (nil))
+(insn 63 62 64 12 (set (reg:DI 4 si)
+        (reg/v:DI 91 [ size ])) "xmalloc.c":55:8 -1
+     (nil))
+(insn 64 63 65 12 (set (reg:DI 5 di)
+        (reg/v:DI 90 [ nmemb ])) "xmalloc.c":55:8 -1
+     (nil))
+(call_insn 65 64 66 12 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("calloc") [flags 0x41]  <function_decl 0x7fd823f5c300 calloc>) [0 __builtin_calloc S1 A8])
+            (const_int 0 [0]))) "xmalloc.c":55:8 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("calloc") [flags 0x41]  <function_decl 0x7fd823f5c300 calloc>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 66 65 67 12 (set (reg/f:DI 99)
+        (reg:DI 0 ax)) "xmalloc.c":55:8 -1
+     (expr_list:REG_NOALIAS (reg/f:DI 99)
+        (nil)))
+(insn 67 66 68 12 (set (reg/v/f:DI 89 [ <retval> ])
+        (reg/f:DI 99)) "xmalloc.c":55:8 -1
+     (nil))
+(debug_insn 68 67 69 12 (var_location:DI ptr (reg/v/f:DI 89 [ <retval> ])) "xmalloc.c":55:8 -1
+     (nil))
+(debug_insn 69 68 70 12 (debug_marker) "xmalloc.c":56:2 -1
+     (nil))
+(insn 70 69 71 12 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 89 [ <retval> ])
+            (const_int 0 [0]))) "xmalloc.c":56:5 -1
+     (nil))
+(jump_insn 71 70 72 12 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 92)
+            (pc))) "xmalloc.c":56:5 736 {*jcc}
+     (int_list:REG_BR_PROB 1073312332 (nil))
+ -> 92)
+(note 72 71 73 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 73 72 74 13 (debug_marker) "xmalloc.c":57:3 -1
+     (nil))
+(insn 74 73 75 13 (parallel [
+            (set (reg:DI 100)
+                (mult:DI (reg/v:DI 91 [ size ])
+                    (reg/v:DI 90 [ nmemb ])))
+            (clobber (reg:CC 17 flags))
+        ]) "xmalloc.c":57:3 -1
+     (nil))
+(insn 75 74 76 13 (set (mem:DI (pre_dec:DI (reg/f:DI 7 sp)) [2  S8 A64])
+        (reg:DI 100)) "xmalloc.c":57:3 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 76 75 77 13 (set (reg/f:DI 101)
+        (symbol_ref/f:DI ("*.LC5") [flags 0x2]  <var_decl 0x7fd823b59360 *.LC5>)) "xmalloc.c":57:3 -1
+     (nil))
+(insn 77 76 78 13 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [1  S8 A64])
+        (reg/f:DI 101)) "xmalloc.c":57:3 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 78 77 79 13 (set (reg:DI 37 r9)
+        (const_int 0 [0])) "xmalloc.c":57:3 -1
+     (nil))
+(insn 79 78 80 13 (set (reg:SI 36 r8)
+        (const_int 1 [0x1])) "xmalloc.c":57:3 -1
+     (nil))
+(insn 80 79 81 13 (set (reg:SI 2 cx)
+        (const_int 0 [0])) "xmalloc.c":57:3 -1
+     (nil))
+(insn 81 80 82 13 (set (reg:SI 1 dx)
+        (const_int 57 [0x39])) "xmalloc.c":57:3 -1
+     (nil))
+(insn 82 81 83 13 (set (reg:DI 4 si)
+        (symbol_ref:DI ("__func__.3") [flags 0x2]  <var_decl 0x7fd823b22090 __func__>)) "xmalloc.c":57:3 -1
+     (nil))
+(insn 83 82 84 13 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7fd823b45870 *.LC0>)) "xmalloc.c":57:3 -1
+     (nil))
+(insn 84 83 85 13 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "xmalloc.c":57:3 -1
+     (nil))
+(call_insn 85 84 86 13 (call (mem:QI (symbol_ref:DI ("sshfatal") [flags 0x41]  <function_decl 0x7fd823b13b00 sshfatal>) [0 sshfatal S1 A8])
+        (const_int 16 [0x10])) "xmalloc.c":57:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshfatal") [flags 0x41]  <function_decl 0x7fd823b13b00 sshfatal>)
+        (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+            (expr_list:REG_NORETURN (const_int 0 [0])
+                (nil))))
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (expr_list:SI (use (reg:SI 1 dx))
+                    (expr_list:SI (use (reg:SI 2 cx))
+                        (expr_list:SI (use (reg:SI 36 r8))
+                            (expr_list:DI (use (reg:DI 37 r9))
+                                (nil)))))))))
+(barrier 86 85 92)
+(code_label 92 86 95 15 8 (nil) [1 uses])
+(note 95 92 93 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(insn 93 95 94 15 (set (reg/i:DI 0 ax)
+        (reg/v/f:DI 89 [ <retval> ])) "xmalloc.c":60:1 -1
+     (nil))
+(insn 94 93 0 15 (use (reg/i:DI 0 ax)) "xmalloc.c":60:1 -1
+     (nil))
+
+;; Function xreallocarray (xreallocarray, funcdef_no=79, decl_uid=6875, cgraph_uid=80, symbol_order=79)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Edge 2->5 redirected to 6
+deleting block 5
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 6 NOTE_INSN_DELETED)
+(note 6 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 6 3 2 (set (reg/v/f:DI 83 [ ptr ])
+        (reg:DI 5 di [ ptr ])) "xmalloc.c":64:1 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v:DI 84 [ nmemb ])
+        (reg:DI 4 si [ nmemb ])) "xmalloc.c":64:1 -1
+     (nil))
+(insn 4 3 5 2 (set (reg/v:DI 85 [ size ])
+        (reg:DI 1 dx [ size ])) "xmalloc.c":64:1 -1
+     (nil))
+(note 5 4 8 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 8 5 9 2 (debug_marker) "xmalloc.c":65:2 -1
+     (nil))
+(debug_insn 9 8 10 2 (debug_marker) "xmalloc.c":67:2 -1
+     (nil))
+(insn 10 9 11 2 (set (reg:DI 1 dx)
+        (reg/v:DI 85 [ size ])) "xmalloc.c":67:12 -1
+     (nil))
+(insn 11 10 12 2 (set (reg:DI 4 si)
+        (reg/v:DI 84 [ nmemb ])) "xmalloc.c":67:12 -1
+     (nil))
+(insn 12 11 13 2 (set (reg:DI 5 di)
+        (reg/v/f:DI 83 [ ptr ])) "xmalloc.c":67:12 -1
+     (nil))
+(call_insn 13 12 14 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("reallocarray") [flags 0x41]  <function_decl 0x7fd823d77400 reallocarray>) [0 reallocarray S1 A8])
+            (const_int 0 [0]))) "xmalloc.c":67:12 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("reallocarray") [flags 0x41]  <function_decl 0x7fd823d77400 reallocarray>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(insn 14 13 15 2 (set (reg/v/f:DI 82 [ <retval> ])
+        (reg:DI 0 ax)) "xmalloc.c":67:12 -1
+     (nil))
+(debug_insn 15 14 16 2 (var_location:DI new_ptr (reg/v/f:DI 82 [ <retval> ])) "xmalloc.c":67:12 -1
+     (nil))
+(debug_insn 16 15 17 2 (debug_marker) "xmalloc.c":68:2 -1
+     (nil))
+(insn 17 16 18 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 82 [ <retval> ])
+            (const_int 0 [0]))) "xmalloc.c":68:5 -1
+     (nil))
+(jump_insn 18 17 19 2 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 40)
+            (pc))) "xmalloc.c":68:5 736 {*jcc}
+     (int_list:REG_BR_PROB 1073312332 (nil))
+ -> 40)
+(note 19 18 20 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 20 19 21 4 (debug_marker) "xmalloc.c":69:3 -1
+     (nil))
+(insn 21 20 22 4 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "xmalloc.c":69:3 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 22 21 23 4 (set (mem:DI (pre_dec:DI (reg/f:DI 7 sp)) [2  S8 A64])
+        (reg/v:DI 85 [ size ])) "xmalloc.c":69:3 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 23 22 24 4 (set (mem:DI (pre_dec:DI (reg/f:DI 7 sp)) [2  S8 A64])
+        (reg/v:DI 84 [ nmemb ])) "xmalloc.c":69:3 -1
+     (expr_list:REG_ARGS_SIZE (const_int 24 [0x18])
+        (nil)))
+(insn 24 23 25 4 (set (reg/f:DI 86)
+        (symbol_ref/f:DI ("*.LC6") [flags 0x2]  <var_decl 0x7fd823b59c60 *.LC6>)) "xmalloc.c":69:3 -1
+     (nil))
+(insn 25 24 26 4 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [1  S8 A64])
+        (reg/f:DI 86)) "xmalloc.c":69:3 -1
+     (expr_list:REG_ARGS_SIZE (const_int 32 [0x20])
+        (nil)))
+(insn 26 25 27 4 (set (reg:DI 37 r9)
+        (const_int 0 [0])) "xmalloc.c":69:3 -1
+     (nil))
+(insn 27 26 28 4 (set (reg:SI 36 r8)
+        (const_int 1 [0x1])) "xmalloc.c":69:3 -1
+     (nil))
+(insn 28 27 29 4 (set (reg:SI 2 cx)
+        (const_int 0 [0])) "xmalloc.c":69:3 -1
+     (nil))
+(insn 29 28 30 4 (set (reg:SI 1 dx)
+        (const_int 69 [0x45])) "xmalloc.c":69:3 -1
+     (nil))
+(insn 30 29 31 4 (set (reg:DI 4 si)
+        (symbol_ref:DI ("__func__.2") [flags 0x2]  <var_decl 0x7fd823b22240 __func__>)) "xmalloc.c":69:3 -1
+     (nil))
+(insn 31 30 32 4 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7fd823b45870 *.LC0>)) "xmalloc.c":69:3 -1
+     (nil))
+(insn 32 31 33 4 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "xmalloc.c":69:3 -1
+     (nil))
+(call_insn 33 32 34 4 (call (mem:QI (symbol_ref:DI ("sshfatal") [flags 0x41]  <function_decl 0x7fd823b13b00 sshfatal>) [0 sshfatal S1 A8])
+        (const_int 32 [0x20])) "xmalloc.c":69:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshfatal") [flags 0x41]  <function_decl 0x7fd823b13b00 sshfatal>)
+        (expr_list:REG_ARGS_SIZE (const_int 32 [0x20])
+            (expr_list:REG_NORETURN (const_int 0 [0])
+                (nil))))
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (expr_list:SI (use (reg:SI 1 dx))
+                    (expr_list:SI (use (reg:SI 2 cx))
+                        (expr_list:SI (use (reg:SI 36 r8))
+                            (expr_list:DI (use (reg:DI 37 r9))
+                                (nil)))))))))
+(barrier 34 33 40)
+(code_label 40 34 43 6 19 (nil) [1 uses])
+(note 43 40 41 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 41 43 42 6 (set (reg/i:DI 0 ax)
+        (reg/v/f:DI 82 [ <retval> ])) "xmalloc.c":72:1 -1
+     (nil))
+(insn 42 41 0 6 (use (reg/i:DI 0 ax)) "xmalloc.c":72:1 -1
+     (nil))
+
+;; Function xrecallocarray (xrecallocarray, funcdef_no=80, decl_uid=6880, cgraph_uid=81, symbol_order=80)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Edge 2->5 redirected to 6
+deleting block 5
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 7 NOTE_INSN_DELETED)
+(note 7 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 7 3 2 (set (reg/v/f:DI 83 [ ptr ])
+        (reg:DI 5 di [ ptr ])) "xmalloc.c":76:1 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v:DI 84 [ onmemb ])
+        (reg:DI 4 si [ onmemb ])) "xmalloc.c":76:1 -1
+     (nil))
+(insn 4 3 5 2 (set (reg/v:DI 85 [ nmemb ])
+        (reg:DI 1 dx [ nmemb ])) "xmalloc.c":76:1 -1
+     (nil))
+(insn 5 4 6 2 (set (reg/v:DI 86 [ size ])
+        (reg:DI 2 cx [ size ])) "xmalloc.c":76:1 -1
+     (nil))
+(note 6 5 9 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 9 6 10 2 (debug_marker) "xmalloc.c":77:2 -1
+     (nil))
+(debug_insn 10 9 11 2 (debug_marker) "xmalloc.c":79:2 -1
+     (nil))
+(insn 11 10 12 2 (set (reg:DI 2 cx)
+        (reg/v:DI 86 [ size ])) "xmalloc.c":79:12 -1
+     (nil))
+(insn 12 11 13 2 (set (reg:DI 1 dx)
+        (reg/v:DI 85 [ nmemb ])) "xmalloc.c":79:12 -1
+     (nil))
+(insn 13 12 14 2 (set (reg:DI 4 si)
+        (reg/v:DI 84 [ onmemb ])) "xmalloc.c":79:12 -1
+     (nil))
+(insn 14 13 15 2 (set (reg:DI 5 di)
+        (reg/v/f:DI 83 [ ptr ])) "xmalloc.c":79:12 -1
+     (nil))
+(call_insn 15 14 16 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("recallocarray") [flags 0x41]  <function_decl 0x7fd823ac7600 recallocarray>) [0 recallocarray S1 A8])
+            (const_int 0 [0]))) "xmalloc.c":79:12 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("recallocarray") [flags 0x41]  <function_decl 0x7fd823ac7600 recallocarray>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (expr_list:DI (use (reg:DI 2 cx))
+                    (nil))))))
+(insn 16 15 17 2 (set (reg/v/f:DI 82 [ <retval> ])
+        (reg:DI 0 ax)) "xmalloc.c":79:12 -1
+     (nil))
+(debug_insn 17 16 18 2 (var_location:DI new_ptr (reg/v/f:DI 82 [ <retval> ])) "xmalloc.c":79:12 -1
+     (nil))
+(debug_insn 18 17 19 2 (debug_marker) "xmalloc.c":80:2 -1
+     (nil))
+(insn 19 18 20 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 82 [ <retval> ])
+            (const_int 0 [0]))) "xmalloc.c":80:5 -1
+     (nil))
+(jump_insn 20 19 21 2 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 42)
+            (pc))) "xmalloc.c":80:5 736 {*jcc}
+     (int_list:REG_BR_PROB 1073312332 (nil))
+ -> 42)
+(note 21 20 22 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 22 21 23 4 (debug_marker) "xmalloc.c":81:3 -1
+     (nil))
+(insn 23 22 24 4 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "xmalloc.c":81:3 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 24 23 25 4 (set (mem:DI (pre_dec:DI (reg/f:DI 7 sp)) [2  S8 A64])
+        (reg/v:DI 86 [ size ])) "xmalloc.c":81:3 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 25 24 26 4 (set (mem:DI (pre_dec:DI (reg/f:DI 7 sp)) [2  S8 A64])
+        (reg/v:DI 85 [ nmemb ])) "xmalloc.c":81:3 -1
+     (expr_list:REG_ARGS_SIZE (const_int 24 [0x18])
+        (nil)))
+(insn 26 25 27 4 (set (reg/f:DI 87)
+        (symbol_ref/f:DI ("*.LC7") [flags 0x2]  <var_decl 0x7fd823b79360 *.LC7>)) "xmalloc.c":81:3 -1
+     (nil))
+(insn 27 26 28 4 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [1  S8 A64])
+        (reg/f:DI 87)) "xmalloc.c":81:3 -1
+     (expr_list:REG_ARGS_SIZE (const_int 32 [0x20])
+        (nil)))
+(insn 28 27 29 4 (set (reg:DI 37 r9)
+        (const_int 0 [0])) "xmalloc.c":81:3 -1
+     (nil))
+(insn 29 28 30 4 (set (reg:SI 36 r8)
+        (const_int 1 [0x1])) "xmalloc.c":81:3 -1
+     (nil))
+(insn 30 29 31 4 (set (reg:SI 2 cx)
+        (const_int 0 [0])) "xmalloc.c":81:3 -1
+     (nil))
+(insn 31 30 32 4 (set (reg:SI 1 dx)
+        (const_int 81 [0x51])) "xmalloc.c":81:3 -1
+     (nil))
+(insn 32 31 33 4 (set (reg:DI 4 si)
+        (symbol_ref:DI ("__func__.1") [flags 0x2]  <var_decl 0x7fd823b22480 __func__>)) "xmalloc.c":81:3 -1
+     (nil))
+(insn 33 32 34 4 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7fd823b45870 *.LC0>)) "xmalloc.c":81:3 -1
+     (nil))
+(insn 34 33 35 4 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "xmalloc.c":81:3 -1
+     (nil))
+(call_insn 35 34 36 4 (call (mem:QI (symbol_ref:DI ("sshfatal") [flags 0x41]  <function_decl 0x7fd823b13b00 sshfatal>) [0 sshfatal S1 A8])
+        (const_int 32 [0x20])) "xmalloc.c":81:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshfatal") [flags 0x41]  <function_decl 0x7fd823b13b00 sshfatal>)
+        (expr_list:REG_ARGS_SIZE (const_int 32 [0x20])
+            (expr_list:REG_NORETURN (const_int 0 [0])
+                (nil))))
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (expr_list:SI (use (reg:SI 1 dx))
+                    (expr_list:SI (use (reg:SI 2 cx))
+                        (expr_list:SI (use (reg:SI 36 r8))
+                            (expr_list:DI (use (reg:DI 37 r9))
+                                (nil)))))))))
+(barrier 36 35 42)
+(code_label 42 36 45 6 23 (nil) [1 uses])
+(note 45 42 43 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 43 45 44 6 (set (reg/i:DI 0 ax)
+        (reg/v/f:DI 82 [ <retval> ])) "xmalloc.c":84:1 -1
+     (nil))
+(insn 44 43 0 6 (use (reg/i:DI 0 ax)) "xmalloc.c":84:1 -1
+     (nil))
+
+;; Function xstrdup (xstrdup, funcdef_no=81, decl_uid=6882, cgraph_uid=82, symbol_order=81)
+
+
+;; Generating RTL for gimple basic block 2
+Selected stringop expansion strategy: libcall
+deleting block 4
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (reg/v/f:DI 86 [ str ])
+        (reg:DI 5 di [ str ])) "xmalloc.c":88:1 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 6 3 7 2 (debug_marker) "xmalloc.c":89:2 -1
+     (nil))
+(debug_insn 7 6 8 2 (debug_marker) "xmalloc.c":90:2 -1
+     (nil))
+(debug_insn 8 7 9 2 (debug_marker) "xmalloc.c":92:2 -1
+     (nil))
+(insn 9 8 10 2 (set (reg:DI 5 di)
+        (reg/v/f:DI 86 [ str ])) "xmalloc.c":92:8 -1
+     (nil))
+(call_insn/i 10 9 11 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x7fd823f42500 strlen>) [0 __builtin_strlen S1 A8])
+            (const_int 0 [0]))) "xmalloc.c":92:8 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x7fd823f42500 strlen>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 11 10 12 2 (set (reg:DI 88)
+        (reg:DI 0 ax)) "xmalloc.c":92:8 -1
+     (nil))
+(insn 12 11 13 2 (set (reg:DI 89)
+        (reg:DI 88)) "xmalloc.c":92:8 -1
+     (nil))
+(insn 13 12 14 2 (set (reg:DI 82 [ _1 ])
+        (reg:DI 89)) "xmalloc.c":92:8 -1
+     (nil))
+(insn 14 13 15 2 (parallel [
+            (set (reg/v:DI 83 [ len ])
+                (plus:DI (reg:DI 82 [ _1 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "xmalloc.c":92:6 -1
+     (nil))
+(debug_insn 15 14 16 2 (var_location:DI len (reg/v:DI 83 [ len ])) "xmalloc.c":92:6 -1
+     (nil))
+(debug_insn 16 15 17 2 (debug_marker) "xmalloc.c":93:2 -1
+     (nil))
+(insn 17 16 18 2 (set (reg:DI 5 di)
+        (reg/v:DI 83 [ len ])) "xmalloc.c":93:7 -1
+     (nil))
+(call_insn 18 17 19 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("xmalloc") [flags 0x3]  <function_decl 0x7fd823b08300 xmalloc>) [0 xmalloc S1 A8])
+            (const_int 0 [0]))) "xmalloc.c":93:7 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("xmalloc") [flags 0x3]  <function_decl 0x7fd823b08300 xmalloc>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 19 18 20 2 (set (reg/f:DI 90)
+        (reg:DI 0 ax)) "xmalloc.c":93:7 -1
+     (expr_list:REG_NOALIAS (reg/f:DI 90)
+        (nil)))
+(insn 20 19 21 2 (set (reg/v/f:DI 84 [ cp ])
+        (reg/f:DI 90)) "xmalloc.c":93:7 -1
+     (nil))
+(debug_insn 21 20 22 2 (var_location:DI cp (reg/v/f:DI 84 [ cp ])) "xmalloc.c":93:7 -1
+     (nil))
+(debug_insn 22 21 23 2 (debug_marker) "xmalloc.c":94:2 -1
+     (nil))
+(debug_insn 23 22 24 2 (var_location:DI __dest (reg/v/f:DI 84 [ cp ])) "xmalloc.c":94:2 -1
+     (nil))
+(debug_insn 24 23 25 2 (var_location:DI __src (reg/v/f:DI 86 [ str ])) "xmalloc.c":94:2 -1
+     (nil))
+(debug_insn 25 24 26 2 (var_location:DI __len (reg/v:DI 83 [ len ])) "xmalloc.c":94:2 -1
+     (nil))
+(debug_insn 26 25 27 2 (debug_marker:BLK) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":31:1 -1
+     (nil))
+(debug_insn 27 26 28 2 (debug_marker) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:3 -1
+     (nil))
+(insn 28 27 29 2 (set (reg:DI 91)
+        (reg/v/f:DI 84 [ cp ])) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (nil))
+(insn 29 28 30 2 (set (reg:DI 92)
+        (reg/v/f:DI 86 [ str ])) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (nil))
+(insn 30 29 31 2 (set (reg:DI 93)
+        (reg/v:DI 83 [ len ])) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (nil))
+(insn 31 30 32 2 (set (reg:DI 1 dx)
+        (reg:DI 93)) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (nil))
+(insn 32 31 33 2 (set (reg:DI 4 si)
+        (reg:DI 92)) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (nil))
+(insn 33 32 34 2 (set (reg:DI 5 di)
+        (reg:DI 91)) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (nil))
+(call_insn/j 34 33 35 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("memcpy") [flags 0x41]  <function_decl 0x7fd823f3e700 __builtin_memcpy>) [0 __builtin_memcpy S1 A8])
+            (const_int 0 [0]))) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("memcpy") [flags 0x41]  <function_decl 0x7fd823f3e700 __builtin_memcpy>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(barrier 35 34 0)
+
+;; Function xvasprintf (xvasprintf, funcdef_no=82, decl_uid=6889, cgraph_uid=83, symbol_order=82)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Edge 4->6 redirected to 7
+deleting block 6
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 6 NOTE_INSN_DELETED)
+(note 6 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 6 3 2 (set (reg/v/f:DI 84 [ ret ])
+        (reg:DI 5 di [ ret ])) "xmalloc.c":99:1 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v/f:DI 85 [ fmt ])
+        (reg:DI 4 si [ fmt ])) "xmalloc.c":99:1 -1
+     (nil))
+(insn 4 3 5 2 (set (reg/v/f:DI 86 [ ap ])
+        (reg:DI 1 dx [ ap ])) "xmalloc.c":99:1 -1
+     (nil))
+(note 5 4 8 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 8 5 9 2 (debug_marker) "xmalloc.c":100:2 -1
+     (nil))
+(debug_insn 9 8 10 2 (debug_marker) "xmalloc.c":102:2 -1
+     (nil))
+(debug_insn 10 9 11 2 (var_location:DI __ptr (reg/v/f:DI 84 [ ret ])) "xmalloc.c":102:2 -1
+     (nil))
+(debug_insn 11 10 12 2 (var_location:DI __fmt (reg/v/f:DI 85 [ fmt ])) "xmalloc.c":102:2 -1
+     (nil))
+(debug_insn 12 11 13 2 (var_location:DI __ap (reg/v/f:DI 86 [ ap ])) "xmalloc.c":102:2 -1
+     (nil))
+(debug_insn 13 12 14 2 (debug_marker:BLK) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":210:1 -1
+     (nil))
+(debug_insn 14 13 15 2 (debug_marker) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":213:3 -1
+     (nil))
+(insn 15 14 16 2 (set (reg:DI 2 cx)
+        (reg/v/f:DI 86 [ ap ])) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":213:10 -1
+     (nil))
+(insn 16 15 17 2 (set (reg:DI 1 dx)
+        (reg/v/f:DI 85 [ fmt ])) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":213:10 -1
+     (nil))
+(insn 17 16 18 2 (set (reg:SI 4 si)
+        (const_int 1 [0x1])) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":213:10 -1
+     (nil))
+(insn 18 17 19 2 (set (reg:DI 5 di)
+        (reg/v/f:DI 84 [ ret ])) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":213:10 -1
+     (nil))
+(call_insn 19 18 20 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__vasprintf_chk") [flags 0x41]  <function_decl 0x7fd823a77300 __vasprintf_chk>) [0 __vasprintf_chk S1 A8])
+            (const_int 0 [0]))) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":213:10 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__vasprintf_chk") [flags 0x41]  <function_decl 0x7fd823a77300 __vasprintf_chk>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (expr_list:DI (use (reg:DI 2 cx))
+                    (nil))))))
+(insn 20 19 21 2 (set (reg:SI 83 [ <retval> ])
+        (reg:SI 0 ax)) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":213:10 -1
+     (nil))
+(debug_insn 21 20 22 2 (var_location:DI __ptr (clobber (const_int 0 [0]))) "xmalloc.c":102:6 -1
+     (nil))
+(debug_insn 22 21 23 2 (var_location:DI __fmt (clobber (const_int 0 [0]))) "xmalloc.c":102:6 -1
+     (nil))
+(debug_insn 23 22 24 2 (var_location:DI __ap (clobber (const_int 0 [0]))) "xmalloc.c":102:6 -1
+     (nil))
+(debug_insn 24 23 25 2 (var_location:SI i (reg:SI 83 [ <retval> ])) "xmalloc.c":102:6 -1
+     (nil))
+(debug_insn 25 24 28 2 (debug_marker) "xmalloc.c":103:2 -1
+     (nil))
+(insn 28 25 29 2 (set (reg:CCGOC 17 flags)
+        (compare:CCGOC (reg:SI 83 [ <retval> ])
+            (const_int 0 [0]))) "xmalloc.c":103:5 -1
+     (nil))
+(jump_insn 29 28 30 2 (set (pc)
+        (if_then_else (lt (reg:CCGOC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 33)
+            (pc))) "xmalloc.c":103:5 -1
+     (int_list:REG_BR_PROB 429500 (nil))
+ -> 33)
+(note 30 29 31 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 31 30 32 4 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/f:DI (reg/v/f:DI 84 [ ret ]) [1 *ret_3(D)+0 S8 A64])
+            (const_int 0 [0]))) "xmalloc.c":103:12 -1
+     (nil))
+(jump_insn 32 31 33 4 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 57)
+            (pc))) "xmalloc.c":103:12 736 {*jcc}
+     (int_list:REG_BR_PROB 1073312332 (nil))
+ -> 57)
+(code_label 33 32 34 5 30 (nil) [1 uses])
+(note 34 33 35 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 35 34 36 5 (var_location:DI ret (reg/v/f:DI 84 [ ret ])) -1
+     (nil))
+(debug_insn 36 35 37 5 (var_location:DI fmt (reg/v/f:DI 85 [ fmt ])) -1
+     (nil))
+(debug_insn 37 36 38 5 (var_location:DI ap (reg/v/f:DI 86 [ ap ])) -1
+     (nil))
+(debug_insn 38 37 39 5 (debug_marker:BLK) "xmalloc.c":98:1 -1
+     (nil))
+(debug_insn 39 38 40 5 (debug_marker) "xmalloc.c":104:3 -1
+     (nil))
+(insn 40 39 41 5 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "xmalloc.c":104:3 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 41 40 42 5 (set (reg/f:DI 87)
+        (symbol_ref/f:DI ("*.LC8") [flags 0x2]  <var_decl 0x7fd823b8f870 *.LC8>)) "xmalloc.c":104:3 -1
+     (nil))
+(insn 42 41 43 5 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [1  S8 A64])
+        (reg/f:DI 87)) "xmalloc.c":104:3 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 43 42 44 5 (set (reg:DI 37 r9)
+        (const_int 0 [0])) "xmalloc.c":104:3 -1
+     (nil))
+(insn 44 43 45 5 (set (reg:SI 36 r8)
+        (const_int 1 [0x1])) "xmalloc.c":104:3 -1
+     (nil))
+(insn 45 44 46 5 (set (reg:SI 2 cx)
+        (const_int 0 [0])) "xmalloc.c":104:3 -1
+     (nil))
+(insn 46 45 47 5 (set (reg:SI 1 dx)
+        (const_int 104 [0x68])) "xmalloc.c":104:3 -1
+     (nil))
+(insn 47 46 48 5 (set (reg:DI 4 si)
+        (symbol_ref:DI ("__func__.0") [flags 0x2]  <var_decl 0x7fd823b22750 __func__>)) "xmalloc.c":104:3 -1
+     (nil))
+(insn 48 47 49 5 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7fd823b45870 *.LC0>)) "xmalloc.c":104:3 -1
+     (nil))
+(insn 49 48 50 5 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "xmalloc.c":104:3 -1
+     (nil))
+(call_insn 50 49 51 5 (call (mem:QI (symbol_ref:DI ("sshfatal") [flags 0x41]  <function_decl 0x7fd823b13b00 sshfatal>) [0 sshfatal S1 A8])
+        (const_int 16 [0x10])) "xmalloc.c":104:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshfatal") [flags 0x41]  <function_decl 0x7fd823b13b00 sshfatal>)
+        (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+            (expr_list:REG_NORETURN (const_int 0 [0])
+                (nil))))
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (expr_list:SI (use (reg:SI 1 dx))
+                    (expr_list:SI (use (reg:SI 2 cx))
+                        (expr_list:SI (use (reg:SI 36 r8))
+                            (expr_list:DI (use (reg:DI 37 r9))
+                                (nil)))))))))
+(barrier 51 50 57)
+(code_label 57 51 60 7 29 (nil) [1 uses])
+(note 60 57 58 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 58 60 59 7 (set (reg/i:SI 0 ax)
+        (reg:SI 83 [ <retval> ])) "xmalloc.c":106:1 -1
+     (nil))
+(insn 59 58 0 7 (use (reg/i:SI 0 ax)) "xmalloc.c":106:1 -1
+     (nil))
+
+;; Function xasprintf (xasprintf, funcdef_no=83, decl_uid=6885, cgraph_uid=84, symbol_order=83)
+
+Partition 0: size 24 align 8
+	ap
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+Predictions for insn 9 bb 6
+  no prediction heuristics: 50.00%  exec 1073741824 (estimated locally) hit 2147483640 (estimated locally) (200.0%)
+  combined heuristics: 50.00%  exec 1073741824 (estimated locally) hit 2147483640 (estimated locally) (200.0%)
+Predictions for insn 96 bb 7
+  first match heuristics: 99.96%  exec 1072883005 (estimated locally) hit 2145766002 (estimated locally) (200.0%)
+  combined heuristics: 99.96%  exec 1072883005 (estimated locally) hit 2145766002 (estimated locally) (200.0%)
+  noreturn call heuristics: 99.96%  exec 1072883005 (estimated locally) hit 2145766002 (estimated locally) (200.0%)
+
+
+try_optimize_cfg iteration 1
+
+Merging block 5 into block 4...
+Merged blocks 4 and 5.
+Merged 4 and 5 without moving.
+Edge 6->8 redirected to 9
+deleting block 8
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 22 NOTE_INSN_DELETED)
+(note 22 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 22 3 2 (set (reg/v/f:DI 84 [ ret ])
+        (reg:DI 5 di [ ret ])) "xmalloc.c":110:1 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v/f:DI 85 [ fmt ])
+        (reg:DI 4 si [ fmt ])) "xmalloc.c":110:1 -1
+     (nil))
+(insn 4 3 5 2 (set (mem/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int 16 [0x10])) [0  S8 A8])
+        (reg:DI 1 dx)) "xmalloc.c":110:1 -1
+     (nil))
+(insn 5 4 6 2 (set (mem/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int 24 [0x18])) [0  S8 A8])
+        (reg:DI 2 cx)) "xmalloc.c":110:1 -1
+     (nil))
+(insn 6 5 7 2 (set (mem/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int 32 [0x20])) [0  S8 A8])
+        (reg:DI 36 r8)) "xmalloc.c":110:1 -1
+     (nil))
+(insn 7 6 8 2 (set (mem/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int 40 [0x28])) [0  S8 A8])
+        (reg:DI 37 r9)) "xmalloc.c":110:1 -1
+     (nil))
+(insn 8 7 9 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 0 ax)
+            (const_int 0 [0]))) "xmalloc.c":110:1 -1
+     (nil))
+(jump_insn 9 8 103 2 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 18)
+            (pc))) "xmalloc.c":110:1 -1
+     (int_list:REG_BR_PROB 536870916 (nil))
+ -> 18)
+(note 103 9 10 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 10 103 11 3 (set (mem/c:V4SF (plus:DI (reg/f:DI 19 frame)
+                (const_int 48 [0x30])) [0  S16 A128])
+        (reg:V4SF 20 xmm0)) "xmalloc.c":110:1 -1
+     (nil))
+(insn 11 10 12 3 (set (mem/c:V4SF (plus:DI (reg/f:DI 19 frame)
+                (const_int 64 [0x40])) [0  S16 A128])
+        (reg:V4SF 21 xmm1)) "xmalloc.c":110:1 -1
+     (nil))
+(insn 12 11 13 3 (set (mem/c:V4SF (plus:DI (reg/f:DI 19 frame)
+                (const_int 80 [0x50])) [0  S16 A128])
+        (reg:V4SF 22 xmm2)) "xmalloc.c":110:1 -1
+     (nil))
+(insn 13 12 14 3 (set (mem/c:V4SF (plus:DI (reg/f:DI 19 frame)
+                (const_int 96 [0x60])) [0  S16 A128])
+        (reg:V4SF 23 xmm3)) "xmalloc.c":110:1 -1
+     (nil))
+(insn 14 13 15 3 (set (mem/c:V4SF (plus:DI (reg/f:DI 19 frame)
+                (const_int 112 [0x70])) [0  S16 A128])
+        (reg:V4SF 24 xmm4)) "xmalloc.c":110:1 -1
+     (nil))
+(insn 15 14 16 3 (set (mem/c:V4SF (plus:DI (reg/f:DI 19 frame)
+                (const_int 128 [0x80])) [0  S16 A128])
+        (reg:V4SF 25 xmm5)) "xmalloc.c":110:1 -1
+     (nil))
+(insn 16 15 17 3 (set (mem/c:V4SF (plus:DI (reg/f:DI 19 frame)
+                (const_int 144 [0x90])) [0  S16 A128])
+        (reg:V4SF 26 xmm6)) "xmalloc.c":110:1 -1
+     (nil))
+(insn 17 16 18 3 (set (mem/c:V4SF (plus:DI (reg/f:DI 19 frame)
+                (const_int 160 [0xa0])) [0  S16 A128])
+        (reg:V4SF 27 xmm7)) "xmalloc.c":110:1 -1
+     (nil))
+(code_label 18 17 104 4 34 (nil) [1 uses])
+(note 104 18 19 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(note 19 104 20 4 NOTE_INSN_FUNCTION_BEG)
+(insn 20 19 21 4 (set (reg/f:DI 86)
+        (const_int 40 [0x28])) "xmalloc.c":110:1 -1
+     (nil))
+(insn 21 20 24 4 (parallel [
+            (set (mem/v/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                        (const_int -8 [0xfffffffffffffff8])) [3 D.7198+0 S8 A64])
+                (unspec:DI [
+                        (mem/v/f:DI (reg/f:DI 86) [0 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_SET))
+            (set (scratch:DI)
+                (const_int 0 [0]))
+            (clobber (reg:CC 17 flags))
+        ]) "xmalloc.c":110:1 -1
+     (nil))
+(debug_insn 24 21 25 4 (debug_marker) "xmalloc.c":111:2 -1
+     (nil))
+(debug_insn 25 24 26 4 (debug_marker) "xmalloc.c":112:2 -1
+     (nil))
+(debug_insn 26 25 27 4 (debug_marker) "xmalloc.c":114:2 -1
+     (nil))
+(insn 27 26 28 4 (parallel [
+            (set (reg:DI 87)
+                (plus:DI (reg/f:DI 76 virtual-incoming-args)
+                    (const_int 0 [0])))
+            (clobber (reg:CC 17 flags))
+        ]) "xmalloc.c":114:2 -1
+     (nil))
+(insn 28 27 29 4 (set (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [0 MEM[(struct [1] *)&ap].gp_offset+0 S4 A64])
+        (const_int 16 [0x10])) "xmalloc.c":114:2 -1
+     (nil))
+(insn 29 28 30 4 (set (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [0 MEM[(struct [1] *)&ap].fp_offset+0 S4 A32])
+        (const_int 48 [0x30])) "xmalloc.c":114:2 -1
+     (nil))
+(insn 30 29 31 4 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [0 MEM[(struct [1] *)&ap].overflow_arg_area+0 S8 A64])
+        (reg/f:DI 76 virtual-incoming-args)) "xmalloc.c":114:2 -1
+     (nil))
+(insn 31 30 32 4 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [0 MEM[(struct [1] *)&ap].reg_save_area+0 S8 A64])
+        (reg/f:DI 19 frame)) "xmalloc.c":114:2 -1
+     (nil))
+(debug_insn 32 31 33 4 (debug_marker) "xmalloc.c":115:2 -1
+     (nil))
+(debug_insn 33 32 34 4 (var_location:DI ret (reg/v/f:DI 84 [ ret ])) "xmalloc.c":115:2 -1
+     (nil))
+(debug_insn 34 33 35 4 (var_location:DI fmt (reg/v/f:DI 85 [ fmt ])) "xmalloc.c":115:2 -1
+     (nil))
+(debug_insn 35 34 36 4 (var_location:DI ap (plus:DI (reg/f:DI 77 virtual-stack-vars)
+        (const_int -32 [0xffffffffffffffe0]))) "xmalloc.c":115:2 -1
+     (nil))
+(debug_insn 36 35 37 4 (debug_marker:BLK) "xmalloc.c":98:1 -1
+     (nil))
+(debug_insn 37 36 38 4 (debug_marker) "xmalloc.c":100:2 -1
+     (nil))
+(debug_insn 38 37 39 4 (debug_marker) "xmalloc.c":102:2 -1
+     (nil))
+(debug_insn 39 38 40 4 (var_location:DI __ptr (reg/v/f:DI 84 [ ret ])) "xmalloc.c":102:2 -1
+     (nil))
+(debug_insn 40 39 41 4 (var_location:DI __fmt (reg/v/f:DI 85 [ fmt ])) "xmalloc.c":102:2 -1
+     (nil))
+(debug_insn 41 40 42 4 (var_location:DI __ap (plus:DI (reg/f:DI 77 virtual-stack-vars)
+        (const_int -32 [0xffffffffffffffe0]))) "xmalloc.c":102:2 -1
+     (nil))
+(debug_insn 42 41 43 4 (debug_marker:BLK) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":210:1 -1
+     (nil))
+(debug_insn 43 42 44 4 (debug_marker) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":213:3 -1
+     (nil))
+(insn 44 43 45 4 (parallel [
+            (set (reg:DI 88)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -32 [0xffffffffffffffe0])))
+            (clobber (reg:CC 17 flags))
+        ]) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":213:10 -1
+     (nil))
+(insn 45 44 46 4 (set (reg:DI 2 cx)
+        (reg:DI 88)) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":213:10 -1
+     (nil))
+(insn 46 45 47 4 (set (reg:DI 1 dx)
+        (reg/v/f:DI 85 [ fmt ])) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":213:10 -1
+     (nil))
+(insn 47 46 48 4 (set (reg:SI 4 si)
+        (const_int 1 [0x1])) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":213:10 -1
+     (nil))
+(insn 48 47 49 4 (set (reg:DI 5 di)
+        (reg/v/f:DI 84 [ ret ])) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":213:10 -1
+     (nil))
+(call_insn 49 48 50 4 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__vasprintf_chk") [flags 0x41]  <function_decl 0x7fd823a77300 __vasprintf_chk>) [0 __vasprintf_chk S1 A8])
+            (const_int 0 [0]))) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":213:10 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__vasprintf_chk") [flags 0x41]  <function_decl 0x7fd823a77300 __vasprintf_chk>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (expr_list:DI (use (reg:DI 2 cx))
+                    (nil))))))
+(insn 50 49 51 4 (set (reg:SI 83 [ <retval> ])
+        (reg:SI 0 ax)) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":213:10 -1
+     (nil))
+(debug_insn 51 50 52 4 (var_location:DI __ptr (clobber (const_int 0 [0]))) "xmalloc.c":102:6 -1
+     (nil))
+(debug_insn 52 51 53 4 (var_location:DI __fmt (clobber (const_int 0 [0]))) "xmalloc.c":102:6 -1
+     (nil))
+(debug_insn 53 52 54 4 (var_location:DI __ap (clobber (const_int 0 [0]))) "xmalloc.c":102:6 -1
+     (nil))
+(debug_insn 54 53 55 4 (var_location:SI i (reg:SI 83 [ <retval> ])) "xmalloc.c":102:6 -1
+     (nil))
+(debug_insn 55 54 58 4 (debug_marker) "xmalloc.c":103:2 -1
+     (nil))
+(insn 58 55 59 4 (set (reg:CCGOC 17 flags)
+        (compare:CCGOC (reg:SI 83 [ <retval> ])
+            (const_int 0 [0]))) "xmalloc.c":103:5 -1
+     (nil))
+(jump_insn 59 58 60 4 (set (pc)
+        (if_then_else (lt (reg:CCGOC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 63)
+            (pc))) "xmalloc.c":103:5 -1
+     (int_list:REG_BR_PROB 429500 (nil))
+ -> 63)
+(note 60 59 61 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 61 60 62 6 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/f:DI (reg/v/f:DI 84 [ ret ]) [1 *ret_3(D)+0 S8 A64])
+            (const_int 0 [0]))) "xmalloc.c":103:12 -1
+     (nil))
+(jump_insn 62 61 63 6 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 93)
+            (pc))) "xmalloc.c":103:12 736 {*jcc}
+     (int_list:REG_BR_PROB 1073312332 (nil))
+ -> 93)
+(code_label 63 62 64 7 35 (nil) [1 uses])
+(note 64 63 65 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 65 64 66 7 (var_location:DI ret (reg/v/f:DI 84 [ ret ])) -1
+     (nil))
+(debug_insn 66 65 67 7 (var_location:DI fmt (reg/v/f:DI 85 [ fmt ])) -1
+     (nil))
+(debug_insn 67 66 68 7 (var_location:DI ap (plus:DI (reg/f:DI 77 virtual-stack-vars)
+        (const_int -32 [0xffffffffffffffe0]))) -1
+     (nil))
+(debug_insn 68 67 69 7 (debug_marker:BLK) "xmalloc.c":98:1 -1
+     (nil))
+(debug_insn 69 68 70 7 (debug_marker) "xmalloc.c":104:3 -1
+     (nil))
+(insn 70 69 71 7 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "xmalloc.c":104:3 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 71 70 72 7 (set (reg/f:DI 89)
+        (symbol_ref/f:DI ("*.LC8") [flags 0x2]  <var_decl 0x7fd823b8f870 *.LC8>)) "xmalloc.c":104:3 -1
+     (nil))
+(insn 72 71 73 7 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [1  S8 A64])
+        (reg/f:DI 89)) "xmalloc.c":104:3 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 73 72 74 7 (set (reg:DI 37 r9)
+        (const_int 0 [0])) "xmalloc.c":104:3 -1
+     (nil))
+(insn 74 73 75 7 (set (reg:SI 36 r8)
+        (const_int 1 [0x1])) "xmalloc.c":104:3 -1
+     (nil))
+(insn 75 74 76 7 (set (reg:SI 2 cx)
+        (const_int 0 [0])) "xmalloc.c":104:3 -1
+     (nil))
+(insn 76 75 77 7 (set (reg:SI 1 dx)
+        (const_int 104 [0x68])) "xmalloc.c":104:3 -1
+     (nil))
+(insn 77 76 78 7 (set (reg:DI 4 si)
+        (symbol_ref:DI ("__func__.0") [flags 0x2]  <var_decl 0x7fd823b22750 __func__>)) "xmalloc.c":104:3 -1
+     (nil))
+(insn 78 77 79 7 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7fd823b45870 *.LC0>)) "xmalloc.c":104:3 -1
+     (nil))
+(insn 79 78 80 7 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "xmalloc.c":104:3 -1
+     (nil))
+(call_insn 80 79 81 7 (call (mem:QI (symbol_ref:DI ("sshfatal") [flags 0x41]  <function_decl 0x7fd823b13b00 sshfatal>) [0 sshfatal S1 A8])
+        (const_int 16 [0x10])) "xmalloc.c":104:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshfatal") [flags 0x41]  <function_decl 0x7fd823b13b00 sshfatal>)
+        (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+            (expr_list:REG_NORETURN (const_int 0 [0])
+                (nil))))
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (expr_list:SI (use (reg:SI 1 dx))
+                    (expr_list:SI (use (reg:SI 2 cx))
+                        (expr_list:SI (use (reg:SI 36 r8))
+                            (expr_list:DI (use (reg:DI 37 r9))
+                                (nil)))))))))
+(barrier 81 80 93)
+(code_label 93 81 102 9 33 (nil) [1 uses])
+(note 102 93 94 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 94 102 95 9 (set (reg/f:DI 91)
+        (const_int 40 [0x28])) "xmalloc.c":118:1 -1
+     (nil))
+(insn 95 94 96 9 (parallel [
+            (set (reg:CCZ 17 flags)
+                (unspec:CCZ [
+                        (mem/v/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                                (const_int -8 [0xfffffffffffffff8])) [3 D.7198+0 S8 A64])
+                        (mem/v/f:DI (reg/f:DI 91) [0 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_TEST))
+            (clobber (scratch:DI))
+        ]) "xmalloc.c":118:1 -1
+     (nil))
+(jump_insn 96 95 105 9 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 99)
+            (pc))) "xmalloc.c":118:1 -1
+     (int_list:REG_BR_PROB 1073312332 (nil))
+ -> 99)
+(note 105 96 97 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(call_insn 97 105 98 10 (call (mem:QI (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7fd823b97400 __stack_chk_fail>) [0 __stack_chk_fail S1 A8])
+        (const_int 0 [0])) "xmalloc.c":118:1 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7fd823b97400 __stack_chk_fail>)
+        (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+            (expr_list:REG_NORETURN (const_int 0 [0])
+                (expr_list:REG_EH_REGION (const_int 0 [0])
+                    (nil)))))
+    (nil))
+(barrier 98 97 99)
+(code_label 99 98 106 11 37 (nil) [1 uses])
+(note 106 99 100 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 100 106 101 11 (set (reg/i:SI 0 ax)
+        (reg:SI 83 [ <retval> ])) "xmalloc.c":118:1 -1
+     (nil))
+(insn 101 100 0 11 (use (reg/i:SI 0 ax)) "xmalloc.c":118:1 -1
+     (nil))

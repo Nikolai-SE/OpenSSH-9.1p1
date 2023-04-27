@@ -1,0 +1,3503 @@
+
+;; Function sig_winch (sig_winch, funcdef_no=97, decl_uid=8431, cgraph_uid=98, symbol_order=110)
+
+
+;; Generating RTL for gimple basic block 2
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (reg/v:SI 82 [ sig ])
+        (reg:SI 5 di [ sig ])) "progressmeter.c":278:1 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 6 3 7 2 (debug_marker) "progressmeter.c":279:2 -1
+     (nil))
+(insn 7 6 0 2 (set (mem/v/c:SI (symbol_ref:DI ("win_resized") [flags 0x2]  <var_decl 0x7f0180e911b0 win_resized>) [6 win_resized+0 S4 A32])
+        (const_int 1 [0x1])) "progressmeter.c":279:14 -1
+     (nil))
+
+;; Function setscreensize (setscreensize, funcdef_no=98, decl_uid=8433, cgraph_uid=99, symbol_order=111)
+
+Partition 0: size 8 align 2
+	winsize
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+Edge 2->6 redirected to 9
+Edge 3->6 redirected to 10
+Edge 4->6 redirected to 11
+Predictions for insn 46 bb 8
+  first match heuristics: 99.96%  exec 1073741824 (estimated locally) hit 2147483640 (estimated locally) (200.0%)
+  combined heuristics: 99.96%  exec 1073741824 (estimated locally) hit 2147483640 (estimated locally) (200.0%)
+  noreturn call heuristics: 99.96%  exec 1073741824 (estimated locally) hit 2147483640 (estimated locally) (200.0%)
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 11 into block 10...
+Merged blocks 10 and 11.
+Merged 10 and 11 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 8 NOTE_INSN_DELETED)
+(note 8 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 8 3 2 NOTE_INSN_FUNCTION_BEG)
+(insn 3 2 4 2 (set (reg/f:DI 86)
+        (const_int 40 [0x28])) "progressmeter.c":284:1 -1
+     (nil))
+(insn 4 3 10 2 (parallel [
+            (set (mem/v/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                        (const_int -8 [0xfffffffffffffff8])) [8 D.8657+0 S8 A64])
+                (unspec:DI [
+                        (mem/v/f:DI (reg/f:DI 86) [0 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_SET))
+            (set (scratch:DI)
+                (const_int 0 [0]))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":284:1 -1
+     (nil))
+(debug_insn 10 4 11 2 (debug_marker) "progressmeter.c":285:2 -1
+     (nil))
+(debug_insn 11 10 12 2 (debug_marker) "progressmeter.c":287:2 -1
+     (nil))
+(insn 12 11 13 2 (parallel [
+            (set (reg:DI 87)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -16 [0xfffffffffffffff0])))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":287:6 -1
+     (nil))
+(insn 13 12 14 2 (set (reg:DI 1 dx)
+        (reg:DI 87)) "progressmeter.c":287:6 -1
+     (nil))
+(insn 14 13 15 2 (set (reg:DI 4 si)
+        (const_int 21523 [0x5413])) "progressmeter.c":287:6 -1
+     (nil))
+(insn 15 14 16 2 (set (reg:SI 5 di)
+        (const_int 1 [0x1])) "progressmeter.c":287:6 -1
+     (nil))
+(insn 16 15 17 2 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "progressmeter.c":287:6 -1
+     (nil))
+(call_insn 17 16 18 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("ioctl") [flags 0x41]  <function_decl 0x7f0180d93100 ioctl>) [0 ioctl S1 A8])
+            (const_int 0 [0]))) "progressmeter.c":287:6 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("ioctl") [flags 0x41]  <function_decl 0x7f0180d93100 ioctl>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:SI (use (reg:SI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (expr_list:DI (use (reg:DI 1 dx))
+                    (nil))))))
+(insn 18 17 19 2 (set (reg:SI 82 [ _1 ])
+        (reg:SI 0 ax)) "progressmeter.c":287:6 -1
+     (nil))
+(insn 19 18 20 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 82 [ _1 ])
+            (const_int -1 [0xffffffffffffffff]))) "progressmeter.c":287:5 -1
+     (nil))
+(jump_insn 20 19 21 2 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 54)
+            (pc))) "progressmeter.c":287:5 736 {*jcc}
+     (int_list:REG_BR_PROB 365072228 (nil))
+ -> 54)
+(note 21 20 22 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 22 21 23 4 (set (reg:HI 83 [ _2 ])
+        (mem/c:HI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -14 [0xfffffffffffffff2])) [4 winsize.ws_col+0 S2 A16])) "progressmeter.c":288:13 -1
+     (nil))
+(insn 23 22 24 4 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:HI 83 [ _2 ])
+            (const_int 0 [0]))) "progressmeter.c":287:55 -1
+     (nil))
+(jump_insn 24 23 25 4 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 58)
+            (pc))) "progressmeter.c":287:55 736 {*jcc}
+     (int_list:REG_BR_PROB 536870916 (nil))
+ -> 58)
+(note 25 24 26 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 26 25 29 5 (debug_marker) "progressmeter.c":289:3 -1
+     (nil))
+(insn 29 26 30 5 (set (reg:CC 17 flags)
+        (compare:CC (reg:HI 83 [ _2 ])
+            (const_int 512 [0x200]))) "progressmeter.c":289:6 -1
+     (nil))
+(jump_insn 30 29 31 5 (set (pc)
+        (if_then_else (gtu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 62)
+            (pc))) "progressmeter.c":289:6 736 {*jcc}
+     (int_list:REG_BR_PROB 536870916 (nil))
+ -> 62)
+(note 31 30 32 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 32 31 33 6 (debug_marker) "progressmeter.c":292:4 -1
+     (nil))
+(insn 33 32 34 6 (set (reg:SI 88)
+        (zero_extend:SI (reg:HI 83 [ _2 ]))) "progressmeter.c":292:22 -1
+     (nil))
+(insn 34 33 35 6 (set (reg:SI 4 si)
+        (const_int 1 [0x1])) "progressmeter.c":295:11 -1
+     (nil))
+(insn 35 34 36 6 (set (reg:SI 5 di)
+        (reg:SI 88)) "progressmeter.c":295:11 -1
+     (nil))
+(call_insn/u 36 35 37 6 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__addvsi3") [flags 0x41]  <function_decl 0x7f0180ec7400 __addvsi3>) [0  S1 A8])
+            (const_int 0 [0]))) "progressmeter.c":295:11 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__addvsi3") [flags 0x41]  <function_decl 0x7f0180ec7400 __addvsi3>)
+        (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+            (nil)))
+    (expr_list (use (reg:SI 4 si))
+        (expr_list (use (reg:SI 5 di))
+            (nil))))
+(insn 37 36 38 6 (set (reg:SI 89)
+        (reg:SI 0 ax)) "progressmeter.c":295:11 -1
+     (nil))
+(insn 38 37 51 6 (set (reg:SI 85 [ _14 ])
+        (reg:SI 89)) "progressmeter.c":295:11 -1
+     (nil))
+(jump_insn 51 38 52 6 (set (pc)
+        (label_ref 39)) -1
+     (nil)
+ -> 39)
+(barrier 52 51 54)
+(code_label 54 52 53 7 6 (nil) [1 uses])
+(note 53 54 5 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 5 53 55 7 (set (reg:SI 85 [ _14 ])
+        (const_int 81 [0x51])) -1
+     (nil))
+(jump_insn 55 5 56 7 (set (pc)
+        (label_ref 39)) -1
+     (nil)
+ -> 39)
+(barrier 56 55 58)
+(code_label 58 56 57 8 7 (nil) [1 uses])
+(note 57 58 6 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 6 57 59 8 (set (reg:SI 85 [ _14 ])
+        (const_int 81 [0x51])) -1
+     (nil))
+(jump_insn 59 6 60 8 (set (pc)
+        (label_ref 39)) -1
+     (nil)
+ -> 39)
+(barrier 60 59 62)
+(code_label 62 60 61 9 8 (nil) [1 uses])
+(note 61 62 7 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 7 61 39 9 (set (reg:SI 85 [ _14 ])
+        (const_int 513 [0x201])) -1
+     (nil))
+(code_label 39 7 40 10 4 (nil) [3 uses])
+(note 40 39 41 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 41 40 42 10 (debug_marker) "progressmeter.c":295:2 -1
+     (nil))
+(insn 42 41 44 10 (set (mem/c:SI (symbol_ref:DI ("win_size") [flags 0x2]  <var_decl 0x7f0180e91120 win_size>) [6 win_size+0 S4 A32])
+        (reg:SI 85 [ _14 ])) "progressmeter.c":295:11 -1
+     (nil))
+(insn 44 42 45 10 (set (reg/f:DI 90)
+        (const_int 40 [0x28])) "progressmeter.c":296:1 -1
+     (nil))
+(insn 45 44 46 10 (parallel [
+            (set (reg:CCZ 17 flags)
+                (unspec:CCZ [
+                        (mem/v/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                                (const_int -8 [0xfffffffffffffff8])) [8 D.8657+0 S8 A64])
+                        (mem/v/f:DI (reg/f:DI 90) [0 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_TEST))
+            (clobber (scratch:DI))
+        ]) "progressmeter.c":296:1 -1
+     (nil))
+(jump_insn 46 45 63 10 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 49)
+            (pc))) "progressmeter.c":296:1 -1
+     (int_list:REG_BR_PROB 1073312332 (nil))
+ -> 49)
+(note 63 46 47 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(call_insn 47 63 48 12 (call (mem:QI (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7f0180ace100 __stack_chk_fail>) [0 __stack_chk_fail S1 A8])
+        (const_int 0 [0])) "progressmeter.c":296:1 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7f0180ace100 __stack_chk_fail>)
+        (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+            (expr_list:REG_NORETURN (const_int 0 [0])
+                (expr_list:REG_EH_REGION (const_int 0 [0])
+                    (nil)))))
+    (nil))
+(barrier 48 47 49)
+(code_label 49 48 64 13 5 (nil) [1 uses])
+(note 64 49 0 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+
+;; Function sig_alarm (sig_alarm, funcdef_no=94, decl_uid=8435, cgraph_uid=95, symbol_order=107)
+
+
+;; Generating RTL for gimple basic block 2
+deleting block 4
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (reg/v:SI 82 [ ignore ])
+        (reg:SI 5 di [ ignore ])) "progressmeter.c":235:1 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 6 3 7 2 (debug_marker) "progressmeter.c":236:2 -1
+     (nil))
+(insn 7 6 8 2 (set (mem/v/c:SI (symbol_ref:DI ("alarm_fired") [flags 0x2]  <var_decl 0x7f0180e91240 alarm_fired>) [6 alarm_fired+0 S4 A32])
+        (const_int 1 [0x1])) "progressmeter.c":236:14 -1
+     (nil))
+(debug_insn 8 7 9 2 (debug_marker) "progressmeter.c":237:2 -1
+     (nil))
+(insn 9 8 10 2 (set (reg:SI 5 di)
+        (const_int 1 [0x1])) "progressmeter.c":237:2 -1
+     (nil))
+(call_insn/j 10 9 11 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("alarm") [flags 0x41]  <function_decl 0x7f0180de1400 alarm>) [0 alarm S1 A8])
+            (const_int 0 [0]))) "progressmeter.c":237:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("alarm") [flags 0x41]  <function_decl 0x7f0180de1400 alarm>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:SI (use (reg:SI 5 di))
+        (nil)))
+(barrier 11 10 0)
+
+;; Function refresh_progress_meter.part.0 (refresh_progress_meter.part.0, funcdef_no=99, decl_uid=8625, cgraph_uid=117, symbol_order=129)
+
+Partition 0: size 513 align 16
+	buf
+Partition 1: size 4 align 4
+	file_len
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+
+;; Generating RTL for gimple basic block 11
+
+;; Generating RTL for gimple basic block 12
+
+;; Generating RTL for gimple basic block 13
+
+;; Generating RTL for gimple basic block 14
+
+;; Generating RTL for gimple basic block 15
+
+;; Generating RTL for gimple basic block 16
+
+;; Generating RTL for gimple basic block 17
+
+;; Generating RTL for gimple basic block 18
+
+;; Generating RTL for gimple basic block 19
+
+;; Generating RTL for gimple basic block 20
+
+;; Generating RTL for gimple basic block 21
+
+;; Generating RTL for gimple basic block 22
+
+;; Generating RTL for gimple basic block 23
+
+;; Generating RTL for gimple basic block 24
+
+;; Generating RTL for gimple basic block 25
+
+;; Generating RTL for gimple basic block 26
+
+;; Generating RTL for gimple basic block 27
+
+;; Generating RTL for gimple basic block 28
+
+;; Generating RTL for gimple basic block 29
+
+;; Generating RTL for gimple basic block 30
+
+;; Generating RTL for gimple basic block 31
+
+;; Generating RTL for gimple basic block 32
+
+;; Generating RTL for gimple basic block 33
+
+;; Generating RTL for gimple basic block 34
+
+;; Generating RTL for gimple basic block 35
+
+;; Generating RTL for gimple basic block 36
+
+;; Generating RTL for gimple basic block 37
+
+;; Generating RTL for gimple basic block 38
+
+;; Generating RTL for gimple basic block 39
+
+;; Generating RTL for gimple basic block 40
+
+;; Generating RTL for gimple basic block 41
+
+;; Generating RTL for gimple basic block 42
+
+;; Generating RTL for gimple basic block 43
+
+;; Generating RTL for gimple basic block 44
+
+;; Generating RTL for gimple basic block 45
+
+;; Generating RTL for gimple basic block 46
+
+;; Generating RTL for gimple basic block 47
+
+;; Generating RTL for gimple basic block 48
+Edge 16->19 redirected to 51
+Edge 17->19 redirected to 52
+Edge 19->25 redirected to 53
+Edge 23->25 redirected to 54
+Edge 29->32 redirected to 55
+Purged non-fallthru edges from bb 58
+Predictions for insn 697 bb 50
+  first match heuristics: 99.96%  exec 1073741842 (estimated locally) hit 2147483676 (estimated locally) (200.0%)
+  combined heuristics: 99.96%  exec 1073741842 (estimated locally) hit 2147483676 (estimated locally) (200.0%)
+  noreturn call heuristics: 99.96%  exec 1073741842 (estimated locally) hit 2147483676 (estimated locally) (200.0%)
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Edge 10->13 redirected to 14
+Edge 11->13 redirected to 14
+Forwarding edge 11->12 to 15 failed.
+Forwarding edge 11->12 to 15 failed.
+deleting block 13
+
+
+try_optimize_cfg iteration 2
+
+Forwarding edge 11->12 to 15 failed.
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 17 NOTE_INSN_DELETED)
+(note 17 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 17 3 2 NOTE_INSN_FUNCTION_BEG)
+(insn 3 2 4 2 (set (reg/f:DI 183)
+        (const_int 40 [0x28])) "progressmeter.c":120:1 -1
+     (nil))
+(insn 4 3 19 2 (parallel [
+            (set (mem/v/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                        (const_int -8 [0xfffffffffffffff8])) [8 D.8703+0 S8 A64])
+                (unspec:DI [
+                        (mem/v/f:DI (reg/f:DI 183) [0 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_SET))
+            (set (scratch:DI)
+                (const_int 0 [0]))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":120:1 -1
+     (nil))
+(debug_insn 19 4 20 2 (var_location:SI D#2 (debug_parameter_ref:SI force_update) [uninit]) -1
+     (nil))
+(debug_insn 20 19 21 2 (var_location:SI force_update (debug_expr:SI D#2)) -1
+     (nil))
+(debug_insn 21 20 22 2 (debug_marker) "progressmeter.c":133:2 -1
+     (nil))
+(insn 22 21 23 2 (set (mem/v/c:SI (symbol_ref:DI ("alarm_fired") [flags 0x2]  <var_decl 0x7f0180e91240 alarm_fired>) [6 alarm_fired+0 S4 A32])
+        (const_int 0 [0])) "progressmeter.c":133:14 -1
+     (nil))
+(debug_insn 23 22 24 2 (debug_marker) "progressmeter.c":135:2 -1
+     (nil))
+(insn 24 23 25 2 (set (reg:SI 82 [ win_resized.2_1 ])
+        (mem/v/c:SI (symbol_ref:DI ("win_resized") [flags 0x2]  <var_decl 0x7f0180e911b0 win_resized>) [6 win_resized+0 S4 A32])) "progressmeter.c":135:6 -1
+     (nil))
+(insn 25 24 26 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 82 [ win_resized.2_1 ])
+            (const_int 0 [0]))) "progressmeter.c":135:5 -1
+     (nil))
+(jump_insn 26 25 27 2 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 32)
+            (pc))) "progressmeter.c":135:5 -1
+     (int_list:REG_BR_PROB 719407028 (nil))
+ -> 32)
+(note 27 26 28 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 28 27 29 4 (debug_marker) "progressmeter.c":136:3 -1
+     (nil))
+(call_insn 29 28 30 4 (call (mem:QI (symbol_ref:DI ("setscreensize") [flags 0x3]  <function_decl 0x7f0180e8c400 setscreensize>) [0 setscreensize S1 A8])
+        (const_int 0 [0])) "progressmeter.c":136:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("setscreensize") [flags 0x3]  <function_decl 0x7f0180e8c400 setscreensize>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (nil))
+(debug_insn 30 29 31 4 (debug_marker) "progressmeter.c":137:3 -1
+     (nil))
+(insn 31 30 32 4 (set (mem/v/c:SI (symbol_ref:DI ("win_resized") [flags 0x2]  <var_decl 0x7f0180e911b0 win_resized>) [6 win_resized+0 S4 A32])
+        (const_int 0 [0])) "progressmeter.c":137:15 -1
+     (nil))
+(code_label 32 31 33 5 16 (nil) [1 uses])
+(note 33 32 34 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 34 33 35 5 (debug_marker) "progressmeter.c":140:2 -1
+     (nil))
+(insn 35 34 36 5 (set (reg/f:DI 83 [ counter.3_2 ])
+        (mem/f/c:DI (symbol_ref:DI ("counter") [flags 0x2]  <var_decl 0x7f0180d907e0 counter>) [7 counter+0 S8 A64])) "progressmeter.c":140:16 -1
+     (nil))
+(insn 36 35 37 5 (set (reg:DI 84 [ _3 ])
+        (mem/v:DI (reg/f:DI 83 [ counter.3_2 ]) [2 *counter.3_2+0 S8 A64])) "progressmeter.c":140:16 -1
+     (nil))
+(insn 37 36 38 5 (set (reg:DI 85 [ cur_pos.5_4 ])
+        (mem/c:DI (symbol_ref:DI ("cur_pos") [flags 0x2]  <var_decl 0x7f0180d90750 cur_pos>) [2 cur_pos+0 S8 A64])) "progressmeter.c":140:36 -1
+     (nil))
+(insn 38 37 39 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:DI 85 [ cur_pos.5_4 ])
+            (const_int 0 [0]))) "progressmeter.c":140:46 -1
+     (nil))
+(jump_insn 39 38 40 5 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 42)
+            (pc))) "progressmeter.c":140:46 -1
+     (int_list:REG_BR_PROB 536870916 (nil))
+ -> 42)
+(note 40 39 41 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 41 40 42 6 (set (reg:DI 85 [ cur_pos.5_4 ])
+        (mem/c:DI (symbol_ref:DI ("start_pos") [flags 0x2]  <var_decl 0x7f0180d90630 start_pos>) [2 start_pos+0 S8 A64])) "progressmeter.c":140:46 -1
+     (nil))
+(code_label 42 41 43 7 17 (nil) [1 uses])
+(note 43 42 44 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 44 43 45 7 (var_location:DI transferred (minus:DI (reg:DI 84 [ _3 ])
+        (reg:DI 85 [ cur_pos.5_4 ]))) "progressmeter.c":140:14 -1
+     (nil))
+(debug_insn 45 44 46 7 (debug_marker) "progressmeter.c":141:2 -1
+     (nil))
+(insn 46 45 47 7 (set (reg:DI 87 [ _8 ])
+        (mem/v:DI (reg/f:DI 83 [ counter.3_2 ]) [2 *counter.3_2+0 S8 A64])) "progressmeter.c":141:12 -1
+     (nil))
+(insn 47 46 48 7 (set (mem/c:DI (symbol_ref:DI ("cur_pos") [flags 0x2]  <var_decl 0x7f0180d90750 cur_pos>) [2 cur_pos+0 S8 A64])
+        (reg:DI 87 [ _8 ])) "progressmeter.c":141:10 -1
+     (nil))
+(debug_insn 48 47 49 7 (debug_marker) "progressmeter.c":142:2 -1
+     (nil))
+(call_insn 49 48 50 7 (set (reg:DF 20 xmm0)
+        (call (mem:QI (symbol_ref:DI ("monotime_double") [flags 0x41]  <function_decl 0x7f0180e75500 monotime_double>) [0 monotime_double S1 A8])
+            (const_int 0 [0]))) "progressmeter.c":142:8 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("monotime_double") [flags 0x41]  <function_decl 0x7f0180e75500 monotime_double>)
+        (nil))
+    (nil))
+(insn 50 49 51 7 (set (reg/v:DF 88 [ now ])
+        (reg:DF 20 xmm0)) "progressmeter.c":142:8 -1
+     (nil))
+(debug_insn 51 50 52 7 (var_location:DF now (reg/v:DF 88 [ now ])) "progressmeter.c":142:8 -1
+     (nil))
+(debug_insn 52 51 53 7 (debug_marker) "progressmeter.c":143:2 -1
+     (nil))
+(insn 53 52 54 7 (set (reg:DI 89 [ end_pos.7_10 ])
+        (mem/c:DI (symbol_ref:DI ("end_pos") [flags 0x2]  <var_decl 0x7f0180d906c0 end_pos>) [2 end_pos+0 S8 A64])) "progressmeter.c":143:23 -1
+     (nil))
+(insn 54 53 55 7 (set (reg:DI 4 si)
+        (mem/c:DI (symbol_ref:DI ("cur_pos") [flags 0x2]  <var_decl 0x7f0180d90750 cur_pos>) [2 cur_pos+0 S8 A64])) "progressmeter.c":143:13 -1
+     (nil))
+(insn 55 54 56 7 (set (reg:DI 5 di)
+        (reg:DI 89 [ end_pos.7_10 ])) "progressmeter.c":143:13 -1
+     (nil))
+(call_insn/u 56 55 57 7 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__subvdi3") [flags 0x41]  <function_decl 0x7f0180af6b00 __subvdi3>) [0  S1 A8])
+            (const_int 0 [0]))) "progressmeter.c":143:13 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__subvdi3") [flags 0x41]  <function_decl 0x7f0180af6b00 __subvdi3>)
+        (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+            (nil)))
+    (expr_list (use (reg:DI 4 si))
+        (expr_list (use (reg:DI 5 di))
+            (nil))))
+(insn 57 56 58 7 (set (reg:DI 184)
+        (reg:DI 0 ax)) "progressmeter.c":143:13 -1
+     (nil))
+(insn 58 57 59 7 (set (reg/v:DI 91 [ bytes_left ])
+        (reg:DI 184)) "progressmeter.c":143:13 -1
+     (nil))
+(debug_insn 59 58 60 7 (var_location:DI bytes_left (reg/v:DI 91 [ bytes_left ])) "progressmeter.c":143:13 -1
+     (nil))
+(debug_insn 60 59 63 7 (debug_marker) "progressmeter.c":145:2 -1
+     (nil))
+(insn 63 60 64 7 (set (reg:CCNO 17 flags)
+        (compare:CCNO (reg/v:DI 91 [ bytes_left ])
+            (const_int 0 [0]))) "progressmeter.c":145:5 -1
+     (nil))
+(jump_insn 64 63 65 7 (set (pc)
+        (if_then_else (le (reg:CCNO 17 flags)
+                (const_int 0 [0]))
+            (label_ref 77)
+            (pc))) "progressmeter.c":145:5 -1
+     (int_list:REG_BR_PROB 440234148 (nil))
+ -> 77)
+(note 65 64 66 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 66 65 67 8 (set (reg:DI 4 si)
+        (reg:DI 85 [ cur_pos.5_4 ])) "progressmeter.c":140:14 -1
+     (nil))
+(insn 67 66 68 8 (set (reg:DI 5 di)
+        (reg:DI 84 [ _3 ])) "progressmeter.c":140:14 -1
+     (nil))
+(call_insn/u 68 67 69 8 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__subvdi3") [flags 0x41]  <function_decl 0x7f0180af6b00 __subvdi3>) [0  S1 A8])
+            (const_int 0 [0]))) "progressmeter.c":140:14 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__subvdi3") [flags 0x41]  <function_decl 0x7f0180af6b00 __subvdi3>)
+        (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+            (nil)))
+    (expr_list (use (reg:DI 4 si))
+        (expr_list (use (reg:DI 5 di))
+            (nil))))
+(insn 69 68 70 8 (set (reg:DI 185)
+        (reg:DI 0 ax)) "progressmeter.c":140:14 -1
+     (nil))
+(insn 70 69 71 8 (set (reg/v:DI 86 [ transferred ])
+        (reg:DI 185)) "progressmeter.c":140:14 -1
+     (nil))
+(debug_insn 71 70 72 8 (debug_marker) "progressmeter.c":146:3 -1
+     (nil))
+(insn 72 71 73 8 (set (reg/v:DF 93 [ elapsed ])
+        (minus:DF (reg/v:DF 88 [ now ])
+            (mem/c:DF (symbol_ref:DI ("last_update") [flags 0x2]  <var_decl 0x7f0180d90ea0 last_update>) [3 last_update+0 S8 A64]))) "progressmeter.c":146:11 -1
+     (nil))
+(debug_insn 73 72 74 8 (var_location:DF elapsed (reg/v:DF 93 [ elapsed ])) "progressmeter.c":146:11 -1
+     (nil))
+(insn 74 73 75 8 (set (reg:SI 170 [ pretmp_218 ])
+        (mem/c:SI (symbol_ref:DI ("bytes_per_second") [flags 0x2]  <var_decl 0x7f0180e91090 bytes_per_second>) [6 bytes_per_second+0 S4 A32])) "progressmeter.c":161:23 -1
+     (nil))
+(jump_insn 75 74 76 8 (set (pc)
+        (label_ref 90)) -1
+     (nil)
+ -> 90)
+(barrier 76 75 77)
+(code_label 77 76 78 9 18 (nil) [1 uses])
+(note 78 77 79 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 79 78 80 9 (debug_marker) "progressmeter.c":148:3 -1
+     (nil))
+(insn 80 79 81 9 (set (reg/v:DF 93 [ elapsed ])
+        (minus:DF (reg/v:DF 88 [ now ])
+            (mem/c:DF (symbol_ref:DI ("start") [flags 0x2]  <var_decl 0x7f0180d90e10 start>) [3 start+0 S8 A64]))) "progressmeter.c":148:11 -1
+     (nil))
+(debug_insn 81 80 82 9 (var_location:DF elapsed (reg/v:DF 93 [ elapsed ])) "progressmeter.c":148:11 -1
+     (nil))
+(debug_insn 82 81 83 9 (debug_marker) "progressmeter.c":150:3 -1
+     (nil))
+(insn 83 82 84 9 (set (reg:DI 4 si)
+        (mem/c:DI (symbol_ref:DI ("start_pos") [flags 0x2]  <var_decl 0x7f0180d90630 start_pos>) [2 start_pos+0 S8 A64])) "progressmeter.c":150:15 -1
+     (nil))
+(insn 84 83 85 9 (set (reg:DI 5 di)
+        (reg:DI 89 [ end_pos.7_10 ])) "progressmeter.c":150:15 -1
+     (nil))
+(call_insn/u 85 84 86 9 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__subvdi3") [flags 0x41]  <function_decl 0x7f0180af6b00 __subvdi3>) [0  S1 A8])
+            (const_int 0 [0]))) "progressmeter.c":150:15 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__subvdi3") [flags 0x41]  <function_decl 0x7f0180af6b00 __subvdi3>)
+        (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+            (nil)))
+    (expr_list (use (reg:DI 4 si))
+        (expr_list (use (reg:DI 5 di))
+            (nil))))
+(insn 86 85 87 9 (set (reg:DI 186)
+        (reg:DI 0 ax)) "progressmeter.c":150:15 -1
+     (nil))
+(insn 87 86 88 9 (set (reg/v:DI 86 [ transferred ])
+        (reg:DI 186)) "progressmeter.c":150:15 -1
+     (nil))
+(debug_insn 88 87 89 9 (var_location:DI transferred (reg/v:DI 86 [ transferred ])) "progressmeter.c":150:15 -1
+     (nil))
+(debug_insn 89 88 5 9 (debug_marker) "progressmeter.c":151:3 -1
+     (nil))
+(insn 5 89 90 9 (set (reg:SI 170 [ pretmp_218 ])
+        (const_int 0 [0])) "progressmeter.c":150:15 -1
+     (nil))
+(code_label 90 5 91 10 19 (nil) [1 uses])
+(note 91 90 92 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 92 91 93 10 (var_location:DF elapsed (reg/v:DF 93 [ elapsed ])) -1
+     (nil))
+(debug_insn 93 92 94 10 (var_location:DI transferred (reg/v:DI 86 [ transferred ])) -1
+     (nil))
+(debug_insn 94 93 95 10 (debug_marker) "progressmeter.c":155:2 -1
+     (nil))
+(insn 95 94 96 10 (set (reg:DF 187)
+        (mem/u/c:DF (symbol_ref/u:DI ("*.LC2") [flags 0x2]) [0  S8 A64])) "progressmeter.c":155:5 -1
+     (expr_list:REG_EQUAL (const_double:DF 0.0 [0x0.0p+0])
+        (nil)))
+(insn 96 95 97 10 (set (reg:CCFP 17 flags)
+        (unspec:CCFP [
+                (compare:CCFP (reg/v:DF 93 [ elapsed ])
+                    (reg:DF 187))
+            ] UNSPEC_NOTRAP)) "progressmeter.c":155:5 -1
+     (nil))
+(jump_insn 97 96 720 10 (set (pc)
+        (if_then_else (unordered (reg:CCFP 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 725)
+            (pc))) "progressmeter.c":155:5 736 {*jcc}
+     (int_list:REG_BR_PROB 5368716 (nil))
+ -> 725)
+(note 720 97 98 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 98 720 99 11 (set (reg:DF 188)
+        (mem/u/c:DF (symbol_ref/u:DI ("*.LC2") [flags 0x2]) [0  S8 A64])) "progressmeter.c":155:5 -1
+     (expr_list:REG_EQUAL (const_double:DF 0.0 [0x0.0p+0])
+        (nil)))
+(insn 99 98 100 11 (set (reg:CCFP 17 flags)
+        (compare:CCFP (reg/v:DF 93 [ elapsed ])
+            (reg:DF 188))) "progressmeter.c":155:5 -1
+     (nil))
+(jump_insn 100 99 721 11 (set (pc)
+        (if_then_else (ltgt (reg:CCFP 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 725)
+            (pc))) "progressmeter.c":155:5 736 {*jcc}
+     (int_list:REG_BR_PROB 534173068 (nil))
+ -> 725)
+(note 721 100 101 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 101 721 102 12 (set (pc)
+        (label_ref 112)) "progressmeter.c":155:5 -1
+     (nil)
+ -> 112)
+(barrier 102 101 725)
+(code_label 725 102 104 14 48 (nil) [2 uses])
+(note 104 725 105 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 105 104 106 14 (debug_marker) "progressmeter.c":156:3 -1
+     (nil))
+(insn 106 105 107 14 (set (reg:DF 189)
+        (float:DF (reg/v:DI 86 [ transferred ]))) "progressmeter.c":156:28 -1
+     (nil))
+(insn 107 106 108 14 (set (reg:DF 190)
+        (div:DF (reg:DF 189)
+            (reg/v:DF 93 [ elapsed ]))) "progressmeter.c":156:28 -1
+     (nil))
+(insn 108 107 109 14 (set (reg/v:SI 100 [ cur_speed ])
+        (fix:SI (reg:DF 190))) "progressmeter.c":156:13 -1
+     (nil))
+(debug_insn 109 108 110 14 (var_location:SI cur_speed (reg/v:SI 100 [ cur_speed ])) "progressmeter.c":156:13 -1
+     (nil))
+(jump_insn 110 109 111 14 (set (pc)
+        (label_ref 117)) -1
+     (nil)
+ -> 117)
+(barrier 111 110 112)
+(code_label 112 111 113 15 20 (nil) [1 uses])
+(note 113 112 114 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 114 113 115 15 (debug_marker) "progressmeter.c":158:3 -1
+     (nil))
+(insn 115 114 116 15 (set (reg/v:SI 100 [ cur_speed ])
+        (subreg:SI (reg/v:DI 86 [ transferred ]) 0)) "progressmeter.c":158:13 -1
+     (nil))
+(debug_insn 116 115 117 15 (var_location:SI cur_speed (reg/v:SI 100 [ cur_speed ])) "progressmeter.c":158:13 -1
+     (nil))
+(code_label 117 116 118 16 22 (nil) [1 uses])
+(note 118 117 119 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 119 118 120 16 (var_location:SI cur_speed (reg/v:SI 100 [ cur_speed ])) -1
+     (nil))
+(debug_insn 120 119 121 16 (debug_marker) "progressmeter.c":161:2 -1
+     (nil))
+(insn 121 120 122 16 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 170 [ pretmp_218 ])
+            (const_int 0 [0]))) "progressmeter.c":161:5 -1
+     (nil))
+(jump_insn 122 121 123 16 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 133)
+            (pc))) "progressmeter.c":161:5 -1
+     (int_list:REG_BR_PROB 536870916 (nil))
+ -> 133)
+(note 123 122 124 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 124 123 125 17 (debug_marker) "progressmeter.c":162:3 -1
+     (nil))
+(insn 125 124 126 17 (set (reg:DF 191)
+        (float:DF (reg:SI 170 [ pretmp_218 ]))) "progressmeter.c":162:40 -1
+     (nil))
+(insn 126 125 127 17 (set (reg:DF 193)
+        (mem/u/c:DF (symbol_ref/u:DI ("*.LC3") [flags 0x2]) [0  S8 A64])) "progressmeter.c":162:40 -1
+     (expr_list:REG_EQUAL (const_double:DF 9.0000000000000002220446049250313080847263336181640625e-1 [0x0.e6666666666668p+0])
+        (nil)))
+(insn 127 126 128 17 (set (reg:DF 192)
+        (mult:DF (reg:DF 191)
+            (reg:DF 193))) "progressmeter.c":162:40 -1
+     (nil))
+(insn 128 127 129 17 (set (reg:DF 194)
+        (float:DF (reg/v:SI 100 [ cur_speed ]))) "progressmeter.c":163:18 -1
+     (nil))
+(insn 129 128 130 17 (set (reg:DF 196)
+        (mem/u/c:DF (symbol_ref/u:DI ("*.LC4") [flags 0x2]) [0  S8 A64])) "progressmeter.c":163:18 -1
+     (expr_list:REG_EQUAL (const_double:DF 9.999999999999997779553950749686919152736663818359375e-2 [0x0.cccccccccccccp-3])
+        (nil)))
+(insn 130 129 131 17 (set (reg:DF 195)
+        (mult:DF (reg:DF 194)
+            (reg:DF 196))) "progressmeter.c":163:18 -1
+     (nil))
+(insn 131 130 132 17 (set (reg:DF 197)
+        (plus:DF (reg:DF 192)
+            (reg:DF 195))) "progressmeter.c":162:54 -1
+     (nil))
+(insn 132 131 133 17 (set (reg/v:SI 100 [ cur_speed ])
+        (fix:SI (reg:DF 197))) "progressmeter.c":162:20 -1
+     (nil))
+(code_label 133 132 134 18 23 (nil) [1 uses])
+(note 134 133 135 18 [bb 18] NOTE_INSN_BASIC_BLOCK)
+(insn 135 134 136 18 (set (mem/c:SI (symbol_ref:DI ("bytes_per_second") [flags 0x2]  <var_decl 0x7f0180e91090 bytes_per_second>) [6 bytes_per_second+0 S4 A32])
+        (reg/v:SI 100 [ cur_speed ])) -1
+     (nil))
+(debug_insn 136 135 137 18 (debug_marker) "progressmeter.c":168:2 -1
+     (nil))
+(insn 137 136 138 18 (set (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -528 [0xfffffffffffffdf0])) [0 buf[0]+0 S1 A64])
+        (const_int 0 [0])) "progressmeter.c":168:9 -1
+     (nil))
+(debug_insn 138 137 139 18 (debug_marker) "progressmeter.c":169:2 -1
+     (nil))
+(insn 139 138 140 18 (set (reg:SI 104 [ win_size.15_33 ])
+        (mem/c:SI (symbol_ref:DI ("win_size") [flags 0x2]  <var_decl 0x7f0180e91120 win_size>) [6 win_size+0 S4 A32])) "progressmeter.c":169:22 -1
+     (nil))
+(insn 140 139 141 18 (set (reg:SI 4 si)
+        (const_int -36 [0xffffffffffffffdc])) "progressmeter.c":169:22 -1
+     (nil))
+(insn 141 140 142 18 (set (reg:SI 5 di)
+        (reg:SI 104 [ win_size.15_33 ])) "progressmeter.c":169:22 -1
+     (nil))
+(call_insn/u 142 141 143 18 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__addvsi3") [flags 0x41]  <function_decl 0x7f0180ec7400 __addvsi3>) [0  S1 A8])
+            (const_int 0 [0]))) "progressmeter.c":169:22 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__addvsi3") [flags 0x41]  <function_decl 0x7f0180ec7400 __addvsi3>)
+        (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+            (nil)))
+    (expr_list (use (reg:SI 4 si))
+        (expr_list (use (reg:SI 5 di))
+            (nil))))
+(insn 143 142 144 18 (set (reg:SI 198)
+        (reg:SI 0 ax)) "progressmeter.c":169:22 -1
+     (nil))
+(insn 144 143 145 18 (set (reg:SI 105 [ _34 ])
+        (reg:SI 198)) "progressmeter.c":169:22 -1
+     (nil))
+(insn 145 144 146 18 (set (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -532 [0xfffffffffffffdec])) [6 file_len+0 S4 A32])
+        (reg:SI 105 [ _34 ])) "progressmeter.c":169:11 -1
+     (nil))
+(debug_insn 146 145 149 18 (debug_marker) "progressmeter.c":170:2 -1
+     (nil))
+(insn 149 146 150 18 (set (reg:CCNO 17 flags)
+        (compare:CCNO (reg:SI 105 [ _34 ])
+            (const_int 0 [0]))) "progressmeter.c":170:5 -1
+     (nil))
+(jump_insn 150 149 151 18 (set (pc)
+        (if_then_else (le (reg:CCNO 17 flags)
+                (const_int 0 [0]))
+            (label_ref 169)
+            (pc))) "progressmeter.c":170:5 -1
+     (int_list:REG_BR_PROB 628353716 (nil))
+ -> 169)
+(note 151 150 152 19 [bb 19] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 152 151 153 19 (debug_marker) "progressmeter.c":171:3 -1
+     (nil))
+(insn 153 152 154 19 (set (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -528 [0xfffffffffffffdf0])) [0 buf[0]+0 S1 A64])
+        (const_int 13 [0xd])) "progressmeter.c":171:10 -1
+     (nil))
+(debug_insn 154 153 155 19 (debug_marker) "progressmeter.c":172:3 -1
+     (nil))
+(insn 155 154 156 19 (set (reg:DI 199)
+        (mem/f/c:DI (symbol_ref:DI ("file") [flags 0x2]  <var_decl 0x7f0180d90f30 file>) [1 file+0 S8 A64])) "progressmeter.c":172:3 -1
+     (nil))
+(insn 156 155 157 19 (parallel [
+            (set (reg:DI 200)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -532 [0xfffffffffffffdec])))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":172:3 -1
+     (nil))
+(insn 157 156 158 19 (parallel [
+            (set (reg:DI 201)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -528 [0xfffffffffffffdf0])))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":172:3 -1
+     (nil))
+(insn 158 157 159 19 (parallel [
+            (set (reg:DI 202)
+                (plus:DI (reg:DI 201)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":172:3 -1
+     (nil))
+(insn 159 158 160 19 (set (reg:DI 37 r9)
+        (reg:DI 199)) "progressmeter.c":172:3 -1
+     (nil))
+(insn 160 159 161 19 (set (reg:SI 36 r8)
+        (reg:SI 105 [ _34 ])) "progressmeter.c":172:3 -1
+     (nil))
+(insn 161 160 162 19 (set (reg:DI 2 cx)
+        (symbol_ref/f:DI ("*.LC5") [flags 0x2]  <var_decl 0x7f0180b0e000 *.LC5>)) "progressmeter.c":172:3 -1
+     (nil))
+(insn 162 161 163 19 (set (reg:DI 1 dx)
+        (reg:DI 200)) "progressmeter.c":172:3 -1
+     (nil))
+(insn 163 162 164 19 (set (reg:DI 4 si)
+        (const_int 512 [0x200])) "progressmeter.c":172:3 -1
+     (nil))
+(insn 164 163 165 19 (set (reg:DI 5 di)
+        (reg:DI 202)) "progressmeter.c":172:3 -1
+     (nil))
+(insn 165 164 166 19 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "progressmeter.c":172:3 -1
+     (nil))
+(call_insn 166 165 167 19 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("snmprintf") [flags 0x41]  <function_decl 0x7f0180e84d00 snmprintf>) [0 snmprintf S1 A8])
+            (const_int 0 [0]))) "progressmeter.c":172:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("snmprintf") [flags 0x41]  <function_decl 0x7f0180e84d00 snmprintf>)
+        (nil))
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (expr_list:DI (use (reg:DI 1 dx))
+                    (expr_list:DI (use (reg:DI 2 cx))
+                        (expr_list:SI (use (reg:SI 36 r8))
+                            (expr_list:DI (use (reg:DI 37 r9))
+                                (nil)))))))))
+(insn 167 166 168 19 (set (reg:DI 89 [ end_pos.7_10 ])
+        (mem/c:DI (symbol_ref:DI ("end_pos") [flags 0x2]  <var_decl 0x7f0180d906c0 end_pos>) [2 end_pos+0 S8 A64])) "progressmeter.c":177:14 -1
+     (nil))
+(insn 168 167 169 19 (set (reg:SI 104 [ win_size.15_33 ])
+        (mem/c:SI (symbol_ref:DI ("win_size") [flags 0x2]  <var_decl 0x7f0180e91120 win_size>) [6 win_size+0 S4 A32])) "progressmeter.c":181:2 -1
+     (nil))
+(code_label 169 168 170 20 24 (nil) [1 uses])
+(note 170 169 171 20 [bb 20] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 171 170 172 20 (debug_marker) "progressmeter.c":177:2 -1
+     (nil))
+(insn 172 171 173 20 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:DI 89 [ end_pos.7_10 ])
+            (const_int 0 [0]))) "progressmeter.c":177:5 -1
+     (nil))
+(jump_insn 173 172 174 20 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 705)
+            (pc))) "progressmeter.c":177:5 736 {*jcc}
+     (int_list:REG_BR_PROB 536870916 (nil))
+ -> 705)
+(note 174 173 175 21 [bb 21] NOTE_INSN_BASIC_BLOCK)
+(insn 175 174 176 21 (set (reg:DI 107 [ cur_pos.20_37 ])
+        (mem/c:DI (symbol_ref:DI ("cur_pos") [flags 0x2]  <var_decl 0x7f0180d90750 cur_pos>) [2 cur_pos+0 S8 A64])) "progressmeter.c":177:30 -1
+     (nil))
+(insn 176 175 177 21 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:DI 107 [ cur_pos.20_37 ])
+            (reg:DI 89 [ end_pos.7_10 ]))) "progressmeter.c":177:19 -1
+     (nil))
+(jump_insn 177 176 178 21 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 709)
+            (pc))) "progressmeter.c":177:19 736 {*jcc}
+     (int_list:REG_BR_PROB 365072228 (nil))
+ -> 709)
+(note 178 177 179 22 [bb 22] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 179 178 180 22 (debug_marker) "progressmeter.c":180:3 -1
+     (nil))
+(insn 180 179 181 22 (set (reg:SF 203)
+        (float:SF (reg:DI 107 [ cur_pos.20_37 ]))) "progressmeter.c":180:14 -1
+     (nil))
+(insn 181 180 182 22 (set (reg:SF 204)
+        (float:SF (reg:DI 89 [ end_pos.7_10 ]))) "progressmeter.c":180:29 -1
+     (nil))
+(insn 182 181 183 22 (set (reg:SF 205)
+        (div:SF (reg:SF 203)
+            (reg:SF 204))) "progressmeter.c":180:29 -1
+     (nil))
+(insn 183 182 184 22 (set (reg:SF 207)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC6") [flags 0x2]) [0  S4 A32])) "progressmeter.c":180:40 -1
+     (expr_list:REG_EQUAL (const_double:SF 1.0e+2 [0x0.c8p+7])
+        (nil)))
+(insn 184 183 185 22 (set (reg:SF 206)
+        (mult:SF (reg:SF 205)
+            (reg:SF 207))) "progressmeter.c":180:40 -1
+     (nil))
+(insn 185 184 186 22 (set (reg/v:SI 112 [ percent ])
+        (fix:SI (reg:SF 206))) "progressmeter.c":180:11 -1
+     (nil))
+(debug_insn 186 185 702 22 (var_location:SI percent (reg/v:SI 112 [ percent ])) "progressmeter.c":180:11 -1
+     (nil))
+(jump_insn 702 186 703 22 (set (pc)
+        (label_ref 187)) -1
+     (nil)
+ -> 187)
+(barrier 703 702 705)
+(code_label 705 703 704 23 43 (nil) [1 uses])
+(note 704 705 6 23 [bb 23] NOTE_INSN_BASIC_BLOCK)
+(insn 6 704 706 23 (set (reg/v:SI 112 [ percent ])
+        (const_int 100 [0x64])) "progressmeter.c":178:11 -1
+     (nil))
+(jump_insn 706 6 707 23 (set (pc)
+        (label_ref 187)) -1
+     (nil)
+ -> 187)
+(barrier 707 706 709)
+(code_label 709 707 708 24 44 (nil) [1 uses])
+(note 708 709 7 24 [bb 24] NOTE_INSN_BASIC_BLOCK)
+(insn 7 708 187 24 (set (reg/v:SI 112 [ percent ])
+        (const_int 100 [0x64])) "progressmeter.c":178:11 -1
+     (nil))
+(code_label 187 7 188 25 25 (nil) [2 uses])
+(note 188 187 189 25 [bb 25] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 189 188 190 25 (var_location:SI percent (reg/v:SI 112 [ percent ])) -1
+     (nil))
+(debug_insn 190 189 191 25 (debug_marker) "progressmeter.c":181:2 -1
+     (nil))
+(insn 191 190 192 25 (parallel [
+            (set (reg:DI 209)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -528 [0xfffffffffffffdf0])))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":181:41 -1
+     (nil))
+(insn 192 191 193 25 (set (reg:DI 5 di)
+        (reg:DI 209)) "progressmeter.c":181:41 -1
+     (nil))
+(call_insn/i 193 192 194 25 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x7f01811ea500 strlen>) [0 __builtin_strlen S1 A8])
+            (const_int 0 [0]))) "progressmeter.c":181:41 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x7f01811ea500 strlen>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 194 193 195 25 (set (reg:DI 210)
+        (reg:DI 0 ax)) "progressmeter.c":181:41 -1
+     (nil))
+(insn 195 194 196 25 (set (reg:DI 211)
+        (reg:DI 210)) "progressmeter.c":181:41 -1
+     (nil))
+(insn 196 195 197 25 (set (reg:DI 114 [ _45 ])
+        (reg:DI 211)) "progressmeter.c":181:41 -1
+     (nil))
+(debug_insn 197 196 198 25 (var_location:DI __s (plus:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+            (reg:DI 114 [ _45 ]))
+        (const_int -528 [0xfffffffffffffdf0]))) "progressmeter.c":181:2 -1
+     (nil))
+(debug_insn 198 197 199 25 (var_location:DI __n (minus:DI (sign_extend:DI (reg:SI 104 [ win_size.15_33 ]))
+        (reg:DI 114 [ _45 ]))) "progressmeter.c":181:2 -1
+     (nil))
+(debug_insn 199 198 200 25 (var_location:DI __fmt (symbol_ref/f:DI ("*.LC7") [flags 0x2]  <var_decl 0x7f0180b0e090 *.LC7>)) "progressmeter.c":181:2 -1
+     (nil))
+(debug_insn 200 199 201 25 (debug_marker:BLK) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":64:1 -1
+     (nil))
+(debug_insn 201 200 202 25 (debug_marker) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":67:3 -1
+     (nil))
+(insn 202 201 203 25 (set (reg:DI 212)
+        (sign_extend:DI (reg:SI 104 [ win_size.15_33 ]))) "progressmeter.c":181:2 -1
+     (nil))
+(insn 203 202 204 25 (parallel [
+            (set (reg:DI 213)
+                (minus:DI (reg:DI 212)
+                    (reg:DI 114 [ _45 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":181:2 -1
+     (nil))
+(insn 204 203 205 25 (parallel [
+            (set (reg:DI 214)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -528 [0xfffffffffffffdf0])))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":181:2 -1
+     (nil))
+(insn 205 204 206 25 (parallel [
+            (set (reg:DI 215)
+                (plus:DI (reg:DI 214)
+                    (reg:DI 114 [ _45 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":181:2 -1
+     (nil))
+(insn 206 205 207 25 (set (reg:SI 37 r9)
+        (reg/v:SI 112 [ percent ])) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":67:10 -1
+     (nil))
+(insn 207 206 208 25 (set (reg:DI 36 r8)
+        (symbol_ref/f:DI ("*.LC7") [flags 0x2]  <var_decl 0x7f0180b0e090 *.LC7>)) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":67:10 -1
+     (nil))
+(insn 208 207 209 25 (set (reg:DI 2 cx)
+        (const_int -1 [0xffffffffffffffff])) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":67:10 -1
+     (nil))
+(insn 209 208 210 25 (set (reg:SI 1 dx)
+        (const_int 1 [0x1])) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":67:10 -1
+     (nil))
+(insn 210 209 211 25 (set (reg:DI 4 si)
+        (reg:DI 213)) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":67:10 -1
+     (nil))
+(insn 211 210 212 25 (set (reg:DI 5 di)
+        (reg:DI 215)) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":67:10 -1
+     (nil))
+(insn 212 211 213 25 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":67:10 -1
+     (nil))
+(call_insn 213 212 214 25 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__snprintf_chk") [flags 0x41]  <function_decl 0x7f0181218d00 __builtin___snprintf_chk>) [0 __builtin___snprintf_chk S1 A8])
+            (const_int 0 [0]))) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":67:10 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__snprintf_chk") [flags 0x41]  <function_decl 0x7f0181218d00 __builtin___snprintf_chk>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (expr_list:SI (use (reg:SI 1 dx))
+                    (expr_list:DI (use (reg:DI 2 cx))
+                        (expr_list:DI (use (reg:DI 36 r8))
+                            (expr_list:SI (use (reg:SI 37 r9))
+                                (nil)))))))))
+(debug_insn 214 213 215 25 (var_location:DI __s (clobber (const_int 0 [0]))) "progressmeter.c":181:2 -1
+     (nil))
+(debug_insn 215 214 216 25 (var_location:DI __n (clobber (const_int 0 [0]))) "progressmeter.c":181:2 -1
+     (nil))
+(debug_insn 216 215 217 25 (var_location:DI __fmt (clobber (const_int 0 [0]))) "progressmeter.c":181:2 -1
+     (nil))
+(debug_insn 217 216 218 25 (debug_marker) "progressmeter.c":185:2 -1
+     (nil))
+(insn 218 217 219 25 (set (reg/v:DI 163 [ bytes ])
+        (mem/c:DI (symbol_ref:DI ("cur_pos") [flags 0x2]  <var_decl 0x7f0180d90750 cur_pos>) [2 cur_pos+0 S8 A64])) "progressmeter.c":185:2 -1
+     (nil))
+(insn 219 218 220 25 (parallel [
+            (set (reg:DI 217)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -528 [0xfffffffffffffdf0])))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":185:44 -1
+     (nil))
+(insn 220 219 221 25 (set (reg:DI 5 di)
+        (reg:DI 217)) "progressmeter.c":185:44 -1
+     (nil))
+(call_insn/i 221 220 222 25 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x7f01811ea500 strlen>) [0 __builtin_strlen S1 A8])
+            (const_int 0 [0]))) "progressmeter.c":185:44 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x7f01811ea500 strlen>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 222 221 223 25 (set (reg:DI 218)
+        (reg:DI 0 ax)) "progressmeter.c":185:44 -1
+     (nil))
+(insn 223 222 224 25 (set (reg:DI 219)
+        (reg:DI 218)) "progressmeter.c":185:44 -1
+     (nil))
+(insn 224 223 225 25 (set (reg:DI 119 [ _53 ])
+        (reg:DI 219)) "progressmeter.c":185:44 -1
+     (nil))
+(insn 225 224 226 25 (set (reg:SI 220)
+        (mem/c:SI (symbol_ref:DI ("win_size") [flags 0x2]  <var_decl 0x7f0180e91120 win_size>) [6 win_size+0 S4 A32])) "progressmeter.c":185:42 -1
+     (nil))
+(insn 226 225 227 25 (parallel [
+            (set (reg:SI 122 [ _56 ])
+                (minus:SI (reg:SI 220)
+                    (subreg:SI (reg:DI 119 [ _53 ]) 0)))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":185:42 -1
+     (expr_list:REG_EQUAL (minus:SI (mem/c:SI (symbol_ref:DI ("win_size") [flags 0x2]  <var_decl 0x7f0180e91120 win_size>) [6 win_size+0 S4 A32])
+            (subreg:SI (reg:DI 119 [ _53 ]) 0))
+        (nil)))
+(insn 227 226 228 25 (parallel [
+            (set (reg:DI 221)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -528 [0xfffffffffffffdf0])))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":185:2 -1
+     (nil))
+(insn 228 227 229 25 (parallel [
+            (set (reg/f:DI 123 [ _57 ])
+                (plus:DI (reg:DI 221)
+                    (reg:DI 119 [ _53 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":185:2 -1
+     (nil))
+(debug_insn 229 228 230 25 (var_location:DI buf (reg/f:DI 123 [ _57 ])) "progressmeter.c":185:2 -1
+     (nil))
+(debug_insn 230 229 231 25 (var_location:SI size (reg:SI 122 [ _56 ])) "progressmeter.c":185:2 -1
+     (nil))
+(debug_insn 231 230 232 25 (var_location:DI bytes (reg/v:DI 163 [ bytes ])) "progressmeter.c":185:2 -1
+     (nil))
+(debug_insn 232 231 233 25 (debug_marker:BLK) "progressmeter.c":107:1 -1
+     (nil))
+(debug_insn 233 232 234 25 (debug_marker) "progressmeter.c":109:2 -1
+     (nil))
+(debug_insn 234 233 235 25 (debug_marker) "progressmeter.c":111:2 -1
+     (nil))
+(debug_insn 235 234 236 25 (var_location:SI i (const_int 0 [0])) -1
+     (nil))
+(debug_insn 236 235 237 25 (var_location:DI bytes (reg/v:DI 163 [ bytes ])) -1
+     (nil))
+(debug_insn 237 236 240 25 (debug_marker) "progressmeter.c":111:14 -1
+     (nil))
+(insn 240 237 241 25 (set (reg:CCGC 17 flags)
+        (compare:CCGC (reg/v:DI 163 [ bytes ])
+            (const_int 9999 [0x270f]))) "progressmeter.c":111:2 -1
+     (nil))
+(jump_insn 241 240 242 25 (set (pc)
+        (if_then_else (le (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 711)
+            (pc))) "progressmeter.c":111:2 736 {*jcc}
+     (int_list:REG_BR_PROB 59055804 (nil))
+ -> 711)
+(note 242 241 243 26 [bb 26] NOTE_INSN_BASIC_BLOCK)
+(insn 243 242 8 26 (set (reg:DI 167 [ ivtmp.92 ])
+        (symbol_ref:DI ("unit") [flags 0x2]  <var_decl 0x7f0180e912d0 unit>)) -1
+     (nil))
+(insn 8 243 279 26 (set (reg:QI 171 [ pretmp_225 ])
+        (const_int 75 [0x4b])) "progressmeter.c":111:2 -1
+     (nil))
+(code_label 279 8 244 27 28 (nil) [1 uses])
+(note 244 279 245 27 [bb 27] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 245 244 246 27 (var_location:SI i (minus:SI (subreg:SI (reg:DI 167 [ ivtmp.92 ]) 0)
+        (subreg:SI (symbol_ref:DI ("unit") [flags 0x2]  <var_decl 0x7f0180e912d0 unit>) 0))) -1
+     (nil))
+(debug_insn 246 245 247 27 (var_location:DI bytes (reg/v:DI 163 [ bytes ])) -1
+     (nil))
+(debug_insn 247 246 248 27 (debug_marker) "progressmeter.c":112:3 -1
+     (nil))
+(insn 248 247 249 27 (set (reg:DI 4 si)
+        (const_int 512 [0x200])) "progressmeter.c":112:18 -1
+     (nil))
+(insn 249 248 250 27 (set (reg:DI 5 di)
+        (reg/v:DI 163 [ bytes ])) "progressmeter.c":112:18 -1
+     (nil))
+(call_insn/u 250 249 251 27 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__addvdi3") [flags 0x41]  <function_decl 0x7f0180af6c00 __addvdi3>) [0  S1 A8])
+            (const_int 0 [0]))) "progressmeter.c":112:18 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__addvdi3") [flags 0x41]  <function_decl 0x7f0180af6c00 __addvdi3>)
+        (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+            (nil)))
+    (expr_list (use (reg:DI 4 si))
+        (expr_list (use (reg:DI 5 di))
+            (nil))))
+(insn 251 250 252 27 (set (reg:DI 222)
+        (reg:DI 0 ax)) "progressmeter.c":112:18 -1
+     (nil))
+(insn 252 251 253 27 (set (reg:DI 162 [ _171 ])
+        (reg:DI 222)) "progressmeter.c":112:18 -1
+     (nil))
+(insn 253 252 254 27 (parallel [
+            (set (reg/v:DI 163 [ bytes ])
+                (ashiftrt:DI (reg:DI 162 [ _171 ])
+                    (const_int 10 [0xa])))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":112:9 -1
+     (nil))
+(debug_insn 254 253 255 27 (var_location:DI bytes (reg/v:DI 163 [ bytes ])) "progressmeter.c":112:9 -1
+     (nil))
+(debug_insn 255 254 256 27 (debug_marker) "progressmeter.c":111:48 -1
+     (nil))
+(debug_insn 256 255 257 27 (var_location:SI D#4 (plus:SI (minus:SI (subreg:SI (reg:DI 167 [ ivtmp.92 ]) 0)
+            (subreg:SI (symbol_ref:DI ("unit") [flags 0x2]  <var_decl 0x7f0180e912d0 unit>) 0))
+        (const_int 1 [0x1]))) -1
+     (nil))
+(debug_insn 257 256 258 27 (var_location:SI i (debug_expr:SI D#4)) -1
+     (nil))
+(debug_insn 258 257 259 27 (var_location:DI bytes (reg/v:DI 163 [ bytes ])) -1
+     (nil))
+(debug_insn 259 258 262 27 (debug_marker) "progressmeter.c":111:14 -1
+     (nil))
+(insn 262 259 263 27 (set (reg:CCGC 17 flags)
+        (compare:CCGC (reg/v:DI 163 [ bytes ])
+            (const_int 9999 [0x270f]))) "progressmeter.c":111:2 -1
+     (nil))
+(jump_insn 263 262 264 27 (set (pc)
+        (if_then_else (gt (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 268)
+            (pc))) "progressmeter.c":111:2 -1
+     (int_list:REG_BR_PROB 1014686028 (nil))
+ -> 268)
+(note 264 263 265 28 [bb 28] NOTE_INSN_BASIC_BLOCK)
+(insn 265 264 11 28 (set (reg:SI 172 [ _228 ])
+        (sign_extend:SI (reg:QI 171 [ pretmp_225 ]))) "progressmeter.c":113:2 -1
+     (nil))
+(insn 11 265 266 28 (set (reg/f:DI 165 [ iftmp.45_182 ])
+        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7f0180af3090 *.LC1>)) "progressmeter.c":113:2 -1
+     (nil))
+(jump_insn 266 11 267 28 (set (pc)
+        (label_ref 282)) "progressmeter.c":113:2 -1
+     (nil)
+ -> 282)
+(barrier 267 266 268)
+(code_label 268 267 269 29 27 (nil) [1 uses])
+(note 269 268 270 29 [bb 29] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 270 269 271 29 (var_location:SI i (debug_expr:SI D#4)) -1
+     (nil))
+(debug_insn 271 270 272 29 (var_location:DI bytes (reg/v:DI 163 [ bytes ])) -1
+     (nil))
+(insn 272 271 273 29 (parallel [
+            (set (reg:DI 167 [ ivtmp.92 ])
+                (plus:DI (reg:DI 167 [ ivtmp.92 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":111:29 -1
+     (nil))
+(insn 273 272 274 29 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 171 [ pretmp_225 ])
+            (const_int 84 [0x54]))) "progressmeter.c":111:29 -1
+     (nil))
+(jump_insn 274 273 275 29 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 715)
+            (pc))) "progressmeter.c":111:29 736 {*jcc}
+     (int_list:REG_BR_PROB 66130068 (nil))
+ -> 715)
+(note 275 274 276 30 [bb 30] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 276 275 277 30 (var_location:SI i (debug_expr:SI D#4)) -1
+     (nil))
+(debug_insn 277 276 278 30 (var_location:DI bytes (reg/v:DI 163 [ bytes ])) -1
+     (nil))
+(insn 278 277 280 30 (set (reg:QI 171 [ pretmp_225 ])
+        (mem:QI (plus:DI (reg:DI 167 [ ivtmp.92 ])
+                (const_int 1 [0x1])) [0 MEM[base: _202, offset: 1B]+0 S1 A8])) "progressmeter.c":111:36 -1
+     (nil))
+(jump_insn 280 278 281 30 (set (pc)
+        (label_ref 279)) "progressmeter.c":111:36 -1
+     (nil)
+ -> 279)
+(barrier 281 280 711)
+(code_label 711 281 710 31 45 (nil) [1 uses])
+(note 710 711 9 31 [bb 31] NOTE_INSN_BASIC_BLOCK)
+(insn 9 710 10 31 (set (reg:SI 172 [ _228 ])
+        (const_int 32 [0x20])) "progressmeter.c":111:2 -1
+     (nil))
+(insn 10 9 712 31 (set (reg/f:DI 165 [ iftmp.45_182 ])
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f0180af3f30 *.LC0>)) "progressmeter.c":113:2 -1
+     (nil))
+(jump_insn 712 10 713 31 (set (pc)
+        (label_ref 282)) -1
+     (nil)
+ -> 282)
+(barrier 713 712 715)
+(code_label 715 713 714 32 46 (nil) [1 uses])
+(note 714 715 12 32 [bb 32] NOTE_INSN_BASIC_BLOCK)
+(insn 12 714 13 32 (set (reg:SI 172 [ _228 ])
+        (const_int 84 [0x54])) -1
+     (nil))
+(insn 13 12 282 32 (set (reg/f:DI 165 [ iftmp.45_182 ])
+        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7f0180af3090 *.LC1>)) "progressmeter.c":113:2 -1
+     (nil))
+(code_label 282 13 283 33 26 (nil) [2 uses])
+(note 283 282 284 33 [bb 33] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 284 283 285 33 (var_location:DI __s (reg/f:DI 123 [ _57 ])) "progressmeter.c":113:2 -1
+     (nil))
+(debug_insn 285 284 286 33 (var_location:DI __n (sign_extend:DI (reg:SI 122 [ _56 ]))) "progressmeter.c":113:2 -1
+     (nil))
+(debug_insn 286 285 287 33 (var_location:DI __fmt (symbol_ref/f:DI ("*.LC8") [flags 0x2]  <var_decl 0x7f0180b0e120 *.LC8>)) "progressmeter.c":113:2 -1
+     (nil))
+(debug_insn 287 286 288 33 (debug_marker:BLK) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":64:1 -1
+     (nil))
+(debug_insn 288 287 289 33 (debug_marker) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":67:3 -1
+     (nil))
+(insn 289 288 290 33 (set (reg:DI 223)
+        (sign_extend:DI (reg:SI 122 [ _56 ]))) "progressmeter.c":113:2 -1
+     (nil))
+(insn 290 289 291 33 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [1  S8 A64])
+        (reg/f:DI 165 [ iftmp.45_182 ])) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":67:10 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 291 290 292 33 (set (mem:SI (pre_modify:DI (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8]))) [6  S4 A32])
+        (reg:SI 172 [ _228 ])) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":67:10 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 292 291 293 33 (set (reg:DI 37 r9)
+        (reg/v:DI 163 [ bytes ])) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":67:10 -1
+     (nil))
+(insn 293 292 294 33 (set (reg:DI 36 r8)
+        (symbol_ref/f:DI ("*.LC8") [flags 0x2]  <var_decl 0x7f0180b0e120 *.LC8>)) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":67:10 -1
+     (nil))
+(insn 294 293 295 33 (set (reg:DI 2 cx)
+        (const_int -1 [0xffffffffffffffff])) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":67:10 -1
+     (nil))
+(insn 295 294 296 33 (set (reg:SI 1 dx)
+        (const_int 1 [0x1])) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":67:10 -1
+     (nil))
+(insn 296 295 297 33 (set (reg:DI 4 si)
+        (reg:DI 223)) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":67:10 -1
+     (nil))
+(insn 297 296 298 33 (set (reg:DI 5 di)
+        (reg/f:DI 123 [ _57 ])) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":67:10 -1
+     (nil))
+(insn 298 297 299 33 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":67:10 -1
+     (nil))
+(call_insn 299 298 300 33 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__snprintf_chk") [flags 0x41]  <function_decl 0x7f0181218d00 __builtin___snprintf_chk>) [0 __builtin___snprintf_chk S1 A8])
+            (const_int 16 [0x10]))) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":67:10 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__snprintf_chk") [flags 0x41]  <function_decl 0x7f0181218d00 __builtin___snprintf_chk>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (expr_list:SI (use (reg:SI 1 dx))
+                    (expr_list:DI (use (reg:DI 2 cx))
+                        (expr_list:DI (use (reg:DI 36 r8))
+                            (expr_list:DI (use (reg:DI 37 r9))
+                                (nil)))))))))
+(debug_insn 300 299 301 33 (var_location:DI __s (clobber (const_int 0 [0]))) "progressmeter.c":113:2 -1
+     (nil))
+(debug_insn 301 300 302 33 (var_location:DI __n (clobber (const_int 0 [0]))) "progressmeter.c":113:2 -1
+     (nil))
+(debug_insn 302 301 303 33 (var_location:DI __fmt (clobber (const_int 0 [0]))) "progressmeter.c":113:2 -1
+     (nil))
+(debug_insn 303 302 304 33 (var_location:DI buf (clobber (const_int 0 [0]))) "progressmeter.c":185:2 -1
+     (nil))
+(debug_insn 304 303 305 33 (var_location:SI size (clobber (const_int 0 [0]))) "progressmeter.c":185:2 -1
+     (nil))
+(debug_insn 305 304 306 33 (var_location:DI bytes (clobber (const_int 0 [0]))) "progressmeter.c":185:2 -1
+     (nil))
+(debug_insn 306 305 307 33 (var_location:SI i (clobber (const_int 0 [0]))) "progressmeter.c":185:2 -1
+     (nil))
+(debug_insn 307 306 308 33 (debug_marker) "progressmeter.c":187:2 -1
+     (nil))
+(insn 308 307 309 33 (set (reg:SI 225)
+        (mem/c:SI (symbol_ref:DI ("win_size") [flags 0x2]  <var_decl 0x7f0180e91120 win_size>) [6 win_size+0 S4 A32])) "progressmeter.c":187:2 -1
+     (nil))
+(insn 309 308 310 33 (set (reg:DI 224)
+        (sign_extend:DI (reg:SI 225))) "progressmeter.c":187:2 -1
+     (nil))
+(insn 310 309 311 33 (parallel [
+            (set (reg:DI 226)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -528 [0xfffffffffffffdf0])))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":187:2 -1
+     (nil))
+(insn 311 310 312 33 (set (reg:DI 1 dx)
+        (reg:DI 224)) "progressmeter.c":187:2 -1
+     (nil))
+(insn 312 311 313 33 (set (reg:DI 4 si)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f0180af3f30 *.LC0>)) "progressmeter.c":187:2 -1
+     (nil))
+(insn 313 312 314 33 (set (reg:DI 5 di)
+        (reg:DI 226)) "progressmeter.c":187:2 -1
+     (nil))
+(call_insn 314 313 315 33 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strlcat") [flags 0x41]  <function_decl 0x7f0180d6f800 strlcat>) [0 strlcat S1 A8])
+            (const_int 0 [0]))) "progressmeter.c":187:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("strlcat") [flags 0x41]  <function_decl 0x7f0180d6f800 strlcat>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(debug_insn 315 314 316 33 (debug_marker) "progressmeter.c":190:2 -1
+     (nil))
+(insn 316 315 317 33 (parallel [
+            (set (reg:DI 228)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -528 [0xfffffffffffffdf0])))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":190:44 -1
+     (nil))
+(insn 317 316 318 33 (set (reg:DI 5 di)
+        (reg:DI 228)) "progressmeter.c":190:44 -1
+     (nil))
+(call_insn/i 318 317 319 33 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x7f01811ea500 strlen>) [0 __builtin_strlen S1 A8])
+            (const_int 0 [0]))) "progressmeter.c":190:44 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x7f01811ea500 strlen>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 319 318 320 33 (set (reg:DI 229)
+        (reg:DI 0 ax)) "progressmeter.c":190:44 -1
+     (nil))
+(insn 320 319 321 33 (set (reg:DI 230)
+        (reg:DI 229)) "progressmeter.c":190:44 -1
+     (nil))
+(insn 321 320 322 33 (set (reg:DI 130 [ _64 ])
+        (reg:DI 230)) "progressmeter.c":190:44 -1
+     (nil))
+(insn 322 321 323 33 (set (reg:SI 231)
+        (mem/c:SI (symbol_ref:DI ("win_size") [flags 0x2]  <var_decl 0x7f0180e91120 win_size>) [6 win_size+0 S4 A32])) "progressmeter.c":190:42 -1
+     (nil))
+(insn 323 322 324 33 (parallel [
+            (set (reg:SI 133 [ _67 ])
+                (minus:SI (reg:SI 231)
+                    (subreg:SI (reg:DI 130 [ _64 ]) 0)))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":190:42 -1
+     (expr_list:REG_EQUAL (minus:SI (mem/c:SI (symbol_ref:DI ("win_size") [flags 0x2]  <var_decl 0x7f0180e91120 win_size>) [6 win_size+0 S4 A32])
+            (subreg:SI (reg:DI 130 [ _64 ]) 0))
+        (nil)))
+(insn 324 323 325 33 (parallel [
+            (set (reg:DI 232)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -528 [0xfffffffffffffdf0])))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":190:2 -1
+     (nil))
+(insn 325 324 326 33 (parallel [
+            (set (reg/f:DI 134 [ _68 ])
+                (plus:DI (reg:DI 232)
+                    (reg:DI 130 [ _64 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":190:2 -1
+     (nil))
+(debug_insn 326 325 327 33 (var_location:DI buf (reg/f:DI 134 [ _68 ])) "progressmeter.c":190:2 -1
+     (nil))
+(debug_insn 327 326 328 33 (var_location:SI size (reg:SI 133 [ _67 ])) "progressmeter.c":190:2 -1
+     (nil))
+(debug_insn 328 327 329 33 (var_location:DI bytes (sign_extend:DI (mem/c:SI (symbol_ref:DI ("bytes_per_second") [flags 0x2]  <var_decl 0x7f0180e91090 bytes_per_second>) [6 bytes_per_second+0 S4 A32]))) "progressmeter.c":190:2 -1
+     (nil))
+(debug_insn 329 328 330 33 (debug_marker:BLK) "progressmeter.c":88:1 -1
+     (nil))
+(debug_insn 330 329 331 33 (debug_marker) "progressmeter.c":90:2 -1
+     (nil))
+(debug_insn 331 330 332 33 (debug_marker) "progressmeter.c":92:2 -1
+     (nil))
+(insn 332 331 333 33 (set (reg:SI 234)
+        (mem/c:SI (symbol_ref:DI ("bytes_per_second") [flags 0x2]  <var_decl 0x7f0180e91090 bytes_per_second>) [6 bytes_per_second+0 S4 A32])) "progressmeter.c":190:2 -1
+     (nil))
+(insn 333 332 334 33 (set (reg:DI 233)
+        (sign_extend:DI (reg:SI 234))) "progressmeter.c":190:2 -1
+     (nil))
+(insn 334 333 335 33 (set (reg:DI 4 si)
+        (const_int 100 [0x64])) "progressmeter.c":92:8 -1
+     (nil))
+(insn 335 334 336 33 (set (reg:DI 5 di)
+        (reg:DI 233)) "progressmeter.c":92:8 -1
+     (nil))
+(call_insn/u 336 335 337 33 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__mulvdi3") [flags 0x41]  <function_decl 0x7f0180af6d00 __mulvdi3>) [0  S1 A8])
+            (const_int 0 [0]))) "progressmeter.c":92:8 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__mulvdi3") [flags 0x41]  <function_decl 0x7f0180af6d00 __mulvdi3>)
+        (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+            (nil)))
+    (expr_list (use (reg:DI 4 si))
+        (expr_list (use (reg:DI 5 di))
+            (nil))))
+(insn 337 336 338 33 (set (reg:DI 235)
+        (reg:DI 0 ax)) "progressmeter.c":92:8 -1
+     (nil))
+(insn 338 337 339 33 (set (reg/v:DI 155 [ bytes ])
+        (reg:DI 235)) "progressmeter.c":92:8 -1
+     (nil))
+(debug_insn 339 338 340 33 (var_location:DI bytes (reg/v:DI 155 [ bytes ])) "progressmeter.c":92:8 -1
+     (nil))
+(debug_insn 340 339 341 33 (debug_marker) "progressmeter.c":93:2 -1
+     (nil))
+(debug_insn 341 340 342 33 (var_location:SI i (const_int 0 [0])) -1
+     (nil))
+(debug_insn 342 341 343 33 (var_location:DI bytes (reg/v:DI 155 [ bytes ])) -1
+     (nil))
+(debug_insn 343 342 344 33 (debug_marker) "progressmeter.c":93:14 -1
+     (nil))
+(insn 344 343 347 33 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":93:2 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 347 344 348 33 (set (reg:CCGC 17 flags)
+        (compare:CCGC (reg/v:DI 155 [ bytes ])
+            (const_int 99999 [0x1869f]))) "progressmeter.c":93:2 -1
+     (nil))
+(jump_insn 348 347 349 33 (set (pc)
+        (if_then_else (le (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 389)
+            (pc))) "progressmeter.c":93:2 -1
+     (int_list:REG_BR_PROB 59055804 (nil))
+ -> 389)
+(note 349 348 350 34 [bb 34] NOTE_INSN_BASIC_BLOCK)
+(insn 350 349 14 34 (set (reg:DI 169 [ ivtmp.81 ])
+        (symbol_ref:DI ("unit") [flags 0x2]  <var_decl 0x7f0180e912d0 unit>)) -1
+     (nil))
+(insn 14 350 386 34 (set (reg:QI 173 [ pretmp_232 ])
+        (const_int 75 [0x4b])) "progressmeter.c":93:2 -1
+     (nil))
+(code_label 386 14 351 35 32 (nil) [1 uses])
+(note 351 386 352 35 [bb 35] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 352 351 353 35 (var_location:SI i (minus:SI (subreg:SI (reg:DI 169 [ ivtmp.81 ]) 0)
+        (subreg:SI (symbol_ref:DI ("unit") [flags 0x2]  <var_decl 0x7f0180e912d0 unit>) 0))) -1
+     (nil))
+(debug_insn 353 352 354 35 (var_location:DI bytes (reg/v:DI 155 [ bytes ])) -1
+     (nil))
+(debug_insn 354 353 355 35 (debug_marker) "progressmeter.c":94:3 -1
+     (nil))
+(insn 355 354 356 35 (set (reg:DI 4 si)
+        (const_int 512 [0x200])) "progressmeter.c":94:18 -1
+     (nil))
+(insn 356 355 357 35 (set (reg:DI 5 di)
+        (reg/v:DI 155 [ bytes ])) "progressmeter.c":94:18 -1
+     (nil))
+(call_insn/u 357 356 358 35 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__addvdi3") [flags 0x41]  <function_decl 0x7f0180af6c00 __addvdi3>) [0  S1 A8])
+            (const_int 0 [0]))) "progressmeter.c":94:18 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__addvdi3") [flags 0x41]  <function_decl 0x7f0180af6c00 __addvdi3>)
+        (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+            (nil)))
+    (expr_list (use (reg:DI 4 si))
+        (expr_list (use (reg:DI 5 di))
+            (nil))))
+(insn 358 357 359 35 (set (reg:DI 236)
+        (reg:DI 0 ax)) "progressmeter.c":94:18 -1
+     (nil))
+(insn 359 358 360 35 (set (reg:DI 154 [ _150 ])
+        (reg:DI 236)) "progressmeter.c":94:18 -1
+     (nil))
+(insn 360 359 361 35 (parallel [
+            (set (reg/v:DI 155 [ bytes ])
+                (ashiftrt:DI (reg:DI 154 [ _150 ])
+                    (const_int 10 [0xa])))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":94:9 -1
+     (nil))
+(debug_insn 361 360 362 35 (var_location:DI bytes (reg/v:DI 155 [ bytes ])) "progressmeter.c":94:9 -1
+     (nil))
+(debug_insn 362 361 363 35 (debug_marker) "progressmeter.c":93:51 -1
+     (nil))
+(debug_insn 363 362 364 35 (var_location:SI D#3 (plus:SI (minus:SI (subreg:SI (reg:DI 169 [ ivtmp.81 ]) 0)
+            (subreg:SI (symbol_ref:DI ("unit") [flags 0x2]  <var_decl 0x7f0180e912d0 unit>) 0))
+        (const_int 1 [0x1]))) -1
+     (nil))
+(debug_insn 364 363 365 35 (var_location:SI i (debug_expr:SI D#3)) -1
+     (nil))
+(debug_insn 365 364 366 35 (var_location:DI bytes (reg/v:DI 155 [ bytes ])) -1
+     (nil))
+(debug_insn 366 365 369 35 (debug_marker) "progressmeter.c":93:14 -1
+     (nil))
+(insn 369 366 370 35 (set (reg:CCGC 17 flags)
+        (compare:CCGC (reg/v:DI 155 [ bytes ])
+            (const_int 99999 [0x1869f]))) "progressmeter.c":93:2 -1
+     (nil))
+(jump_insn 370 369 371 35 (set (pc)
+        (if_then_else (gt (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 375)
+            (pc))) "progressmeter.c":93:2 -1
+     (int_list:REG_BR_PROB 1014686028 (nil))
+ -> 375)
+(note 371 370 372 36 [bb 36] NOTE_INSN_BASIC_BLOCK)
+(insn 372 371 373 36 (set (reg:SI 174 [ _235 ])
+        (sign_extend:SI (reg:QI 173 [ pretmp_232 ]))) "progressmeter.c":99:2 -1
+     (nil))
+(jump_insn 373 372 374 36 (set (pc)
+        (label_ref 411)) "progressmeter.c":99:2 -1
+     (nil)
+ -> 411)
+(barrier 374 373 375)
+(code_label 375 374 376 37 30 (nil) [1 uses])
+(note 376 375 377 37 [bb 37] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 377 376 378 37 (var_location:SI i (debug_expr:SI D#3)) -1
+     (nil))
+(debug_insn 378 377 379 37 (var_location:DI bytes (reg/v:DI 155 [ bytes ])) -1
+     (nil))
+(insn 379 378 380 37 (parallel [
+            (set (reg:DI 169 [ ivtmp.81 ])
+                (plus:DI (reg:DI 169 [ ivtmp.81 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":93:32 -1
+     (nil))
+(insn 380 379 381 37 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 173 [ pretmp_232 ])
+            (const_int 84 [0x54]))) "progressmeter.c":93:32 -1
+     (nil))
+(jump_insn 381 380 382 37 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 719)
+            (pc))) "progressmeter.c":93:32 736 {*jcc}
+     (int_list:REG_BR_PROB 66130068 (nil))
+ -> 719)
+(note 382 381 383 38 [bb 38] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 383 382 384 38 (var_location:SI i (debug_expr:SI D#3)) -1
+     (nil))
+(debug_insn 384 383 385 38 (var_location:DI bytes (reg/v:DI 155 [ bytes ])) -1
+     (nil))
+(insn 385 384 387 38 (set (reg:QI 173 [ pretmp_232 ])
+        (mem:QI (plus:DI (reg:DI 169 [ ivtmp.81 ])
+                (const_int 1 [0x1])) [0 MEM[base: _206, offset: 1B]+0 S1 A8])) "progressmeter.c":93:39 -1
+     (nil))
+(jump_insn 387 385 388 38 (set (pc)
+        (label_ref 386)) "progressmeter.c":93:39 -1
+     (nil)
+ -> 386)
+(barrier 388 387 389)
+(code_label 389 388 390 39 29 (nil) [1 uses])
+(note 390 389 391 39 [bb 39] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 391 390 392 39 (debug_marker) "progressmeter.c":95:2 -1
+     (nil))
+(debug_insn 392 391 393 39 (debug_marker) "progressmeter.c":96:3 -1
+     (nil))
+(debug_insn 393 392 394 39 (var_location:SI i (const_int 1 [0x1])) "progressmeter.c":96:4 -1
+     (nil))
+(debug_insn 394 393 395 39 (debug_marker) "progressmeter.c":97:3 -1
+     (nil))
+(insn 395 394 396 39 (set (reg:DI 4 si)
+        (const_int 512 [0x200])) "progressmeter.c":97:18 -1
+     (nil))
+(insn 396 395 397 39 (set (reg:DI 5 di)
+        (reg/v:DI 155 [ bytes ])) "progressmeter.c":97:18 -1
+     (nil))
+(call_insn/u 397 396 398 39 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__addvdi3") [flags 0x41]  <function_decl 0x7f0180af6c00 __addvdi3>) [0  S1 A8])
+            (const_int 0 [0]))) "progressmeter.c":97:18 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__addvdi3") [flags 0x41]  <function_decl 0x7f0180af6c00 __addvdi3>)
+        (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+            (nil)))
+    (expr_list (use (reg:DI 4 si))
+        (expr_list (use (reg:DI 5 di))
+            (nil))))
+(insn 398 397 399 39 (set (reg:DI 237)
+        (reg:DI 0 ax)) "progressmeter.c":97:18 -1
+     (nil))
+(insn 399 398 400 39 (set (reg:DI 156 [ _157 ])
+        (reg:DI 237)) "progressmeter.c":97:18 -1
+     (nil))
+(insn 400 399 401 39 (set (reg:DI 238)
+        (reg:DI 156 [ _157 ])) "progressmeter.c":97:9 -1
+     (nil))
+(insn 401 400 404 39 (parallel [
+            (set (reg:DI 239)
+                (plus:DI (reg:DI 238)
+                    (const_int 1023 [0x3ff])))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":97:9 -1
+     (nil))
+(insn 404 401 405 39 (set (reg:CCGOC 17 flags)
+        (compare:CCGOC (reg:DI 238)
+            (const_int 0 [0]))) "progressmeter.c":97:9 -1
+     (nil))
+(insn 405 404 406 39 (set (reg:DI 238)
+        (if_then_else:DI (lt (reg:CCGOC 17 flags)
+                (const_int 0 [0]))
+            (reg:DI 239)
+            (reg:DI 238))) "progressmeter.c":97:9 -1
+     (nil))
+(insn 406 405 407 39 (parallel [
+            (set (reg:DI 240)
+                (ashiftrt:DI (reg:DI 238)
+                    (const_int 10 [0xa])))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":97:9 -1
+     (expr_list:REG_EQUAL (div:DI (reg:DI 156 [ _157 ])
+            (const_int 1024 [0x400]))
+        (nil)))
+(insn 407 406 408 39 (set (reg/v:DI 155 [ bytes ])
+        (reg:DI 240)) "progressmeter.c":97:9 -1
+     (nil))
+(debug_insn 408 407 409 39 (var_location:SI i (const_int 1 [0x1])) -1
+     (nil))
+(debug_insn 409 408 410 39 (var_location:DI bytes (reg/v:DI 155 [ bytes ])) -1
+     (nil))
+(debug_insn 410 409 15 39 (debug_marker) "progressmeter.c":99:2 -1
+     (nil))
+(insn 15 410 716 39 (set (reg:SI 174 [ _235 ])
+        (const_int 75 [0x4b])) "progressmeter.c":97:9 -1
+     (nil))
+(jump_insn 716 15 717 39 (set (pc)
+        (label_ref 411)) -1
+     (nil)
+ -> 411)
+(barrier 717 716 719)
+(code_label 719 717 718 40 47 (nil) [1 uses])
+(note 718 719 16 40 [bb 40] NOTE_INSN_BASIC_BLOCK)
+(insn 16 718 411 40 (set (reg:SI 174 [ _235 ])
+        (const_int 84 [0x54])) -1
+     (nil))
+(code_label 411 16 412 41 31 (nil) [2 uses])
+(note 412 411 413 41 [bb 41] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 413 412 414 41 (var_location:SI i (clobber (const_int 0 [0]))) -1
+     (nil))
+(debug_insn 414 413 415 41 (var_location:DI bytes (clobber (const_int 0 [0]))) -1
+     (nil))
+(insn 415 414 416 41 (set (reg:DI 4 si)
+        (const_int 5 [0x5])) "progressmeter.c":101:25 -1
+     (nil))
+(insn 416 415 417 41 (set (reg:DI 5 di)
+        (reg/v:DI 155 [ bytes ])) "progressmeter.c":101:25 -1
+     (nil))
+(call_insn/u 417 416 418 41 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__addvdi3") [flags 0x41]  <function_decl 0x7f0180af6c00 __addvdi3>) [0  S1 A8])
+            (const_int 0 [0]))) "progressmeter.c":101:25 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__addvdi3") [flags 0x41]  <function_decl 0x7f0180af6c00 __addvdi3>)
+        (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+            (nil)))
+    (expr_list (use (reg:DI 4 si))
+        (expr_list (use (reg:DI 5 di))
+            (nil))))
+(insn 418 417 419 41 (set (reg:DI 241)
+        (reg:DI 0 ax)) "progressmeter.c":101:25 -1
+     (nil))
+(insn 419 418 420 41 (set (reg:DI 157 [ _163 ])
+        (reg:DI 241)) "progressmeter.c":101:25 -1
+     (nil))
+(debug_insn 420 419 421 41 (var_location:DI __s (reg/f:DI 134 [ _68 ])) "progressmeter.c":99:2 -1
+     (nil))
+(debug_insn 421 420 422 41 (var_location:DI __n (sign_extend:DI (reg:SI 133 [ _67 ]))) "progressmeter.c":99:2 -1
+     (nil))
+(debug_insn 422 421 423 41 (var_location:DI __fmt (symbol_ref/f:DI ("*.LC9") [flags 0x2]  <var_decl 0x7f0180b0e1b0 *.LC9>)) "progressmeter.c":99:2 -1
+     (nil))
+(debug_insn 423 422 424 41 (debug_marker:BLK) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":64:1 -1
+     (nil))
+(debug_insn 424 423 425 41 (debug_marker) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":67:3 -1
+     (nil))
+(insn 425 424 426 41 (set (reg:DI 244)
+        (const_int -6640827866535438581 [0xa3d70a3d70a3d70b])) "progressmeter.c":99:2 -1
+     (nil))
+(insn 426 425 427 41 (parallel [
+            (set (reg:DI 243)
+                (truncate:DI (lshiftrt:TI (mult:TI (sign_extend:TI (reg:DI 157 [ _163 ]))
+                            (sign_extend:TI (reg:DI 244)))
+                        (const_int 64 [0x40]))))
+            (clobber (scratch:DI))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":99:2 -1
+     (nil))
+(insn 427 426 428 41 (parallel [
+            (set (reg:DI 245)
+                (plus:DI (reg:DI 243)
+                    (reg:DI 157 [ _163 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":99:2 -1
+     (nil))
+(insn 428 427 429 41 (parallel [
+            (set (reg:DI 246)
+                (ashiftrt:DI (reg:DI 245)
+                    (const_int 6 [0x6])))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":99:2 -1
+     (nil))
+(insn 429 428 430 41 (parallel [
+            (set (reg:DI 247)
+                (ashiftrt:DI (reg:DI 157 [ _163 ])
+                    (const_int 63 [0x3f])))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":99:2 -1
+     (nil))
+(insn 430 429 431 41 (parallel [
+            (set (reg:DI 242)
+                (minus:DI (reg:DI 246)
+                    (reg:DI 247)))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":99:2 -1
+     (expr_list:REG_EQUAL (div:DI (reg:DI 157 [ _163 ])
+            (const_int 100 [0x64]))
+        (nil)))
+(insn 431 430 432 41 (set (reg:DI 248)
+        (sign_extend:DI (reg:SI 133 [ _67 ]))) "progressmeter.c":99:2 -1
+     (nil))
+(insn 432 431 433 41 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":67:10 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 433 432 434 41 (set (reg/f:DI 249)
+        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7f0180af3090 *.LC1>)) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":67:10 -1
+     (nil))
+(insn 434 433 435 41 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [1  S8 A64])
+        (reg/f:DI 249)) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":67:10 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 435 434 436 41 (set (mem:SI (pre_modify:DI (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8]))) [6  S4 A32])
+        (reg:SI 174 [ _235 ])) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":67:10 -1
+     (expr_list:REG_ARGS_SIZE (const_int 24 [0x18])
+        (nil)))
+(insn 436 435 437 41 (set (reg:DI 252)
+        (const_int 7378697629483820647 [0x6666666666666667])) "progressmeter.c":101:30 -1
+     (nil))
+(insn 437 436 438 41 (parallel [
+            (set (reg:DI 251)
+                (truncate:DI (lshiftrt:TI (mult:TI (sign_extend:TI (reg:DI 157 [ _163 ]))
+                            (sign_extend:TI (reg:DI 252)))
+                        (const_int 64 [0x40]))))
+            (clobber (scratch:DI))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":101:30 -1
+     (nil))
+(insn 438 437 439 41 (parallel [
+            (set (reg:DI 253)
+                (ashiftrt:DI (reg:DI 251)
+                    (const_int 2 [0x2])))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":101:30 -1
+     (nil))
+(insn 439 438 440 41 (parallel [
+            (set (reg:DI 254)
+                (ashiftrt:DI (reg:DI 157 [ _163 ])
+                    (const_int 63 [0x3f])))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":101:30 -1
+     (nil))
+(insn 440 439 441 41 (parallel [
+            (set (reg:DI 250)
+                (minus:DI (reg:DI 253)
+                    (reg:DI 254)))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":101:30 -1
+     (expr_list:REG_EQUAL (div:DI (reg:DI 157 [ _163 ])
+            (const_int 10 [0xa]))
+        (nil)))
+(insn 441 440 442 41 (set (reg:DI 257)
+        (const_int 7378697629483820647 [0x6666666666666667])) "progressmeter.c":99:2 -1
+     (nil))
+(insn 442 441 443 41 (parallel [
+            (set (reg:DI 256)
+                (truncate:DI (lshiftrt:TI (mult:TI (sign_extend:TI (reg:DI 250))
+                            (sign_extend:TI (reg:DI 257)))
+                        (const_int 64 [0x40]))))
+            (clobber (scratch:DI))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":99:2 -1
+     (nil))
+(insn 443 442 444 41 (parallel [
+            (set (reg:DI 258)
+                (ashiftrt:DI (reg:DI 256)
+                    (const_int 2 [0x2])))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":99:2 -1
+     (nil))
+(insn 444 443 445 41 (parallel [
+            (set (reg:DI 259)
+                (ashiftrt:DI (reg:DI 250)
+                    (const_int 63 [0x3f])))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":99:2 -1
+     (nil))
+(insn 445 444 446 41 (parallel [
+            (set (reg:DI 255)
+                (minus:DI (reg:DI 258)
+                    (reg:DI 259)))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":99:2 -1
+     (expr_list:REG_EQUAL (div:DI (reg:DI 250)
+            (const_int 10 [0xa]))
+        (nil)))
+(insn 446 445 447 41 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":99:2 -1
+     (expr_list:REG_ARGS_SIZE (const_int 32 [0x20])
+        (nil)))
+(insn 447 446 448 41 (set (reg:DI 4 si)
+        (const_int 10 [0xa])) "progressmeter.c":99:2 -1
+     (nil))
+(insn 448 447 449 41 (set (reg:DI 5 di)
+        (reg:DI 255)) "progressmeter.c":99:2 -1
+     (nil))
+(call_insn/u 449 448 450 41 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__mulvdi3") [flags 0x41]  <function_decl 0x7f0180af6d00 __mulvdi3>) [0  S1 A8])
+            (const_int 8 [0x8]))) "progressmeter.c":99:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__mulvdi3") [flags 0x41]  <function_decl 0x7f0180af6d00 __mulvdi3>)
+        (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+            (nil)))
+    (expr_list (use (reg:DI 4 si))
+        (expr_list (use (reg:DI 5 di))
+            (nil))))
+(insn 450 449 451 41 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int 8 [0x8])))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":99:2 -1
+     (expr_list:REG_ARGS_SIZE (const_int 24 [0x18])
+        (nil)))
+(insn 451 450 452 41 (set (reg:DI 260)
+        (reg:DI 0 ax)) "progressmeter.c":99:2 -1
+     (nil))
+(insn 452 451 453 41 (parallel [
+            (set (reg:DI 261)
+                (minus:DI (reg:DI 250)
+                    (reg:DI 260)))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":99:2 -1
+     (nil))
+(insn 453 452 454 41 (set (mem:DI (pre_dec:DI (reg/f:DI 7 sp)) [9  S8 A64])
+        (reg:DI 261)) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":67:10 -1
+     (expr_list:REG_ARGS_SIZE (const_int 32 [0x20])
+        (nil)))
+(insn 454 453 455 41 (set (reg:DI 37 r9)
+        (reg:DI 242)) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":67:10 -1
+     (nil))
+(insn 455 454 456 41 (set (reg:DI 36 r8)
+        (symbol_ref/f:DI ("*.LC9") [flags 0x2]  <var_decl 0x7f0180b0e1b0 *.LC9>)) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":67:10 -1
+     (nil))
+(insn 456 455 457 41 (set (reg:DI 2 cx)
+        (const_int -1 [0xffffffffffffffff])) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":67:10 -1
+     (nil))
+(insn 457 456 458 41 (set (reg:SI 1 dx)
+        (const_int 1 [0x1])) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":67:10 -1
+     (nil))
+(insn 458 457 459 41 (set (reg:DI 4 si)
+        (reg:DI 248)) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":67:10 -1
+     (nil))
+(insn 459 458 460 41 (set (reg:DI 5 di)
+        (reg/f:DI 134 [ _68 ])) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":67:10 -1
+     (nil))
+(insn 460 459 461 41 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":67:10 -1
+     (nil))
+(call_insn 461 460 462 41 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__snprintf_chk") [flags 0x41]  <function_decl 0x7f0181218d00 __builtin___snprintf_chk>) [0 __builtin___snprintf_chk S1 A8])
+            (const_int 32 [0x20]))) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":67:10 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__snprintf_chk") [flags 0x41]  <function_decl 0x7f0181218d00 __builtin___snprintf_chk>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (expr_list:SI (use (reg:SI 1 dx))
+                    (expr_list:DI (use (reg:DI 2 cx))
+                        (expr_list:DI (use (reg:DI 36 r8))
+                            (expr_list:DI (use (reg:DI 37 r9))
+                                (nil)))))))))
+(debug_insn 462 461 463 41 (var_location:DI __s (clobber (const_int 0 [0]))) "progressmeter.c":99:2 -1
+     (nil))
+(debug_insn 463 462 464 41 (var_location:DI __n (clobber (const_int 0 [0]))) "progressmeter.c":99:2 -1
+     (nil))
+(debug_insn 464 463 465 41 (var_location:DI __fmt (clobber (const_int 0 [0]))) "progressmeter.c":99:2 -1
+     (nil))
+(debug_insn 465 464 466 41 (var_location:DI buf (clobber (const_int 0 [0]))) "progressmeter.c":190:2 -1
+     (nil))
+(debug_insn 466 465 467 41 (var_location:SI size (clobber (const_int 0 [0]))) "progressmeter.c":190:2 -1
+     (nil))
+(debug_insn 467 466 468 41 (var_location:DI bytes (clobber (const_int 0 [0]))) "progressmeter.c":190:2 -1
+     (nil))
+(debug_insn 468 467 469 41 (var_location:SI i (clobber (const_int 0 [0]))) "progressmeter.c":190:2 -1
+     (nil))
+(debug_insn 469 468 470 41 (debug_marker) "progressmeter.c":192:2 -1
+     (nil))
+(insn 470 469 471 41 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int 32 [0x20])))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":192:2 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 471 470 472 41 (set (reg:SI 263)
+        (mem/c:SI (symbol_ref:DI ("win_size") [flags 0x2]  <var_decl 0x7f0180e91120 win_size>) [6 win_size+0 S4 A32])) "progressmeter.c":192:2 -1
+     (nil))
+(insn 472 471 473 41 (set (reg:DI 262)
+        (sign_extend:DI (reg:SI 263))) "progressmeter.c":192:2 -1
+     (nil))
+(insn 473 472 474 41 (parallel [
+            (set (reg:DI 264)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -528 [0xfffffffffffffdf0])))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":192:2 -1
+     (nil))
+(insn 474 473 475 41 (set (reg:DI 1 dx)
+        (reg:DI 262)) "progressmeter.c":192:2 -1
+     (nil))
+(insn 475 474 476 41 (set (reg:DI 4 si)
+        (symbol_ref/f:DI ("*.LC10") [flags 0x2]  <var_decl 0x7f0180b0e240 *.LC10>)) "progressmeter.c":192:2 -1
+     (nil))
+(insn 476 475 477 41 (set (reg:DI 5 di)
+        (reg:DI 264)) "progressmeter.c":192:2 -1
+     (nil))
+(call_insn 477 476 478 41 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strlcat") [flags 0x41]  <function_decl 0x7f0180d6f800 strlcat>) [0 strlcat S1 A8])
+            (const_int 0 [0]))) "progressmeter.c":192:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("strlcat") [flags 0x41]  <function_decl 0x7f0180d6f800 strlcat>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(debug_insn 478 477 479 41 (debug_marker) "progressmeter.c":195:2 -1
+     (nil))
+(insn 479 478 480 41 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:DI 86 [ transferred ])
+            (const_int 0 [0]))) "progressmeter.c":195:5 -1
+     (nil))
+(jump_insn 480 479 481 41 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 686)
+            (pc))) "progressmeter.c":195:5 -1
+     (int_list:REG_BR_PROB 536870916 (nil))
+ -> 686)
+(note 481 480 482 42 [bb 42] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 482 481 483 42 (debug_marker) "progressmeter.c":196:3 -1
+     (nil))
+(insn 483 482 484 42 (set (reg:DF 265)
+        (float:DF (mem/c:DI (symbol_ref:DI ("stalled") [flags 0x2]  <var_decl 0x7f0180e91000 stalled>) [2 stalled+0 S8 A64]))) "progressmeter.c":196:11 -1
+     (nil))
+(insn 484 483 485 42 (set (reg:DF 266)
+        (plus:DF (reg:DF 265)
+            (reg/v:DF 93 [ elapsed ]))) "progressmeter.c":196:11 -1
+     (nil))
+(insn 485 484 486 42 (set (reg:DI 140 [ _74 ])
+        (fix:DI (reg:DF 266))) "progressmeter.c":196:11 -1
+     (nil))
+(insn 486 485 487 42 (set (mem/c:DI (symbol_ref:DI ("stalled") [flags 0x2]  <var_decl 0x7f0180e91000 stalled>) [2 stalled+0 S8 A64])
+        (reg:DI 140 [ _74 ])) -1
+     (nil))
+(debug_insn 487 486 488 42 (debug_marker) "progressmeter.c":200:2 -1
+     (nil))
+(insn 488 487 489 42 (set (reg:SI 267)
+        (mem/c:SI (symbol_ref:DI ("win_size") [flags 0x2]  <var_decl 0x7f0180e91120 win_size>) [6 win_size+0 S4 A32])) "progressmeter.c":201:3 -1
+     (nil))
+(insn 489 488 492 42 (set (reg:DI 177 [ _242 ])
+        (sign_extend:DI (reg:SI 267))) "progressmeter.c":201:3 -1
+     (nil))
+(insn 492 489 493 42 (set (reg:CCGC 17 flags)
+        (compare:CCGC (reg:DI 140 [ _74 ])
+            (const_int 4 [0x4]))) "progressmeter.c":200:5 -1
+     (nil))
+(jump_insn 493 492 494 42 (set (pc)
+        (if_then_else (le (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 503)
+            (pc))) "progressmeter.c":200:5 -1
+     (int_list:REG_BR_PROB 365072228 (nil))
+ -> 503)
+(note 494 493 495 43 [bb 43] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 495 494 496 43 (debug_marker) "progressmeter.c":201:3 -1
+     (nil))
+(insn 496 495 497 43 (parallel [
+            (set (reg:DI 268)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -528 [0xfffffffffffffdf0])))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":201:3 -1
+     (nil))
+(insn 497 496 498 43 (set (reg:DI 1 dx)
+        (reg:DI 177 [ _242 ])) "progressmeter.c":201:3 -1
+     (nil))
+(insn 498 497 499 43 (set (reg:DI 4 si)
+        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x7f0180b0e2d0 *.LC11>)) "progressmeter.c":201:3 -1
+     (nil))
+(insn 499 498 500 43 (set (reg:DI 5 di)
+        (reg:DI 268)) "progressmeter.c":201:3 -1
+     (nil))
+(call_insn 500 499 501 43 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strlcat") [flags 0x41]  <function_decl 0x7f0180d6f800 strlcat>) [0 strlcat S1 A8])
+            (const_int 0 [0]))) "progressmeter.c":201:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("strlcat") [flags 0x41]  <function_decl 0x7f0180d6f800 strlcat>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(jump_insn 501 500 502 43 (set (pc)
+        (label_ref 667)) -1
+     (nil)
+ -> 667)
+(barrier 502 501 503)
+(code_label 503 502 504 44 34 (nil) [2 uses])
+(note 504 503 505 44 [bb 44] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 505 504 506 44 (debug_marker) "progressmeter.c":202:7 -1
+     (nil))
+(insn 506 505 507 44 (set (reg:SI 141 [ bytes_per_second.36_78 ])
+        (mem/c:SI (symbol_ref:DI ("bytes_per_second") [flags 0x2]  <var_decl 0x7f0180e91090 bytes_per_second>) [6 bytes_per_second+0 S4 A32])) "progressmeter.c":202:28 -1
+     (nil))
+(insn 507 506 508 44 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 141 [ bytes_per_second.36_78 ])
+            (const_int 0 [0]))) "progressmeter.c":202:10 -1
+     (nil))
+(jump_insn 508 507 509 44 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 521)
+            (pc))) "progressmeter.c":202:10 -1
+     (int_list:REG_BR_PROB 536870916 (nil))
+ -> 521)
+(note 509 508 510 45 [bb 45] NOTE_INSN_BASIC_BLOCK)
+(insn 510 509 511 45 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:DI 91 [ bytes_left ])
+            (const_int 0 [0]))) "progressmeter.c":202:33 -1
+     (nil))
+(jump_insn 511 510 512 45 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 536)
+            (pc))) "progressmeter.c":202:33 -1
+     (int_list:REG_BR_PROB 719407028 (nil))
+ -> 536)
+(note 512 511 513 46 [bb 46] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 513 512 514 46 (debug_marker) "progressmeter.c":203:3 -1
+     (nil))
+(insn 514 513 515 46 (parallel [
+            (set (reg:DI 269)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -528 [0xfffffffffffffdf0])))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":203:3 -1
+     (nil))
+(insn 515 514 516 46 (set (reg:DI 1 dx)
+        (reg:DI 177 [ _242 ])) "progressmeter.c":203:3 -1
+     (nil))
+(insn 516 515 517 46 (set (reg:DI 4 si)
+        (symbol_ref/f:DI ("*.LC12") [flags 0x2]  <var_decl 0x7f0180b0e360 *.LC12>)) "progressmeter.c":203:3 -1
+     (nil))
+(insn 517 516 518 46 (set (reg:DI 5 di)
+        (reg:DI 269)) "progressmeter.c":203:3 -1
+     (nil))
+(call_insn 518 517 519 46 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strlcat") [flags 0x41]  <function_decl 0x7f0180d6f800 strlcat>) [0 strlcat S1 A8])
+            (const_int 0 [0]))) "progressmeter.c":203:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("strlcat") [flags 0x41]  <function_decl 0x7f0180d6f800 strlcat>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(jump_insn 519 518 520 46 (set (pc)
+        (label_ref 667)) "progressmeter.c":203:3 -1
+     (nil)
+ -> 667)
+(barrier 520 519 521)
+(code_label 521 520 522 47 36 (nil) [1 uses])
+(note 522 521 523 47 [bb 47] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 523 522 526 47 (debug_marker) "progressmeter.c":205:3 -1
+     (nil))
+(insn 526 523 527 47 (set (reg:CCNO 17 flags)
+        (compare:CCNO (reg/v:DI 91 [ bytes_left ])
+            (const_int 0 [0]))) "progressmeter.c":205:6 -1
+     (nil))
+(jump_insn 527 526 528 47 (set (pc)
+        (if_then_else (le (reg:CCNO 17 flags)
+                (const_int 0 [0]))
+            (label_ref 536)
+            (pc))) "progressmeter.c":205:6 -1
+     (int_list:REG_BR_PROB 15784004 (nil))
+ -> 536)
+(note 528 527 529 48 [bb 48] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 529 528 530 48 (debug_marker) "progressmeter.c":206:4 -1
+     (nil))
+(insn 530 529 531 48 (set (reg:DI 270)
+        (sign_extend:DI (reg:SI 141 [ bytes_per_second.36_78 ]))) "progressmeter.c":206:25 -1
+     (nil))
+(insn 531 530 532 48 (parallel [
+            (set (reg:DI 272)
+                (div:DI (reg/v:DI 91 [ bytes_left ])
+                    (reg:DI 270)))
+            (set (reg:DI 273)
+                (mod:DI (reg/v:DI 91 [ bytes_left ])
+                    (reg:DI 270)))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":206:25 -1
+     (nil))
+(insn 532 531 533 48 (set (reg/v:SI 144 [ seconds ])
+        (subreg:SI (reg:DI 272) 0)) "progressmeter.c":206:12 -1
+     (nil))
+(debug_insn 533 532 534 48 (var_location:SI seconds (reg/v:SI 144 [ seconds ])) "progressmeter.c":206:12 -1
+     (nil))
+(jump_insn 534 533 535 48 (set (pc)
+        (label_ref 541)) -1
+     (nil)
+ -> 541)
+(barrier 535 534 536)
+(code_label 536 535 537 49 37 (nil) [2 uses])
+(note 537 536 538 49 [bb 49] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 538 537 539 49 (debug_marker) "progressmeter.c":208:4 -1
+     (nil))
+(insn 539 538 540 49 (set (reg/v:SI 144 [ seconds ])
+        (fix:SI (reg/v:DF 93 [ elapsed ]))) "progressmeter.c":208:12 -1
+     (nil))
+(debug_insn 540 539 541 49 (var_location:SI seconds (reg/v:SI 144 [ seconds ])) "progressmeter.c":208:12 -1
+     (nil))
+(code_label 541 540 542 50 38 (nil) [1 uses])
+(note 542 541 543 50 [bb 50] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 543 542 544 50 (var_location:SI seconds (reg/v:SI 144 [ seconds ])) -1
+     (nil))
+(debug_insn 544 543 545 50 (debug_marker) "progressmeter.c":210:3 -1
+     (nil))
+(insn 545 544 546 50 (set (reg:DI 274)
+        (sign_extend:DI (reg/v:SI 144 [ seconds ]))) "progressmeter.c":210:9 -1
+     (nil))
+(insn 546 545 547 50 (parallel [
+            (set (reg:DI 275)
+                (mult:DI (reg:DI 274)
+                    (const_int -1851608123 [0xffffffff91a2b3c5])))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":210:9 -1
+     (nil))
+(insn 547 546 548 50 (parallel [
+            (set (reg:DI 276)
+                (lshiftrt:DI (reg:DI 275)
+                    (const_int 32 [0x20])))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":210:9 -1
+     (nil))
+(insn 548 547 549 50 (parallel [
+            (set (reg:SI 277)
+                (plus:SI (reg/v:SI 144 [ seconds ])
+                    (subreg:SI (reg:DI 276) 0)))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":210:9 -1
+     (nil))
+(insn 549 548 550 50 (parallel [
+            (set (reg:SI 278)
+                (ashiftrt:SI (reg:SI 277)
+                    (const_int 11 [0xb])))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":210:9 -1
+     (nil))
+(insn 550 549 551 50 (parallel [
+            (set (reg:SI 279)
+                (ashiftrt:SI (reg/v:SI 144 [ seconds ])
+                    (const_int 31 [0x1f])))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":210:9 -1
+     (nil))
+(insn 551 550 552 50 (parallel [
+            (set (reg/v:SI 145 [ hours ])
+                (minus:SI (reg:SI 278)
+                    (reg:SI 279)))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":210:9 -1
+     (expr_list:REG_EQUAL (div:SI (reg/v:SI 144 [ seconds ])
+            (const_int 3600 [0xe10]))
+        (nil)))
+(debug_insn 552 551 553 50 (var_location:SI hours (reg/v:SI 145 [ hours ])) "progressmeter.c":210:9 -1
+     (nil))
+(debug_insn 553 552 554 50 (debug_marker) "progressmeter.c":211:3 -1
+     (nil))
+(insn 554 553 555 50 (set (reg:SI 4 si)
+        (const_int -3600 [0xfffffffffffff1f0])) "progressmeter.c":211:20 -1
+     (nil))
+(insn 555 554 556 50 (set (reg:SI 5 di)
+        (reg/v:SI 145 [ hours ])) "progressmeter.c":211:20 -1
+     (nil))
+(call_insn/u 556 555 557 50 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__mulvsi3") [flags 0x41]  <function_decl 0x7f0180aee300 __mulvsi3>) [0  S1 A8])
+            (const_int 0 [0]))) "progressmeter.c":211:20 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__mulvsi3") [flags 0x41]  <function_decl 0x7f0180aee300 __mulvsi3>)
+        (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+            (nil)))
+    (expr_list (use (reg:SI 4 si))
+        (expr_list (use (reg:SI 5 di))
+            (nil))))
+(insn 557 556 558 50 (set (reg:SI 280)
+        (reg:SI 0 ax)) "progressmeter.c":211:20 -1
+     (nil))
+(insn 558 557 559 50 (set (reg:SI 4 si)
+        (reg/v:SI 144 [ seconds ])) "progressmeter.c":211:11 -1
+     (nil))
+(insn 559 558 560 50 (set (reg:SI 5 di)
+        (reg:SI 280)) "progressmeter.c":211:11 -1
+     (nil))
+(call_insn/u 560 559 561 50 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__addvsi3") [flags 0x41]  <function_decl 0x7f0180ec7400 __addvsi3>) [0  S1 A8])
+            (const_int 0 [0]))) "progressmeter.c":211:11 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__addvsi3") [flags 0x41]  <function_decl 0x7f0180ec7400 __addvsi3>)
+        (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+            (nil)))
+    (expr_list (use (reg:SI 4 si))
+        (expr_list (use (reg:SI 5 di))
+            (nil))))
+(insn 561 560 562 50 (set (reg:SI 281)
+        (reg:SI 0 ax)) "progressmeter.c":211:11 -1
+     (nil))
+(insn 562 561 563 50 (set (reg/v:SI 147 [ seconds ])
+        (reg:SI 281)) "progressmeter.c":211:11 -1
+     (nil))
+(debug_insn 563 562 564 50 (var_location:SI seconds (reg/v:SI 147 [ seconds ])) "progressmeter.c":211:11 -1
+     (nil))
+(debug_insn 564 563 565 50 (debug_marker) "progressmeter.c":212:3 -1
+     (nil))
+(insn 565 564 566 50 (set (reg:DI 282)
+        (sign_extend:DI (reg/v:SI 147 [ seconds ]))) "progressmeter.c":212:11 -1
+     (nil))
+(insn 566 565 567 50 (parallel [
+            (set (reg:DI 283)
+                (mult:DI (reg:DI 282)
+                    (const_int -2004318071 [0xffffffff88888889])))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":212:11 -1
+     (nil))
+(insn 567 566 568 50 (parallel [
+            (set (reg:DI 284)
+                (lshiftrt:DI (reg:DI 283)
+                    (const_int 32 [0x20])))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":212:11 -1
+     (nil))
+(insn 568 567 569 50 (parallel [
+            (set (reg:SI 285)
+                (plus:SI (reg/v:SI 147 [ seconds ])
+                    (subreg:SI (reg:DI 284) 0)))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":212:11 -1
+     (nil))
+(insn 569 568 570 50 (parallel [
+            (set (reg:SI 286)
+                (ashiftrt:SI (reg:SI 285)
+                    (const_int 5 [0x5])))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":212:11 -1
+     (nil))
+(insn 570 569 571 50 (parallel [
+            (set (reg:SI 287)
+                (ashiftrt:SI (reg/v:SI 147 [ seconds ])
+                    (const_int 31 [0x1f])))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":212:11 -1
+     (nil))
+(insn 571 570 572 50 (parallel [
+            (set (reg/v:SI 148 [ minutes ])
+                (minus:SI (reg:SI 286)
+                    (reg:SI 287)))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":212:11 -1
+     (expr_list:REG_EQUAL (div:SI (reg/v:SI 147 [ seconds ])
+            (const_int 60 [0x3c]))
+        (nil)))
+(debug_insn 572 571 573 50 (var_location:SI minutes (reg/v:SI 148 [ minutes ])) "progressmeter.c":212:11 -1
+     (nil))
+(debug_insn 573 572 574 50 (debug_marker) "progressmeter.c":213:3 -1
+     (nil))
+(insn 574 573 575 50 (set (reg:SI 4 si)
+        (const_int -60 [0xffffffffffffffc4])) "progressmeter.c":213:22 -1
+     (nil))
+(insn 575 574 576 50 (set (reg:SI 5 di)
+        (reg/v:SI 148 [ minutes ])) "progressmeter.c":213:22 -1
+     (nil))
+(call_insn/u 576 575 577 50 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__mulvsi3") [flags 0x41]  <function_decl 0x7f0180aee300 __mulvsi3>) [0  S1 A8])
+            (const_int 0 [0]))) "progressmeter.c":213:22 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__mulvsi3") [flags 0x41]  <function_decl 0x7f0180aee300 __mulvsi3>)
+        (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+            (nil)))
+    (expr_list (use (reg:SI 4 si))
+        (expr_list (use (reg:SI 5 di))
+            (nil))))
+(insn 577 576 578 50 (set (reg:SI 288)
+        (reg:SI 0 ax)) "progressmeter.c":213:22 -1
+     (nil))
+(insn 578 577 579 50 (set (reg:SI 4 si)
+        (reg/v:SI 147 [ seconds ])) "progressmeter.c":213:11 -1
+     (nil))
+(insn 579 578 580 50 (set (reg:SI 5 di)
+        (reg:SI 288)) "progressmeter.c":213:11 -1
+     (nil))
+(call_insn/u 580 579 581 50 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__addvsi3") [flags 0x41]  <function_decl 0x7f0180ec7400 __addvsi3>) [0  S1 A8])
+            (const_int 0 [0]))) "progressmeter.c":213:11 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__addvsi3") [flags 0x41]  <function_decl 0x7f0180ec7400 __addvsi3>)
+        (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+            (nil)))
+    (expr_list (use (reg:SI 4 si))
+        (expr_list (use (reg:SI 5 di))
+            (nil))))
+(insn 581 580 582 50 (set (reg:SI 289)
+        (reg:SI 0 ax)) "progressmeter.c":213:11 -1
+     (nil))
+(insn 582 581 583 50 (set (reg/v:SI 150 [ seconds ])
+        (reg:SI 289)) "progressmeter.c":213:11 -1
+     (nil))
+(debug_insn 583 582 584 50 (var_location:SI seconds (reg/v:SI 150 [ seconds ])) "progressmeter.c":213:11 -1
+     (nil))
+(debug_insn 584 583 585 50 (debug_marker) "progressmeter.c":215:3 -1
+     (nil))
+(insn 585 584 586 50 (parallel [
+            (set (reg:DI 291)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -528 [0xfffffffffffffdf0])))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":216:43 -1
+     (nil))
+(insn 586 585 587 50 (set (reg:DI 5 di)
+        (reg:DI 291)) "progressmeter.c":216:43 -1
+     (nil))
+(call_insn/i 587 586 588 50 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x7f01811ea500 strlen>) [0 __builtin_strlen S1 A8])
+            (const_int 0 [0]))) "progressmeter.c":216:43 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x7f01811ea500 strlen>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 588 587 589 50 (set (reg:DI 292)
+        (reg:DI 0 ax)) "progressmeter.c":216:43 -1
+     (nil))
+(insn 589 588 590 50 (set (reg:DI 293)
+        (reg:DI 292)) "progressmeter.c":216:43 -1
+     (nil))
+(insn 590 589 591 50 (set (reg:DI 178 [ _244 ])
+        (reg:DI 293)) "progressmeter.c":216:43 -1
+     (nil))
+(insn 591 590 592 50 (parallel [
+            (set (reg:DI 179 [ _245 ])
+                (minus:DI (reg:DI 177 [ _242 ])
+                    (reg:DI 178 [ _244 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":216:4 -1
+     (nil))
+(insn 592 591 593 50 (parallel [
+            (set (reg:DI 294)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -528 [0xfffffffffffffdf0])))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":216:4 -1
+     (nil))
+(insn 593 592 594 50 (parallel [
+            (set (reg/f:DI 180 [ _246 ])
+                (plus:DI (reg:DI 294)
+                    (reg:DI 178 [ _244 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":216:4 -1
+     (nil))
+(insn 594 593 595 50 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 145 [ hours ])
+            (const_int 0 [0]))) "progressmeter.c":215:6 -1
+     (nil))
+(jump_insn 595 594 596 50 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 616)
+            (pc))) "progressmeter.c":215:6 -1
+     (int_list:REG_BR_PROB 536870916 (nil))
+ -> 616)
+(note 596 595 597 51 [bb 51] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 597 596 598 51 (debug_marker) "progressmeter.c":216:4 -1
+     (nil))
+(debug_insn 598 597 599 51 (var_location:DI __s (clobber (const_int 0 [0]))) "progressmeter.c":216:4 -1
+     (nil))
+(debug_insn 599 598 600 51 (var_location:DI __n (clobber (const_int 0 [0]))) "progressmeter.c":216:4 -1
+     (nil))
+(debug_insn 600 599 601 51 (var_location:DI __fmt (symbol_ref/f:DI ("*.LC13") [flags 0x2]  <var_decl 0x7f0180b0e3f0 *.LC13>)) "progressmeter.c":216:4 -1
+     (nil))
+(debug_insn 601 600 602 51 (debug_marker:BLK) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":64:1 -1
+     (nil))
+(debug_insn 602 601 603 51 (debug_marker) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":67:3 -1
+     (nil))
+(insn 603 602 604 51 (set (mem:SI (pre_modify:DI (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8]))) [6  S4 A32])
+        (reg/v:SI 150 [ seconds ])) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":67:10 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 604 603 605 51 (set (mem:SI (pre_modify:DI (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8]))) [6  S4 A32])
+        (reg/v:SI 148 [ minutes ])) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":67:10 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 605 604 606 51 (set (reg:SI 37 r9)
+        (reg/v:SI 145 [ hours ])) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":67:10 -1
+     (nil))
+(insn 606 605 607 51 (set (reg:DI 36 r8)
+        (symbol_ref/f:DI ("*.LC13") [flags 0x2]  <var_decl 0x7f0180b0e3f0 *.LC13>)) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":67:10 -1
+     (nil))
+(insn 607 606 608 51 (set (reg:DI 2 cx)
+        (const_int -1 [0xffffffffffffffff])) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":67:10 -1
+     (nil))
+(insn 608 607 609 51 (set (reg:SI 1 dx)
+        (const_int 1 [0x1])) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":67:10 -1
+     (nil))
+(insn 609 608 610 51 (set (reg:DI 4 si)
+        (reg:DI 179 [ _245 ])) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":67:10 -1
+     (nil))
+(insn 610 609 611 51 (set (reg:DI 5 di)
+        (reg/f:DI 180 [ _246 ])) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":67:10 -1
+     (nil))
+(insn 611 610 612 51 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":67:10 -1
+     (nil))
+(call_insn 612 611 613 51 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__snprintf_chk") [flags 0x41]  <function_decl 0x7f0181218d00 __builtin___snprintf_chk>) [0 __builtin___snprintf_chk S1 A8])
+            (const_int 16 [0x10]))) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":67:10 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__snprintf_chk") [flags 0x41]  <function_decl 0x7f0181218d00 __builtin___snprintf_chk>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (expr_list:SI (use (reg:SI 1 dx))
+                    (expr_list:DI (use (reg:DI 2 cx))
+                        (expr_list:DI (use (reg:DI 36 r8))
+                            (expr_list:SI (use (reg:SI 37 r9))
+                                (nil)))))))))
+(insn 613 612 614 51 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":67:10 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(jump_insn 614 613 615 51 (set (pc)
+        (label_ref 635)) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":67:10 -1
+     (nil)
+ -> 635)
+(barrier 615 614 616)
+(code_label 616 615 617 52 39 (nil) [1 uses])
+(note 617 616 618 52 [bb 52] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 618 617 619 52 (debug_marker) "progressmeter.c":219:4 -1
+     (nil))
+(debug_insn 619 618 620 52 (var_location:DI __s (clobber (const_int 0 [0]))) "progressmeter.c":219:4 -1
+     (nil))
+(debug_insn 620 619 621 52 (var_location:DI __n (clobber (const_int 0 [0]))) "progressmeter.c":219:4 -1
+     (nil))
+(debug_insn 621 620 622 52 (var_location:DI __fmt (symbol_ref/f:DI ("*.LC14") [flags 0x2]  <var_decl 0x7f0180b0e480 *.LC14>)) "progressmeter.c":219:4 -1
+     (nil))
+(debug_insn 622 621 623 52 (debug_marker:BLK) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":64:1 -1
+     (nil))
+(debug_insn 623 622 624 52 (debug_marker) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":67:3 -1
+     (nil))
+(insn 624 623 625 52 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":67:10 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 625 624 626 52 (set (mem:SI (pre_modify:DI (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8]))) [6  S4 A32])
+        (reg/v:SI 150 [ seconds ])) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":67:10 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 626 625 627 52 (set (reg:SI 37 r9)
+        (reg/v:SI 148 [ minutes ])) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":67:10 -1
+     (nil))
+(insn 627 626 628 52 (set (reg:DI 36 r8)
+        (symbol_ref/f:DI ("*.LC14") [flags 0x2]  <var_decl 0x7f0180b0e480 *.LC14>)) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":67:10 -1
+     (nil))
+(insn 628 627 629 52 (set (reg:DI 2 cx)
+        (const_int -1 [0xffffffffffffffff])) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":67:10 -1
+     (nil))
+(insn 629 628 630 52 (set (reg:SI 1 dx)
+        (const_int 1 [0x1])) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":67:10 -1
+     (nil))
+(insn 630 629 631 52 (set (reg:DI 4 si)
+        (reg:DI 179 [ _245 ])) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":67:10 -1
+     (nil))
+(insn 631 630 632 52 (set (reg:DI 5 di)
+        (reg/f:DI 180 [ _246 ])) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":67:10 -1
+     (nil))
+(insn 632 631 633 52 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":67:10 -1
+     (nil))
+(call_insn 633 632 634 52 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__snprintf_chk") [flags 0x41]  <function_decl 0x7f0181218d00 __builtin___snprintf_chk>) [0 __builtin___snprintf_chk S1 A8])
+            (const_int 16 [0x10]))) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":67:10 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__snprintf_chk") [flags 0x41]  <function_decl 0x7f0181218d00 __builtin___snprintf_chk>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (expr_list:SI (use (reg:SI 1 dx))
+                    (expr_list:DI (use (reg:DI 2 cx))
+                        (expr_list:DI (use (reg:DI 36 r8))
+                            (expr_list:SI (use (reg:SI 37 r9))
+                                (nil)))))))))
+(insn 634 633 635 52 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":67:10 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(code_label 635 634 636 53 40 (nil) [1 uses])
+(note 636 635 637 53 [bb 53] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 637 636 638 53 (var_location:DI __s (clobber (const_int 0 [0]))) "progressmeter.c":219:4 -1
+     (nil))
+(debug_insn 638 637 639 53 (var_location:DI __n (clobber (const_int 0 [0]))) "progressmeter.c":219:4 -1
+     (nil))
+(debug_insn 639 638 640 53 (var_location:DI __fmt (clobber (const_int 0 [0]))) "progressmeter.c":219:4 -1
+     (nil))
+(debug_insn 640 639 641 53 (var_location:DI __s (clobber (const_int 0 [0]))) "progressmeter.c":216:4 -1
+     (nil))
+(debug_insn 641 640 642 53 (var_location:DI __n (clobber (const_int 0 [0]))) "progressmeter.c":216:4 -1
+     (nil))
+(debug_insn 642 641 643 53 (var_location:DI __fmt (clobber (const_int 0 [0]))) "progressmeter.c":216:4 -1
+     (nil))
+(debug_insn 643 642 644 53 (debug_marker) "progressmeter.c":222:3 -1
+     (nil))
+(insn 644 643 645 53 (set (reg:SI 295)
+        (mem/c:SI (symbol_ref:DI ("win_size") [flags 0x2]  <var_decl 0x7f0180e91120 win_size>) [6 win_size+0 S4 A32])) "progressmeter.c":223:4 -1
+     (nil))
+(insn 645 644 648 53 (set (reg:DI 182 [ _248 ])
+        (sign_extend:DI (reg:SI 295))) "progressmeter.c":223:4 -1
+     (nil))
+(insn 648 645 649 53 (set (reg:CCNO 17 flags)
+        (compare:CCNO (reg/v:DI 91 [ bytes_left ])
+            (const_int 0 [0]))) "progressmeter.c":222:6 -1
+     (nil))
+(jump_insn 649 648 650 53 (set (pc)
+        (if_then_else (le (reg:CCNO 17 flags)
+                (const_int 0 [0]))
+            (label_ref 659)
+            (pc))) "progressmeter.c":222:6 -1
+     (int_list:REG_BR_PROB 440234148 (nil))
+ -> 659)
+(note 650 649 651 54 [bb 54] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 651 650 652 54 (debug_marker) "progressmeter.c":223:4 -1
+     (nil))
+(insn 652 651 653 54 (parallel [
+            (set (reg:DI 296)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -528 [0xfffffffffffffdf0])))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":223:4 -1
+     (nil))
+(insn 653 652 654 54 (set (reg:DI 1 dx)
+        (reg:DI 182 [ _248 ])) "progressmeter.c":223:4 -1
+     (nil))
+(insn 654 653 655 54 (set (reg:DI 4 si)
+        (symbol_ref/f:DI ("*.LC15") [flags 0x2]  <var_decl 0x7f0180b0e510 *.LC15>)) "progressmeter.c":223:4 -1
+     (nil))
+(insn 655 654 656 54 (set (reg:DI 5 di)
+        (reg:DI 296)) "progressmeter.c":223:4 -1
+     (nil))
+(call_insn 656 655 657 54 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strlcat") [flags 0x41]  <function_decl 0x7f0180d6f800 strlcat>) [0 strlcat S1 A8])
+            (const_int 0 [0]))) "progressmeter.c":223:4 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("strlcat") [flags 0x41]  <function_decl 0x7f0180d6f800 strlcat>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(jump_insn 657 656 658 54 (set (pc)
+        (label_ref 667)) -1
+     (nil)
+ -> 667)
+(barrier 658 657 659)
+(code_label 659 658 660 55 41 (nil) [1 uses])
+(note 660 659 661 55 [bb 55] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 661 660 662 55 (debug_marker) "progressmeter.c":225:4 -1
+     (nil))
+(insn 662 661 663 55 (parallel [
+            (set (reg:DI 297)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -528 [0xfffffffffffffdf0])))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":225:4 -1
+     (nil))
+(insn 663 662 664 55 (set (reg:DI 1 dx)
+        (reg:DI 182 [ _248 ])) "progressmeter.c":225:4 -1
+     (nil))
+(insn 664 663 665 55 (set (reg:DI 4 si)
+        (symbol_ref/f:DI ("*.LC16") [flags 0x2]  <var_decl 0x7f0180b0e5a0 *.LC16>)) "progressmeter.c":225:4 -1
+     (nil))
+(insn 665 664 666 55 (set (reg:DI 5 di)
+        (reg:DI 297)) "progressmeter.c":225:4 -1
+     (nil))
+(call_insn 666 665 667 55 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strlcat") [flags 0x41]  <function_decl 0x7f0180d6f800 strlcat>) [0 strlcat S1 A8])
+            (const_int 0 [0]))) "progressmeter.c":225:4 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("strlcat") [flags 0x41]  <function_decl 0x7f0180d6f800 strlcat>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(code_label 667 666 668 56 35 (nil) [3 uses])
+(note 668 667 669 56 [bb 56] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 669 668 670 56 (debug_marker) "progressmeter.c":228:2 -1
+     (nil))
+(insn 670 669 671 56 (set (reg:SI 4 si)
+        (const_int -1 [0xffffffffffffffff])) "progressmeter.c":228:48 -1
+     (nil))
+(insn 671 670 672 56 (set (reg:SI 5 di)
+        (mem/c:SI (symbol_ref:DI ("win_size") [flags 0x2]  <var_decl 0x7f0180e91120 win_size>) [6 win_size+0 S4 A32])) "progressmeter.c":228:48 -1
+     (nil))
+(call_insn/u 672 671 673 56 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__addvsi3") [flags 0x41]  <function_decl 0x7f0180ec7400 __addvsi3>) [0  S1 A8])
+            (const_int 0 [0]))) "progressmeter.c":228:48 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__addvsi3") [flags 0x41]  <function_decl 0x7f0180ec7400 __addvsi3>)
+        (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+            (nil)))
+    (expr_list (use (reg:SI 4 si))
+        (expr_list (use (reg:SI 5 di))
+            (nil))))
+(insn 673 672 674 56 (set (reg:SI 298)
+        (reg:SI 0 ax)) "progressmeter.c":228:48 -1
+     (nil))
+(insn 674 673 675 56 (set (reg:DI 299)
+        (sign_extend:DI (reg:SI 298))) "progressmeter.c":228:2 -1
+     (nil))
+(insn 675 674 676 56 (parallel [
+            (set (reg:DI 300)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -528 [0xfffffffffffffdf0])))
+            (clobber (reg:CC 17 flags))
+        ]) "progressmeter.c":228:2 -1
+     (nil))
+(insn 676 675 677 56 (set (reg:DI 2 cx)
+        (reg:DI 299)) "progressmeter.c":228:2 -1
+     (nil))
+(insn 677 676 678 56 (set (reg:DI 1 dx)
+        (reg:DI 300)) "progressmeter.c":228:2 -1
+     (nil))
+(insn 678 677 679 56 (set (reg:SI 4 si)
+        (const_int 1 [0x1])) "progressmeter.c":228:2 -1
+     (nil))
+(insn 679 678 680 56 (set (reg:DI 301)
+        (mem/u/c:DI (const:DI (unspec:DI [
+                        (symbol_ref:DI ("write") [flags 0x41]  <function_decl 0x7f0180dd9d00 write>)
+                    ] UNSPEC_GOTPCREL)) [10  S8 A8])) "progressmeter.c":228:2 -1
+     (nil))
+(insn 680 679 681 56 (set (reg:DI 5 di)
+        (reg:DI 301)) "progressmeter.c":228:2 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("write") [flags 0x41]  <function_decl 0x7f0180dd9d00 write>)
+        (nil)))
+(call_insn 681 680 682 56 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("atomicio") [flags 0x41]  <function_decl 0x7f0180e62900 atomicio>) [0 atomicio S1 A8])
+            (const_int 0 [0]))) "progressmeter.c":228:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("atomicio") [flags 0x41]  <function_decl 0x7f0180e62900 atomicio>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (expr_list:DI (use (reg:DI 2 cx))
+                    (nil))))))
+(debug_insn 682 681 683 56 (debug_marker) "progressmeter.c":229:2 -1
+     (nil))
+(insn 683 682 684 56 (set (mem/c:DF (symbol_ref:DI ("last_update") [flags 0x2]  <var_decl 0x7f0180d90ea0 last_update>) [3 last_update+0 S8 A64])
+        (reg/v:DF 88 [ now ])) "progressmeter.c":229:14 -1
+     (nil))
+(jump_insn 684 683 685 56 (set (pc)
+        (label_ref 694)) "progressmeter.c":230:1 -1
+     (nil)
+ -> 694)
+(barrier 685 684 686)
+(code_label 686 685 687 57 33 (nil) [1 uses])
+(note 687 686 688 57 [bb 57] NOTE_INSN_BASIC_BLOCK)
+(insn 688 687 689 57 (set (mem/c:DI (symbol_ref:DI ("stalled") [flags 0x2]  <var_decl 0x7f0180e91000 stalled>) [2 stalled+0 S8 A64])
+        (const_int 0 [0])) -1
+     (nil))
+(debug_insn 689 688 690 57 (debug_marker) "progressmeter.c":200:2 -1
+     (nil))
+(insn 690 689 691 57 (set (reg:SI 302)
+        (mem/c:SI (symbol_ref:DI ("win_size") [flags 0x2]  <var_decl 0x7f0180e91120 win_size>) [6 win_size+0 S4 A32])) "progressmeter.c":201:3 -1
+     (nil))
+(insn 691 690 692 57 (set (reg:DI 177 [ _242 ])
+        (sign_extend:DI (reg:SI 302))) "progressmeter.c":201:3 -1
+     (nil))
+(jump_insn 692 691 693 57 (set (pc)
+        (label_ref 503)) "progressmeter.c":201:3 -1
+     (nil)
+ -> 503)
+(barrier 693 692 694)
+(code_label 694 693 701 58 15 (nil) [1 uses])
+(note 701 694 695 58 [bb 58] NOTE_INSN_BASIC_BLOCK)
+(insn 695 701 696 58 (set (reg/f:DI 303)
+        (const_int 40 [0x28])) "progressmeter.c":230:1 -1
+     (nil))
+(insn 696 695 697 58 (parallel [
+            (set (reg:CCZ 17 flags)
+                (unspec:CCZ [
+                        (mem/v/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                                (const_int -8 [0xfffffffffffffff8])) [8 D.8703+0 S8 A64])
+                        (mem/v/f:DI (reg/f:DI 303) [0 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_TEST))
+            (clobber (scratch:DI))
+        ]) "progressmeter.c":230:1 -1
+     (nil))
+(jump_insn 697 696 723 58 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 700)
+            (pc))) "progressmeter.c":230:1 -1
+     (int_list:REG_BR_PROB 1073312332 (nil))
+ -> 700)
+(note 723 697 698 59 [bb 59] NOTE_INSN_BASIC_BLOCK)
+(call_insn 698 723 699 59 (call (mem:QI (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7f0180ace100 __stack_chk_fail>) [0 __stack_chk_fail S1 A8])
+        (const_int 0 [0])) "progressmeter.c":230:1 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7f0180ace100 __stack_chk_fail>)
+        (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+            (expr_list:REG_NORETURN (const_int 0 [0])
+                (expr_list:REG_EH_REGION (const_int 0 [0])
+                    (nil)))))
+    (nil))
+(barrier 699 698 700)
+(code_label 700 699 724 60 42 (nil) [1 uses])
+(note 724 700 0 60 [bb 60] NOTE_INSN_BASIC_BLOCK)
+
+;; Function refresh_progress_meter (refresh_progress_meter, funcdef_no=93, decl_uid=8024, cgraph_uid=94, symbol_order=106)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Forwarding edge 5->6 to 10 failed.
+Redirecting jump 26 from 9 to 10.
+Edge 7->6 redirected to 10
+deleting block 9
+
+
+try_optimize_cfg iteration 2
+
+Forwarding edge 5->6 to 10 failed.
+Deleted label in block 6.
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (reg/v:SI 86 [ force_update ])
+        (reg:SI 5 di [ force_update ])) "progressmeter.c":121:1 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 6 3 7 2 (debug_marker) "progressmeter.c":122:2 -1
+     (nil))
+(debug_insn 7 6 8 2 (debug_marker) "progressmeter.c":123:2 -1
+     (nil))
+(debug_insn 8 7 9 2 (debug_marker) "progressmeter.c":124:2 -1
+     (nil))
+(debug_insn 9 8 10 2 (debug_marker) "progressmeter.c":125:2 -1
+     (nil))
+(debug_insn 10 9 11 2 (debug_marker) "progressmeter.c":126:2 -1
+     (nil))
+(debug_insn 11 10 12 2 (debug_marker) "progressmeter.c":127:2 -1
+     (nil))
+(debug_insn 12 11 13 2 (debug_marker) "progressmeter.c":128:2 -1
+     (nil))
+(debug_insn 13 12 14 2 (debug_marker) "progressmeter.c":129:2 -1
+     (nil))
+(debug_insn 14 13 15 2 (debug_marker) "progressmeter.c":131:2 -1
+     (nil))
+(insn 15 14 16 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 86 [ force_update ])
+            (const_int 0 [0]))) "progressmeter.c":131:5 -1
+     (nil))
+(jump_insn 16 15 17 2 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 28)
+            (pc))) "progressmeter.c":131:5 -1
+     (int_list:REG_BR_PROB 354334804 (nil))
+ -> 28)
+(note 17 16 18 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 18 17 19 4 (set (reg:SI 82 [ alarm_fired.0_1 ])
+        (mem/v/c:SI (symbol_ref:DI ("alarm_fired") [flags 0x2]  <var_decl 0x7f0180e91240 alarm_fired>) [6 alarm_fired+0 S4 A32])) "progressmeter.c":131:24 -1
+     (nil))
+(insn 19 18 20 4 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 82 [ alarm_fired.0_1 ])
+            (const_int 0 [0]))) "progressmeter.c":131:21 -1
+     (nil))
+(jump_insn 20 19 21 4 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 28)
+            (pc))) "progressmeter.c":131:21 -1
+     (int_list:REG_BR_PROB 536870916 (nil))
+ -> 28)
+(note 21 20 22 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 22 21 23 5 (set (reg:SI 83 [ win_resized.1_2 ])
+        (mem/v/c:SI (symbol_ref:DI ("win_resized") [flags 0x2]  <var_decl 0x7f0180e911b0 win_resized>) [6 win_resized+0 S4 A32])) "progressmeter.c":131:40 -1
+     (nil))
+(insn 23 22 24 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 83 [ win_resized.1_2 ])
+            (const_int 0 [0]))) "progressmeter.c":131:37 -1
+     (nil))
+(jump_insn 24 23 25 5 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 28)
+            (pc))) "progressmeter.c":131:37 -1
+     (int_list:REG_BR_PROB 708669604 (nil))
+ -> 28)
+(note 25 24 26 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 26 25 27 6 (set (pc)
+        (label_ref:DI 46)) 737 {jump}
+     (nil)
+ -> 46)
+(barrier 27 26 28)
+(code_label 28 27 29 7 71 (nil) [3 uses])
+(note 29 28 30 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 30 29 31 7 (debug_marker:BLK) "progressmeter.c":82:1 -1
+     (nil))
+(debug_insn 31 30 32 7 (debug_marker) "progressmeter.c":84:2 -1
+     (nil))
+(call_insn 32 31 33 7 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("getpgrp") [flags 0x41]  <function_decl 0x7f0180de5b00 getpgrp>) [0 getpgrp S1 A8])
+            (const_int 0 [0]))) "progressmeter.c":84:10 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("getpgrp") [flags 0x41]  <function_decl 0x7f0180de5b00 getpgrp>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (nil))
+(insn 33 32 34 7 (set (reg:SI 84 [ _10 ])
+        (reg:SI 0 ax)) "progressmeter.c":84:10 -1
+     (nil))
+(insn 34 33 35 7 (set (reg:SI 5 di)
+        (const_int 1 [0x1])) "progressmeter.c":84:23 -1
+     (nil))
+(call_insn 35 34 36 7 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("tcgetpgrp") [flags 0x41]  <function_decl 0x7f0180e2c300 tcgetpgrp>) [0 tcgetpgrp S1 A8])
+            (const_int 0 [0]))) "progressmeter.c":84:23 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("tcgetpgrp") [flags 0x41]  <function_decl 0x7f0180e2c300 tcgetpgrp>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:SI (use (reg:SI 5 di))
+        (nil)))
+(insn 36 35 38 7 (set (reg:SI 85 [ _11 ])
+        (reg:SI 0 ax)) "progressmeter.c":84:23 -1
+     (nil))
+(insn 38 36 39 7 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 84 [ _10 ])
+            (reg:SI 85 [ _11 ]))) "progressmeter.c":131:54 -1
+     (nil))
+(jump_insn 39 38 40 7 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 46)
+            (pc))) "progressmeter.c":131:54 736 {*jcc}
+     (int_list:REG_BR_PROB 365072228 (nil))
+ -> 46)
+(note 40 39 41 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 41 40 42 8 (var_location:SI D#1 (reg/v:SI 86 [ force_update ])) -1
+     (nil))
+(call_insn/j 42 41 43 8 (call (mem:QI (symbol_ref:DI ("refresh_progress_meter.part.0") [flags 0x3]  <function_decl 0x7f0180ecba00 refresh_progress_meter.part.0>) [0 refresh_progress_meter.part.0 S1 A8])
+        (const_int 0 [0])) -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("refresh_progress_meter.part.0") [flags 0x3]  <function_decl 0x7f0180ecba00 refresh_progress_meter.part.0>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (nil))
+(barrier 43 42 46)
+(code_label 46 43 47 10 70 (nil) [2 uses])
+(note 47 46 0 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+
+;; Function start_progress_meter (start_progress_meter, funcdef_no=95, decl_uid=8022, cgraph_uid=96, symbol_order=108)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+deleting block 6
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 6 NOTE_INSN_DELETED)
+(note 6 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 6 3 2 (set (reg/v/f:DI 86 [ f ])
+        (reg:DI 5 di [ f ])) "progressmeter.c":242:1 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v:DI 87 [ filesize ])
+        (reg:DI 4 si [ filesize ])) "progressmeter.c":242:1 -1
+     (nil))
+(insn 4 3 5 2 (set (reg/v/f:DI 88 [ ctr ])
+        (reg:DI 1 dx [ ctr ])) "progressmeter.c":242:1 -1
+     (nil))
+(note 5 4 8 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 8 5 9 2 (debug_marker) "progressmeter.c":243:2 -1
+     (nil))
+(call_insn 9 8 10 2 (set (reg:DF 20 xmm0)
+        (call (mem:QI (symbol_ref:DI ("monotime_double") [flags 0x41]  <function_decl 0x7f0180e75500 monotime_double>) [0 monotime_double S1 A8])
+            (const_int 0 [0]))) "progressmeter.c":243:24 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("monotime_double") [flags 0x41]  <function_decl 0x7f0180e75500 monotime_double>)
+        (nil))
+    (nil))
+(insn 10 9 11 2 (set (reg:DF 82 [ _1 ])
+        (reg:DF 20 xmm0)) "progressmeter.c":243:24 -1
+     (nil))
+(insn 11 10 12 2 (set (mem/c:DF (symbol_ref:DI ("last_update") [flags 0x2]  <var_decl 0x7f0180d90ea0 last_update>) [3 last_update+0 S8 A64])
+        (reg:DF 82 [ _1 ])) "progressmeter.c":243:22 -1
+     (nil))
+(insn 12 11 13 2 (set (mem/c:DF (symbol_ref:DI ("start") [flags 0x2]  <var_decl 0x7f0180d90e10 start>) [3 start+0 S8 A64])
+        (reg:DF 82 [ _1 ])) "progressmeter.c":243:8 -1
+     (nil))
+(debug_insn 13 12 14 2 (debug_marker) "progressmeter.c":244:2 -1
+     (nil))
+(insn 14 13 15 2 (set (mem/f/c:DI (symbol_ref:DI ("file") [flags 0x2]  <var_decl 0x7f0180d90f30 file>) [1 file+0 S8 A64])
+        (reg/v/f:DI 86 [ f ])) "progressmeter.c":244:7 -1
+     (nil))
+(debug_insn 15 14 16 2 (debug_marker) "progressmeter.c":245:2 -1
+     (nil))
+(insn 16 15 17 2 (set (reg:DI 89)
+        (mem:DI (reg/v/f:DI 88 [ ctr ]) [2 *ctr_9(D)+0 S8 A64])) "progressmeter.c":245:12 -1
+     (nil))
+(insn 17 16 18 2 (set (mem/c:DI (symbol_ref:DI ("start_pos") [flags 0x2]  <var_decl 0x7f0180d90630 start_pos>) [2 start_pos+0 S8 A64])
+        (reg:DI 89)) "progressmeter.c":245:12 -1
+     (nil))
+(debug_insn 18 17 19 2 (debug_marker) "progressmeter.c":246:2 -1
+     (nil))
+(insn 19 18 20 2 (set (mem/c:DI (symbol_ref:DI ("end_pos") [flags 0x2]  <var_decl 0x7f0180d906c0 end_pos>) [2 end_pos+0 S8 A64])
+        (reg/v:DI 87 [ filesize ])) "progressmeter.c":246:10 -1
+     (nil))
+(debug_insn 20 19 21 2 (debug_marker) "progressmeter.c":247:2 -1
+     (nil))
+(insn 21 20 22 2 (set (mem/c:DI (symbol_ref:DI ("cur_pos") [flags 0x2]  <var_decl 0x7f0180d90750 cur_pos>) [2 cur_pos+0 S8 A64])
+        (const_int 0 [0])) "progressmeter.c":247:10 -1
+     (nil))
+(debug_insn 22 21 23 2 (debug_marker) "progressmeter.c":248:2 -1
+     (nil))
+(insn 23 22 24 2 (set (mem/f/c:DI (symbol_ref:DI ("counter") [flags 0x2]  <var_decl 0x7f0180d907e0 counter>) [7 counter+0 S8 A64])
+        (reg/v/f:DI 88 [ ctr ])) "progressmeter.c":248:10 -1
+     (nil))
+(debug_insn 24 23 25 2 (debug_marker) "progressmeter.c":249:2 -1
+     (nil))
+(insn 25 24 26 2 (set (mem/c:DI (symbol_ref:DI ("stalled") [flags 0x2]  <var_decl 0x7f0180e91000 stalled>) [2 stalled+0 S8 A64])
+        (const_int 0 [0])) "progressmeter.c":249:10 -1
+     (nil))
+(debug_insn 26 25 27 2 (debug_marker) "progressmeter.c":250:2 -1
+     (nil))
+(insn 27 26 28 2 (set (mem/c:SI (symbol_ref:DI ("bytes_per_second") [flags 0x2]  <var_decl 0x7f0180e91090 bytes_per_second>) [6 bytes_per_second+0 S4 A32])
+        (const_int 0 [0])) "progressmeter.c":250:19 -1
+     (nil))
+(debug_insn 28 27 29 2 (debug_marker) "progressmeter.c":252:2 -1
+     (nil))
+(call_insn 29 28 30 2 (call (mem:QI (symbol_ref:DI ("setscreensize") [flags 0x3]  <function_decl 0x7f0180e8c400 setscreensize>) [0 setscreensize S1 A8])
+        (const_int 0 [0])) "progressmeter.c":252:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("setscreensize") [flags 0x3]  <function_decl 0x7f0180e8c400 setscreensize>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (nil))
+(debug_insn 30 29 31 2 (debug_marker) "progressmeter.c":253:2 -1
+     (nil))
+(debug_insn 31 30 32 2 (var_location:SI force_update (const_int 1 [0x1])) "progressmeter.c":253:2 -1
+     (nil))
+(debug_insn 32 31 33 2 (debug_marker:BLK) "progressmeter.c":120:1 -1
+     (nil))
+(debug_insn 33 32 34 2 (debug_marker) "progressmeter.c":122:2 -1
+     (nil))
+(debug_insn 34 33 35 2 (debug_marker) "progressmeter.c":123:2 -1
+     (nil))
+(debug_insn 35 34 36 2 (debug_marker) "progressmeter.c":124:2 -1
+     (nil))
+(debug_insn 36 35 37 2 (debug_marker) "progressmeter.c":125:2 -1
+     (nil))
+(debug_insn 37 36 38 2 (debug_marker) "progressmeter.c":126:2 -1
+     (nil))
+(debug_insn 38 37 39 2 (debug_marker) "progressmeter.c":127:2 -1
+     (nil))
+(debug_insn 39 38 40 2 (debug_marker) "progressmeter.c":128:2 -1
+     (nil))
+(debug_insn 40 39 41 2 (debug_marker) "progressmeter.c":129:2 -1
+     (nil))
+(debug_insn 41 40 42 2 (debug_marker) "progressmeter.c":131:2 -1
+     (nil))
+(debug_insn 42 41 43 2 (debug_marker:BLK) "progressmeter.c":82:1 -1
+     (nil))
+(debug_insn 43 42 44 2 (debug_marker) "progressmeter.c":84:2 -1
+     (nil))
+(call_insn 44 43 45 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("getpgrp") [flags 0x41]  <function_decl 0x7f0180de5b00 getpgrp>) [0 getpgrp S1 A8])
+            (const_int 0 [0]))) "progressmeter.c":84:10 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("getpgrp") [flags 0x41]  <function_decl 0x7f0180de5b00 getpgrp>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (nil))
+(insn 45 44 46 2 (set (reg:SI 84 [ _25 ])
+        (reg:SI 0 ax)) "progressmeter.c":84:10 -1
+     (nil))
+(insn 46 45 47 2 (set (reg:SI 5 di)
+        (const_int 1 [0x1])) "progressmeter.c":84:23 -1
+     (nil))
+(call_insn 47 46 48 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("tcgetpgrp") [flags 0x41]  <function_decl 0x7f0180e2c300 tcgetpgrp>) [0 tcgetpgrp S1 A8])
+            (const_int 0 [0]))) "progressmeter.c":84:23 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("tcgetpgrp") [flags 0x41]  <function_decl 0x7f0180e2c300 tcgetpgrp>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:SI (use (reg:SI 5 di))
+        (nil)))
+(insn 48 47 49 2 (set (reg:SI 85 [ _26 ])
+        (reg:SI 0 ax)) "progressmeter.c":84:23 -1
+     (nil))
+(insn 49 48 50 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 84 [ _25 ])
+            (reg:SI 85 [ _26 ]))) "progressmeter.c":131:54 -1
+     (nil))
+(jump_insn 50 49 51 2 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 54)
+            (pc))) "progressmeter.c":131:54 -1
+     (int_list:REG_BR_PROB 365072228 (nil))
+ -> 54)
+(note 51 50 52 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 52 51 53 4 (var_location:SI D#1 (const_int 1 [0x1])) -1
+     (nil))
+(call_insn 53 52 54 4 (call (mem:QI (symbol_ref:DI ("refresh_progress_meter.part.0") [flags 0x3]  <function_decl 0x7f0180ecba00 refresh_progress_meter.part.0>) [0 refresh_progress_meter.part.0 S1 A8])
+        (const_int 0 [0])) -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("refresh_progress_meter.part.0") [flags 0x3]  <function_decl 0x7f0180ecba00 refresh_progress_meter.part.0>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (nil))
+(code_label 54 53 55 5 79 (nil) [1 uses])
+(note 55 54 56 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 56 55 57 5 (var_location:SI force_update (clobber (const_int 0 [0]))) "progressmeter.c":253:2 -1
+     (nil))
+(debug_insn 57 56 58 5 (debug_marker) "progressmeter.c":255:2 -1
+     (nil))
+(insn 58 57 59 5 (set (reg:DI 4 si)
+        (symbol_ref:DI ("sig_alarm") [flags 0x3]  <function_decl 0x7f0180e8c500 sig_alarm>)) "progressmeter.c":255:2 -1
+     (nil))
+(insn 59 58 60 5 (set (reg:SI 5 di)
+        (const_int 14 [0xe])) "progressmeter.c":255:2 -1
+     (nil))
+(call_insn 60 59 61 5 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("ssh_signal") [flags 0x41]  <function_decl 0x7f0180e84800 ssh_signal>) [0 ssh_signal S1 A8])
+            (const_int 0 [0]))) "progressmeter.c":255:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("ssh_signal") [flags 0x41]  <function_decl 0x7f0180e84800 ssh_signal>)
+        (nil))
+    (expr_list:SI (use (reg:SI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(debug_insn 61 60 62 5 (debug_marker) "progressmeter.c":256:2 -1
+     (nil))
+(insn 62 61 63 5 (set (reg:DI 4 si)
+        (symbol_ref:DI ("sig_winch") [flags 0x3]  <function_decl 0x7f0180e8c300 sig_winch>)) "progressmeter.c":256:2 -1
+     (nil))
+(insn 63 62 64 5 (set (reg:SI 5 di)
+        (const_int 28 [0x1c])) "progressmeter.c":256:2 -1
+     (nil))
+(call_insn 64 63 65 5 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("ssh_signal") [flags 0x41]  <function_decl 0x7f0180e84800 ssh_signal>) [0 ssh_signal S1 A8])
+            (const_int 0 [0]))) "progressmeter.c":256:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("ssh_signal") [flags 0x41]  <function_decl 0x7f0180e84800 ssh_signal>)
+        (nil))
+    (expr_list:SI (use (reg:SI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(debug_insn 65 64 66 5 (debug_marker) "progressmeter.c":257:2 -1
+     (nil))
+(insn 66 65 67 5 (set (reg:SI 5 di)
+        (const_int 1 [0x1])) "progressmeter.c":257:2 -1
+     (nil))
+(call_insn/j 67 66 68 5 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("alarm") [flags 0x41]  <function_decl 0x7f0180de1400 alarm>) [0 alarm S1 A8])
+            (const_int 0 [0]))) "progressmeter.c":257:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("alarm") [flags 0x41]  <function_decl 0x7f0180de1400 alarm>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:SI (use (reg:SI 5 di))
+        (nil)))
+(barrier 68 67 0)
+
+;; Function stop_progress_meter (stop_progress_meter, funcdef_no=96, decl_uid=8026, cgraph_uid=97, symbol_order=109)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Edge 2->9 redirected to 10
+Forwarding edge 4->5 to 8 failed.
+Edge 6->5 redirected to 8
+deleting block 9
+
+
+try_optimize_cfg iteration 2
+
+Forwarding edge 4->5 to 8 failed.
+Deleted label in block 5.
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 5 2 6 2 (debug_marker) "progressmeter.c":263:2 -1
+     (nil))
+(insn 6 5 7 2 (set (reg:SI 5 di)
+        (const_int 0 [0])) "progressmeter.c":263:2 -1
+     (nil))
+(call_insn 7 6 8 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("alarm") [flags 0x41]  <function_decl 0x7f0180de1400 alarm>) [0 alarm S1 A8])
+            (const_int 0 [0]))) "progressmeter.c":263:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("alarm") [flags 0x41]  <function_decl 0x7f0180de1400 alarm>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:SI (use (reg:SI 5 di))
+        (nil)))
+(debug_insn 8 7 9 2 (debug_marker) "progressmeter.c":265:2 -1
+     (nil))
+(debug_insn 9 8 10 2 (debug_marker:BLK) "progressmeter.c":82:1 -1
+     (nil))
+(debug_insn 10 9 11 2 (debug_marker) "progressmeter.c":84:2 -1
+     (nil))
+(call_insn 11 10 12 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("getpgrp") [flags 0x41]  <function_decl 0x7f0180de5b00 getpgrp>) [0 getpgrp S1 A8])
+            (const_int 0 [0]))) "progressmeter.c":84:10 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("getpgrp") [flags 0x41]  <function_decl 0x7f0180de5b00 getpgrp>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (nil))
+(insn 12 11 13 2 (set (reg:SI 84 [ _11 ])
+        (reg:SI 0 ax)) "progressmeter.c":84:10 -1
+     (nil))
+(insn 13 12 14 2 (set (reg:SI 5 di)
+        (const_int 1 [0x1])) "progressmeter.c":84:23 -1
+     (nil))
+(call_insn 14 13 15 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("tcgetpgrp") [flags 0x41]  <function_decl 0x7f0180e2c300 tcgetpgrp>) [0 tcgetpgrp S1 A8])
+            (const_int 0 [0]))) "progressmeter.c":84:23 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("tcgetpgrp") [flags 0x41]  <function_decl 0x7f0180e2c300 tcgetpgrp>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:SI (use (reg:SI 5 di))
+        (nil)))
+(insn 15 14 16 2 (set (reg:SI 85 [ _12 ])
+        (reg:SI 0 ax)) "progressmeter.c":84:23 -1
+     (nil))
+(insn 16 15 17 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 84 [ _11 ])
+            (reg:SI 85 [ _12 ]))) "progressmeter.c":265:5 -1
+     (nil))
+(jump_insn 17 16 18 2 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 66)
+            (pc))) "progressmeter.c":265:5 736 {*jcc}
+     (int_list:REG_BR_PROB 365072228 (nil))
+ -> 66)
+(note 18 17 19 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 19 18 20 4 (debug_marker) "progressmeter.c":269:2 -1
+     (nil))
+(insn 20 19 21 4 (set (reg:DI 88)
+        (mem/c:DI (symbol_ref:DI ("cur_pos") [flags 0x2]  <var_decl 0x7f0180d90750 cur_pos>) [2 cur_pos+0 S8 A64])) "progressmeter.c":269:5 -1
+     (nil))
+(insn 21 20 22 4 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:DI 88)
+            (mem/c:DI (symbol_ref:DI ("end_pos") [flags 0x2]  <var_decl 0x7f0180d906c0 end_pos>) [2 end_pos+0 S8 A64]))) "progressmeter.c":269:5 -1
+     (nil))
+(jump_insn 22 21 23 4 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 26)
+            (pc))) "progressmeter.c":269:5 -1
+     (int_list:REG_BR_PROB 524845004 (nil))
+ -> 26)
+(note 23 22 24 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 24 23 25 5 (set (pc)
+        (label_ref 53)) -1
+     (nil)
+ -> 53)
+(barrier 25 24 26)
+(code_label 26 25 27 6 83 (nil) [1 uses])
+(note 27 26 28 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 28 27 29 6 (debug_marker) "progressmeter.c":270:3 -1
+     (nil))
+(debug_insn 29 28 30 6 (var_location:SI force_update (const_int 1 [0x1])) "progressmeter.c":270:3 -1
+     (nil))
+(debug_insn 30 29 31 6 (debug_marker:BLK) "progressmeter.c":120:1 -1
+     (nil))
+(debug_insn 31 30 32 6 (debug_marker) "progressmeter.c":122:2 -1
+     (nil))
+(debug_insn 32 31 33 6 (debug_marker) "progressmeter.c":123:2 -1
+     (nil))
+(debug_insn 33 32 34 6 (debug_marker) "progressmeter.c":124:2 -1
+     (nil))
+(debug_insn 34 33 35 6 (debug_marker) "progressmeter.c":125:2 -1
+     (nil))
+(debug_insn 35 34 36 6 (debug_marker) "progressmeter.c":126:2 -1
+     (nil))
+(debug_insn 36 35 37 6 (debug_marker) "progressmeter.c":127:2 -1
+     (nil))
+(debug_insn 37 36 38 6 (debug_marker) "progressmeter.c":128:2 -1
+     (nil))
+(debug_insn 38 37 39 6 (debug_marker) "progressmeter.c":129:2 -1
+     (nil))
+(debug_insn 39 38 40 6 (debug_marker) "progressmeter.c":131:2 -1
+     (nil))
+(debug_insn 40 39 41 6 (debug_marker:BLK) "progressmeter.c":82:1 -1
+     (nil))
+(debug_insn 41 40 42 6 (debug_marker) "progressmeter.c":84:2 -1
+     (nil))
+(call_insn 42 41 43 6 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("getpgrp") [flags 0x41]  <function_decl 0x7f0180de5b00 getpgrp>) [0 getpgrp S1 A8])
+            (const_int 0 [0]))) "progressmeter.c":84:10 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("getpgrp") [flags 0x41]  <function_decl 0x7f0180de5b00 getpgrp>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (nil))
+(insn 43 42 44 6 (set (reg:SI 86 [ _18 ])
+        (reg:SI 0 ax)) "progressmeter.c":84:10 -1
+     (nil))
+(insn 44 43 45 6 (set (reg:SI 5 di)
+        (const_int 1 [0x1])) "progressmeter.c":84:23 -1
+     (nil))
+(call_insn 45 44 46 6 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("tcgetpgrp") [flags 0x41]  <function_decl 0x7f0180e2c300 tcgetpgrp>) [0 tcgetpgrp S1 A8])
+            (const_int 0 [0]))) "progressmeter.c":84:23 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("tcgetpgrp") [flags 0x41]  <function_decl 0x7f0180e2c300 tcgetpgrp>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:SI (use (reg:SI 5 di))
+        (nil)))
+(insn 46 45 48 6 (set (reg:SI 87 [ _19 ])
+        (reg:SI 0 ax)) "progressmeter.c":84:23 -1
+     (nil))
+(insn 48 46 49 6 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 86 [ _18 ])
+            (reg:SI 87 [ _19 ]))) "progressmeter.c":131:54 -1
+     (nil))
+(jump_insn 49 48 50 6 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 53)
+            (pc))) "progressmeter.c":131:54 736 {*jcc}
+     (int_list:REG_BR_PROB 365072228 (nil))
+ -> 53)
+(note 50 49 51 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 51 50 52 7 (var_location:SI D#1 (const_int 1 [0x1])) -1
+     (nil))
+(call_insn 52 51 53 7 (call (mem:QI (symbol_ref:DI ("refresh_progress_meter.part.0") [flags 0x3]  <function_decl 0x7f0180ecba00 refresh_progress_meter.part.0>) [0 refresh_progress_meter.part.0 S1 A8])
+        (const_int 0 [0])) -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("refresh_progress_meter.part.0") [flags 0x3]  <function_decl 0x7f0180ecba00 refresh_progress_meter.part.0>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (nil))
+(code_label 53 52 54 8 84 (nil) [2 uses])
+(note 54 53 55 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 55 54 56 8 (var_location:SI force_update (clobber (const_int 0 [0]))) "progressmeter.c":270:3 -1
+     (nil))
+(debug_insn 56 55 57 8 (debug_marker) "progressmeter.c":272:2 -1
+     (nil))
+(insn 57 56 58 8 (set (reg:DI 2 cx)
+        (const_int 1 [0x1])) "progressmeter.c":272:2 -1
+     (nil))
+(insn 58 57 59 8 (set (reg:DI 1 dx)
+        (symbol_ref/f:DI ("*.LC17") [flags 0x2]  <var_decl 0x7f0180b916c0 *.LC17>)) "progressmeter.c":272:2 -1
+     (nil))
+(insn 59 58 60 8 (set (reg:SI 4 si)
+        (const_int 1 [0x1])) "progressmeter.c":272:2 -1
+     (nil))
+(insn 60 59 61 8 (set (reg:DI 89)
+        (mem/u/c:DI (const:DI (unspec:DI [
+                        (symbol_ref:DI ("write") [flags 0x41]  <function_decl 0x7f0180dd9d00 write>)
+                    ] UNSPEC_GOTPCREL)) [10  S8 A8])) "progressmeter.c":272:2 -1
+     (nil))
+(insn 61 60 62 8 (set (reg:DI 5 di)
+        (reg:DI 89)) "progressmeter.c":272:2 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("write") [flags 0x41]  <function_decl 0x7f0180dd9d00 write>)
+        (nil)))
+(call_insn/j 62 61 63 8 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("atomicio") [flags 0x41]  <function_decl 0x7f0180e62900 atomicio>) [0 atomicio S1 A8])
+            (const_int 0 [0]))) "progressmeter.c":272:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("atomicio") [flags 0x41]  <function_decl 0x7f0180e62900 atomicio>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (expr_list:DI (use (reg:DI 2 cx))
+                    (nil))))))
+(barrier 63 62 66)
+(code_label 66 63 67 10 81 (nil) [1 uses])
+(note 67 66 0 10 [bb 10] NOTE_INSN_BASIC_BLOCK)

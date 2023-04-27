@@ -1,0 +1,2419 @@
+
+;; Function ssh_digest_alg_by_name (ssh_digest_alg_by_name, funcdef_no=371, decl_uid=15629, cgraph_uid=372, symbol_order=372)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Edge 4->7 redirected to 8
+Edge 5->7 redirected to 8
+deleting block 7
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 6 NOTE_INSN_DELETED)
+(note 6 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 6 3 2 (set (reg/v/f:DI 87 [ name ])
+        (reg:DI 5 di [ name ])) "digest-openssl.c":81:1 -1
+     (nil))
+(note 3 2 8 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 8 3 9 2 (debug_marker) "digest-openssl.c":82:2 -1
+     (nil))
+(debug_insn 9 8 10 2 (debug_marker) "digest-openssl.c":84:2 -1
+     (nil))
+(debug_insn 10 9 11 2 (var_location:SI alg (const_int 0 [0])) -1
+     (nil))
+(debug_insn 11 10 12 2 (debug_marker) "digest-openssl.c":84:16 -1
+     (nil))
+(insn 12 11 4 2 (set (reg:DI 82 [ ivtmp.28 ])
+        (symbol_ref:DI ("digests") [flags 0x2]  <var_decl 0x7fe9893b2b40 digests>)) -1
+     (nil))
+(insn 4 12 5 2 (set (reg/f:DI 84 [ prephitmp_9 ])
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7fe989011870 *.LC0>)) "digest-openssl.c":81:1 -1
+     (nil))
+(insn 5 4 33 2 (set (reg:SI 86 [ <retval> ])
+        (const_int 0 [0])) "digest-openssl.c":84:28 -1
+     (nil))
+(code_label 33 5 13 4 3 (nil) [1 uses])
+(note 13 33 14 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 14 13 15 4 (var_location:SI alg (subreg:SI (lshiftrt:DI (minus:DI (reg:DI 82 [ ivtmp.28 ])
+                (symbol_ref:DI ("digests") [flags 0x2]  <var_decl 0x7fe9893b2b40 digests>))
+            (const_int 5 [0x5])) 0)) -1
+     (nil))
+(debug_insn 15 14 16 4 (debug_marker) "digest-openssl.c":85:3 -1
+     (nil))
+(insn 16 15 17 4 (set (reg:DI 4 si)
+        (reg/f:DI 84 [ prephitmp_9 ])) "digest-openssl.c":85:7 -1
+     (nil))
+(insn 17 16 18 4 (set (reg:DI 5 di)
+        (reg/v/f:DI 87 [ name ])) "digest-openssl.c":85:7 -1
+     (nil))
+(call_insn/i 18 17 19 4 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strcasecmp") [flags 0x41]  <function_decl 0x7fe989c5a500 strcasecmp>) [0 __builtin_strcasecmp S1 A8])
+            (const_int 0 [0]))) "digest-openssl.c":85:7 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("strcasecmp") [flags 0x41]  <function_decl 0x7fe989c5a500 strcasecmp>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 19 18 20 4 (set (reg:SI 83 [ _2 ])
+        (reg:SI 0 ax)) "digest-openssl.c":85:7 -1
+     (nil))
+(insn 20 19 21 4 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 83 [ _2 ])
+            (const_int 0 [0]))) "digest-openssl.c":85:6 -1
+     (nil))
+(jump_insn 21 20 22 4 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 40)
+            (pc))) "digest-openssl.c":85:6 736 {*jcc}
+     (int_list:REG_BR_PROB 59055804 (nil))
+ -> 40)
+(note 22 21 23 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 23 22 24 5 (debug_marker) "digest-openssl.c":84:39 -1
+     (nil))
+(debug_insn 24 23 25 5 (var_location:SI alg (plus:SI (subreg:SI (lshiftrt:DI (minus:DI (reg:DI 82 [ ivtmp.28 ])
+                    (symbol_ref:DI ("digests") [flags 0x2]  <var_decl 0x7fe9893b2b40 digests>))
+                (const_int 5 [0x5])) 0)
+        (const_int 1 [0x1]))) -1
+     (nil))
+(debug_insn 25 24 26 5 (debug_marker) "digest-openssl.c":84:16 -1
+     (nil))
+(insn 26 25 27 5 (parallel [
+            (set (reg:DI 82 [ ivtmp.28 ])
+                (plus:DI (reg:DI 82 [ ivtmp.28 ])
+                    (const_int 32 [0x20])))
+            (clobber (reg:CC 17 flags))
+        ]) "digest-openssl.c":84:2 -1
+     (nil))
+(insn 27 26 28 5 (set (reg/f:DI 85 [ _15 ])
+        (reg:DI 82 [ ivtmp.28 ])) -1
+     (nil))
+(insn 28 27 29 5 (set (reg:SI 86 [ <retval> ])
+        (mem:SI (reg/f:DI 85 [ _15 ]) [0 MEM[base: _15, offset: 0B]+0 S4 A256])) "digest-openssl.c":84:28 -1
+     (nil))
+(insn 29 28 30 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 86 [ <retval> ])
+            (const_int -1 [0xffffffffffffffff]))) "digest-openssl.c":84:2 -1
+     (nil))
+(jump_insn 30 29 31 5 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 40)
+            (pc))) "digest-openssl.c":84:2 736 {*jcc}
+     (int_list:REG_BR_PROB 59055804 (nil))
+ -> 40)
+(note 31 30 32 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 32 31 34 6 (set (reg/f:DI 84 [ prephitmp_9 ])
+        (mem/f:DI (plus:DI (reg/f:DI 85 [ _15 ])
+                (const_int 8 [0x8])) [0 MEM[base: _15, offset: 8B]+0 S8 A64])) "digest-openssl.c":85:7 -1
+     (nil))
+(jump_insn 34 32 35 6 (set (pc)
+        (label_ref 33)) "digest-openssl.c":85:7 -1
+     (nil)
+ -> 33)
+(barrier 35 34 40)
+(code_label 40 35 43 8 1 (nil) [2 uses])
+(note 43 40 41 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 41 43 42 8 (set (reg/i:SI 0 ax)
+        (reg:SI 86 [ <retval> ])) "digest-openssl.c":89:1 -1
+     (nil))
+(insn 42 41 0 8 (use (reg/i:SI 0 ax)) "digest-openssl.c":89:1 -1
+     (nil))
+
+;; Function ssh_digest_alg_name (ssh_digest_alg_name, funcdef_no=372, decl_uid=15631, cgraph_uid=373, symbol_order=373)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+Edge 2->6 redirected to 9
+Edge 3->6 redirected to 10
+Edge 4->6 redirected to 11
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Redirecting jump 56 from 10 to 11.
+Redirecting jump 60 from 10 to 11.
+Redirecting jump 64 from 10 to 11.
+Merging block 10 into block 9...
+Merged blocks 9 and 10.
+Merged 9 and 10 without moving.
+Removing jump 50.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 7 NOTE_INSN_DELETED)
+(note 7 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 7 3 2 (set (reg/v:SI 86 [ alg ])
+        (reg:SI 5 di [ alg ])) "digest-openssl.c":93:1 -1
+     (nil))
+(note 3 2 9 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 9 3 10 2 (debug_marker) "digest-openssl.c":94:2 -1
+     (nil))
+(debug_insn 10 9 11 2 (var_location:SI alg (reg/v:SI 86 [ alg ])) "digest-openssl.c":94:2 -1
+     (nil))
+(debug_insn 11 10 12 2 (debug_marker:BLK) "digest-openssl.c":68:1 -1
+     (nil))
+(debug_insn 12 11 15 2 (debug_marker) "digest-openssl.c":70:2 -1
+     (nil))
+(insn 15 12 16 2 (set (reg:CC 17 flags)
+        (compare:CC (reg/v:SI 86 [ alg ])
+            (const_int 4 [0x4]))) "digest-openssl.c":70:5 -1
+     (nil))
+(jump_insn 16 15 17 2 (set (pc)
+        (if_then_else (gtu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 59)
+            (pc))) "digest-openssl.c":70:5 736 {*jcc}
+     (int_list:REG_BR_PROB 186616332 (nil))
+ -> 59)
+(note 17 16 18 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 18 17 19 4 (debug_marker) "digest-openssl.c":72:2 -1
+     (nil))
+(insn 19 18 20 4 (set (reg/f:DI 87)
+        (symbol_ref:DI ("digests") [flags 0x2]  <var_decl 0x7fe9893b2b40 digests>)) "digest-openssl.c":72:18 -1
+     (nil))
+(insn 20 19 21 4 (set (reg:DI 88)
+        (sign_extend:DI (reg/v:SI 86 [ alg ]))) "digest-openssl.c":72:18 -1
+     (nil))
+(insn 21 20 22 4 (parallel [
+            (set (reg:DI 89)
+                (ashift:DI (reg:DI 88)
+                    (const_int 5 [0x5])))
+            (clobber (reg:CC 17 flags))
+        ]) "digest-openssl.c":72:18 -1
+     (nil))
+(insn 22 21 23 4 (parallel [
+            (set (reg/f:DI 90)
+                (plus:DI (reg/f:DI 87)
+                    (reg:DI 89)))
+            (clobber (reg:CC 17 flags))
+        ]) "digest-openssl.c":72:18 -1
+     (nil))
+(insn 23 22 24 4 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 86 [ alg ])
+            (mem/u:SI (reg/f:DI 90) [1 digests[alg_3(D)].id+0 S4 A256]))) "digest-openssl.c":72:5 -1
+     (nil))
+(jump_insn 24 23 25 4 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 63)
+            (pc))) "digest-openssl.c":72:5 736 {*jcc}
+     (int_list:REG_BR_PROB 311385132 (nil))
+ -> 63)
+(note 25 24 26 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 26 25 27 5 (debug_marker) "digest-openssl.c":74:2 -1
+     (nil))
+(insn 27 26 28 5 (set (reg/f:DI 91)
+        (symbol_ref:DI ("digests") [flags 0x2]  <var_decl 0x7fe9893b2b40 digests>)) "digest-openssl.c":74:18 -1
+     (nil))
+(insn 28 27 29 5 (set (reg:DI 92)
+        (sign_extend:DI (reg/v:SI 86 [ alg ]))) "digest-openssl.c":74:18 -1
+     (nil))
+(insn 29 28 30 5 (parallel [
+            (set (reg:DI 93)
+                (ashift:DI (reg:DI 92)
+                    (const_int 5 [0x5])))
+            (clobber (reg:CC 17 flags))
+        ]) "digest-openssl.c":74:18 -1
+     (nil))
+(insn 30 29 31 5 (parallel [
+            (set (reg:DI 94)
+                (plus:DI (reg/f:DI 91)
+                    (reg:DI 93)))
+            (clobber (reg:CC 17 flags))
+        ]) "digest-openssl.c":74:18 -1
+     (nil))
+(insn 31 30 32 5 (parallel [
+            (set (reg/f:DI 95)
+                (plus:DI (reg:DI 94)
+                    (const_int 24 [0x18])))
+            (clobber (reg:CC 17 flags))
+        ]) "digest-openssl.c":74:18 -1
+     (nil))
+(insn 32 31 33 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/u/f:DI (reg/f:DI 95) [5 digests[alg_3(D)].mdfunc+0 S8 A64])
+            (const_int 0 [0]))) "digest-openssl.c":74:5 -1
+     (nil))
+(jump_insn 33 32 34 5 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 67)
+            (pc))) "digest-openssl.c":74:5 736 {*jcc}
+     (int_list:REG_BR_PROB 88798452 (nil))
+ -> 67)
+(note 34 33 35 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 35 34 36 6 (debug_marker) "digest-openssl.c":76:2 -1
+     (nil))
+(debug_insn 36 35 37 6 (var_location:DI D#1 (plus:DI (ashift:DI (sign_extend:DI (reg/v:SI 86 [ alg ]))
+            (const_int 5 [0x5]))
+        (symbol_ref:DI ("digests") [flags 0x2]  <var_decl 0x7fe9893b2b40 digests>))) "digest-openssl.c":76:9 -1
+     (nil))
+(debug_insn 37 36 38 6 (var_location:SI alg (clobber (const_int 0 [0]))) "digest-openssl.c":94:36 -1
+     (nil))
+(debug_insn 38 37 39 6 (var_location:DI digest (debug_expr:DI D#1)) "digest-openssl.c":94:36 -1
+     (nil))
+(debug_insn 39 38 40 6 (debug_marker) "digest-openssl.c":96:2 -1
+     (nil))
+(insn 40 39 41 6 (set (reg/f:DI 96)
+        (symbol_ref:DI ("digests") [flags 0x2]  <var_decl 0x7fe9893b2b40 digests>)) "digest-openssl.c":96:31 -1
+     (nil))
+(insn 41 40 42 6 (set (reg:DI 97)
+        (sign_extend:DI (reg/v:SI 86 [ alg ]))) "digest-openssl.c":96:31 -1
+     (nil))
+(insn 42 41 43 6 (parallel [
+            (set (reg:DI 98)
+                (ashift:DI (reg:DI 97)
+                    (const_int 5 [0x5])))
+            (clobber (reg:CC 17 flags))
+        ]) "digest-openssl.c":96:31 -1
+     (nil))
+(insn 43 42 44 6 (parallel [
+            (set (reg:DI 99)
+                (plus:DI (reg/f:DI 96)
+                    (reg:DI 98)))
+            (clobber (reg:CC 17 flags))
+        ]) "digest-openssl.c":96:31 -1
+     (nil))
+(insn 44 43 45 6 (parallel [
+            (set (reg/f:DI 100)
+                (plus:DI (reg:DI 99)
+                    (const_int 8 [0x8])))
+            (clobber (reg:CC 17 flags))
+        ]) "digest-openssl.c":96:31 -1
+     (nil))
+(insn 45 44 56 6 (set (reg/f:DI 85 [ <retval> ])
+        (mem/u/f:DI (reg/f:DI 100) [0 MEM <const struct ssh_digest[6]> [(const struct ssh_digest *)&digests][alg_3(D)].name+0 S8 A64])) "digest-openssl.c":96:31 -1
+     (nil))
+(jump_insn 56 45 57 6 (set (pc)
+        (label_ref:DI 52)) 737 {jump}
+     (nil)
+ -> 52)
+(barrier 57 56 59)
+(code_label 59 57 58 7 15 (nil) [1 uses])
+(note 58 59 5 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 5 58 60 7 (set (reg/f:DI 85 [ <retval> ])
+        (const_int 0 [0])) "digest-openssl.c":96:31 -1
+     (nil))
+(jump_insn 60 5 61 7 (set (pc)
+        (label_ref:DI 52)) 737 {jump}
+     (nil)
+ -> 52)
+(barrier 61 60 63)
+(code_label 63 61 62 8 16 (nil) [1 uses])
+(note 62 63 4 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 4 62 64 8 (set (reg/f:DI 85 [ <retval> ])
+        (const_int 0 [0])) "digest-openssl.c":96:31 -1
+     (nil))
+(jump_insn 64 4 65 8 (set (pc)
+        (label_ref:DI 52)) 737 {jump}
+     (nil)
+ -> 52)
+(barrier 65 64 67)
+(code_label 67 65 66 9 17 (nil) [1 uses])
+(note 66 67 6 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 6 66 48 9 (set (reg/f:DI 85 [ <retval> ])
+        (const_int 0 [0])) "digest-openssl.c":96:31 -1
+     (nil))
+(debug_insn 48 6 49 9 (var_location:SI alg (clobber (const_int 0 [0]))) "digest-openssl.c":94:36 -1
+     (nil))
+(debug_insn 49 48 52 9 (var_location:DI digest (clobber (const_int 0 [0]))) "digest-openssl.c":94:36 -1
+     (nil))
+(code_label 52 49 55 11 13 (nil) [3 uses])
+(note 55 52 53 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 53 55 54 11 (set (reg/i:DI 0 ax)
+        (reg/f:DI 85 [ <retval> ])) "digest-openssl.c":97:1 -1
+     (nil))
+(insn 54 53 0 11 (use (reg/i:DI 0 ax)) "digest-openssl.c":97:1 -1
+     (nil))
+
+;; Function ssh_digest_bytes (ssh_digest_bytes, funcdef_no=373, decl_uid=15633, cgraph_uid=374, symbol_order=374)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+Edge 2->6 redirected to 9
+Edge 3->6 redirected to 10
+Edge 4->6 redirected to 11
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Redirecting jump 56 from 10 to 11.
+Redirecting jump 60 from 10 to 11.
+Redirecting jump 64 from 10 to 11.
+Merging block 10 into block 9...
+Merged blocks 9 and 10.
+Merged 9 and 10 without moving.
+Removing jump 50.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 7 NOTE_INSN_DELETED)
+(note 7 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 7 3 2 (set (reg/v:SI 86 [ alg ])
+        (reg:SI 5 di [ alg ])) "digest-openssl.c":101:1 -1
+     (nil))
+(note 3 2 9 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 9 3 10 2 (debug_marker) "digest-openssl.c":102:2 -1
+     (nil))
+(debug_insn 10 9 11 2 (var_location:SI alg (reg/v:SI 86 [ alg ])) "digest-openssl.c":102:2 -1
+     (nil))
+(debug_insn 11 10 12 2 (debug_marker:BLK) "digest-openssl.c":68:1 -1
+     (nil))
+(debug_insn 12 11 15 2 (debug_marker) "digest-openssl.c":70:2 -1
+     (nil))
+(insn 15 12 16 2 (set (reg:CC 17 flags)
+        (compare:CC (reg/v:SI 86 [ alg ])
+            (const_int 4 [0x4]))) "digest-openssl.c":70:5 -1
+     (nil))
+(jump_insn 16 15 17 2 (set (pc)
+        (if_then_else (gtu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 59)
+            (pc))) "digest-openssl.c":70:5 736 {*jcc}
+     (int_list:REG_BR_PROB 186616332 (nil))
+ -> 59)
+(note 17 16 18 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 18 17 19 4 (debug_marker) "digest-openssl.c":72:2 -1
+     (nil))
+(insn 19 18 20 4 (set (reg/f:DI 87)
+        (symbol_ref:DI ("digests") [flags 0x2]  <var_decl 0x7fe9893b2b40 digests>)) "digest-openssl.c":72:18 -1
+     (nil))
+(insn 20 19 21 4 (set (reg:DI 88)
+        (sign_extend:DI (reg/v:SI 86 [ alg ]))) "digest-openssl.c":72:18 -1
+     (nil))
+(insn 21 20 22 4 (parallel [
+            (set (reg:DI 89)
+                (ashift:DI (reg:DI 88)
+                    (const_int 5 [0x5])))
+            (clobber (reg:CC 17 flags))
+        ]) "digest-openssl.c":72:18 -1
+     (nil))
+(insn 22 21 23 4 (parallel [
+            (set (reg/f:DI 90)
+                (plus:DI (reg/f:DI 87)
+                    (reg:DI 89)))
+            (clobber (reg:CC 17 flags))
+        ]) "digest-openssl.c":72:18 -1
+     (nil))
+(insn 23 22 24 4 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 86 [ alg ])
+            (mem/u:SI (reg/f:DI 90) [1 digests[alg_3(D)].id+0 S4 A256]))) "digest-openssl.c":72:5 -1
+     (nil))
+(jump_insn 24 23 25 4 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 63)
+            (pc))) "digest-openssl.c":72:5 736 {*jcc}
+     (int_list:REG_BR_PROB 311385132 (nil))
+ -> 63)
+(note 25 24 26 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 26 25 27 5 (debug_marker) "digest-openssl.c":74:2 -1
+     (nil))
+(insn 27 26 28 5 (set (reg/f:DI 91)
+        (symbol_ref:DI ("digests") [flags 0x2]  <var_decl 0x7fe9893b2b40 digests>)) "digest-openssl.c":74:18 -1
+     (nil))
+(insn 28 27 29 5 (set (reg:DI 92)
+        (sign_extend:DI (reg/v:SI 86 [ alg ]))) "digest-openssl.c":74:18 -1
+     (nil))
+(insn 29 28 30 5 (parallel [
+            (set (reg:DI 93)
+                (ashift:DI (reg:DI 92)
+                    (const_int 5 [0x5])))
+            (clobber (reg:CC 17 flags))
+        ]) "digest-openssl.c":74:18 -1
+     (nil))
+(insn 30 29 31 5 (parallel [
+            (set (reg:DI 94)
+                (plus:DI (reg/f:DI 91)
+                    (reg:DI 93)))
+            (clobber (reg:CC 17 flags))
+        ]) "digest-openssl.c":74:18 -1
+     (nil))
+(insn 31 30 32 5 (parallel [
+            (set (reg/f:DI 95)
+                (plus:DI (reg:DI 94)
+                    (const_int 24 [0x18])))
+            (clobber (reg:CC 17 flags))
+        ]) "digest-openssl.c":74:18 -1
+     (nil))
+(insn 32 31 33 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/u/f:DI (reg/f:DI 95) [5 digests[alg_3(D)].mdfunc+0 S8 A64])
+            (const_int 0 [0]))) "digest-openssl.c":74:5 -1
+     (nil))
+(jump_insn 33 32 34 5 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 67)
+            (pc))) "digest-openssl.c":74:5 736 {*jcc}
+     (int_list:REG_BR_PROB 88798452 (nil))
+ -> 67)
+(note 34 33 35 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 35 34 36 6 (debug_marker) "digest-openssl.c":76:2 -1
+     (nil))
+(debug_insn 36 35 37 6 (var_location:DI D#2 (plus:DI (ashift:DI (sign_extend:DI (reg/v:SI 86 [ alg ]))
+            (const_int 5 [0x5]))
+        (symbol_ref:DI ("digests") [flags 0x2]  <var_decl 0x7fe9893b2b40 digests>))) "digest-openssl.c":76:9 -1
+     (nil))
+(debug_insn 37 36 38 6 (var_location:SI alg (clobber (const_int 0 [0]))) "digest-openssl.c":102:36 -1
+     (nil))
+(debug_insn 38 37 39 6 (var_location:DI digest (debug_expr:DI D#2)) "digest-openssl.c":102:36 -1
+     (nil))
+(debug_insn 39 38 40 6 (debug_marker) "digest-openssl.c":104:2 -1
+     (nil))
+(insn 40 39 41 6 (set (reg/f:DI 96)
+        (symbol_ref:DI ("digests") [flags 0x2]  <var_decl 0x7fe9893b2b40 digests>)) "digest-openssl.c":104:28 -1
+     (nil))
+(insn 41 40 42 6 (set (reg:DI 97)
+        (sign_extend:DI (reg/v:SI 86 [ alg ]))) "digest-openssl.c":104:28 -1
+     (nil))
+(insn 42 41 43 6 (parallel [
+            (set (reg:DI 98)
+                (ashift:DI (reg:DI 97)
+                    (const_int 5 [0x5])))
+            (clobber (reg:CC 17 flags))
+        ]) "digest-openssl.c":104:28 -1
+     (nil))
+(insn 43 42 44 6 (parallel [
+            (set (reg:DI 99)
+                (plus:DI (reg/f:DI 96)
+                    (reg:DI 98)))
+            (clobber (reg:CC 17 flags))
+        ]) "digest-openssl.c":104:28 -1
+     (nil))
+(insn 44 43 45 6 (parallel [
+            (set (reg/f:DI 100)
+                (plus:DI (reg:DI 99)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "digest-openssl.c":104:28 -1
+     (nil))
+(insn 45 44 56 6 (set (reg:DI 85 [ <retval> ])
+        (mem/u:DI (reg/f:DI 100) [0 MEM <const struct ssh_digest[6]> [(const struct ssh_digest *)&digests][alg_3(D)].digest_len+0 S8 A128])) "digest-openssl.c":104:28 -1
+     (nil))
+(jump_insn 56 45 57 6 (set (pc)
+        (label_ref:DI 52)) 737 {jump}
+     (nil)
+ -> 52)
+(barrier 57 56 59)
+(code_label 59 57 58 7 20 (nil) [1 uses])
+(note 58 59 5 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 5 58 60 7 (set (reg:DI 85 [ <retval> ])
+        (const_int 0 [0])) "digest-openssl.c":104:28 -1
+     (nil))
+(jump_insn 60 5 61 7 (set (pc)
+        (label_ref:DI 52)) 737 {jump}
+     (nil)
+ -> 52)
+(barrier 61 60 63)
+(code_label 63 61 62 8 21 (nil) [1 uses])
+(note 62 63 4 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 4 62 64 8 (set (reg:DI 85 [ <retval> ])
+        (const_int 0 [0])) "digest-openssl.c":104:28 -1
+     (nil))
+(jump_insn 64 4 65 8 (set (pc)
+        (label_ref:DI 52)) 737 {jump}
+     (nil)
+ -> 52)
+(barrier 65 64 67)
+(code_label 67 65 66 9 22 (nil) [1 uses])
+(note 66 67 6 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 6 66 48 9 (set (reg:DI 85 [ <retval> ])
+        (const_int 0 [0])) "digest-openssl.c":104:28 -1
+     (nil))
+(debug_insn 48 6 49 9 (var_location:SI alg (clobber (const_int 0 [0]))) "digest-openssl.c":102:36 -1
+     (nil))
+(debug_insn 49 48 52 9 (var_location:DI digest (clobber (const_int 0 [0]))) "digest-openssl.c":102:36 -1
+     (nil))
+(code_label 52 49 55 11 18 (nil) [3 uses])
+(note 55 52 53 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 53 55 54 11 (set (reg/i:DI 0 ax)
+        (reg:DI 85 [ <retval> ])) "digest-openssl.c":105:1 -1
+     (nil))
+(insn 54 53 0 11 (use (reg/i:DI 0 ax)) "digest-openssl.c":105:1 -1
+     (nil))
+
+;; Function ssh_digest_blocksize (ssh_digest_blocksize, funcdef_no=374, decl_uid=15635, cgraph_uid=375, symbol_order=375)
+
+
+;; Generating RTL for gimple basic block 2
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Removing jump 16.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (reg/v/f:DI 86 [ ctx ])
+        (reg:DI 5 di [ ctx ])) "digest-openssl.c":109:1 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 6 3 7 2 (debug_marker) "digest-openssl.c":110:2 -1
+     (nil))
+(insn 7 6 8 2 (set (reg:DI 87)
+        (mem/f:DI (plus:DI (reg/v/f:DI 86 [ ctx ])
+                (const_int 8 [0x8])) [7 ctx_5(D)->mdctx+0 S8 A64])) "digest-openssl.c":110:9 -1
+     (nil))
+(insn 8 7 9 2 (set (reg:DI 5 di)
+        (reg:DI 87)) "digest-openssl.c":110:9 -1
+     (nil))
+(call_insn 9 8 10 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("EVP_MD_CTX_md") [flags 0x41]  <function_decl 0x7fe9892a6b00 EVP_MD_CTX_md>) [0 EVP_MD_CTX_md S1 A8])
+            (const_int 0 [0]))) "digest-openssl.c":110:9 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("EVP_MD_CTX_md") [flags 0x41]  <function_decl 0x7fe9892a6b00 EVP_MD_CTX_md>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 10 9 11 2 (set (reg/f:DI 83 [ _2 ])
+        (reg:DI 0 ax)) "digest-openssl.c":110:9 -1
+     (nil))
+(insn 11 10 12 2 (set (reg:DI 5 di)
+        (reg/f:DI 83 [ _2 ])) "digest-openssl.c":110:9 -1
+     (nil))
+(call_insn 12 11 13 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("EVP_MD_block_size") [flags 0x41]  <function_decl 0x7fe9892a6900 EVP_MD_block_size>) [0 EVP_MD_block_size S1 A8])
+            (const_int 0 [0]))) "digest-openssl.c":110:9 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("EVP_MD_block_size") [flags 0x41]  <function_decl 0x7fe9892a6900 EVP_MD_block_size>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 13 12 14 2 (set (reg:SI 84 [ _3 ])
+        (reg:SI 0 ax)) "digest-openssl.c":110:9 -1
+     (nil))
+(insn 14 13 15 2 (set (reg:DI 88)
+        (sign_extend:DI (reg:SI 84 [ _3 ]))) "digest-openssl.c":110:9 -1
+     (nil))
+(insn 15 14 19 2 (set (reg:DI 85 [ <retval> ])
+        (reg:DI 88)) "digest-openssl.c":110:9 -1
+     (nil))
+(insn 19 15 20 2 (set (reg/i:DI 0 ax)
+        (reg:DI 85 [ <retval> ])) "digest-openssl.c":111:1 -1
+     (nil))
+(insn 20 19 0 2 (use (reg/i:DI 0 ax)) "digest-openssl.c":111:1 -1
+     (nil))
+
+;; Function ssh_digest_start (ssh_digest_start, funcdef_no=375, decl_uid=15651, cgraph_uid=376, symbol_order=376)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+
+;; Generating RTL for gimple basic block 11
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Redirecting jump 18 from 12 to 13.
+Redirecting jump 69 from 12 to 13.
+Edge 10->12 redirected to 13
+Merging block 12 into block 11...
+Merged blocks 11 and 12.
+Merged 11 and 12 without moving.
+Removing jump 105.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 7 NOTE_INSN_DELETED)
+(note 7 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 7 3 2 (set (reg/v:SI 91 [ alg ])
+        (reg:SI 5 di [ alg ])) "digest-openssl.c":115:1 -1
+     (nil))
+(note 3 2 9 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 9 3 10 2 (debug_marker) "digest-openssl.c":116:2 -1
+     (nil))
+(debug_insn 10 9 11 2 (var_location:SI alg (reg/v:SI 91 [ alg ])) "digest-openssl.c":116:2 -1
+     (nil))
+(debug_insn 11 10 12 2 (debug_marker:BLK) "digest-openssl.c":68:1 -1
+     (nil))
+(debug_insn 12 11 15 2 (debug_marker) "digest-openssl.c":70:2 -1
+     (nil))
+(insn 15 12 16 2 (set (reg:CC 17 flags)
+        (compare:CC (reg/v:SI 91 [ alg ])
+            (const_int 4 [0x4]))) "digest-openssl.c":70:5 -1
+     (nil))
+(jump_insn 16 15 23 2 (set (pc)
+        (if_then_else (leu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 20)
+            (pc))) "digest-openssl.c":70:5 -1
+     (int_list:REG_BR_PROB 887125500 (nil))
+ -> 20)
+(code_label 23 16 17 4 28 (nil) [3 uses])
+(note 17 23 4 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 4 17 18 4 (set (reg/v/f:DI 90 [ <retval> ])
+        (const_int 0 [0])) "digest-openssl.c":120:10 -1
+     (nil))
+(jump_insn 18 4 19 4 (set (pc)
+        (label_ref:DI 107)) 737 {jump}
+     (nil)
+ -> 107)
+(barrier 19 18 20)
+(code_label 20 19 21 5 26 (nil) [1 uses])
+(note 21 20 22 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 22 21 24 5 (debug_marker) "digest-openssl.c":72:2 -1
+     (nil))
+(insn 24 22 25 5 (set (reg/f:DI 92)
+        (symbol_ref:DI ("digests") [flags 0x2]  <var_decl 0x7fe9893b2b40 digests>)) "digest-openssl.c":72:18 -1
+     (nil))
+(insn 25 24 26 5 (set (reg:DI 93)
+        (sign_extend:DI (reg/v:SI 91 [ alg ]))) "digest-openssl.c":72:18 -1
+     (nil))
+(insn 26 25 27 5 (parallel [
+            (set (reg:DI 94)
+                (ashift:DI (reg:DI 93)
+                    (const_int 5 [0x5])))
+            (clobber (reg:CC 17 flags))
+        ]) "digest-openssl.c":72:18 -1
+     (nil))
+(insn 27 26 28 5 (parallel [
+            (set (reg/f:DI 95)
+                (plus:DI (reg/f:DI 92)
+                    (reg:DI 94)))
+            (clobber (reg:CC 17 flags))
+        ]) "digest-openssl.c":72:18 -1
+     (nil))
+(insn 28 27 29 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 91 [ alg ])
+            (mem/u:SI (reg/f:DI 95) [1 digests[alg_10(D)].id+0 S4 A256]))) "digest-openssl.c":72:5 -1
+     (nil))
+(jump_insn 29 28 30 5 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 23)
+            (pc))) "digest-openssl.c":72:5 -1
+     (int_list:REG_BR_PROB 311385132 (nil))
+ -> 23)
+(note 30 29 31 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 31 30 32 6 (debug_marker) "digest-openssl.c":74:2 -1
+     (nil))
+(insn 32 31 33 6 (set (reg/f:DI 96)
+        (symbol_ref:DI ("digests") [flags 0x2]  <var_decl 0x7fe9893b2b40 digests>)) "digest-openssl.c":74:18 -1
+     (nil))
+(insn 33 32 34 6 (set (reg:DI 97)
+        (sign_extend:DI (reg/v:SI 91 [ alg ]))) "digest-openssl.c":74:18 -1
+     (nil))
+(insn 34 33 35 6 (parallel [
+            (set (reg:DI 98)
+                (ashift:DI (reg:DI 97)
+                    (const_int 5 [0x5])))
+            (clobber (reg:CC 17 flags))
+        ]) "digest-openssl.c":74:18 -1
+     (nil))
+(insn 35 34 36 6 (parallel [
+            (set (reg:DI 99)
+                (plus:DI (reg/f:DI 96)
+                    (reg:DI 98)))
+            (clobber (reg:CC 17 flags))
+        ]) "digest-openssl.c":74:18 -1
+     (nil))
+(insn 36 35 37 6 (parallel [
+            (set (reg/f:DI 100)
+                (plus:DI (reg:DI 99)
+                    (const_int 24 [0x18])))
+            (clobber (reg:CC 17 flags))
+        ]) "digest-openssl.c":74:18 -1
+     (nil))
+(insn 37 36 38 6 (set (reg/f:DI 88 [ _23 ])
+        (mem/u/f:DI (reg/f:DI 100) [5 digests[alg_10(D)].mdfunc+0 S8 A64])) "digest-openssl.c":74:18 -1
+     (nil))
+(insn 38 37 39 6 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/f:DI 88 [ _23 ])
+            (const_int 0 [0]))) "digest-openssl.c":74:5 -1
+     (nil))
+(jump_insn 39 38 40 6 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 23)
+            (pc))) "digest-openssl.c":74:5 -1
+     (int_list:REG_BR_PROB 88798452 (nil))
+ -> 23)
+(note 40 39 41 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 41 40 42 7 (debug_marker) "digest-openssl.c":76:2 -1
+     (nil))
+(debug_insn 42 41 43 7 (var_location:DI D#3 (plus:DI (ashift:DI (sign_extend:DI (reg/v:SI 91 [ alg ]))
+            (const_int 5 [0x5]))
+        (symbol_ref:DI ("digests") [flags 0x2]  <var_decl 0x7fe9893b2b40 digests>))) "digest-openssl.c":76:9 -1
+     (nil))
+(debug_insn 43 42 44 7 (var_location:SI alg (clobber (const_int 0 [0]))) "digest-openssl.c":116:36 -1
+     (nil))
+(debug_insn 44 43 45 7 (var_location:DI digest (debug_expr:DI D#3)) "digest-openssl.c":116:36 -1
+     (nil))
+(debug_insn 45 44 46 7 (debug_marker) "digest-openssl.c":117:2 -1
+     (nil))
+(debug_insn 46 45 47 7 (debug_marker) "digest-openssl.c":119:2 -1
+     (nil))
+(insn 47 46 48 7 (set (reg:DI 4 si)
+        (const_int 16 [0x10])) "digest-openssl.c":119:32 -1
+     (nil))
+(insn 48 47 49 7 (set (reg:DI 5 di)
+        (const_int 1 [0x1])) "digest-openssl.c":119:32 -1
+     (nil))
+(call_insn 49 48 50 7 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("calloc") [flags 0x41]  <function_decl 0x7fe989c76300 calloc>) [0 __builtin_calloc S1 A8])
+            (const_int 0 [0]))) "digest-openssl.c":119:32 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("calloc") [flags 0x41]  <function_decl 0x7fe989c76300 calloc>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 50 49 51 7 (set (reg/f:DI 101)
+        (reg:DI 0 ax)) "digest-openssl.c":119:32 -1
+     (expr_list:REG_NOALIAS (reg/f:DI 101)
+        (nil)))
+(insn 51 50 52 7 (set (reg/v/f:DI 90 [ <retval> ])
+        (reg/f:DI 101)) "digest-openssl.c":119:32 -1
+     (nil))
+(debug_insn 52 51 53 7 (var_location:DI ret (reg/v/f:DI 90 [ <retval> ])) "digest-openssl.c":119:32 -1
+     (nil))
+(insn 53 52 54 7 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 90 [ <retval> ])
+            (const_int 0 [0]))) "digest-openssl.c":119:21 -1
+     (nil))
+(jump_insn 54 53 55 7 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 23)
+            (pc))) "digest-openssl.c":119:21 -1
+     (int_list:REG_BR_PROB 429500 (nil))
+ -> 23)
+(note 55 54 56 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 56 55 57 8 (debug_marker) "digest-openssl.c":121:2 -1
+     (nil))
+(insn 57 56 58 8 (set (mem:SI (reg/v/f:DI 90 [ <retval> ]) [1 ret_13->alg+0 S4 A64])
+        (reg/v:SI 91 [ alg ])) "digest-openssl.c":121:11 -1
+     (nil))
+(debug_insn 58 57 59 8 (debug_marker) "digest-openssl.c":122:2 -1
+     (nil))
+(call_insn 59 58 60 8 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("EVP_MD_CTX_new") [flags 0x41]  <function_decl 0x7fe9892b7a00 EVP_MD_CTX_new>) [0 EVP_MD_CTX_new S1 A8])
+            (const_int 0 [0]))) "digest-openssl.c":122:20 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("EVP_MD_CTX_new") [flags 0x41]  <function_decl 0x7fe9892b7a00 EVP_MD_CTX_new>)
+        (nil))
+    (nil))
+(insn 60 59 61 8 (set (reg/f:DI 82 [ _1 ])
+        (reg:DI 0 ax)) "digest-openssl.c":122:20 -1
+     (nil))
+(insn 61 60 62 8 (set (mem/f:DI (plus:DI (reg/v/f:DI 90 [ <retval> ])
+                (const_int 8 [0x8])) [7 ret_13->mdctx+0 S8 A64])
+        (reg/f:DI 82 [ _1 ])) "digest-openssl.c":122:18 -1
+     (nil))
+(insn 62 61 63 8 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/f:DI 82 [ _1 ])
+            (const_int 0 [0]))) "digest-openssl.c":122:5 -1
+     (nil))
+(jump_insn 63 62 64 8 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 71)
+            (pc))) "digest-openssl.c":122:5 -1
+     (int_list:REG_BR_PROB 1028107804 (nil))
+ -> 71)
+(note 64 63 65 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 65 64 66 9 (debug_marker) "digest-openssl.c":123:3 -1
+     (nil))
+(insn 66 65 67 9 (set (reg:DI 5 di)
+        (reg/v/f:DI 90 [ <retval> ])) "digest-openssl.c":123:3 -1
+     (nil))
+(call_insn 67 66 68 9 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x7fe989c7c900 free>) [0 __builtin_free S1 A8])
+        (const_int 0 [0])) "digest-openssl.c":123:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x7fe989c7c900 free>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(debug_insn 68 67 5 9 (debug_marker) "digest-openssl.c":124:3 -1
+     (nil))
+(insn 5 68 69 9 (set (reg/v/f:DI 90 [ <retval> ])
+        (reg/f:DI 82 [ _1 ])) "digest-openssl.c":124:10 -1
+     (nil))
+(jump_insn 69 5 70 9 (set (pc)
+        (label_ref:DI 107)) "digest-openssl.c":124:10 737 {jump}
+     (nil)
+ -> 107)
+(barrier 70 69 71)
+(code_label 71 70 72 10 29 (nil) [1 uses])
+(note 72 71 73 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 73 72 74 10 (debug_marker) "digest-openssl.c":126:2 -1
+     (nil))
+(call_insn 74 73 75 10 (set (reg:DI 0 ax)
+        (call (mem:QI (reg/f:DI 88 [ _23 ]) [0 *_23 S1 A8])
+            (const_int 0 [0]))) "digest-openssl.c":126:6 -1
+     (expr_list:REG_CALL_DECL (nil)
+        (nil))
+    (nil))
+(insn 75 74 76 10 (set (reg/f:DI 83 [ _3 ])
+        (reg:DI 0 ax)) "digest-openssl.c":126:6 -1
+     (nil))
+(insn 76 75 77 10 (set (reg:DI 102)
+        (mem/f:DI (plus:DI (reg/v/f:DI 90 [ <retval> ])
+                (const_int 8 [0x8])) [7 ret_13->mdctx+0 S8 A64])) "digest-openssl.c":126:6 -1
+     (nil))
+(insn 77 76 78 10 (set (reg:DI 1 dx)
+        (const_int 0 [0])) "digest-openssl.c":126:6 -1
+     (nil))
+(insn 78 77 79 10 (set (reg:DI 4 si)
+        (reg/f:DI 83 [ _3 ])) "digest-openssl.c":126:6 -1
+     (nil))
+(insn 79 78 80 10 (set (reg:DI 5 di)
+        (reg:DI 102)) "digest-openssl.c":126:6 -1
+     (nil))
+(call_insn 80 79 81 10 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("EVP_DigestInit_ex") [flags 0x41]  <function_decl 0x7fe9892bf100 EVP_DigestInit_ex>) [0 EVP_DigestInit_ex S1 A8])
+            (const_int 0 [0]))) "digest-openssl.c":126:6 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("EVP_DigestInit_ex") [flags 0x41]  <function_decl 0x7fe9892bf100 EVP_DigestInit_ex>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(insn 81 80 82 10 (set (reg:SI 85 [ _5 ])
+        (reg:SI 0 ax)) "digest-openssl.c":126:6 -1
+     (nil))
+(insn 82 81 83 10 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 85 [ _5 ])
+            (const_int 1 [0x1]))) "digest-openssl.c":126:5 -1
+     (nil))
+(jump_insn 83 82 84 10 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 107)
+            (pc))) "digest-openssl.c":126:5 736 {*jcc}
+     (int_list:REG_BR_PROB 893890076 (nil))
+ -> 107)
+(note 84 83 85 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 85 84 86 11 (debug_marker) "digest-openssl.c":127:3 -1
+     (nil))
+(debug_insn 86 85 87 11 (var_location:DI ctx (reg/v/f:DI 90 [ <retval> ])) "digest-openssl.c":127:3 -1
+     (nil))
+(debug_insn 87 86 88 11 (debug_marker:BLK) "digest-openssl.c":176:1 -1
+     (nil))
+(debug_insn 88 87 89 11 (debug_marker) "digest-openssl.c":178:2 -1
+     (nil))
+(debug_insn 89 88 90 11 (var_location:DI ctx (reg/v/f:DI 90 [ <retval> ])) "digest-openssl.c":178:2 -1
+     (nil))
+(debug_insn 90 89 91 11 (debug_marker:BLK) "digest-openssl.c":176:1 -1
+     (nil))
+(debug_insn 91 90 92 11 (debug_marker) "digest-openssl.c":180:2 -1
+     (nil))
+(insn 92 91 93 11 (set (reg:DI 103)
+        (mem/f:DI (plus:DI (reg/v/f:DI 90 [ <retval> ])
+                (const_int 8 [0x8])) [7 ret_13->mdctx+0 S8 A64])) "digest-openssl.c":180:2 -1
+     (nil))
+(insn 93 92 94 11 (set (reg:DI 5 di)
+        (reg:DI 103)) "digest-openssl.c":180:2 -1
+     (nil))
+(call_insn 94 93 95 11 (call (mem:QI (symbol_ref:DI ("EVP_MD_CTX_free") [flags 0x41]  <function_decl 0x7fe9892b7c00 EVP_MD_CTX_free>) [0 EVP_MD_CTX_free S1 A8])
+        (const_int 0 [0])) "digest-openssl.c":180:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("EVP_MD_CTX_free") [flags 0x41]  <function_decl 0x7fe9892b7c00 EVP_MD_CTX_free>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(debug_insn 95 94 96 11 (debug_marker) "digest-openssl.c":181:2 -1
+     (nil))
+(insn 96 95 97 11 (set (reg:DI 4 si)
+        (const_int 16 [0x10])) "digest-openssl.c":181:2 -1
+     (nil))
+(insn 97 96 98 11 (set (reg:DI 5 di)
+        (reg/v/f:DI 90 [ <retval> ])) "digest-openssl.c":181:2 -1
+     (nil))
+(call_insn 98 97 6 11 (call (mem:QI (symbol_ref:DI ("freezero") [flags 0x41]  <function_decl 0x7fe9897f3b00 freezero>) [0 freezero S1 A8])
+        (const_int 0 [0])) "digest-openssl.c":181:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("freezero") [flags 0x41]  <function_decl 0x7fe9897f3b00 freezero>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 6 98 101 11 (set (reg/v/f:DI 90 [ <retval> ])
+        (const_int 0 [0])) "digest-openssl.c":128:10 -1
+     (nil))
+(debug_insn 101 6 102 11 (var_location:SI alg (clobber (const_int 0 [0]))) "digest-openssl.c":116:36 -1
+     (nil))
+(debug_insn 102 101 103 11 (var_location:DI digest (clobber (const_int 0 [0]))) "digest-openssl.c":116:36 -1
+     (nil))
+(debug_insn 103 102 104 11 (var_location:DI ctx (clobber (const_int 0 [0]))) -1
+     (nil))
+(debug_insn 104 103 107 11 (var_location:DI ctx (clobber (const_int 0 [0]))) "digest-openssl.c":127:3 -1
+     (nil))
+(code_label 107 104 110 13 25 (nil) [3 uses])
+(note 110 107 108 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 108 110 109 13 (set (reg/i:DI 0 ax)
+        (reg/v/f:DI 90 [ <retval> ])) "digest-openssl.c":131:1 -1
+     (nil))
+(insn 109 108 0 13 (use (reg/i:DI 0 ax)) "digest-openssl.c":131:1 -1
+     (nil))
+
+;; Function ssh_digest_copy_state (ssh_digest_copy_state, funcdef_no=376, decl_uid=15638, cgraph_uid=377, symbol_order=377)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+Edge 2->5 redirected to 8
+Edge 3->5 redirected to 9
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Redirecting jump 33 from 8 to 9.
+Redirecting jump 37 from 8 to 9.
+Merging block 8 into block 7...
+Merged blocks 7 and 8.
+Merged 7 and 8 without moving.
+Removing jump 27.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 8 NOTE_INSN_DELETED)
+(note 8 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 8 3 2 (set (reg/v/f:DI 88 [ from ])
+        (reg:DI 5 di [ from ])) "digest-openssl.c":135:1 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v/f:DI 89 [ to ])
+        (reg:DI 4 si [ to ])) "digest-openssl.c":135:1 -1
+     (nil))
+(note 4 3 10 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 10 4 11 2 (debug_marker) "digest-openssl.c":136:2 -1
+     (nil))
+(insn 11 10 12 2 (set (reg:SI 90)
+        (mem:SI (reg/v/f:DI 88 [ from ]) [1 from_9(D)->alg+0 S4 A64])) "digest-openssl.c":136:5 -1
+     (nil))
+(insn 12 11 13 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 90)
+            (mem:SI (reg/v/f:DI 89 [ to ]) [1 to_10(D)->alg+0 S4 A64]))) "digest-openssl.c":136:5 -1
+     (nil))
+(jump_insn 13 12 14 2 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 36)
+            (pc))) "digest-openssl.c":136:5 736 {*jcc}
+     (int_list:REG_BR_PROB 42734932 (nil))
+ -> 36)
+(note 14 13 15 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 15 14 16 4 (debug_marker) "digest-openssl.c":139:2 -1
+     (nil))
+(insn 16 15 17 4 (set (reg:DI 91)
+        (mem/f:DI (plus:DI (reg/v/f:DI 88 [ from ])
+                (const_int 8 [0x8])) [7 from_9(D)->mdctx+0 S8 A64])) "digest-openssl.c":139:7 -1
+     (nil))
+(insn 17 16 18 4 (set (reg:DI 92)
+        (mem/f:DI (plus:DI (reg/v/f:DI 89 [ to ])
+                (const_int 8 [0x8])) [7 to_10(D)->mdctx+0 S8 A64])) "digest-openssl.c":139:7 -1
+     (nil))
+(insn 18 17 19 4 (set (reg:DI 4 si)
+        (reg:DI 91)) "digest-openssl.c":139:7 -1
+     (nil))
+(insn 19 18 20 4 (set (reg:DI 5 di)
+        (reg:DI 92)) "digest-openssl.c":139:7 -1
+     (nil))
+(call_insn 20 19 21 4 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("EVP_MD_CTX_copy_ex") [flags 0x41]  <function_decl 0x7fe9892b7d00 EVP_MD_CTX_copy_ex>) [0 EVP_MD_CTX_copy_ex S1 A8])
+            (const_int 0 [0]))) "digest-openssl.c":139:7 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("EVP_MD_CTX_copy_ex") [flags 0x41]  <function_decl 0x7fe9892b7d00 EVP_MD_CTX_copy_ex>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 21 20 22 4 (set (reg:SI 86 [ _5 ])
+        (reg:SI 0 ax)) "digest-openssl.c":139:7 -1
+     (nil))
+(insn 22 21 23 4 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 86 [ _5 ])
+            (const_int 0 [0]))) "digest-openssl.c":139:5 -1
+     (nil))
+(jump_insn 23 22 24 4 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 40)
+            (pc))) "digest-openssl.c":139:5 736 {*jcc}
+     (int_list:REG_BR_PROB 1062574916 (nil))
+ -> 40)
+(note 24 23 7 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 7 24 33 5 (set (reg:SI 87 [ <retval> ])
+        (const_int -22 [0xffffffffffffffea])) "digest-openssl.c":140:10 -1
+     (nil))
+(jump_insn 33 7 34 5 (set (pc)
+        (label_ref:DI 29)) 737 {jump}
+     (nil)
+ -> 29)
+(barrier 34 33 36)
+(code_label 36 34 35 6 45 (nil) [1 uses])
+(note 35 36 6 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 6 35 37 6 (set (reg:SI 87 [ <retval> ])
+        (const_int -10 [0xfffffffffffffff6])) "digest-openssl.c":137:10 -1
+     (nil))
+(jump_insn 37 6 38 6 (set (pc)
+        (label_ref:DI 29)) 737 {jump}
+     (nil)
+ -> 29)
+(barrier 38 37 40)
+(code_label 40 38 39 7 46 (nil) [1 uses])
+(note 39 40 5 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 5 39 29 7 (set (reg:SI 87 [ <retval> ])
+        (const_int 0 [0])) "digest-openssl.c":141:9 -1
+     (nil))
+(code_label 29 5 32 9 43 (nil) [2 uses])
+(note 32 29 30 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 30 32 31 9 (set (reg/i:SI 0 ax)
+        (reg:SI 87 [ <retval> ])) "digest-openssl.c":142:1 -1
+     (nil))
+(insn 31 30 0 9 (use (reg/i:SI 0 ax)) "digest-openssl.c":142:1 -1
+     (nil))
+
+;; Function ssh_digest_update (ssh_digest_update, funcdef_no=377, decl_uid=15655, cgraph_uid=378, symbol_order=378)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+Edge 2->4 redirected to 7
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Redirecting jump 28 from 6 to 7.
+Merging block 6 into block 5...
+Merged blocks 5 and 6.
+Merged 5 and 6 without moving.
+Removing jump 22.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 8 NOTE_INSN_DELETED)
+(note 8 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 8 3 2 (set (reg/v/f:DI 85 [ ctx ])
+        (reg:DI 5 di [ ctx ])) "digest-openssl.c":146:1 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v/f:DI 86 [ m ])
+        (reg:DI 4 si [ m ])) "digest-openssl.c":146:1 -1
+     (nil))
+(insn 4 3 5 2 (set (reg/v:DI 87 [ mlen ])
+        (reg:DI 1 dx [ mlen ])) "digest-openssl.c":146:1 -1
+     (nil))
+(note 5 4 10 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 10 5 11 2 (debug_marker) "digest-openssl.c":147:2 -1
+     (nil))
+(insn 11 10 12 2 (set (reg:DI 88)
+        (mem/f:DI (plus:DI (reg/v/f:DI 85 [ ctx ])
+                (const_int 8 [0x8])) [7 ctx_5(D)->mdctx+0 S8 A64])) "digest-openssl.c":147:6 -1
+     (nil))
+(insn 12 11 13 2 (set (reg:DI 1 dx)
+        (reg/v:DI 87 [ mlen ])) "digest-openssl.c":147:6 -1
+     (nil))
+(insn 13 12 14 2 (set (reg:DI 4 si)
+        (reg/v/f:DI 86 [ m ])) "digest-openssl.c":147:6 -1
+     (nil))
+(insn 14 13 15 2 (set (reg:DI 5 di)
+        (reg:DI 88)) "digest-openssl.c":147:6 -1
+     (nil))
+(call_insn 15 14 16 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("EVP_DigestUpdate") [flags 0x41]  <function_decl 0x7fe9892bf200 EVP_DigestUpdate>) [0 EVP_DigestUpdate S1 A8])
+            (const_int 0 [0]))) "digest-openssl.c":147:6 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("EVP_DigestUpdate") [flags 0x41]  <function_decl 0x7fe9892bf200 EVP_DigestUpdate>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(insn 16 15 17 2 (set (reg:SI 83 [ _2 ])
+        (reg:SI 0 ax)) "digest-openssl.c":147:6 -1
+     (nil))
+(insn 17 16 18 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 83 [ _2 ])
+            (const_int 1 [0x1]))) "digest-openssl.c":147:5 -1
+     (nil))
+(jump_insn 18 17 19 2 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 31)
+            (pc))) "digest-openssl.c":147:5 736 {*jcc}
+     (int_list:REG_BR_PROB 1052266988 (nil))
+ -> 31)
+(note 19 18 7 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 7 19 28 4 (set (reg:SI 84 [ <retval> ])
+        (const_int -22 [0xffffffffffffffea])) "digest-openssl.c":148:10 -1
+     (nil))
+(jump_insn 28 7 29 4 (set (pc)
+        (label_ref:DI 24)) 737 {jump}
+     (nil)
+ -> 24)
+(barrier 29 28 31)
+(code_label 31 29 30 5 53 (nil) [1 uses])
+(note 30 31 6 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 6 30 24 5 (set (reg:SI 84 [ <retval> ])
+        (const_int 0 [0])) "digest-openssl.c":149:9 -1
+     (nil))
+(code_label 24 6 27 7 51 (nil) [1 uses])
+(note 27 24 25 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 25 27 26 7 (set (reg/i:SI 0 ax)
+        (reg:SI 84 [ <retval> ])) "digest-openssl.c":150:1 -1
+     (nil))
+(insn 26 25 0 7 (use (reg/i:SI 0 ax)) "digest-openssl.c":150:1 -1
+     (nil))
+
+;; Function ssh_digest_update_buffer (ssh_digest_update_buffer, funcdef_no=378, decl_uid=15658, cgraph_uid=379, symbol_order=379)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+Edge 2->4 redirected to 7
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Redirecting jump 41 from 6 to 7.
+Merging block 6 into block 5...
+Merged blocks 5 and 6.
+Merged 5 and 6 without moving.
+Removing jump 35.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 7 NOTE_INSN_DELETED)
+(note 7 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 7 3 2 (set (reg/v/f:DI 87 [ ctx ])
+        (reg:DI 5 di [ ctx ])) "digest-openssl.c":154:1 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v/f:DI 88 [ b ])
+        (reg:DI 4 si [ b ])) "digest-openssl.c":154:1 -1
+     (nil))
+(note 4 3 9 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 9 4 10 2 (debug_marker) "digest-openssl.c":155:2 -1
+     (nil))
+(insn 10 9 11 2 (set (reg:DI 5 di)
+        (reg/v/f:DI 88 [ b ])) "digest-openssl.c":155:9 -1
+     (nil))
+(call_insn 11 10 12 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshbuf_len") [flags 0x41]  <function_decl 0x7fe98941e200 sshbuf_len>) [0 sshbuf_len S1 A8])
+            (const_int 0 [0]))) "digest-openssl.c":155:9 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_len") [flags 0x41]  <function_decl 0x7fe98941e200 sshbuf_len>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 12 11 13 2 (set (reg:DI 82 [ _1 ])
+        (reg:DI 0 ax)) "digest-openssl.c":155:9 -1
+     (nil))
+(insn 13 12 14 2 (set (reg:DI 5 di)
+        (reg/v/f:DI 88 [ b ])) "digest-openssl.c":155:32 -1
+     (nil))
+(call_insn 14 13 15 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshbuf_ptr") [flags 0x41]  <function_decl 0x7fe98941e400 sshbuf_ptr>) [0 sshbuf_ptr S1 A8])
+            (const_int 0 [0]))) "digest-openssl.c":155:32 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_ptr") [flags 0x41]  <function_decl 0x7fe98941e400 sshbuf_ptr>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 15 14 16 2 (set (reg/f:DI 83 [ _2 ])
+        (reg:DI 0 ax)) "digest-openssl.c":155:32 -1
+     (nil))
+(debug_insn 16 15 17 2 (var_location:DI ctx (reg/v/f:DI 87 [ ctx ])) "digest-openssl.c":155:32 -1
+     (nil))
+(debug_insn 17 16 18 2 (var_location:DI m (reg/f:DI 83 [ _2 ])) "digest-openssl.c":155:32 -1
+     (nil))
+(debug_insn 18 17 19 2 (var_location:DI mlen (reg:DI 82 [ _1 ])) "digest-openssl.c":155:32 -1
+     (nil))
+(debug_insn 19 18 20 2 (debug_marker:BLK) "digest-openssl.c":145:1 -1
+     (nil))
+(debug_insn 20 19 21 2 (debug_marker) "digest-openssl.c":147:2 -1
+     (nil))
+(insn 21 20 22 2 (set (reg:DI 89)
+        (mem/f:DI (plus:DI (reg/v/f:DI 87 [ ctx ])
+                (const_int 8 [0x8])) [7 ctx_7(D)->mdctx+0 S8 A64])) "digest-openssl.c":147:6 -1
+     (nil))
+(insn 22 21 23 2 (set (reg:DI 1 dx)
+        (reg:DI 82 [ _1 ])) "digest-openssl.c":147:6 -1
+     (nil))
+(insn 23 22 24 2 (set (reg:DI 4 si)
+        (reg/f:DI 83 [ _2 ])) "digest-openssl.c":147:6 -1
+     (nil))
+(insn 24 23 25 2 (set (reg:DI 5 di)
+        (reg:DI 89)) "digest-openssl.c":147:6 -1
+     (nil))
+(call_insn 25 24 26 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("EVP_DigestUpdate") [flags 0x41]  <function_decl 0x7fe9892bf200 EVP_DigestUpdate>) [0 EVP_DigestUpdate S1 A8])
+            (const_int 0 [0]))) "digest-openssl.c":147:6 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("EVP_DigestUpdate") [flags 0x41]  <function_decl 0x7fe9892bf200 EVP_DigestUpdate>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(insn 26 25 27 2 (set (reg:SI 85 [ _9 ])
+        (reg:SI 0 ax)) "digest-openssl.c":147:6 -1
+     (nil))
+(insn 27 26 28 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 85 [ _9 ])
+            (const_int 1 [0x1]))) "digest-openssl.c":147:5 -1
+     (nil))
+(jump_insn 28 27 29 2 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 44)
+            (pc))) "digest-openssl.c":147:5 736 {*jcc}
+     (int_list:REG_BR_PROB 1052266988 (nil))
+ -> 44)
+(note 29 28 6 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 6 29 41 4 (set (reg:SI 86 [ <retval> ])
+        (const_int -22 [0xffffffffffffffea])) "digest-openssl.c":148:10 -1
+     (nil))
+(jump_insn 41 6 42 4 (set (pc)
+        (label_ref:DI 37)) 737 {jump}
+     (nil)
+ -> 37)
+(barrier 42 41 44)
+(code_label 44 42 43 5 57 (nil) [1 uses])
+(note 43 44 5 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 5 43 32 5 (set (reg:SI 86 [ <retval> ])
+        (const_int 0 [0])) "digest-openssl.c":149:9 -1
+     (nil))
+(debug_insn 32 5 33 5 (var_location:DI ctx (clobber (const_int 0 [0]))) "digest-openssl.c":155:9 -1
+     (nil))
+(debug_insn 33 32 34 5 (var_location:DI m (clobber (const_int 0 [0]))) "digest-openssl.c":155:9 -1
+     (nil))
+(debug_insn 34 33 37 5 (var_location:DI mlen (clobber (const_int 0 [0]))) "digest-openssl.c":155:9 -1
+     (nil))
+(code_label 37 34 40 7 55 (nil) [1 uses])
+(note 40 37 38 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 38 40 39 7 (set (reg/i:SI 0 ax)
+        (reg:SI 86 [ <retval> ])) "digest-openssl.c":156:1 -1
+     (nil))
+(insn 39 38 0 7 (use (reg/i:SI 0 ax)) "digest-openssl.c":156:1 -1
+     (nil))
+
+;; Function ssh_digest_final (ssh_digest_final, funcdef_no=379, decl_uid=15662, cgraph_uid=380, symbol_order=380)
+
+Partition 0: size 4 align 4
+	l
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+Edge 8->10 redirected to 13
+Predictions for insn 97 bb 12
+  first match heuristics: 99.96%  exec 1073741824 (estimated locally) hit 2147483640 (estimated locally) (200.0%)
+  combined heuristics: 99.96%  exec 1073741824 (estimated locally) hit 2147483640 (estimated locally) (200.0%)
+  noreturn call heuristics: 99.96%  exec 1073741824 (estimated locally) hit 2147483640 (estimated locally) (200.0%)
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Redirecting jump 22 from 12 to 13.
+Redirecting jump 104 from 12 to 13.
+Merging block 12 into block 11...
+Merged blocks 11 and 12.
+Merged 11 and 12 without moving.
+Removing jump 92.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 10 NOTE_INSN_DELETED)
+(note 10 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 10 3 2 (set (reg/v/f:DI 95 [ ctx ])
+        (reg:DI 5 di [ ctx ])) "digest-openssl.c":160:1 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v/f:DI 96 [ d ])
+        (reg:DI 4 si [ d ])) "digest-openssl.c":160:1 -1
+     (nil))
+(insn 4 3 5 2 (set (reg/v:DI 97 [ dlen ])
+        (reg:DI 1 dx [ dlen ])) "digest-openssl.c":160:1 -1
+     (nil))
+(note 5 4 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 5 7 2 (set (reg/f:DI 98)
+        (const_int 40 [0x28])) "digest-openssl.c":160:1 -1
+     (nil))
+(insn 7 6 12 2 (parallel [
+            (set (mem/v/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                        (const_int -8 [0xfffffffffffffff8])) [9 D.15906+0 S8 A64])
+                (unspec:DI [
+                        (mem/v/f:DI (reg/f:DI 98) [0 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_SET))
+            (set (scratch:DI)
+                (const_int 0 [0]))
+            (clobber (reg:CC 17 flags))
+        ]) "digest-openssl.c":160:1 -1
+     (nil))
+(debug_insn 12 7 13 2 (debug_marker) "digest-openssl.c":161:2 -1
+     (nil))
+(insn 13 12 14 2 (set (reg:SI 82 [ _1 ])
+        (mem:SI (reg/v/f:DI 95 [ ctx ]) [1 ctx_15(D)->alg+0 S4 A64])) "digest-openssl.c":161:36 -1
+     (nil))
+(debug_insn 14 13 15 2 (var_location:SI alg (reg:SI 82 [ _1 ])) "digest-openssl.c":161:36 -1
+     (nil))
+(debug_insn 15 14 16 2 (debug_marker:BLK) "digest-openssl.c":68:1 -1
+     (nil))
+(debug_insn 16 15 19 2 (debug_marker) "digest-openssl.c":70:2 -1
+     (nil))
+(insn 19 16 20 2 (set (reg:CC 17 flags)
+        (compare:CC (reg:SI 82 [ _1 ])
+            (const_int 4 [0x4]))) "digest-openssl.c":70:5 -1
+     (nil))
+(jump_insn 20 19 27 2 (set (pc)
+        (if_then_else (leu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 24)
+            (pc))) "digest-openssl.c":70:5 -1
+     (int_list:REG_BR_PROB 887125500 (nil))
+ -> 24)
+(code_label 27 20 21 4 62 (nil) [4 uses])
+(note 21 27 8 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 8 21 22 4 (set (reg:SI 94 [ <retval> ])
+        (const_int -10 [0xfffffffffffffff6])) "digest-openssl.c":165:10 -1
+     (nil))
+(jump_insn 22 8 23 4 (set (pc)
+        (label_ref:DI 94)) 737 {jump}
+     (nil)
+ -> 94)
+(barrier 23 22 24)
+(code_label 24 23 25 5 60 (nil) [1 uses])
+(note 25 24 26 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 26 25 28 5 (debug_marker) "digest-openssl.c":72:2 -1
+     (nil))
+(insn 28 26 29 5 (set (reg/f:DI 99)
+        (symbol_ref:DI ("digests") [flags 0x2]  <var_decl 0x7fe9893b2b40 digests>)) "digest-openssl.c":72:18 -1
+     (nil))
+(insn 29 28 30 5 (set (reg:DI 100)
+        (sign_extend:DI (reg:SI 82 [ _1 ]))) "digest-openssl.c":72:18 -1
+     (nil))
+(insn 30 29 31 5 (parallel [
+            (set (reg:DI 101)
+                (ashift:DI (reg:DI 100)
+                    (const_int 5 [0x5])))
+            (clobber (reg:CC 17 flags))
+        ]) "digest-openssl.c":72:18 -1
+     (nil))
+(insn 31 30 32 5 (parallel [
+            (set (reg/f:DI 102)
+                (plus:DI (reg/f:DI 99)
+                    (reg:DI 101)))
+            (clobber (reg:CC 17 flags))
+        ]) "digest-openssl.c":72:18 -1
+     (nil))
+(insn 32 31 33 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 82 [ _1 ])
+            (mem/u:SI (reg/f:DI 102) [1 digests[_1].id+0 S4 A256]))) "digest-openssl.c":72:5 -1
+     (nil))
+(jump_insn 33 32 34 5 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 27)
+            (pc))) "digest-openssl.c":72:5 -1
+     (int_list:REG_BR_PROB 311385132 (nil))
+ -> 27)
+(note 34 33 35 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 35 34 36 6 (debug_marker) "digest-openssl.c":74:2 -1
+     (nil))
+(insn 36 35 37 6 (set (reg/f:DI 103)
+        (symbol_ref:DI ("digests") [flags 0x2]  <var_decl 0x7fe9893b2b40 digests>)) "digest-openssl.c":74:18 -1
+     (nil))
+(insn 37 36 38 6 (set (reg:DI 104)
+        (sign_extend:DI (reg:SI 82 [ _1 ]))) "digest-openssl.c":74:18 -1
+     (nil))
+(insn 38 37 39 6 (parallel [
+            (set (reg:DI 105)
+                (ashift:DI (reg:DI 104)
+                    (const_int 5 [0x5])))
+            (clobber (reg:CC 17 flags))
+        ]) "digest-openssl.c":74:18 -1
+     (nil))
+(insn 39 38 40 6 (parallel [
+            (set (reg:DI 106)
+                (plus:DI (reg/f:DI 103)
+                    (reg:DI 105)))
+            (clobber (reg:CC 17 flags))
+        ]) "digest-openssl.c":74:18 -1
+     (nil))
+(insn 40 39 41 6 (parallel [
+            (set (reg/f:DI 107)
+                (plus:DI (reg:DI 106)
+                    (const_int 24 [0x18])))
+            (clobber (reg:CC 17 flags))
+        ]) "digest-openssl.c":74:18 -1
+     (nil))
+(insn 41 40 42 6 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/u/f:DI (reg/f:DI 107) [5 digests[_1].mdfunc+0 S8 A64])
+            (const_int 0 [0]))) "digest-openssl.c":74:5 -1
+     (nil))
+(jump_insn 42 41 43 6 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 27)
+            (pc))) "digest-openssl.c":74:5 -1
+     (int_list:REG_BR_PROB 88798452 (nil))
+ -> 27)
+(note 43 42 44 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 44 43 45 7 (debug_marker) "digest-openssl.c":76:2 -1
+     (nil))
+(debug_insn 45 44 46 7 (var_location:DI D#5 (plus:DI (ashift:DI (sign_extend:DI (reg:SI 82 [ _1 ]))
+            (const_int 5 [0x5]))
+        (symbol_ref:DI ("digests") [flags 0x2]  <var_decl 0x7fe9893b2b40 digests>))) "digest-openssl.c":76:9 -1
+     (nil))
+(debug_insn 46 45 47 7 (var_location:SI alg (clobber (const_int 0 [0]))) "digest-openssl.c":161:36 -1
+     (nil))
+(debug_insn 47 46 48 7 (var_location:DI digest (debug_expr:DI D#5)) "digest-openssl.c":161:36 -1
+     (nil))
+(debug_insn 48 47 49 7 (debug_marker) "digest-openssl.c":162:2 -1
+     (nil))
+(insn 49 48 50 7 (set (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [1 l+0 S4 A32])
+        (subreg:SI (reg/v:DI 97 [ dlen ]) 0)) "digest-openssl.c":162:8 -1
+     (nil))
+(debug_insn 50 49 53 7 (debug_marker) "digest-openssl.c":164:2 -1
+     (nil))
+(insn 53 50 54 7 (set (reg:DI 108)
+        (const_int 4294967295 [0xffffffff])) "digest-openssl.c":164:5 -1
+     (nil))
+(insn 54 53 55 7 (set (reg:CC 17 flags)
+        (compare:CC (reg/v:DI 97 [ dlen ])
+            (reg:DI 108))) "digest-openssl.c":164:5 -1
+     (nil))
+(jump_insn 55 54 56 7 (set (pc)
+        (if_then_else (gtu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 27)
+            (pc))) "digest-openssl.c":164:5 -1
+     (int_list:REG_BR_PROB 4 (nil))
+ -> 27)
+(note 56 55 57 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 57 56 58 8 (debug_marker) "digest-openssl.c":166:2 -1
+     (nil))
+(insn 58 57 59 8 (set (reg/f:DI 109)
+        (symbol_ref:DI ("digests") [flags 0x2]  <var_decl 0x7fe9893b2b40 digests>)) "digest-openssl.c":166:19 -1
+     (nil))
+(insn 59 58 60 8 (set (reg:DI 110)
+        (sign_extend:DI (reg:SI 82 [ _1 ]))) "digest-openssl.c":166:19 -1
+     (nil))
+(insn 60 59 61 8 (parallel [
+            (set (reg:DI 111)
+                (ashift:DI (reg:DI 110)
+                    (const_int 5 [0x5])))
+            (clobber (reg:CC 17 flags))
+        ]) "digest-openssl.c":166:19 -1
+     (nil))
+(insn 61 60 62 8 (parallel [
+            (set (reg:DI 112)
+                (plus:DI (reg/f:DI 109)
+                    (reg:DI 111)))
+            (clobber (reg:CC 17 flags))
+        ]) "digest-openssl.c":166:19 -1
+     (nil))
+(insn 62 61 63 8 (parallel [
+            (set (reg/f:DI 113)
+                (plus:DI (reg:DI 112)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "digest-openssl.c":166:19 -1
+     (nil))
+(insn 63 62 64 8 (set (reg:DI 84 [ _6 ])
+        (mem/u:DI (reg/f:DI 113) [0 MEM <const struct ssh_digest[6]> [(const struct ssh_digest *)&digests][_1].digest_len+0 S8 A128])) "digest-openssl.c":166:19 -1
+     (nil))
+(insn 64 63 65 8 (set (reg:CC 17 flags)
+        (compare:CC (reg:DI 84 [ _6 ])
+            (reg/v:DI 97 [ dlen ]))) "digest-openssl.c":166:5 -1
+     (nil))
+(jump_insn 65 64 66 8 (set (pc)
+        (if_then_else (gtu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 27)
+            (pc))) "digest-openssl.c":166:5 -1
+     (int_list:REG_BR_PROB 22441212 (nil))
+ -> 27)
+(note 66 65 67 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 67 66 68 9 (debug_marker) "digest-openssl.c":168:2 -1
+     (nil))
+(insn 68 67 69 9 (parallel [
+            (set (reg:DI 114)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "digest-openssl.c":168:6 -1
+     (nil))
+(insn 69 68 70 9 (set (reg:DI 115)
+        (mem/f:DI (plus:DI (reg/v/f:DI 95 [ ctx ])
+                (const_int 8 [0x8])) [7 ctx_15(D)->mdctx+0 S8 A64])) "digest-openssl.c":168:6 -1
+     (nil))
+(insn 70 69 71 9 (set (reg:DI 1 dx)
+        (reg:DI 114)) "digest-openssl.c":168:6 -1
+     (nil))
+(insn 71 70 72 9 (set (reg:DI 4 si)
+        (reg/v/f:DI 96 [ d ])) "digest-openssl.c":168:6 -1
+     (nil))
+(insn 72 71 73 9 (set (reg:DI 5 di)
+        (reg:DI 115)) "digest-openssl.c":168:6 -1
+     (nil))
+(call_insn 73 72 74 9 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("EVP_DigestFinal_ex") [flags 0x41]  <function_decl 0x7fe9892bf300 EVP_DigestFinal_ex>) [0 EVP_DigestFinal_ex S1 A8])
+            (const_int 0 [0]))) "digest-openssl.c":168:6 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("EVP_DigestFinal_ex") [flags 0x41]  <function_decl 0x7fe9892bf300 EVP_DigestFinal_ex>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(insn 74 73 75 9 (set (reg:SI 86 [ _8 ])
+        (reg:SI 0 ax)) "digest-openssl.c":168:6 -1
+     (nil))
+(insn 75 74 76 9 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 86 [ _8 ])
+            (const_int 1 [0x1]))) "digest-openssl.c":168:5 -1
+     (nil))
+(jump_insn 76 75 77 9 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 107)
+            (pc))) "digest-openssl.c":168:5 736 {*jcc}
+     (int_list:REG_BR_PROB 21474844 (nil))
+ -> 107)
+(note 77 76 78 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 78 77 79 10 (debug_marker) "digest-openssl.c":170:2 -1
+     (nil))
+(insn 79 78 80 10 (set (reg:DI 116)
+        (zero_extend:DI (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -12 [0xfffffffffffffff4])) [1 l+0 S4 A32]))) "digest-openssl.c":170:8 -1
+     (nil))
+(insn 80 79 81 10 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:DI 116)
+            (reg:DI 84 [ _6 ]))) "digest-openssl.c":170:5 -1
+     (nil))
+(insn 81 80 82 10 (set (reg:QI 118)
+        (ne:QI (reg:CCZ 17 flags)
+            (const_int 0 [0]))) "digest-openssl.c":170:5 -1
+     (nil))
+(insn 82 81 83 10 (set (reg:SI 117)
+        (zero_extend:SI (reg:QI 118))) "digest-openssl.c":170:5 -1
+     (nil))
+(insn 83 82 84 10 (set (reg:SI 5 di)
+        (reg:SI 117)) "digest-openssl.c":170:5 -1
+     (nil))
+(call_insn/u 84 83 85 10 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__negvsi2") [flags 0x41]  <function_decl 0x7fe98905c400 __negvsi2>) [0  S1 A8])
+            (const_int 0 [0]))) "digest-openssl.c":170:5 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__negvsi2") [flags 0x41]  <function_decl 0x7fe98905c400 __negvsi2>)
+        (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+            (nil)))
+    (expr_list (use (reg:SI 5 di))
+        (nil)))
+(insn 85 84 86 10 (set (reg:SI 119)
+        (reg:SI 0 ax)) "digest-openssl.c":170:5 -1
+     (nil))
+(insn 86 85 104 10 (set (reg:SI 94 [ <retval> ])
+        (reg:SI 119)) "digest-openssl.c":170:5 -1
+     (nil))
+(jump_insn 104 86 105 10 (set (pc)
+        (label_ref:DI 94)) 737 {jump}
+     (nil)
+ -> 94)
+(barrier 105 104 107)
+(code_label 107 105 106 11 64 (nil) [1 uses])
+(note 106 107 9 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 9 106 89 11 (set (reg:SI 94 [ <retval> ])
+        (const_int -22 [0xffffffffffffffea])) "digest-openssl.c":169:10 -1
+     (nil))
+(debug_insn 89 9 90 11 (var_location:SI alg (clobber (const_int 0 [0]))) "digest-openssl.c":161:36 -1
+     (nil))
+(debug_insn 90 89 91 11 (var_location:DI digest (clobber (const_int 0 [0]))) "digest-openssl.c":161:36 -1
+     (nil))
+(debug_insn 91 90 94 11 (var_location:SI l (clobber (const_int 0 [0]))) "digest-openssl.c":162:8 -1
+     (nil))
+(code_label 94 91 103 13 59 (nil) [2 uses])
+(note 103 94 95 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 95 103 96 13 (set (reg/f:DI 121)
+        (const_int 40 [0x28])) "digest-openssl.c":173:1 -1
+     (nil))
+(insn 96 95 97 13 (parallel [
+            (set (reg:CCZ 17 flags)
+                (unspec:CCZ [
+                        (mem/v/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                                (const_int -8 [0xfffffffffffffff8])) [9 D.15906+0 S8 A64])
+                        (mem/v/f:DI (reg/f:DI 121) [0 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_TEST))
+            (clobber (scratch:DI))
+        ]) "digest-openssl.c":173:1 -1
+     (nil))
+(jump_insn 97 96 108 13 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 100)
+            (pc))) "digest-openssl.c":173:1 -1
+     (int_list:REG_BR_PROB 1073312332 (nil))
+ -> 100)
+(note 108 97 98 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(call_insn 98 108 99 14 (call (mem:QI (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7fe98905c500 __stack_chk_fail>) [0 __stack_chk_fail S1 A8])
+        (const_int 0 [0])) "digest-openssl.c":173:1 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7fe98905c500 __stack_chk_fail>)
+        (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+            (expr_list:REG_NORETURN (const_int 0 [0])
+                (expr_list:REG_EH_REGION (const_int 0 [0])
+                    (nil)))))
+    (nil))
+(barrier 99 98 100)
+(code_label 100 99 109 15 63 (nil) [1 uses])
+(note 109 100 101 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(insn 101 109 102 15 (set (reg/i:SI 0 ax)
+        (reg:SI 94 [ <retval> ])) "digest-openssl.c":173:1 -1
+     (nil))
+(insn 102 101 0 15 (use (reg/i:SI 0 ax)) "digest-openssl.c":173:1 -1
+     (nil))
+
+;; Function ssh_digest_free (ssh_digest_free, funcdef_no=380, decl_uid=15664, cgraph_uid=381, symbol_order=381)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Edge 2->5 redirected to 6
+deleting block 5
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (reg/v/f:DI 83 [ ctx ])
+        (reg:DI 5 di [ ctx ])) "digest-openssl.c":177:1 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 6 3 7 2 (debug_marker) "digest-openssl.c":178:2 -1
+     (nil))
+(insn 7 6 8 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 83 [ ctx ])
+            (const_int 0 [0]))) "digest-openssl.c":178:5 -1
+     (nil))
+(jump_insn 8 7 9 2 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 24)
+            (pc))) "digest-openssl.c":178:5 736 {*jcc}
+     (int_list:REG_BR_PROB 332323100 (nil))
+ -> 24)
+(note 9 8 10 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 10 9 11 4 (var_location:DI ctx (reg/v/f:DI 83 [ ctx ])) -1
+     (nil))
+(debug_insn 11 10 12 4 (debug_marker:BLK) "digest-openssl.c":176:1 -1
+     (nil))
+(debug_insn 12 11 13 4 (debug_marker) "digest-openssl.c":180:2 -1
+     (nil))
+(insn 13 12 14 4 (set (reg:DI 84)
+        (mem/f:DI (plus:DI (reg/v/f:DI 83 [ ctx ])
+                (const_int 8 [0x8])) [7 ctx_1(D)->mdctx+0 S8 A64])) "digest-openssl.c":180:2 -1
+     (nil))
+(insn 14 13 15 4 (set (reg:DI 5 di)
+        (reg:DI 84)) "digest-openssl.c":180:2 -1
+     (nil))
+(call_insn 15 14 16 4 (call (mem:QI (symbol_ref:DI ("EVP_MD_CTX_free") [flags 0x41]  <function_decl 0x7fe9892b7c00 EVP_MD_CTX_free>) [0 EVP_MD_CTX_free S1 A8])
+        (const_int 0 [0])) "digest-openssl.c":180:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("EVP_MD_CTX_free") [flags 0x41]  <function_decl 0x7fe9892b7c00 EVP_MD_CTX_free>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(debug_insn 16 15 17 4 (debug_marker) "digest-openssl.c":181:2 -1
+     (nil))
+(insn 17 16 18 4 (set (reg:DI 4 si)
+        (const_int 16 [0x10])) "digest-openssl.c":181:2 -1
+     (nil))
+(insn 18 17 19 4 (set (reg:DI 5 di)
+        (reg/v/f:DI 83 [ ctx ])) "digest-openssl.c":181:2 -1
+     (nil))
+(call_insn/j 19 18 20 4 (call (mem:QI (symbol_ref:DI ("freezero") [flags 0x41]  <function_decl 0x7fe9897f3b00 freezero>) [0 freezero S1 A8])
+        (const_int 0 [0])) "digest-openssl.c":181:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("freezero") [flags 0x41]  <function_decl 0x7fe9897f3b00 freezero>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(barrier 20 19 24)
+(code_label 24 20 25 6 67 (nil) [1 uses])
+(note 25 24 0 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+
+;; Function ssh_digest_memory (ssh_digest_memory, funcdef_no=381, decl_uid=15644, cgraph_uid=382, symbol_order=382)
+
+Partition 0: size 4 align 4
+	mdlen
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+Edge 2->9 redirected to 12
+Edge 3->9 redirected to 13
+Edge 4->9 redirected to 14
+Edge 5->9 redirected to 15
+Edge 6->9 redirected to 16
+Edge 7->9 redirected to 17
+Predictions for insn 94 bb 11
+  first match heuristics: 99.96%  exec 1073741825 (estimated locally) hit 2147483642 (estimated locally) (200.0%)
+  combined heuristics: 99.96%  exec 1073741825 (estimated locally) hit 2147483642 (estimated locally) (200.0%)
+  noreturn call heuristics: 99.96%  exec 1073741825 (estimated locally) hit 2147483642 (estimated locally) (200.0%)
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Redirecting jump 101 from 16 to 17.
+Redirecting jump 105 from 16 to 17.
+Redirecting jump 109 from 16 to 17.
+Redirecting jump 113 from 16 to 17.
+Redirecting jump 117 from 16 to 17.
+Redirecting jump 121 from 16 to 17.
+Merging block 16 into block 15...
+Merged blocks 15 and 16.
+Merged 15 and 16 without moving.
+Removing jump 89.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 17 NOTE_INSN_DELETED)
+(note 17 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 17 3 2 (set (reg/v:SI 90 [ alg ])
+        (reg:SI 5 di [ alg ])) "digest-openssl.c":186:1 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v/f:DI 91 [ m ])
+        (reg:DI 4 si [ m ])) "digest-openssl.c":186:1 -1
+     (nil))
+(insn 4 3 5 2 (set (reg/v:DI 92 [ mlen ])
+        (reg:DI 1 dx [ mlen ])) "digest-openssl.c":186:1 -1
+     (nil))
+(insn 5 4 6 2 (set (reg/v/f:DI 93 [ d ])
+        (reg:DI 2 cx [ d ])) "digest-openssl.c":186:1 -1
+     (nil))
+(insn 6 5 7 2 (set (reg/v:DI 94 [ dlen ])
+        (reg:DI 36 r8 [ dlen ])) "digest-openssl.c":186:1 -1
+     (nil))
+(note 7 6 8 2 NOTE_INSN_FUNCTION_BEG)
+(insn 8 7 9 2 (set (reg/f:DI 95)
+        (const_int 40 [0x28])) "digest-openssl.c":186:1 -1
+     (nil))
+(insn 9 8 19 2 (parallel [
+            (set (mem/v/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                        (const_int -8 [0xfffffffffffffff8])) [9 D.15919+0 S8 A64])
+                (unspec:DI [
+                        (mem/v/f:DI (reg/f:DI 95) [0 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_SET))
+            (set (scratch:DI)
+                (const_int 0 [0]))
+            (clobber (reg:CC 17 flags))
+        ]) "digest-openssl.c":186:1 -1
+     (nil))
+(debug_insn 19 9 20 2 (debug_marker) "digest-openssl.c":187:2 -1
+     (nil))
+(debug_insn 20 19 21 2 (var_location:SI alg (reg/v:SI 90 [ alg ])) "digest-openssl.c":187:2 -1
+     (nil))
+(debug_insn 21 20 22 2 (debug_marker:BLK) "digest-openssl.c":68:1 -1
+     (nil))
+(debug_insn 22 21 25 2 (debug_marker) "digest-openssl.c":70:2 -1
+     (nil))
+(insn 25 22 26 2 (set (reg:CC 17 flags)
+        (compare:CC (reg/v:SI 90 [ alg ])
+            (const_int 4 [0x4]))) "digest-openssl.c":70:5 -1
+     (nil))
+(jump_insn 26 25 27 2 (set (pc)
+        (if_then_else (gtu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 104)
+            (pc))) "digest-openssl.c":70:5 736 {*jcc}
+     (int_list:REG_BR_PROB 186616332 (nil))
+ -> 104)
+(note 27 26 28 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 28 27 29 4 (debug_marker) "digest-openssl.c":72:2 -1
+     (nil))
+(insn 29 28 30 4 (set (reg/f:DI 96)
+        (symbol_ref:DI ("digests") [flags 0x2]  <var_decl 0x7fe9893b2b40 digests>)) "digest-openssl.c":72:18 -1
+     (nil))
+(insn 30 29 31 4 (set (reg:DI 97)
+        (sign_extend:DI (reg/v:SI 90 [ alg ]))) "digest-openssl.c":72:18 -1
+     (nil))
+(insn 31 30 32 4 (parallel [
+            (set (reg:DI 98)
+                (ashift:DI (reg:DI 97)
+                    (const_int 5 [0x5])))
+            (clobber (reg:CC 17 flags))
+        ]) "digest-openssl.c":72:18 -1
+     (nil))
+(insn 32 31 33 4 (parallel [
+            (set (reg/f:DI 99)
+                (plus:DI (reg/f:DI 96)
+                    (reg:DI 98)))
+            (clobber (reg:CC 17 flags))
+        ]) "digest-openssl.c":72:18 -1
+     (nil))
+(insn 33 32 34 4 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 90 [ alg ])
+            (mem/u:SI (reg/f:DI 99) [1 digests[alg_9(D)].id+0 S4 A256]))) "digest-openssl.c":72:5 -1
+     (nil))
+(jump_insn 34 33 35 4 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 108)
+            (pc))) "digest-openssl.c":72:5 736 {*jcc}
+     (int_list:REG_BR_PROB 311385132 (nil))
+ -> 108)
+(note 35 34 36 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 36 35 37 5 (debug_marker) "digest-openssl.c":74:2 -1
+     (nil))
+(insn 37 36 38 5 (set (reg/f:DI 100)
+        (symbol_ref:DI ("digests") [flags 0x2]  <var_decl 0x7fe9893b2b40 digests>)) "digest-openssl.c":74:18 -1
+     (nil))
+(insn 38 37 39 5 (set (reg:DI 101)
+        (sign_extend:DI (reg/v:SI 90 [ alg ]))) "digest-openssl.c":74:18 -1
+     (nil))
+(insn 39 38 40 5 (parallel [
+            (set (reg:DI 102)
+                (ashift:DI (reg:DI 101)
+                    (const_int 5 [0x5])))
+            (clobber (reg:CC 17 flags))
+        ]) "digest-openssl.c":74:18 -1
+     (nil))
+(insn 40 39 41 5 (parallel [
+            (set (reg:DI 103)
+                (plus:DI (reg/f:DI 100)
+                    (reg:DI 102)))
+            (clobber (reg:CC 17 flags))
+        ]) "digest-openssl.c":74:18 -1
+     (nil))
+(insn 41 40 42 5 (parallel [
+            (set (reg/f:DI 104)
+                (plus:DI (reg:DI 103)
+                    (const_int 24 [0x18])))
+            (clobber (reg:CC 17 flags))
+        ]) "digest-openssl.c":74:18 -1
+     (nil))
+(insn 42 41 43 5 (set (reg/f:DI 88 [ _21 ])
+        (mem/u/f:DI (reg/f:DI 104) [5 digests[alg_9(D)].mdfunc+0 S8 A64])) "digest-openssl.c":74:18 -1
+     (nil))
+(insn 43 42 44 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/f:DI 88 [ _21 ])
+            (const_int 0 [0]))) "digest-openssl.c":74:5 -1
+     (nil))
+(jump_insn 44 43 45 5 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 112)
+            (pc))) "digest-openssl.c":74:5 736 {*jcc}
+     (int_list:REG_BR_PROB 88798452 (nil))
+ -> 112)
+(note 45 44 46 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 46 45 47 6 (debug_marker) "digest-openssl.c":76:2 -1
+     (nil))
+(debug_insn 47 46 48 6 (var_location:DI D#6 (plus:DI (ashift:DI (sign_extend:DI (reg/v:SI 90 [ alg ]))
+            (const_int 5 [0x5]))
+        (symbol_ref:DI ("digests") [flags 0x2]  <var_decl 0x7fe9893b2b40 digests>))) "digest-openssl.c":76:9 -1
+     (nil))
+(debug_insn 48 47 49 6 (var_location:SI alg (clobber (const_int 0 [0]))) "digest-openssl.c":187:36 -1
+     (nil))
+(debug_insn 49 48 50 6 (var_location:DI digest (debug_expr:DI D#6)) "digest-openssl.c":187:36 -1
+     (nil))
+(debug_insn 50 49 51 6 (debug_marker) "digest-openssl.c":188:2 -1
+     (nil))
+(debug_insn 51 50 52 6 (debug_marker) "digest-openssl.c":190:2 -1
+     (nil))
+(debug_insn 52 51 55 6 (debug_marker) "digest-openssl.c":192:2 -1
+     (nil))
+(insn 55 52 56 6 (set (reg:DI 105)
+        (const_int 4294967295 [0xffffffff])) "digest-openssl.c":192:5 -1
+     (nil))
+(insn 56 55 57 6 (set (reg:CC 17 flags)
+        (compare:CC (reg/v:DI 94 [ dlen ])
+            (reg:DI 105))) "digest-openssl.c":192:5 -1
+     (nil))
+(jump_insn 57 56 58 6 (set (pc)
+        (if_then_else (gtu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 116)
+            (pc))) "digest-openssl.c":192:5 736 {*jcc}
+     (int_list:REG_BR_PROB 11166916 (nil))
+ -> 116)
+(note 58 57 59 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 59 58 60 7 (debug_marker) "digest-openssl.c":194:2 -1
+     (nil))
+(insn 60 59 61 7 (set (reg/f:DI 106)
+        (symbol_ref:DI ("digests") [flags 0x2]  <var_decl 0x7fe9893b2b40 digests>)) "digest-openssl.c":194:19 -1
+     (nil))
+(insn 61 60 62 7 (set (reg:DI 107)
+        (sign_extend:DI (reg/v:SI 90 [ alg ]))) "digest-openssl.c":194:19 -1
+     (nil))
+(insn 62 61 63 7 (parallel [
+            (set (reg:DI 108)
+                (ashift:DI (reg:DI 107)
+                    (const_int 5 [0x5])))
+            (clobber (reg:CC 17 flags))
+        ]) "digest-openssl.c":194:19 -1
+     (nil))
+(insn 63 62 64 7 (parallel [
+            (set (reg:DI 109)
+                (plus:DI (reg/f:DI 106)
+                    (reg:DI 108)))
+            (clobber (reg:CC 17 flags))
+        ]) "digest-openssl.c":194:19 -1
+     (nil))
+(insn 64 63 65 7 (parallel [
+            (set (reg/f:DI 110)
+                (plus:DI (reg:DI 109)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "digest-openssl.c":194:19 -1
+     (nil))
+(insn 65 64 66 7 (set (reg:CC 17 flags)
+        (compare:CC (mem/u:DI (reg/f:DI 110) [0 MEM <const struct ssh_digest[6]> [(const struct ssh_digest *)&digests][alg_9(D)].digest_len+0 S8 A128])
+            (reg/v:DI 94 [ dlen ]))) "digest-openssl.c":194:5 -1
+     (nil))
+(jump_insn 66 65 67 7 (set (pc)
+        (if_then_else (gtu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 120)
+            (pc))) "digest-openssl.c":194:5 736 {*jcc}
+     (int_list:REG_BR_PROB 11166916 (nil))
+ -> 120)
+(note 67 66 68 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 68 67 69 8 (debug_marker) "digest-openssl.c":196:2 -1
+     (nil))
+(insn 69 68 70 8 (set (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [1 mdlen+0 S4 A32])
+        (subreg:SI (reg/v:DI 94 [ dlen ]) 0)) "digest-openssl.c":196:8 -1
+     (nil))
+(debug_insn 70 69 71 8 (debug_marker) "digest-openssl.c":197:2 -1
+     (nil))
+(call_insn 71 70 72 8 (set (reg:DI 0 ax)
+        (call (mem:QI (reg/f:DI 88 [ _21 ]) [0 *_21 S1 A8])
+            (const_int 0 [0]))) "digest-openssl.c":197:7 -1
+     (expr_list:REG_CALL_DECL (nil)
+        (nil))
+    (nil))
+(insn 72 71 73 8 (set (reg/f:DI 84 [ _4 ])
+        (reg:DI 0 ax)) "digest-openssl.c":197:7 -1
+     (nil))
+(insn 73 72 74 8 (parallel [
+            (set (reg:DI 111)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "digest-openssl.c":197:7 -1
+     (nil))
+(insn 74 73 75 8 (set (reg:DI 37 r9)
+        (const_int 0 [0])) "digest-openssl.c":197:7 -1
+     (nil))
+(insn 75 74 76 8 (set (reg:DI 36 r8)
+        (reg/f:DI 84 [ _4 ])) "digest-openssl.c":197:7 -1
+     (nil))
+(insn 76 75 77 8 (set (reg:DI 2 cx)
+        (reg:DI 111)) "digest-openssl.c":197:7 -1
+     (nil))
+(insn 77 76 78 8 (set (reg:DI 1 dx)
+        (reg/v/f:DI 93 [ d ])) "digest-openssl.c":197:7 -1
+     (nil))
+(insn 78 77 79 8 (set (reg:DI 4 si)
+        (reg/v:DI 92 [ mlen ])) "digest-openssl.c":197:7 -1
+     (nil))
+(insn 79 78 80 8 (set (reg:DI 5 di)
+        (reg/v/f:DI 91 [ m ])) "digest-openssl.c":197:7 -1
+     (nil))
+(call_insn 80 79 81 8 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("EVP_Digest") [flags 0x41]  <function_decl 0x7fe9892bf400 EVP_Digest>) [0 EVP_Digest S1 A8])
+            (const_int 0 [0]))) "digest-openssl.c":197:7 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("EVP_Digest") [flags 0x41]  <function_decl 0x7fe9892bf400 EVP_Digest>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (expr_list:DI (use (reg:DI 2 cx))
+                    (expr_list:DI (use (reg:DI 36 r8))
+                        (expr_list:DI (use (reg:DI 37 r9))
+                            (nil))))))))
+(insn 81 80 82 8 (set (reg:SI 85 [ _5 ])
+        (reg:SI 0 ax)) "digest-openssl.c":197:7 -1
+     (nil))
+(insn 82 81 83 8 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 85 [ _5 ])
+            (const_int 0 [0]))) "digest-openssl.c":197:5 -1
+     (nil))
+(jump_insn 83 82 84 8 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 124)
+            (pc))) "digest-openssl.c":197:5 736 {*jcc}
+     (int_list:REG_BR_PROB 1062574916 (nil))
+ -> 124)
+(note 84 83 16 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 16 84 101 9 (set (reg:SI 89 [ <retval> ])
+        (const_int -22 [0xffffffffffffffea])) "digest-openssl.c":198:10 -1
+     (nil))
+(jump_insn 101 16 102 9 (set (pc)
+        (label_ref:DI 91)) 737 {jump}
+     (nil)
+ -> 91)
+(barrier 102 101 104)
+(code_label 104 102 103 10 75 (nil) [1 uses])
+(note 103 104 13 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 13 103 105 10 (set (reg:SI 89 [ <retval> ])
+        (const_int -10 [0xfffffffffffffff6])) "digest-openssl.c":191:10 -1
+     (nil))
+(jump_insn 105 13 106 10 (set (pc)
+        (label_ref:DI 91)) 737 {jump}
+     (nil)
+ -> 91)
+(barrier 106 105 108)
+(code_label 108 106 107 11 76 (nil) [1 uses])
+(note 107 108 15 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 15 107 109 11 (set (reg:SI 89 [ <retval> ])
+        (const_int -10 [0xfffffffffffffff6])) "digest-openssl.c":191:10 -1
+     (nil))
+(jump_insn 109 15 110 11 (set (pc)
+        (label_ref:DI 91)) 737 {jump}
+     (nil)
+ -> 91)
+(barrier 110 109 112)
+(code_label 112 110 111 12 77 (nil) [1 uses])
+(note 111 112 14 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 14 111 113 12 (set (reg:SI 89 [ <retval> ])
+        (const_int -10 [0xfffffffffffffff6])) "digest-openssl.c":191:10 -1
+     (nil))
+(jump_insn 113 14 114 12 (set (pc)
+        (label_ref:DI 91)) 737 {jump}
+     (nil)
+ -> 91)
+(barrier 114 113 116)
+(code_label 116 114 115 13 78 (nil) [1 uses])
+(note 115 116 10 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 10 115 117 13 (set (reg:SI 89 [ <retval> ])
+        (const_int -10 [0xfffffffffffffff6])) "digest-openssl.c":191:10 -1
+     (nil))
+(jump_insn 117 10 118 13 (set (pc)
+        (label_ref:DI 91)) 737 {jump}
+     (nil)
+ -> 91)
+(barrier 118 117 120)
+(code_label 120 118 119 14 79 (nil) [1 uses])
+(note 119 120 11 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 11 119 121 14 (set (reg:SI 89 [ <retval> ])
+        (const_int -10 [0xfffffffffffffff6])) "digest-openssl.c":191:10 -1
+     (nil))
+(jump_insn 121 11 122 14 (set (pc)
+        (label_ref:DI 91)) 737 {jump}
+     (nil)
+ -> 91)
+(barrier 122 121 124)
+(code_label 124 122 123 15 80 (nil) [1 uses])
+(note 123 124 12 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(insn 12 123 87 15 (set (reg:SI 89 [ <retval> ])
+        (const_int 0 [0])) "digest-openssl.c":199:9 -1
+     (nil))
+(debug_insn 87 12 88 15 (var_location:SI alg (clobber (const_int 0 [0]))) "digest-openssl.c":187:36 -1
+     (nil))
+(debug_insn 88 87 91 15 (var_location:DI digest (clobber (const_int 0 [0]))) "digest-openssl.c":187:36 -1
+     (nil))
+(code_label 91 88 100 17 72 (nil) [6 uses])
+(note 100 91 92 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
+(insn 92 100 93 17 (set (reg/f:DI 113)
+        (const_int 40 [0x28])) "digest-openssl.c":200:1 -1
+     (nil))
+(insn 93 92 94 17 (parallel [
+            (set (reg:CCZ 17 flags)
+                (unspec:CCZ [
+                        (mem/v/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                                (const_int -8 [0xfffffffffffffff8])) [9 D.15919+0 S8 A64])
+                        (mem/v/f:DI (reg/f:DI 113) [0 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_TEST))
+            (clobber (scratch:DI))
+        ]) "digest-openssl.c":200:1 -1
+     (nil))
+(jump_insn 94 93 125 17 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 97)
+            (pc))) "digest-openssl.c":200:1 -1
+     (int_list:REG_BR_PROB 1073312332 (nil))
+ -> 97)
+(note 125 94 95 18 [bb 18] NOTE_INSN_BASIC_BLOCK)
+(call_insn 95 125 96 18 (call (mem:QI (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7fe98905c500 __stack_chk_fail>) [0 __stack_chk_fail S1 A8])
+        (const_int 0 [0])) "digest-openssl.c":200:1 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7fe98905c500 __stack_chk_fail>)
+        (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+            (expr_list:REG_NORETURN (const_int 0 [0])
+                (expr_list:REG_EH_REGION (const_int 0 [0])
+                    (nil)))))
+    (nil))
+(barrier 96 95 97)
+(code_label 97 96 126 19 74 (nil) [1 uses])
+(note 126 97 98 19 [bb 19] NOTE_INSN_BASIC_BLOCK)
+(insn 98 126 99 19 (set (reg/i:SI 0 ax)
+        (reg:SI 89 [ <retval> ])) "digest-openssl.c":200:1 -1
+     (nil))
+(insn 99 98 0 19 (use (reg/i:SI 0 ax)) "digest-openssl.c":200:1 -1
+     (nil))
+
+;; Function ssh_digest_buffer (ssh_digest_buffer, funcdef_no=382, decl_uid=15649, cgraph_uid=383, symbol_order=383)
+
+
+;; Generating RTL for gimple basic block 2
+deleting block 4
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 7 NOTE_INSN_DELETED)
+(note 7 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 7 3 2 (set (reg/v:SI 85 [ alg ])
+        (reg:SI 5 di [ alg ])) "digest-openssl.c":204:1 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v/f:DI 86 [ b ])
+        (reg:DI 4 si [ b ])) "digest-openssl.c":204:1 -1
+     (nil))
+(insn 4 3 5 2 (set (reg/v/f:DI 87 [ d ])
+        (reg:DI 1 dx [ d ])) "digest-openssl.c":204:1 -1
+     (nil))
+(insn 5 4 6 2 (set (reg/v:DI 88 [ dlen ])
+        (reg:DI 2 cx [ dlen ])) "digest-openssl.c":204:1 -1
+     (nil))
+(note 6 5 9 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 9 6 10 2 (debug_marker) "digest-openssl.c":205:2 -1
+     (nil))
+(insn 10 9 11 2 (set (reg:DI 5 di)
+        (reg/v/f:DI 86 [ b ])) "digest-openssl.c":205:9 -1
+     (nil))
+(call_insn 11 10 12 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshbuf_len") [flags 0x41]  <function_decl 0x7fe98941e200 sshbuf_len>) [0 sshbuf_len S1 A8])
+            (const_int 0 [0]))) "digest-openssl.c":205:9 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_len") [flags 0x41]  <function_decl 0x7fe98941e200 sshbuf_len>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 12 11 13 2 (set (reg:DI 82 [ _1 ])
+        (reg:DI 0 ax)) "digest-openssl.c":205:9 -1
+     (nil))
+(insn 13 12 14 2 (set (reg:DI 5 di)
+        (reg/v/f:DI 86 [ b ])) "digest-openssl.c":205:32 -1
+     (nil))
+(call_insn 14 13 15 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshbuf_ptr") [flags 0x41]  <function_decl 0x7fe98941e400 sshbuf_ptr>) [0 sshbuf_ptr S1 A8])
+            (const_int 0 [0]))) "digest-openssl.c":205:32 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_ptr") [flags 0x41]  <function_decl 0x7fe98941e400 sshbuf_ptr>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 15 14 16 2 (set (reg/f:DI 83 [ _2 ])
+        (reg:DI 0 ax)) "digest-openssl.c":205:32 -1
+     (nil))
+(insn 16 15 17 2 (set (reg:DI 36 r8)
+        (reg/v:DI 88 [ dlen ])) "digest-openssl.c":205:9 -1
+     (nil))
+(insn 17 16 18 2 (set (reg:DI 2 cx)
+        (reg/v/f:DI 87 [ d ])) "digest-openssl.c":205:9 -1
+     (nil))
+(insn 18 17 19 2 (set (reg:DI 1 dx)
+        (reg:DI 82 [ _1 ])) "digest-openssl.c":205:9 -1
+     (nil))
+(insn 19 18 20 2 (set (reg:DI 4 si)
+        (reg/f:DI 83 [ _2 ])) "digest-openssl.c":205:9 -1
+     (nil))
+(insn 20 19 21 2 (set (reg:SI 5 di)
+        (reg/v:SI 85 [ alg ])) "digest-openssl.c":205:9 -1
+     (nil))
+(call_insn/j 21 20 22 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("ssh_digest_memory") [flags 0x3]  <function_decl 0x7fe988fb6500 ssh_digest_memory>) [0 ssh_digest_memory S1 A8])
+            (const_int 0 [0]))) "digest-openssl.c":205:9 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("ssh_digest_memory") [flags 0x3]  <function_decl 0x7fe988fb6500 ssh_digest_memory>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:SI (use (reg:SI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (expr_list:DI (use (reg:DI 2 cx))
+                    (expr_list:DI (use (reg:DI 36 r8))
+                        (nil)))))))
+(barrier 22 21 0)

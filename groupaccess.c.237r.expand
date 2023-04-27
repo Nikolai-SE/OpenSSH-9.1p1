@@ -1,0 +1,1350 @@
+
+;; Function ga_init (ga_init, funcdef_no=90, decl_uid=7858, cgraph_uid=91, symbol_order=92)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+
+;; Generating RTL for gimple basic block 11
+
+;; Generating RTL for gimple basic block 12
+
+;; Generating RTL for gimple basic block 13
+
+;; Generating RTL for gimple basic block 14
+
+;; Generating RTL for gimple basic block 15
+Edge 6->8 redirected to 18
+Edge 11->15 redirected to 21
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Forwarding edge 17->18 to 20 failed.
+Removing jump 199.
+Merging block 21 into block 20...
+Merged blocks 20 and 21.
+Merged 20 and 21 without moving.
+
+
+try_optimize_cfg iteration 2
+
+Forwarding edge 17->18 to 20 failed.
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 12 NOTE_INSN_DELETED)
+(note 12 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 12 3 2 (set (reg/v/f:DI 118 [ user ])
+        (reg:DI 5 di [ user ])) "groupaccess.c":51:1 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v:SI 119 [ base ])
+        (reg:SI 4 si [ base ])) "groupaccess.c":51:1 -1
+     (nil))
+(note 4 3 14 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 14 4 15 2 (debug_marker) "groupaccess.c":52:2 -1
+     (nil))
+(debug_insn 15 14 16 2 (debug_marker) "groupaccess.c":53:2 -1
+     (nil))
+(debug_insn 16 15 17 2 (var_location:SI retry (const_int 0 [0])) "groupaccess.c":53:12 -1
+     (nil))
+(debug_insn 17 16 18 2 (debug_marker) "groupaccess.c":54:2 -1
+     (nil))
+(debug_insn 18 17 21 2 (debug_marker) "groupaccess.c":56:2 -1
+     (nil))
+(insn 21 18 22 2 (set (reg:CCNO 17 flags)
+        (compare:CCNO (mem/c:SI (symbol_ref:DI ("ngroups") [flags 0x2]  <var_decl 0x7f6e931f6090 ngroups>) [2 ngroups+0 S4 A32])
+            (const_int 0 [0]))) "groupaccess.c":56:5 -1
+     (nil))
+(jump_insn 22 21 23 2 (set (pc)
+        (if_then_else (le (reg:CCNO 17 flags)
+                (const_int 0 [0]))
+            (label_ref 52)
+            (pc))) "groupaccess.c":56:5 -1
+     (int_list:REG_BR_PROB 628353716 (nil))
+ -> 52)
+(note 23 22 24 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 24 23 25 4 (var_location:SI i (const_int 0 [0])) -1
+     (nil))
+(debug_insn 25 24 26 4 (debug_marker) "groupaccess.c":128:15 -1
+     (nil))
+(insn 26 25 5 4 (set (reg/f:DI 100 [ pretmp_23 ])
+        (mem/f/c:DI (symbol_ref:DI ("groups_byname") [flags 0x2]  <var_decl 0x7f6e931f6120 groups_byname>) [1 groups_byname+0 S8 A64])) "groupaccess.c":129:22 -1
+     (nil))
+(insn 5 26 42 4 (set (reg/v:SI 112 [ i ])
+        (const_int 0 [0])) "groupaccess.c":128:10 -1
+     (nil))
+(code_label 42 5 27 5 3 (nil) [1 uses])
+(note 27 42 28 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 28 27 29 5 (var_location:SI i (reg/v:SI 112 [ i ])) -1
+     (nil))
+(debug_insn 29 28 30 5 (debug_marker) "groupaccess.c":129:4 -1
+     (nil))
+(insn 30 29 31 5 (set (reg:DI 120)
+        (sign_extend:DI (reg/v:SI 112 [ i ]))) "groupaccess.c":129:22 -1
+     (nil))
+(insn 31 30 32 5 (set (reg:DI 121)
+        (mem/f:DI (plus:DI (mult:DI (reg:DI 120)
+                    (const_int 8 [0x8]))
+                (reg/f:DI 100 [ pretmp_23 ])) [3 *_64+0 S8 A64])) "groupaccess.c":129:4 -1
+     (nil))
+(insn 32 31 33 5 (set (reg:DI 5 di)
+        (reg:DI 121)) "groupaccess.c":129:4 -1
+     (nil))
+(call_insn 33 32 34 5 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x7f6e935c7900 free>) [0 __builtin_free S1 A8])
+        (const_int 0 [0])) "groupaccess.c":129:4 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x7f6e935c7900 free>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(debug_insn 34 33 35 5 (debug_marker) "groupaccess.c":128:28 -1
+     (nil))
+(insn 35 34 36 5 (set (reg:SI 4 si)
+        (const_int 1 [0x1])) "groupaccess.c":128:29 -1
+     (nil))
+(insn 36 35 37 5 (set (reg:SI 5 di)
+        (reg/v:SI 112 [ i ])) "groupaccess.c":128:29 -1
+     (nil))
+(call_insn/u 37 36 38 5 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__addvsi3") [flags 0x41]  <function_decl 0x7f6e9324c500 __addvsi3>) [0  S1 A8])
+            (const_int 0 [0]))) "groupaccess.c":128:29 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__addvsi3") [flags 0x41]  <function_decl 0x7f6e9324c500 __addvsi3>)
+        (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+            (nil)))
+    (expr_list (use (reg:SI 4 si))
+        (expr_list (use (reg:SI 5 di))
+            (nil))))
+(insn 38 37 39 5 (set (reg:SI 122)
+        (reg:SI 0 ax)) "groupaccess.c":128:29 -1
+     (nil))
+(insn 39 38 40 5 (set (reg/v:SI 112 [ i ])
+        (reg:SI 122)) "groupaccess.c":128:29 -1
+     (nil))
+(debug_insn 40 39 41 5 (var_location:SI i (reg/v:SI 112 [ i ])) -1
+     (nil))
+(debug_insn 41 40 43 5 (debug_marker) "groupaccess.c":128:15 -1
+     (nil))
+(insn 43 41 44 5 (set (reg:CCGC 17 flags)
+        (compare:CCGC (reg/v:SI 112 [ i ])
+            (mem/c:SI (symbol_ref:DI ("ngroups") [flags 0x2]  <var_decl 0x7f6e931f6090 ngroups>) [2 ngroups+0 S4 A32]))) "groupaccess.c":128:3 -1
+     (nil))
+(jump_insn 44 43 45 5 (set (pc)
+        (if_then_else (lt (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 42)
+            (pc))) "groupaccess.c":128:3 -1
+     (int_list:REG_BR_PROB 955630228 (nil))
+ -> 42)
+(note 45 44 46 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 46 45 47 6 (debug_marker) "groupaccess.c":130:3 -1
+     (nil))
+(debug_insn 47 46 48 6 (debug_marker) "groupaccess.c":131:3 -1
+     (nil))
+(insn 48 47 49 6 (set (reg:DI 5 di)
+        (reg/f:DI 100 [ pretmp_23 ])) "groupaccess.c":131:3 -1
+     (nil))
+(call_insn 49 48 50 6 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x7f6e935c7900 free>) [0 __builtin_free S1 A8])
+        (const_int 0 [0])) "groupaccess.c":131:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x7f6e935c7900 free>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(debug_insn 50 49 51 6 (debug_marker) "groupaccess.c":132:3 -1
+     (nil))
+(insn 51 50 52 6 (set (mem/f/c:DI (symbol_ref:DI ("groups_byname") [flags 0x2]  <var_decl 0x7f6e931f6120 groups_byname>) [1 groups_byname+0 S8 A64])
+        (const_int 0 [0])) "groupaccess.c":132:17 -1
+     (nil))
+(code_label 52 51 53 7 2 (nil) [1 uses])
+(note 53 52 54 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 54 53 55 7 (var_location:SI i (clobber (const_int 0 [0]))) -1
+     (nil))
+(debug_insn 55 54 56 7 (var_location:SI i (clobber (const_int 0 [0]))) "groupaccess.c":57:3 -1
+     (nil))
+(debug_insn 56 55 57 7 (debug_marker) "groupaccess.c":59:2 -1
+     (nil))
+(insn 57 56 58 7 (set (mem/c:SI (symbol_ref:DI ("ngroups") [flags 0x2]  <var_decl 0x7f6e931f6090 ngroups>) [2 ngroups+0 S4 A32])
+        (const_int 65536 [0x10000])) "groupaccess.c":59:10 -1
+     (nil))
+(debug_insn 58 57 59 7 (debug_marker) "groupaccess.c":61:2 -1
+     (nil))
+(insn 59 58 60 7 (set (reg:SI 5 di)
+        (const_int 3 [0x3])) "groupaccess.c":61:12 -1
+     (nil))
+(call_insn 60 59 61 7 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sysconf") [flags 0x41]  <function_decl 0x7f6e93161c00 sysconf>) [0 sysconf S1 A8])
+            (const_int 0 [0]))) "groupaccess.c":61:12 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sysconf") [flags 0x41]  <function_decl 0x7f6e93161c00 sysconf>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:SI (use (reg:SI 5 di))
+        (nil)))
+(insn 61 60 64 7 (set (reg:DI 83 [ _2 ])
+        (reg:DI 0 ax)) "groupaccess.c":61:12 -1
+     (nil))
+(insn 64 61 65 7 (set (reg:CCGC 17 flags)
+        (compare:CCGC (reg:DI 83 [ _2 ])
+            (const_int 65535 [0xffff]))) "groupaccess.c":61:10 -1
+     (nil))
+(jump_insn 65 64 66 7 (set (pc)
+        (if_then_else (le (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 208)
+            (pc))) "groupaccess.c":61:10 736 {*jcc}
+     (int_list:REG_BR_PROB 719407028 (nil))
+ -> 208)
+(note 66 65 67 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 67 66 68 8 (set (reg:SI 5 di)
+        (const_int 3 [0x3])) "groupaccess.c":61:12 -1
+     (nil))
+(call_insn 68 67 69 8 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sysconf") [flags 0x41]  <function_decl 0x7f6e93161c00 sysconf>) [0 sysconf S1 A8])
+            (const_int 0 [0]))) "groupaccess.c":61:12 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sysconf") [flags 0x41]  <function_decl 0x7f6e93161c00 sysconf>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:SI (use (reg:SI 5 di))
+        (nil)))
+(insn 69 68 70 8 (set (reg:DI 84 [ _3 ])
+        (reg:DI 0 ax)) "groupaccess.c":61:12 -1
+     (nil))
+(insn 70 69 71 8 (set (reg:SI 101 [ iftmp.1_27 ])
+        (subreg:SI (reg:DI 84 [ _3 ]) 0)) "groupaccess.c":61:10 -1
+     (nil))
+(insn 71 70 205 8 (set (reg:DI 106 [ prephitmp_57 ])
+        (sign_extend:DI (reg:SI 101 [ iftmp.1_27 ]))) "groupaccess.c":64:17 -1
+     (nil))
+(jump_insn 205 71 206 8 (set (pc)
+        (label_ref 72)) -1
+     (nil)
+ -> 72)
+(barrier 206 205 208)
+(code_label 208 206 207 9 9 (nil) [1 uses])
+(note 207 208 6 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 6 207 7 9 (set (reg:DI 106 [ prephitmp_57 ])
+        (const_int 65536 [0x10000])) -1
+     (nil))
+(insn 7 6 72 9 (set (reg:SI 101 [ iftmp.1_27 ])
+        (const_int 65536 [0x10000])) "groupaccess.c":61:10 -1
+     (nil))
+(code_label 72 7 73 10 4 (nil) [1 uses])
+(note 73 72 74 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 74 73 75 10 (set (mem/c:SI (symbol_ref:DI ("ngroups") [flags 0x2]  <var_decl 0x7f6e931f6090 ngroups>) [2 ngroups+0 S4 A32])
+        (reg:SI 101 [ iftmp.1_27 ])) "groupaccess.c":61:10 -1
+     (nil))
+(debug_insn 75 74 76 10 (debug_marker) "groupaccess.c":64:2 -1
+     (nil))
+(insn 76 75 77 10 (set (reg:DI 4 si)
+        (const_int 4 [0x4])) "groupaccess.c":64:17 -1
+     (nil))
+(insn 77 76 78 10 (set (reg:DI 5 di)
+        (reg:DI 106 [ prephitmp_57 ])) "groupaccess.c":64:17 -1
+     (nil))
+(call_insn 78 77 79 10 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("xcalloc") [flags 0x41]  <function_decl 0x7f6e931fe400 xcalloc>) [0 xcalloc S1 A8])
+            (const_int 0 [0]))) "groupaccess.c":64:17 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("xcalloc") [flags 0x41]  <function_decl 0x7f6e931fe400 xcalloc>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 79 78 80 10 (set (reg/v/f:DI 102 [ groups_bygid ])
+        (reg:DI 0 ax)) "groupaccess.c":64:17 -1
+     (nil))
+(debug_insn 80 79 81 10 (var_location:DI groups_bygid (reg/v/f:DI 102 [ groups_bygid ])) "groupaccess.c":64:17 -1
+     (nil))
+(debug_insn 81 80 82 10 (debug_marker) "groupaccess.c":65:2 -1
+     (nil))
+(debug_insn 82 81 83 10 (var_location:SI retry (const_int 0 [0])) -1
+     (nil))
+(debug_insn 83 82 84 10 (var_location:DI groups_bygid (reg/v/f:DI 102 [ groups_bygid ])) -1
+     (nil))
+(debug_insn 84 83 85 10 (debug_marker) "groupaccess.c":65:8 -1
+     (nil))
+(insn 85 84 86 10 (set (reg:DI 2 cx)
+        (symbol_ref:DI ("ngroups") [flags 0x2]  <var_decl 0x7f6e931f6090 ngroups>)) "groupaccess.c":65:9 -1
+     (nil))
+(insn 86 85 87 10 (set (reg:DI 1 dx)
+        (reg/v/f:DI 102 [ groups_bygid ])) "groupaccess.c":65:9 -1
+     (nil))
+(insn 87 86 88 10 (set (reg:SI 4 si)
+        (reg/v:SI 119 [ base ])) "groupaccess.c":65:9 -1
+     (nil))
+(insn 88 87 89 10 (set (reg:DI 5 di)
+        (reg/v/f:DI 118 [ user ])) "groupaccess.c":65:9 -1
+     (nil))
+(call_insn 89 88 90 10 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("getgrouplist") [flags 0x41]  <function_decl 0x7f6e9314bd00 getgrouplist>) [0 getgrouplist S1 A8])
+            (const_int 0 [0]))) "groupaccess.c":65:9 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("getgrouplist") [flags 0x41]  <function_decl 0x7f6e9314bd00 getgrouplist>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (expr_list:DI (use (reg:DI 2 cx))
+                    (nil))))))
+(insn 90 89 91 10 (set (reg:SI 114 [ _69 ])
+        (reg:SI 0 ax)) "groupaccess.c":65:9 -1
+     (nil))
+(insn 91 90 92 10 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 114 [ _69 ])
+            (const_int -1 [0xffffffffffffffff]))) "groupaccess.c":65:8 -1
+     (nil))
+(jump_insn 92 91 93 10 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 131)
+            (pc))) "groupaccess.c":65:8 -1
+     (int_list:REG_BR_PROB 59055804 (nil))
+ -> 131)
+(note 93 92 94 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 94 93 95 11 (debug_marker) "groupaccess.c":66:3 -1
+     (nil))
+(debug_insn 95 94 96 11 (var_location:SI retry (const_int 1 [0x1])) "groupaccess.c":66:12 -1
+     (nil))
+(debug_insn 96 95 97 11 (debug_marker) "groupaccess.c":68:3 -1
+     (nil))
+(insn 97 96 98 11 (set (reg:SI 124)
+        (mem/c:SI (symbol_ref:DI ("ngroups") [flags 0x2]  <var_decl 0x7f6e931f6090 ngroups>) [2 ngroups+0 S4 A32])) "groupaccess.c":68:18 -1
+     (nil))
+(insn 98 97 99 11 (set (reg:DI 123)
+        (sign_extend:DI (reg:SI 124))) "groupaccess.c":68:18 -1
+     (nil))
+(insn 99 98 100 11 (set (reg:DI 1 dx)
+        (const_int 4 [0x4])) "groupaccess.c":68:18 -1
+     (nil))
+(insn 100 99 101 11 (set (reg:DI 4 si)
+        (reg:DI 123)) "groupaccess.c":68:18 -1
+     (nil))
+(insn 101 100 102 11 (set (reg:DI 5 di)
+        (reg/v/f:DI 102 [ groups_bygid ])) "groupaccess.c":68:18 -1
+     (nil))
+(call_insn 102 101 103 11 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("xreallocarray") [flags 0x41]  <function_decl 0x7f6e931fe500 xreallocarray>) [0 xreallocarray S1 A8])
+            (const_int 0 [0]))) "groupaccess.c":68:18 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("xreallocarray") [flags 0x41]  <function_decl 0x7f6e931fe500 xreallocarray>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(insn 103 102 104 11 (set (reg/v/f:DI 102 [ groups_bygid ])
+        (reg:DI 0 ax)) "groupaccess.c":68:18 -1
+     (nil))
+(debug_insn 104 103 105 11 (var_location:SI retry (const_int 1 [0x1])) -1
+     (nil))
+(debug_insn 105 104 106 11 (var_location:DI groups_bygid (reg/v/f:DI 102 [ groups_bygid ])) -1
+     (nil))
+(debug_insn 106 105 107 11 (debug_marker) "groupaccess.c":65:8 -1
+     (nil))
+(insn 107 106 108 11 (set (reg:DI 2 cx)
+        (symbol_ref:DI ("ngroups") [flags 0x2]  <var_decl 0x7f6e931f6090 ngroups>)) "groupaccess.c":65:9 -1
+     (nil))
+(insn 108 107 109 11 (set (reg:DI 1 dx)
+        (reg/v/f:DI 102 [ groups_bygid ])) "groupaccess.c":65:9 -1
+     (nil))
+(insn 109 108 110 11 (set (reg:SI 4 si)
+        (reg/v:SI 119 [ base ])) "groupaccess.c":65:9 -1
+     (nil))
+(insn 110 109 111 11 (set (reg:DI 5 di)
+        (reg/v/f:DI 118 [ user ])) "groupaccess.c":65:9 -1
+     (nil))
+(call_insn 111 110 112 11 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("getgrouplist") [flags 0x41]  <function_decl 0x7f6e9314bd00 getgrouplist>) [0 getgrouplist S1 A8])
+            (const_int 0 [0]))) "groupaccess.c":65:9 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("getgrouplist") [flags 0x41]  <function_decl 0x7f6e9314bd00 getgrouplist>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (expr_list:DI (use (reg:DI 2 cx))
+                    (nil))))))
+(insn 112 111 113 11 (set (reg:SI 85 [ _7 ])
+        (reg:SI 0 ax)) "groupaccess.c":65:9 -1
+     (nil))
+(insn 113 112 114 11 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 85 [ _7 ])
+            (const_int -1 [0xffffffffffffffff]))) "groupaccess.c":65:8 -1
+     (nil))
+(jump_insn 114 113 115 11 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 131)
+            (pc))) "groupaccess.c":65:8 -1
+     (int_list:REG_BR_PROB 59055804 (nil))
+ -> 131)
+(note 115 114 116 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 116 115 117 12 (debug_marker) "groupaccess.c":66:3 -1
+     (nil))
+(debug_insn 117 116 118 12 (var_location:SI retry (const_int 2 [0x2])) "groupaccess.c":66:12 -1
+     (nil))
+(debug_insn 118 117 119 12 (debug_marker) "groupaccess.c":67:4 -1
+     (nil))
+(insn 119 118 120 12 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "groupaccess.c":67:4 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 120 119 121 12 (set (reg/f:DI 125)
+        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7f6e9324d360 *.LC1>)) "groupaccess.c":67:4 -1
+     (nil))
+(insn 121 120 122 12 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [3  S8 A64])
+        (reg/f:DI 125)) "groupaccess.c":67:4 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 122 121 123 12 (set (reg:DI 37 r9)
+        (const_int 0 [0])) "groupaccess.c":67:4 -1
+     (nil))
+(insn 123 122 124 12 (set (reg:SI 36 r8)
+        (const_int 1 [0x1])) "groupaccess.c":67:4 -1
+     (nil))
+(insn 124 123 125 12 (set (reg:SI 2 cx)
+        (const_int 0 [0])) "groupaccess.c":67:4 -1
+     (nil))
+(insn 125 124 126 12 (set (reg:SI 1 dx)
+        (const_int 67 [0x43])) "groupaccess.c":67:4 -1
+     (nil))
+(insn 126 125 127 12 (set (reg:DI 4 si)
+        (symbol_ref:DI ("__func__.0") [flags 0x2]  <var_decl 0x7f6e931f6510 __func__>)) "groupaccess.c":67:4 -1
+     (nil))
+(insn 127 126 128 12 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f6e9324d2d0 *.LC0>)) "groupaccess.c":67:4 -1
+     (nil))
+(insn 128 127 129 12 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "groupaccess.c":67:4 -1
+     (nil))
+(call_insn 129 128 130 12 (call (mem:QI (symbol_ref:DI ("sshfatal") [flags 0x41]  <function_decl 0x7f6e9320fa00 sshfatal>) [0 sshfatal S1 A8])
+        (const_int 16 [0x10])) "groupaccess.c":67:4 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshfatal") [flags 0x41]  <function_decl 0x7f6e9320fa00 sshfatal>)
+        (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+            (expr_list:REG_NORETURN (const_int 0 [0])
+                (nil))))
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (expr_list:SI (use (reg:SI 1 dx))
+                    (expr_list:SI (use (reg:SI 2 cx))
+                        (expr_list:SI (use (reg:SI 36 r8))
+                            (expr_list:DI (use (reg:DI 37 r9))
+                                (nil)))))))))
+(barrier 130 129 131)
+(code_label 131 130 132 13 5 (nil) [2 uses])
+(note 132 131 133 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 133 132 134 13 (debug_marker) "groupaccess.c":71:2 -1
+     (nil))
+(insn 134 133 135 13 (set (reg:SI 127)
+        (mem/c:SI (symbol_ref:DI ("ngroups") [flags 0x2]  <var_decl 0x7f6e931f6090 ngroups>) [2 ngroups+0 S4 A32])) "groupaccess.c":71:18 -1
+     (nil))
+(insn 135 134 136 13 (set (reg:DI 126)
+        (sign_extend:DI (reg:SI 127))) "groupaccess.c":71:18 -1
+     (nil))
+(insn 136 135 137 13 (set (reg:DI 4 si)
+        (const_int 8 [0x8])) "groupaccess.c":71:18 -1
+     (nil))
+(insn 137 136 138 13 (set (reg:DI 5 di)
+        (reg:DI 126)) "groupaccess.c":71:18 -1
+     (nil))
+(call_insn 138 137 139 13 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("xcalloc") [flags 0x41]  <function_decl 0x7f6e931fe400 xcalloc>) [0 xcalloc S1 A8])
+            (const_int 0 [0]))) "groupaccess.c":71:18 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("xcalloc") [flags 0x41]  <function_decl 0x7f6e931fe400 xcalloc>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 139 138 140 13 (set (reg/f:DI 88 [ _10 ])
+        (reg:DI 0 ax)) "groupaccess.c":71:18 -1
+     (nil))
+(insn 140 139 141 13 (set (mem/f/c:DI (symbol_ref:DI ("groups_byname") [flags 0x2]  <var_decl 0x7f6e931f6120 groups_byname>) [1 groups_byname+0 S8 A64])
+        (reg/f:DI 88 [ _10 ])) "groupaccess.c":71:16 -1
+     (nil))
+(debug_insn 141 140 142 13 (debug_marker) "groupaccess.c":73:2 -1
+     (nil))
+(debug_insn 142 141 143 13 (var_location:SI j (const_int 0 [0])) -1
+     (nil))
+(debug_insn 143 142 144 13 (var_location:SI i (const_int 0 [0])) -1
+     (nil))
+(debug_insn 144 143 147 13 (debug_marker) "groupaccess.c":73:21 -1
+     (nil))
+(insn 147 144 148 13 (set (reg:CCNO 17 flags)
+        (compare:CCNO (mem/c:SI (symbol_ref:DI ("ngroups") [flags 0x2]  <var_decl 0x7f6e931f6090 ngroups>) [2 ngroups+0 S4 A32])
+            (const_int 0 [0]))) "groupaccess.c":73:2 -1
+     (nil))
+(jump_insn 148 147 209 13 (set (pc)
+        (if_then_else (le (reg:CCNO 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 214)
+            (pc))) "groupaccess.c":73:2 736 {*jcc}
+     (int_list:REG_BR_PROB 118111604 (nil))
+ -> 214)
+(note 209 148 8 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 8 209 9 14 (set (reg/v:SI 117 [ <retval> ])
+        (const_int 0 [0])) "groupaccess.c":73:16 -1
+     (nil))
+(insn 9 8 189 14 (set (reg/v:SI 105 [ i ])
+        (const_int 0 [0])) "groupaccess.c":73:9 -1
+     (nil))
+(code_label 189 9 149 15 8 (nil) [1 uses])
+(note 149 189 150 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 150 149 151 15 (var_location:SI j (reg/v:SI 117 [ <retval> ])) -1
+     (nil))
+(debug_insn 151 150 152 15 (var_location:SI i (reg/v:SI 105 [ i ])) -1
+     (nil))
+(debug_insn 152 151 153 15 (debug_marker) "groupaccess.c":74:3 -1
+     (nil))
+(insn 153 152 154 15 (set (reg:DI 128)
+        (sign_extend:DI (reg/v:SI 105 [ i ]))) "groupaccess.c":74:34 -1
+     (nil))
+(insn 154 153 155 15 (set (reg:SI 129)
+        (mem:SI (plus:DI (mult:DI (reg:DI 128)
+                    (const_int 4 [0x4]))
+                (reg/v/f:DI 102 [ groups_bygid ])) [2 *_13+0 S4 A32])) "groupaccess.c":74:13 -1
+     (nil))
+(insn 155 154 156 15 (set (reg:SI 5 di)
+        (reg:SI 129)) "groupaccess.c":74:13 -1
+     (nil))
+(call_insn 156 155 157 15 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("getgrgid") [flags 0x41]  <function_decl 0x7f6e9314b500 getgrgid>) [0 getgrgid S1 A8])
+            (const_int 0 [0]))) "groupaccess.c":74:13 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("getgrgid") [flags 0x41]  <function_decl 0x7f6e9314b500 getgrgid>)
+        (nil))
+    (expr_list:SI (use (reg:SI 5 di))
+        (nil)))
+(insn 157 156 158 15 (set (reg/v/f:DI 103 [ gr ])
+        (reg:DI 0 ax)) "groupaccess.c":74:13 -1
+     (nil))
+(debug_insn 158 157 159 15 (var_location:DI gr (reg/v/f:DI 103 [ gr ])) "groupaccess.c":74:13 -1
+     (nil))
+(insn 159 158 160 15 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 103 [ gr ])
+            (const_int 0 [0]))) "groupaccess.c":74:6 -1
+     (nil))
+(jump_insn 160 159 161 15 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 177)
+            (pc))) "groupaccess.c":74:6 -1
+     (int_list:REG_BR_PROB 499612076 (nil))
+ -> 177)
+(note 161 160 162 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 162 161 163 16 (debug_marker) "groupaccess.c":75:4 -1
+     (nil))
+(insn 163 162 164 16 (set (reg:SI 4 si)
+        (const_int 1 [0x1])) "groupaccess.c":75:19 -1
+     (nil))
+(insn 164 163 165 16 (set (reg:SI 5 di)
+        (reg/v:SI 117 [ <retval> ])) "groupaccess.c":75:19 -1
+     (nil))
+(call_insn/u 165 164 166 16 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__addvsi3") [flags 0x41]  <function_decl 0x7f6e9324c500 __addvsi3>) [0  S1 A8])
+            (const_int 0 [0]))) "groupaccess.c":75:19 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__addvsi3") [flags 0x41]  <function_decl 0x7f6e9324c500 __addvsi3>)
+        (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+            (nil)))
+    (expr_list (use (reg:SI 4 si))
+        (expr_list (use (reg:SI 5 di))
+            (nil))))
+(insn 166 165 167 16 (set (reg:SI 130)
+        (reg:SI 0 ax)) "groupaccess.c":75:19 -1
+     (nil))
+(insn 167 166 168 16 (set (reg/v:SI 104 [ j ])
+        (reg:SI 130)) "groupaccess.c":75:19 -1
+     (nil))
+(debug_insn 168 167 169 16 (var_location:SI j (reg/v:SI 104 [ j ])) "groupaccess.c":75:19 -1
+     (nil))
+(insn 169 168 170 16 (set (reg:DI 131)
+        (sign_extend:DI (reg/v:SI 117 [ <retval> ]))) "groupaccess.c":75:19 -1
+     (nil))
+(insn 170 169 171 16 (parallel [
+            (set (reg:DI 132)
+                (ashift:DI (reg:DI 131)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "groupaccess.c":75:17 -1
+     (nil))
+(insn 171 170 172 16 (set (reg/f:DI 133)
+        (mem/f/c:DI (symbol_ref:DI ("groups_byname") [flags 0x2]  <var_decl 0x7f6e931f6120 groups_byname>) [1 groups_byname+0 S8 A64])) "groupaccess.c":75:17 -1
+     (nil))
+(insn 172 171 173 16 (parallel [
+            (set (reg/f:DI 97 [ _19 ])
+                (plus:DI (reg:DI 132)
+                    (reg/f:DI 133)))
+            (clobber (reg:CC 17 flags))
+        ]) "groupaccess.c":75:17 -1
+     (expr_list:REG_EQUAL (plus:DI (mem/f/c:DI (symbol_ref:DI ("groups_byname") [flags 0x2]  <var_decl 0x7f6e931f6120 groups_byname>) [1 groups_byname+0 S8 A64])
+            (reg:DI 132))
+        (nil)))
+(insn 173 172 174 16 (set (reg:DI 5 di)
+        (mem/f:DI (reg/v/f:DI 103 [ gr ]) [3 gr_49->gr_name+0 S8 A64])) "groupaccess.c":75:25 -1
+     (nil))
+(call_insn 174 173 175 16 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("xstrdup") [flags 0x41]  <function_decl 0x7f6e931fe700 xstrdup>) [0 xstrdup S1 A8])
+            (const_int 0 [0]))) "groupaccess.c":75:25 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("xstrdup") [flags 0x41]  <function_decl 0x7f6e931fe700 xstrdup>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 175 174 176 16 (set (reg/f:DI 98 [ _20 ])
+        (reg:DI 0 ax)) "groupaccess.c":75:25 -1
+     (nil))
+(insn 176 175 10 16 (set (mem/f:DI (reg/f:DI 97 [ _19 ]) [3 *_19+0 S8 A64])
+        (reg/f:DI 98 [ _20 ])) "groupaccess.c":75:23 -1
+     (nil))
+(insn 10 176 177 16 (set (reg/v:SI 117 [ <retval> ])
+        (reg/v:SI 104 [ j ])) "groupaccess.c":75:19 -1
+     (nil))
+(code_label 177 10 178 17 7 (nil) [1 uses])
+(note 178 177 179 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 179 178 180 17 (var_location:SI j (reg/v:SI 117 [ <retval> ])) -1
+     (nil))
+(debug_insn 180 179 181 17 (debug_marker) "groupaccess.c":73:34 -1
+     (nil))
+(insn 181 180 182 17 (set (reg:SI 4 si)
+        (const_int 1 [0x1])) "groupaccess.c":73:35 -1
+     (nil))
+(insn 182 181 183 17 (set (reg:SI 5 di)
+        (reg/v:SI 105 [ i ])) "groupaccess.c":73:35 -1
+     (nil))
+(call_insn/u 183 182 184 17 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__addvsi3") [flags 0x41]  <function_decl 0x7f6e9324c500 __addvsi3>) [0  S1 A8])
+            (const_int 0 [0]))) "groupaccess.c":73:35 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__addvsi3") [flags 0x41]  <function_decl 0x7f6e9324c500 __addvsi3>)
+        (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+            (nil)))
+    (expr_list (use (reg:SI 4 si))
+        (expr_list (use (reg:SI 5 di))
+            (nil))))
+(insn 184 183 185 17 (set (reg:SI 134)
+        (reg:SI 0 ax)) "groupaccess.c":73:35 -1
+     (nil))
+(insn 185 184 186 17 (set (reg/v:SI 105 [ i ])
+        (reg:SI 134)) "groupaccess.c":73:35 -1
+     (nil))
+(debug_insn 186 185 187 17 (var_location:SI j (reg/v:SI 117 [ <retval> ])) -1
+     (nil))
+(debug_insn 187 186 188 17 (var_location:SI i (reg/v:SI 105 [ i ])) -1
+     (nil))
+(debug_insn 188 187 190 17 (debug_marker) "groupaccess.c":73:21 -1
+     (nil))
+(insn 190 188 191 17 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (symbol_ref:DI ("ngroups") [flags 0x2]  <var_decl 0x7f6e931f6090 ngroups>) [2 ngroups+0 S4 A32])
+            (reg/v:SI 105 [ i ]))) "groupaccess.c":73:2 -1
+     (nil))
+(jump_insn 191 190 210 17 (set (pc)
+        (if_then_else (gt (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 189)
+            (pc))) "groupaccess.c":73:2 -1
+     (int_list:REG_BR_PROB 955630228 (nil))
+ -> 189)
+(note 210 191 211 18 [bb 18] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 211 210 212 18 (set (pc)
+        (label_ref 192)) -1
+     (nil)
+ -> 192)
+(barrier 212 211 214)
+(code_label 214 212 213 19 10 (nil) [1 uses])
+(note 213 214 11 19 [bb 19] NOTE_INSN_BASIC_BLOCK)
+(insn 11 213 192 19 (set (reg/v:SI 117 [ <retval> ])
+        (const_int 0 [0])) "groupaccess.c":73:16 -1
+     (nil))
+(code_label 192 11 193 20 6 (nil) [1 uses])
+(note 193 192 194 20 [bb 20] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 194 193 195 20 (debug_marker) "groupaccess.c":76:2 -1
+     (nil))
+(insn 195 194 196 20 (set (reg:DI 5 di)
+        (reg/v/f:DI 102 [ groups_bygid ])) "groupaccess.c":76:2 -1
+     (nil))
+(call_insn 196 195 197 20 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x7f6e935c7900 free>) [0 __builtin_free S1 A8])
+        (const_int 0 [0])) "groupaccess.c":76:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x7f6e935c7900 free>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(debug_insn 197 196 198 20 (debug_marker) "groupaccess.c":77:2 -1
+     (nil))
+(insn 198 197 202 20 (set (mem/c:SI (symbol_ref:DI ("ngroups") [flags 0x2]  <var_decl 0x7f6e931f6090 ngroups>) [2 ngroups+0 S4 A32])
+        (reg/v:SI 117 [ <retval> ])) "groupaccess.c":77:18 -1
+     (nil))
+(insn 202 198 203 20 (set (reg/i:SI 0 ax)
+        (reg/v:SI 117 [ <retval> ])) "groupaccess.c":78:1 -1
+     (nil))
+(insn 203 202 0 20 (use (reg/i:SI 0 ax)) "groupaccess.c":78:1 -1
+     (nil))
+
+;; Function ga_match (ga_match, funcdef_no=91, decl_uid=7861, cgraph_uid=92, symbol_order=93)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+Edge 5->10 redirected to 14
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Forwarding edge 9->10 to 8 failed.
+Redirecting jump 85 from 13 to 14.
+Merging block 13 into block 12...
+Merged blocks 12 and 13.
+Merged 12 and 13 without moving.
+Removing jump 79.
+
+
+try_optimize_cfg iteration 2
+
+Forwarding edge 9->10 to 8 failed.
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 9 NOTE_INSN_DELETED)
+(note 9 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 9 3 2 (set (reg/v/f:DI 102 [ groups ])
+        (reg:DI 5 di [ groups ])) "groupaccess.c":86:1 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v:SI 103 [ n ])
+        (reg:SI 4 si [ n ])) "groupaccess.c":86:1 -1
+     (nil))
+(note 4 3 11 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 11 4 12 2 (debug_marker) "groupaccess.c":87:2 -1
+     (nil))
+(debug_insn 12 11 13 2 (debug_marker) "groupaccess.c":89:2 -1
+     (nil))
+(debug_insn 13 12 14 2 (var_location:SI i (const_int 0 [0])) -1
+     (nil))
+(debug_insn 14 13 17 2 (debug_marker) "groupaccess.c":89:14 -1
+     (nil))
+(insn 17 14 18 2 (set (reg:CCNO 17 flags)
+        (compare:CCNO (mem/c:SI (symbol_ref:DI ("ngroups") [flags 0x2]  <var_decl 0x7f6e931f6090 ngroups>) [2 ngroups+0 S4 A32])
+            (const_int 0 [0]))) "groupaccess.c":89:2 -1
+     (nil))
+(jump_insn 18 17 19 2 (set (pc)
+        (if_then_else (le (reg:CCNO 17 flags)
+                (const_int 0 [0]))
+            (label_ref 75)
+            (pc))) "groupaccess.c":89:2 -1
+     (int_list:REG_BR_PROB 59055804 (nil))
+ -> 75)
+(note 19 18 20 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 20 19 21 4 (set (reg:DI 92 [ _24 ])
+        (reg/v/f:DI 102 [ groups ])) -1
+     (nil))
+(insn 21 20 22 4 (parallel [
+            (set (reg:SI 104)
+                (plus:SI (reg/v:SI 103 [ n ])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 22 21 23 4 (set (reg:DI 105)
+        (zero_extend:DI (reg:SI 104))) -1
+     (nil))
+(insn 23 22 24 4 (parallel [
+            (set (reg:DI 106)
+                (ashift:DI (reg:DI 105)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 24 23 25 4 (parallel [
+            (set (reg:DI 107)
+                (plus:DI (reg:DI 92 [ _24 ])
+                    (const_int 8 [0x8])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 25 24 6 4 (parallel [
+            (set (reg:DI 90 [ _15 ])
+                (plus:DI (reg:DI 106)
+                    (reg:DI 107)))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 6 25 26 4 (set (reg/v:SI 91 [ i ])
+        (const_int 0 [0])) "groupaccess.c":89:9 -1
+     (nil))
+(jump_insn 26 6 27 4 (set (pc)
+        (label_ref 61)) -1
+     (nil)
+ -> 61)
+(barrier 27 26 66)
+(code_label 66 27 28 5 25 (nil) [1 uses])
+(note 28 66 29 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 29 28 30 5 (set (reg:DI 108)
+        (sign_extend:DI (reg/v:SI 91 [ i ]))) "groupaccess.c":91:35 -1
+     (nil))
+(insn 30 29 5 5 (parallel [
+            (set (reg:DI 85 [ _7 ])
+                (ashift:DI (reg:DI 108)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "groupaccess.c":91:35 -1
+     (nil))
+(insn 5 30 47 5 (set (reg:DI 98 [ ivtmp.40 ])
+        (reg:DI 92 [ _24 ])) "groupaccess.c":91:35 -1
+     (nil))
+(code_label 47 5 31 6 24 (nil) [1 uses])
+(note 31 47 32 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 32 31 33 6 (var_location:SI j (subreg:SI (lshiftrt:DI (minus:DI (reg:DI 98 [ ivtmp.40 ])
+                (reg/v/f:DI 102 [ groups ]))
+            (const_int 3 [0x3])) 0)) -1
+     (nil))
+(debug_insn 33 32 34 6 (debug_marker) "groupaccess.c":91:4 -1
+     (nil))
+(insn 34 33 35 6 (set (reg/f:DI 109)
+        (mem/f/c:DI (symbol_ref:DI ("groups_byname") [flags 0x2]  <var_decl 0x7f6e931f6120 groups_byname>) [1 groups_byname+0 S8 A64])) "groupaccess.c":91:8 -1
+     (nil))
+(insn 35 34 36 6 (set (reg:DI 110)
+        (mem/f:DI (plus:DI (reg/f:DI 109)
+                (reg:DI 85 [ _7 ])) [3 *_8+0 S8 A64])) "groupaccess.c":91:8 -1
+     (nil))
+(insn 36 35 37 6 (set (reg:DI 4 si)
+        (mem/f:DI (reg:DI 98 [ ivtmp.40 ]) [0 MEM[base: _35, offset: 0B]+0 S8 A64])) "groupaccess.c":91:8 -1
+     (nil))
+(insn 37 36 38 6 (set (reg:DI 5 di)
+        (reg:DI 110)) "groupaccess.c":91:8 -1
+     (nil))
+(call_insn 38 37 39 6 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("match_pattern") [flags 0x41]  <function_decl 0x7f6e931fee00 match_pattern>) [0 match_pattern S1 A8])
+            (const_int 0 [0]))) "groupaccess.c":91:8 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("match_pattern") [flags 0x41]  <function_decl 0x7f6e931fee00 match_pattern>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 39 38 40 6 (set (reg:SI 88 [ _10 ])
+        (reg:SI 0 ax)) "groupaccess.c":91:8 -1
+     (nil))
+(insn 40 39 41 6 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 88 [ _10 ])
+            (const_int 0 [0]))) "groupaccess.c":91:7 -1
+     (nil))
+(jump_insn 41 40 42 6 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 88)
+            (pc))) "groupaccess.c":91:7 736 {*jcc}
+     (int_list:REG_BR_PROB 59055804 (nil))
+ -> 88)
+(note 42 41 43 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 43 42 44 7 (debug_marker) "groupaccess.c":90:22 -1
+     (nil))
+(debug_insn 44 43 45 7 (var_location:SI j (plus:SI (subreg:SI (lshiftrt:DI (minus:DI (reg:DI 98 [ ivtmp.40 ])
+                    (reg/v/f:DI 102 [ groups ]))
+                (const_int 3 [0x3])) 0)
+        (const_int 1 [0x1]))) -1
+     (nil))
+(debug_insn 45 44 46 7 (debug_marker) "groupaccess.c":90:15 -1
+     (nil))
+(insn 46 45 48 7 (parallel [
+            (set (reg:DI 98 [ ivtmp.40 ])
+                (plus:DI (reg:DI 98 [ ivtmp.40 ])
+                    (const_int 8 [0x8])))
+            (clobber (reg:CC 17 flags))
+        ]) "groupaccess.c":90:3 -1
+     (nil))
+(insn 48 46 49 7 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:DI 90 [ _15 ])
+            (reg:DI 98 [ ivtmp.40 ]))) "groupaccess.c":90:3 -1
+     (nil))
+(jump_insn 49 48 71 7 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 47)
+            (pc))) "groupaccess.c":90:3 -1
+     (int_list:REG_BR_PROB 1014686028 (nil))
+ -> 47)
+(code_label 71 49 50 8 26 (nil) [1 uses])
+(note 50 71 51 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 51 50 52 8 (debug_marker) "groupaccess.c":89:27 -1
+     (nil))
+(insn 52 51 53 8 (set (reg:SI 4 si)
+        (const_int 1 [0x1])) "groupaccess.c":89:28 -1
+     (nil))
+(insn 53 52 54 8 (set (reg:SI 5 di)
+        (reg/v:SI 91 [ i ])) "groupaccess.c":89:28 -1
+     (nil))
+(call_insn/u 54 53 55 8 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__addvsi3") [flags 0x41]  <function_decl 0x7f6e9324c500 __addvsi3>) [0  S1 A8])
+            (const_int 0 [0]))) "groupaccess.c":89:28 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__addvsi3") [flags 0x41]  <function_decl 0x7f6e9324c500 __addvsi3>)
+        (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+            (nil)))
+    (expr_list (use (reg:SI 4 si))
+        (expr_list (use (reg:SI 5 di))
+            (nil))))
+(insn 55 54 56 8 (set (reg:SI 111)
+        (reg:SI 0 ax)) "groupaccess.c":89:28 -1
+     (nil))
+(insn 56 55 57 8 (set (reg/v:SI 91 [ i ])
+        (reg:SI 111)) "groupaccess.c":89:28 -1
+     (nil))
+(debug_insn 57 56 58 8 (var_location:SI i (reg/v:SI 91 [ i ])) -1
+     (nil))
+(debug_insn 58 57 59 8 (debug_marker) "groupaccess.c":89:14 -1
+     (nil))
+(insn 59 58 60 8 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (symbol_ref:DI ("ngroups") [flags 0x2]  <var_decl 0x7f6e931f6090 ngroups>) [2 ngroups+0 S4 A32])
+            (reg/v:SI 91 [ i ]))) "groupaccess.c":89:2 -1
+     (nil))
+(jump_insn 60 59 61 8 (set (pc)
+        (if_then_else (le (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 75)
+            (pc))) "groupaccess.c":89:2 -1
+     (int_list:REG_BR_PROB 59055804 (nil))
+ -> 75)
+(code_label 61 60 62 9 22 (nil) [1 uses])
+(note 62 61 63 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 63 62 64 9 (var_location:SI i (reg/v:SI 91 [ i ])) -1
+     (nil))
+(debug_insn 64 63 65 9 (var_location:SI j (const_int 0 [0])) -1
+     (nil))
+(debug_insn 65 64 69 9 (debug_marker) "groupaccess.c":90:15 -1
+     (nil))
+(insn 69 65 70 9 (set (reg:CCNO 17 flags)
+        (compare:CCNO (reg/v:SI 103 [ n ])
+            (const_int 0 [0]))) "groupaccess.c":90:3 -1
+     (nil))
+(jump_insn 70 69 74 9 (set (pc)
+        (if_then_else (gt (reg:CCNO 17 flags)
+                (const_int 0 [0]))
+            (label_ref 66)
+            (pc))) "groupaccess.c":90:3 -1
+     (int_list:REG_BR_PROB 1014686028 (nil))
+ -> 66)
+(note 74 70 72 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 72 74 73 10 (set (pc)
+        (label_ref 71)) "groupaccess.c":90:3 -1
+     (nil)
+ -> 71)
+(barrier 73 72 75)
+(code_label 75 73 76 11 21 (nil) [2 uses])
+(note 76 75 7 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 7 76 85 11 (set (reg:SI 101 [ <retval> ])
+        (const_int 0 [0])) "groupaccess.c":93:9 -1
+     (nil))
+(jump_insn 85 7 86 11 (set (pc)
+        (label_ref:DI 81)) 737 {jump}
+     (nil)
+ -> 81)
+(barrier 86 85 88)
+(code_label 88 86 87 12 27 (nil) [1 uses])
+(note 87 88 8 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 8 87 81 12 (set (reg:SI 101 [ <retval> ])
+        (const_int 1 [0x1])) "groupaccess.c":92:12 -1
+     (nil))
+(code_label 81 8 84 14 20 (nil) [1 uses])
+(note 84 81 82 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 82 84 83 14 (set (reg/i:SI 0 ax)
+        (reg:SI 101 [ <retval> ])) "groupaccess.c":94:1 -1
+     (nil))
+(insn 83 82 0 14 (use (reg/i:SI 0 ax)) "groupaccess.c":94:1 -1
+     (nil))
+
+;; Function ga_match_pattern_list (ga_match_pattern_list, funcdef_no=92, decl_uid=7863, cgraph_uid=93, symbol_order=94)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+Edge 2->7 redirected to 12
+Edge 3->7 redirected to 13
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Forwarding edge 8->9 to 13 failed.
+Redirecting jump 63 from 12 to 13.
+Redirecting jump 67 from 12 to 13.
+Merging block 12 into block 11...
+Merged blocks 11 and 12.
+Merged 11 and 12 without moving.
+Removing jump 55.
+
+
+try_optimize_cfg iteration 2
+
+Forwarding edge 8->9 to 13 failed.
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 9 NOTE_INSN_DELETED)
+(note 9 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 9 3 2 (set (reg/v/f:DI 92 [ group_pattern ])
+        (reg:DI 5 di [ group_pattern ])) "groupaccess.c":102:1 -1
+     (nil))
+(note 3 2 11 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 11 3 12 2 (debug_marker) "groupaccess.c":103:2 -1
+     (nil))
+(debug_insn 12 11 13 2 (var_location:SI found (const_int 0 [0])) "groupaccess.c":103:9 -1
+     (nil))
+(debug_insn 13 12 14 2 (debug_marker) "groupaccess.c":105:2 -1
+     (nil))
+(debug_insn 14 13 15 2 (var_location:SI found (const_int 0 [0])) -1
+     (nil))
+(debug_insn 15 14 16 2 (var_location:SI i (const_int 0 [0])) -1
+     (nil))
+(debug_insn 16 15 19 2 (debug_marker) "groupaccess.c":105:14 -1
+     (nil))
+(insn 19 16 20 2 (set (reg:CCNO 17 flags)
+        (compare:CCNO (mem/c:SI (symbol_ref:DI ("ngroups") [flags 0x2]  <var_decl 0x7f6e931f6090 ngroups>) [2 ngroups+0 S4 A32])
+            (const_int 0 [0]))) "groupaccess.c":105:2 -1
+     (nil))
+(jump_insn 20 19 61 2 (set (pc)
+        (if_then_else (le (reg:CCNO 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 66)
+            (pc))) "groupaccess.c":105:2 736 {*jcc}
+     (int_list:REG_BR_PROB 59055804 (nil))
+ -> 66)
+(note 61 20 4 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 4 61 5 4 (set (reg/v:SI 91 [ <retval> ])
+        (const_int 0 [0])) "groupaccess.c":103:9 -1
+     (nil))
+(insn 5 4 50 4 (set (reg/v:SI 89 [ i ])
+        (const_int 0 [0])) "groupaccess.c":105:9 -1
+     (nil))
+(code_label 50 5 21 5 38 (nil) [1 uses])
+(note 21 50 22 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 22 21 23 5 (var_location:SI found (reg/v:SI 91 [ <retval> ])) -1
+     (nil))
+(debug_insn 23 22 24 5 (var_location:SI i (reg/v:SI 89 [ i ])) -1
+     (nil))
+(debug_insn 24 23 25 5 (debug_marker) "groupaccess.c":106:3 -1
+     (nil))
+(insn 25 24 26 5 (set (reg:DI 93)
+        (sign_extend:DI (reg/v:SI 89 [ i ]))) "groupaccess.c":106:53 -1
+     (nil))
+(insn 26 25 27 5 (set (reg/f:DI 94)
+        (mem/f/c:DI (symbol_ref:DI ("groups_byname") [flags 0x2]  <var_decl 0x7f6e931f6120 groups_byname>) [1 groups_byname+0 S8 A64])) "groupaccess.c":106:11 -1
+     (nil))
+(insn 27 26 28 5 (set (reg:DI 95)
+        (mem/f:DI (plus:DI (mult:DI (reg:DI 93)
+                    (const_int 8 [0x8]))
+                (reg/f:DI 94)) [3 *_4+0 S8 A64])) "groupaccess.c":106:11 -1
+     (nil))
+(insn 28 27 29 5 (set (reg:DI 4 si)
+        (reg/v/f:DI 92 [ group_pattern ])) "groupaccess.c":106:11 -1
+     (nil))
+(insn 29 28 30 5 (set (reg:DI 5 di)
+        (reg:DI 95)) "groupaccess.c":106:11 -1
+     (nil))
+(call_insn 30 29 31 5 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("match_usergroup_pattern_list") [flags 0x41]  <function_decl 0x7f6e931fe100 match_usergroup_pattern_list>) [0 match_usergroup_pattern_list S1 A8])
+            (const_int 0 [0]))) "groupaccess.c":106:11 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("match_usergroup_pattern_list") [flags 0x41]  <function_decl 0x7f6e931fe100 match_usergroup_pattern_list>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 31 30 32 5 (set (reg:SI 87 [ _6 ])
+        (reg:SI 0 ax)) "groupaccess.c":106:11 -1
+     (nil))
+(insn 32 31 33 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 87 [ _6 ])
+            (const_int -1 [0xffffffffffffffff]))) "groupaccess.c":106:3 -1
+     (nil))
+(jump_insn 33 32 34 5 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 70)
+            (pc))) "groupaccess.c":106:3 736 {*jcc}
+     (int_list:REG_BR_PROB 268435462 (nil))
+ -> 70)
+(note 34 33 35 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 35 34 36 6 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 87 [ _6 ])
+            (const_int 1 [0x1]))) "groupaccess.c":106:3 -1
+     (nil))
+(jump_insn 36 35 37 6 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 38)
+            (pc))) "groupaccess.c":106:3 -1
+     (int_list:REG_BR_PROB 715827886 (nil))
+ -> 38)
+(note 37 36 6 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 6 37 38 7 (set (reg/v:SI 91 [ <retval> ])
+        (reg:SI 87 [ _6 ])) "groupaccess.c":106:3 -1
+     (nil))
+(code_label 38 6 39 8 37 (nil) [1 uses])
+(note 39 38 40 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 40 39 41 8 (var_location:SI found (reg/v:SI 91 [ <retval> ])) -1
+     (nil))
+(debug_insn 41 40 42 8 (debug_marker) "groupaccess.c":105:27 -1
+     (nil))
+(insn 42 41 43 8 (set (reg:SI 4 si)
+        (const_int 1 [0x1])) "groupaccess.c":105:28 -1
+     (nil))
+(insn 43 42 44 8 (set (reg:SI 5 di)
+        (reg/v:SI 89 [ i ])) "groupaccess.c":105:28 -1
+     (nil))
+(call_insn/u 44 43 45 8 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__addvsi3") [flags 0x41]  <function_decl 0x7f6e9324c500 __addvsi3>) [0  S1 A8])
+            (const_int 0 [0]))) "groupaccess.c":105:28 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__addvsi3") [flags 0x41]  <function_decl 0x7f6e9324c500 __addvsi3>)
+        (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+            (nil)))
+    (expr_list (use (reg:SI 4 si))
+        (expr_list (use (reg:SI 5 di))
+            (nil))))
+(insn 45 44 46 8 (set (reg:SI 96)
+        (reg:SI 0 ax)) "groupaccess.c":105:28 -1
+     (nil))
+(insn 46 45 47 8 (set (reg/v:SI 89 [ i ])
+        (reg:SI 96)) "groupaccess.c":105:28 -1
+     (nil))
+(debug_insn 47 46 48 8 (var_location:SI found (reg/v:SI 91 [ <retval> ])) -1
+     (nil))
+(debug_insn 48 47 49 8 (var_location:SI i (reg/v:SI 89 [ i ])) -1
+     (nil))
+(debug_insn 49 48 51 8 (debug_marker) "groupaccess.c":105:14 -1
+     (nil))
+(insn 51 49 52 8 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (symbol_ref:DI ("ngroups") [flags 0x2]  <var_decl 0x7f6e931f6090 ngroups>) [2 ngroups+0 S4 A32])
+            (reg/v:SI 89 [ i ]))) "groupaccess.c":105:2 -1
+     (nil))
+(jump_insn 52 51 62 8 (set (pc)
+        (if_then_else (gt (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 50)
+            (pc))) "groupaccess.c":105:2 -1
+     (int_list:REG_BR_PROB 1014686028 (nil))
+ -> 50)
+(note 62 52 63 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 63 62 64 9 (set (pc)
+        (label_ref:DI 57)) 737 {jump}
+     (nil)
+ -> 57)
+(barrier 64 63 66)
+(code_label 66 64 65 10 39 (nil) [1 uses])
+(note 65 66 8 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 8 65 67 10 (set (reg/v:SI 91 [ <retval> ])
+        (const_int 0 [0])) "groupaccess.c":103:9 -1
+     (nil))
+(jump_insn 67 8 68 10 (set (pc)
+        (label_ref:DI 57)) 737 {jump}
+     (nil)
+ -> 57)
+(barrier 68 67 70)
+(code_label 70 68 69 11 40 (nil) [1 uses])
+(note 69 70 7 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 7 69 57 11 (set (reg/v:SI 91 [ <retval> ])
+        (const_int 0 [0])) "groupaccess.c":106:3 -1
+     (nil))
+(code_label 57 7 60 13 35 (nil) [2 uses])
+(note 60 57 58 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 58 60 59 13 (set (reg/i:SI 0 ax)
+        (reg/v:SI 91 [ <retval> ])) "groupaccess.c":117:1 -1
+     (nil))
+(insn 59 58 0 13 (use (reg/i:SI 0 ax)) "groupaccess.c":117:1 -1
+     (nil))
+
+;; Function ga_free (ga_free, funcdef_no=93, decl_uid=7865, cgraph_uid=94, symbol_order=95)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Edge 2->7 redirected to 8
+Merging block 7 into block 6...
+Merged blocks 6 and 7.
+Merged 6 and 7 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 4 6 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 6 2 7 2 (debug_marker) "groupaccess.c":125:2 -1
+     (nil))
+(debug_insn 7 6 10 2 (debug_marker) "groupaccess.c":127:2 -1
+     (nil))
+(insn 10 7 11 2 (set (reg:CCNO 17 flags)
+        (compare:CCNO (mem/c:SI (symbol_ref:DI ("ngroups") [flags 0x2]  <var_decl 0x7f6e931f6090 ngroups>) [2 ngroups+0 S4 A32])
+            (const_int 0 [0]))) "groupaccess.c":127:5 -1
+     (nil))
+(jump_insn 11 10 12 2 (set (pc)
+        (if_then_else (le (reg:CCNO 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 45)
+            (pc))) "groupaccess.c":127:5 736 {*jcc}
+     (int_list:REG_BR_PROB 440234148 (nil))
+ -> 45)
+(note 12 11 13 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 13 12 14 4 (var_location:SI i (const_int 0 [0])) -1
+     (nil))
+(debug_insn 14 13 15 4 (debug_marker) "groupaccess.c":128:15 -1
+     (nil))
+(insn 15 14 3 4 (set (reg/f:DI 89 [ pretmp_16 ])
+        (mem/f/c:DI (symbol_ref:DI ("groups_byname") [flags 0x2]  <var_decl 0x7f6e931f6120 groups_byname>) [1 groups_byname+0 S8 A64])) "groupaccess.c":129:22 -1
+     (nil))
+(insn 3 15 31 4 (set (reg/v:SI 87 [ i ])
+        (const_int 0 [0])) "groupaccess.c":128:10 -1
+     (nil))
+(code_label 31 3 16 5 46 (nil) [1 uses])
+(note 16 31 17 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 17 16 18 5 (var_location:SI i (reg/v:SI 87 [ i ])) -1
+     (nil))
+(debug_insn 18 17 19 5 (debug_marker) "groupaccess.c":129:4 -1
+     (nil))
+(insn 19 18 20 5 (set (reg:DI 90)
+        (sign_extend:DI (reg/v:SI 87 [ i ]))) "groupaccess.c":129:22 -1
+     (nil))
+(insn 20 19 21 5 (set (reg:DI 91)
+        (mem/f:DI (plus:DI (mult:DI (reg:DI 90)
+                    (const_int 8 [0x8]))
+                (reg/f:DI 89 [ pretmp_16 ])) [3 *_11+0 S8 A64])) "groupaccess.c":129:4 -1
+     (nil))
+(insn 21 20 22 5 (set (reg:DI 5 di)
+        (reg:DI 91)) "groupaccess.c":129:4 -1
+     (nil))
+(call_insn 22 21 23 5 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x7f6e935c7900 free>) [0 __builtin_free S1 A8])
+        (const_int 0 [0])) "groupaccess.c":129:4 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x7f6e935c7900 free>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(debug_insn 23 22 24 5 (debug_marker) "groupaccess.c":128:28 -1
+     (nil))
+(insn 24 23 25 5 (set (reg:SI 4 si)
+        (const_int 1 [0x1])) "groupaccess.c":128:29 -1
+     (nil))
+(insn 25 24 26 5 (set (reg:SI 5 di)
+        (reg/v:SI 87 [ i ])) "groupaccess.c":128:29 -1
+     (nil))
+(call_insn/u 26 25 27 5 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__addvsi3") [flags 0x41]  <function_decl 0x7f6e9324c500 __addvsi3>) [0  S1 A8])
+            (const_int 0 [0]))) "groupaccess.c":128:29 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__addvsi3") [flags 0x41]  <function_decl 0x7f6e9324c500 __addvsi3>)
+        (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+            (nil)))
+    (expr_list (use (reg:SI 4 si))
+        (expr_list (use (reg:SI 5 di))
+            (nil))))
+(insn 27 26 28 5 (set (reg:SI 92)
+        (reg:SI 0 ax)) "groupaccess.c":128:29 -1
+     (nil))
+(insn 28 27 29 5 (set (reg/v:SI 87 [ i ])
+        (reg:SI 92)) "groupaccess.c":128:29 -1
+     (nil))
+(debug_insn 29 28 30 5 (var_location:SI i (reg/v:SI 87 [ i ])) -1
+     (nil))
+(debug_insn 30 29 32 5 (debug_marker) "groupaccess.c":128:15 -1
+     (nil))
+(insn 32 30 33 5 (set (reg:CCGC 17 flags)
+        (compare:CCGC (reg/v:SI 87 [ i ])
+            (mem/c:SI (symbol_ref:DI ("ngroups") [flags 0x2]  <var_decl 0x7f6e931f6090 ngroups>) [2 ngroups+0 S4 A32]))) "groupaccess.c":128:3 -1
+     (nil))
+(jump_insn 33 32 34 5 (set (pc)
+        (if_then_else (lt (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 31)
+            (pc))) "groupaccess.c":128:3 -1
+     (int_list:REG_BR_PROB 955630228 (nil))
+ -> 31)
+(note 34 33 35 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 35 34 36 6 (debug_marker) "groupaccess.c":130:3 -1
+     (nil))
+(insn 36 35 37 6 (set (mem/c:SI (symbol_ref:DI ("ngroups") [flags 0x2]  <var_decl 0x7f6e931f6090 ngroups>) [2 ngroups+0 S4 A32])
+        (const_int 0 [0])) "groupaccess.c":130:11 -1
+     (nil))
+(debug_insn 37 36 38 6 (debug_marker) "groupaccess.c":131:3 -1
+     (nil))
+(insn 38 37 39 6 (set (reg:DI 5 di)
+        (reg/f:DI 89 [ pretmp_16 ])) "groupaccess.c":131:3 -1
+     (nil))
+(call_insn 39 38 40 6 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x7f6e935c7900 free>) [0 __builtin_free S1 A8])
+        (const_int 0 [0])) "groupaccess.c":131:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x7f6e935c7900 free>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(debug_insn 40 39 41 6 (debug_marker) "groupaccess.c":132:3 -1
+     (nil))
+(insn 41 40 44 6 (set (mem/f/c:DI (symbol_ref:DI ("groups_byname") [flags 0x2]  <var_decl 0x7f6e931f6120 groups_byname>) [1 groups_byname+0 S8 A64])
+        (const_int 0 [0])) "groupaccess.c":132:17 -1
+     (nil))
+(debug_insn 44 41 45 6 (var_location:SI i (clobber (const_int 0 [0]))) -1
+     (nil))
+(code_label 45 44 46 8 44 (nil) [1 uses])
+(note 46 45 0 8 [bb 8] NOTE_INSN_BASIC_BLOCK)

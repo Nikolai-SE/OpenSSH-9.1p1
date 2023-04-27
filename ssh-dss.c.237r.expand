@@ -1,0 +1,2379 @@
+
+;; Function ssh_dss_sign (ssh_dss_sign, funcdef_no=370, decl_uid=16015, cgraph_uid=371, symbol_order=370)
+
+Partition 2: size 64 align 16
+	digest
+Partition 3: size 40 align 16
+	sigblob
+Partition 1: size 8 align 8
+	sig_s
+Partition 0: size 8 align 8
+	sig_r
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+
+;; Generating RTL for gimple basic block 11
+
+;; Generating RTL for gimple basic block 12
+
+;; Generating RTL for gimple basic block 13
+
+;; Generating RTL for gimple basic block 14
+
+;; Generating RTL for gimple basic block 15
+
+;; Generating RTL for gimple basic block 16
+
+;; Generating RTL for gimple basic block 17
+
+;; Generating RTL for gimple basic block 18
+
+;; Generating RTL for gimple basic block 19
+Selected stringop expansion strategy: libcall
+
+;; Generating RTL for gimple basic block 20
+
+;; Generating RTL for gimple basic block 21
+
+;; Generating RTL for gimple basic block 22
+
+;; Generating RTL for gimple basic block 23
+Edge 10->23 redirected to 26
+Edge 11->22 redirected to 27
+Edge 12->22 redirected to 28
+Edge 13->22 redirected to 29
+Edge 14->22 redirected to 30
+Edge 18->22 redirected to 31
+Predictions for insn 291 bb 25
+  first match heuristics: 99.96%  exec 1073741824 (estimated locally) hit 2147483640 (estimated locally) (200.0%)
+  combined heuristics: 99.96%  exec 1073741824 (estimated locally) hit 2147483640 (estimated locally) (200.0%)
+  noreturn call heuristics: 99.96%  exec 1073741824 (estimated locally) hit 2147483640 (estimated locally) (200.0%)
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Redirecting jump 56 from 31 to 32.
+Redirecting jump 298 from 31 to 32.
+Merging block 31 into block 30...
+Merged blocks 30 and 31.
+Merged 30 and 31 without moving.
+Removing jump 286.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 21 NOTE_INSN_DELETED)
+(note 21 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 21 3 2 (set (reg/v/f:DI 114 [ key ])
+        (reg:DI 5 di [ key ])) "ssh-dss.c":54:1 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v/f:DI 115 [ sigp ])
+        (reg:DI 4 si [ sigp ])) "ssh-dss.c":54:1 -1
+     (nil))
+(insn 4 3 5 2 (set (reg/v/f:DI 116 [ lenp ])
+        (reg:DI 1 dx [ lenp ])) "ssh-dss.c":54:1 -1
+     (nil))
+(insn 5 4 6 2 (set (reg/v/f:DI 117 [ data ])
+        (reg:DI 2 cx [ data ])) "ssh-dss.c":54:1 -1
+     (nil))
+(insn 6 5 7 2 (set (reg/v:DI 118 [ datalen ])
+        (reg:DI 36 r8 [ datalen ])) "ssh-dss.c":54:1 -1
+     (nil))
+(insn 7 6 8 2 (set (reg/v:SI 119 [ compat ])
+        (reg:SI 37 r9 [ compat ])) "ssh-dss.c":54:1 -1
+     (nil))
+(note 8 7 9 2 NOTE_INSN_FUNCTION_BEG)
+(insn 9 8 10 2 (set (reg/f:DI 120)
+        (const_int 40 [0x28])) "ssh-dss.c":54:1 -1
+     (nil))
+(insn 10 9 23 2 (parallel [
+            (set (mem/v/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                        (const_int -8 [0xfffffffffffffff8])) [9 D.16249+0 S8 A64])
+                (unspec:DI [
+                        (mem/v/f:DI (reg/f:DI 120) [0 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_SET))
+            (set (scratch:DI)
+                (const_int 0 [0]))
+            (clobber (reg:CC 17 flags))
+        ]) "ssh-dss.c":54:1 -1
+     (nil))
+(debug_insn 23 10 24 2 (debug_marker) "ssh-dss.c":55:2 -1
+     (nil))
+(debug_insn 24 23 25 2 (var_location:DI sig (const_int 0 [0])) "ssh-dss.c":55:11 -1
+     (nil))
+(debug_insn 25 24 26 2 (debug_marker) "ssh-dss.c":56:2 -1
+     (nil))
+(debug_insn 26 25 27 2 (debug_marker) "ssh-dss.c":57:2 -1
+     (nil))
+(debug_insn 27 26 28 2 (debug_marker) "ssh-dss.c":58:2 -1
+     (nil))
+(insn 28 27 29 2 (set (reg:SI 5 di)
+        (const_int 1 [0x1])) "ssh-dss.c":58:33 -1
+     (nil))
+(call_insn 29 28 30 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("ssh_digest_bytes") [flags 0x41]  <function_decl 0x7f12aa5b3c00 ssh_digest_bytes>) [0 ssh_digest_bytes S1 A8])
+            (const_int 0 [0]))) "ssh-dss.c":58:33 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("ssh_digest_bytes") [flags 0x41]  <function_decl 0x7f12aa5b3c00 ssh_digest_bytes>)
+        (nil))
+    (expr_list:SI (use (reg:SI 5 di))
+        (nil)))
+(insn 30 29 31 2 (set (reg/v:DI 109 [ dlen ])
+        (reg:DI 0 ax)) "ssh-dss.c":58:33 -1
+     (nil))
+(debug_insn 31 30 32 2 (var_location:DI dlen (reg/v:DI 109 [ dlen ])) "ssh-dss.c":58:33 -1
+     (nil))
+(debug_insn 32 31 33 2 (debug_marker) "ssh-dss.c":59:2 -1
+     (nil))
+(debug_insn 33 32 34 2 (var_location:DI b (const_int 0 [0])) "ssh-dss.c":59:17 -1
+     (nil))
+(debug_insn 34 33 35 2 (debug_marker) "ssh-dss.c":60:2 -1
+     (nil))
+(debug_insn 35 34 36 2 (var_location:SI ret (const_int -10 [0xfffffffffffffff6])) "ssh-dss.c":60:6 -1
+     (nil))
+(debug_insn 36 35 37 2 (debug_marker) "ssh-dss.c":62:2 -1
+     (nil))
+(insn 37 36 38 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 116 [ lenp ])
+            (const_int 0 [0]))) "ssh-dss.c":62:5 -1
+     (nil))
+(jump_insn 38 37 39 2 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 42)
+            (pc))) "ssh-dss.c":62:5 -1
+     (int_list:REG_BR_PROB 322122548 (nil))
+ -> 42)
+(note 39 38 40 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 40 39 41 4 (debug_marker) "ssh-dss.c":63:3 -1
+     (nil))
+(insn 41 40 42 4 (set (mem:DI (reg/v/f:DI 116 [ lenp ]) [1 *lenp_41(D)+0 S8 A64])
+        (const_int 0 [0])) "ssh-dss.c":63:9 -1
+     (nil))
+(code_label 42 41 43 5 2 (nil) [1 uses])
+(note 43 42 44 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 44 43 45 5 (debug_marker) "ssh-dss.c":64:2 -1
+     (nil))
+(insn 45 44 46 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 115 [ sigp ])
+            (const_int 0 [0]))) "ssh-dss.c":64:5 -1
+     (nil))
+(jump_insn 46 45 47 5 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 50)
+            (pc))) "ssh-dss.c":64:5 -1
+     (int_list:REG_BR_PROB 322122548 (nil))
+ -> 50)
+(note 47 46 48 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 48 47 49 6 (debug_marker) "ssh-dss.c":65:3 -1
+     (nil))
+(insn 49 48 50 6 (set (mem/f:DI (reg/v/f:DI 115 [ sigp ]) [7 *sigp_43(D)+0 S8 A64])
+        (const_int 0 [0])) "ssh-dss.c":65:9 -1
+     (nil))
+(code_label 50 49 51 7 3 (nil) [1 uses])
+(note 51 50 52 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 52 51 53 7 (debug_marker) "ssh-dss.c":67:2 -1
+     (nil))
+(insn 53 52 54 7 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 114 [ key ])
+            (const_int 0 [0]))) "ssh-dss.c":67:5 -1
+     (nil))
+(jump_insn 54 53 60 7 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 58)
+            (pc))) "ssh-dss.c":67:5 -1
+     (int_list:REG_BR_PROB 1068909988 (nil))
+ -> 58)
+(code_label 60 54 55 8 6 (nil) [2 uses])
+(note 55 60 19 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 19 55 56 8 (set (reg/v:SI 113 [ <retval> ])
+        (const_int -10 [0xfffffffffffffff6])) "ssh-dss.c":69:10 -1
+     (nil))
+(jump_insn 56 19 57 8 (set (pc)
+        (label_ref:DI 288)) 737 {jump}
+     (nil)
+ -> 288)
+(barrier 57 56 58)
+(code_label 58 57 59 9 4 (nil) [1 uses])
+(note 59 58 61 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 61 59 62 9 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/f:DI (plus:DI (reg/v/f:DI 114 [ key ])
+                    (const_int 16 [0x10])) [5 key_45(D)->dsa+0 S8 A64])
+            (const_int 0 [0]))) "ssh-dss.c":67:18 -1
+     (nil))
+(jump_insn 62 61 63 9 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 60)
+            (pc))) "ssh-dss.c":67:18 -1
+     (int_list:REG_BR_PROB 9771052 (nil))
+ -> 60)
+(note 63 62 64 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 64 63 65 10 (set (reg:SI 5 di)
+        (mem:SI (reg/v/f:DI 114 [ key ]) [3 key_45(D)->type+0 S4 A64])) "ssh-dss.c":68:6 -1
+     (nil))
+(call_insn 65 64 66 10 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshkey_type_plain") [flags 0x41]  <function_decl 0x7f12aa18e300 sshkey_type_plain>) [0 sshkey_type_plain S1 A8])
+            (const_int 0 [0]))) "ssh-dss.c":68:6 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshkey_type_plain") [flags 0x41]  <function_decl 0x7f12aa18e300 sshkey_type_plain>)
+        (nil))
+    (expr_list:SI (use (reg:SI 5 di))
+        (nil)))
+(insn 66 65 67 10 (set (reg:SI 84 [ _3 ])
+        (reg:SI 0 ax)) "ssh-dss.c":68:6 -1
+     (nil))
+(insn 67 66 68 10 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 84 [ _3 ])
+            (const_int 1 [0x1]))) "ssh-dss.c":67:38 -1
+     (nil))
+(jump_insn 68 67 69 10 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 60)
+            (pc))) "ssh-dss.c":67:38 -1
+     (int_list:REG_BR_PROB 21474844 (nil))
+ -> 60)
+(note 69 68 70 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 70 69 71 11 (debug_marker) "ssh-dss.c":70:2 -1
+     (nil))
+(insn 71 70 72 11 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:DI 109 [ dlen ])
+            (const_int 0 [0]))) "ssh-dss.c":70:5 -1
+     (nil))
+(jump_insn 72 71 73 11 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 301)
+            (pc))) "ssh-dss.c":70:5 736 {*jcc}
+     (int_list:REG_BR_PROB 22441212 (nil))
+ -> 301)
+(note 73 72 74 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 74 73 75 12 (debug_marker) "ssh-dss.c":73:2 -1
+     (nil))
+(insn 75 74 76 12 (parallel [
+            (set (reg:DI 121)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -80 [0xffffffffffffffb0])))
+            (clobber (reg:CC 17 flags))
+        ]) "ssh-dss.c":73:13 -1
+     (nil))
+(insn 76 75 77 12 (set (reg:DI 36 r8)
+        (const_int 64 [0x40])) "ssh-dss.c":73:13 -1
+     (nil))
+(insn 77 76 78 12 (set (reg:DI 2 cx)
+        (reg:DI 121)) "ssh-dss.c":73:13 -1
+     (nil))
+(insn 78 77 79 12 (set (reg:DI 1 dx)
+        (reg/v:DI 118 [ datalen ])) "ssh-dss.c":73:13 -1
+     (nil))
+(insn 79 78 80 12 (set (reg:DI 4 si)
+        (reg/v/f:DI 117 [ data ])) "ssh-dss.c":73:13 -1
+     (nil))
+(insn 80 79 81 12 (set (reg:SI 5 di)
+        (const_int 1 [0x1])) "ssh-dss.c":73:13 -1
+     (nil))
+(call_insn 81 80 82 12 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("ssh_digest_memory") [flags 0x41]  <function_decl 0x7f12aa5b3f00 ssh_digest_memory>) [0 ssh_digest_memory S1 A8])
+            (const_int 0 [0]))) "ssh-dss.c":73:13 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("ssh_digest_memory") [flags 0x41]  <function_decl 0x7f12aa5b3f00 ssh_digest_memory>)
+        (nil))
+    (expr_list:SI (use (reg:SI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (expr_list:DI (use (reg:DI 2 cx))
+                    (expr_list:DI (use (reg:DI 36 r8))
+                        (nil)))))))
+(insn 82 81 83 12 (set (reg/v:SI 113 [ <retval> ])
+        (reg:SI 0 ax)) "ssh-dss.c":73:13 -1
+     (nil))
+(debug_insn 83 82 84 12 (var_location:SI ret (reg/v:SI 113 [ <retval> ])) "ssh-dss.c":73:13 -1
+     (nil))
+(insn 84 83 85 12 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 113 [ <retval> ])
+            (const_int 0 [0]))) "ssh-dss.c":73:5 -1
+     (nil))
+(jump_insn 85 84 86 12 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 305)
+            (pc))) "ssh-dss.c":73:5 736 {*jcc}
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 305)
+(note 86 85 87 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 87 86 88 13 (debug_marker) "ssh-dss.c":77:2 -1
+     (nil))
+(insn 88 87 89 13 (set (reg:DI 122)
+        (mem/f:DI (plus:DI (reg/v/f:DI 114 [ key ])
+                (const_int 16 [0x10])) [5 key_45(D)->dsa+0 S8 A64])) "ssh-dss.c":77:13 -1
+     (nil))
+(insn 89 88 90 13 (parallel [
+            (set (reg:DI 123)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -80 [0xffffffffffffffb0])))
+            (clobber (reg:CC 17 flags))
+        ]) "ssh-dss.c":77:13 -1
+     (nil))
+(insn 90 89 91 13 (set (reg:DI 1 dx)
+        (reg:DI 122)) "ssh-dss.c":77:13 -1
+     (nil))
+(insn 91 90 92 13 (set (reg:SI 4 si)
+        (subreg:SI (reg/v:DI 109 [ dlen ]) 0)) "ssh-dss.c":77:13 -1
+     (nil))
+(insn 92 91 93 13 (set (reg:DI 5 di)
+        (reg:DI 123)) "ssh-dss.c":77:13 -1
+     (nil))
+(call_insn 93 92 94 13 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("DSA_do_sign") [flags 0x41]  <function_decl 0x7f12aa8b6400 DSA_do_sign>) [0 DSA_do_sign S1 A8])
+            (const_int 0 [0]))) "ssh-dss.c":77:13 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("DSA_do_sign") [flags 0x41]  <function_decl 0x7f12aa8b6400 DSA_do_sign>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(insn 94 93 95 13 (set (reg/v/f:DI 107 [ sig ])
+        (reg:DI 0 ax)) "ssh-dss.c":77:13 -1
+     (nil))
+(debug_insn 95 94 96 13 (var_location:DI sig (reg/v/f:DI 107 [ sig ])) "ssh-dss.c":77:13 -1
+     (nil))
+(insn 96 95 97 13 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 107 [ sig ])
+            (const_int 0 [0]))) "ssh-dss.c":77:5 -1
+     (nil))
+(jump_insn 97 96 98 13 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 309)
+            (pc))) "ssh-dss.c":77:5 736 {*jcc}
+     (int_list:REG_BR_PROB 332323100 (nil))
+ -> 309)
+(note 98 97 99 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 99 98 100 14 (debug_marker) "ssh-dss.c":82:2 -1
+     (nil))
+(insn 100 99 101 14 (parallel [
+            (set (reg:DI 124)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -136 [0xffffffffffffff78])))
+            (clobber (reg:CC 17 flags))
+        ]) "ssh-dss.c":82:2 -1
+     (nil))
+(insn 101 100 102 14 (parallel [
+            (set (reg:DI 125)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -144 [0xffffffffffffff70])))
+            (clobber (reg:CC 17 flags))
+        ]) "ssh-dss.c":82:2 -1
+     (nil))
+(insn 102 101 103 14 (set (reg:DI 1 dx)
+        (reg:DI 124)) "ssh-dss.c":82:2 -1
+     (nil))
+(insn 103 102 104 14 (set (reg:DI 4 si)
+        (reg:DI 125)) "ssh-dss.c":82:2 -1
+     (nil))
+(insn 104 103 105 14 (set (reg:DI 5 di)
+        (reg/v/f:DI 107 [ sig ])) "ssh-dss.c":82:2 -1
+     (nil))
+(call_insn 105 104 106 14 (call (mem:QI (symbol_ref:DI ("DSA_SIG_get0") [flags 0x41]  <function_decl 0x7f12aa8b6200 DSA_SIG_get0>) [0 DSA_SIG_get0 S1 A8])
+        (const_int 0 [0])) "ssh-dss.c":82:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("DSA_SIG_get0") [flags 0x41]  <function_decl 0x7f12aa8b6200 DSA_SIG_get0>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(debug_insn 106 105 107 14 (debug_marker) "ssh-dss.c":83:2 -1
+     (nil))
+(insn 107 106 108 14 (set (reg:DI 126)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -144 [0xffffffffffffff70])) [12 sig_r+0 S8 A64])) "ssh-dss.c":83:9 -1
+     (nil))
+(insn 108 107 109 14 (set (reg:DI 5 di)
+        (reg:DI 126)) "ssh-dss.c":83:9 -1
+     (nil))
+(call_insn 109 108 110 14 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("BN_num_bits") [flags 0x41]  <function_decl 0x7f12aab11800 BN_num_bits>) [0 BN_num_bits S1 A8])
+            (const_int 0 [0]))) "ssh-dss.c":83:9 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("BN_num_bits") [flags 0x41]  <function_decl 0x7f12aab11800 BN_num_bits>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 110 109 111 14 (set (reg:SI 88 [ _7 ])
+        (reg:SI 0 ax)) "ssh-dss.c":83:9 -1
+     (nil))
+(insn 111 110 112 14 (set (reg:SI 4 si)
+        (const_int 7 [0x7])) "ssh-dss.c":83:9 -1
+     (nil))
+(insn 112 111 113 14 (set (reg:SI 5 di)
+        (reg:SI 88 [ _7 ])) "ssh-dss.c":83:9 -1
+     (nil))
+(call_insn/u 113 112 114 14 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__addvsi3") [flags 0x41]  <function_decl 0x7f12aa1d6700 __addvsi3>) [0  S1 A8])
+            (const_int 0 [0]))) "ssh-dss.c":83:9 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__addvsi3") [flags 0x41]  <function_decl 0x7f12aa1d6700 __addvsi3>)
+        (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+            (nil)))
+    (expr_list (use (reg:SI 4 si))
+        (expr_list (use (reg:SI 5 di))
+            (nil))))
+(insn 114 113 115 14 (set (reg:SI 127)
+        (reg:SI 0 ax)) "ssh-dss.c":83:9 -1
+     (nil))
+(insn 115 114 116 14 (set (reg:SI 129)
+        (reg:SI 127)) "ssh-dss.c":83:9 -1
+     (nil))
+(insn 116 115 119 14 (parallel [
+            (set (reg:SI 130)
+                (plus:SI (reg:SI 129)
+                    (const_int 7 [0x7])))
+            (clobber (reg:CC 17 flags))
+        ]) "ssh-dss.c":83:9 -1
+     (nil))
+(insn 119 116 120 14 (set (reg:CCGOC 17 flags)
+        (compare:CCGOC (reg:SI 129)
+            (const_int 0 [0]))) "ssh-dss.c":83:9 -1
+     (nil))
+(insn 120 119 121 14 (set (reg:SI 129)
+        (if_then_else:SI (lt (reg:CCGOC 17 flags)
+                (const_int 0 [0]))
+            (reg:SI 130)
+            (reg:SI 129))) "ssh-dss.c":83:9 -1
+     (nil))
+(insn 121 120 122 14 (parallel [
+            (set (reg:SI 131)
+                (ashiftrt:SI (reg:SI 129)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "ssh-dss.c":83:9 -1
+     (expr_list:REG_EQUAL (div:SI (reg:SI 127)
+            (const_int 8 [0x8]))
+        (nil)))
+(insn 122 121 123 14 (set (reg/v:DI 110 [ rlen ])
+        (sign_extend:DI (reg:SI 131))) "ssh-dss.c":83:7 -1
+     (nil))
+(debug_insn 123 122 124 14 (var_location:DI rlen (reg/v:DI 110 [ rlen ])) "ssh-dss.c":83:7 -1
+     (nil))
+(debug_insn 124 123 125 14 (debug_marker) "ssh-dss.c":84:2 -1
+     (nil))
+(insn 125 124 126 14 (set (reg:DI 132)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -136 [0xffffffffffffff78])) [12 sig_s+0 S8 A64])) "ssh-dss.c":84:9 -1
+     (nil))
+(insn 126 125 127 14 (set (reg:DI 5 di)
+        (reg:DI 132)) "ssh-dss.c":84:9 -1
+     (nil))
+(call_insn 127 126 128 14 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("BN_num_bits") [flags 0x41]  <function_decl 0x7f12aab11800 BN_num_bits>) [0 BN_num_bits S1 A8])
+            (const_int 0 [0]))) "ssh-dss.c":84:9 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("BN_num_bits") [flags 0x41]  <function_decl 0x7f12aab11800 BN_num_bits>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 128 127 129 14 (set (reg:SI 92 [ _11 ])
+        (reg:SI 0 ax)) "ssh-dss.c":84:9 -1
+     (nil))
+(insn 129 128 130 14 (set (reg:SI 4 si)
+        (const_int 7 [0x7])) "ssh-dss.c":84:9 -1
+     (nil))
+(insn 130 129 131 14 (set (reg:SI 5 di)
+        (reg:SI 92 [ _11 ])) "ssh-dss.c":84:9 -1
+     (nil))
+(call_insn/u 131 130 132 14 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__addvsi3") [flags 0x41]  <function_decl 0x7f12aa1d6700 __addvsi3>) [0  S1 A8])
+            (const_int 0 [0]))) "ssh-dss.c":84:9 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__addvsi3") [flags 0x41]  <function_decl 0x7f12aa1d6700 __addvsi3>)
+        (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+            (nil)))
+    (expr_list (use (reg:SI 4 si))
+        (expr_list (use (reg:SI 5 di))
+            (nil))))
+(insn 132 131 133 14 (set (reg:SI 133)
+        (reg:SI 0 ax)) "ssh-dss.c":84:9 -1
+     (nil))
+(insn 133 132 134 14 (set (reg:SI 135)
+        (reg:SI 133)) "ssh-dss.c":84:9 -1
+     (nil))
+(insn 134 133 137 14 (parallel [
+            (set (reg:SI 136)
+                (plus:SI (reg:SI 135)
+                    (const_int 7 [0x7])))
+            (clobber (reg:CC 17 flags))
+        ]) "ssh-dss.c":84:9 -1
+     (nil))
+(insn 137 134 138 14 (set (reg:CCGOC 17 flags)
+        (compare:CCGOC (reg:SI 135)
+            (const_int 0 [0]))) "ssh-dss.c":84:9 -1
+     (nil))
+(insn 138 137 139 14 (set (reg:SI 135)
+        (if_then_else:SI (lt (reg:CCGOC 17 flags)
+                (const_int 0 [0]))
+            (reg:SI 136)
+            (reg:SI 135))) "ssh-dss.c":84:9 -1
+     (nil))
+(insn 139 138 140 14 (parallel [
+            (set (reg:SI 137)
+                (ashiftrt:SI (reg:SI 135)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "ssh-dss.c":84:9 -1
+     (expr_list:REG_EQUAL (div:SI (reg:SI 133)
+            (const_int 8 [0x8]))
+        (nil)))
+(insn 140 139 141 14 (set (reg/v:DI 111 [ slen ])
+        (sign_extend:DI (reg:SI 137))) "ssh-dss.c":84:7 -1
+     (nil))
+(debug_insn 141 140 142 14 (var_location:DI slen (reg/v:DI 111 [ slen ])) "ssh-dss.c":84:7 -1
+     (nil))
+(debug_insn 142 141 145 14 (debug_marker) "ssh-dss.c":85:2 -1
+     (nil))
+(insn 145 142 146 14 (set (reg:CC 17 flags)
+        (compare:CC (reg/v:DI 110 [ rlen ])
+            (const_int 20 [0x14]))) "ssh-dss.c":85:11 -1
+     (nil))
+(insn 146 145 147 14 (set (reg:QI 139)
+        (gtu:QI (reg:CC 17 flags)
+            (const_int 0 [0]))) "ssh-dss.c":85:11 -1
+     (nil))
+(insn 147 146 148 14 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 139)
+            (const_int 0 [0]))) "ssh-dss.c":85:5 -1
+     (nil))
+(jump_insn 148 147 322 14 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 313)
+            (pc))) "ssh-dss.c":85:5 736 {*jcc}
+     (int_list:REG_BR_PROB 274448420 (nil))
+ -> 313)
+(note 322 148 151 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(insn 151 322 152 15 (set (reg:CC 17 flags)
+        (compare:CC (reg/v:DI 111 [ slen ])
+            (const_int 20 [0x14]))) "ssh-dss.c":85:33 -1
+     (nil))
+(insn 152 151 153 15 (set (reg:QI 141)
+        (gtu:QI (reg:CC 17 flags)
+            (const_int 0 [0]))) "ssh-dss.c":85:33 -1
+     (nil))
+(insn 153 152 154 15 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 141)
+            (const_int 0 [0]))) "ssh-dss.c":85:5 -1
+     (nil))
+(jump_insn 154 153 155 15 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 313)
+            (pc))) "ssh-dss.c":85:5 736 {*jcc}
+     (int_list:REG_BR_PROB 368684060 (nil))
+ -> 313)
+(note 155 154 156 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 156 155 157 16 (debug_marker) "ssh-dss.c":89:2 -1
+     (nil))
+(debug_insn 157 156 158 16 (var_location:DI __dest (plus:DI (reg/f:DI 77 virtual-stack-vars)
+        (const_int -128 [0xffffffffffffff80]))) "ssh-dss.c":89:2 -1
+     (nil))
+(debug_insn 158 157 159 16 (var_location:DI __len (const_int 40 [0x28])) "ssh-dss.c":89:2 -1
+     (nil))
+(debug_insn 159 158 160 16 (debug_marker:BLK) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":81:1 -1
+     (nil))
+(debug_insn 160 159 161 16 (debug_marker) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":83:3 -1
+     (nil))
+(insn 161 160 162 16 (parallel [
+            (set (reg:DI 142)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -128 [0xffffffffffffff80])))
+            (clobber (reg:CC 17 flags))
+        ]) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":83:3 -1
+     (nil))
+(insn 162 161 163 16 (set (reg:DI 1 dx)
+        (const_int 40 [0x28])) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":83:3 -1
+     (nil))
+(insn 163 162 164 16 (set (reg:DI 4 si)
+        (const_int 40 [0x28])) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":83:3 -1
+     (nil))
+(insn 164 163 165 16 (set (reg:DI 5 di)
+        (reg:DI 142)) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":83:3 -1
+     (nil))
+(call_insn 165 164 166 16 (call (mem:QI (symbol_ref:DI ("__explicit_bzero_chk") [flags 0x41]  <function_decl 0x7f12aa53e000 __explicit_bzero_chk>) [0 __explicit_bzero_chk S1 A8])
+        (const_int 0 [0])) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":83:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__explicit_bzero_chk") [flags 0x41]  <function_decl 0x7f12aa53e000 __explicit_bzero_chk>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(debug_insn 166 165 167 16 (var_location:DI __dest (clobber (const_int 0 [0]))) "ssh-dss.c":89:2 -1
+     (nil))
+(debug_insn 167 166 168 16 (var_location:DI __len (clobber (const_int 0 [0]))) "ssh-dss.c":89:2 -1
+     (nil))
+(debug_insn 168 167 169 16 (debug_marker) "ssh-dss.c":90:2 -1
+     (nil))
+(insn 169 168 170 16 (parallel [
+            (set (reg:DI 143)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -128 [0xffffffffffffff80])))
+            (clobber (reg:CC 17 flags))
+        ]) "ssh-dss.c":90:2 -1
+     (nil))
+(insn 170 169 171 16 (set (reg:DI 145)
+        (const_int 20 [0x14])) "ssh-dss.c":90:55 -1
+     (nil))
+(insn 171 170 172 16 (parallel [
+            (set (reg:DI 144)
+                (minus:DI (reg:DI 145)
+                    (reg/v:DI 110 [ rlen ])))
+            (clobber (reg:CC 17 flags))
+        ]) "ssh-dss.c":90:55 -1
+     (nil))
+(insn 172 171 173 16 (parallel [
+            (set (reg:DI 146)
+                (plus:DI (reg:DI 143)
+                    (reg:DI 144)))
+            (clobber (reg:CC 17 flags))
+        ]) "ssh-dss.c":90:2 -1
+     (nil))
+(insn 173 172 174 16 (set (reg:DI 147)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -144 [0xffffffffffffff70])) [12 sig_r+0 S8 A64])) "ssh-dss.c":90:2 -1
+     (nil))
+(insn 174 173 175 16 (set (reg:DI 4 si)
+        (reg:DI 146)) "ssh-dss.c":90:2 -1
+     (nil))
+(insn 175 174 176 16 (set (reg:DI 5 di)
+        (reg:DI 147)) "ssh-dss.c":90:2 -1
+     (nil))
+(call_insn 176 175 177 16 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("BN_bn2bin") [flags 0x41]  <function_decl 0x7f12aab16100 BN_bn2bin>) [0 BN_bn2bin S1 A8])
+            (const_int 0 [0]))) "ssh-dss.c":90:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("BN_bn2bin") [flags 0x41]  <function_decl 0x7f12aab16100 BN_bn2bin>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(debug_insn 177 176 178 16 (debug_marker) "ssh-dss.c":91:2 -1
+     (nil))
+(insn 178 177 179 16 (parallel [
+            (set (reg:DI 148)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -128 [0xffffffffffffff80])))
+            (clobber (reg:CC 17 flags))
+        ]) "ssh-dss.c":91:2 -1
+     (nil))
+(insn 179 178 180 16 (set (reg:DI 150)
+        (const_int 40 [0x28])) "ssh-dss.c":91:41 -1
+     (nil))
+(insn 180 179 181 16 (parallel [
+            (set (reg:DI 149)
+                (minus:DI (reg:DI 150)
+                    (reg/v:DI 111 [ slen ])))
+            (clobber (reg:CC 17 flags))
+        ]) "ssh-dss.c":91:41 -1
+     (nil))
+(insn 181 180 182 16 (parallel [
+            (set (reg:DI 151)
+                (plus:DI (reg:DI 148)
+                    (reg:DI 149)))
+            (clobber (reg:CC 17 flags))
+        ]) "ssh-dss.c":91:2 -1
+     (nil))
+(insn 182 181 183 16 (set (reg:DI 152)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -136 [0xffffffffffffff78])) [12 sig_s+0 S8 A64])) "ssh-dss.c":91:2 -1
+     (nil))
+(insn 183 182 184 16 (set (reg:DI 4 si)
+        (reg:DI 151)) "ssh-dss.c":91:2 -1
+     (nil))
+(insn 184 183 185 16 (set (reg:DI 5 di)
+        (reg:DI 152)) "ssh-dss.c":91:2 -1
+     (nil))
+(call_insn 185 184 186 16 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("BN_bn2bin") [flags 0x41]  <function_decl 0x7f12aab16100 BN_bn2bin>) [0 BN_bn2bin S1 A8])
+            (const_int 0 [0]))) "ssh-dss.c":91:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("BN_bn2bin") [flags 0x41]  <function_decl 0x7f12aab16100 BN_bn2bin>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(debug_insn 186 185 187 16 (debug_marker) "ssh-dss.c":93:2 -1
+     (nil))
+(call_insn 187 186 188 16 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshbuf_new") [flags 0x41]  <function_decl 0x7f12aa58bf00 sshbuf_new>) [0 sshbuf_new S1 A8])
+            (const_int 0 [0]))) "ssh-dss.c":93:11 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_new") [flags 0x41]  <function_decl 0x7f12aa58bf00 sshbuf_new>)
+        (nil))
+    (nil))
+(insn 188 187 189 16 (set (reg/v/f:DI 108 [ b ])
+        (reg:DI 0 ax)) "ssh-dss.c":93:11 -1
+     (nil))
+(debug_insn 189 188 190 16 (var_location:DI b (reg/v/f:DI 108 [ b ])) "ssh-dss.c":93:11 -1
+     (nil))
+(insn 190 189 191 16 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 108 [ b ])
+            (const_int 0 [0]))) "ssh-dss.c":93:5 -1
+     (nil))
+(jump_insn 191 190 192 16 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 317)
+            (pc))) "ssh-dss.c":93:5 736 {*jcc}
+     (int_list:REG_BR_PROB 332323100 (nil))
+ -> 317)
+(note 192 191 193 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 193 192 194 17 (debug_marker) "ssh-dss.c":97:2 -1
+     (nil))
+(insn 194 193 195 17 (set (reg:DI 4 si)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f12aa1dbe10 *.LC0>)) "ssh-dss.c":97:13 -1
+     (nil))
+(insn 195 194 196 17 (set (reg:DI 5 di)
+        (reg/v/f:DI 108 [ b ])) "ssh-dss.c":97:13 -1
+     (nil))
+(call_insn 196 195 197 17 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshbuf_put_cstring") [flags 0x41]  <function_decl 0x7f12aa5a6a00 sshbuf_put_cstring>) [0 sshbuf_put_cstring S1 A8])
+            (const_int 0 [0]))) "ssh-dss.c":97:13 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_put_cstring") [flags 0x41]  <function_decl 0x7f12aa5a6a00 sshbuf_put_cstring>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 197 196 198 17 (set (reg/v:SI 113 [ <retval> ])
+        (reg:SI 0 ax)) "ssh-dss.c":97:13 -1
+     (nil))
+(debug_insn 198 197 199 17 (var_location:SI ret (reg/v:SI 113 [ <retval> ])) "ssh-dss.c":97:13 -1
+     (nil))
+(insn 199 198 200 17 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 113 [ <retval> ])
+            (const_int 0 [0]))) "ssh-dss.c":97:5 -1
+     (nil))
+(jump_insn 200 199 201 17 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 260)
+            (pc))) "ssh-dss.c":97:5 -1
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 260)
+(note 201 200 202 18 [bb 18] NOTE_INSN_BASIC_BLOCK)
+(insn 202 201 203 18 (parallel [
+            (set (reg:DI 153)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -128 [0xffffffffffffff80])))
+            (clobber (reg:CC 17 flags))
+        ]) "ssh-dss.c":98:13 -1
+     (nil))
+(insn 203 202 204 18 (set (reg:DI 1 dx)
+        (const_int 40 [0x28])) "ssh-dss.c":98:13 -1
+     (nil))
+(insn 204 203 205 18 (set (reg:DI 4 si)
+        (reg:DI 153)) "ssh-dss.c":98:13 -1
+     (nil))
+(insn 205 204 206 18 (set (reg:DI 5 di)
+        (reg/v/f:DI 108 [ b ])) "ssh-dss.c":98:13 -1
+     (nil))
+(call_insn 206 205 207 18 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshbuf_put_string") [flags 0x41]  <function_decl 0x7f12aa5a6900 sshbuf_put_string>) [0 sshbuf_put_string S1 A8])
+            (const_int 0 [0]))) "ssh-dss.c":98:13 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_put_string") [flags 0x41]  <function_decl 0x7f12aa5a6900 sshbuf_put_string>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(insn 207 206 208 18 (set (reg/v:SI 113 [ <retval> ])
+        (reg:SI 0 ax)) "ssh-dss.c":98:13 -1
+     (nil))
+(debug_insn 208 207 209 18 (var_location:SI ret (reg/v:SI 113 [ <retval> ])) "ssh-dss.c":98:13 -1
+     (nil))
+(insn 209 208 210 18 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 113 [ <retval> ])
+            (const_int 0 [0]))) "ssh-dss.c":97:52 -1
+     (nil))
+(jump_insn 210 209 211 18 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 260)
+            (pc))) "ssh-dss.c":97:52 -1
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 260)
+(note 211 210 212 19 [bb 19] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 212 211 213 19 (debug_marker) "ssh-dss.c":101:2 -1
+     (nil))
+(insn 213 212 214 19 (set (reg:DI 5 di)
+        (reg/v/f:DI 108 [ b ])) "ssh-dss.c":101:8 -1
+     (nil))
+(call_insn 214 213 215 19 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshbuf_len") [flags 0x41]  <function_decl 0x7f12aa59e700 sshbuf_len>) [0 sshbuf_len S1 A8])
+            (const_int 0 [0]))) "ssh-dss.c":101:8 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_len") [flags 0x41]  <function_decl 0x7f12aa59e700 sshbuf_len>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 215 214 216 19 (set (reg/v:DI 112 [ len ])
+        (reg:DI 0 ax)) "ssh-dss.c":101:8 -1
+     (nil))
+(debug_insn 216 215 217 19 (var_location:DI len (reg/v:DI 112 [ len ])) "ssh-dss.c":101:8 -1
+     (nil))
+(debug_insn 217 216 218 19 (debug_marker) "ssh-dss.c":102:2 -1
+     (nil))
+(insn 218 217 219 19 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 115 [ sigp ])
+            (const_int 0 [0]))) "ssh-dss.c":102:5 -1
+     (nil))
+(jump_insn 219 218 220 19 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 249)
+            (pc))) "ssh-dss.c":102:5 -1
+     (int_list:REG_BR_PROB 499612076 (nil))
+ -> 249)
+(note 220 219 221 20 [bb 20] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 221 220 222 20 (debug_marker) "ssh-dss.c":103:3 -1
+     (nil))
+(insn 222 221 223 20 (set (reg:DI 5 di)
+        (reg/v:DI 112 [ len ])) "ssh-dss.c":103:16 -1
+     (nil))
+(call_insn 223 222 224 20 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x7f12aae66400 malloc>) [0 __builtin_malloc S1 A8])
+            (const_int 0 [0]))) "ssh-dss.c":103:16 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x7f12aae66400 malloc>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 224 223 225 20 (set (reg/f:DI 154)
+        (reg:DI 0 ax)) "ssh-dss.c":103:16 -1
+     (expr_list:REG_NOALIAS (reg/f:DI 154)
+        (nil)))
+(insn 225 224 226 20 (set (reg/f:DI 104 [ _23 ])
+        (reg/f:DI 154)) "ssh-dss.c":103:16 -1
+     (nil))
+(insn 226 225 227 20 (set (mem/f:DI (reg/v/f:DI 115 [ sigp ]) [7 *sigp_43(D)+0 S8 A64])
+        (reg/f:DI 104 [ _23 ])) "ssh-dss.c":103:14 -1
+     (nil))
+(insn 227 226 228 20 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/f:DI 104 [ _23 ])
+            (const_int 0 [0]))) "ssh-dss.c":103:6 -1
+     (nil))
+(jump_insn 228 227 229 20 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 321)
+            (pc))) "ssh-dss.c":103:6 736 {*jcc}
+     (int_list:REG_BR_PROB 429500 (nil))
+ -> 321)
+(note 229 228 230 21 [bb 21] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 230 229 231 21 (debug_marker) "ssh-dss.c":107:3 -1
+     (nil))
+(insn 231 230 232 21 (set (reg:DI 5 di)
+        (reg/v/f:DI 108 [ b ])) "ssh-dss.c":107:17 -1
+     (nil))
+(call_insn 232 231 233 21 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshbuf_ptr") [flags 0x41]  <function_decl 0x7f12aa59e900 sshbuf_ptr>) [0 sshbuf_ptr S1 A8])
+            (const_int 0 [0]))) "ssh-dss.c":107:17 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_ptr") [flags 0x41]  <function_decl 0x7f12aa59e900 sshbuf_ptr>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 233 232 234 21 (set (reg/f:DI 105 [ _24 ])
+        (reg:DI 0 ax)) "ssh-dss.c":107:17 -1
+     (nil))
+(debug_insn 234 233 235 21 (var_location:DI __dest (mem/f:DI (reg/v/f:DI 115 [ sigp ]) [7 *sigp_43(D)+0 S8 A64])) "ssh-dss.c":107:3 -1
+     (nil))
+(debug_insn 235 234 236 21 (var_location:DI __src (reg/f:DI 105 [ _24 ])) "ssh-dss.c":107:3 -1
+     (nil))
+(debug_insn 236 235 237 21 (var_location:DI __len (reg/v:DI 112 [ len ])) "ssh-dss.c":107:3 -1
+     (nil))
+(debug_insn 237 236 238 21 (debug_marker:BLK) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":31:1 -1
+     (nil))
+(debug_insn 238 237 239 21 (debug_marker) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:3 -1
+     (nil))
+(insn 239 238 240 21 (set (reg/f:DI 155)
+        (mem/f:DI (reg/v/f:DI 115 [ sigp ]) [7 *sigp_43(D)+0 S8 A64])) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (nil))
+(insn 240 239 241 21 (set (reg:DI 156)
+        (reg/f:DI 155)) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (nil))
+(insn 241 240 242 21 (set (reg:DI 157)
+        (reg/f:DI 105 [ _24 ])) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (nil))
+(insn 242 241 243 21 (set (reg:DI 158)
+        (reg/v:DI 112 [ len ])) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (nil))
+(insn 243 242 244 21 (set (reg:DI 1 dx)
+        (reg:DI 158)) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (nil))
+(insn 244 243 245 21 (set (reg:DI 4 si)
+        (reg:DI 157)) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (nil))
+(insn 245 244 246 21 (set (reg:DI 5 di)
+        (reg:DI 156)) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (nil))
+(call_insn 246 245 247 21 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("memcpy") [flags 0x41]  <function_decl 0x7f12aae3a700 __builtin_memcpy>) [0 __builtin_memcpy S1 A8])
+            (const_int 0 [0]))) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("memcpy") [flags 0x41]  <function_decl 0x7f12aae3a700 __builtin_memcpy>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (set (reg:DI 0 ax)
+            (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (expr_list:DI (use (reg:DI 1 dx))
+                    (nil))))))
+(insn 247 246 248 21 (set (reg:DI 159)
+        (reg:DI 0 ax)) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (nil))
+(insn 248 247 249 21 (set (reg:DI 160)
+        (reg:DI 159)) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (nil))
+(code_label 249 248 250 22 8 (nil) [1 uses])
+(note 250 249 251 22 [bb 22] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 251 250 252 22 (var_location:DI __dest (clobber (const_int 0 [0]))) "ssh-dss.c":107:3 -1
+     (nil))
+(debug_insn 252 251 253 22 (var_location:DI __src (clobber (const_int 0 [0]))) "ssh-dss.c":107:3 -1
+     (nil))
+(debug_insn 253 252 254 22 (var_location:DI __len (clobber (const_int 0 [0]))) "ssh-dss.c":107:3 -1
+     (nil))
+(debug_insn 254 253 255 22 (debug_marker) "ssh-dss.c":109:2 -1
+     (nil))
+(insn 255 254 256 22 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 116 [ lenp ])
+            (const_int 0 [0]))) "ssh-dss.c":109:5 -1
+     (nil))
+(jump_insn 256 255 257 22 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 260)
+            (pc))) "ssh-dss.c":109:5 -1
+     (int_list:REG_BR_PROB 322122548 (nil))
+ -> 260)
+(note 257 256 258 23 [bb 23] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 258 257 259 23 (debug_marker) "ssh-dss.c":110:3 -1
+     (nil))
+(insn 259 258 302 23 (set (mem:DI (reg/v/f:DI 116 [ lenp ]) [1 *lenp_41(D)+0 S8 A64])
+        (reg/v:DI 112 [ len ])) "ssh-dss.c":110:9 -1
+     (nil))
+(jump_insn 302 259 303 23 (set (pc)
+        (label_ref 260)) -1
+     (nil)
+ -> 260)
+(barrier 303 302 305)
+(code_label 305 303 304 24 11 (nil) [1 uses])
+(note 304 305 16 24 [bb 24] NOTE_INSN_BASIC_BLOCK)
+(insn 16 304 17 24 (set (reg/v/f:DI 108 [ b ])
+        (const_int 0 [0])) "ssh-dss.c":59:17 -1
+     (nil))
+(insn 17 16 306 24 (set (reg/v/f:DI 107 [ sig ])
+        (const_int 0 [0])) "ssh-dss.c":55:11 -1
+     (nil))
+(jump_insn 306 17 307 24 (set (pc)
+        (label_ref 260)) -1
+     (nil)
+ -> 260)
+(barrier 307 306 309)
+(code_label 309 307 308 25 12 (nil) [1 uses])
+(note 308 309 11 25 [bb 25] NOTE_INSN_BASIC_BLOCK)
+(insn 11 308 12 25 (set (reg/v/f:DI 108 [ b ])
+        (reg/v/f:DI 107 [ sig ])) "ssh-dss.c":59:17 -1
+     (nil))
+(insn 12 11 310 25 (set (reg/v:SI 113 [ <retval> ])
+        (const_int -22 [0xffffffffffffffea])) "ssh-dss.c":78:7 -1
+     (nil))
+(jump_insn 310 12 311 25 (set (pc)
+        (label_ref 260)) -1
+     (nil)
+ -> 260)
+(barrier 311 310 313)
+(code_label 313 311 312 26 13 (nil) [2 uses])
+(note 312 313 13 26 [bb 26] NOTE_INSN_BASIC_BLOCK)
+(insn 13 312 14 26 (set (reg/v:SI 113 [ <retval> ])
+        (const_int -1 [0xffffffffffffffff])) "ssh-dss.c":86:7 -1
+     (nil))
+(insn 14 13 314 26 (set (reg/v/f:DI 108 [ b ])
+        (const_int 0 [0])) "ssh-dss.c":59:17 -1
+     (nil))
+(jump_insn 314 14 315 26 (set (pc)
+        (label_ref 260)) -1
+     (nil)
+ -> 260)
+(barrier 315 314 317)
+(code_label 317 315 316 27 14 (nil) [1 uses])
+(note 316 317 18 27 [bb 27] NOTE_INSN_BASIC_BLOCK)
+(insn 18 316 318 27 (set (reg/v:SI 113 [ <retval> ])
+        (const_int -2 [0xfffffffffffffffe])) "ssh-dss.c":94:7 -1
+     (nil))
+(jump_insn 318 18 319 27 (set (pc)
+        (label_ref 260)) -1
+     (nil)
+ -> 260)
+(barrier 319 318 321)
+(code_label 321 319 320 28 15 (nil) [1 uses])
+(note 320 321 15 28 [bb 28] NOTE_INSN_BASIC_BLOCK)
+(insn 15 320 260 28 (set (reg/v:SI 113 [ <retval> ])
+        (const_int -2 [0xfffffffffffffffe])) "ssh-dss.c":104:8 -1
+     (nil))
+(code_label 260 15 261 29 7 ("out") [8 uses])
+(note 261 260 262 29 [bb 29] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 262 261 263 29 (var_location:SI ret (reg/v:SI 113 [ <retval> ])) -1
+     (nil))
+(debug_insn 263 262 264 29 (var_location:DI b (reg/v/f:DI 108 [ b ])) -1
+     (nil))
+(debug_insn 264 263 265 29 (var_location:DI sig (reg/v/f:DI 107 [ sig ])) -1
+     (nil))
+(debug_insn 265 264 266 29 (debug_marker) "ssh-dss.c":113:2 -1
+     (nil))
+(debug_insn 266 265 267 29 (var_location:DI __dest (plus:DI (reg/f:DI 77 virtual-stack-vars)
+        (const_int -80 [0xffffffffffffffb0]))) "ssh-dss.c":113:2 -1
+     (nil))
+(debug_insn 267 266 268 29 (var_location:DI __len (const_int 64 [0x40])) "ssh-dss.c":113:2 -1
+     (nil))
+(debug_insn 268 267 269 29 (debug_marker:BLK) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":81:1 -1
+     (nil))
+(debug_insn 269 268 270 29 (debug_marker) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":83:3 -1
+     (nil))
+(insn 270 269 271 29 (parallel [
+            (set (reg:DI 161)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -80 [0xffffffffffffffb0])))
+            (clobber (reg:CC 17 flags))
+        ]) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":83:3 -1
+     (nil))
+(insn 271 270 272 29 (set (reg:DI 1 dx)
+        (const_int 64 [0x40])) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":83:3 -1
+     (nil))
+(insn 272 271 273 29 (set (reg:DI 4 si)
+        (const_int 64 [0x40])) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":83:3 -1
+     (nil))
+(insn 273 272 274 29 (set (reg:DI 5 di)
+        (reg:DI 161)) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":83:3 -1
+     (nil))
+(call_insn 274 273 275 29 (call (mem:QI (symbol_ref:DI ("__explicit_bzero_chk") [flags 0x41]  <function_decl 0x7f12aa53e000 __explicit_bzero_chk>) [0 __explicit_bzero_chk S1 A8])
+        (const_int 0 [0])) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":83:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__explicit_bzero_chk") [flags 0x41]  <function_decl 0x7f12aa53e000 __explicit_bzero_chk>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(debug_insn 275 274 276 29 (var_location:DI __dest (clobber (const_int 0 [0]))) "ssh-dss.c":113:2 -1
+     (nil))
+(debug_insn 276 275 277 29 (var_location:DI __len (clobber (const_int 0 [0]))) "ssh-dss.c":113:2 -1
+     (nil))
+(debug_insn 277 276 278 29 (debug_marker) "ssh-dss.c":114:2 -1
+     (nil))
+(insn 278 277 279 29 (set (reg:DI 5 di)
+        (reg/v/f:DI 107 [ sig ])) "ssh-dss.c":114:2 -1
+     (nil))
+(call_insn 279 278 280 29 (call (mem:QI (symbol_ref:DI ("DSA_SIG_free") [flags 0x41]  <function_decl 0x7f12aa8a7f00 DSA_SIG_free>) [0 DSA_SIG_free S1 A8])
+        (const_int 0 [0])) "ssh-dss.c":114:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("DSA_SIG_free") [flags 0x41]  <function_decl 0x7f12aa8a7f00 DSA_SIG_free>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(debug_insn 280 279 281 29 (debug_marker) "ssh-dss.c":115:2 -1
+     (nil))
+(insn 281 280 282 29 (set (reg:DI 5 di)
+        (reg/v/f:DI 108 [ b ])) "ssh-dss.c":115:2 -1
+     (nil))
+(call_insn 282 281 283 29 (call (mem:QI (symbol_ref:DI ("sshbuf_free") [flags 0x41]  <function_decl 0x7f12aa59e300 sshbuf_free>) [0 sshbuf_free S1 A8])
+        (const_int 0 [0])) "ssh-dss.c":115:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_free") [flags 0x41]  <function_decl 0x7f12aa59e300 sshbuf_free>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(debug_insn 283 282 298 29 (debug_marker) "ssh-dss.c":116:2 -1
+     (nil))
+(jump_insn 298 283 299 29 (set (pc)
+        (label_ref:DI 288)) "ssh-dss.c":116:9 737 {jump}
+     (nil)
+ -> 288)
+(barrier 299 298 301)
+(code_label 301 299 300 30 10 (nil) [1 uses])
+(note 300 301 20 30 [bb 30] NOTE_INSN_BASIC_BLOCK)
+(insn 20 300 288 30 (set (reg/v:SI 113 [ <retval> ])
+        (const_int -1 [0xffffffffffffffff])) "ssh-dss.c":71:10 -1
+     (nil))
+(code_label 288 20 297 32 1 (nil) [2 uses])
+(note 297 288 289 32 [bb 32] NOTE_INSN_BASIC_BLOCK)
+(insn 289 297 290 32 (set (reg/f:DI 163)
+        (const_int 40 [0x28])) "ssh-dss.c":117:1 -1
+     (nil))
+(insn 290 289 291 32 (parallel [
+            (set (reg:CCZ 17 flags)
+                (unspec:CCZ [
+                        (mem/v/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                                (const_int -8 [0xfffffffffffffff8])) [9 D.16249+0 S8 A64])
+                        (mem/v/f:DI (reg/f:DI 163) [0 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_TEST))
+            (clobber (scratch:DI))
+        ]) "ssh-dss.c":117:1 -1
+     (nil))
+(jump_insn 291 290 323 32 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 294)
+            (pc))) "ssh-dss.c":117:1 -1
+     (int_list:REG_BR_PROB 1073312332 (nil))
+ -> 294)
+(note 323 291 292 33 [bb 33] NOTE_INSN_BASIC_BLOCK)
+(call_insn 292 323 293 33 (call (mem:QI (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7f12aa1bc000 __stack_chk_fail>) [0 __stack_chk_fail S1 A8])
+        (const_int 0 [0])) "ssh-dss.c":117:1 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7f12aa1bc000 __stack_chk_fail>)
+        (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+            (expr_list:REG_NORETURN (const_int 0 [0])
+                (expr_list:REG_EH_REGION (const_int 0 [0])
+                    (nil)))))
+    (nil))
+(barrier 293 292 294)
+(code_label 294 293 324 34 9 (nil) [1 uses])
+(note 324 294 295 34 [bb 34] NOTE_INSN_BASIC_BLOCK)
+(insn 295 324 296 34 (set (reg/i:SI 0 ax)
+        (reg/v:SI 113 [ <retval> ])) "ssh-dss.c":117:1 -1
+     (nil))
+(insn 296 295 0 34 (use (reg/i:SI 0 ax)) "ssh-dss.c":117:1 -1
+     (nil))
+
+;; Function ssh_dss_verify (ssh_dss_verify, funcdef_no=371, decl_uid=16022, cgraph_uid=372, symbol_order=371)
+
+Partition 0: size 64 align 16
+	digest
+Partition 3: size 8 align 8
+	ktype
+Partition 2: size 8 align 8
+	len
+Partition 1: size 8 align 8
+	sigblob
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+
+;; Generating RTL for gimple basic block 11
+
+;; Generating RTL for gimple basic block 12
+
+;; Generating RTL for gimple basic block 13
+
+;; Generating RTL for gimple basic block 14
+
+;; Generating RTL for gimple basic block 15
+
+;; Generating RTL for gimple basic block 16
+
+;; Generating RTL for gimple basic block 17
+
+;; Generating RTL for gimple basic block 18
+
+;; Generating RTL for gimple basic block 19
+
+;; Generating RTL for gimple basic block 20
+
+;; Generating RTL for gimple basic block 21
+
+;; Generating RTL for gimple basic block 22
+
+;; Generating RTL for gimple basic block 23
+
+;; Generating RTL for gimple basic block 24
+
+;; Generating RTL for gimple basic block 25
+
+;; Generating RTL for gimple basic block 26
+
+;; Generating RTL for gimple basic block 27
+Edge 7->27 redirected to 30
+Edge 8->27 redirected to 31
+Edge 12->25 redirected to 32
+Edge 13->25 redirected to 33
+Edge 15->25 redirected to 34
+Edge 16->25 redirected to 35
+Edge 17->25 redirected to 36
+Edge 18->25 redirected to 37
+Edge 19->25 redirected to 38
+Edge 20->25 redirected to 39
+Edge 21->25 redirected to 40
+Edge 22->25 redirected to 41
+Edge 23->25 redirected to 42
+Predictions for insn 285 bb 29
+  first match heuristics: 99.96%  exec 1073741824 (estimated locally) hit 2147483640 (estimated locally) (200.0%)
+  combined heuristics: 99.96%  exec 1073741824 (estimated locally) hit 2147483640 (estimated locally) (200.0%)
+  noreturn call heuristics: 99.96%  exec 1073741824 (estimated locally) hit 2147483640 (estimated locally) (200.0%)
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Redirecting jump 69 from 42 to 43.
+Edge 38->42 redirected to 43
+Redirecting jump 292 from 42 to 43.
+Redirecting jump 296 from 42 to 43.
+Merging block 42 into block 41...
+Merged blocks 41 and 42.
+Merged 41 and 42 without moving.
+Removing jump 280.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 45 NOTE_INSN_DELETED)
+(note 45 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 45 3 2 (set (reg/v/f:DI 112 [ key ])
+        (reg:DI 5 di [ key ])) "ssh-dss.c":123:1 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v/f:DI 113 [ signature ])
+        (reg:DI 4 si [ signature ])) "ssh-dss.c":123:1 -1
+     (nil))
+(insn 4 3 5 2 (set (reg/v:DI 114 [ signaturelen ])
+        (reg:DI 1 dx [ signaturelen ])) "ssh-dss.c":123:1 -1
+     (nil))
+(insn 5 4 6 2 (set (reg/v/f:DI 115 [ data ])
+        (reg:DI 2 cx [ data ])) "ssh-dss.c":123:1 -1
+     (nil))
+(insn 6 5 7 2 (set (reg/v:DI 116 [ datalen ])
+        (reg:DI 36 r8 [ datalen ])) "ssh-dss.c":123:1 -1
+     (nil))
+(insn 7 6 8 2 (set (reg/v:SI 117 [ compat ])
+        (reg:SI 37 r9 [ compat ])) "ssh-dss.c":123:1 -1
+     (nil))
+(note 8 7 9 2 NOTE_INSN_FUNCTION_BEG)
+(insn 9 8 10 2 (set (reg/f:DI 118)
+        (const_int 40 [0x28])) "ssh-dss.c":123:1 -1
+     (nil))
+(insn 10 9 47 2 (parallel [
+            (set (mem/v/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                        (const_int -8 [0xfffffffffffffff8])) [9 D.16261+0 S8 A64])
+                (unspec:DI [
+                        (mem/v/f:DI (reg/f:DI 118) [0 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_SET))
+            (set (scratch:DI)
+                (const_int 0 [0]))
+            (clobber (reg:CC 17 flags))
+        ]) "ssh-dss.c":123:1 -1
+     (nil))
+(debug_insn 47 10 48 2 (debug_marker) "ssh-dss.c":124:2 -1
+     (nil))
+(debug_insn 48 47 49 2 (var_location:DI sig (const_int 0 [0])) "ssh-dss.c":124:11 -1
+     (nil))
+(debug_insn 49 48 50 2 (debug_marker) "ssh-dss.c":125:2 -1
+     (nil))
+(debug_insn 50 49 51 2 (var_location:DI sig_r (const_int 0 [0])) "ssh-dss.c":125:10 -1
+     (nil))
+(debug_insn 51 50 52 2 (var_location:DI sig_s (const_int 0 [0])) "ssh-dss.c":125:25 -1
+     (nil))
+(debug_insn 52 51 53 2 (debug_marker) "ssh-dss.c":126:2 -1
+     (nil))
+(insn 53 52 54 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -104 [0xffffffffffffff98])) [7 sigblob+0 S8 A64])
+        (const_int 0 [0])) "ssh-dss.c":126:41 -1
+     (nil))
+(debug_insn 54 53 55 2 (debug_marker) "ssh-dss.c":127:2 -1
+     (nil))
+(insn 55 54 56 2 (set (reg:SI 5 di)
+        (const_int 1 [0x1])) "ssh-dss.c":127:21 -1
+     (nil))
+(call_insn 56 55 57 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("ssh_digest_bytes") [flags 0x41]  <function_decl 0x7f12aa5b3c00 ssh_digest_bytes>) [0 ssh_digest_bytes S1 A8])
+            (const_int 0 [0]))) "ssh-dss.c":127:21 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("ssh_digest_bytes") [flags 0x41]  <function_decl 0x7f12aa5b3c00 ssh_digest_bytes>)
+        (nil))
+    (expr_list:SI (use (reg:SI 5 di))
+        (nil)))
+(insn 57 56 58 2 (set (reg/v:DI 109 [ dlen ])
+        (reg:DI 0 ax)) "ssh-dss.c":127:21 -1
+     (nil))
+(debug_insn 58 57 59 2 (var_location:DI dlen (reg/v:DI 109 [ dlen ])) "ssh-dss.c":127:21 -1
+     (nil))
+(debug_insn 59 58 60 2 (debug_marker) "ssh-dss.c":128:2 -1
+     (nil))
+(debug_insn 60 59 61 2 (var_location:SI ret (const_int -1 [0xffffffffffffffff])) "ssh-dss.c":128:6 -1
+     (nil))
+(debug_insn 61 60 62 2 (debug_marker) "ssh-dss.c":129:2 -1
+     (nil))
+(debug_insn 62 61 63 2 (var_location:DI b (const_int 0 [0])) "ssh-dss.c":129:17 -1
+     (nil))
+(debug_insn 63 62 64 2 (debug_marker) "ssh-dss.c":130:2 -1
+     (nil))
+(insn 64 63 65 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -88 [0xffffffffffffffa8])) [8 ktype+0 S8 A64])
+        (const_int 0 [0])) "ssh-dss.c":130:8 -1
+     (nil))
+(debug_insn 65 64 66 2 (debug_marker) "ssh-dss.c":132:2 -1
+     (nil))
+(insn 66 65 67 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 112 [ key ])
+            (const_int 0 [0]))) "ssh-dss.c":132:5 -1
+     (nil))
+(jump_insn 67 66 73 2 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 71)
+            (pc))) "ssh-dss.c":132:5 -1
+     (int_list:REG_BR_PROB 1068909988 (nil))
+ -> 71)
+(code_label 73 67 68 4 36 (nil) [4 uses])
+(note 68 73 42 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 42 68 69 4 (set (reg/v:SI 111 [ <retval> ])
+        (const_int -10 [0xfffffffffffffff6])) "ssh-dss.c":135:10 -1
+     (nil))
+(jump_insn 69 42 70 4 (set (pc)
+        (label_ref:DI 282)) 737 {jump}
+     (nil)
+ -> 282)
+(barrier 70 69 71)
+(code_label 71 70 72 5 34 (nil) [1 uses])
+(note 72 71 74 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 74 72 75 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/f:DI (plus:DI (reg/v/f:DI 112 [ key ])
+                    (const_int 16 [0x10])) [5 key_43(D)->dsa+0 S8 A64])
+            (const_int 0 [0]))) "ssh-dss.c":132:18 -1
+     (nil))
+(jump_insn 75 74 76 5 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 73)
+            (pc))) "ssh-dss.c":132:18 -1
+     (int_list:REG_BR_PROB 9771052 (nil))
+ -> 73)
+(note 76 75 77 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 77 76 78 6 (set (reg:SI 5 di)
+        (mem:SI (reg/v/f:DI 112 [ key ]) [3 key_43(D)->type+0 S4 A64])) "ssh-dss.c":133:6 -1
+     (nil))
+(call_insn 78 77 79 6 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshkey_type_plain") [flags 0x41]  <function_decl 0x7f12aa18e300 sshkey_type_plain>) [0 sshkey_type_plain S1 A8])
+            (const_int 0 [0]))) "ssh-dss.c":133:6 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshkey_type_plain") [flags 0x41]  <function_decl 0x7f12aa18e300 sshkey_type_plain>)
+        (nil))
+    (expr_list:SI (use (reg:SI 5 di))
+        (nil)))
+(insn 79 78 80 6 (set (reg:SI 84 [ _3 ])
+        (reg:SI 0 ax)) "ssh-dss.c":133:6 -1
+     (nil))
+(insn 80 79 81 6 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 84 [ _3 ])
+            (const_int 1 [0x1]))) "ssh-dss.c":132:38 -1
+     (nil))
+(jump_insn 81 80 82 6 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 73)
+            (pc))) "ssh-dss.c":132:38 -1
+     (int_list:REG_BR_PROB 21474844 (nil))
+ -> 73)
+(note 82 81 83 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 83 82 84 7 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 113 [ signature ])
+            (const_int 0 [0]))) "ssh-dss.c":134:16 -1
+     (nil))
+(insn 84 83 85 7 (set (reg:QI 120)
+        (eq:QI (reg:CCZ 17 flags)
+            (const_int 0 [0]))) "ssh-dss.c":134:16 -1
+     (nil))
+(insn 85 84 86 7 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 120)
+            (const_int 0 [0]))) "ssh-dss.c":134:24 -1
+     (nil))
+(jump_insn 86 85 344 7 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 73)
+            (pc))) "ssh-dss.c":134:24 -1
+     (int_list:REG_BR_PROB 5583460 (nil))
+ -> 73)
+(note 344 86 87 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 87 344 88 8 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:DI 114 [ signaturelen ])
+            (const_int 0 [0]))) "ssh-dss.c":134:40 -1
+     (nil))
+(insn 88 87 89 8 (set (reg:QI 122)
+        (eq:QI (reg:CCZ 17 flags)
+            (const_int 0 [0]))) "ssh-dss.c":134:40 -1
+     (nil))
+(insn 89 88 90 8 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 122)
+            (const_int 0 [0]))) "ssh-dss.c":134:24 -1
+     (nil))
+(jump_insn 90 89 91 8 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 73)
+            (pc))) "ssh-dss.c":134:24 -1
+     (int_list:REG_BR_PROB 5612644 (nil))
+ -> 73)
+(note 91 90 92 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 92 91 93 9 (debug_marker) "ssh-dss.c":136:2 -1
+     (nil))
+(insn 93 92 94 9 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:DI 109 [ dlen ])
+            (const_int 0 [0]))) "ssh-dss.c":136:5 -1
+     (nil))
+(jump_insn 94 93 95 9 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 295)
+            (pc))) "ssh-dss.c":136:5 736 {*jcc}
+     (int_list:REG_BR_PROB 22441212 (nil))
+ -> 295)
+(note 95 94 96 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 96 95 97 10 (debug_marker) "ssh-dss.c":140:2 -1
+     (nil))
+(insn 97 96 98 10 (set (reg:DI 4 si)
+        (reg/v:DI 114 [ signaturelen ])) "ssh-dss.c":140:11 -1
+     (nil))
+(insn 98 97 99 10 (set (reg:DI 5 di)
+        (reg/v/f:DI 113 [ signature ])) "ssh-dss.c":140:11 -1
+     (nil))
+(call_insn 99 98 100 10 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshbuf_from") [flags 0x41]  <function_decl 0x7f12aa59e000 sshbuf_from>) [0 sshbuf_from S1 A8])
+            (const_int 0 [0]))) "ssh-dss.c":140:11 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_from") [flags 0x41]  <function_decl 0x7f12aa59e000 sshbuf_from>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 100 99 101 10 (set (reg/v/f:DI 110 [ b ])
+        (reg:DI 0 ax)) "ssh-dss.c":140:11 -1
+     (nil))
+(debug_insn 101 100 102 10 (var_location:DI b (reg/v/f:DI 110 [ b ])) "ssh-dss.c":140:11 -1
+     (nil))
+(insn 102 101 103 10 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 110 [ b ])
+            (const_int 0 [0]))) "ssh-dss.c":140:5 -1
+     (nil))
+(jump_insn 103 102 104 10 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 299)
+            (pc))) "ssh-dss.c":140:5 736 {*jcc}
+     (int_list:REG_BR_PROB 9771052 (nil))
+ -> 299)
+(note 104 103 105 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 105 104 106 11 (debug_marker) "ssh-dss.c":142:2 -1
+     (nil))
+(insn 106 105 107 11 (parallel [
+            (set (reg:DI 123)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -88 [0xffffffffffffffa8])))
+            (clobber (reg:CC 17 flags))
+        ]) "ssh-dss.c":142:6 -1
+     (nil))
+(insn 107 106 108 11 (set (reg:DI 1 dx)
+        (const_int 0 [0])) "ssh-dss.c":142:6 -1
+     (nil))
+(insn 108 107 109 11 (set (reg:DI 4 si)
+        (reg:DI 123)) "ssh-dss.c":142:6 -1
+     (nil))
+(insn 109 108 110 11 (set (reg:DI 5 di)
+        (reg/v/f:DI 110 [ b ])) "ssh-dss.c":142:6 -1
+     (nil))
+(call_insn 110 109 111 11 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshbuf_get_cstring") [flags 0x41]  <function_decl 0x7f12aa5a6700 sshbuf_get_cstring>) [0 sshbuf_get_cstring S1 A8])
+            (const_int 0 [0]))) "ssh-dss.c":142:6 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_get_cstring") [flags 0x41]  <function_decl 0x7f12aa5a6700 sshbuf_get_cstring>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(insn 111 110 112 11 (set (reg:SI 88 [ _7 ])
+        (reg:SI 0 ax)) "ssh-dss.c":142:6 -1
+     (nil))
+(insn 112 111 113 11 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 88 [ _7 ])
+            (const_int 0 [0]))) "ssh-dss.c":142:5 -1
+     (nil))
+(jump_insn 113 112 126 11 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 117)
+            (pc))) "ssh-dss.c":142:5 -1
+     (int_list:REG_BR_PROB 524845004 (nil))
+ -> 117)
+(code_label 126 113 114 12 39 (nil) [2 uses])
+(note 114 126 11 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 11 114 12 12 (set (reg/v:SI 111 [ <retval> ])
+        (const_int -4 [0xfffffffffffffffc])) "ssh-dss.c":144:7 -1
+     (nil))
+(insn 12 11 13 12 (set (reg/v/f:DI 108 [ sig_s ])
+        (const_int 0 [0])) "ssh-dss.c":125:25 -1
+     (nil))
+(insn 13 12 14 12 (set (reg/v/f:DI 107 [ sig_r ])
+        (const_int 0 [0])) "ssh-dss.c":125:10 -1
+     (nil))
+(insn 14 13 115 12 (set (reg/v/f:DI 106 [ sig ])
+        (const_int 0 [0])) "ssh-dss.c":124:11 -1
+     (nil))
+(jump_insn 115 14 116 12 (set (pc)
+        (label_ref 234)) -1
+     (nil)
+ -> 234)
+(barrier 116 115 117)
+(code_label 117 116 118 13 37 (nil) [1 uses])
+(note 118 117 119 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 119 118 120 13 (parallel [
+            (set (reg:DI 124)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -96 [0xffffffffffffffa0])))
+            (clobber (reg:CC 17 flags))
+        ]) "ssh-dss.c":143:6 -1
+     (nil))
+(insn 120 119 121 13 (parallel [
+            (set (reg:DI 125)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -104 [0xffffffffffffff98])))
+            (clobber (reg:CC 17 flags))
+        ]) "ssh-dss.c":143:6 -1
+     (nil))
+(insn 121 120 122 13 (set (reg:DI 1 dx)
+        (reg:DI 124)) "ssh-dss.c":143:6 -1
+     (nil))
+(insn 122 121 123 13 (set (reg:DI 4 si)
+        (reg:DI 125)) "ssh-dss.c":143:6 -1
+     (nil))
+(insn 123 122 124 13 (set (reg:DI 5 di)
+        (reg/v/f:DI 110 [ b ])) "ssh-dss.c":143:6 -1
+     (nil))
+(call_insn 124 123 125 13 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshbuf_get_string") [flags 0x41]  <function_decl 0x7f12aa5a6600 sshbuf_get_string>) [0 sshbuf_get_string S1 A8])
+            (const_int 0 [0]))) "ssh-dss.c":143:6 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_get_string") [flags 0x41]  <function_decl 0x7f12aa5a6600 sshbuf_get_string>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(insn 125 124 127 13 (set (reg:SI 89 [ _8 ])
+        (reg:SI 0 ax)) "ssh-dss.c":143:6 -1
+     (nil))
+(insn 127 125 128 13 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 89 [ _8 ])
+            (const_int 0 [0]))) "ssh-dss.c":142:47 -1
+     (nil))
+(jump_insn 128 127 129 13 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 126)
+            (pc))) "ssh-dss.c":142:47 -1
+     (int_list:REG_BR_PROB 365072228 (nil))
+ -> 126)
+(note 129 128 130 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 130 129 131 14 (debug_marker) "ssh-dss.c":147:2 -1
+     (nil))
+(insn 131 130 132 14 (set (reg/f:DI 126)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f12aa1dbe10 *.LC0>)) "ssh-dss.c":147:6 -1
+     (nil))
+(insn 132 131 133 14 (set (reg/f:DI 127)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -88 [0xffffffffffffffa8])) [8 ktype+0 S8 A64])) "ssh-dss.c":147:6 -1
+     (nil))
+(insn 133 132 134 14 (set (reg:DI 128)
+        (reg/f:DI 126)) "ssh-dss.c":147:6 -1
+     (nil))
+(insn 134 133 135 14 (set (reg:DI 129)
+        (reg/f:DI 127)) "ssh-dss.c":147:6 -1
+     (nil))
+(insn 135 134 136 14 (set (reg:DI 130)
+        (const_int 8 [0x8])) "ssh-dss.c":147:6 -1
+     (nil))
+(insn 136 135 137 14 (parallel [
+            (set (reg:CC 17 flags)
+                (compare:CC (mem/u/c:BLK (reg:DI 128) [0 MEM <char[1:]> [(void *)"ssh-dss"]+0 A8])
+                    (mem:BLK (reg:DI 129) [0 MEM <char[1:]> [(void *)ktype.4_9]+0 A8])))
+            (use (reg:DI 130))
+            (use (const_int 1 [0x1]))
+            (clobber (reg:DI 128))
+            (clobber (reg:DI 129))
+            (clobber (reg:DI 130))
+        ]) "ssh-dss.c":147:6 -1
+     (nil))
+(insn 137 136 138 14 (set (reg:QI 131)
+        (gtu:QI (reg:CC 17 flags)
+            (const_int 0 [0]))) "ssh-dss.c":147:6 -1
+     (nil))
+(insn 138 137 139 14 (set (reg:QI 132)
+        (ltu:QI (reg:CC 17 flags)
+            (const_int 0 [0]))) "ssh-dss.c":147:6 -1
+     (nil))
+(insn 139 138 140 14 (parallel [
+            (set (subreg:QI (reg:SI 91 [ _10 ]) 0)
+                (minus:QI (reg:QI 131)
+                    (reg:QI 132)))
+            (clobber (reg:CC 17 flags))
+        ]) "ssh-dss.c":147:6 -1
+     (nil))
+(insn 140 139 141 14 (set (reg:SI 91 [ _10 ])
+        (sign_extend:SI (subreg:QI (reg:SI 91 [ _10 ]) 0))) "ssh-dss.c":147:6 -1
+     (nil))
+(insn 141 140 142 14 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 91 [ _10 ])
+            (const_int 0 [0]))) "ssh-dss.c":147:5 -1
+     (nil))
+(jump_insn 142 141 143 14 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 303)
+            (pc))) "ssh-dss.c":147:5 736 {*jcc}
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 303)
+(note 143 142 144 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 144 143 145 15 (debug_marker) "ssh-dss.c":151:2 -1
+     (nil))
+(insn 145 144 146 15 (set (reg:DI 5 di)
+        (reg/v/f:DI 110 [ b ])) "ssh-dss.c":151:6 -1
+     (nil))
+(call_insn 146 145 147 15 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshbuf_len") [flags 0x41]  <function_decl 0x7f12aa59e700 sshbuf_len>) [0 sshbuf_len S1 A8])
+            (const_int 0 [0]))) "ssh-dss.c":151:6 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_len") [flags 0x41]  <function_decl 0x7f12aa59e700 sshbuf_len>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 147 146 148 15 (set (reg:DI 92 [ _11 ])
+        (reg:DI 0 ax)) "ssh-dss.c":151:6 -1
+     (nil))
+(insn 148 147 149 15 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:DI 92 [ _11 ])
+            (const_int 0 [0]))) "ssh-dss.c":151:5 -1
+     (nil))
+(jump_insn 149 148 150 15 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 307)
+            (pc))) "ssh-dss.c":151:5 736 {*jcc}
+     (int_list:REG_BR_PROB 365072228 (nil))
+ -> 307)
+(note 150 149 151 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 151 150 152 16 (debug_marker) "ssh-dss.c":156:2 -1
+     (nil))
+(insn 152 151 153 16 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -96 [0xffffffffffffffa0])) [1 len+0 S8 A64])
+            (const_int 40 [0x28]))) "ssh-dss.c":156:5 -1
+     (nil))
+(jump_insn 153 152 154 16 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 126)
+            (pc))) "ssh-dss.c":156:5 -1
+     (int_list:REG_BR_PROB 719407028 (nil))
+ -> 126)
+(note 154 153 155 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 155 154 156 17 (debug_marker) "ssh-dss.c":162:2 -1
+     (nil))
+(call_insn 156 155 157 17 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("DSA_SIG_new") [flags 0x41]  <function_decl 0x7f12aa8a7e00 DSA_SIG_new>) [0 DSA_SIG_new S1 A8])
+            (const_int 0 [0]))) "ssh-dss.c":162:13 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("DSA_SIG_new") [flags 0x41]  <function_decl 0x7f12aa8a7e00 DSA_SIG_new>)
+        (nil))
+    (nil))
+(insn 157 156 158 17 (set (reg/v/f:DI 106 [ sig ])
+        (reg:DI 0 ax)) "ssh-dss.c":162:13 -1
+     (nil))
+(debug_insn 158 157 159 17 (var_location:DI sig (reg/v/f:DI 106 [ sig ])) "ssh-dss.c":162:13 -1
+     (nil))
+(insn 159 158 160 17 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 106 [ sig ])
+            (const_int 0 [0]))) "ssh-dss.c":162:5 -1
+     (nil))
+(jump_insn 160 159 161 17 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 311)
+            (pc))) "ssh-dss.c":162:5 736 {*jcc}
+     (int_list:REG_BR_PROB 332323100 (nil))
+ -> 311)
+(note 161 160 162 18 [bb 18] NOTE_INSN_BASIC_BLOCK)
+(call_insn 162 161 163 18 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("BN_new") [flags 0x41]  <function_decl 0x7f12aab11b00 BN_new>) [0 BN_new S1 A8])
+            (const_int 0 [0]))) "ssh-dss.c":163:15 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("BN_new") [flags 0x41]  <function_decl 0x7f12aab11b00 BN_new>)
+        (nil))
+    (nil))
+(insn 163 162 164 18 (set (reg/v/f:DI 107 [ sig_r ])
+        (reg:DI 0 ax)) "ssh-dss.c":163:15 -1
+     (nil))
+(debug_insn 164 163 165 18 (var_location:DI sig_r (reg/v/f:DI 107 [ sig_r ])) "ssh-dss.c":163:15 -1
+     (nil))
+(insn 165 164 166 18 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 107 [ sig_r ])
+            (const_int 0 [0]))) "ssh-dss.c":162:36 -1
+     (nil))
+(jump_insn 166 165 167 18 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 315)
+            (pc))) "ssh-dss.c":162:36 736 {*jcc}
+     (int_list:REG_BR_PROB 332323100 (nil))
+ -> 315)
+(note 167 166 168 19 [bb 19] NOTE_INSN_BASIC_BLOCK)
+(call_insn 168 167 169 19 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("BN_new") [flags 0x41]  <function_decl 0x7f12aab11b00 BN_new>) [0 BN_new S1 A8])
+            (const_int 0 [0]))) "ssh-dss.c":164:15 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("BN_new") [flags 0x41]  <function_decl 0x7f12aab11b00 BN_new>)
+        (nil))
+    (nil))
+(insn 169 168 170 19 (set (reg/v/f:DI 108 [ sig_s ])
+        (reg:DI 0 ax)) "ssh-dss.c":164:15 -1
+     (nil))
+(debug_insn 170 169 171 19 (var_location:DI sig_s (reg/v/f:DI 108 [ sig_s ])) "ssh-dss.c":164:15 -1
+     (nil))
+(insn 171 170 172 19 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 108 [ sig_s ])
+            (const_int 0 [0]))) "ssh-dss.c":163:33 -1
+     (nil))
+(jump_insn 172 171 173 19 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 319)
+            (pc))) "ssh-dss.c":163:33 736 {*jcc}
+     (int_list:REG_BR_PROB 332323100 (nil))
+ -> 319)
+(note 173 172 174 20 [bb 20] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 174 173 175 20 (debug_marker) "ssh-dss.c":168:2 -1
+     (nil))
+(insn 175 174 176 20 (set (reg:DI 133)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -104 [0xffffffffffffff98])) [7 sigblob+0 S8 A64])) "ssh-dss.c":168:7 -1
+     (nil))
+(insn 176 175 177 20 (set (reg:DI 1 dx)
+        (reg/v/f:DI 107 [ sig_r ])) "ssh-dss.c":168:7 -1
+     (nil))
+(insn 177 176 178 20 (set (reg:SI 4 si)
+        (const_int 20 [0x14])) "ssh-dss.c":168:7 -1
+     (nil))
+(insn 178 177 179 20 (set (reg:DI 5 di)
+        (reg:DI 133)) "ssh-dss.c":168:7 -1
+     (nil))
+(call_insn 179 178 180 20 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("BN_bin2bn") [flags 0x41]  <function_decl 0x7f12aab16000 BN_bin2bn>) [0 BN_bin2bn S1 A8])
+            (const_int 0 [0]))) "ssh-dss.c":168:7 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("BN_bin2bn") [flags 0x41]  <function_decl 0x7f12aab16000 BN_bin2bn>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(insn 180 179 181 20 (set (reg/f:DI 95 [ _14 ])
+        (reg:DI 0 ax)) "ssh-dss.c":168:7 -1
+     (nil))
+(insn 181 180 182 20 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/f:DI 95 [ _14 ])
+            (const_int 0 [0]))) "ssh-dss.c":168:5 -1
+     (nil))
+(jump_insn 182 181 183 20 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 323)
+            (pc))) "ssh-dss.c":168:5 736 {*jcc}
+     (int_list:REG_BR_PROB 332323100 (nil))
+ -> 323)
+(note 183 182 184 21 [bb 21] NOTE_INSN_BASIC_BLOCK)
+(insn 184 183 185 21 (set (reg/f:DI 135)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -104 [0xffffffffffffff98])) [7 sigblob+0 S8 A64])) "ssh-dss.c":169:25 -1
+     (nil))
+(insn 185 184 186 21 (parallel [
+            (set (reg:DI 134)
+                (plus:DI (reg/f:DI 135)
+                    (const_int 20 [0x14])))
+            (clobber (reg:CC 17 flags))
+        ]) "ssh-dss.c":169:25 -1
+     (expr_list:REG_EQUAL (plus:DI (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -104 [0xffffffffffffff98])) [7 sigblob+0 S8 A64])
+            (const_int 20 [0x14]))
+        (nil)))
+(insn 186 185 187 21 (set (reg:DI 1 dx)
+        (reg/v/f:DI 108 [ sig_s ])) "ssh-dss.c":169:7 -1
+     (nil))
+(insn 187 186 188 21 (set (reg:SI 4 si)
+        (const_int 20 [0x14])) "ssh-dss.c":169:7 -1
+     (nil))
+(insn 188 187 189 21 (set (reg:DI 5 di)
+        (reg:DI 134)) "ssh-dss.c":169:7 -1
+     (nil))
+(call_insn 189 188 190 21 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("BN_bin2bn") [flags 0x41]  <function_decl 0x7f12aab16000 BN_bin2bn>) [0 BN_bin2bn S1 A8])
+            (const_int 0 [0]))) "ssh-dss.c":169:7 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("BN_bin2bn") [flags 0x41]  <function_decl 0x7f12aab16000 BN_bin2bn>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(insn 190 189 191 21 (set (reg/f:DI 98 [ _17 ])
+        (reg:DI 0 ax)) "ssh-dss.c":169:7 -1
+     (nil))
+(insn 191 190 192 21 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/f:DI 98 [ _17 ])
+            (const_int 0 [0]))) "ssh-dss.c":168:55 -1
+     (nil))
+(jump_insn 192 191 193 21 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 327)
+            (pc))) "ssh-dss.c":168:55 736 {*jcc}
+     (int_list:REG_BR_PROB 332323100 (nil))
+ -> 327)
+(note 193 192 194 22 [bb 22] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 194 193 195 22 (debug_marker) "ssh-dss.c":173:2 -1
+     (nil))
+(insn 195 194 196 22 (set (reg:DI 1 dx)
+        (reg/v/f:DI 108 [ sig_s ])) "ssh-dss.c":173:7 -1
+     (nil))
+(insn 196 195 197 22 (set (reg:DI 4 si)
+        (reg/v/f:DI 107 [ sig_r ])) "ssh-dss.c":173:7 -1
+     (nil))
+(insn 197 196 198 22 (set (reg:DI 5 di)
+        (reg/v/f:DI 106 [ sig ])) "ssh-dss.c":173:7 -1
+     (nil))
+(call_insn 198 197 199 22 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("DSA_SIG_set0") [flags 0x41]  <function_decl 0x7f12aa8b6300 DSA_SIG_set0>) [0 DSA_SIG_set0 S1 A8])
+            (const_int 0 [0]))) "ssh-dss.c":173:7 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("DSA_SIG_set0") [flags 0x41]  <function_decl 0x7f12aa8b6300 DSA_SIG_set0>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(insn 199 198 200 22 (set (reg:SI 99 [ _18 ])
+        (reg:SI 0 ax)) "ssh-dss.c":173:7 -1
+     (nil))
+(insn 200 199 201 22 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 99 [ _18 ])
+            (const_int 0 [0]))) "ssh-dss.c":173:5 -1
+     (nil))
+(jump_insn 201 200 202 22 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 331)
+            (pc))) "ssh-dss.c":173:5 736 {*jcc}
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 331)
+(note 202 201 203 23 [bb 23] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 203 202 204 23 (debug_marker) "ssh-dss.c":177:2 -1
+     (nil))
+(debug_insn 204 203 205 23 (var_location:DI sig_s (const_int 0 [0])) "ssh-dss.c":177:16 -1
+     (nil))
+(debug_insn 205 204 206 23 (var_location:DI sig_r (const_int 0 [0])) "ssh-dss.c":177:8 -1
+     (nil))
+(debug_insn 206 205 207 23 (debug_marker) "ssh-dss.c":180:2 -1
+     (nil))
+(insn 207 206 208 23 (parallel [
+            (set (reg:DI 136)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -80 [0xffffffffffffffb0])))
+            (clobber (reg:CC 17 flags))
+        ]) "ssh-dss.c":180:13 -1
+     (nil))
+(insn 208 207 209 23 (set (reg:DI 36 r8)
+        (const_int 64 [0x40])) "ssh-dss.c":180:13 -1
+     (nil))
+(insn 209 208 210 23 (set (reg:DI 2 cx)
+        (reg:DI 136)) "ssh-dss.c":180:13 -1
+     (nil))
+(insn 210 209 211 23 (set (reg:DI 1 dx)
+        (reg/v:DI 116 [ datalen ])) "ssh-dss.c":180:13 -1
+     (nil))
+(insn 211 210 212 23 (set (reg:DI 4 si)
+        (reg/v/f:DI 115 [ data ])) "ssh-dss.c":180:13 -1
+     (nil))
+(insn 212 211 213 23 (set (reg:SI 5 di)
+        (const_int 1 [0x1])) "ssh-dss.c":180:13 -1
+     (nil))
+(call_insn 213 212 214 23 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("ssh_digest_memory") [flags 0x41]  <function_decl 0x7f12aa5b3f00 ssh_digest_memory>) [0 ssh_digest_memory S1 A8])
+            (const_int 0 [0]))) "ssh-dss.c":180:13 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("ssh_digest_memory") [flags 0x41]  <function_decl 0x7f12aa5b3f00 ssh_digest_memory>)
+        (nil))
+    (expr_list:SI (use (reg:SI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (expr_list:DI (use (reg:DI 2 cx))
+                    (expr_list:DI (use (reg:DI 36 r8))
+                        (nil)))))))
+(insn 214 213 215 23 (set (reg/v:SI 111 [ <retval> ])
+        (reg:SI 0 ax)) "ssh-dss.c":180:13 -1
+     (nil))
+(debug_insn 215 214 216 23 (var_location:SI ret (reg/v:SI 111 [ <retval> ])) "ssh-dss.c":180:13 -1
+     (nil))
+(insn 216 215 217 23 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 111 [ <retval> ])
+            (const_int 0 [0]))) "ssh-dss.c":180:5 -1
+     (nil))
+(jump_insn 217 216 218 23 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 335)
+            (pc))) "ssh-dss.c":180:5 736 {*jcc}
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 335)
+(note 218 217 219 24 [bb 24] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 219 218 220 24 (debug_marker) "ssh-dss.c":184:2 -1
+     (nil))
+(insn 220 219 221 24 (set (reg:DI 137)
+        (mem/f:DI (plus:DI (reg/v/f:DI 112 [ key ])
+                (const_int 16 [0x10])) [5 key_43(D)->dsa+0 S8 A64])) "ssh-dss.c":184:10 -1
+     (nil))
+(insn 221 220 222 24 (parallel [
+            (set (reg:DI 138)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -80 [0xffffffffffffffb0])))
+            (clobber (reg:CC 17 flags))
+        ]) "ssh-dss.c":184:10 -1
+     (nil))
+(insn 222 221 223 24 (set (reg:DI 2 cx)
+        (reg:DI 137)) "ssh-dss.c":184:10 -1
+     (nil))
+(insn 223 222 224 24 (set (reg:DI 1 dx)
+        (reg/v/f:DI 106 [ sig ])) "ssh-dss.c":184:10 -1
+     (nil))
+(insn 224 223 225 24 (set (reg:SI 4 si)
+        (subreg:SI (reg/v:DI 109 [ dlen ]) 0)) "ssh-dss.c":184:10 -1
+     (nil))
+(insn 225 224 226 24 (set (reg:DI 5 di)
+        (reg:DI 138)) "ssh-dss.c":184:10 -1
+     (nil))
+(call_insn 226 225 227 24 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("DSA_do_verify") [flags 0x41]  <function_decl 0x7f12aa8b6500 DSA_do_verify>) [0 DSA_do_verify S1 A8])
+            (const_int 0 [0]))) "ssh-dss.c":184:10 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("DSA_do_verify") [flags 0x41]  <function_decl 0x7f12aa8b6500 DSA_do_verify>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (expr_list:DI (use (reg:DI 2 cx))
+                    (nil))))))
+(insn 227 226 228 24 (set (reg:SI 102 [ _21 ])
+        (reg:SI 0 ax)) "ssh-dss.c":184:10 -1
+     (nil))
+(insn 228 227 229 24 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 102 [ _21 ])
+            (const_int 0 [0]))) "ssh-dss.c":184:2 -1
+     (nil))
+(jump_insn 229 228 230 24 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 339)
+            (pc))) "ssh-dss.c":184:2 736 {*jcc}
+     (int_list:REG_BR_PROB 357913950 (nil))
+ -> 339)
+(note 230 229 231 25 [bb 25] NOTE_INSN_BASIC_BLOCK)
+(insn 231 230 232 25 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 102 [ _21 ])
+            (const_int 1 [0x1]))) "ssh-dss.c":184:2 -1
+     (nil))
+(jump_insn 232 231 233 25 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 343)
+            (pc))) "ssh-dss.c":184:2 736 {*jcc}
+     (int_list:REG_BR_PROB 536870918 (nil))
+ -> 343)
+(note 233 232 40 26 [bb 26] NOTE_INSN_BASIC_BLOCK)
+(insn 40 233 41 26 (set (reg/v/f:DI 108 [ sig_s ])
+        (const_int 0 [0])) "ssh-dss.c":177:16 -1
+     (nil))
+(insn 41 40 300 26 (set (reg/v/f:DI 107 [ sig_r ])
+        (const_int 0 [0])) "ssh-dss.c":177:8 -1
+     (nil))
+(jump_insn 300 41 301 26 (set (pc)
+        (label_ref 234)) -1
+     (nil)
+ -> 234)
+(barrier 301 300 303)
+(code_label 303 301 302 27 43 (nil) [1 uses])
+(note 302 303 19 27 [bb 27] NOTE_INSN_BASIC_BLOCK)
+(insn 19 302 20 27 (set (reg/v:SI 111 [ <retval> ])
+        (const_int -13 [0xfffffffffffffff3])) "ssh-dss.c":148:7 -1
+     (nil))
+(insn 20 19 21 27 (set (reg/v/f:DI 108 [ sig_s ])
+        (const_int 0 [0])) "ssh-dss.c":125:25 -1
+     (nil))
+(insn 21 20 22 27 (set (reg/v/f:DI 107 [ sig_r ])
+        (const_int 0 [0])) "ssh-dss.c":125:10 -1
+     (nil))
+(insn 22 21 304 27 (set (reg/v/f:DI 106 [ sig ])
+        (const_int 0 [0])) "ssh-dss.c":124:11 -1
+     (nil))
+(jump_insn 304 22 305 27 (set (pc)
+        (label_ref 234)) -1
+     (nil)
+ -> 234)
+(barrier 305 304 307)
+(code_label 307 305 306 28 44 (nil) [1 uses])
+(note 306 307 26 28 [bb 28] NOTE_INSN_BASIC_BLOCK)
+(insn 26 306 27 28 (set (reg/v:SI 111 [ <retval> ])
+        (const_int -23 [0xffffffffffffffe9])) "ssh-dss.c":152:7 -1
+     (nil))
+(insn 27 26 28 28 (set (reg/v/f:DI 108 [ sig_s ])
+        (const_int 0 [0])) "ssh-dss.c":125:25 -1
+     (nil))
+(insn 28 27 29 28 (set (reg/v/f:DI 107 [ sig_r ])
+        (const_int 0 [0])) "ssh-dss.c":125:10 -1
+     (nil))
+(insn 29 28 308 28 (set (reg/v/f:DI 106 [ sig ])
+        (const_int 0 [0])) "ssh-dss.c":124:11 -1
+     (nil))
+(jump_insn 308 29 309 28 (set (pc)
+        (label_ref 234)) -1
+     (nil)
+ -> 234)
+(barrier 309 308 311)
+(code_label 311 309 310 29 45 (nil) [1 uses])
+(note 310 311 37 29 [bb 29] NOTE_INSN_BASIC_BLOCK)
+(insn 37 310 38 29 (set (reg/v/f:DI 108 [ sig_s ])
+        (reg/v/f:DI 106 [ sig ])) "ssh-dss.c":125:25 -1
+     (nil))
+(insn 38 37 39 29 (set (reg/v/f:DI 107 [ sig_r ])
+        (reg/v/f:DI 106 [ sig ])) "ssh-dss.c":125:10 -1
+     (nil))
+(insn 39 38 312 29 (set (reg/v:SI 111 [ <retval> ])
+        (const_int -2 [0xfffffffffffffffe])) "ssh-dss.c":165:7 -1
+     (nil))
+(jump_insn 312 39 313 29 (set (pc)
+        (label_ref 234)) -1
+     (nil)
+ -> 234)
+(barrier 313 312 315)
+(code_label 315 313 314 30 46 (nil) [1 uses])
+(note 314 315 30 30 [bb 30] NOTE_INSN_BASIC_BLOCK)
+(insn 30 314 31 30 (set (reg/v/f:DI 108 [ sig_s ])
+        (reg/v/f:DI 107 [ sig_r ])) "ssh-dss.c":125:25 -1
+     (nil))
+(insn 31 30 316 30 (set (reg/v:SI 111 [ <retval> ])
+        (const_int -2 [0xfffffffffffffffe])) "ssh-dss.c":165:7 -1
+     (nil))
+(jump_insn 316 31 317 30 (set (pc)
+        (label_ref 234)) -1
+     (nil)
+ -> 234)
+(barrier 317 316 319)
+(code_label 319 317 318 31 47 (nil) [1 uses])
+(note 318 319 24 31 [bb 31] NOTE_INSN_BASIC_BLOCK)
+(insn 24 318 320 31 (set (reg/v:SI 111 [ <retval> ])
+        (const_int -2 [0xfffffffffffffffe])) "ssh-dss.c":165:7 -1
+     (nil))
+(jump_insn 320 24 321 31 (set (pc)
+        (label_ref 234)) -1
+     (nil)
+ -> 234)
+(barrier 321 320 323)
+(code_label 323 321 322 32 48 (nil) [1 uses])
+(note 322 323 25 32 [bb 32] NOTE_INSN_BASIC_BLOCK)
+(insn 25 322 324 32 (set (reg/v:SI 111 [ <retval> ])
+        (const_int -22 [0xffffffffffffffea])) "ssh-dss.c":170:7 -1
+     (nil))
+(jump_insn 324 25 325 32 (set (pc)
+        (label_ref 234)) -1
+     (nil)
+ -> 234)
+(barrier 325 324 327)
+(code_label 327 325 326 33 49 (nil) [1 uses])
+(note 326 327 23 33 [bb 33] NOTE_INSN_BASIC_BLOCK)
+(insn 23 326 328 33 (set (reg/v:SI 111 [ <retval> ])
+        (const_int -22 [0xffffffffffffffea])) "ssh-dss.c":170:7 -1
+     (nil))
+(jump_insn 328 23 329 33 (set (pc)
+        (label_ref 234)) -1
+     (nil)
+ -> 234)
+(barrier 329 328 331)
+(code_label 331 329 330 34 50 (nil) [1 uses])
+(note 330 331 18 34 [bb 34] NOTE_INSN_BASIC_BLOCK)
+(insn 18 330 332 34 (set (reg/v:SI 111 [ <retval> ])
+        (const_int -22 [0xffffffffffffffea])) "ssh-dss.c":174:7 -1
+     (nil))
+(jump_insn 332 18 333 34 (set (pc)
+        (label_ref 234)) -1
+     (nil)
+ -> 234)
+(barrier 333 332 335)
+(code_label 335 333 334 35 51 (nil) [1 uses])
+(note 334 335 32 35 [bb 35] NOTE_INSN_BASIC_BLOCK)
+(insn 32 334 33 35 (set (reg/v/f:DI 108 [ sig_s ])
+        (const_int 0 [0])) "ssh-dss.c":177:16 -1
+     (nil))
+(insn 33 32 336 35 (set (reg/v/f:DI 107 [ sig_r ])
+        (const_int 0 [0])) "ssh-dss.c":177:8 -1
+     (nil))
+(jump_insn 336 33 337 35 (set (pc)
+        (label_ref 234)) -1
+     (nil)
+ -> 234)
+(barrier 337 336 339)
+(code_label 339 337 338 36 52 (nil) [1 uses])
+(note 338 339 15 36 [bb 36] NOTE_INSN_BASIC_BLOCK)
+(insn 15 338 16 36 (set (reg/v:SI 111 [ <retval> ])
+        (const_int -21 [0xffffffffffffffeb])) "ssh-dss.c":184:2 -1
+     (nil))
+(insn 16 15 17 36 (set (reg/v/f:DI 108 [ sig_s ])
+        (const_int 0 [0])) "ssh-dss.c":184:2 -1
+     (nil))
+(insn 17 16 340 36 (set (reg/v/f:DI 107 [ sig_r ])
+        (const_int 0 [0])) "ssh-dss.c":184:2 -1
+     (nil))
+(jump_insn 340 17 341 36 (set (pc)
+        (label_ref 234)) -1
+     (nil)
+ -> 234)
+(barrier 341 340 343)
+(code_label 343 341 342 37 53 (nil) [1 uses])
+(note 342 343 34 37 [bb 37] NOTE_INSN_BASIC_BLOCK)
+(insn 34 342 35 37 (set (reg/v:SI 111 [ <retval> ])
+        (const_int -22 [0xffffffffffffffea])) "ssh-dss.c":192:7 -1
+     (nil))
+(insn 35 34 36 37 (set (reg/v/f:DI 108 [ sig_s ])
+        (const_int 0 [0])) "ssh-dss.c":177:16 -1
+     (nil))
+(insn 36 35 234 37 (set (reg/v/f:DI 107 [ sig_r ])
+        (const_int 0 [0])) "ssh-dss.c":177:8 -1
+     (nil))
+(code_label 234 36 235 38 38 ("out") [12 uses])
+(note 235 234 236 38 [bb 38] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 236 235 237 38 (var_location:SI ret (reg/v:SI 111 [ <retval> ])) -1
+     (nil))
+(debug_insn 237 236 238 38 (var_location:DI sig_s (reg/v/f:DI 108 [ sig_s ])) -1
+     (nil))
+(debug_insn 238 237 239 38 (var_location:DI sig_r (reg/v/f:DI 107 [ sig_r ])) -1
+     (nil))
+(debug_insn 239 238 240 38 (var_location:DI sig (reg/v/f:DI 106 [ sig ])) -1
+     (nil))
+(debug_insn 240 239 241 38 (debug_marker) "ssh-dss.c":197:2 -1
+     (nil))
+(debug_insn 241 240 242 38 (var_location:DI __dest (plus:DI (reg/f:DI 77 virtual-stack-vars)
+        (const_int -80 [0xffffffffffffffb0]))) "ssh-dss.c":197:2 -1
+     (nil))
+(debug_insn 242 241 243 38 (var_location:DI __len (const_int 64 [0x40])) "ssh-dss.c":197:2 -1
+     (nil))
+(debug_insn 243 242 244 38 (debug_marker:BLK) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":81:1 -1
+     (nil))
+(debug_insn 244 243 245 38 (debug_marker) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":83:3 -1
+     (nil))
+(insn 245 244 246 38 (parallel [
+            (set (reg:DI 139)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -80 [0xffffffffffffffb0])))
+            (clobber (reg:CC 17 flags))
+        ]) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":83:3 -1
+     (nil))
+(insn 246 245 247 38 (set (reg:DI 1 dx)
+        (const_int 64 [0x40])) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":83:3 -1
+     (nil))
+(insn 247 246 248 38 (set (reg:DI 4 si)
+        (const_int 64 [0x40])) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":83:3 -1
+     (nil))
+(insn 248 247 249 38 (set (reg:DI 5 di)
+        (reg:DI 139)) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":83:3 -1
+     (nil))
+(call_insn 249 248 250 38 (call (mem:QI (symbol_ref:DI ("__explicit_bzero_chk") [flags 0x41]  <function_decl 0x7f12aa53e000 __explicit_bzero_chk>) [0 __explicit_bzero_chk S1 A8])
+        (const_int 0 [0])) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":83:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__explicit_bzero_chk") [flags 0x41]  <function_decl 0x7f12aa53e000 __explicit_bzero_chk>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(debug_insn 250 249 251 38 (var_location:DI __dest (clobber (const_int 0 [0]))) "ssh-dss.c":197:2 -1
+     (nil))
+(debug_insn 251 250 252 38 (var_location:DI __len (clobber (const_int 0 [0]))) "ssh-dss.c":197:2 -1
+     (nil))
+(debug_insn 252 251 253 38 (debug_marker) "ssh-dss.c":198:2 -1
+     (nil))
+(insn 253 252 254 38 (set (reg:DI 5 di)
+        (reg/v/f:DI 106 [ sig ])) "ssh-dss.c":198:2 -1
+     (nil))
+(call_insn 254 253 255 38 (call (mem:QI (symbol_ref:DI ("DSA_SIG_free") [flags 0x41]  <function_decl 0x7f12aa8a7f00 DSA_SIG_free>) [0 DSA_SIG_free S1 A8])
+        (const_int 0 [0])) "ssh-dss.c":198:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("DSA_SIG_free") [flags 0x41]  <function_decl 0x7f12aa8a7f00 DSA_SIG_free>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(debug_insn 255 254 256 38 (debug_marker) "ssh-dss.c":199:2 -1
+     (nil))
+(insn 256 255 257 38 (set (reg:DI 5 di)
+        (reg/v/f:DI 107 [ sig_r ])) "ssh-dss.c":199:2 -1
+     (nil))
+(call_insn 257 256 258 38 (call (mem:QI (symbol_ref:DI ("BN_clear_free") [flags 0x41]  <function_decl 0x7f12aab11d00 BN_clear_free>) [0 BN_clear_free S1 A8])
+        (const_int 0 [0])) "ssh-dss.c":199:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("BN_clear_free") [flags 0x41]  <function_decl 0x7f12aab11d00 BN_clear_free>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(debug_insn 258 257 259 38 (debug_marker) "ssh-dss.c":200:2 -1
+     (nil))
+(insn 259 258 260 38 (set (reg:DI 5 di)
+        (reg/v/f:DI 108 [ sig_s ])) "ssh-dss.c":200:2 -1
+     (nil))
+(call_insn 260 259 261 38 (call (mem:QI (symbol_ref:DI ("BN_clear_free") [flags 0x41]  <function_decl 0x7f12aab11d00 BN_clear_free>) [0 BN_clear_free S1 A8])
+        (const_int 0 [0])) "ssh-dss.c":200:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("BN_clear_free") [flags 0x41]  <function_decl 0x7f12aab11d00 BN_clear_free>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(debug_insn 261 260 262 38 (debug_marker) "ssh-dss.c":201:2 -1
+     (nil))
+(insn 262 261 263 38 (set (reg:DI 5 di)
+        (reg/v/f:DI 110 [ b ])) "ssh-dss.c":201:2 -1
+     (nil))
+(call_insn 263 262 264 38 (call (mem:QI (symbol_ref:DI ("sshbuf_free") [flags 0x41]  <function_decl 0x7f12aa59e300 sshbuf_free>) [0 sshbuf_free S1 A8])
+        (const_int 0 [0])) "ssh-dss.c":201:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_free") [flags 0x41]  <function_decl 0x7f12aa59e300 sshbuf_free>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(debug_insn 264 263 265 38 (debug_marker) "ssh-dss.c":202:2 -1
+     (nil))
+(insn 265 264 266 38 (set (reg:DI 140)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -88 [0xffffffffffffffa8])) [8 ktype+0 S8 A64])) "ssh-dss.c":202:2 -1
+     (nil))
+(insn 266 265 267 38 (set (reg:DI 5 di)
+        (reg:DI 140)) "ssh-dss.c":202:2 -1
+     (nil))
+(call_insn 267 266 268 38 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x7f12aae5e900 free>) [0 __builtin_free S1 A8])
+        (const_int 0 [0])) "ssh-dss.c":202:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x7f12aae5e900 free>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(debug_insn 268 267 269 38 (debug_marker) "ssh-dss.c":203:2 -1
+     (nil))
+(insn 269 268 270 38 (set (reg/f:DI 104 [ sigblob.9_23 ])
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -104 [0xffffffffffffff98])) [7 sigblob+0 S8 A64])) "ssh-dss.c":203:14 -1
+     (nil))
+(insn 270 269 271 38 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/f:DI 104 [ sigblob.9_23 ])
+            (const_int 0 [0]))) "ssh-dss.c":203:5 -1
+     (nil))
+(jump_insn 271 270 272 38 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 282)
+            (pc))) "ssh-dss.c":203:5 736 {*jcc}
+     (int_list:REG_BR_PROB 499612076 (nil))
+ -> 282)
+(note 272 271 273 39 [bb 39] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 273 272 274 39 (debug_marker) "ssh-dss.c":204:3 -1
+     (nil))
+(insn 274 273 275 39 (set (reg:DI 141)
+        (mem/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -96 [0xffffffffffffffa0])) [1 len+0 S8 A64])) "ssh-dss.c":204:3 -1
+     (nil))
+(insn 275 274 276 39 (set (reg:DI 4 si)
+        (reg:DI 141)) "ssh-dss.c":204:3 -1
+     (nil))
+(insn 276 275 277 39 (set (reg:DI 5 di)
+        (reg/f:DI 104 [ sigblob.9_23 ])) "ssh-dss.c":204:3 -1
+     (nil))
+(call_insn 277 276 292 39 (call (mem:QI (symbol_ref:DI ("freezero") [flags 0x41]  <function_decl 0x7f12aa9d5b00 freezero>) [0 freezero S1 A8])
+        (const_int 0 [0])) "ssh-dss.c":204:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("freezero") [flags 0x41]  <function_decl 0x7f12aa9d5b00 freezero>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(jump_insn 292 277 293 39 (set (pc)
+        (label_ref:DI 282)) 737 {jump}
+     (nil)
+ -> 282)
+(barrier 293 292 295)
+(code_label 295 293 294 40 41 (nil) [1 uses])
+(note 294 295 44 40 [bb 40] NOTE_INSN_BASIC_BLOCK)
+(insn 44 294 296 40 (set (reg/v:SI 111 [ <retval> ])
+        (const_int -1 [0xffffffffffffffff])) "ssh-dss.c":137:10 -1
+     (nil))
+(jump_insn 296 44 297 40 (set (pc)
+        (label_ref:DI 282)) 737 {jump}
+     (nil)
+ -> 282)
+(barrier 297 296 299)
+(code_label 299 297 298 41 42 (nil) [1 uses])
+(note 298 299 43 41 [bb 41] NOTE_INSN_BASIC_BLOCK)
+(insn 43 298 282 41 (set (reg/v:SI 111 [ <retval> ])
+        (const_int -2 [0xfffffffffffffffe])) "ssh-dss.c":141:10 -1
+     (nil))
+(code_label 282 43 291 43 33 (nil) [4 uses])
+(note 291 282 283 43 [bb 43] NOTE_INSN_BASIC_BLOCK)
+(insn 283 291 284 43 (set (reg/f:DI 143)
+        (const_int 40 [0x28])) "ssh-dss.c":206:1 -1
+     (nil))
+(insn 284 283 285 43 (parallel [
+            (set (reg:CCZ 17 flags)
+                (unspec:CCZ [
+                        (mem/v/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                                (const_int -8 [0xfffffffffffffff8])) [9 D.16261+0 S8 A64])
+                        (mem/v/f:DI (reg/f:DI 143) [0 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_TEST))
+            (clobber (scratch:DI))
+        ]) "ssh-dss.c":206:1 -1
+     (nil))
+(jump_insn 285 284 345 43 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 288)
+            (pc))) "ssh-dss.c":206:1 -1
+     (int_list:REG_BR_PROB 1073312332 (nil))
+ -> 288)
+(note 345 285 286 44 [bb 44] NOTE_INSN_BASIC_BLOCK)
+(call_insn 286 345 287 44 (call (mem:QI (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7f12aa1bc000 __stack_chk_fail>) [0 __stack_chk_fail S1 A8])
+        (const_int 0 [0])) "ssh-dss.c":206:1 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7f12aa1bc000 __stack_chk_fail>)
+        (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+            (expr_list:REG_NORETURN (const_int 0 [0])
+                (expr_list:REG_EH_REGION (const_int 0 [0])
+                    (nil)))))
+    (nil))
+(barrier 287 286 288)
+(code_label 288 287 346 45 40 (nil) [1 uses])
+(note 346 288 289 45 [bb 45] NOTE_INSN_BASIC_BLOCK)
+(insn 289 346 290 45 (set (reg/i:SI 0 ax)
+        (reg/v:SI 111 [ <retval> ])) "ssh-dss.c":206:1 -1
+     (nil))
+(insn 290 289 0 45 (use (reg/i:SI 0 ax)) "ssh-dss.c":206:1 -1
+     (nil))

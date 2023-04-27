@@ -1,0 +1,626 @@
+
+;; Function platform_pre_listen (platform_pre_listen, funcdef_no=383, decl_uid=4574, cgraph_uid=384, symbol_order=383)
+
+
+;; Generating RTL for gimple basic block 2
+deleting block 4
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 5 2 6 2 (debug_marker) "platform.c":43:2 -1
+     (nil))
+(call_insn/j 6 5 7 2 (call (mem:QI (symbol_ref:DI ("oom_adjust_setup") [flags 0x41]  <function_decl 0x7fef700d9f00 oom_adjust_setup>) [0 oom_adjust_setup S1 A8])
+        (const_int 0 [0])) "platform.c":43:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("oom_adjust_setup") [flags 0x41]  <function_decl 0x7fef700d9f00 oom_adjust_setup>)
+        (nil))
+    (nil))
+(barrier 7 6 0)
+
+;; Function platform_pre_fork (platform_pre_fork, funcdef_no=384, decl_uid=4576, cgraph_uid=385, symbol_order=384)
+
+
+;; Generating RTL for gimple basic block 2
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 5 2 0 2 (debug_marker) "platform.c":53:1 -1
+     (nil))
+
+;; Function platform_pre_restart (platform_pre_restart, funcdef_no=385, decl_uid=4578, cgraph_uid=386, symbol_order=385)
+
+
+;; Generating RTL for gimple basic block 2
+deleting block 4
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 5 2 6 2 (debug_marker) "platform.c":59:2 -1
+     (nil))
+(call_insn/j 6 5 7 2 (call (mem:QI (symbol_ref:DI ("oom_adjust_restore") [flags 0x41]  <function_decl 0x7fef700d9e00 oom_adjust_restore>) [0 oom_adjust_restore S1 A8])
+        (const_int 0 [0])) "platform.c":59:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("oom_adjust_restore") [flags 0x41]  <function_decl 0x7fef700d9e00 oom_adjust_restore>)
+        (nil))
+    (nil))
+(barrier 7 6 0)
+
+;; Function platform_post_fork_parent (platform_post_fork_parent, funcdef_no=386, decl_uid=4580, cgraph_uid=387, symbol_order=386)
+
+
+;; Generating RTL for gimple basic block 2
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (reg/v:SI 82 [ child_pid ])
+        (reg:SI 5 di [ child_pid ])) "platform.c":65:1 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 6 3 0 2 (debug_marker) "platform.c":69:1 -1
+     (nil))
+
+;; Function platform_post_fork_child (platform_post_fork_child, funcdef_no=394, decl_uid=4582, cgraph_uid=388, symbol_order=387)
+
+
+;; Generating RTL for gimple basic block 2
+deleting block 4
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 5 2 6 2 (debug_marker) "platform.c":59:2 -1
+     (nil))
+(call_insn/j 6 5 7 2 (call (mem:QI (symbol_ref:DI ("oom_adjust_restore") [flags 0x41]  <function_decl 0x7fef700d9e00 oom_adjust_restore>) [0 oom_adjust_restore S1 A8])
+        (const_int 0 [0])) "platform.c":59:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("oom_adjust_restore") [flags 0x41]  <function_decl 0x7fef700d9e00 oom_adjust_restore>)
+        (nil))
+    (nil))
+(barrier 7 6 0)
+
+;; Function platform_privileged_uidswap (platform_privileged_uidswap, funcdef_no=388, decl_uid=4584, cgraph_uid=389, symbol_order=388)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+Edge 2->4 redirected to 7
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Redirecting jump 26 from 6 to 7.
+Merging block 6 into block 5...
+Merged blocks 5 and 6.
+Merged 5 and 6 without moving.
+Removing jump 20.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 4 6 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 6 2 7 2 (debug_marker) "platform.c":90:2 -1
+     (nil))
+(call_insn 7 6 8 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("getuid") [flags 0x41]  <function_decl 0x7fef7014f300 getuid>) [0 getuid S1 A8])
+            (const_int 0 [0]))) "platform.c":90:10 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("getuid") [flags 0x41]  <function_decl 0x7fef7014f300 getuid>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (nil))
+(insn 8 7 9 2 (set (reg:SI 82 [ _1 ])
+        (reg:SI 0 ax)) "platform.c":90:10 -1
+     (nil))
+(insn 9 8 10 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 82 [ _1 ])
+            (const_int 0 [0]))) "platform.c":90:24 -1
+     (nil))
+(jump_insn 10 9 11 2 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 29)
+            (pc))) "platform.c":90:24 736 {*jcc}
+     (int_list:REG_BR_PROB 719407028 (nil))
+ -> 29)
+(note 11 10 12 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(call_insn 12 11 13 4 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("geteuid") [flags 0x41]  <function_decl 0x7fef7014f400 geteuid>) [0 geteuid S1 A8])
+            (const_int 0 [0]))) "platform.c":90:27 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("geteuid") [flags 0x41]  <function_decl 0x7fef7014f400 geteuid>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (nil))
+(insn 13 12 14 4 (set (reg:SI 83 [ _2 ])
+        (reg:SI 0 ax)) "platform.c":90:27 -1
+     (nil))
+(insn 14 13 15 4 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 83 [ _2 ])
+            (const_int 0 [0]))) "platform.c":90:24 -1
+     (nil))
+(insn 15 14 16 4 (set (reg:QI 87)
+        (eq:QI (reg:CCZ 17 flags)
+            (const_int 0 [0]))) "platform.c":90:24 -1
+     (nil))
+(insn 16 15 17 4 (set (reg:SI 86)
+        (zero_extend:SI (reg:QI 87))) "platform.c":90:24 -1
+     (nil))
+(insn 17 16 26 4 (set (reg:SI 85 [ <retval> ])
+        (reg:SI 86)) "platform.c":90:24 -1
+     (nil))
+(jump_insn 26 17 27 4 (set (pc)
+        (label_ref:DI 22)) 737 {jump}
+     (nil)
+ -> 22)
+(barrier 27 26 29)
+(code_label 29 27 28 5 9 (nil) [1 uses])
+(note 28 29 3 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 3 28 22 5 (set (reg:SI 85 [ <retval> ])
+        (const_int 1 [0x1])) "platform.c":90:24 -1
+     (nil))
+(code_label 22 3 25 7 7 (nil) [1 uses])
+(note 25 22 23 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 23 25 24 7 (set (reg/i:SI 0 ax)
+        (reg:SI 85 [ <retval> ])) "platform.c":92:1 -1
+     (nil))
+(insn 24 23 0 7 (use (reg/i:SI 0 ax)) "platform.c":92:1 -1
+     (nil))
+
+;; Function platform_setusercontext (platform_setusercontext, funcdef_no=389, decl_uid=4586, cgraph_uid=390, symbol_order=389)
+
+
+;; Generating RTL for gimple basic block 2
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (reg/v/f:DI 82 [ pw ])
+        (reg:DI 5 di [ pw ])) "platform.c":100:1 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 6 3 0 2 (debug_marker) "platform.c":140:1 -1
+     (nil))
+
+;; Function platform_setusercontext_post_groups (platform_setusercontext_post_groups, funcdef_no=396, decl_uid=4588, cgraph_uid=391, symbol_order=390)
+
+
+;; Generating RTL for gimple basic block 2
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (reg/v/f:DI 82 [ pw ])
+        (reg:DI 5 di [ pw ])) "platform.c":147:1 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 6 3 7 2 (var_location:DI pw (entry_value:DI (reg:DI 5 di [ pw ]))) -1
+     (nil))
+(debug_insn 7 6 8 2 (debug_marker) "platform.c":140:1 -1
+     (nil))
+(debug_insn 8 7 0 2 (var_location:DI pw (clobber (const_int 0 [0]))) -1
+     (nil))
+
+;; Function platform_krb5_get_principal_name (platform_krb5_get_principal_name, funcdef_no=391, decl_uid=4592, cgraph_uid=392, symbol_order=391)
+
+
+;; Generating RTL for gimple basic block 2
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Removing jump 8.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (reg/v/f:DI 83 [ pw_name ])
+        (reg:DI 5 di [ pw_name ])) "platform.c":194:1 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 6 3 7 2 (debug_marker) "platform.c":198:2 -1
+     (nil))
+(insn 7 6 11 2 (set (reg/f:DI 82 [ <retval> ])
+        (const_int 0 [0])) "platform.c":198:9 -1
+     (nil))
+(insn 11 7 12 2 (set (reg/i:DI 0 ax)
+        (reg/f:DI 82 [ <retval> ])) "platform.c":200:1 -1
+     (nil))
+(insn 12 11 0 2 (use (reg/i:DI 0 ax)) "platform.c":200:1 -1
+     (nil))
+
+;; Function platform_locked_account (platform_locked_account, funcdef_no=392, decl_uid=4594, cgraph_uid=393, symbol_order=392)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+Edge 3->7 redirected to 12
+Edge 4->7 redirected to 13
+Edge 5->7 redirected to 14
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Forwarding edge 4->5 to 13 failed.
+Redirecting jump 71 from 12 to 14.
+Redirecting jump 75 from 12 to 14.
+Redirecting jump 79 from 12 to 14.
+Merging block 12 into block 11...
+Merged blocks 11 and 12.
+Merged 11 and 12 without moving.
+
+
+try_optimize_cfg iteration 2
+
+Forwarding edge 4->5 to 13 failed.
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 7 NOTE_INSN_DELETED)
+(note 7 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 7 3 2 (set (reg/v/f:DI 92 [ pw ])
+        (reg:DI 5 di [ pw ])) "platform.c":205:1 -1
+     (nil))
+(note 3 2 9 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 9 3 10 2 (debug_marker) "platform.c":206:2 -1
+     (nil))
+(debug_insn 10 9 11 2 (var_location:SI locked (const_int 0 [0])) "platform.c":206:6 -1
+     (nil))
+(debug_insn 11 10 12 2 (debug_marker) "platform.c":207:2 -1
+     (nil))
+(insn 12 11 13 2 (set (reg/v/f:DI 86 [ passwd ])
+        (mem/f:DI (plus:DI (reg/v/f:DI 92 [ pw ])
+                (const_int 8 [0x8])) [1 pw_11(D)->pw_passwd+0 S8 A64])) "platform.c":207:8 -1
+     (nil))
+(debug_insn 13 12 14 2 (var_location:DI passwd (reg/v/f:DI 86 [ passwd ])) "platform.c":207:8 -1
+     (nil))
+(debug_insn 14 13 15 2 (debug_marker) "platform.c":209:2 -1
+     (nil))
+(debug_insn 15 14 16 2 (var_location:DI spw (const_int 0 [0])) "platform.c":209:15 -1
+     (nil))
+(debug_insn 16 15 17 2 (debug_marker) "platform.c":214:2 -1
+     (nil))
+(insn 17 16 18 2 (set (reg:DI 5 di)
+        (mem/f:DI (reg/v/f:DI 92 [ pw ]) [1 pw_11(D)->pw_name+0 S8 A64])) "platform.c":214:8 -1
+     (nil))
+(call_insn 18 17 19 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("getspnam") [flags 0x41]  <function_decl 0x7fef6fd04300 getspnam>) [0 getspnam S1 A8])
+            (const_int 0 [0]))) "platform.c":214:8 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("getspnam") [flags 0x41]  <function_decl 0x7fef6fd04300 getspnam>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 19 18 20 2 (set (reg/v/f:DI 88 [ spw ])
+        (reg:DI 0 ax)) "platform.c":214:8 -1
+     (nil))
+(debug_insn 20 19 21 2 (var_location:DI spw (reg/v/f:DI 88 [ spw ])) "platform.c":214:8 -1
+     (nil))
+(debug_insn 21 20 22 2 (debug_marker) "platform.c":216:2 -1
+     (nil))
+(insn 22 21 23 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 88 [ spw ])
+            (const_int 0 [0]))) "platform.c":216:5 -1
+     (nil))
+(jump_insn 23 22 24 2 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 33)
+            (pc))) "platform.c":216:5 -1
+     (int_list:REG_BR_PROB 499612076 (nil))
+ -> 33)
+(note 24 23 25 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 25 24 26 4 (set (reg:DI 5 di)
+        (reg/v/f:DI 88 [ spw ])) "platform.c":216:21 -1
+     (nil))
+(call_insn 26 25 27 4 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("auth_shadow_acctexpired") [flags 0x41]  <function_decl 0x7fef6fd04d00 auth_shadow_acctexpired>) [0 auth_shadow_acctexpired S1 A8])
+            (const_int 0 [0]))) "platform.c":216:21 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("auth_shadow_acctexpired") [flags 0x41]  <function_decl 0x7fef6fd04d00 auth_shadow_acctexpired>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 27 26 28 4 (set (reg:SI 83 [ _2 ])
+        (reg:SI 0 ax)) "platform.c":216:21 -1
+     (nil))
+(insn 28 27 29 4 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 83 [ _2 ])
+            (const_int 0 [0]))) "platform.c":216:18 -1
+     (nil))
+(jump_insn 29 28 32 4 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 74)
+            (pc))) "platform.c":216:18 736 {*jcc}
+     (int_list:REG_BR_PROB 365072228 (nil))
+ -> 74)
+(note 32 29 30 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 30 32 31 5 (set (pc)
+        (label_ref 59)) -1
+     (nil)
+ -> 59)
+(barrier 31 30 33)
+(code_label 33 31 34 6 18 (nil) [2 uses])
+(note 34 33 35 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 35 34 36 6 (var_location:DI passwd (reg/v/f:DI 86 [ passwd ])) -1
+     (nil))
+(debug_insn 36 35 37 6 (debug_marker) "platform.c":229:2 -1
+     (nil))
+(insn 37 36 38 6 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 86 [ passwd ])
+            (const_int 0 [0]))) "platform.c":229:5 -1
+     (nil))
+(jump_insn 38 37 39 6 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 78)
+            (pc))) "platform.c":229:5 736 {*jcc}
+     (int_list:REG_BR_PROB 322122548 (nil))
+ -> 78)
+(note 39 38 40 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 40 39 41 7 (set (reg:QI 84 [ _3 ])
+        (mem:QI (reg/v/f:DI 86 [ passwd ]) [0 *passwd_5+0 S1 A8])) "platform.c":229:16 -1
+     (nil))
+(insn 41 40 42 7 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 84 [ _3 ])
+            (const_int 0 [0]))) "platform.c":229:13 -1
+     (nil))
+(jump_insn 42 41 43 7 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 82)
+            (pc))) "platform.c":229:13 736 {*jcc}
+     (int_list:REG_BR_PROB 536870916 (nil))
+ -> 82)
+(note 43 42 44 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 44 43 45 8 (debug_marker) "platform.c":235:3 -1
+     (nil))
+(insn 45 44 46 8 (set (reg:SI 93)
+        (zero_extend:SI (reg:QI 84 [ _3 ]))) "platform.c":235:7 -1
+     (nil))
+(insn 46 45 47 8 (set (reg:SI 4 si)
+        (const_int -33 [0xffffffffffffffdf])) "platform.c":235:7 -1
+     (nil))
+(insn 47 46 48 8 (set (reg:SI 5 di)
+        (reg:SI 93)) "platform.c":235:7 -1
+     (nil))
+(call_insn/u 48 47 49 8 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__addvsi3") [flags 0x41]  <function_decl 0x7fef6f969800 __addvsi3>) [0  S1 A8])
+            (const_int 0 [0]))) "platform.c":235:7 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__addvsi3") [flags 0x41]  <function_decl 0x7fef6f969800 __addvsi3>)
+        (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+            (nil)))
+    (expr_list (use (reg:SI 4 si))
+        (expr_list (use (reg:SI 5 di))
+            (nil))))
+(insn 49 48 50 8 (set (reg:SI 94)
+        (reg:SI 0 ax)) "platform.c":235:7 -1
+     (nil))
+(insn 50 49 51 8 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 94)
+            (const_int 0 [0]))) "platform.c":235:6 -1
+     (nil))
+(insn 51 50 52 8 (set (reg:QI 96)
+        (eq:QI (reg:CCZ 17 flags)
+            (const_int 0 [0]))) "platform.c":235:6 -1
+     (nil))
+(insn 52 51 53 8 (set (reg:SI 95)
+        (zero_extend:SI (reg:QI 96))) "platform.c":235:6 -1
+     (nil))
+(insn 53 52 71 8 (set (reg:SI 91 [ <retval> ])
+        (reg:SI 95)) "platform.c":217:10 -1
+     (nil))
+(jump_insn 71 53 72 8 (set (pc)
+        (label_ref:DI 67)) 737 {jump}
+     (nil)
+ -> 67)
+(barrier 72 71 74)
+(code_label 74 72 73 9 21 (nil) [1 uses])
+(note 73 74 5 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 5 73 75 9 (set (reg:SI 91 [ <retval> ])
+        (const_int 1 [0x1])) "platform.c":217:10 -1
+     (nil))
+(jump_insn 75 5 76 9 (set (pc)
+        (label_ref:DI 67)) 737 {jump}
+     (nil)
+ -> 67)
+(barrier 76 75 78)
+(code_label 78 76 77 10 22 (nil) [1 uses])
+(note 77 78 4 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 4 77 79 10 (set (reg:SI 91 [ <retval> ])
+        (const_int 0 [0])) "platform.c":206:6 -1
+     (nil))
+(jump_insn 79 4 80 10 (set (pc)
+        (label_ref:DI 67)) 737 {jump}
+     (nil)
+ -> 67)
+(barrier 80 79 82)
+(code_label 82 80 81 11 23 (nil) [1 uses])
+(note 81 82 6 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 6 81 56 11 (set (reg:SI 91 [ <retval> ])
+        (const_int 0 [0])) "platform.c":206:6 -1
+     (nil))
+(debug_insn 56 6 57 11 (var_location:SI locked (clobber (const_int 0 [0]))) -1
+     (nil))
+(jump_insn 57 56 58 11 (set (pc)
+        (label_ref 67)) "platform.c":250:1 -1
+     (nil)
+ -> 67)
+(barrier 58 57 59)
+(code_label 59 58 60 13 20 (nil) [1 uses])
+(note 60 59 61 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 61 60 62 13 (debug_marker) "platform.c":220:2 -1
+     (nil))
+(debug_insn 62 61 63 13 (debug_marker) "platform.c":224:3 -1
+     (nil))
+(insn 63 62 64 13 (set (reg/v/f:DI 86 [ passwd ])
+        (mem/f:DI (plus:DI (reg/v/f:DI 88 [ spw ])
+                (const_int 8 [0x8])) [1 spw_14->sp_pwdp+0 S8 A64])) "platform.c":224:10 -1
+     (nil))
+(debug_insn 64 63 65 13 (var_location:DI passwd (reg/v/f:DI 86 [ passwd ])) "platform.c":224:10 -1
+     (nil))
+(jump_insn 65 64 66 13 (set (pc)
+        (label_ref 33)) "platform.c":224:10 -1
+     (nil)
+ -> 33)
+(barrier 66 65 67)
+(code_label 67 66 70 14 17 (nil) [4 uses])
+(note 70 67 68 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 68 70 69 14 (set (reg/i:SI 0 ax)
+        (reg:SI 91 [ <retval> ])) "platform.c":250:1 -1
+     (nil))
+(insn 69 68 0 14 (use (reg/i:SI 0 ax)) "platform.c":250:1 -1
+     (nil))

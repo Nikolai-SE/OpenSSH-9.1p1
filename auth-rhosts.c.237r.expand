@@ -1,0 +1,3656 @@
+
+;; Function check_rhosts_file (check_rhosts_file, funcdef_no=387, decl_uid=16626, cgraph_uid=388, symbol_order=387)
+
+Partition 4: size 1024 align 16
+	dummy
+Partition 3: size 1024 align 16
+	userbuf
+Partition 2: size 1024 align 16
+	hostbuf
+Partition 0: size 1024 align 16
+	buf
+Partition 1: size 144 align 16
+	st
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+
+;; Generating RTL for gimple basic block 11
+
+;; Generating RTL for gimple basic block 12
+
+;; Generating RTL for gimple basic block 13
+
+;; Generating RTL for gimple basic block 14
+
+;; Generating RTL for gimple basic block 15
+
+;; Generating RTL for gimple basic block 16
+
+;; Generating RTL for gimple basic block 17
+
+;; Generating RTL for gimple basic block 18
+
+;; Generating RTL for gimple basic block 19
+
+;; Generating RTL for gimple basic block 20
+
+;; Generating RTL for gimple basic block 21
+
+;; Generating RTL for gimple basic block 22
+
+;; Generating RTL for gimple basic block 23
+
+;; Generating RTL for gimple basic block 24
+
+;; Generating RTL for gimple basic block 25
+
+;; Generating RTL for gimple basic block 26
+
+;; Generating RTL for gimple basic block 27
+
+;; Generating RTL for gimple basic block 28
+
+;; Generating RTL for gimple basic block 29
+
+;; Generating RTL for gimple basic block 30
+
+;; Generating RTL for gimple basic block 31
+
+;; Generating RTL for gimple basic block 32
+
+;; Generating RTL for gimple basic block 33
+
+;; Generating RTL for gimple basic block 34
+
+;; Generating RTL for gimple basic block 35
+
+;; Generating RTL for gimple basic block 36
+
+;; Generating RTL for gimple basic block 37
+
+;; Generating RTL for gimple basic block 38
+
+;; Generating RTL for gimple basic block 39
+
+;; Generating RTL for gimple basic block 40
+
+;; Generating RTL for gimple basic block 41
+
+;; Generating RTL for gimple basic block 42
+
+;; Generating RTL for gimple basic block 43
+
+;; Generating RTL for gimple basic block 44
+
+;; Generating RTL for gimple basic block 45
+
+;; Generating RTL for gimple basic block 46
+
+;; Generating RTL for gimple basic block 47
+
+;; Generating RTL for gimple basic block 48
+
+;; Generating RTL for gimple basic block 49
+Edge 2->49 redirected to 57
+Edge 23->25 redirected to 58
+Edge 25->28 redirected to 59
+Edge 26->28 redirected to 60
+Edge 47->9 redirected to 61
+Predictions for insn 462 bb 56
+  first match heuristics: 99.96%  exec 29821300 (estimated locally) hit 59642600 (estimated locally) (200.0%)
+  combined heuristics: 99.96%  exec 29821300 (estimated locally) hit 59642600 (estimated locally) (200.0%)
+  noreturn call heuristics: 99.96%  exec 29821300 (estimated locally) hit 59642600 (estimated locally) (200.0%)
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Redirecting jump 78 from 62 to 63.
+Redirecting jump 107 from 62 to 63.
+Redirecting jump 127 from 62 to 63.
+Edge 14->53 redirected to 54
+Edge 15->53 redirected to 54
+Forwarding edge 19->20 to 54 failed.
+Forwarding edge 21->22 to 54 failed.
+Edge 42->53 redirected to 54
+Edge 45->53 redirected to 54
+Edge 47->53 redirected to 54
+Redirecting jump 375 from 55 to 63.
+Edge 50->53 redirected to 54
+Forwarding edge 50->51 to 48 failed.
+Forwarding edge 50->51 to 48 failed.
+Redirecting jump 399 from 55 to 63.
+deleting block 53
+deleting block 55
+Removing jump 405.
+Redirecting jump 469 from 62 to 63.
+Merging block 62 into block 61...
+Merged blocks 61 and 62.
+Merged 61 and 62 without moving.
+Removing jump 457.
+
+
+try_optimize_cfg iteration 2
+
+Forwarding edge 19->20 to 54 failed.
+Forwarding edge 21->22 to 54 failed.
+Forwarding edge 50->51 to 48 failed.
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 33 NOTE_INSN_DELETED)
+(note 33 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 33 3 2 (set (reg/v/f:DI 118 [ filename ])
+        (reg:DI 5 di [ filename ])) "auth-rhosts.c":60:1 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v/f:DI 119 [ hostname ])
+        (reg:DI 4 si [ hostname ])) "auth-rhosts.c":60:1 -1
+     (nil))
+(insn 4 3 5 2 (set (reg/v/f:DI 120 [ ipaddr ])
+        (reg:DI 1 dx [ ipaddr ])) "auth-rhosts.c":60:1 -1
+     (nil))
+(insn 5 4 6 2 (set (reg/v/f:DI 121 [ client_user ])
+        (reg:DI 2 cx [ client_user ])) "auth-rhosts.c":60:1 -1
+     (nil))
+(insn 6 5 7 2 (set (reg/v/f:DI 122 [ server_user ])
+        (reg:DI 36 r8 [ server_user ])) "auth-rhosts.c":60:1 -1
+     (nil))
+(note 7 6 8 2 NOTE_INSN_FUNCTION_BEG)
+(insn 8 7 9 2 (set (reg/f:DI 123)
+        (const_int 40 [0x28])) "auth-rhosts.c":60:1 -1
+     (nil))
+(insn 9 8 35 2 (parallel [
+            (set (mem/v/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                        (const_int -8 [0xfffffffffffffff8])) [13 D.16850+0 S8 A64])
+                (unspec:DI [
+                        (mem/v/f:DI (reg/f:DI 123) [0 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_SET))
+            (set (scratch:DI)
+                (const_int 0 [0]))
+            (clobber (reg:CC 17 flags))
+        ]) "auth-rhosts.c":60:1 -1
+     (nil))
+(debug_insn 35 9 36 2 (debug_marker) "auth-rhosts.c":61:2 -1
+     (nil))
+(debug_insn 36 35 37 2 (debug_marker) "auth-rhosts.c":63:2 -1
+     (nil))
+(debug_insn 37 36 38 2 (debug_marker) "auth-rhosts.c":64:2 -1
+     (nil))
+(debug_insn 38 37 39 2 (debug_marker) "auth-rhosts.c":65:2 -1
+     (nil))
+(debug_insn 39 38 40 2 (debug_marker) "auth-rhosts.c":68:2 -1
+     (nil))
+(debug_insn 40 39 41 2 (var_location:DI __path (reg/v/f:DI 118 [ filename ])) "auth-rhosts.c":68:2 -1
+     (nil))
+(debug_insn 41 40 42 2 (var_location:SI __oflag (const_int 2048 [0x800])) "auth-rhosts.c":68:2 -1
+     (nil))
+(debug_insn 42 41 43 2 (debug_marker:BLK) "/usr/include/x86_64-linux-gnu/bits/fcntl2.h":41:1 -1
+     (nil))
+(debug_insn 43 42 44 2 (debug_marker) "/usr/include/x86_64-linux-gnu/bits/fcntl2.h":43:3 -1
+     (nil))
+(debug_insn 44 43 45 2 (debug_marker) "/usr/include/x86_64-linux-gnu/bits/fcntl2.h":46:3 -1
+     (nil))
+(debug_insn 45 44 46 2 (debug_marker) "/usr/include/x86_64-linux-gnu/bits/fcntl2.h":48:7 -1
+     (nil))
+(debug_insn 46 45 47 2 (debug_marker) "/usr/include/x86_64-linux-gnu/bits/fcntl2.h":53:7 -1
+     (nil))
+(insn 47 46 48 2 (set (reg:SI 4 si)
+        (const_int 2048 [0x800])) "/usr/include/x86_64-linux-gnu/bits/fcntl2.h":53:14 -1
+     (nil))
+(insn 48 47 49 2 (set (reg:DI 5 di)
+        (reg/v/f:DI 118 [ filename ])) "/usr/include/x86_64-linux-gnu/bits/fcntl2.h":53:14 -1
+     (nil))
+(insn 49 48 50 2 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "/usr/include/x86_64-linux-gnu/bits/fcntl2.h":53:14 -1
+     (nil))
+(call_insn 50 49 51 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("*open") [flags 0x41]  <function_decl 0x7f6a056fda00 __open_alias>) [0 __open_alias S1 A8])
+            (const_int 0 [0]))) "/usr/include/x86_64-linux-gnu/bits/fcntl2.h":53:14 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("*open") [flags 0x41]  <function_decl 0x7f6a056fda00 __open_alias>)
+        (nil))
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:SI (use (reg:SI 4 si))
+                (nil)))))
+(insn 51 50 52 2 (set (reg:SI 107 [ _75 ])
+        (reg:SI 0 ax)) "/usr/include/x86_64-linux-gnu/bits/fcntl2.h":53:14 -1
+     (nil))
+(debug_insn 52 51 53 2 (var_location:DI __path (clobber (const_int 0 [0]))) "auth-rhosts.c":68:12 -1
+     (nil))
+(debug_insn 53 52 54 2 (var_location:SI __oflag (clobber (const_int 0 [0]))) "auth-rhosts.c":68:12 -1
+     (nil))
+(debug_insn 54 53 55 2 (var_location:SI fd (reg:SI 107 [ _75 ])) "auth-rhosts.c":68:12 -1
+     (nil))
+(insn 55 54 56 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 107 [ _75 ])
+            (const_int -1 [0xffffffffffffffff]))) "auth-rhosts.c":68:5 -1
+     (nil))
+(jump_insn 56 55 57 2 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 472)
+            (pc))) "auth-rhosts.c":68:5 736 {*jcc}
+     (int_list:REG_BR_PROB 375917020 (nil))
+ -> 472)
+(note 57 56 58 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 58 57 59 4 (debug_marker) "auth-rhosts.c":70:2 -1
+     (nil))
+(debug_insn 59 58 60 4 (var_location:SI __fd (reg:SI 107 [ _75 ])) "auth-rhosts.c":70:2 -1
+     (nil))
+(debug_insn 60 59 61 4 (var_location:DI __statbuf (plus:DI (reg/f:DI 77 virtual-stack-vars)
+        (const_int -4256 [0xffffffffffffef60]))) "auth-rhosts.c":70:2 -1
+     (nil))
+(debug_insn 61 60 62 4 (debug_marker:BLK) "/usr/include/x86_64-linux-gnu/sys/stat.h":467:1 -1
+     (nil))
+(debug_insn 62 61 63 4 (debug_marker) "/usr/include/x86_64-linux-gnu/sys/stat.h":469:3 -1
+     (nil))
+(insn 63 62 64 4 (parallel [
+            (set (reg:DI 128)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -4256 [0xffffffffffffef60])))
+            (clobber (reg:CC 17 flags))
+        ]) "/usr/include/x86_64-linux-gnu/sys/stat.h":469:10 -1
+     (nil))
+(insn 64 63 65 4 (set (reg:DI 1 dx)
+        (reg:DI 128)) "/usr/include/x86_64-linux-gnu/sys/stat.h":469:10 -1
+     (nil))
+(insn 65 64 66 4 (set (reg:SI 4 si)
+        (reg:SI 107 [ _75 ])) "/usr/include/x86_64-linux-gnu/sys/stat.h":469:10 -1
+     (nil))
+(insn 66 65 67 4 (set (reg:SI 5 di)
+        (const_int 1 [0x1])) "/usr/include/x86_64-linux-gnu/sys/stat.h":469:10 -1
+     (nil))
+(call_insn 67 66 68 4 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__fxstat") [flags 0x41]  <function_decl 0x7f6a058ef100 __fxstat>) [0 __fxstat S1 A8])
+            (const_int 0 [0]))) "/usr/include/x86_64-linux-gnu/sys/stat.h":469:10 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__fxstat") [flags 0x41]  <function_decl 0x7f6a058ef100 __fxstat>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:SI (use (reg:SI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(insn 68 67 69 4 (set (reg:SI 108 [ _76 ])
+        (reg:SI 0 ax)) "/usr/include/x86_64-linux-gnu/sys/stat.h":469:10 -1
+     (nil))
+(debug_insn 69 68 70 4 (var_location:SI __fd (clobber (const_int 0 [0]))) "auth-rhosts.c":70:6 -1
+     (nil))
+(debug_insn 70 69 71 4 (var_location:DI __statbuf (clobber (const_int 0 [0]))) "auth-rhosts.c":70:6 -1
+     (nil))
+(insn 71 70 72 4 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 108 [ _76 ])
+            (const_int -1 [0xffffffffffffffff]))) "auth-rhosts.c":70:5 -1
+     (nil))
+(jump_insn 72 71 73 4 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 80)
+            (pc))) "auth-rhosts.c":70:5 -1
+     (int_list:REG_BR_PROB 949617276 (nil))
+ -> 80)
+(note 73 72 74 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 74 73 75 5 (debug_marker) "auth-rhosts.c":71:3 -1
+     (nil))
+(insn 75 74 76 5 (set (reg:SI 5 di)
+        (reg:SI 107 [ _75 ])) "auth-rhosts.c":71:3 -1
+     (nil))
+(call_insn 76 75 77 5 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("close") [flags 0x41]  <function_decl 0x7f6a0572b600 close>) [0 close S1 A8])
+            (const_int 0 [0]))) "auth-rhosts.c":71:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("close") [flags 0x41]  <function_decl 0x7f6a0572b600 close>)
+        (nil))
+    (expr_list:SI (use (reg:SI 5 di))
+        (nil)))
+(debug_insn 77 76 29 5 (debug_marker) "auth-rhosts.c":72:3 -1
+     (nil))
+(insn 29 77 78 5 (set (reg:SI 117 [ <retval> ])
+        (const_int 0 [0])) "auth-rhosts.c":72:10 -1
+     (nil))
+(jump_insn 78 29 79 5 (set (pc)
+        (label_ref:DI 459)) "auth-rhosts.c":72:10 737 {jump}
+     (nil)
+ -> 459)
+(barrier 79 78 80)
+(code_label 80 79 81 6 3 (nil) [1 uses])
+(note 81 80 82 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 82 81 83 6 (debug_marker) "auth-rhosts.c":74:2 -1
+     (nil))
+(insn 83 82 84 6 (set (reg:SI 130)
+        (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -4232 [0xffffffffffffef78])) [1 st.st_mode+0 S4 A64])) "auth-rhosts.c":74:7 -1
+     (nil))
+(insn 84 83 85 6 (parallel [
+            (set (reg:SI 129)
+                (and:SI (reg:SI 130)
+                    (const_int 61440 [0xf000])))
+            (clobber (reg:CC 17 flags))
+        ]) "auth-rhosts.c":74:7 -1
+     (expr_list:REG_EQUAL (and:SI (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -4232 [0xffffffffffffef78])) [1 st.st_mode+0 S4 A64])
+            (const_int 61440 [0xf000]))
+        (nil)))
+(insn 85 84 86 6 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 129)
+            (const_int 32768 [0x8000]))) "auth-rhosts.c":74:5 -1
+     (nil))
+(jump_insn 86 85 87 6 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 109)
+            (pc))) "auth-rhosts.c":74:5 -1
+     (int_list:REG_BR_PROB 536870916 (nil))
+ -> 109)
+(note 87 86 88 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 88 87 89 7 (debug_marker) "auth-rhosts.c":75:3 -1
+     (nil))
+(insn 89 88 90 7 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "auth-rhosts.c":75:3 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 90 89 91 7 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [5  S8 A64])
+        (reg/v/f:DI 118 [ filename ])) "auth-rhosts.c":75:3 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 91 90 92 7 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [5  S8 A64])
+        (reg/v/f:DI 122 [ server_user ])) "auth-rhosts.c":75:3 -1
+     (expr_list:REG_ARGS_SIZE (const_int 24 [0x18])
+        (nil)))
+(insn 92 91 93 7 (set (reg/f:DI 131)
+        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7f6a04f59f30 *.LC1>)) "auth-rhosts.c":75:3 -1
+     (nil))
+(insn 93 92 94 7 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [5  S8 A64])
+        (reg/f:DI 131)) "auth-rhosts.c":75:3 -1
+     (expr_list:REG_ARGS_SIZE (const_int 32 [0x20])
+        (nil)))
+(insn 94 93 95 7 (set (reg:DI 37 r9)
+        (const_int 0 [0])) "auth-rhosts.c":75:3 -1
+     (nil))
+(insn 95 94 96 7 (set (reg:SI 36 r8)
+        (const_int 3 [0x3])) "auth-rhosts.c":75:3 -1
+     (nil))
+(insn 96 95 97 7 (set (reg:SI 2 cx)
+        (const_int 0 [0])) "auth-rhosts.c":75:3 -1
+     (nil))
+(insn 97 96 98 7 (set (reg:SI 1 dx)
+        (const_int 75 [0x4b])) "auth-rhosts.c":75:3 -1
+     (nil))
+(insn 98 97 99 7 (set (reg:DI 4 si)
+        (symbol_ref:DI ("__func__.0") [flags 0x2]  <var_decl 0x7f6a052d9a20 __func__>)) "auth-rhosts.c":75:3 -1
+     (nil))
+(insn 99 98 100 7 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f6a04f59ea0 *.LC0>)) "auth-rhosts.c":75:3 -1
+     (nil))
+(insn 100 99 101 7 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "auth-rhosts.c":75:3 -1
+     (nil))
+(call_insn 101 100 102 7 (call (mem:QI (symbol_ref:DI ("sshlog") [flags 0x41]  <function_decl 0x7f6a05235800 sshlog>) [0 sshlog S1 A8])
+        (const_int 32 [0x20])) "auth-rhosts.c":75:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshlog") [flags 0x41]  <function_decl 0x7f6a05235800 sshlog>)
+        (nil))
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (expr_list:SI (use (reg:SI 1 dx))
+                    (expr_list:SI (use (reg:SI 2 cx))
+                        (expr_list:SI (use (reg:SI 36 r8))
+                            (expr_list:DI (use (reg:DI 37 r9))
+                                (nil)))))))))
+(debug_insn 102 101 103 7 (debug_marker) "auth-rhosts.c":77:3 -1
+     (nil))
+(insn 103 102 104 7 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int 32 [0x20])))
+            (clobber (reg:CC 17 flags))
+        ]) "auth-rhosts.c":77:3 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 104 103 105 7 (set (reg:SI 5 di)
+        (reg:SI 107 [ _75 ])) "auth-rhosts.c":77:3 -1
+     (nil))
+(call_insn 105 104 106 7 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("close") [flags 0x41]  <function_decl 0x7f6a0572b600 close>) [0 close S1 A8])
+            (const_int 0 [0]))) "auth-rhosts.c":77:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("close") [flags 0x41]  <function_decl 0x7f6a0572b600 close>)
+        (nil))
+    (expr_list:SI (use (reg:SI 5 di))
+        (nil)))
+(debug_insn 106 105 30 7 (debug_marker) "auth-rhosts.c":78:3 -1
+     (nil))
+(insn 30 106 107 7 (set (reg:SI 117 [ <retval> ])
+        (const_int 0 [0])) "auth-rhosts.c":78:10 -1
+     (nil))
+(jump_insn 107 30 108 7 (set (pc)
+        (label_ref:DI 459)) "auth-rhosts.c":78:10 737 {jump}
+     (nil)
+ -> 459)
+(barrier 108 107 109)
+(code_label 109 108 110 8 4 (nil) [1 uses])
+(note 110 109 111 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 111 110 112 8 (debug_marker) "auth-rhosts.c":80:2 -1
+     (nil))
+(insn 112 111 113 8 (set (reg:SI 5 di)
+        (reg:SI 107 [ _75 ])) "auth-rhosts.c":80:2 -1
+     (nil))
+(call_insn 113 112 114 8 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("unset_nonblock") [flags 0x41]  <function_decl 0x7f6a05242600 unset_nonblock>) [0 unset_nonblock S1 A8])
+            (const_int 0 [0]))) "auth-rhosts.c":80:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("unset_nonblock") [flags 0x41]  <function_decl 0x7f6a05242600 unset_nonblock>)
+        (nil))
+    (expr_list:SI (use (reg:SI 5 di))
+        (nil)))
+(debug_insn 114 113 115 8 (debug_marker) "auth-rhosts.c":81:2 -1
+     (nil))
+(insn 115 114 116 8 (set (reg:DI 4 si)
+        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7f6a04f59360 *.LC2>)) "auth-rhosts.c":81:11 -1
+     (nil))
+(insn 116 115 117 8 (set (reg:SI 5 di)
+        (reg:SI 107 [ _75 ])) "auth-rhosts.c":81:11 -1
+     (nil))
+(call_insn 117 116 118 8 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("fdopen") [flags 0x41]  <function_decl 0x7f6a0564d700 fdopen>) [0 fdopen S1 A8])
+            (const_int 0 [0]))) "auth-rhosts.c":81:11 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("fdopen") [flags 0x41]  <function_decl 0x7f6a0564d700 fdopen>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:SI (use (reg:SI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 118 117 119 8 (set (reg/v/f:DI 104 [ f ])
+        (reg:DI 0 ax)) "auth-rhosts.c":81:11 -1
+     (nil))
+(debug_insn 119 118 120 8 (var_location:DI f (reg/v/f:DI 104 [ f ])) "auth-rhosts.c":81:11 -1
+     (nil))
+(insn 120 119 121 8 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 104 [ f ])
+            (const_int 0 [0]))) "auth-rhosts.c":81:5 -1
+     (nil))
+(jump_insn 121 120 122 8 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 411)
+            (pc))) "auth-rhosts.c":81:5 -1
+     (int_list:REG_BR_PROB 968407756 (nil))
+ -> 411)
+(note 122 121 123 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 123 122 124 9 (debug_marker) "auth-rhosts.c":82:3 -1
+     (nil))
+(insn 124 123 125 9 (set (reg:SI 5 di)
+        (reg:SI 107 [ _75 ])) "auth-rhosts.c":82:3 -1
+     (nil))
+(call_insn 125 124 126 9 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("close") [flags 0x41]  <function_decl 0x7f6a0572b600 close>) [0 close S1 A8])
+            (const_int 0 [0]))) "auth-rhosts.c":82:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("close") [flags 0x41]  <function_decl 0x7f6a0572b600 close>)
+        (nil))
+    (expr_list:SI (use (reg:SI 5 di))
+        (nil)))
+(debug_insn 126 125 31 9 (debug_marker) "auth-rhosts.c":83:3 -1
+     (nil))
+(insn 31 126 127 9 (set (reg:SI 117 [ <retval> ])
+        (const_int 0 [0])) "auth-rhosts.c":83:10 -1
+     (nil))
+(jump_insn 127 31 128 9 (set (pc)
+        (label_ref:DI 459)) "auth-rhosts.c":83:10 737 {jump}
+     (nil)
+ -> 459)
+(barrier 128 127 486)
+(code_label 486 128 485 10 34 (nil) [2 uses])
+(note 485 486 10 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 10 485 137 10 (parallel [
+            (set (reg/v/f:DI 106 [ cp ])
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -4112 [0xffffffffffffeff0])))
+            (clobber (reg:CC 17 flags))
+        ]) "auth-rhosts.c":91:11 -1
+     (nil))
+(code_label 137 10 129 11 6 (nil) [2 uses])
+(note 129 137 130 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 130 129 131 11 (var_location:DI cp (reg/v/f:DI 106 [ cp ])) -1
+     (nil))
+(debug_insn 131 130 132 11 (debug_marker) "auth-rhosts.c":92:4 -1
+     (nil))
+(debug_insn 132 131 133 11 (debug_marker) "auth-rhosts.c":91:45 -1
+     (nil))
+(insn 133 132 134 11 (parallel [
+            (set (reg/v/f:DI 106 [ cp ])
+                (plus:DI (reg/v/f:DI 106 [ cp ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "auth-rhosts.c":91:47 -1
+     (nil))
+(debug_insn 134 133 135 11 (var_location:DI cp (reg/v/f:DI 106 [ cp ])) -1
+     (nil))
+(debug_insn 135 134 136 11 (debug_marker) "auth-rhosts.c":91:18 -1
+     (nil))
+(insn 136 135 138 11 (set (reg:QI 105 [ _46 ])
+        (mem:QI (reg/v/f:DI 106 [ cp ]) [0 MEM[base: cp_68, offset: 0B]+0 S1 A8])) "auth-rhosts.c":91:18 -1
+     (nil))
+(insn 138 136 139 11 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 105 [ _46 ])
+            (const_int 32 [0x20]))) "auth-rhosts.c":91:29 -1
+     (nil))
+(insn 139 138 140 11 (set (reg:QI 133)
+        (eq:QI (reg:CCZ 17 flags)
+            (const_int 0 [0]))) "auth-rhosts.c":91:29 -1
+     (nil))
+(insn 140 139 141 11 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 133)
+            (const_int 0 [0]))) "auth-rhosts.c":91:3 -1
+     (nil))
+(jump_insn 141 140 487 11 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 137)
+            (pc))) "auth-rhosts.c":91:3 -1
+     (int_list:REG_BR_PROB 477815116 (nil))
+ -> 137)
+(note 487 141 142 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 142 487 143 12 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 105 [ _46 ])
+            (const_int 9 [0x9]))) "auth-rhosts.c":91:29 -1
+     (nil))
+(insn 143 142 144 12 (set (reg:QI 135)
+        (eq:QI (reg:CCZ 17 flags)
+            (const_int 0 [0]))) "auth-rhosts.c":91:29 -1
+     (nil))
+(insn 144 143 145 12 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 135)
+            (const_int 0 [0]))) "auth-rhosts.c":91:3 -1
+     (nil))
+(jump_insn 145 144 445 12 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 137)
+            (pc))) "auth-rhosts.c":91:3 -1
+     (int_list:REG_BR_PROB 860928132 (nil))
+ -> 137)
+(code_label 445 145 146 13 28 (nil) [1 uses])
+(note 146 445 147 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 147 146 148 13 (debug_marker) "auth-rhosts.c":93:3 -1
+     (nil))
+(insn 148 147 151 13 (set (reg:QI 102 [ _28 ])
+        (reg:QI 105 [ _46 ])) "auth-rhosts.c":93:33 -1
+     (nil))
+(insn 151 148 152 13 (set (reg:CC 17 flags)
+        (compare:CC (reg:QI 102 [ _28 ])
+            (const_int 35 [0x23]))) "auth-rhosts.c":93:33 -1
+     (nil))
+(jump_insn 152 151 153 13 (set (pc)
+        (if_then_else (gtu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 161)
+            (pc))) "auth-rhosts.c":93:33 -1
+     (int_list:REG_BR_PROB 536870916 (nil))
+ -> 161)
+(note 153 152 154 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 154 153 155 14 (set (reg:SI 136)
+        (zero_extend:SI (reg:QI 102 [ _28 ]))) "auth-rhosts.c":93:33 -1
+     (nil))
+(insn 155 154 156 14 (set (reg:DI 138)
+        (const_int 34359739393 [0x800000401])) "auth-rhosts.c":93:33 -1
+     (nil))
+(insn 156 155 157 14 (parallel [
+            (set (reg:DI 137)
+                (lshiftrt:DI (reg:DI 138)
+                    (subreg:QI (reg:SI 136) 0)))
+            (clobber (reg:CC 17 flags))
+        ]) "auth-rhosts.c":93:33 -1
+     (nil))
+(insn 157 156 158 14 (set (reg:DI 139)
+        (not:DI (reg:DI 137))) "auth-rhosts.c":93:33 -1
+     (nil))
+(insn 158 157 159 14 (parallel [
+            (set (reg:QI 140)
+                (and:QI (subreg:QI (reg:DI 139) 0)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "auth-rhosts.c":93:33 -1
+     (nil))
+(insn 159 158 160 14 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 140)
+            (const_int 0 [0]))) "auth-rhosts.c":93:33 -1
+     (nil))
+(jump_insn 160 159 161 14 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 403)
+            (pc))) "auth-rhosts.c":93:33 736 {*jcc}
+     (int_list:REG_BR_PROB 892080244 (nil))
+ -> 403)
+(code_label 161 160 162 15 7 (nil) [1 uses])
+(note 162 161 163 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 163 162 164 15 (debug_marker) "auth-rhosts.c":100:3 -1
+     (nil))
+(insn 164 163 165 15 (set (reg/f:DI 141)
+        (symbol_ref/f:DI ("*.LC3") [flags 0x2]  <var_decl 0x7f6a04f59510 *.LC3>)) "auth-rhosts.c":100:7 -1
+     (nil))
+(insn 165 164 166 15 (set (reg:DI 142)
+        (reg/v/f:DI 106 [ cp ])) "auth-rhosts.c":100:7 -1
+     (nil))
+(insn 166 165 167 15 (set (reg:DI 143)
+        (reg/f:DI 141)) "auth-rhosts.c":100:7 -1
+     (nil))
+(insn 167 166 168 15 (set (reg:DI 144)
+        (const_int 7 [0x7])) "auth-rhosts.c":100:7 -1
+     (nil))
+(insn 168 167 169 15 (parallel [
+            (set (reg:CC 17 flags)
+                (compare:CC (mem:BLK (reg:DI 142) [0 MEM <char[1:7]> [(void *)cp_88]+0 S7 A8])
+                    (mem/u/c:BLK (reg:DI 143) [0 MEM <char[1:7]> [(void *)"NO_PLUS"]+0 S7 A8])))
+            (use (reg:DI 144))
+            (use (const_int 1 [0x1]))
+            (clobber (reg:DI 142))
+            (clobber (reg:DI 143))
+            (clobber (reg:DI 144))
+        ]) "auth-rhosts.c":100:7 -1
+     (nil))
+(insn 169 168 170 15 (set (reg:QI 145)
+        (gtu:QI (reg:CC 17 flags)
+            (const_int 0 [0]))) "auth-rhosts.c":100:7 -1
+     (nil))
+(insn 170 169 171 15 (set (reg:QI 146)
+        (ltu:QI (reg:CC 17 flags)
+            (const_int 0 [0]))) "auth-rhosts.c":100:7 -1
+     (nil))
+(insn 171 170 172 15 (parallel [
+            (set (subreg:QI (reg:SI 87 [ _10 ]) 0)
+                (minus:QI (reg:QI 145)
+                    (reg:QI 146)))
+            (clobber (reg:CC 17 flags))
+        ]) "auth-rhosts.c":100:7 -1
+     (nil))
+(insn 172 171 173 15 (set (reg:SI 87 [ _10 ])
+        (sign_extend:SI (subreg:QI (reg:SI 87 [ _10 ]) 0))) "auth-rhosts.c":100:7 -1
+     (nil))
+(insn 173 172 174 15 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 87 [ _10 ])
+            (const_int 0 [0]))) "auth-rhosts.c":100:6 -1
+     (nil))
+(jump_insn 174 173 175 15 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 403)
+            (pc))) "auth-rhosts.c":100:6 736 {*jcc}
+     (int_list:REG_BR_PROB 536870916 (nil))
+ -> 403)
+(note 175 174 176 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 176 175 177 16 (debug_marker) "auth-rhosts.c":107:3 -1
+     (nil))
+(insn 177 176 178 16 (parallel [
+            (set (reg:DI 147)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -1040 [0xfffffffffffffbf0])))
+            (clobber (reg:CC 17 flags))
+        ]) "auth-rhosts.c":107:11 -1
+     (nil))
+(insn 178 177 179 16 (parallel [
+            (set (reg:DI 148)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -2064 [0xfffffffffffff7f0])))
+            (clobber (reg:CC 17 flags))
+        ]) "auth-rhosts.c":107:11 -1
+     (nil))
+(insn 179 178 180 16 (parallel [
+            (set (reg:DI 149)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -3088 [0xfffffffffffff3f0])))
+            (clobber (reg:CC 17 flags))
+        ]) "auth-rhosts.c":107:11 -1
+     (nil))
+(insn 180 179 181 16 (parallel [
+            (set (reg:DI 150)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -4112 [0xffffffffffffeff0])))
+            (clobber (reg:CC 17 flags))
+        ]) "auth-rhosts.c":107:11 -1
+     (nil))
+(insn 181 180 182 16 (set (reg:DI 36 r8)
+        (reg:DI 147)) "auth-rhosts.c":107:11 -1
+     (nil))
+(insn 182 181 183 16 (set (reg:DI 2 cx)
+        (reg:DI 148)) "auth-rhosts.c":107:11 -1
+     (nil))
+(insn 183 182 184 16 (set (reg:DI 1 dx)
+        (reg:DI 149)) "auth-rhosts.c":107:11 -1
+     (nil))
+(insn 184 183 185 16 (set (reg:DI 4 si)
+        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f6a04f595a0 *.LC4>)) "auth-rhosts.c":107:11 -1
+     (nil))
+(insn 185 184 186 16 (set (reg:DI 5 di)
+        (reg:DI 150)) "auth-rhosts.c":107:11 -1
+     (nil))
+(insn 186 185 187 16 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "auth-rhosts.c":107:11 -1
+     (nil))
+(call_insn 187 186 188 16 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("*__isoc99_sscanf") [flags 0x41]  <function_decl 0x7f6a05b52100 sscanf>) [0 __builtin_sscanf S1 A8])
+            (const_int 0 [0]))) "auth-rhosts.c":107:11 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("*__isoc99_sscanf") [flags 0x41]  <function_decl 0x7f6a05b52100 sscanf>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (expr_list:DI (use (reg:DI 1 dx))
+                    (expr_list:DI (use (reg:DI 2 cx))
+                        (expr_list:DI (use (reg:DI 36 r8))
+                            (nil))))))))
+(insn 188 187 189 16 (set (reg:SI 88 [ _11 ])
+        (reg:SI 0 ax)) "auth-rhosts.c":107:11 -1
+     (nil))
+(insn 189 188 190 16 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 88 [ _11 ])
+            (const_int 2 [0x2]))) "auth-rhosts.c":107:3 -1
+     (nil))
+(jump_insn 190 189 191 16 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 243)
+            (pc))) "auth-rhosts.c":107:3 -1
+     (int_list:REG_BR_PROB 214748374 (nil))
+ -> 243)
+(note 191 190 194 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
+(insn 194 191 195 17 (set (reg:CCGC 17 flags)
+        (compare:CCGC (reg:SI 88 [ _11 ])
+            (const_int 2 [0x2]))) "auth-rhosts.c":107:3 -1
+     (nil))
+(jump_insn 195 194 196 17 (set (pc)
+        (if_then_else (gt (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 205)
+            (pc))) "auth-rhosts.c":107:3 -1
+     (int_list:REG_BR_PROB 402653190 (nil))
+ -> 205)
+(note 196 195 197 18 [bb 18] NOTE_INSN_BASIC_BLOCK)
+(insn 197 196 198 18 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 88 [ _11 ])
+            (const_int 0 [0]))) "auth-rhosts.c":107:3 -1
+     (nil))
+(jump_insn 198 197 199 18 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 212)
+            (pc))) "auth-rhosts.c":107:3 -1
+     (int_list:REG_BR_PROB 429496734 (nil))
+ -> 212)
+(note 199 198 200 19 [bb 19] NOTE_INSN_BASIC_BLOCK)
+(insn 200 199 201 19 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 88 [ _11 ])
+            (const_int 1 [0x1]))) "auth-rhosts.c":107:3 -1
+     (nil))
+(jump_insn 201 200 204 19 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 222)
+            (pc))) "auth-rhosts.c":107:3 -1
+     (int_list:REG_BR_PROB 1073741828 (nil))
+ -> 222)
+(note 204 201 202 20 [bb 20] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 202 204 203 20 (set (pc)
+        (label_ref 403)) "auth-rhosts.c":107:3 -1
+     (nil)
+ -> 403)
+(barrier 203 202 205)
+(code_label 205 203 206 21 10 (nil) [1 uses])
+(note 206 205 207 21 [bb 21] NOTE_INSN_BASIC_BLOCK)
+(insn 207 206 208 21 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 88 [ _11 ])
+            (const_int 3 [0x3]))) "auth-rhosts.c":107:3 -1
+     (nil))
+(jump_insn 208 207 211 21 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 233)
+            (pc))) "auth-rhosts.c":107:3 -1
+     (int_list:REG_BR_PROB 715827886 (nil))
+ -> 233)
+(note 211 208 209 22 [bb 22] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 209 211 210 22 (set (pc)
+        (label_ref 403)) "auth-rhosts.c":107:3 -1
+     (nil)
+ -> 403)
+(barrier 210 209 212)
+(code_label 212 210 213 23 11 (nil) [1 uses])
+(note 213 212 214 23 [bb 23] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 214 213 215 23 (debug_marker) "auth-rhosts.c":110:4 -1
+     (nil))
+(insn 215 214 216 23 (set (reg:DI 4 si)
+        (reg/v/f:DI 118 [ filename ])) "auth-rhosts.c":110:4 -1
+     (nil))
+(insn 216 215 217 23 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC5") [flags 0x2]  <var_decl 0x7f6a04f59630 *.LC5>)) "auth-rhosts.c":110:4 -1
+     (nil))
+(insn 217 216 218 23 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "auth-rhosts.c":110:4 -1
+     (nil))
+(call_insn 218 217 219 23 (call (mem:QI (symbol_ref:DI ("auth_debug_add") [flags 0x41]  <function_decl 0x7f6a04ef8200 auth_debug_add>) [0 auth_debug_add S1 A8])
+        (const_int 0 [0])) "auth-rhosts.c":110:4 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("auth_debug_add") [flags 0x41]  <function_decl 0x7f6a04ef8200 auth_debug_add>)
+        (nil))
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (nil)))))
+(debug_insn 219 218 220 23 (debug_marker) "auth-rhosts.c":111:4 -1
+     (nil))
+(jump_insn 220 219 221 23 (set (pc)
+        (label_ref 403)) "auth-rhosts.c":111:4 -1
+     (nil)
+ -> 403)
+(barrier 221 220 222)
+(code_label 222 221 223 24 12 (nil) [1 uses])
+(note 223 222 224 24 [bb 24] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 224 223 225 24 (debug_marker) "auth-rhosts.c":114:4 -1
+     (nil))
+(insn 225 224 226 24 (parallel [
+            (set (reg:DI 151)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -2064 [0xfffffffffffff7f0])))
+            (clobber (reg:CC 17 flags))
+        ]) "auth-rhosts.c":114:4 -1
+     (nil))
+(insn 226 225 227 24 (set (reg:DI 1 dx)
+        (const_int 1024 [0x400])) "auth-rhosts.c":114:4 -1
+     (nil))
+(insn 227 226 228 24 (set (reg:DI 4 si)
+        (reg/v/f:DI 122 [ server_user ])) "auth-rhosts.c":114:4 -1
+     (nil))
+(insn 228 227 229 24 (set (reg:DI 5 di)
+        (reg:DI 151)) "auth-rhosts.c":114:4 -1
+     (nil))
+(call_insn 229 228 230 24 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strlcpy") [flags 0x41]  <function_decl 0x7f6a056cd700 strlcpy>) [0 strlcpy S1 A8])
+            (const_int 0 [0]))) "auth-rhosts.c":114:4 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("strlcpy") [flags 0x41]  <function_decl 0x7f6a056cd700 strlcpy>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(debug_insn 230 229 231 24 (debug_marker) "auth-rhosts.c":115:4 -1
+     (nil))
+(jump_insn 231 230 232 24 (set (pc)
+        (label_ref 243)) "auth-rhosts.c":115:4 -1
+     (nil)
+ -> 243)
+(barrier 232 231 233)
+(code_label 233 232 234 25 14 (nil) [1 uses])
+(note 234 233 235 25 [bb 25] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 235 234 236 25 (debug_marker) "auth-rhosts.c":120:4 -1
+     (nil))
+(insn 236 235 237 25 (set (reg:DI 4 si)
+        (reg/v/f:DI 118 [ filename ])) "auth-rhosts.c":120:4 -1
+     (nil))
+(insn 237 236 238 25 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC6") [flags 0x2]  <var_decl 0x7f6a04f596c0 *.LC6>)) "auth-rhosts.c":120:4 -1
+     (nil))
+(insn 238 237 239 25 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "auth-rhosts.c":120:4 -1
+     (nil))
+(call_insn 239 238 240 25 (call (mem:QI (symbol_ref:DI ("auth_debug_add") [flags 0x41]  <function_decl 0x7f6a04ef8200 auth_debug_add>) [0 auth_debug_add S1 A8])
+        (const_int 0 [0])) "auth-rhosts.c":120:4 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("auth_debug_add") [flags 0x41]  <function_decl 0x7f6a04ef8200 auth_debug_add>)
+        (nil))
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (nil)))))
+(debug_insn 240 239 241 25 (debug_marker) "auth-rhosts.c":121:4 -1
+     (nil))
+(jump_insn 241 240 242 25 (set (pc)
+        (label_ref 403)) "auth-rhosts.c":121:4 -1
+     (nil)
+ -> 403)
+(barrier 242 241 243)
+(code_label 243 242 244 26 9 (nil) [2 uses])
+(note 244 243 245 26 [bb 26] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 245 244 246 26 (debug_marker) "auth-rhosts.c":127:3 -1
+     (nil))
+(debug_insn 246 245 247 26 (var_location:DI host (plus:DI (reg/f:DI 77 virtual-stack-vars)
+        (const_int -3088 [0xfffffffffffff3f0]))) "auth-rhosts.c":127:8 -1
+     (nil))
+(debug_insn 247 246 248 26 (debug_marker) "auth-rhosts.c":128:3 -1
+     (nil))
+(debug_insn 248 247 249 26 (var_location:DI user (plus:DI (reg/f:DI 77 virtual-stack-vars)
+        (const_int -2064 [0xfffffffffffff7f0]))) "auth-rhosts.c":128:8 -1
+     (nil))
+(debug_insn 249 248 250 26 (debug_marker) "auth-rhosts.c":129:3 -1
+     (nil))
+(debug_insn 250 249 251 26 (var_location:SI negated (const_int 0 [0])) "auth-rhosts.c":129:11 -1
+     (nil))
+(debug_insn 251 250 252 26 (debug_marker) "auth-rhosts.c":132:3 -1
+     (nil))
+(insn 252 251 253 26 (set (reg:QI 89 [ _12 ])
+        (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -3088 [0xfffffffffffff3f0])) [0 MEM[(char *)&hostbuf]+0 S1 A64])) "auth-rhosts.c":132:11 -1
+     (nil))
+(insn 253 252 254 26 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 89 [ _12 ])
+            (const_int 45 [0x2d]))) "auth-rhosts.c":132:6 -1
+     (nil))
+(jump_insn 254 253 255 26 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 259)
+            (pc))) "auth-rhosts.c":132:6 -1
+     (int_list:REG_BR_PROB 708669604 (nil))
+ -> 259)
+(note 255 254 256 27 [bb 27] NOTE_INSN_BASIC_BLOCK)
+(insn 256 255 15 27 (set (reg:QI 89 [ _12 ])
+        (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -3087 [0xfffffffffffff3f1])) [0 MEM[(char *)&hostbuf + 1B]+0 S1 A8])) "auth-rhosts.c":134:8 -1
+     (nil))
+(insn 15 256 16 27 (set (reg/v:SI 103 [ negated ])
+        (const_int 1 [0x1])) "auth-rhosts.c":133:12 -1
+     (nil))
+(insn 16 15 17 27 (parallel [
+            (set (reg:DI 125)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -3088 [0xfffffffffffff3f0])))
+            (clobber (reg:CC 17 flags))
+        ]) "auth-rhosts.c":134:8 -1
+     (nil))
+(insn 17 16 257 27 (parallel [
+            (set (reg/v/f:DI 100 [ host ])
+                (plus:DI (reg:DI 125)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "auth-rhosts.c":134:8 -1
+     (nil))
+(jump_insn 257 17 258 27 (set (pc)
+        (label_ref 268)) "auth-rhosts.c":134:8 -1
+     (nil)
+ -> 268)
+(barrier 258 257 259)
+(code_label 259 258 260 28 15 (nil) [1 uses])
+(note 260 259 261 28 [bb 28] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 261 260 262 28 (debug_marker) "auth-rhosts.c":135:10 -1
+     (nil))
+(insn 262 261 263 28 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 89 [ _12 ])
+            (const_int 43 [0x2b]))) "auth-rhosts.c":135:13 -1
+     (nil))
+(jump_insn 263 262 264 28 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 476)
+            (pc))) "auth-rhosts.c":135:13 736 {*jcc}
+     (int_list:REG_BR_PROB 708669604 (nil))
+ -> 476)
+(note 264 263 265 29 [bb 29] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 265 264 266 29 (debug_marker) "auth-rhosts.c":136:4 -1
+     (nil))
+(debug_insn 266 265 267 29 (var_location:DI host (plus:DI (reg/f:DI 77 virtual-stack-vars)
+        (const_int -3087 [0xfffffffffffff3f1]))) "auth-rhosts.c":136:8 -1
+     (nil))
+(insn 267 266 12 29 (set (reg:QI 89 [ _12 ])
+        (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -3087 [0xfffffffffffff3f1])) [0 MEM[(char *)&hostbuf + 1B]+0 S1 A8])) "auth-rhosts.c":136:8 -1
+     (nil))
+(insn 12 267 13 29 (set (reg/v:SI 103 [ negated ])
+        (const_int 0 [0])) "auth-rhosts.c":129:11 -1
+     (nil))
+(insn 13 12 14 29 (parallel [
+            (set (reg:DI 124)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -3088 [0xfffffffffffff3f0])))
+            (clobber (reg:CC 17 flags))
+        ]) "auth-rhosts.c":136:8 -1
+     (nil))
+(insn 14 13 473 29 (parallel [
+            (set (reg/v/f:DI 100 [ host ])
+                (plus:DI (reg:DI 124)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "auth-rhosts.c":136:8 -1
+     (nil))
+(jump_insn 473 14 474 29 (set (pc)
+        (label_ref 268)) -1
+     (nil)
+ -> 268)
+(barrier 474 473 476)
+(code_label 476 474 475 30 31 (nil) [1 uses])
+(note 475 476 18 30 [bb 30] NOTE_INSN_BASIC_BLOCK)
+(insn 18 475 19 30 (set (reg/v:SI 103 [ negated ])
+        (const_int 0 [0])) "auth-rhosts.c":129:11 -1
+     (nil))
+(insn 19 18 268 30 (parallel [
+            (set (reg/v/f:DI 100 [ host ])
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -3088 [0xfffffffffffff3f0])))
+            (clobber (reg:CC 17 flags))
+        ]) "auth-rhosts.c":127:8 -1
+     (nil))
+(code_label 268 19 269 31 16 (nil) [2 uses])
+(note 269 268 270 31 [bb 31] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 270 269 271 31 (var_location:SI negated (reg/v:SI 103 [ negated ])) -1
+     (nil))
+(debug_insn 271 270 272 31 (var_location:DI host (reg/v/f:DI 100 [ host ])) -1
+     (nil))
+(debug_insn 272 271 273 31 (debug_marker) "auth-rhosts.c":138:3 -1
+     (nil))
+(insn 273 272 274 31 (set (reg:QI 90 [ _14 ])
+        (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -2064 [0xfffffffffffff7f0])) [0 MEM[(char *)&userbuf]+0 S1 A64])) "auth-rhosts.c":138:11 -1
+     (nil))
+(insn 274 273 275 31 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 90 [ _14 ])
+            (const_int 45 [0x2d]))) "auth-rhosts.c":138:6 -1
+     (nil))
+(jump_insn 275 274 276 31 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 480)
+            (pc))) "auth-rhosts.c":138:6 736 {*jcc}
+     (int_list:REG_BR_PROB 365072228 (nil))
+ -> 480)
+(note 276 275 277 32 [bb 32] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 277 276 278 32 (debug_marker) "auth-rhosts.c":141:10 -1
+     (nil))
+(insn 278 277 279 32 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 90 [ _14 ])
+            (const_int 43 [0x2b]))) "auth-rhosts.c":141:13 -1
+     (nil))
+(jump_insn 279 278 280 32 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 484)
+            (pc))) "auth-rhosts.c":141:13 736 {*jcc}
+     (int_list:REG_BR_PROB 708669604 (nil))
+ -> 484)
+(note 280 279 24 33 [bb 33] NOTE_INSN_BASIC_BLOCK)
+(insn 24 280 25 33 (parallel [
+            (set (reg:DI 127)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -2064 [0xfffffffffffff7f0])))
+            (clobber (reg:CC 17 flags))
+        ]) "auth-rhosts.c":142:8 -1
+     (nil))
+(insn 25 24 477 33 (parallel [
+            (set (reg/v/f:DI 101 [ user ])
+                (plus:DI (reg:DI 127)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "auth-rhosts.c":142:8 -1
+     (nil))
+(jump_insn 477 25 478 33 (set (pc)
+        (label_ref 281)) -1
+     (nil)
+ -> 281)
+(barrier 478 477 480)
+(code_label 480 478 479 34 32 (nil) [1 uses])
+(note 479 480 20 34 [bb 34] NOTE_INSN_BASIC_BLOCK)
+(insn 20 479 21 34 (set (reg/v:SI 103 [ negated ])
+        (const_int 1 [0x1])) "auth-rhosts.c":139:12 -1
+     (nil))
+(insn 21 20 22 34 (parallel [
+            (set (reg:DI 126)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -2064 [0xfffffffffffff7f0])))
+            (clobber (reg:CC 17 flags))
+        ]) "auth-rhosts.c":140:8 -1
+     (nil))
+(insn 22 21 481 34 (parallel [
+            (set (reg/v/f:DI 101 [ user ])
+                (plus:DI (reg:DI 126)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "auth-rhosts.c":140:8 -1
+     (nil))
+(jump_insn 481 22 482 34 (set (pc)
+        (label_ref 281)) -1
+     (nil)
+ -> 281)
+(barrier 482 481 484)
+(code_label 484 482 483 35 33 (nil) [1 uses])
+(note 483 484 23 35 [bb 35] NOTE_INSN_BASIC_BLOCK)
+(insn 23 483 281 35 (parallel [
+            (set (reg/v/f:DI 101 [ user ])
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -2064 [0xfffffffffffff7f0])))
+            (clobber (reg:CC 17 flags))
+        ]) "auth-rhosts.c":128:8 -1
+     (nil))
+(code_label 281 23 282 36 17 (nil) [2 uses])
+(note 282 281 283 36 [bb 36] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 283 282 284 36 (var_location:SI negated (reg/v:SI 103 [ negated ])) -1
+     (nil))
+(debug_insn 284 283 285 36 (var_location:DI user (reg/v/f:DI 101 [ user ])) -1
+     (nil))
+(debug_insn 285 284 286 36 (debug_marker) "auth-rhosts.c":145:3 -1
+     (nil))
+(insn 286 285 287 36 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 89 [ _12 ])
+            (const_int 0 [0]))) "auth-rhosts.c":145:6 -1
+     (nil))
+(jump_insn 287 286 288 36 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 292)
+            (pc))) "auth-rhosts.c":145:6 -1
+     (int_list:REG_BR_PROB 209594412 (nil))
+ -> 292)
+(note 288 287 289 37 [bb 37] NOTE_INSN_BASIC_BLOCK)
+(insn 289 288 290 37 (set (reg:QI 91 [ _16 ])
+        (mem:QI (reg/v/f:DI 101 [ user ]) [0 *user_27+0 S1 A8])) "auth-rhosts.c":145:24 -1
+     (nil))
+(insn 290 289 291 37 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 91 [ _16 ])
+            (const_int 0 [0]))) "auth-rhosts.c":145:16 -1
+     (nil))
+(jump_insn 291 290 292 37 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 302)
+            (pc))) "auth-rhosts.c":145:16 -1
+     (int_list:REG_BR_PROB 719407028 (nil))
+ -> 302)
+(code_label 292 291 293 38 18 (nil) [1 uses])
+(note 293 292 294 38 [bb 38] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 294 293 295 38 (debug_marker) "auth-rhosts.c":147:4 -1
+     (nil))
+(insn 295 294 296 38 (set (reg:DI 4 si)
+        (reg/v/f:DI 118 [ filename ])) "auth-rhosts.c":147:4 -1
+     (nil))
+(insn 296 295 297 38 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC7") [flags 0x2]  <var_decl 0x7f6a04f59750 *.LC7>)) "auth-rhosts.c":147:4 -1
+     (nil))
+(insn 297 296 298 38 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "auth-rhosts.c":147:4 -1
+     (nil))
+(call_insn 298 297 299 38 (call (mem:QI (symbol_ref:DI ("auth_debug_add") [flags 0x41]  <function_decl 0x7f6a04ef8200 auth_debug_add>) [0 auth_debug_add S1 A8])
+        (const_int 0 [0])) "auth-rhosts.c":147:4 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("auth_debug_add") [flags 0x41]  <function_decl 0x7f6a04ef8200 auth_debug_add>)
+        (nil))
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (nil)))))
+(debug_insn 299 298 300 38 (debug_marker) "auth-rhosts.c":149:4 -1
+     (nil))
+(jump_insn 300 299 301 38 (set (pc)
+        (label_ref 403)) "auth-rhosts.c":149:4 -1
+     (nil)
+ -> 403)
+(barrier 301 300 302)
+(code_label 302 301 303 39 19 (nil) [1 uses])
+(note 303 302 304 39 [bb 39] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 304 303 305 39 (debug_marker) "auth-rhosts.c":152:3 -1
+     (nil))
+(insn 305 304 306 39 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 89 [ _12 ])
+            (const_int 64 [0x40]))) "auth-rhosts.c":152:6 -1
+     (nil))
+(jump_insn 306 305 307 39 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 336)
+            (pc))) "auth-rhosts.c":152:6 -1
+     (int_list:REG_BR_PROB 856416484 (nil))
+ -> 336)
+(note 307 306 308 40 [bb 40] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 308 307 309 40 (debug_marker) "auth-rhosts.c":153:4 -1
+     (nil))
+(insn 309 308 310 40 (parallel [
+            (set (reg/f:DI 92 [ _17 ])
+                (plus:DI (reg/v/f:DI 100 [ host ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "auth-rhosts.c":153:22 -1
+     (nil))
+(insn 310 309 311 40 (set (reg:DI 2 cx)
+        (const_int 0 [0])) "auth-rhosts.c":153:9 -1
+     (nil))
+(insn 311 310 312 40 (set (reg:DI 1 dx)
+        (const_int 0 [0])) "auth-rhosts.c":153:9 -1
+     (nil))
+(insn 312 311 313 40 (set (reg:DI 4 si)
+        (reg/v/f:DI 119 [ hostname ])) "auth-rhosts.c":153:9 -1
+     (nil))
+(insn 313 312 314 40 (set (reg:DI 5 di)
+        (reg/f:DI 92 [ _17 ])) "auth-rhosts.c":153:9 -1
+     (nil))
+(call_insn 314 313 315 40 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("innetgr") [flags 0x41]  <function_decl 0x7f6a05a7b000 innetgr>) [0 innetgr S1 A8])
+            (const_int 0 [0]))) "auth-rhosts.c":153:9 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("innetgr") [flags 0x41]  <function_decl 0x7f6a05a7b000 innetgr>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (expr_list:DI (use (reg:DI 2 cx))
+                    (nil))))))
+(insn 315 314 316 40 (set (reg:SI 93 [ _18 ])
+        (reg:SI 0 ax)) "auth-rhosts.c":153:9 -1
+     (nil))
+(insn 316 315 317 40 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 93 [ _18 ])
+            (const_int 0 [0]))) "auth-rhosts.c":153:7 -1
+     (nil))
+(jump_insn 317 316 318 40 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 322)
+            (pc))) "auth-rhosts.c":153:7 -1
+     (int_list:REG_BR_PROB 354334804 (nil))
+ -> 322)
+(note 318 317 319 41 [bb 41] NOTE_INSN_BASIC_BLOCK)
+(insn 319 318 320 41 (set (reg:QI 91 [ _16 ])
+        (mem:QI (reg/v/f:DI 101 [ user ]) [0 *user_27+0 S1 A8])) "auth-rhosts.c":161:11 -1
+     (nil))
+(jump_insn 320 319 321 41 (set (pc)
+        (label_ref 352)) "auth-rhosts.c":161:11 -1
+     (nil)
+ -> 352)
+(barrier 321 320 322)
+(code_label 322 321 323 42 21 (nil) [1 uses])
+(note 323 322 324 42 [bb 42] NOTE_INSN_BASIC_BLOCK)
+(insn 324 323 325 42 (set (reg:DI 2 cx)
+        (const_int 0 [0])) "auth-rhosts.c":154:9 -1
+     (nil))
+(insn 325 324 326 42 (set (reg:DI 1 dx)
+        (const_int 0 [0])) "auth-rhosts.c":154:9 -1
+     (nil))
+(insn 326 325 327 42 (set (reg:DI 4 si)
+        (reg/v/f:DI 120 [ ipaddr ])) "auth-rhosts.c":154:9 -1
+     (nil))
+(insn 327 326 328 42 (set (reg:DI 5 di)
+        (reg/f:DI 92 [ _17 ])) "auth-rhosts.c":154:9 -1
+     (nil))
+(call_insn 328 327 329 42 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("innetgr") [flags 0x41]  <function_decl 0x7f6a05a7b000 innetgr>) [0 innetgr S1 A8])
+            (const_int 0 [0]))) "auth-rhosts.c":154:9 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("innetgr") [flags 0x41]  <function_decl 0x7f6a05a7b000 innetgr>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (expr_list:DI (use (reg:DI 2 cx))
+                    (nil))))))
+(insn 329 328 330 42 (set (reg:SI 94 [ _19 ])
+        (reg:SI 0 ax)) "auth-rhosts.c":154:9 -1
+     (nil))
+(insn 330 329 331 42 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 94 [ _19 ])
+            (const_int 0 [0]))) "auth-rhosts.c":153:49 -1
+     (nil))
+(jump_insn 331 330 332 42 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 403)
+            (pc))) "auth-rhosts.c":153:49 736 {*jcc}
+     (int_list:REG_BR_PROB 354334804 (nil))
+ -> 403)
+(note 332 331 333 43 [bb 43] NOTE_INSN_BASIC_BLOCK)
+(insn 333 332 334 43 (set (reg:QI 91 [ _16 ])
+        (mem:QI (reg/v/f:DI 101 [ user ]) [0 *user_27+0 S1 A8])) "auth-rhosts.c":161:11 -1
+     (nil))
+(jump_insn 334 333 335 43 (set (pc)
+        (label_ref 352)) "auth-rhosts.c":161:11 -1
+     (nil)
+ -> 352)
+(barrier 335 334 336)
+(code_label 336 335 337 44 20 (nil) [1 uses])
+(note 337 336 338 44 [bb 44] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 338 337 339 44 (debug_marker) "auth-rhosts.c":156:10 -1
+     (nil))
+(insn 339 338 340 44 (set (reg:DI 4 si)
+        (reg/v/f:DI 119 [ hostname ])) "auth-rhosts.c":156:14 -1
+     (nil))
+(insn 340 339 341 44 (set (reg:DI 5 di)
+        (reg/v/f:DI 100 [ host ])) "auth-rhosts.c":156:14 -1
+     (nil))
+(call_insn/i 341 340 342 44 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strcasecmp") [flags 0x41]  <function_decl 0x7f6a05b46500 strcasecmp>) [0 __builtin_strcasecmp S1 A8])
+            (const_int 0 [0]))) "auth-rhosts.c":156:14 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("strcasecmp") [flags 0x41]  <function_decl 0x7f6a05b46500 strcasecmp>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 342 341 343 44 (set (reg:SI 95 [ _20 ])
+        (reg:SI 0 ax)) "auth-rhosts.c":156:14 -1
+     (nil))
+(insn 343 342 344 44 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 95 [ _20 ])
+            (const_int 0 [0]))) "auth-rhosts.c":156:13 -1
+     (nil))
+(jump_insn 344 343 345 44 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 352)
+            (pc))) "auth-rhosts.c":156:13 -1
+     (int_list:REG_BR_PROB 536870916 (nil))
+ -> 352)
+(note 345 344 346 45 [bb 45] NOTE_INSN_BASIC_BLOCK)
+(insn 346 345 347 45 (set (reg:DI 4 si)
+        (reg/v/f:DI 120 [ ipaddr ])) "auth-rhosts.c":157:7 -1
+     (nil))
+(insn 347 346 348 45 (set (reg:DI 5 di)
+        (reg/v/f:DI 100 [ host ])) "auth-rhosts.c":157:7 -1
+     (nil))
+(call_insn/i 348 347 349 45 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x7f6a05b46b00 strcmp>) [0 __builtin_strcmp S1 A8])
+            (const_int 0 [0]))) "auth-rhosts.c":157:7 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x7f6a05b46b00 strcmp>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 349 348 350 45 (set (reg:SI 96 [ _21 ])
+        (reg:SI 0 ax)) "auth-rhosts.c":157:7 -1
+     (nil))
+(insn 350 349 351 45 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 96 [ _21 ])
+            (const_int 0 [0]))) "auth-rhosts.c":156:41 -1
+     (nil))
+(jump_insn 351 350 352 45 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 403)
+            (pc))) "auth-rhosts.c":156:41 736 {*jcc}
+     (int_list:REG_BR_PROB 354334804 (nil))
+ -> 403)
+(code_label 352 351 353 46 22 (nil) [3 uses])
+(note 353 352 354 46 [bb 46] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 354 353 355 46 (debug_marker) "auth-rhosts.c":161:3 -1
+     (nil))
+(insn 355 354 356 46 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 91 [ _16 ])
+            (const_int 64 [0x40]))) "auth-rhosts.c":161:6 -1
+     (nil))
+(jump_insn 356 355 357 46 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 378)
+            (pc))) "auth-rhosts.c":161:6 -1
+     (int_list:REG_BR_PROB 856416484 (nil))
+ -> 378)
+(note 357 356 358 47 [bb 47] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 358 357 359 47 (debug_marker) "auth-rhosts.c":162:4 -1
+     (nil))
+(insn 359 358 360 47 (parallel [
+            (set (reg:DI 152)
+                (plus:DI (reg/v/f:DI 101 [ user ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "auth-rhosts.c":162:22 -1
+     (nil))
+(insn 360 359 361 47 (set (reg:DI 2 cx)
+        (const_int 0 [0])) "auth-rhosts.c":162:9 -1
+     (nil))
+(insn 361 360 362 47 (set (reg:DI 1 dx)
+        (reg/v/f:DI 121 [ client_user ])) "auth-rhosts.c":162:9 -1
+     (nil))
+(insn 362 361 363 47 (set (reg:DI 4 si)
+        (const_int 0 [0])) "auth-rhosts.c":162:9 -1
+     (nil))
+(insn 363 362 364 47 (set (reg:DI 5 di)
+        (reg:DI 152)) "auth-rhosts.c":162:9 -1
+     (nil))
+(call_insn 364 363 365 47 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("innetgr") [flags 0x41]  <function_decl 0x7f6a05a7b000 innetgr>) [0 innetgr S1 A8])
+            (const_int 0 [0]))) "auth-rhosts.c":162:9 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("innetgr") [flags 0x41]  <function_decl 0x7f6a05a7b000 innetgr>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (expr_list:DI (use (reg:DI 2 cx))
+                    (nil))))))
+(insn 365 364 366 47 (set (reg:SI 98 [ _24 ])
+        (reg:SI 0 ax)) "auth-rhosts.c":162:9 -1
+     (nil))
+(insn 366 365 367 47 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 98 [ _24 ])
+            (const_int 0 [0]))) "auth-rhosts.c":162:7 -1
+     (nil))
+(jump_insn 367 366 387 47 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 403)
+            (pc))) "auth-rhosts.c":162:7 736 {*jcc}
+     (int_list:REG_BR_PROB 354334804 (nil))
+ -> 403)
+(code_label 387 367 368 48 26 (nil) [1 uses])
+(note 368 387 369 48 [bb 48] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 369 368 370 48 (debug_marker) "auth-rhosts.c":168:3 -1
+     (nil))
+(insn 370 369 371 48 (set (reg:DI 5 di)
+        (reg/v/f:DI 104 [ f ])) "auth-rhosts.c":168:3 -1
+     (nil))
+(call_insn 371 370 372 48 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("fclose") [flags 0x41]  <function_decl 0x7f6a05a88f00 fclose>) [0 fclose S1 A8])
+            (const_int 0 [0]))) "auth-rhosts.c":168:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("fclose") [flags 0x41]  <function_decl 0x7f6a05a88f00 fclose>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(debug_insn 372 371 373 48 (debug_marker) "auth-rhosts.c":171:3 -1
+     (nil))
+(insn 373 372 374 48 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 103 [ negated ])
+            (const_int 0 [0]))) "auth-rhosts.c":171:6 -1
+     (nil))
+(jump_insn 374 373 377 48 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 391)
+            (pc))) "auth-rhosts.c":171:6 -1
+     (int_list:REG_BR_PROB 217325348 (nil))
+ -> 391)
+(note 377 374 27 49 [bb 49] NOTE_INSN_BASIC_BLOCK)
+(insn 27 377 375 49 (set (reg:SI 117 [ <retval> ])
+        (const_int 1 [0x1])) "auth-rhosts.c":177:10 -1
+     (nil))
+(jump_insn 375 27 376 49 (set (pc)
+        (label_ref:DI 459)) 737 {jump}
+     (nil)
+ -> 459)
+(barrier 376 375 378)
+(code_label 378 376 379 50 23 (nil) [1 uses])
+(note 379 378 380 50 [bb 50] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 380 379 381 50 (debug_marker) "auth-rhosts.c":164:10 -1
+     (nil))
+(insn 381 380 382 50 (set (reg:DI 4 si)
+        (reg/v/f:DI 121 [ client_user ])) "auth-rhosts.c":164:14 -1
+     (nil))
+(insn 382 381 383 50 (set (reg:DI 5 di)
+        (reg/v/f:DI 101 [ user ])) "auth-rhosts.c":164:14 -1
+     (nil))
+(call_insn/i 383 382 384 50 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x7f6a05b46b00 strcmp>) [0 __builtin_strcmp S1 A8])
+            (const_int 0 [0]))) "auth-rhosts.c":164:14 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x7f6a05b46b00 strcmp>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 384 383 385 50 (set (reg:SI 99 [ _25 ])
+        (reg:SI 0 ax)) "auth-rhosts.c":164:14 -1
+     (nil))
+(insn 385 384 386 50 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 99 [ _25 ])
+            (const_int 0 [0]))) "auth-rhosts.c":164:13 -1
+     (nil))
+(jump_insn 386 385 390 50 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 403)
+            (pc))) "auth-rhosts.c":164:13 736 {*jcc}
+     (int_list:REG_BR_PROB 354334804 (nil))
+ -> 403)
+(note 390 386 388 51 [bb 51] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 388 390 389 51 (set (pc)
+        (label_ref 387)) -1
+     (nil)
+ -> 387)
+(barrier 389 388 391)
+(code_label 391 389 392 52 24 (nil) [1 uses])
+(note 392 391 393 52 [bb 52] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 393 392 394 52 (debug_marker) "auth-rhosts.c":172:4 -1
+     (nil))
+(insn 394 393 395 52 (set (reg:DI 4 si)
+        (reg/v/f:DI 118 [ filename ])) "auth-rhosts.c":172:4 -1
+     (nil))
+(insn 395 394 396 52 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC8") [flags 0x2]  <var_decl 0x7f6a04f59870 *.LC8>)) "auth-rhosts.c":172:4 -1
+     (nil))
+(insn 396 395 397 52 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "auth-rhosts.c":172:4 -1
+     (nil))
+(call_insn 397 396 398 52 (call (mem:QI (symbol_ref:DI ("auth_debug_add") [flags 0x41]  <function_decl 0x7f6a04ef8200 auth_debug_add>) [0 auth_debug_add S1 A8])
+        (const_int 0 [0])) "auth-rhosts.c":172:4 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("auth_debug_add") [flags 0x41]  <function_decl 0x7f6a04ef8200 auth_debug_add>)
+        (nil))
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (nil)))))
+(debug_insn 398 397 26 52 (debug_marker) "auth-rhosts.c":174:4 -1
+     (nil))
+(insn 26 398 399 52 (set (reg:SI 117 [ <retval> ])
+        (const_int 0 [0])) "auth-rhosts.c":174:11 -1
+     (nil))
+(jump_insn 399 26 400 52 (set (pc)
+        (label_ref:DI 459)) "auth-rhosts.c":174:11 737 {jump}
+     (nil)
+ -> 459)
+(barrier 400 399 403)
+(code_label 403 400 404 54 13 (nil) [11 uses])
+(note 404 403 411 54 [bb 54] NOTE_INSN_BASIC_BLOCK)
+(code_label 411 404 412 56 5 (nil) [1 uses])
+(note 412 411 413 56 [bb 56] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 413 412 414 56 (debug_marker) "auth-rhosts.c":85:8 -1
+     (nil))
+(debug_insn 414 413 415 56 (var_location:DI __s (plus:DI (reg/f:DI 77 virtual-stack-vars)
+        (const_int -4112 [0xffffffffffffeff0]))) "auth-rhosts.c":85:8 -1
+     (nil))
+(debug_insn 415 414 416 56 (var_location:SI __n (const_int 1024 [0x400])) "auth-rhosts.c":85:8 -1
+     (nil))
+(debug_insn 416 415 417 56 (var_location:DI __stream (reg/v/f:DI 104 [ f ])) "auth-rhosts.c":85:8 -1
+     (nil))
+(debug_insn 417 416 418 56 (debug_marker:BLK) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":255:1 -1
+     (nil))
+(debug_insn 418 417 419 56 (debug_marker) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":257:3 -1
+     (nil))
+(debug_insn 419 418 420 56 (debug_marker) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":259:7 -1
+     (nil))
+(debug_insn 420 419 421 56 (debug_marker) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":262:7 -1
+     (nil))
+(debug_insn 421 420 422 56 (debug_marker) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":265:3 -1
+     (nil))
+(insn 422 421 423 56 (parallel [
+            (set (reg:DI 153)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -4112 [0xffffffffffffeff0])))
+            (clobber (reg:CC 17 flags))
+        ]) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":265:10 -1
+     (nil))
+(insn 423 422 424 56 (set (reg:DI 1 dx)
+        (reg/v/f:DI 104 [ f ])) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":265:10 -1
+     (nil))
+(insn 424 423 425 56 (set (reg:SI 4 si)
+        (const_int 1024 [0x400])) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":265:10 -1
+     (nil))
+(insn 425 424 426 56 (set (reg:DI 5 di)
+        (reg:DI 153)) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":265:10 -1
+     (nil))
+(call_insn 426 425 427 56 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("*fgets") [flags 0x41]  <function_decl 0x7f6a05688e00 __fgets_alias>) [0 __fgets_alias S1 A8])
+            (const_int 0 [0]))) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":265:10 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("*fgets") [flags 0x41]  <function_decl 0x7f6a05688e00 __fgets_alias>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(insn 427 426 428 56 (set (reg/f:DI 109 [ _77 ])
+        (reg:DI 0 ax)) "/usr/include/x86_64-linux-gnu/bits/stdio2.h":265:10 -1
+     (nil))
+(debug_insn 428 427 429 56 (var_location:DI __s (clobber (const_int 0 [0]))) "auth-rhosts.c":85:9 -1
+     (nil))
+(debug_insn 429 428 430 56 (var_location:SI __n (clobber (const_int 0 [0]))) "auth-rhosts.c":85:9 -1
+     (nil))
+(debug_insn 430 429 431 56 (var_location:DI __stream (clobber (const_int 0 [0]))) "auth-rhosts.c":85:9 -1
+     (nil))
+(insn 431 430 432 56 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/f:DI 109 [ _77 ])
+            (const_int 0 [0]))) "auth-rhosts.c":85:8 -1
+     (nil))
+(jump_insn 432 431 433 56 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 449)
+            (pc))) "auth-rhosts.c":85:8 -1
+     (int_list:REG_BR_PROB 39298956 (nil))
+ -> 449)
+(note 433 432 434 57 [bb 57] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 434 433 435 57 (var_location:DI cp (plus:DI (reg/f:DI 77 virtual-stack-vars)
+        (const_int -4112 [0xffffffffffffeff0]))) -1
+     (nil))
+(debug_insn 435 434 436 57 (debug_marker) "auth-rhosts.c":91:18 -1
+     (nil))
+(insn 436 435 437 57 (set (reg:QI 105 [ _46 ])
+        (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -4112 [0xffffffffffffeff0])) [0 MEM[(char *)&buf]+0 S1 A64])) "auth-rhosts.c":91:18 -1
+     (nil))
+(insn 437 436 438 57 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 105 [ _46 ])
+            (const_int 9 [0x9]))) "auth-rhosts.c":91:29 -1
+     (nil))
+(insn 438 437 439 57 (set (reg:QI 155)
+        (eq:QI (reg:CCZ 17 flags)
+            (const_int 0 [0]))) "auth-rhosts.c":91:29 -1
+     (nil))
+(insn 439 438 440 57 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 155)
+            (const_int 0 [0]))) "auth-rhosts.c":91:3 -1
+     (nil))
+(jump_insn 440 439 488 57 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 486)
+            (pc))) "auth-rhosts.c":91:3 736 {*jcc}
+     (int_list:REG_BR_PROB 477815116 (nil))
+ -> 486)
+(note 488 440 441 58 [bb 58] NOTE_INSN_BASIC_BLOCK)
+(insn 441 488 442 58 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 105 [ _46 ])
+            (const_int 32 [0x20]))) "auth-rhosts.c":91:29 -1
+     (nil))
+(insn 442 441 443 58 (set (reg:QI 157)
+        (eq:QI (reg:CCZ 17 flags)
+            (const_int 0 [0]))) "auth-rhosts.c":91:29 -1
+     (nil))
+(insn 443 442 444 58 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 157)
+            (const_int 0 [0]))) "auth-rhosts.c":91:3 -1
+     (nil))
+(jump_insn 444 443 448 58 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 486)
+            (pc))) "auth-rhosts.c":91:3 736 {*jcc}
+     (int_list:REG_BR_PROB 860928132 (nil))
+ -> 486)
+(note 448 444 11 59 [bb 59] NOTE_INSN_BASIC_BLOCK)
+(insn 11 448 446 59 (parallel [
+            (set (reg/v/f:DI 106 [ cp ])
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -4112 [0xffffffffffffeff0])))
+            (clobber (reg:CC 17 flags))
+        ]) "auth-rhosts.c":91:11 -1
+     (nil))
+(jump_insn 446 11 447 59 (set (pc)
+        (label_ref 445)) "auth-rhosts.c":91:3 -1
+     (nil)
+ -> 445)
+(barrier 447 446 449)
+(code_label 449 447 450 60 27 (nil) [1 uses])
+(note 450 449 451 60 [bb 60] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 451 450 452 60 (debug_marker) "auth-rhosts.c":181:2 -1
+     (nil))
+(insn 452 451 453 60 (set (reg:DI 5 di)
+        (reg/v/f:DI 104 [ f ])) "auth-rhosts.c":181:2 -1
+     (nil))
+(call_insn 453 452 454 60 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("fclose") [flags 0x41]  <function_decl 0x7f6a05a88f00 fclose>) [0 fclose S1 A8])
+            (const_int 0 [0]))) "auth-rhosts.c":181:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("fclose") [flags 0x41]  <function_decl 0x7f6a05a88f00 fclose>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(debug_insn 454 453 28 60 (debug_marker) "auth-rhosts.c":182:2 -1
+     (nil))
+(insn 28 454 469 60 (set (reg:SI 117 [ <retval> ])
+        (const_int 0 [0])) "auth-rhosts.c":182:9 -1
+     (nil))
+(jump_insn 469 28 470 60 (set (pc)
+        (label_ref:DI 459)) "auth-rhosts.c":182:9 737 {jump}
+     (nil)
+ -> 459)
+(barrier 470 469 472)
+(code_label 472 470 471 61 30 (nil) [1 uses])
+(note 471 472 32 61 [bb 61] NOTE_INSN_BASIC_BLOCK)
+(insn 32 471 459 61 (set (reg:SI 117 [ <retval> ])
+        (const_int 0 [0])) "auth-rhosts.c":69:10 -1
+     (nil))
+(code_label 459 32 468 63 1 (nil) [6 uses])
+(note 468 459 460 63 [bb 63] NOTE_INSN_BASIC_BLOCK)
+(insn 460 468 461 63 (set (reg/f:DI 159)
+        (const_int 40 [0x28])) "auth-rhosts.c":183:1 -1
+     (nil))
+(insn 461 460 462 63 (parallel [
+            (set (reg:CCZ 17 flags)
+                (unspec:CCZ [
+                        (mem/v/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                                (const_int -8 [0xfffffffffffffff8])) [13 D.16850+0 S8 A64])
+                        (mem/v/f:DI (reg/f:DI 159) [0 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_TEST))
+            (clobber (scratch:DI))
+        ]) "auth-rhosts.c":183:1 -1
+     (nil))
+(jump_insn 462 461 489 63 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 465)
+            (pc))) "auth-rhosts.c":183:1 -1
+     (int_list:REG_BR_PROB 1073312332 (nil))
+ -> 465)
+(note 489 462 463 64 [bb 64] NOTE_INSN_BASIC_BLOCK)
+(call_insn 463 489 464 64 (call (mem:QI (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7f6a04f54900 __stack_chk_fail>) [0 __stack_chk_fail S1 A8])
+        (const_int 0 [0])) "auth-rhosts.c":183:1 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7f6a04f54900 __stack_chk_fail>)
+        (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+            (expr_list:REG_NORETURN (const_int 0 [0])
+                (expr_list:REG_EH_REGION (const_int 0 [0])
+                    (nil)))))
+    (nil))
+(barrier 464 463 465)
+(code_label 465 464 490 65 29 (nil) [1 uses])
+(note 490 465 466 65 [bb 65] NOTE_INSN_BASIC_BLOCK)
+(insn 466 490 467 65 (set (reg/i:SI 0 ax)
+        (reg:SI 117 [ <retval> ])) "auth-rhosts.c":183:1 -1
+     (nil))
+(insn 467 466 0 65 (use (reg/i:SI 0 ax)) "auth-rhosts.c":183:1 -1
+     (nil))
+
+;; Function auth_rhosts2 (auth_rhosts2, funcdef_no=388, decl_uid=16270, cgraph_uid=389, symbol_order=388)
+
+Partition 1: size 144 align 16
+	st
+Partition 0: size 8 align 8
+	path
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+
+;; Generating RTL for gimple basic block 11
+
+;; Generating RTL for gimple basic block 12
+
+;; Generating RTL for gimple basic block 13
+
+;; Generating RTL for gimple basic block 14
+
+;; Generating RTL for gimple basic block 15
+
+;; Generating RTL for gimple basic block 16
+
+;; Generating RTL for gimple basic block 17
+
+;; Generating RTL for gimple basic block 18
+
+;; Generating RTL for gimple basic block 19
+
+;; Generating RTL for gimple basic block 20
+
+;; Generating RTL for gimple basic block 21
+
+;; Generating RTL for gimple basic block 22
+
+;; Generating RTL for gimple basic block 23
+
+;; Generating RTL for gimple basic block 24
+
+;; Generating RTL for gimple basic block 25
+
+;; Generating RTL for gimple basic block 26
+
+;; Generating RTL for gimple basic block 27
+
+;; Generating RTL for gimple basic block 28
+
+;; Generating RTL for gimple basic block 29
+
+;; Generating RTL for gimple basic block 30
+
+;; Generating RTL for gimple basic block 31
+
+;; Generating RTL for gimple basic block 32
+
+;; Generating RTL for gimple basic block 33
+
+;; Generating RTL for gimple basic block 34
+
+;; Generating RTL for gimple basic block 35
+
+;; Generating RTL for gimple basic block 36
+
+;; Generating RTL for gimple basic block 37
+
+;; Generating RTL for gimple basic block 38
+
+;; Generating RTL for gimple basic block 39
+
+;; Generating RTL for gimple basic block 40
+Predictions for insn 503 bb 44
+  first match heuristics: 99.96%  exec 114863533 (estimated locally) hit 229727065 (estimated locally) (200.0%)
+  combined heuristics: 99.96%  exec 114863533 (estimated locally) hit 229727065 (estimated locally) (200.0%)
+  noreturn call heuristics: 99.96%  exec 114863533 (estimated locally) hit 229727065 (estimated locally) (200.0%)
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Forwarding edge 5->6 to 41 failed.
+Edge 7->9 redirected to 10
+Redirecting jump 126 from 40 to 44.
+Redirecting jump 170 from 40 to 44.
+Redirecting jump 193 from 40 to 44.
+Redirecting jump 237 from 40 to 44.
+Redirecting jump 279 from 40 to 44.
+Redirecting jump 443 from 40 to 44.
+Merging block 40 into block 39...
+Merged blocks 39 and 40.
+Merged 39 and 40 without moving.
+Forwarding edge 41->42 to 10 failed.
+Redirecting jump 489 from 9 to 10.
+
+
+try_optimize_cfg iteration 2
+
+Forwarding edge 5->6 to 41 failed.
+deleting block 9
+Forwarding edge 41->42 to 10 failed.
+
+
+try_optimize_cfg iteration 3
+
+Forwarding edge 5->6 to 41 failed.
+Forwarding edge 41->42 to 10 failed.
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 19 NOTE_INSN_DELETED)
+(note 19 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 19 3 2 (set (reg/v/f:DI 135 [ pw ])
+        (reg:DI 5 di [ pw ])) "auth-rhosts.c":193:1 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v/f:DI 136 [ client_user ])
+        (reg:DI 4 si [ client_user ])) "auth-rhosts.c":193:1 -1
+     (nil))
+(insn 4 3 5 2 (set (reg/v/f:DI 137 [ hostname ])
+        (reg:DI 1 dx [ hostname ])) "auth-rhosts.c":193:1 -1
+     (nil))
+(insn 5 4 6 2 (set (reg/v/f:DI 138 [ ipaddr ])
+        (reg:DI 2 cx [ ipaddr ])) "auth-rhosts.c":193:1 -1
+     (nil))
+(note 6 5 7 2 NOTE_INSN_FUNCTION_BEG)
+(insn 7 6 8 2 (set (reg/f:DI 139)
+        (const_int 40 [0x28])) "auth-rhosts.c":193:1 -1
+     (nil))
+(insn 8 7 21 2 (parallel [
+            (set (mem/v/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                        (const_int -8 [0xfffffffffffffff8])) [13 D.16879+0 S8 A64])
+                (unspec:DI [
+                        (mem/v/f:DI (reg/f:DI 139) [0 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_SET))
+            (set (scratch:DI)
+                (const_int 0 [0]))
+            (clobber (reg:CC 17 flags))
+        ]) "auth-rhosts.c":193:1 -1
+     (nil))
+(debug_insn 21 8 22 2 (debug_marker) "auth-rhosts.c":194:2 -1
+     (nil))
+(insn 22 21 23 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -168 [0xffffffffffffff58])) [5 path+0 S8 A64])
+        (const_int 0 [0])) "auth-rhosts.c":194:8 -1
+     (nil))
+(debug_insn 23 22 24 2 (debug_marker) "auth-rhosts.c":195:2 -1
+     (nil))
+(debug_insn 24 23 25 2 (debug_marker) "auth-rhosts.c":196:2 -1
+     (nil))
+(debug_insn 25 24 26 2 (debug_marker) "auth-rhosts.c":197:2 -1
+     (nil))
+(debug_insn 26 25 27 2 (debug_marker) "auth-rhosts.c":198:2 -1
+     (nil))
+(debug_insn 27 26 28 2 (debug_marker) "auth-rhosts.c":200:2 -1
+     (nil))
+(insn 28 27 29 2 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [5  S8 A64])
+        (reg/v/f:DI 138 [ ipaddr ])) "auth-rhosts.c":200:2 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 29 28 30 2 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [5  S8 A64])
+        (reg/v/f:DI 137 [ hostname ])) "auth-rhosts.c":200:2 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 30 29 31 2 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [5  S8 A64])
+        (reg/v/f:DI 136 [ client_user ])) "auth-rhosts.c":200:2 -1
+     (expr_list:REG_ARGS_SIZE (const_int 24 [0x18])
+        (nil)))
+(insn 31 30 32 2 (set (reg/f:DI 140)
+        (symbol_ref/f:DI ("*.LC10") [flags 0x2]  <var_decl 0x7f6a04fb4480 *.LC10>)) "auth-rhosts.c":200:2 -1
+     (nil))
+(insn 32 31 33 2 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [5  S8 A64])
+        (reg/f:DI 140)) "auth-rhosts.c":200:2 -1
+     (expr_list:REG_ARGS_SIZE (const_int 32 [0x20])
+        (nil)))
+(insn 33 32 34 2 (set (reg:DI 37 r9)
+        (const_int 0 [0])) "auth-rhosts.c":200:2 -1
+     (nil))
+(insn 34 33 35 2 (set (reg:SI 36 r8)
+        (const_int 6 [0x6])) "auth-rhosts.c":200:2 -1
+     (nil))
+(insn 35 34 36 2 (set (reg:SI 2 cx)
+        (const_int 1 [0x1])) "auth-rhosts.c":200:2 -1
+     (nil))
+(insn 36 35 37 2 (set (reg:SI 1 dx)
+        (const_int 200 [0xc8])) "auth-rhosts.c":200:2 -1
+     (nil))
+(insn 37 36 38 2 (set (reg:DI 4 si)
+        (symbol_ref:DI ("__func__.2") [flags 0x2]  <var_decl 0x7f6a04f072d0 __func__>)) "auth-rhosts.c":200:2 -1
+     (nil))
+(insn 38 37 39 2 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f6a04f59ea0 *.LC0>)) "auth-rhosts.c":200:2 -1
+     (nil))
+(insn 39 38 40 2 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "auth-rhosts.c":200:2 -1
+     (nil))
+(call_insn 40 39 41 2 (call (mem:QI (symbol_ref:DI ("sshlog") [flags 0x41]  <function_decl 0x7f6a05235800 sshlog>) [0 sshlog S1 A8])
+        (const_int 32 [0x20])) "auth-rhosts.c":200:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshlog") [flags 0x41]  <function_decl 0x7f6a05235800 sshlog>)
+        (nil))
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (expr_list:SI (use (reg:SI 1 dx))
+                    (expr_list:SI (use (reg:SI 2 cx))
+                        (expr_list:SI (use (reg:SI 36 r8))
+                            (expr_list:DI (use (reg:DI 37 r9))
+                                (nil)))))))))
+(debug_insn 41 40 42 2 (debug_marker) "auth-rhosts.c":204:2 -1
+     (nil))
+(insn 42 41 43 2 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int 32 [0x20])))
+            (clobber (reg:CC 17 flags))
+        ]) "auth-rhosts.c":204:2 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 43 42 44 2 (set (reg:DI 5 di)
+        (reg/v/f:DI 135 [ pw ])) "auth-rhosts.c":204:2 -1
+     (nil))
+(call_insn 44 43 45 2 (call (mem:QI (symbol_ref:DI ("temporarily_use_uid") [flags 0x41]  <function_decl 0x7f6a05226700 temporarily_use_uid>) [0 temporarily_use_uid S1 A8])
+        (const_int 0 [0])) "auth-rhosts.c":204:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("temporarily_use_uid") [flags 0x41]  <function_decl 0x7f6a05226700 temporarily_use_uid>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(debug_insn 45 44 46 2 (debug_marker) "auth-rhosts.c":211:2 -1
+     (nil))
+(debug_insn 46 45 47 2 (var_location:SI rhosts_file_index (const_int 0 [0])) -1
+     (nil))
+(debug_insn 47 46 48 2 (debug_marker) "auth-rhosts.c":211:30 -1
+     (nil))
+(insn 48 47 9 2 (set (reg:DI 126 [ ivtmp.35 ])
+        (symbol_ref:DI ("rhosts_files.1") [flags 0x2]  <var_decl 0x7f6a04f07120 rhosts_files>)) -1
+     (nil))
+(insn 9 48 10 2 (set (reg:DI 125 [ ivtmp.41 ])
+        (reg:DI 126 [ ivtmp.35 ])) "auth-rhosts.c":204:2 -1
+     (nil))
+(insn 10 9 90 2 (set (reg/f:DI 86 [ _5 ])
+        (symbol_ref/f:DI ("*.LC9") [flags 0x2]  <var_decl 0x7f6a04fb43f0 *.LC9>)) "auth-rhosts.c":211:42 -1
+     (nil))
+(code_label 90 10 49 4 75 (nil) [1 uses])
+(note 49 90 50 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 50 49 51 4 (var_location:SI rhosts_file_index (subreg:SI (lshiftrt:DI (minus:DI (reg:DI 125 [ ivtmp.41 ])
+                (symbol_ref:DI ("rhosts_files.1") [flags 0x2]  <var_decl 0x7f6a04f07120 rhosts_files>))
+            (const_int 3 [0x3])) 0)) -1
+     (nil))
+(debug_insn 51 50 52 4 (debug_marker) "auth-rhosts.c":214:3 -1
+     (nil))
+(insn 52 51 53 4 (set (reg:DI 141)
+        (mem/f:DI (plus:DI (reg/v/f:DI 135 [ pw ])
+                (const_int 32 [0x20])) [5 pw_62(D)->pw_dir+0 S8 A64])) "auth-rhosts.c":214:3 -1
+     (nil))
+(insn 53 52 54 4 (parallel [
+            (set (reg:DI 142)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -168 [0xffffffffffffff58])))
+            (clobber (reg:CC 17 flags))
+        ]) "auth-rhosts.c":214:3 -1
+     (nil))
+(insn 54 53 55 4 (set (reg:DI 2 cx)
+        (reg/f:DI 86 [ _5 ])) "auth-rhosts.c":214:3 -1
+     (nil))
+(insn 55 54 56 4 (set (reg:DI 1 dx)
+        (reg:DI 141)) "auth-rhosts.c":214:3 -1
+     (nil))
+(insn 56 55 57 4 (set (reg:DI 4 si)
+        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x7f6a04fb45a0 *.LC11>)) "auth-rhosts.c":214:3 -1
+     (nil))
+(insn 57 56 58 4 (set (reg:DI 5 di)
+        (reg:DI 142)) "auth-rhosts.c":214:3 -1
+     (nil))
+(insn 58 57 59 4 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "auth-rhosts.c":214:3 -1
+     (nil))
+(call_insn 59 58 60 4 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("xasprintf") [flags 0x41]  <function_decl 0x7f6a0525f100 xasprintf>) [0 xasprintf S1 A8])
+            (const_int 0 [0]))) "auth-rhosts.c":214:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("xasprintf") [flags 0x41]  <function_decl 0x7f6a0525f100 xasprintf>)
+        (nil))
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (expr_list:DI (use (reg:DI 1 dx))
+                    (expr_list:DI (use (reg:DI 2 cx))
+                        (nil)))))))
+(debug_insn 60 59 61 4 (debug_marker) "auth-rhosts.c":216:3 -1
+     (nil))
+(debug_insn 61 60 62 4 (var_location:DI __path (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+            (const_int -168 [0xffffffffffffff58])) [5 path+0 S8 A64])) "auth-rhosts.c":216:7 -1
+     (nil))
+(debug_insn 62 61 63 4 (var_location:DI __statbuf (plus:DI (reg/f:DI 77 virtual-stack-vars)
+        (const_int -160 [0xffffffffffffff60]))) "auth-rhosts.c":216:7 -1
+     (nil))
+(debug_insn 63 62 64 4 (debug_marker:BLK) "/usr/include/x86_64-linux-gnu/sys/stat.h":453:1 -1
+     (nil))
+(debug_insn 64 63 65 4 (debug_marker) "/usr/include/x86_64-linux-gnu/sys/stat.h":455:3 -1
+     (nil))
+(insn 65 64 66 4 (parallel [
+            (set (reg:DI 143)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -160 [0xffffffffffffff60])))
+            (clobber (reg:CC 17 flags))
+        ]) "/usr/include/x86_64-linux-gnu/sys/stat.h":455:10 -1
+     (nil))
+(insn 66 65 67 4 (set (reg:DI 144)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -168 [0xffffffffffffff58])) [5 path+0 S8 A64])) "/usr/include/x86_64-linux-gnu/sys/stat.h":455:10 -1
+     (nil))
+(insn 67 66 68 4 (set (reg:DI 1 dx)
+        (reg:DI 143)) "/usr/include/x86_64-linux-gnu/sys/stat.h":455:10 -1
+     (nil))
+(insn 68 67 69 4 (set (reg:DI 4 si)
+        (reg:DI 144)) "/usr/include/x86_64-linux-gnu/sys/stat.h":455:10 -1
+     (nil))
+(insn 69 68 70 4 (set (reg:SI 5 di)
+        (const_int 1 [0x1])) "/usr/include/x86_64-linux-gnu/sys/stat.h":455:10 -1
+     (nil))
+(call_insn 70 69 71 4 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__xstat") [flags 0x41]  <function_decl 0x7f6a058ef200 __xstat>) [0 __xstat S1 A8])
+            (const_int 0 [0]))) "/usr/include/x86_64-linux-gnu/sys/stat.h":455:10 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__xstat") [flags 0x41]  <function_decl 0x7f6a058ef200 __xstat>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:SI (use (reg:SI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(insn 71 70 72 4 (set (reg:SI 129 [ _96 ])
+        (reg:SI 0 ax)) "/usr/include/x86_64-linux-gnu/sys/stat.h":455:10 -1
+     (nil))
+(debug_insn 72 71 73 4 (var_location:DI __path (clobber (const_int 0 [0]))) "auth-rhosts.c":216:7 -1
+     (nil))
+(debug_insn 73 72 74 4 (var_location:DI __statbuf (clobber (const_int 0 [0]))) "auth-rhosts.c":216:7 -1
+     (nil))
+(debug_insn 74 73 75 4 (var_location:SI r (reg:SI 129 [ _96 ])) "auth-rhosts.c":216:7 -1
+     (nil))
+(debug_insn 75 74 76 4 (debug_marker) "auth-rhosts.c":217:3 -1
+     (nil))
+(insn 76 75 77 4 (set (reg:DI 145)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -168 [0xffffffffffffff58])) [5 path+0 S8 A64])) "auth-rhosts.c":217:3 -1
+     (nil))
+(insn 77 76 78 4 (set (reg:DI 5 di)
+        (reg:DI 145)) "auth-rhosts.c":217:3 -1
+     (nil))
+(call_insn 78 77 79 4 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x7f6a05b68900 free>) [0 __builtin_free S1 A8])
+        (const_int 0 [0])) "auth-rhosts.c":217:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x7f6a05b68900 free>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(debug_insn 79 78 82 4 (debug_marker) "auth-rhosts.c":218:3 -1
+     (nil))
+(insn 82 79 83 4 (set (reg:CCGOC 17 flags)
+        (compare:CCGOC (reg:SI 129 [ _96 ])
+            (const_int 0 [0]))) "auth-rhosts.c":218:6 -1
+     (nil))
+(jump_insn 83 82 84 4 (set (pc)
+        (if_then_else (ge (reg:CCGOC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 492)
+            (pc))) "auth-rhosts.c":218:6 -1
+     (int_list:REG_BR_PROB 59055804 (nil))
+ -> 492)
+(note 84 83 85 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 85 84 86 5 (debug_marker) "auth-rhosts.c":212:6 -1
+     (nil))
+(debug_insn 86 85 87 5 (var_location:SI rhosts_file_index (plus:SI (subreg:SI (lshiftrt:DI (minus:DI (reg:DI 125 [ ivtmp.41 ])
+                    (symbol_ref:DI ("rhosts_files.1") [flags 0x2]  <var_decl 0x7f6a04f07120 rhosts_files>))
+                (const_int 3 [0x3])) 0)
+        (const_int 1 [0x1]))) -1
+     (nil))
+(debug_insn 87 86 88 5 (debug_marker) "auth-rhosts.c":211:30 -1
+     (nil))
+(insn 88 87 89 5 (parallel [
+            (set (reg:DI 125 [ ivtmp.41 ])
+                (plus:DI (reg:DI 125 [ ivtmp.41 ])
+                    (const_int 8 [0x8])))
+            (clobber (reg:CC 17 flags))
+        ]) "auth-rhosts.c":211:2 -1
+     (nil))
+(insn 89 88 91 5 (set (reg/f:DI 86 [ _5 ])
+        (mem/f:DI (reg:DI 125 [ ivtmp.41 ]) [0 MEM[base: _67, offset: 0B]+0 S8 A64])) "auth-rhosts.c":211:42 -1
+     (nil))
+(insn 91 89 92 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/f:DI 86 [ _5 ])
+            (const_int 0 [0]))) "auth-rhosts.c":211:2 -1
+     (nil))
+(jump_insn 92 91 95 5 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 90)
+            (pc))) "auth-rhosts.c":211:2 -1
+     (int_list:REG_BR_PROB 1014686028 (nil))
+ -> 90)
+(note 95 92 93 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 93 95 94 6 (set (pc)
+        (label_ref 469)) -1
+     (nil)
+ -> 469)
+(barrier 94 93 486)
+(code_label 486 94 96 7 95 (nil) [1 uses])
+(note 96 486 97 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 97 96 98 7 (var_location:DI __path (symbol_ref/f:DI ("*.LC12") [flags 0x2]  <var_decl 0x7f6a04fd2000 *.LC12>)) -1
+     (nil))
+(debug_insn 98 97 99 7 (var_location:DI __statbuf (plus:DI (reg/f:DI 77 virtual-stack-vars)
+        (const_int -160 [0xffffffffffffff60]))) -1
+     (nil))
+(debug_insn 99 98 100 7 (debug_marker:BLK) "/usr/include/x86_64-linux-gnu/sys/stat.h":453:1 -1
+     (nil))
+(debug_insn 100 99 101 7 (debug_marker) "/usr/include/x86_64-linux-gnu/sys/stat.h":455:3 -1
+     (nil))
+(insn 101 100 102 7 (parallel [
+            (set (reg:DI 146)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -160 [0xffffffffffffff60])))
+            (clobber (reg:CC 17 flags))
+        ]) "/usr/include/x86_64-linux-gnu/sys/stat.h":455:10 -1
+     (nil))
+(insn 102 101 103 7 (set (reg:DI 1 dx)
+        (reg:DI 146)) "/usr/include/x86_64-linux-gnu/sys/stat.h":455:10 -1
+     (nil))
+(insn 103 102 104 7 (set (reg:DI 4 si)
+        (symbol_ref/f:DI ("*.LC12") [flags 0x2]  <var_decl 0x7f6a04fd2000 *.LC12>)) "/usr/include/x86_64-linux-gnu/sys/stat.h":455:10 -1
+     (nil))
+(insn 104 103 105 7 (set (reg:SI 5 di)
+        (const_int 1 [0x1])) "/usr/include/x86_64-linux-gnu/sys/stat.h":455:10 -1
+     (nil))
+(call_insn 105 104 106 7 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__xstat") [flags 0x41]  <function_decl 0x7f6a058ef200 __xstat>) [0 __xstat S1 A8])
+            (const_int 0 [0]))) "/usr/include/x86_64-linux-gnu/sys/stat.h":455:10 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__xstat") [flags 0x41]  <function_decl 0x7f6a058ef200 __xstat>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:SI (use (reg:SI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(insn 106 105 107 7 (set (reg:SI 131 [ _98 ])
+        (reg:SI 0 ax)) "/usr/include/x86_64-linux-gnu/sys/stat.h":455:10 -1
+     (nil))
+(debug_insn 107 106 108 7 (var_location:DI __path (clobber (const_int 0 [0]))) "auth-rhosts.c":230:6 -1
+     (nil))
+(debug_insn 108 107 109 7 (var_location:DI __statbuf (clobber (const_int 0 [0]))) "auth-rhosts.c":230:6 -1
+     (nil))
+(insn 109 108 110 7 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 131 [ _98 ])
+            (const_int -1 [0xffffffffffffffff]))) "auth-rhosts.c":229:42 -1
+     (nil))
+(jump_insn 110 109 111 7 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 497)
+            (pc))) "auth-rhosts.c":229:42 736 {*jcc}
+     (int_list:REG_BR_PROB 949617276 (nil))
+ -> 497)
+(note 111 110 112 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 112 111 113 8 (debug_marker) "auth-rhosts.c":231:3 -1
+     (nil))
+(insn 113 112 114 8 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "auth-rhosts.c":231:3 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 114 113 115 8 (set (reg/f:DI 147)
+        (symbol_ref/f:DI ("*.LC13") [flags 0x2]  <var_decl 0x7f6a04fd2090 *.LC13>)) "auth-rhosts.c":231:3 -1
+     (nil))
+(insn 115 114 116 8 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [5  S8 A64])
+        (reg/f:DI 147)) "auth-rhosts.c":231:3 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 116 115 117 8 (set (reg:DI 37 r9)
+        (const_int 0 [0])) "auth-rhosts.c":231:3 -1
+     (nil))
+(insn 117 116 118 8 (set (reg:SI 36 r8)
+        (const_int 7 [0x7])) "auth-rhosts.c":231:3 -1
+     (nil))
+(insn 118 117 119 8 (set (reg:SI 2 cx)
+        (const_int 1 [0x1])) "auth-rhosts.c":231:3 -1
+     (nil))
+(insn 119 118 120 8 (set (reg:SI 1 dx)
+        (const_int 231 [0xe7])) "auth-rhosts.c":231:3 -1
+     (nil))
+(insn 120 119 121 8 (set (reg:DI 4 si)
+        (symbol_ref:DI ("__func__.2") [flags 0x2]  <var_decl 0x7f6a04f072d0 __func__>)) "auth-rhosts.c":231:3 -1
+     (nil))
+(insn 121 120 122 8 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f6a04f59ea0 *.LC0>)) "auth-rhosts.c":231:3 -1
+     (nil))
+(insn 122 121 123 8 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "auth-rhosts.c":231:3 -1
+     (nil))
+(call_insn 123 122 124 8 (call (mem:QI (symbol_ref:DI ("sshlog") [flags 0x41]  <function_decl 0x7f6a05235800 sshlog>) [0 sshlog S1 A8])
+        (const_int 16 [0x10])) "auth-rhosts.c":231:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshlog") [flags 0x41]  <function_decl 0x7f6a05235800 sshlog>)
+        (nil))
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (expr_list:SI (use (reg:SI 1 dx))
+                    (expr_list:SI (use (reg:SI 2 cx))
+                        (expr_list:SI (use (reg:SI 36 r8))
+                            (expr_list:DI (use (reg:DI 37 r9))
+                                (nil)))))))))
+(debug_insn 124 123 125 8 (debug_marker) "auth-rhosts.c":232:3 -1
+     (nil))
+(insn 125 124 12 8 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "auth-rhosts.c":232:10 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 12 125 126 8 (set (reg:SI 134 [ <retval> ])
+        (const_int 0 [0])) "auth-rhosts.c":232:10 -1
+     (nil))
+(jump_insn 126 12 127 8 (set (pc)
+        (label_ref:DI 500)) "auth-rhosts.c":232:10 737 {jump}
+     (nil)
+ -> 500)
+(barrier 127 126 497)
+(code_label 497 127 130 10 96 (nil) [3 uses])
+(note 130 497 131 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 131 130 132 10 (debug_marker) "auth-rhosts.c":239:2 -1
+     (nil))
+(insn 132 131 133 10 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem:SI (plus:DI (reg/v/f:DI 135 [ pw ])
+                    (const_int 16 [0x10])) [1 pw_62(D)->pw_uid+0 S4 A64])
+            (const_int 0 [0]))) "auth-rhosts.c":239:5 -1
+     (nil))
+(jump_insn 133 132 134 10 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 150)
+            (pc))) "auth-rhosts.c":239:5 -1
+     (int_list:REG_BR_PROB 536870916 (nil))
+ -> 150)
+(note 134 133 135 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 135 134 136 11 (debug_marker) "auth-rhosts.c":240:3 -1
+     (nil))
+(insn 136 135 137 11 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "auth-rhosts.c":240:3 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 137 136 138 11 (set (reg/f:DI 148)
+        (symbol_ref/f:DI ("*.LC14") [flags 0x2]  <var_decl 0x7f6a04fd2120 *.LC14>)) "auth-rhosts.c":240:3 -1
+     (nil))
+(insn 138 137 139 11 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [5  S8 A64])
+        (reg/f:DI 148)) "auth-rhosts.c":240:3 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 139 138 140 11 (set (reg:DI 37 r9)
+        (const_int 0 [0])) "auth-rhosts.c":240:3 -1
+     (nil))
+(insn 140 139 141 11 (set (reg:SI 36 r8)
+        (const_int 7 [0x7])) "auth-rhosts.c":240:3 -1
+     (nil))
+(insn 141 140 142 11 (set (reg:SI 2 cx)
+        (const_int 1 [0x1])) "auth-rhosts.c":240:3 -1
+     (nil))
+(insn 142 141 143 11 (set (reg:SI 1 dx)
+        (const_int 240 [0xf0])) "auth-rhosts.c":240:3 -1
+     (nil))
+(insn 143 142 144 11 (set (reg:DI 4 si)
+        (symbol_ref:DI ("__func__.2") [flags 0x2]  <var_decl 0x7f6a04f072d0 __func__>)) "auth-rhosts.c":240:3 -1
+     (nil))
+(insn 144 143 145 11 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f6a04f59ea0 *.LC0>)) "auth-rhosts.c":240:3 -1
+     (nil))
+(insn 145 144 146 11 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "auth-rhosts.c":240:3 -1
+     (nil))
+(call_insn 146 145 147 11 (call (mem:QI (symbol_ref:DI ("sshlog") [flags 0x41]  <function_decl 0x7f6a05235800 sshlog>) [0 sshlog S1 A8])
+        (const_int 16 [0x10])) "auth-rhosts.c":240:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshlog") [flags 0x41]  <function_decl 0x7f6a05235800 sshlog>)
+        (nil))
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (expr_list:SI (use (reg:SI 1 dx))
+                    (expr_list:SI (use (reg:SI 2 cx))
+                        (expr_list:SI (use (reg:SI 36 r8))
+                            (expr_list:DI (use (reg:DI 37 r9))
+                                (nil)))))))))
+(insn 147 146 148 11 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(jump_insn 148 147 149 11 (set (pc)
+        (label_ref 195)) -1
+     (nil)
+ -> 195)
+(barrier 149 148 150)
+(code_label 150 149 151 12 79 (nil) [1 uses])
+(note 151 150 152 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 152 151 153 12 (debug_marker) "auth-rhosts.c":242:3 -1
+     (nil))
+(insn 153 152 154 12 (set (reg:DI 36 r8)
+        (mem/f:DI (reg/v/f:DI 135 [ pw ]) [5 pw_62(D)->pw_name+0 S8 A64])) "auth-rhosts.c":242:7 -1
+     (nil))
+(insn 154 153 155 12 (set (reg:DI 2 cx)
+        (reg/v/f:DI 136 [ client_user ])) "auth-rhosts.c":242:7 -1
+     (nil))
+(insn 155 154 156 12 (set (reg:DI 1 dx)
+        (reg/v/f:DI 138 [ ipaddr ])) "auth-rhosts.c":242:7 -1
+     (nil))
+(insn 156 155 157 12 (set (reg:DI 4 si)
+        (reg/v/f:DI 137 [ hostname ])) "auth-rhosts.c":242:7 -1
+     (nil))
+(insn 157 156 158 12 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC15") [flags 0x2]  <var_decl 0x7f6a04fd21b0 *.LC15>)) "auth-rhosts.c":242:7 -1
+     (nil))
+(call_insn 158 157 159 12 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("check_rhosts_file") [flags 0x3]  <function_decl 0x7f6a04ef8e00 check_rhosts_file>) [0 check_rhosts_file S1 A8])
+            (const_int 0 [0]))) "auth-rhosts.c":242:7 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("check_rhosts_file") [flags 0x3]  <function_decl 0x7f6a04ef8e00 check_rhosts_file>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (expr_list:DI (use (reg:DI 2 cx))
+                    (expr_list:DI (use (reg:DI 36 r8))
+                        (nil)))))))
+(insn 159 158 160 12 (set (reg:SI 89 [ _9 ])
+        (reg:SI 0 ax)) "auth-rhosts.c":242:7 -1
+     (nil))
+(insn 160 159 161 12 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 89 [ _9 ])
+            (const_int 0 [0]))) "auth-rhosts.c":242:6 -1
+     (nil))
+(jump_insn 161 160 162 12 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 172)
+            (pc))) "auth-rhosts.c":242:6 -1
+     (int_list:REG_BR_PROB 708669604 (nil))
+ -> 172)
+(note 162 161 163 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 163 162 164 13 (debug_marker) "auth-rhosts.c":244:4 -1
+     (nil))
+(insn 164 163 165 13 (set (reg:DI 1 dx)
+        (reg/v/f:DI 138 [ ipaddr ])) "auth-rhosts.c":244:4 -1
+     (nil))
+(insn 165 164 166 13 (set (reg:DI 4 si)
+        (reg/v/f:DI 137 [ hostname ])) "auth-rhosts.c":244:4 -1
+     (nil))
+(insn 166 165 167 13 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC16") [flags 0x2]  <var_decl 0x7f6a04fd2240 *.LC16>)) "auth-rhosts.c":244:4 -1
+     (nil))
+(insn 167 166 168 13 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "auth-rhosts.c":244:4 -1
+     (nil))
+(call_insn 168 167 169 13 (call (mem:QI (symbol_ref:DI ("auth_debug_add") [flags 0x41]  <function_decl 0x7f6a04ef8200 auth_debug_add>) [0 auth_debug_add S1 A8])
+        (const_int 0 [0])) "auth-rhosts.c":244:4 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("auth_debug_add") [flags 0x41]  <function_decl 0x7f6a04ef8200 auth_debug_add>)
+        (nil))
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (expr_list:DI (use (reg:DI 1 dx))
+                    (nil))))))
+(debug_insn 169 168 13 13 (debug_marker) "auth-rhosts.c":246:4 -1
+     (nil))
+(insn 13 169 170 13 (set (reg:SI 134 [ <retval> ])
+        (const_int 1 [0x1])) "auth-rhosts.c":246:11 -1
+     (nil))
+(jump_insn 170 13 171 13 (set (pc)
+        (label_ref:DI 500)) "auth-rhosts.c":246:11 737 {jump}
+     (nil)
+ -> 500)
+(barrier 171 170 172)
+(code_label 172 171 173 14 81 (nil) [1 uses])
+(note 173 172 174 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 174 173 175 14 (debug_marker) "auth-rhosts.c":248:3 -1
+     (nil))
+(insn 175 174 176 14 (set (reg:DI 36 r8)
+        (mem/f:DI (reg/v/f:DI 135 [ pw ]) [5 pw_62(D)->pw_name+0 S8 A64])) "auth-rhosts.c":248:7 -1
+     (nil))
+(insn 176 175 177 14 (set (reg:DI 2 cx)
+        (reg/v/f:DI 136 [ client_user ])) "auth-rhosts.c":248:7 -1
+     (nil))
+(insn 177 176 178 14 (set (reg:DI 1 dx)
+        (reg/v/f:DI 138 [ ipaddr ])) "auth-rhosts.c":248:7 -1
+     (nil))
+(insn 178 177 179 14 (set (reg:DI 4 si)
+        (reg/v/f:DI 137 [ hostname ])) "auth-rhosts.c":248:7 -1
+     (nil))
+(insn 179 178 180 14 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC12") [flags 0x2]  <var_decl 0x7f6a04fd2000 *.LC12>)) "auth-rhosts.c":248:7 -1
+     (nil))
+(call_insn 180 179 181 14 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("check_rhosts_file") [flags 0x3]  <function_decl 0x7f6a04ef8e00 check_rhosts_file>) [0 check_rhosts_file S1 A8])
+            (const_int 0 [0]))) "auth-rhosts.c":248:7 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("check_rhosts_file") [flags 0x3]  <function_decl 0x7f6a04ef8e00 check_rhosts_file>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (expr_list:DI (use (reg:DI 2 cx))
+                    (expr_list:DI (use (reg:DI 36 r8))
+                        (nil)))))))
+(insn 181 180 182 14 (set (reg:SI 91 [ _11 ])
+        (reg:SI 0 ax)) "auth-rhosts.c":248:7 -1
+     (nil))
+(insn 182 181 183 14 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 91 [ _11 ])
+            (const_int 0 [0]))) "auth-rhosts.c":248:6 -1
+     (nil))
+(jump_insn 183 182 184 14 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 195)
+            (pc))) "auth-rhosts.c":248:6 -1
+     (int_list:REG_BR_PROB 856416484 (nil))
+ -> 195)
+(note 184 183 185 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 185 184 186 15 (debug_marker) "auth-rhosts.c":250:4 -1
+     (nil))
+(insn 186 185 187 15 (set (reg:DI 2 cx)
+        (symbol_ref/f:DI ("*.LC12") [flags 0x2]  <var_decl 0x7f6a04fd2000 *.LC12>)) "auth-rhosts.c":250:4 -1
+     (nil))
+(insn 187 186 188 15 (set (reg:DI 1 dx)
+        (reg/v/f:DI 138 [ ipaddr ])) "auth-rhosts.c":250:4 -1
+     (nil))
+(insn 188 187 189 15 (set (reg:DI 4 si)
+        (reg/v/f:DI 137 [ hostname ])) "auth-rhosts.c":250:4 -1
+     (nil))
+(insn 189 188 190 15 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC17") [flags 0x2]  <var_decl 0x7f6a04fd22d0 *.LC17>)) "auth-rhosts.c":250:4 -1
+     (nil))
+(insn 190 189 191 15 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "auth-rhosts.c":250:4 -1
+     (nil))
+(call_insn 191 190 192 15 (call (mem:QI (symbol_ref:DI ("auth_debug_add") [flags 0x41]  <function_decl 0x7f6a04ef8200 auth_debug_add>) [0 auth_debug_add S1 A8])
+        (const_int 0 [0])) "auth-rhosts.c":250:4 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("auth_debug_add") [flags 0x41]  <function_decl 0x7f6a04ef8200 auth_debug_add>)
+        (nil))
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (expr_list:DI (use (reg:DI 1 dx))
+                    (expr_list:DI (use (reg:DI 2 cx))
+                        (nil)))))))
+(debug_insn 192 191 14 15 (debug_marker) "auth-rhosts.c":252:4 -1
+     (nil))
+(insn 14 192 193 15 (set (reg:SI 134 [ <retval> ])
+        (const_int 1 [0x1])) "auth-rhosts.c":252:11 -1
+     (nil))
+(jump_insn 193 14 194 15 (set (pc)
+        (label_ref:DI 500)) "auth-rhosts.c":252:11 737 {jump}
+     (nil)
+ -> 500)
+(barrier 194 193 195)
+(code_label 195 194 196 16 80 (nil) [2 uses])
+(note 196 195 197 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 197 196 198 16 (debug_marker) "auth-rhosts.c":260:2 -1
+     (nil))
+(debug_insn 198 197 199 16 (var_location:DI __path (mem/f:DI (plus:DI (reg/v/f:DI 135 [ pw ])
+            (const_int 32 [0x20])) [5 pw_62(D)->pw_dir+0 S8 A64])) "auth-rhosts.c":260:13 -1
+     (nil))
+(debug_insn 199 198 200 16 (var_location:DI __statbuf (plus:DI (reg/f:DI 77 virtual-stack-vars)
+        (const_int -160 [0xffffffffffffff60]))) "auth-rhosts.c":260:13 -1
+     (nil))
+(debug_insn 200 199 201 16 (debug_marker:BLK) "/usr/include/x86_64-linux-gnu/sys/stat.h":453:1 -1
+     (nil))
+(debug_insn 201 200 202 16 (debug_marker) "/usr/include/x86_64-linux-gnu/sys/stat.h":455:3 -1
+     (nil))
+(insn 202 201 203 16 (parallel [
+            (set (reg:DI 149)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -160 [0xffffffffffffff60])))
+            (clobber (reg:CC 17 flags))
+        ]) "/usr/include/x86_64-linux-gnu/sys/stat.h":455:10 -1
+     (nil))
+(insn 203 202 204 16 (set (reg:DI 150)
+        (mem/f:DI (plus:DI (reg/v/f:DI 135 [ pw ])
+                (const_int 32 [0x20])) [5 pw_62(D)->pw_dir+0 S8 A64])) "/usr/include/x86_64-linux-gnu/sys/stat.h":455:10 -1
+     (nil))
+(insn 204 203 205 16 (set (reg:DI 1 dx)
+        (reg:DI 149)) "/usr/include/x86_64-linux-gnu/sys/stat.h":455:10 -1
+     (nil))
+(insn 205 204 206 16 (set (reg:DI 4 si)
+        (reg:DI 150)) "/usr/include/x86_64-linux-gnu/sys/stat.h":455:10 -1
+     (nil))
+(insn 206 205 207 16 (set (reg:SI 5 di)
+        (const_int 1 [0x1])) "/usr/include/x86_64-linux-gnu/sys/stat.h":455:10 -1
+     (nil))
+(call_insn 207 206 208 16 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__xstat") [flags 0x41]  <function_decl 0x7f6a058ef200 __xstat>) [0 __xstat S1 A8])
+            (const_int 0 [0]))) "/usr/include/x86_64-linux-gnu/sys/stat.h":455:10 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__xstat") [flags 0x41]  <function_decl 0x7f6a058ef200 __xstat>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:SI (use (reg:SI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(insn 208 207 209 16 (set (reg:SI 132 [ _99 ])
+        (reg:SI 0 ax)) "/usr/include/x86_64-linux-gnu/sys/stat.h":455:10 -1
+     (nil))
+(debug_insn 209 208 210 16 (var_location:DI __path (clobber (const_int 0 [0]))) "auth-rhosts.c":260:6 -1
+     (nil))
+(debug_insn 210 209 211 16 (var_location:DI __statbuf (clobber (const_int 0 [0]))) "auth-rhosts.c":260:6 -1
+     (nil))
+(insn 211 210 212 16 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 132 [ _99 ])
+            (const_int -1 [0xffffffffffffffff]))) "auth-rhosts.c":260:5 -1
+     (nil))
+(jump_insn 212 211 213 16 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 239)
+            (pc))) "auth-rhosts.c":260:5 -1
+     (int_list:REG_BR_PROB 949617276 (nil))
+ -> 239)
+(note 213 212 214 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 214 213 215 17 (debug_marker) "auth-rhosts.c":261:3 -1
+     (nil))
+(insn 215 214 216 17 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "auth-rhosts.c":261:3 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 216 215 217 17 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [5  S8 A64])
+        (mem/f:DI (plus:DI (reg/v/f:DI 135 [ pw ])
+                (const_int 32 [0x20])) [5 pw_62(D)->pw_dir+0 S8 A64])) "auth-rhosts.c":261:3 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 217 216 218 17 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [5  S8 A64])
+        (mem/f:DI (reg/v/f:DI 135 [ pw ]) [5 pw_62(D)->pw_name+0 S8 A64])) "auth-rhosts.c":261:3 -1
+     (expr_list:REG_ARGS_SIZE (const_int 24 [0x18])
+        (nil)))
+(insn 218 217 219 17 (set (reg/f:DI 151)
+        (symbol_ref/f:DI ("*.LC18") [flags 0x2]  <var_decl 0x7f6a04fd2360 *.LC18>)) "auth-rhosts.c":261:3 -1
+     (nil))
+(insn 219 218 220 17 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [5  S8 A64])
+        (reg/f:DI 151)) "auth-rhosts.c":261:3 -1
+     (expr_list:REG_ARGS_SIZE (const_int 32 [0x20])
+        (nil)))
+(insn 220 219 221 17 (set (reg:DI 37 r9)
+        (const_int 0 [0])) "auth-rhosts.c":261:3 -1
+     (nil))
+(insn 221 220 222 17 (set (reg:SI 36 r8)
+        (const_int 3 [0x3])) "auth-rhosts.c":261:3 -1
+     (nil))
+(insn 222 221 223 17 (set (reg:SI 2 cx)
+        (const_int 0 [0])) "auth-rhosts.c":261:3 -1
+     (nil))
+(insn 223 222 224 17 (set (reg:SI 1 dx)
+        (const_int 261 [0x105])) "auth-rhosts.c":261:3 -1
+     (nil))
+(insn 224 223 225 17 (set (reg:DI 4 si)
+        (symbol_ref:DI ("__func__.2") [flags 0x2]  <var_decl 0x7f6a04f072d0 __func__>)) "auth-rhosts.c":261:3 -1
+     (nil))
+(insn 225 224 226 17 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f6a04f59ea0 *.LC0>)) "auth-rhosts.c":261:3 -1
+     (nil))
+(insn 226 225 227 17 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "auth-rhosts.c":261:3 -1
+     (nil))
+(call_insn 227 226 228 17 (call (mem:QI (symbol_ref:DI ("sshlog") [flags 0x41]  <function_decl 0x7f6a05235800 sshlog>) [0 sshlog S1 A8])
+        (const_int 32 [0x20])) "auth-rhosts.c":261:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshlog") [flags 0x41]  <function_decl 0x7f6a05235800 sshlog>)
+        (nil))
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (expr_list:SI (use (reg:SI 1 dx))
+                    (expr_list:SI (use (reg:SI 2 cx))
+                        (expr_list:SI (use (reg:SI 36 r8))
+                            (expr_list:DI (use (reg:DI 37 r9))
+                                (nil)))))))))
+(debug_insn 228 227 229 17 (debug_marker) "auth-rhosts.c":263:3 -1
+     (nil))
+(insn 229 228 230 17 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int 32 [0x20])))
+            (clobber (reg:CC 17 flags))
+        ]) "auth-rhosts.c":263:3 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 230 229 231 17 (set (reg:DI 152)
+        (mem/f:DI (plus:DI (reg/v/f:DI 135 [ pw ])
+                (const_int 32 [0x20])) [5 pw_62(D)->pw_dir+0 S8 A64])) "auth-rhosts.c":263:3 -1
+     (nil))
+(insn 231 230 232 17 (set (reg:DI 1 dx)
+        (reg:DI 152)) "auth-rhosts.c":263:3 -1
+     (nil))
+(insn 232 231 233 17 (set (reg:DI 4 si)
+        (mem/f:DI (reg/v/f:DI 135 [ pw ]) [5 pw_62(D)->pw_name+0 S8 A64])) "auth-rhosts.c":263:3 -1
+     (nil))
+(insn 233 232 234 17 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC18") [flags 0x2]  <var_decl 0x7f6a04fd2360 *.LC18>)) "auth-rhosts.c":263:3 -1
+     (nil))
+(insn 234 233 235 17 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "auth-rhosts.c":263:3 -1
+     (nil))
+(call_insn 235 234 236 17 (call (mem:QI (symbol_ref:DI ("auth_debug_add") [flags 0x41]  <function_decl 0x7f6a04ef8200 auth_debug_add>) [0 auth_debug_add S1 A8])
+        (const_int 0 [0])) "auth-rhosts.c":263:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("auth_debug_add") [flags 0x41]  <function_decl 0x7f6a04ef8200 auth_debug_add>)
+        (nil))
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (expr_list:DI (use (reg:DI 1 dx))
+                    (nil))))))
+(debug_insn 236 235 15 17 (debug_marker) "auth-rhosts.c":265:3 -1
+     (nil))
+(insn 15 236 237 17 (set (reg:SI 134 [ <retval> ])
+        (const_int 0 [0])) "auth-rhosts.c":265:10 -1
+     (nil))
+(jump_insn 237 15 238 17 (set (pc)
+        (label_ref:DI 500)) "auth-rhosts.c":265:10 737 {jump}
+     (nil)
+ -> 500)
+(barrier 238 237 239)
+(code_label 239 238 240 18 82 (nil) [1 uses])
+(note 240 239 241 18 [bb 18] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 241 240 242 18 (debug_marker) "auth-rhosts.c":267:2 -1
+     (nil))
+(insn 242 241 243 18 (set (reg/f:DI 153)
+        (symbol_ref:DI ("options") [flags 0x40]  <var_decl 0x7f6a052d96c0 options>)) "auth-rhosts.c":267:13 -1
+     (nil))
+(insn 243 242 244 18 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:SI (plus:DI (reg/f:DI 153)
+                    (const_int 1192 [0x4a8])) [1 options.strict_modes+0 S4 A64])
+            (const_int 0 [0]))) "auth-rhosts.c":267:5 -1
+     (nil))
+(jump_insn 244 243 245 18 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 281)
+            (pc))) "auth-rhosts.c":267:5 -1
+     (int_list:REG_BR_PROB 354334804 (nil))
+ -> 281)
+(note 245 244 246 19 [bb 19] NOTE_INSN_BASIC_BLOCK)
+(insn 246 245 247 19 (set (reg:SI 98 [ _18 ])
+        (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -132 [0xffffffffffffff7c])) [1 st.st_uid+0 S4 A32])) "auth-rhosts.c":268:10 -1
+     (nil))
+(insn 247 246 248 19 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 98 [ _18 ])
+            (const_int 0 [0]))) "auth-rhosts.c":267:27 -1
+     (nil))
+(jump_insn 248 247 249 19 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 252)
+            (pc))) "auth-rhosts.c":267:27 -1
+     (int_list:REG_BR_PROB 536870916 (nil))
+ -> 252)
+(note 249 248 250 20 [bb 20] NOTE_INSN_BASIC_BLOCK)
+(insn 250 249 251 20 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 98 [ _18 ])
+            (mem:SI (plus:DI (reg/v/f:DI 135 [ pw ])
+                    (const_int 16 [0x10])) [1 pw_62(D)->pw_uid+0 S4 A64]))) "auth-rhosts.c":268:23 -1
+     (nil))
+(jump_insn 251 250 252 20 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 258)
+            (pc))) "auth-rhosts.c":268:23 -1
+     (int_list:REG_BR_PROB 536870916 (nil))
+ -> 258)
+(code_label 252 251 253 21 84 (nil) [1 uses])
+(note 253 252 254 21 [bb 21] NOTE_INSN_BASIC_BLOCK)
+(insn 254 253 255 21 (set (reg:SI 155)
+        (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -136 [0xffffffffffffff78])) [1 st.st_mode+0 S4 A64])) "auth-rhosts.c":269:18 -1
+     (nil))
+(insn 255 254 256 21 (parallel [
+            (set (reg:SI 154)
+                (and:SI (reg:SI 155)
+                    (const_int 18 [0x12])))
+            (clobber (reg:CC 17 flags))
+        ]) "auth-rhosts.c":269:18 -1
+     (expr_list:REG_EQUAL (and:SI (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -136 [0xffffffffffffff78])) [1 st.st_mode+0 S4 A64])
+            (const_int 18 [0x12]))
+        (nil)))
+(insn 256 255 257 21 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 154)
+            (const_int 0 [0]))) "auth-rhosts.c":268:51 -1
+     (nil))
+(jump_insn 257 256 258 21 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 281)
+            (pc))) "auth-rhosts.c":268:51 -1
+     (int_list:REG_BR_PROB 708669604 (nil))
+ -> 281)
+(code_label 258 257 259 22 85 (nil) [1 uses])
+(note 259 258 260 22 [bb 22] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 260 259 261 22 (debug_marker) "auth-rhosts.c":270:3 -1
+     (nil))
+(insn 261 260 262 22 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [5  S8 A64])
+        (mem/f:DI (reg/v/f:DI 135 [ pw ]) [5 pw_62(D)->pw_name+0 S8 A64])) "auth-rhosts.c":270:3 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 262 261 263 22 (set (reg/f:DI 156)
+        (symbol_ref/f:DI ("*.LC19") [flags 0x2]  <var_decl 0x7f6a04fd23f0 *.LC19>)) "auth-rhosts.c":270:3 -1
+     (nil))
+(insn 263 262 264 22 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [5  S8 A64])
+        (reg/f:DI 156)) "auth-rhosts.c":270:3 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 264 263 265 22 (set (reg:DI 37 r9)
+        (const_int 0 [0])) "auth-rhosts.c":270:3 -1
+     (nil))
+(insn 265 264 266 22 (set (reg:SI 36 r8)
+        (const_int 3 [0x3])) "auth-rhosts.c":270:3 -1
+     (nil))
+(insn 266 265 267 22 (set (reg:SI 2 cx)
+        (const_int 0 [0])) "auth-rhosts.c":270:3 -1
+     (nil))
+(insn 267 266 268 22 (set (reg:SI 1 dx)
+        (const_int 270 [0x10e])) "auth-rhosts.c":270:3 -1
+     (nil))
+(insn 268 267 269 22 (set (reg:DI 4 si)
+        (symbol_ref:DI ("__func__.2") [flags 0x2]  <var_decl 0x7f6a04f072d0 __func__>)) "auth-rhosts.c":270:3 -1
+     (nil))
+(insn 269 268 270 22 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f6a04f59ea0 *.LC0>)) "auth-rhosts.c":270:3 -1
+     (nil))
+(insn 270 269 271 22 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "auth-rhosts.c":270:3 -1
+     (nil))
+(call_insn 271 270 272 22 (call (mem:QI (symbol_ref:DI ("sshlog") [flags 0x41]  <function_decl 0x7f6a05235800 sshlog>) [0 sshlog S1 A8])
+        (const_int 16 [0x10])) "auth-rhosts.c":270:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshlog") [flags 0x41]  <function_decl 0x7f6a05235800 sshlog>)
+        (nil))
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (expr_list:SI (use (reg:SI 1 dx))
+                    (expr_list:SI (use (reg:SI 2 cx))
+                        (expr_list:SI (use (reg:SI 36 r8))
+                            (expr_list:DI (use (reg:DI 37 r9))
+                                (nil)))))))))
+(debug_insn 272 271 273 22 (debug_marker) "auth-rhosts.c":272:3 -1
+     (nil))
+(insn 273 272 274 22 (set (reg:DI 4 si)
+        (mem/f:DI (reg/v/f:DI 135 [ pw ]) [5 pw_62(D)->pw_name+0 S8 A64])) "auth-rhosts.c":272:3 -1
+     (nil))
+(insn 274 273 275 22 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC19") [flags 0x2]  <var_decl 0x7f6a04fd23f0 *.LC19>)) "auth-rhosts.c":272:3 -1
+     (nil))
+(insn 275 274 276 22 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "auth-rhosts.c":272:3 -1
+     (nil))
+(call_insn 276 275 277 22 (call (mem:QI (symbol_ref:DI ("auth_debug_add") [flags 0x41]  <function_decl 0x7f6a04ef8200 auth_debug_add>) [0 auth_debug_add S1 A8])
+        (const_int 0 [0])) "auth-rhosts.c":272:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("auth_debug_add") [flags 0x41]  <function_decl 0x7f6a04ef8200 auth_debug_add>)
+        (nil))
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (nil)))))
+(debug_insn 277 276 278 22 (debug_marker) "auth-rhosts.c":274:3 -1
+     (nil))
+(insn 278 277 16 22 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "auth-rhosts.c":274:10 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 16 278 279 22 (set (reg:SI 134 [ <retval> ])
+        (const_int 0 [0])) "auth-rhosts.c":274:10 -1
+     (nil))
+(jump_insn 279 16 280 22 (set (pc)
+        (label_ref:DI 500)) "auth-rhosts.c":274:10 737 {jump}
+     (nil)
+ -> 500)
+(barrier 280 279 281)
+(code_label 281 280 282 23 83 (nil) [2 uses])
+(note 282 281 283 23 [bb 23] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 283 282 284 23 (debug_marker) "auth-rhosts.c":277:2 -1
+     (nil))
+(insn 284 283 285 23 (set (reg:DI 5 di)
+        (reg/v/f:DI 135 [ pw ])) "auth-rhosts.c":277:2 -1
+     (nil))
+(call_insn 285 284 286 23 (call (mem:QI (symbol_ref:DI ("temporarily_use_uid") [flags 0x41]  <function_decl 0x7f6a05226700 temporarily_use_uid>) [0 temporarily_use_uid S1 A8])
+        (const_int 0 [0])) "auth-rhosts.c":277:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("temporarily_use_uid") [flags 0x41]  <function_decl 0x7f6a05226700 temporarily_use_uid>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(debug_insn 286 285 287 23 (debug_marker) "auth-rhosts.c":280:2 -1
+     (nil))
+(debug_insn 287 286 288 23 (var_location:SI rhosts_file_index (const_int 0 [0])) -1
+     (nil))
+(debug_insn 288 287 11 23 (debug_marker) "auth-rhosts.c":280:30 -1
+     (nil))
+(insn 11 288 458 23 (set (reg/f:DI 82 [ _1 ])
+        (symbol_ref/f:DI ("*.LC9") [flags 0x2]  <var_decl 0x7f6a04fb43f0 *.LC9>)) "auth-rhosts.c":280:42 -1
+     (nil))
+(code_label 458 11 289 24 94 (nil) [1 uses])
+(note 289 458 290 24 [bb 24] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 290 289 291 24 (var_location:SI rhosts_file_index (subreg:SI (lshiftrt:DI (minus:DI (reg:DI 126 [ ivtmp.35 ])
+                (symbol_ref:DI ("rhosts_files.1") [flags 0x2]  <var_decl 0x7f6a04f07120 rhosts_files>))
+            (const_int 3 [0x3])) 0)) -1
+     (nil))
+(debug_insn 291 290 292 24 (debug_marker) "auth-rhosts.c":283:3 -1
+     (nil))
+(insn 292 291 293 24 (set (reg:DI 157)
+        (mem/f:DI (plus:DI (reg/v/f:DI 135 [ pw ])
+                (const_int 32 [0x20])) [5 pw_62(D)->pw_dir+0 S8 A64])) "auth-rhosts.c":283:3 -1
+     (nil))
+(insn 293 292 294 24 (parallel [
+            (set (reg:DI 158)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -168 [0xffffffffffffff58])))
+            (clobber (reg:CC 17 flags))
+        ]) "auth-rhosts.c":283:3 -1
+     (nil))
+(insn 294 293 295 24 (set (reg:DI 2 cx)
+        (reg/f:DI 82 [ _1 ])) "auth-rhosts.c":283:3 -1
+     (nil))
+(insn 295 294 296 24 (set (reg:DI 1 dx)
+        (reg:DI 157)) "auth-rhosts.c":283:3 -1
+     (nil))
+(insn 296 295 297 24 (set (reg:DI 4 si)
+        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x7f6a04fb45a0 *.LC11>)) "auth-rhosts.c":283:3 -1
+     (nil))
+(insn 297 296 298 24 (set (reg:DI 5 di)
+        (reg:DI 158)) "auth-rhosts.c":283:3 -1
+     (nil))
+(insn 298 297 299 24 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "auth-rhosts.c":283:3 -1
+     (nil))
+(call_insn 299 298 300 24 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("xasprintf") [flags 0x41]  <function_decl 0x7f6a0525f100 xasprintf>) [0 xasprintf S1 A8])
+            (const_int 0 [0]))) "auth-rhosts.c":283:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("xasprintf") [flags 0x41]  <function_decl 0x7f6a0525f100 xasprintf>)
+        (nil))
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (expr_list:DI (use (reg:DI 1 dx))
+                    (expr_list:DI (use (reg:DI 2 cx))
+                        (nil)))))))
+(debug_insn 300 299 301 24 (debug_marker) "auth-rhosts.c":285:3 -1
+     (nil))
+(debug_insn 301 300 302 24 (var_location:DI __path (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+            (const_int -168 [0xffffffffffffff58])) [5 path+0 S8 A64])) "auth-rhosts.c":285:7 -1
+     (nil))
+(debug_insn 302 301 303 24 (var_location:DI __statbuf (plus:DI (reg/f:DI 77 virtual-stack-vars)
+        (const_int -160 [0xffffffffffffff60]))) "auth-rhosts.c":285:7 -1
+     (nil))
+(debug_insn 303 302 304 24 (debug_marker:BLK) "/usr/include/x86_64-linux-gnu/sys/stat.h":453:1 -1
+     (nil))
+(debug_insn 304 303 305 24 (debug_marker) "/usr/include/x86_64-linux-gnu/sys/stat.h":455:3 -1
+     (nil))
+(insn 305 304 306 24 (parallel [
+            (set (reg:DI 159)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -160 [0xffffffffffffff60])))
+            (clobber (reg:CC 17 flags))
+        ]) "/usr/include/x86_64-linux-gnu/sys/stat.h":455:10 -1
+     (nil))
+(insn 306 305 307 24 (set (reg:DI 160)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -168 [0xffffffffffffff58])) [5 path+0 S8 A64])) "/usr/include/x86_64-linux-gnu/sys/stat.h":455:10 -1
+     (nil))
+(insn 307 306 308 24 (set (reg:DI 1 dx)
+        (reg:DI 159)) "/usr/include/x86_64-linux-gnu/sys/stat.h":455:10 -1
+     (nil))
+(insn 308 307 309 24 (set (reg:DI 4 si)
+        (reg:DI 160)) "/usr/include/x86_64-linux-gnu/sys/stat.h":455:10 -1
+     (nil))
+(insn 309 308 310 24 (set (reg:SI 5 di)
+        (const_int 1 [0x1])) "/usr/include/x86_64-linux-gnu/sys/stat.h":455:10 -1
+     (nil))
+(call_insn 310 309 311 24 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__xstat") [flags 0x41]  <function_decl 0x7f6a058ef200 __xstat>) [0 __xstat S1 A8])
+            (const_int 0 [0]))) "/usr/include/x86_64-linux-gnu/sys/stat.h":455:10 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__xstat") [flags 0x41]  <function_decl 0x7f6a058ef200 __xstat>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:SI (use (reg:SI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(insn 311 310 312 24 (set (reg:SI 133 [ _100 ])
+        (reg:SI 0 ax)) "/usr/include/x86_64-linux-gnu/sys/stat.h":455:10 -1
+     (nil))
+(debug_insn 312 311 313 24 (var_location:DI __path (clobber (const_int 0 [0]))) "auth-rhosts.c":285:7 -1
+     (nil))
+(debug_insn 313 312 314 24 (var_location:DI __statbuf (clobber (const_int 0 [0]))) "auth-rhosts.c":285:7 -1
+     (nil))
+(insn 314 313 315 24 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 133 [ _100 ])
+            (const_int -1 [0xffffffffffffffff]))) "auth-rhosts.c":285:6 -1
+     (nil))
+(jump_insn 315 314 316 24 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 324)
+            (pc))) "auth-rhosts.c":285:6 -1
+     (int_list:REG_BR_PROB 954449108 (nil))
+ -> 324)
+(note 316 315 317 25 [bb 25] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 317 316 318 25 (debug_marker) "auth-rhosts.c":286:4 -1
+     (nil))
+(insn 318 317 319 25 (set (reg:DI 161)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -168 [0xffffffffffffff58])) [5 path+0 S8 A64])) "auth-rhosts.c":286:4 -1
+     (nil))
+(insn 319 318 320 25 (set (reg:DI 5 di)
+        (reg:DI 161)) "auth-rhosts.c":286:4 -1
+     (nil))
+(call_insn 320 319 321 25 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x7f6a05b68900 free>) [0 __builtin_free S1 A8])
+        (const_int 0 [0])) "auth-rhosts.c":286:4 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x7f6a05b68900 free>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(debug_insn 321 320 322 25 (debug_marker) "auth-rhosts.c":287:4 -1
+     (nil))
+(jump_insn 322 321 323 25 (set (pc)
+        (label_ref 451)) "auth-rhosts.c":287:4 -1
+     (nil)
+ -> 451)
+(barrier 323 322 324)
+(code_label 324 323 325 26 86 (nil) [1 uses])
+(note 325 324 326 26 [bb 26] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 326 325 327 26 (debug_marker) "auth-rhosts.c":296:3 -1
+     (nil))
+(insn 327 326 328 26 (set (reg/f:DI 162)
+        (symbol_ref:DI ("options") [flags 0x40]  <var_decl 0x7f6a052d96c0 options>)) "auth-rhosts.c":296:14 -1
+     (nil))
+(insn 328 327 329 26 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:SI (plus:DI (reg/f:DI 162)
+                    (const_int 1192 [0x4a8])) [1 options.strict_modes+0 S4 A64])
+            (const_int 0 [0]))) "auth-rhosts.c":296:6 -1
+     (nil))
+(jump_insn 329 328 330 26 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 373)
+            (pc))) "auth-rhosts.c":296:6 -1
+     (int_list:REG_BR_PROB 536870916 (nil))
+ -> 373)
+(note 330 329 331 27 [bb 27] NOTE_INSN_BASIC_BLOCK)
+(insn 331 330 332 27 (set (reg:SI 108 [ _28 ])
+        (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -132 [0xffffffffffffff7c])) [1 st.st_uid+0 S4 A32])) "auth-rhosts.c":297:11 -1
+     (nil))
+(insn 332 331 333 27 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 108 [ _28 ])
+            (const_int 0 [0]))) "auth-rhosts.c":296:28 -1
+     (nil))
+(jump_insn 333 332 334 27 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 337)
+            (pc))) "auth-rhosts.c":296:28 -1
+     (int_list:REG_BR_PROB 536870916 (nil))
+ -> 337)
+(note 334 333 335 28 [bb 28] NOTE_INSN_BASIC_BLOCK)
+(insn 335 334 336 28 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 108 [ _28 ])
+            (mem:SI (plus:DI (reg/v/f:DI 135 [ pw ])
+                    (const_int 16 [0x10])) [1 pw_62(D)->pw_uid+0 S4 A64]))) "auth-rhosts.c":297:24 -1
+     (nil))
+(jump_insn 336 335 337 28 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 343)
+            (pc))) "auth-rhosts.c":297:24 -1
+     (int_list:REG_BR_PROB 524845004 (nil))
+ -> 343)
+(code_label 337 336 338 29 89 (nil) [1 uses])
+(note 338 337 339 29 [bb 29] NOTE_INSN_BASIC_BLOCK)
+(insn 339 338 340 29 (set (reg:SI 164)
+        (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -136 [0xffffffffffffff78])) [1 st.st_mode+0 S4 A64])) "auth-rhosts.c":298:19 -1
+     (nil))
+(insn 340 339 341 29 (parallel [
+            (set (reg:SI 163)
+                (and:SI (reg:SI 164)
+                    (const_int 18 [0x12])))
+            (clobber (reg:CC 17 flags))
+        ]) "auth-rhosts.c":298:19 -1
+     (expr_list:REG_EQUAL (and:SI (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -136 [0xffffffffffffff78])) [1 st.st_mode+0 S4 A64])
+            (const_int 18 [0x12]))
+        (nil)))
+(insn 341 340 342 29 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 163)
+            (const_int 0 [0]))) "auth-rhosts.c":297:52 -1
+     (nil))
+(jump_insn 342 341 343 29 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 373)
+            (pc))) "auth-rhosts.c":297:52 -1
+     (int_list:REG_BR_PROB 719407028 (nil))
+ -> 373)
+(code_label 343 342 344 30 90 (nil) [1 uses])
+(note 344 343 345 30 [bb 30] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 345 344 346 30 (debug_marker) "auth-rhosts.c":299:4 -1
+     (nil))
+(insn 346 345 347 30 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "auth-rhosts.c":299:4 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 347 346 348 30 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [5  S8 A64])
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -168 [0xffffffffffffff58])) [5 path+0 S8 A64])) "auth-rhosts.c":299:4 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 348 347 349 30 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [5  S8 A64])
+        (mem/f:DI (reg/v/f:DI 135 [ pw ]) [5 pw_62(D)->pw_name+0 S8 A64])) "auth-rhosts.c":299:4 -1
+     (expr_list:REG_ARGS_SIZE (const_int 24 [0x18])
+        (nil)))
+(insn 349 348 350 30 (set (reg/f:DI 165)
+        (symbol_ref/f:DI ("*.LC20") [flags 0x2]  <var_decl 0x7f6a04fd2480 *.LC20>)) "auth-rhosts.c":299:4 -1
+     (nil))
+(insn 350 349 351 30 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [5  S8 A64])
+        (reg/f:DI 165)) "auth-rhosts.c":299:4 -1
+     (expr_list:REG_ARGS_SIZE (const_int 32 [0x20])
+        (nil)))
+(insn 351 350 352 30 (set (reg:DI 37 r9)
+        (const_int 0 [0])) "auth-rhosts.c":299:4 -1
+     (nil))
+(insn 352 351 353 30 (set (reg:SI 36 r8)
+        (const_int 3 [0x3])) "auth-rhosts.c":299:4 -1
+     (nil))
+(insn 353 352 354 30 (set (reg:SI 2 cx)
+        (const_int 0 [0])) "auth-rhosts.c":299:4 -1
+     (nil))
+(insn 354 353 355 30 (set (reg:SI 1 dx)
+        (const_int 299 [0x12b])) "auth-rhosts.c":299:4 -1
+     (nil))
+(insn 355 354 356 30 (set (reg:DI 4 si)
+        (symbol_ref:DI ("__func__.2") [flags 0x2]  <var_decl 0x7f6a04f072d0 __func__>)) "auth-rhosts.c":299:4 -1
+     (nil))
+(insn 356 355 357 30 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f6a04f59ea0 *.LC0>)) "auth-rhosts.c":299:4 -1
+     (nil))
+(insn 357 356 358 30 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "auth-rhosts.c":299:4 -1
+     (nil))
+(call_insn 358 357 359 30 (call (mem:QI (symbol_ref:DI ("sshlog") [flags 0x41]  <function_decl 0x7f6a05235800 sshlog>) [0 sshlog S1 A8])
+        (const_int 32 [0x20])) "auth-rhosts.c":299:4 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshlog") [flags 0x41]  <function_decl 0x7f6a05235800 sshlog>)
+        (nil))
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (expr_list:SI (use (reg:SI 1 dx))
+                    (expr_list:SI (use (reg:SI 2 cx))
+                        (expr_list:SI (use (reg:SI 36 r8))
+                            (expr_list:DI (use (reg:DI 37 r9))
+                                (nil)))))))))
+(debug_insn 359 358 360 30 (debug_marker) "auth-rhosts.c":301:4 -1
+     (nil))
+(insn 360 359 361 30 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int 32 [0x20])))
+            (clobber (reg:CC 17 flags))
+        ]) "auth-rhosts.c":301:4 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 361 360 362 30 (set (reg:DI 166)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -168 [0xffffffffffffff58])) [5 path+0 S8 A64])) "auth-rhosts.c":301:4 -1
+     (nil))
+(insn 362 361 363 30 (set (reg:DI 4 si)
+        (reg:DI 166)) "auth-rhosts.c":301:4 -1
+     (nil))
+(insn 363 362 364 30 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC21") [flags 0x2]  <var_decl 0x7f6a04fd2510 *.LC21>)) "auth-rhosts.c":301:4 -1
+     (nil))
+(insn 364 363 365 30 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "auth-rhosts.c":301:4 -1
+     (nil))
+(call_insn 365 364 366 30 (call (mem:QI (symbol_ref:DI ("auth_debug_add") [flags 0x41]  <function_decl 0x7f6a04ef8200 auth_debug_add>) [0 auth_debug_add S1 A8])
+        (const_int 0 [0])) "auth-rhosts.c":301:4 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("auth_debug_add") [flags 0x41]  <function_decl 0x7f6a04ef8200 auth_debug_add>)
+        (nil))
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (nil)))))
+(debug_insn 366 365 367 30 (debug_marker) "auth-rhosts.c":302:4 -1
+     (nil))
+(insn 367 366 368 30 (set (reg:DI 167)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -168 [0xffffffffffffff58])) [5 path+0 S8 A64])) "auth-rhosts.c":302:4 -1
+     (nil))
+(insn 368 367 369 30 (set (reg:DI 5 di)
+        (reg:DI 167)) "auth-rhosts.c":302:4 -1
+     (nil))
+(call_insn 369 368 370 30 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x7f6a05b68900 free>) [0 __builtin_free S1 A8])
+        (const_int 0 [0])) "auth-rhosts.c":302:4 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x7f6a05b68900 free>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(debug_insn 370 369 371 30 (debug_marker) "auth-rhosts.c":303:4 -1
+     (nil))
+(jump_insn 371 370 372 30 (set (pc)
+        (label_ref 451)) "auth-rhosts.c":303:4 -1
+     (nil)
+ -> 451)
+(barrier 372 371 373)
+(code_label 373 372 374 31 88 (nil) [2 uses])
+(note 374 373 375 31 [bb 31] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 375 374 376 31 (debug_marker) "auth-rhosts.c":309:3 -1
+     (nil))
+(insn 376 375 377 31 (set (reg/f:DI 168)
+        (symbol_ref:DI ("options") [flags 0x40]  <var_decl 0x7f6a052d96c0 options>)) "auth-rhosts.c":309:14 -1
+     (nil))
+(insn 377 376 378 31 (set (reg:SI 116 [ _36 ])
+        (mem/c:SI (plus:DI (reg/f:DI 168)
+                (const_int 1144 [0x478])) [1 options.ignore_rhosts+0 S4 A64])) "auth-rhosts.c":309:14 -1
+     (nil))
+(insn 378 377 379 31 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 116 [ _36 ])
+            (const_int 1 [0x1]))) "auth-rhosts.c":309:6 -1
+     (nil))
+(jump_insn 379 378 380 31 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 395)
+            (pc))) "auth-rhosts.c":309:6 -1
+     (int_list:REG_BR_PROB 119292724 (nil))
+ -> 395)
+(note 380 379 381 32 [bb 32] NOTE_INSN_BASIC_BLOCK)
+(insn 381 380 382 32 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 116 [ _36 ])
+            (const_int 2 [0x2]))) "auth-rhosts.c":309:50 -1
+     (nil))
+(jump_insn 382 381 383 32 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 409)
+            (pc))) "auth-rhosts.c":309:50 -1
+     (int_list:REG_BR_PROB 524845004 (nil))
+ -> 409)
+(note 383 382 384 33 [bb 33] NOTE_INSN_BASIC_BLOCK)
+(insn 384 383 385 33 (set (reg/f:DI 169)
+        (symbol_ref/f:DI ("*.LC9") [flags 0x2]  <var_decl 0x7f6a04fb43f0 *.LC9>)) "auth-rhosts.c":311:7 -1
+     (nil))
+(insn 385 384 386 33 (set (reg:DI 170)
+        (reg/f:DI 82 [ _1 ])) "auth-rhosts.c":311:7 -1
+     (nil))
+(insn 386 385 387 33 (set (reg:DI 171)
+        (reg/f:DI 169)) "auth-rhosts.c":311:7 -1
+     (nil))
+(insn 387 386 388 33 (set (reg:DI 172)
+        (const_int 8 [0x8])) "auth-rhosts.c":311:7 -1
+     (nil))
+(insn 388 387 389 33 (parallel [
+            (set (reg:CC 17 flags)
+                (compare:CC (mem:BLK (reg:DI 170) [0 MEM <char[1:]> [(void *)_1]+0 A8])
+                    (mem/u/c:BLK (reg:DI 171) [0 MEM <char[1:]> [(void *)".shosts"]+0 A8])))
+            (use (reg:DI 172))
+            (use (const_int 1 [0x1]))
+            (clobber (reg:DI 170))
+            (clobber (reg:DI 171))
+            (clobber (reg:DI 172))
+        ]) "auth-rhosts.c":311:7 -1
+     (nil))
+(insn 389 388 390 33 (set (reg:QI 173)
+        (gtu:QI (reg:CC 17 flags)
+            (const_int 0 [0]))) "auth-rhosts.c":311:7 -1
+     (nil))
+(insn 390 389 391 33 (set (reg:QI 174)
+        (ltu:QI (reg:CC 17 flags)
+            (const_int 0 [0]))) "auth-rhosts.c":311:7 -1
+     (nil))
+(insn 391 390 392 33 (parallel [
+            (set (subreg:QI (reg:SI 117 [ _37 ]) 0)
+                (minus:QI (reg:QI 173)
+                    (reg:QI 174)))
+            (clobber (reg:CC 17 flags))
+        ]) "auth-rhosts.c":311:7 -1
+     (nil))
+(insn 392 391 393 33 (set (reg:SI 117 [ _37 ])
+        (sign_extend:SI (subreg:QI (reg:SI 117 [ _37 ]) 0))) "auth-rhosts.c":311:7 -1
+     (nil))
+(insn 393 392 394 33 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 117 [ _37 ])
+            (const_int 0 [0]))) "auth-rhosts.c":310:54 -1
+     (nil))
+(jump_insn 394 393 395 33 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 409)
+            (pc))) "auth-rhosts.c":310:54 -1
+     (int_list:REG_BR_PROB 719407028 (nil))
+ -> 409)
+(code_label 395 394 396 34 91 (nil) [1 uses])
+(note 396 395 397 34 [bb 34] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 397 396 398 34 (debug_marker) "auth-rhosts.c":312:4 -1
+     (nil))
+(insn 398 397 399 34 (set (reg:DI 4 si)
+        (reg/f:DI 82 [ _1 ])) "auth-rhosts.c":312:4 -1
+     (nil))
+(insn 399 398 400 34 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC22") [flags 0x2]  <var_decl 0x7f6a04fd25a0 *.LC22>)) "auth-rhosts.c":312:4 -1
+     (nil))
+(insn 400 399 401 34 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "auth-rhosts.c":312:4 -1
+     (nil))
+(call_insn 401 400 402 34 (call (mem:QI (symbol_ref:DI ("auth_debug_add") [flags 0x41]  <function_decl 0x7f6a04ef8200 auth_debug_add>) [0 auth_debug_add S1 A8])
+        (const_int 0 [0])) "auth-rhosts.c":312:4 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("auth_debug_add") [flags 0x41]  <function_decl 0x7f6a04ef8200 auth_debug_add>)
+        (nil))
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (nil)))))
+(debug_insn 402 401 403 34 (debug_marker) "auth-rhosts.c":314:4 -1
+     (nil))
+(insn 403 402 404 34 (set (reg:DI 175)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -168 [0xffffffffffffff58])) [5 path+0 S8 A64])) "auth-rhosts.c":314:4 -1
+     (nil))
+(insn 404 403 405 34 (set (reg:DI 5 di)
+        (reg:DI 175)) "auth-rhosts.c":314:4 -1
+     (nil))
+(call_insn 405 404 406 34 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x7f6a05b68900 free>) [0 __builtin_free S1 A8])
+        (const_int 0 [0])) "auth-rhosts.c":314:4 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x7f6a05b68900 free>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(debug_insn 406 405 407 34 (debug_marker) "auth-rhosts.c":315:4 -1
+     (nil))
+(jump_insn 407 406 408 34 (set (pc)
+        (label_ref 451)) "auth-rhosts.c":315:4 -1
+     (nil)
+ -> 451)
+(barrier 408 407 409)
+(code_label 409 408 410 35 92 (nil) [2 uses])
+(note 410 409 411 35 [bb 35] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 411 410 412 35 (debug_marker) "auth-rhosts.c":318:3 -1
+     (nil))
+(insn 412 411 413 35 (set (reg:DI 176)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -168 [0xffffffffffffff58])) [5 path+0 S8 A64])) "auth-rhosts.c":318:7 -1
+     (nil))
+(insn 413 412 414 35 (set (reg:DI 36 r8)
+        (mem/f:DI (reg/v/f:DI 135 [ pw ]) [5 pw_62(D)->pw_name+0 S8 A64])) "auth-rhosts.c":318:7 -1
+     (nil))
+(insn 414 413 415 35 (set (reg:DI 2 cx)
+        (reg/v/f:DI 136 [ client_user ])) "auth-rhosts.c":318:7 -1
+     (nil))
+(insn 415 414 416 35 (set (reg:DI 1 dx)
+        (reg/v/f:DI 138 [ ipaddr ])) "auth-rhosts.c":318:7 -1
+     (nil))
+(insn 416 415 417 35 (set (reg:DI 4 si)
+        (reg/v/f:DI 137 [ hostname ])) "auth-rhosts.c":318:7 -1
+     (nil))
+(insn 417 416 418 35 (set (reg:DI 5 di)
+        (reg:DI 176)) "auth-rhosts.c":318:7 -1
+     (nil))
+(call_insn 418 417 419 35 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("check_rhosts_file") [flags 0x3]  <function_decl 0x7f6a04ef8e00 check_rhosts_file>) [0 check_rhosts_file S1 A8])
+            (const_int 0 [0]))) "auth-rhosts.c":318:7 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("check_rhosts_file") [flags 0x3]  <function_decl 0x7f6a04ef8e00 check_rhosts_file>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (expr_list:DI (use (reg:DI 2 cx))
+                    (expr_list:DI (use (reg:DI 36 r8))
+                        (nil)))))))
+(insn 419 418 420 35 (set (reg:SI 121 [ _41 ])
+        (reg:SI 0 ax)) "auth-rhosts.c":318:7 -1
+     (nil))
+(insn 420 419 421 35 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 121 [ _41 ])
+            (const_int 0 [0]))) "auth-rhosts.c":318:6 -1
+     (nil))
+(jump_insn 421 420 422 35 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 445)
+            (pc))) "auth-rhosts.c":318:6 -1
+     (int_list:REG_BR_PROB 1014686028 (nil))
+ -> 445)
+(note 422 421 423 36 [bb 36] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 423 422 424 36 (debug_marker) "auth-rhosts.c":320:4 -1
+     (nil))
+(insn 424 423 425 36 (set (reg:DI 4 si)
+        (reg/f:DI 82 [ _1 ])) "auth-rhosts.c":320:4 -1
+     (nil))
+(insn 425 424 426 36 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC23") [flags 0x2]  <var_decl 0x7f6a04fd2630 *.LC23>)) "auth-rhosts.c":320:4 -1
+     (nil))
+(insn 426 425 427 36 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "auth-rhosts.c":320:4 -1
+     (nil))
+(call_insn 427 426 428 36 (call (mem:QI (symbol_ref:DI ("auth_debug_add") [flags 0x41]  <function_decl 0x7f6a04ef8200 auth_debug_add>) [0 auth_debug_add S1 A8])
+        (const_int 0 [0])) "auth-rhosts.c":320:4 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("auth_debug_add") [flags 0x41]  <function_decl 0x7f6a04ef8200 auth_debug_add>)
+        (nil))
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (nil)))))
+(debug_insn 428 427 429 36 (debug_marker) "auth-rhosts.c":323:4 -1
+     (nil))
+(call_insn 429 428 430 36 (call (mem:QI (symbol_ref:DI ("restore_uid") [flags 0x41]  <function_decl 0x7f6a05226800 restore_uid>) [0 restore_uid S1 A8])
+        (const_int 0 [0])) "auth-rhosts.c":323:4 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("restore_uid") [flags 0x41]  <function_decl 0x7f6a05226800 restore_uid>)
+        (nil))
+    (nil))
+(debug_insn 430 429 431 36 (debug_marker) "auth-rhosts.c":324:4 -1
+     (nil))
+(insn 431 430 432 36 (set (reg:DI 36 r8)
+        (mem/f:DI (reg/v/f:DI 135 [ pw ]) [5 pw_62(D)->pw_name+0 S8 A64])) "auth-rhosts.c":324:4 -1
+     (nil))
+(insn 432 431 433 36 (set (reg:DI 2 cx)
+        (reg/v/f:DI 136 [ client_user ])) "auth-rhosts.c":324:4 -1
+     (nil))
+(insn 433 432 434 36 (set (reg:DI 1 dx)
+        (reg/v/f:DI 138 [ ipaddr ])) "auth-rhosts.c":324:4 -1
+     (nil))
+(insn 434 433 435 36 (set (reg:DI 4 si)
+        (reg/v/f:DI 137 [ hostname ])) "auth-rhosts.c":324:4 -1
+     (nil))
+(insn 435 434 436 36 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC24") [flags 0x2]  <var_decl 0x7f6a04fd26c0 *.LC24>)) "auth-rhosts.c":324:4 -1
+     (nil))
+(insn 436 435 437 36 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "auth-rhosts.c":324:4 -1
+     (nil))
+(call_insn 437 436 438 36 (call (mem:QI (symbol_ref:DI ("auth_debug_add") [flags 0x41]  <function_decl 0x7f6a04ef8200 auth_debug_add>) [0 auth_debug_add S1 A8])
+        (const_int 0 [0])) "auth-rhosts.c":324:4 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("auth_debug_add") [flags 0x41]  <function_decl 0x7f6a04ef8200 auth_debug_add>)
+        (nil))
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (expr_list:DI (use (reg:DI 1 dx))
+                    (expr_list:DI (use (reg:DI 2 cx))
+                        (expr_list:DI (use (reg:DI 36 r8))
+                            (nil))))))))
+(debug_insn 438 437 439 36 (debug_marker) "auth-rhosts.c":327:4 -1
+     (nil))
+(insn 439 438 440 36 (set (reg:DI 177)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -168 [0xffffffffffffff58])) [5 path+0 S8 A64])) "auth-rhosts.c":327:4 -1
+     (nil))
+(insn 440 439 441 36 (set (reg:DI 5 di)
+        (reg:DI 177)) "auth-rhosts.c":327:4 -1
+     (nil))
+(call_insn 441 440 442 36 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x7f6a05b68900 free>) [0 __builtin_free S1 A8])
+        (const_int 0 [0])) "auth-rhosts.c":327:4 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x7f6a05b68900 free>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(debug_insn 442 441 17 36 (debug_marker) "auth-rhosts.c":328:4 -1
+     (nil))
+(insn 17 442 443 36 (set (reg:SI 134 [ <retval> ])
+        (const_int 1 [0x1])) "auth-rhosts.c":328:11 -1
+     (nil))
+(jump_insn 443 17 444 36 (set (pc)
+        (label_ref:DI 500)) "auth-rhosts.c":328:11 737 {jump}
+     (nil)
+ -> 500)
+(barrier 444 443 445)
+(code_label 445 444 446 37 93 (nil) [1 uses])
+(note 446 445 447 37 [bb 37] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 447 446 448 37 (debug_marker) "auth-rhosts.c":330:3 -1
+     (nil))
+(insn 448 447 449 37 (set (reg:DI 178)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -168 [0xffffffffffffff58])) [5 path+0 S8 A64])) "auth-rhosts.c":330:3 -1
+     (nil))
+(insn 449 448 450 37 (set (reg:DI 5 di)
+        (reg:DI 178)) "auth-rhosts.c":330:3 -1
+     (nil))
+(call_insn 450 449 451 37 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x7f6a05b68900 free>) [0 __builtin_free S1 A8])
+        (const_int 0 [0])) "auth-rhosts.c":330:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x7f6a05b68900 free>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(code_label 451 450 452 38 87 (nil) [3 uses])
+(note 452 451 453 38 [bb 38] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 453 452 454 38 (debug_marker) "auth-rhosts.c":281:6 -1
+     (nil))
+(debug_insn 454 453 455 38 (var_location:SI rhosts_file_index (plus:SI (subreg:SI (lshiftrt:DI (minus:DI (reg:DI 126 [ ivtmp.35 ])
+                    (symbol_ref:DI ("rhosts_files.1") [flags 0x2]  <var_decl 0x7f6a04f07120 rhosts_files>))
+                (const_int 3 [0x3])) 0)
+        (const_int 1 [0x1]))) -1
+     (nil))
+(debug_insn 455 454 456 38 (debug_marker) "auth-rhosts.c":280:30 -1
+     (nil))
+(insn 456 455 457 38 (parallel [
+            (set (reg:DI 126 [ ivtmp.35 ])
+                (plus:DI (reg:DI 126 [ ivtmp.35 ])
+                    (const_int 8 [0x8])))
+            (clobber (reg:CC 17 flags))
+        ]) "auth-rhosts.c":280:2 -1
+     (nil))
+(insn 457 456 459 38 (set (reg/f:DI 82 [ _1 ])
+        (mem/f:DI (reg:DI 126 [ ivtmp.35 ]) [0 MEM[base: _49, offset: 0B]+0 S8 A64])) "auth-rhosts.c":280:42 -1
+     (nil))
+(insn 459 457 460 38 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/f:DI 82 [ _1 ])
+            (const_int 0 [0]))) "auth-rhosts.c":280:2 -1
+     (nil))
+(jump_insn 460 459 461 38 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 458)
+            (pc))) "auth-rhosts.c":280:2 -1
+     (int_list:REG_BR_PROB 1014686028 (nil))
+ -> 458)
+(note 461 460 462 39 [bb 39] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 462 461 463 39 (debug_marker) "auth-rhosts.c":334:2 -1
+     (nil))
+(call_insn 463 462 464 39 (call (mem:QI (symbol_ref:DI ("restore_uid") [flags 0x41]  <function_decl 0x7f6a05226800 restore_uid>) [0 restore_uid S1 A8])
+        (const_int 0 [0])) "auth-rhosts.c":334:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("restore_uid") [flags 0x41]  <function_decl 0x7f6a05226800 restore_uid>)
+        (nil))
+    (nil))
+(debug_insn 464 463 18 39 (debug_marker) "auth-rhosts.c":335:2 -1
+     (nil))
+(insn 18 464 467 39 (set (reg:SI 134 [ <retval> ])
+        (const_int 0 [0])) "auth-rhosts.c":335:9 -1
+     (nil))
+(jump_insn 467 18 468 39 (set (pc)
+        (label_ref 500)) "auth-rhosts.c":336:1 -1
+     (nil)
+ -> 500)
+(barrier 468 467 469)
+(code_label 469 468 470 41 76 (nil) [1 uses])
+(note 470 469 471 41 [bb 41] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 471 470 472 41 (debug_marker) "auth-rhosts.c":222:2 -1
+     (nil))
+(call_insn 472 471 473 41 (call (mem:QI (symbol_ref:DI ("restore_uid") [flags 0x41]  <function_decl 0x7f6a05226800 restore_uid>) [0 restore_uid S1 A8])
+        (const_int 0 [0])) "auth-rhosts.c":222:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("restore_uid") [flags 0x41]  <function_decl 0x7f6a05226800 restore_uid>)
+        (nil))
+    (nil))
+(debug_insn 473 472 474 41 (debug_marker) "auth-rhosts.c":228:2 -1
+     (nil))
+(debug_insn 474 473 475 41 (var_location:DI __path (symbol_ref/f:DI ("*.LC15") [flags 0x2]  <var_decl 0x7f6a04fd21b0 *.LC15>)) -1
+     (nil))
+(debug_insn 475 474 476 41 (var_location:DI __statbuf (plus:DI (reg/f:DI 77 virtual-stack-vars)
+        (const_int -160 [0xffffffffffffff60]))) -1
+     (nil))
+(debug_insn 476 475 477 41 (debug_marker:BLK) "/usr/include/x86_64-linux-gnu/sys/stat.h":453:1 -1
+     (nil))
+(debug_insn 477 476 478 41 (debug_marker) "/usr/include/x86_64-linux-gnu/sys/stat.h":455:3 -1
+     (nil))
+(insn 478 477 479 41 (parallel [
+            (set (reg:DI 180)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -160 [0xffffffffffffff60])))
+            (clobber (reg:CC 17 flags))
+        ]) "/usr/include/x86_64-linux-gnu/sys/stat.h":455:10 -1
+     (nil))
+(insn 479 478 480 41 (set (reg:DI 1 dx)
+        (reg:DI 180)) "/usr/include/x86_64-linux-gnu/sys/stat.h":455:10 -1
+     (nil))
+(insn 480 479 481 41 (set (reg:DI 4 si)
+        (symbol_ref/f:DI ("*.LC15") [flags 0x2]  <var_decl 0x7f6a04fd21b0 *.LC15>)) "/usr/include/x86_64-linux-gnu/sys/stat.h":455:10 -1
+     (nil))
+(insn 481 480 482 41 (set (reg:SI 5 di)
+        (const_int 1 [0x1])) "/usr/include/x86_64-linux-gnu/sys/stat.h":455:10 -1
+     (nil))
+(call_insn 482 481 483 41 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__xstat") [flags 0x41]  <function_decl 0x7f6a058ef200 __xstat>) [0 __xstat S1 A8])
+            (const_int 0 [0]))) "/usr/include/x86_64-linux-gnu/sys/stat.h":455:10 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__xstat") [flags 0x41]  <function_decl 0x7f6a058ef200 __xstat>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:SI (use (reg:SI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(insn 483 482 484 41 (set (reg:SI 130 [ _97 ])
+        (reg:SI 0 ax)) "/usr/include/x86_64-linux-gnu/sys/stat.h":455:10 -1
+     (nil))
+(debug_insn 484 483 485 41 (var_location:DI __path (clobber (const_int 0 [0]))) "auth-rhosts.c":229:6 -1
+     (nil))
+(debug_insn 485 484 487 41 (var_location:DI __statbuf (clobber (const_int 0 [0]))) "auth-rhosts.c":229:6 -1
+     (nil))
+(insn 487 485 488 41 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 130 [ _97 ])
+            (const_int -1 [0xffffffffffffffff]))) "auth-rhosts.c":228:39 -1
+     (nil))
+(jump_insn 488 487 491 41 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 486)
+            (pc))) "auth-rhosts.c":228:39 -1
+     (int_list:REG_BR_PROB 217325348 (nil))
+ -> 486)
+(note 491 488 489 42 [bb 42] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 489 491 490 42 (set (pc)
+        (label_ref:DI 497)) 737 {jump}
+     (nil)
+ -> 497)
+(barrier 490 489 492)
+(code_label 492 490 493 43 74 (nil) [1 uses])
+(note 493 492 494 43 [bb 43] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 494 493 495 43 (debug_marker) "auth-rhosts.c":222:2 -1
+     (nil))
+(call_insn 495 494 496 43 (call (mem:QI (symbol_ref:DI ("restore_uid") [flags 0x41]  <function_decl 0x7f6a05226800 restore_uid>) [0 restore_uid S1 A8])
+        (const_int 0 [0])) "auth-rhosts.c":222:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("restore_uid") [flags 0x41]  <function_decl 0x7f6a05226800 restore_uid>)
+        (nil))
+    (nil))
+(debug_insn 496 495 498 43 (debug_marker) "auth-rhosts.c":228:2 -1
+     (nil))
+(jump_insn 498 496 499 43 (set (pc)
+        (label_ref 497)) "auth-rhosts.c":222:2 -1
+     (nil)
+ -> 497)
+(barrier 499 498 500)
+(code_label 500 499 509 44 73 (nil) [7 uses])
+(note 509 500 501 44 [bb 44] NOTE_INSN_BASIC_BLOCK)
+(insn 501 509 502 44 (set (reg/f:DI 181)
+        (const_int 40 [0x28])) "auth-rhosts.c":336:1 -1
+     (nil))
+(insn 502 501 503 44 (parallel [
+            (set (reg:CCZ 17 flags)
+                (unspec:CCZ [
+                        (mem/v/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                                (const_int -8 [0xfffffffffffffff8])) [13 D.16879+0 S8 A64])
+                        (mem/v/f:DI (reg/f:DI 181) [0 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_TEST))
+            (clobber (scratch:DI))
+        ]) "auth-rhosts.c":336:1 -1
+     (nil))
+(jump_insn 503 502 510 44 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 506)
+            (pc))) "auth-rhosts.c":336:1 -1
+     (int_list:REG_BR_PROB 1073312332 (nil))
+ -> 506)
+(note 510 503 504 45 [bb 45] NOTE_INSN_BASIC_BLOCK)
+(call_insn 504 510 505 45 (call (mem:QI (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7f6a04f54900 __stack_chk_fail>) [0 __stack_chk_fail S1 A8])
+        (const_int 0 [0])) "auth-rhosts.c":336:1 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7f6a04f54900 __stack_chk_fail>)
+        (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+            (expr_list:REG_NORETURN (const_int 0 [0])
+                (expr_list:REG_EH_REGION (const_int 0 [0])
+                    (nil)))))
+    (nil))
+(barrier 505 504 506)
+(code_label 506 505 511 46 97 (nil) [1 uses])
+(note 511 506 507 46 [bb 46] NOTE_INSN_BASIC_BLOCK)
+(insn 507 511 508 46 (set (reg/i:SI 0 ax)
+        (reg:SI 134 [ <retval> ])) "auth-rhosts.c":336:1 -1
+     (nil))
+(insn 508 507 0 46 (use (reg/i:SI 0 ax)) "auth-rhosts.c":336:1 -1
+     (nil))

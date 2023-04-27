@@ -1,0 +1,213 @@
+
+;; Function sshfatal (sshfatal, funcdef_no=66, decl_uid=6733, cgraph_uid=67, symbol_order=66) (executed once)
+
+Partition 0: size 24 align 8
+	args
+
+;; Generating RTL for gimple basic block 2
+Predictions for insn 10 bb 3
+  no prediction heuristics: 50.00%  exec 1073741824 (estimated locally) hit 2147483640 (estimated locally) (200.0%)
+  combined heuristics: 50.00%  exec 1073741824 (estimated locally) hit 2147483640 (estimated locally) (200.0%)
+Predictions for insn 52 bb 4
+  first match heuristics: 99.96%  exec 0 (precise) hit 0 (precise) (-nan%)
+  combined heuristics: 99.96%  exec 0 (precise) hit 0 (precise) (-nan%)
+  noreturn call heuristics: 99.96%  exec 0 (precise) hit 0 (precise) (-nan%)
+deleting block 8
+deleting block 7
+deleting block 4
+
+
+try_optimize_cfg iteration 1
+
+Merging block 5 into block 4...
+Merged blocks 4 and 5.
+Merged 4 and 5 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 23 NOTE_INSN_DELETED)
+(note 23 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 23 3 2 (set (reg/v/f:DI 82 [ file ])
+        (reg:DI 5 di [ file ])) "fatal.c":39:1 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v/f:DI 83 [ func ])
+        (reg:DI 4 si [ func ])) "fatal.c":39:1 -1
+     (nil))
+(insn 4 3 5 2 (set (reg/v:SI 84 [ line ])
+        (reg:SI 1 dx [ line ])) "fatal.c":39:1 -1
+     (nil))
+(insn 5 4 6 2 (set (reg/v:SI 85 [ showfunc ])
+        (reg:SI 2 cx [ showfunc ])) "fatal.c":39:1 -1
+     (nil))
+(insn 6 5 7 2 (set (reg/v:SI 86 [ level ])
+        (reg:SI 36 r8 [ level ])) "fatal.c":39:1 -1
+     (nil))
+(insn 7 6 8 2 (set (reg/v/f:DI 87 [ suffix ])
+        (reg:DI 37 r9 [ suffix ])) "fatal.c":39:1 -1
+     (nil))
+(insn 8 7 9 2 (set (reg/v/f:DI 88 [ fmt ])
+        (mem/f/c:DI (reg/f:DI 76 virtual-incoming-args) [4 fmt+0 S8 A64])) "fatal.c":39:1 -1
+     (nil))
+(insn 9 8 10 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 0 ax)
+            (const_int 0 [0]))) "fatal.c":39:1 -1
+     (nil))
+(jump_insn 10 9 57 2 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 19)
+            (pc))) "fatal.c":39:1 -1
+     (int_list:REG_BR_PROB 536870916 (nil))
+ -> 19)
+(note 57 10 11 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 11 57 12 3 (set (mem/c:V4SF (plus:DI (reg/f:DI 19 frame)
+                (const_int 48 [0x30])) [0  S16 A128])
+        (reg:V4SF 20 xmm0)) "fatal.c":39:1 -1
+     (nil))
+(insn 12 11 13 3 (set (mem/c:V4SF (plus:DI (reg/f:DI 19 frame)
+                (const_int 64 [0x40])) [0  S16 A128])
+        (reg:V4SF 21 xmm1)) "fatal.c":39:1 -1
+     (nil))
+(insn 13 12 14 3 (set (mem/c:V4SF (plus:DI (reg/f:DI 19 frame)
+                (const_int 80 [0x50])) [0  S16 A128])
+        (reg:V4SF 22 xmm2)) "fatal.c":39:1 -1
+     (nil))
+(insn 14 13 15 3 (set (mem/c:V4SF (plus:DI (reg/f:DI 19 frame)
+                (const_int 96 [0x60])) [0  S16 A128])
+        (reg:V4SF 23 xmm3)) "fatal.c":39:1 -1
+     (nil))
+(insn 15 14 16 3 (set (mem/c:V4SF (plus:DI (reg/f:DI 19 frame)
+                (const_int 112 [0x70])) [0  S16 A128])
+        (reg:V4SF 24 xmm4)) "fatal.c":39:1 -1
+     (nil))
+(insn 16 15 17 3 (set (mem/c:V4SF (plus:DI (reg/f:DI 19 frame)
+                (const_int 128 [0x80])) [0  S16 A128])
+        (reg:V4SF 25 xmm5)) "fatal.c":39:1 -1
+     (nil))
+(insn 17 16 18 3 (set (mem/c:V4SF (plus:DI (reg/f:DI 19 frame)
+                (const_int 144 [0x90])) [0  S16 A128])
+        (reg:V4SF 26 xmm6)) "fatal.c":39:1 -1
+     (nil))
+(insn 18 17 19 3 (set (mem/c:V4SF (plus:DI (reg/f:DI 19 frame)
+                (const_int 160 [0xa0])) [0  S16 A128])
+        (reg:V4SF 27 xmm7)) "fatal.c":39:1 -1
+     (nil))
+(code_label 19 18 58 4 2 (nil) [1 uses])
+(note 58 19 20 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(note 20 58 21 4 NOTE_INSN_FUNCTION_BEG)
+(insn 21 20 22 4 (set (reg/f:DI 89)
+        (const_int 40 [0x28])) "fatal.c":39:1 -1
+     (nil))
+(insn 22 21 25 4 (parallel [
+            (set (mem/v/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                        (const_int -8 [0xfffffffffffffff8])) [1 D.6754+0 S8 A64])
+                (unspec:DI [
+                        (mem/v/f:DI (reg/f:DI 89) [0 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_SET))
+            (set (scratch:DI)
+                (const_int 0 [0]))
+            (clobber (reg:CC 17 flags))
+        ]) "fatal.c":39:1 -1
+     (nil))
+(debug_insn 25 22 26 4 (debug_marker) "fatal.c":40:2 -1
+     (nil))
+(debug_insn 26 25 27 4 (debug_marker) "fatal.c":42:2 -1
+     (nil))
+(insn 27 26 28 4 (parallel [
+            (set (reg:DI 90)
+                (plus:DI (reg/f:DI 76 virtual-incoming-args)
+                    (const_int 8 [0x8])))
+            (clobber (reg:CC 17 flags))
+        ]) "fatal.c":42:2 -1
+     (nil))
+(insn 28 27 29 4 (set (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [0 MEM[(struct [1] *)&args].gp_offset+0 S4 A64])
+        (const_int 48 [0x30])) "fatal.c":42:2 -1
+     (nil))
+(insn 29 28 30 4 (set (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [0 MEM[(struct [1] *)&args].fp_offset+0 S4 A32])
+        (const_int 48 [0x30])) "fatal.c":42:2 -1
+     (nil))
+(insn 30 29 31 4 (parallel [
+            (set (reg:DI 91)
+                (plus:DI (reg/f:DI 76 virtual-incoming-args)
+                    (const_int 8 [0x8])))
+            (clobber (reg:CC 17 flags))
+        ]) "fatal.c":42:2 -1
+     (nil))
+(insn 31 30 32 4 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [0 MEM[(struct [1] *)&args].overflow_arg_area+0 S8 A64])
+        (reg:DI 91)) "fatal.c":42:2 -1
+     (nil))
+(insn 32 31 33 4 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [0 MEM[(struct [1] *)&args].reg_save_area+0 S8 A64])
+        (reg/f:DI 19 frame)) "fatal.c":42:2 -1
+     (nil))
+(debug_insn 33 32 34 4 (debug_marker) "fatal.c":43:2 -1
+     (nil))
+(insn 34 33 35 4 (parallel [
+            (set (reg:DI 92)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -32 [0xffffffffffffffe0])))
+            (clobber (reg:CC 17 flags))
+        ]) "fatal.c":43:2 -1
+     (nil))
+(insn 35 34 36 4 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [5  S8 A64])
+        (reg:DI 92)) "fatal.c":43:2 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 36 35 37 4 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [4  S8 A64])
+        (reg/v/f:DI 88 [ fmt ])) "fatal.c":43:2 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 37 36 38 4 (set (reg:DI 37 r9)
+        (reg/v/f:DI 87 [ suffix ])) "fatal.c":43:2 -1
+     (nil))
+(insn 38 37 39 4 (set (reg:SI 36 r8)
+        (reg/v:SI 86 [ level ])) "fatal.c":43:2 -1
+     (nil))
+(insn 39 38 40 4 (set (reg:SI 2 cx)
+        (reg/v:SI 85 [ showfunc ])) "fatal.c":43:2 -1
+     (nil))
+(insn 40 39 41 4 (set (reg:SI 1 dx)
+        (reg/v:SI 84 [ line ])) "fatal.c":43:2 -1
+     (nil))
+(insn 41 40 42 4 (set (reg:DI 4 si)
+        (reg/v/f:DI 83 [ func ])) "fatal.c":43:2 -1
+     (nil))
+(insn 42 41 43 4 (set (reg:DI 5 di)
+        (reg/v/f:DI 82 [ file ])) "fatal.c":43:2 -1
+     (nil))
+(call_insn 43 42 44 4 (call (mem:QI (symbol_ref:DI ("sshlogv") [flags 0x41]  <function_decl 0x7fe9a8509e00 sshlogv>) [0 sshlogv S1 A8])
+        (const_int 16 [0x10])) "fatal.c":43:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshlogv") [flags 0x41]  <function_decl 0x7fe9a8509e00 sshlogv>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:SI (use (reg:SI 1 dx))
+                (expr_list:SI (use (reg:SI 2 cx))
+                    (expr_list:SI (use (reg:SI 36 r8))
+                        (expr_list:DI (use (reg:DI 37 r9))
+                            (nil))))))))
+(debug_insn 44 43 45 4 (debug_marker) "fatal.c":44:2 -1
+     (nil))
+(debug_insn 45 44 46 4 (debug_marker) "fatal.c":45:2 -1
+     (nil))
+(insn 46 45 47 4 (set (reg:SI 5 di)
+        (const_int 255 [0xff])) "fatal.c":45:2 -1
+     (nil))
+(call_insn 47 46 48 4 (call (mem:QI (symbol_ref:DI ("cleanup_exit") [flags 0x41]  <function_decl 0x7fe9a8509c00 cleanup_exit>) [0 cleanup_exit S1 A8])
+        (const_int 0 [0])) "fatal.c":45:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("cleanup_exit") [flags 0x41]  <function_decl 0x7fe9a8509c00 cleanup_exit>)
+        (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+            (expr_list:REG_NORETURN (const_int 0 [0])
+                (nil))))
+    (expr_list:SI (use (reg:SI 5 di))
+        (nil)))
+(barrier 48 47 0)

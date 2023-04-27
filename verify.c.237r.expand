@@ -1,0 +1,1331 @@
+
+;; Function crypto_verify_32 (crypto_verify_32, funcdef_no=66, decl_uid=6645, cgraph_uid=67, symbol_order=66)
+
+
+;; Generating RTL for gimple basic block 2
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Removing jump 279.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 5 NOTE_INSN_DELETED)
+(note 5 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 5 3 2 (set (reg/v/f:DI 215 [ x ])
+        (reg:DI 5 di [ x ])) "verify.c":13:1 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v/f:DI 216 [ y ])
+        (reg:DI 4 si [ y ])) "verify.c":13:1 -1
+     (nil))
+(note 4 3 7 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 7 4 8 2 (debug_marker) "verify.c":14:3 -1
+     (nil))
+(debug_insn 8 7 9 2 (var_location:SI differentbits (const_int 0 [0])) "verify.c":14:16 -1
+     (nil))
+(debug_insn 9 8 10 2 (debug_marker) "verify.c":16:3 -1
+     (nil))
+(debug_insn 10 9 11 2 (var_location:QI D#1 (mem:QI (reg/v/f:DI 215 [ x ]) [0 *x_103(D)+0 S1 A8])) "verify.c":16:3 -1
+     (nil))
+(debug_insn 11 10 12 2 (var_location:QI D#2 (mem:QI (reg/v/f:DI 216 [ y ]) [0 *y_104(D)+0 S1 A8])) "verify.c":16:3 -1
+     (nil))
+(debug_insn 12 11 13 2 (var_location:QI D#7 (xor:QI (debug_expr:QI D#1)
+        (debug_expr:QI D#2))) "verify.c":16:3 -1
+     (nil))
+(debug_insn 13 12 14 2 (var_location:SI differentbits (zero_extend:SI (debug_expr:QI D#7))) "verify.c":16:3 -1
+     (nil))
+(debug_insn 14 13 15 2 (debug_marker) "verify.c":17:3 -1
+     (nil))
+(debug_insn 15 14 16 2 (var_location:QI D#3 (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+            (const_int 1 [0x1])) [0 MEM[(const unsigned char *)x_103(D) + 1B]+0 S1 A8])) "verify.c":17:3 -1
+     (nil))
+(debug_insn 16 15 17 2 (var_location:QI D#4 (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+            (const_int 1 [0x1])) [0 MEM[(const unsigned char *)y_104(D) + 1B]+0 S1 A8])) "verify.c":17:3 -1
+     (nil))
+(debug_insn 17 16 18 2 (var_location:QI D#8 (xor:QI (debug_expr:QI D#3)
+        (debug_expr:QI D#4))) "verify.c":17:3 -1
+     (nil))
+(debug_insn 18 17 19 2 (var_location:QI D#12 (ior:QI (debug_expr:QI D#7)
+        (debug_expr:QI D#8))) -1
+     (nil))
+(debug_insn 19 18 20 2 (var_location:SI differentbits (zero_extend:SI (debug_expr:QI D#12))) "verify.c":17:3 -1
+     (nil))
+(debug_insn 20 19 21 2 (debug_marker) "verify.c":18:3 -1
+     (nil))
+(debug_insn 21 20 22 2 (var_location:QI D#5 (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+            (const_int 2 [0x2])) [0 MEM[(const unsigned char *)x_103(D) + 2B]+0 S1 A8])) "verify.c":18:3 -1
+     (nil))
+(debug_insn 22 21 23 2 (var_location:QI D#6 (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+            (const_int 2 [0x2])) [0 MEM[(const unsigned char *)y_104(D) + 2B]+0 S1 A8])) "verify.c":18:3 -1
+     (nil))
+(debug_insn 23 22 24 2 (var_location:QI D#11 (xor:QI (debug_expr:QI D#5)
+        (debug_expr:QI D#6))) "verify.c":18:3 -1
+     (nil))
+(debug_insn 24 23 25 2 (var_location:QI D#16 (ior:QI (debug_expr:QI D#12)
+        (debug_expr:QI D#11))) -1
+     (nil))
+(debug_insn 25 24 26 2 (var_location:SI differentbits (zero_extend:SI (debug_expr:QI D#16))) "verify.c":18:3 -1
+     (nil))
+(debug_insn 26 25 27 2 (debug_marker) "verify.c":19:3 -1
+     (nil))
+(debug_insn 27 26 28 2 (var_location:QI D#9 (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+            (const_int 3 [0x3])) [0 MEM[(const unsigned char *)x_103(D) + 3B]+0 S1 A8])) "verify.c":19:3 -1
+     (nil))
+(debug_insn 28 27 29 2 (var_location:QI D#10 (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+            (const_int 3 [0x3])) [0 MEM[(const unsigned char *)y_104(D) + 3B]+0 S1 A8])) "verify.c":19:3 -1
+     (nil))
+(debug_insn 29 28 30 2 (var_location:QI D#15 (xor:QI (debug_expr:QI D#9)
+        (debug_expr:QI D#10))) "verify.c":19:3 -1
+     (nil))
+(debug_insn 30 29 31 2 (var_location:QI D#20 (ior:QI (debug_expr:QI D#16)
+        (debug_expr:QI D#15))) -1
+     (nil))
+(debug_insn 31 30 32 2 (var_location:SI differentbits (zero_extend:SI (debug_expr:QI D#20))) "verify.c":19:3 -1
+     (nil))
+(debug_insn 32 31 33 2 (debug_marker) "verify.c":20:3 -1
+     (nil))
+(debug_insn 33 32 34 2 (var_location:QI D#13 (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+            (const_int 4 [0x4])) [0 MEM[(const unsigned char *)x_103(D) + 4B]+0 S1 A8])) "verify.c":20:3 -1
+     (nil))
+(debug_insn 34 33 35 2 (var_location:QI D#14 (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+            (const_int 4 [0x4])) [0 MEM[(const unsigned char *)y_104(D) + 4B]+0 S1 A8])) "verify.c":20:3 -1
+     (nil))
+(debug_insn 35 34 36 2 (var_location:QI D#19 (xor:QI (debug_expr:QI D#13)
+        (debug_expr:QI D#14))) "verify.c":20:3 -1
+     (nil))
+(debug_insn 36 35 37 2 (var_location:QI D#24 (ior:QI (debug_expr:QI D#20)
+        (debug_expr:QI D#19))) -1
+     (nil))
+(debug_insn 37 36 38 2 (var_location:SI differentbits (zero_extend:SI (debug_expr:QI D#24))) "verify.c":20:3 -1
+     (nil))
+(debug_insn 38 37 39 2 (debug_marker) "verify.c":21:3 -1
+     (nil))
+(debug_insn 39 38 40 2 (var_location:QI D#17 (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+            (const_int 5 [0x5])) [0 MEM[(const unsigned char *)x_103(D) + 5B]+0 S1 A8])) "verify.c":21:3 -1
+     (nil))
+(debug_insn 40 39 41 2 (var_location:QI D#18 (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+            (const_int 5 [0x5])) [0 MEM[(const unsigned char *)y_104(D) + 5B]+0 S1 A8])) "verify.c":21:3 -1
+     (nil))
+(debug_insn 41 40 42 2 (var_location:QI D#23 (xor:QI (debug_expr:QI D#17)
+        (debug_expr:QI D#18))) "verify.c":21:3 -1
+     (nil))
+(debug_insn 42 41 43 2 (var_location:QI D#28 (ior:QI (debug_expr:QI D#24)
+        (debug_expr:QI D#23))) -1
+     (nil))
+(debug_insn 43 42 44 2 (var_location:SI differentbits (zero_extend:SI (debug_expr:QI D#28))) "verify.c":21:3 -1
+     (nil))
+(debug_insn 44 43 45 2 (debug_marker) "verify.c":22:3 -1
+     (nil))
+(debug_insn 45 44 46 2 (var_location:QI D#21 (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+            (const_int 6 [0x6])) [0 MEM[(const unsigned char *)x_103(D) + 6B]+0 S1 A8])) "verify.c":22:3 -1
+     (nil))
+(debug_insn 46 45 47 2 (var_location:QI D#22 (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+            (const_int 6 [0x6])) [0 MEM[(const unsigned char *)y_104(D) + 6B]+0 S1 A8])) "verify.c":22:3 -1
+     (nil))
+(debug_insn 47 46 48 2 (var_location:QI D#27 (xor:QI (debug_expr:QI D#21)
+        (debug_expr:QI D#22))) "verify.c":22:3 -1
+     (nil))
+(debug_insn 48 47 49 2 (var_location:QI D#32 (ior:QI (debug_expr:QI D#28)
+        (debug_expr:QI D#27))) -1
+     (nil))
+(debug_insn 49 48 50 2 (var_location:SI differentbits (zero_extend:SI (debug_expr:QI D#32))) "verify.c":22:3 -1
+     (nil))
+(debug_insn 50 49 51 2 (debug_marker) "verify.c":23:3 -1
+     (nil))
+(debug_insn 51 50 52 2 (var_location:QI D#25 (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+            (const_int 7 [0x7])) [0 MEM[(const unsigned char *)x_103(D) + 7B]+0 S1 A8])) "verify.c":23:3 -1
+     (nil))
+(debug_insn 52 51 53 2 (var_location:QI D#26 (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+            (const_int 7 [0x7])) [0 MEM[(const unsigned char *)y_104(D) + 7B]+0 S1 A8])) "verify.c":23:3 -1
+     (nil))
+(debug_insn 53 52 54 2 (var_location:QI D#31 (xor:QI (debug_expr:QI D#25)
+        (debug_expr:QI D#26))) "verify.c":23:3 -1
+     (nil))
+(debug_insn 54 53 55 2 (var_location:QI D#36 (ior:QI (debug_expr:QI D#32)
+        (debug_expr:QI D#31))) -1
+     (nil))
+(debug_insn 55 54 56 2 (var_location:SI differentbits (zero_extend:SI (debug_expr:QI D#36))) "verify.c":23:3 -1
+     (nil))
+(debug_insn 56 55 57 2 (debug_marker) "verify.c":24:3 -1
+     (nil))
+(debug_insn 57 56 58 2 (var_location:QI D#29 (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+            (const_int 8 [0x8])) [0 MEM[(const unsigned char *)x_103(D) + 8B]+0 S1 A8])) "verify.c":24:3 -1
+     (nil))
+(debug_insn 58 57 59 2 (var_location:QI D#30 (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+            (const_int 8 [0x8])) [0 MEM[(const unsigned char *)y_104(D) + 8B]+0 S1 A8])) "verify.c":24:3 -1
+     (nil))
+(debug_insn 59 58 60 2 (var_location:QI D#35 (xor:QI (debug_expr:QI D#29)
+        (debug_expr:QI D#30))) "verify.c":24:3 -1
+     (nil))
+(debug_insn 60 59 61 2 (var_location:QI D#40 (ior:QI (debug_expr:QI D#36)
+        (debug_expr:QI D#35))) -1
+     (nil))
+(debug_insn 61 60 62 2 (var_location:SI differentbits (zero_extend:SI (debug_expr:QI D#40))) "verify.c":24:3 -1
+     (nil))
+(debug_insn 62 61 63 2 (debug_marker) "verify.c":25:3 -1
+     (nil))
+(debug_insn 63 62 64 2 (var_location:QI D#33 (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+            (const_int 9 [0x9])) [0 MEM[(const unsigned char *)x_103(D) + 9B]+0 S1 A8])) "verify.c":25:3 -1
+     (nil))
+(debug_insn 64 63 65 2 (var_location:QI D#34 (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+            (const_int 9 [0x9])) [0 MEM[(const unsigned char *)y_104(D) + 9B]+0 S1 A8])) "verify.c":25:3 -1
+     (nil))
+(debug_insn 65 64 66 2 (var_location:QI D#39 (xor:QI (debug_expr:QI D#33)
+        (debug_expr:QI D#34))) "verify.c":25:3 -1
+     (nil))
+(debug_insn 66 65 67 2 (var_location:QI D#44 (ior:QI (debug_expr:QI D#40)
+        (debug_expr:QI D#39))) -1
+     (nil))
+(debug_insn 67 66 68 2 (var_location:SI differentbits (zero_extend:SI (debug_expr:QI D#44))) "verify.c":25:3 -1
+     (nil))
+(debug_insn 68 67 69 2 (debug_marker) "verify.c":26:3 -1
+     (nil))
+(debug_insn 69 68 70 2 (var_location:QI D#37 (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+            (const_int 10 [0xa])) [0 MEM[(const unsigned char *)x_103(D) + 10B]+0 S1 A8])) "verify.c":26:3 -1
+     (nil))
+(debug_insn 70 69 71 2 (var_location:QI D#38 (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+            (const_int 10 [0xa])) [0 MEM[(const unsigned char *)y_104(D) + 10B]+0 S1 A8])) "verify.c":26:3 -1
+     (nil))
+(debug_insn 71 70 72 2 (var_location:QI D#43 (xor:QI (debug_expr:QI D#37)
+        (debug_expr:QI D#38))) "verify.c":26:3 -1
+     (nil))
+(debug_insn 72 71 73 2 (var_location:QI D#48 (ior:QI (debug_expr:QI D#44)
+        (debug_expr:QI D#43))) -1
+     (nil))
+(debug_insn 73 72 74 2 (var_location:SI differentbits (zero_extend:SI (debug_expr:QI D#48))) "verify.c":26:3 -1
+     (nil))
+(debug_insn 74 73 75 2 (debug_marker) "verify.c":27:3 -1
+     (nil))
+(debug_insn 75 74 76 2 (var_location:QI D#41 (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+            (const_int 11 [0xb])) [0 MEM[(const unsigned char *)x_103(D) + 11B]+0 S1 A8])) "verify.c":27:3 -1
+     (nil))
+(debug_insn 76 75 77 2 (var_location:QI D#42 (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+            (const_int 11 [0xb])) [0 MEM[(const unsigned char *)y_104(D) + 11B]+0 S1 A8])) "verify.c":27:3 -1
+     (nil))
+(debug_insn 77 76 78 2 (var_location:QI D#47 (xor:QI (debug_expr:QI D#41)
+        (debug_expr:QI D#42))) "verify.c":27:3 -1
+     (nil))
+(debug_insn 78 77 79 2 (var_location:QI D#52 (ior:QI (debug_expr:QI D#48)
+        (debug_expr:QI D#47))) -1
+     (nil))
+(debug_insn 79 78 80 2 (var_location:SI differentbits (zero_extend:SI (debug_expr:QI D#52))) "verify.c":27:3 -1
+     (nil))
+(debug_insn 80 79 81 2 (debug_marker) "verify.c":28:3 -1
+     (nil))
+(debug_insn 81 80 82 2 (var_location:QI D#45 (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+            (const_int 12 [0xc])) [0 MEM[(const unsigned char *)x_103(D) + 12B]+0 S1 A8])) "verify.c":28:3 -1
+     (nil))
+(debug_insn 82 81 83 2 (var_location:QI D#46 (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+            (const_int 12 [0xc])) [0 MEM[(const unsigned char *)y_104(D) + 12B]+0 S1 A8])) "verify.c":28:3 -1
+     (nil))
+(debug_insn 83 82 84 2 (var_location:QI D#51 (xor:QI (debug_expr:QI D#45)
+        (debug_expr:QI D#46))) "verify.c":28:3 -1
+     (nil))
+(debug_insn 84 83 85 2 (var_location:QI D#56 (ior:QI (debug_expr:QI D#52)
+        (debug_expr:QI D#51))) -1
+     (nil))
+(debug_insn 85 84 86 2 (var_location:SI differentbits (zero_extend:SI (debug_expr:QI D#56))) "verify.c":28:3 -1
+     (nil))
+(debug_insn 86 85 87 2 (debug_marker) "verify.c":29:3 -1
+     (nil))
+(debug_insn 87 86 88 2 (var_location:QI D#49 (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+            (const_int 13 [0xd])) [0 MEM[(const unsigned char *)x_103(D) + 13B]+0 S1 A8])) "verify.c":29:3 -1
+     (nil))
+(debug_insn 88 87 89 2 (var_location:QI D#50 (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+            (const_int 13 [0xd])) [0 MEM[(const unsigned char *)y_104(D) + 13B]+0 S1 A8])) "verify.c":29:3 -1
+     (nil))
+(debug_insn 89 88 90 2 (var_location:QI D#55 (xor:QI (debug_expr:QI D#49)
+        (debug_expr:QI D#50))) "verify.c":29:3 -1
+     (nil))
+(debug_insn 90 89 91 2 (var_location:QI D#60 (ior:QI (debug_expr:QI D#56)
+        (debug_expr:QI D#55))) -1
+     (nil))
+(debug_insn 91 90 92 2 (var_location:SI differentbits (zero_extend:SI (debug_expr:QI D#60))) "verify.c":29:3 -1
+     (nil))
+(debug_insn 92 91 93 2 (debug_marker) "verify.c":30:3 -1
+     (nil))
+(debug_insn 93 92 94 2 (var_location:QI D#53 (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+            (const_int 14 [0xe])) [0 MEM[(const unsigned char *)x_103(D) + 14B]+0 S1 A8])) "verify.c":30:3 -1
+     (nil))
+(debug_insn 94 93 95 2 (var_location:QI D#54 (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+            (const_int 14 [0xe])) [0 MEM[(const unsigned char *)y_104(D) + 14B]+0 S1 A8])) "verify.c":30:3 -1
+     (nil))
+(debug_insn 95 94 96 2 (var_location:QI D#59 (xor:QI (debug_expr:QI D#53)
+        (debug_expr:QI D#54))) "verify.c":30:3 -1
+     (nil))
+(debug_insn 96 95 97 2 (var_location:QI D#64 (ior:QI (debug_expr:QI D#60)
+        (debug_expr:QI D#59))) -1
+     (nil))
+(debug_insn 97 96 98 2 (var_location:SI differentbits (zero_extend:SI (debug_expr:QI D#64))) "verify.c":30:3 -1
+     (nil))
+(debug_insn 98 97 99 2 (debug_marker) "verify.c":31:3 -1
+     (nil))
+(debug_insn 99 98 100 2 (var_location:QI D#57 (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+            (const_int 15 [0xf])) [0 MEM[(const unsigned char *)x_103(D) + 15B]+0 S1 A8])) "verify.c":31:3 -1
+     (nil))
+(debug_insn 100 99 101 2 (var_location:QI D#58 (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+            (const_int 15 [0xf])) [0 MEM[(const unsigned char *)y_104(D) + 15B]+0 S1 A8])) "verify.c":31:3 -1
+     (nil))
+(debug_insn 101 100 102 2 (var_location:QI D#63 (xor:QI (debug_expr:QI D#57)
+        (debug_expr:QI D#58))) "verify.c":31:3 -1
+     (nil))
+(debug_insn 102 101 103 2 (var_location:QI D#68 (ior:QI (debug_expr:QI D#64)
+        (debug_expr:QI D#63))) -1
+     (nil))
+(debug_insn 103 102 104 2 (var_location:SI differentbits (zero_extend:SI (debug_expr:QI D#68))) "verify.c":31:3 -1
+     (nil))
+(debug_insn 104 103 105 2 (debug_marker) "verify.c":32:3 -1
+     (nil))
+(debug_insn 105 104 106 2 (var_location:QI D#61 (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+            (const_int 16 [0x10])) [0 MEM[(const unsigned char *)x_103(D) + 16B]+0 S1 A8])) "verify.c":32:3 -1
+     (nil))
+(debug_insn 106 105 107 2 (var_location:QI D#62 (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+            (const_int 16 [0x10])) [0 MEM[(const unsigned char *)y_104(D) + 16B]+0 S1 A8])) "verify.c":32:3 -1
+     (nil))
+(debug_insn 107 106 108 2 (var_location:QI D#67 (xor:QI (debug_expr:QI D#61)
+        (debug_expr:QI D#62))) "verify.c":32:3 -1
+     (nil))
+(debug_insn 108 107 109 2 (var_location:QI D#72 (ior:QI (debug_expr:QI D#68)
+        (debug_expr:QI D#67))) -1
+     (nil))
+(debug_insn 109 108 110 2 (var_location:SI differentbits (zero_extend:SI (debug_expr:QI D#72))) "verify.c":32:3 -1
+     (nil))
+(debug_insn 110 109 111 2 (debug_marker) "verify.c":33:3 -1
+     (nil))
+(debug_insn 111 110 112 2 (var_location:QI D#65 (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+            (const_int 17 [0x11])) [0 MEM[(const unsigned char *)x_103(D) + 17B]+0 S1 A8])) "verify.c":33:3 -1
+     (nil))
+(debug_insn 112 111 113 2 (var_location:QI D#66 (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+            (const_int 17 [0x11])) [0 MEM[(const unsigned char *)y_104(D) + 17B]+0 S1 A8])) "verify.c":33:3 -1
+     (nil))
+(debug_insn 113 112 114 2 (var_location:QI D#71 (xor:QI (debug_expr:QI D#65)
+        (debug_expr:QI D#66))) "verify.c":33:3 -1
+     (nil))
+(debug_insn 114 113 115 2 (var_location:QI D#76 (ior:QI (debug_expr:QI D#72)
+        (debug_expr:QI D#71))) -1
+     (nil))
+(debug_insn 115 114 116 2 (var_location:SI differentbits (zero_extend:SI (debug_expr:QI D#76))) "verify.c":33:3 -1
+     (nil))
+(debug_insn 116 115 117 2 (debug_marker) "verify.c":34:3 -1
+     (nil))
+(debug_insn 117 116 118 2 (var_location:QI D#69 (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+            (const_int 18 [0x12])) [0 MEM[(const unsigned char *)x_103(D) + 18B]+0 S1 A8])) "verify.c":34:3 -1
+     (nil))
+(debug_insn 118 117 119 2 (var_location:QI D#70 (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+            (const_int 18 [0x12])) [0 MEM[(const unsigned char *)y_104(D) + 18B]+0 S1 A8])) "verify.c":34:3 -1
+     (nil))
+(debug_insn 119 118 120 2 (var_location:QI D#75 (xor:QI (debug_expr:QI D#69)
+        (debug_expr:QI D#70))) "verify.c":34:3 -1
+     (nil))
+(debug_insn 120 119 121 2 (var_location:QI D#80 (ior:QI (debug_expr:QI D#76)
+        (debug_expr:QI D#75))) -1
+     (nil))
+(debug_insn 121 120 122 2 (var_location:SI differentbits (zero_extend:SI (debug_expr:QI D#80))) "verify.c":34:3 -1
+     (nil))
+(debug_insn 122 121 123 2 (debug_marker) "verify.c":35:3 -1
+     (nil))
+(debug_insn 123 122 124 2 (var_location:QI D#73 (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+            (const_int 19 [0x13])) [0 MEM[(const unsigned char *)x_103(D) + 19B]+0 S1 A8])) "verify.c":35:3 -1
+     (nil))
+(debug_insn 124 123 125 2 (var_location:QI D#74 (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+            (const_int 19 [0x13])) [0 MEM[(const unsigned char *)y_104(D) + 19B]+0 S1 A8])) "verify.c":35:3 -1
+     (nil))
+(debug_insn 125 124 126 2 (var_location:QI D#79 (xor:QI (debug_expr:QI D#73)
+        (debug_expr:QI D#74))) "verify.c":35:3 -1
+     (nil))
+(debug_insn 126 125 127 2 (var_location:QI D#84 (ior:QI (debug_expr:QI D#80)
+        (debug_expr:QI D#79))) -1
+     (nil))
+(debug_insn 127 126 128 2 (var_location:SI differentbits (zero_extend:SI (debug_expr:QI D#84))) "verify.c":35:3 -1
+     (nil))
+(debug_insn 128 127 129 2 (debug_marker) "verify.c":36:3 -1
+     (nil))
+(debug_insn 129 128 130 2 (var_location:QI D#77 (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+            (const_int 20 [0x14])) [0 MEM[(const unsigned char *)x_103(D) + 20B]+0 S1 A8])) "verify.c":36:3 -1
+     (nil))
+(debug_insn 130 129 131 2 (var_location:QI D#78 (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+            (const_int 20 [0x14])) [0 MEM[(const unsigned char *)y_104(D) + 20B]+0 S1 A8])) "verify.c":36:3 -1
+     (nil))
+(debug_insn 131 130 132 2 (var_location:QI D#83 (xor:QI (debug_expr:QI D#77)
+        (debug_expr:QI D#78))) "verify.c":36:3 -1
+     (nil))
+(debug_insn 132 131 133 2 (var_location:QI D#88 (ior:QI (debug_expr:QI D#84)
+        (debug_expr:QI D#83))) -1
+     (nil))
+(debug_insn 133 132 134 2 (var_location:SI differentbits (zero_extend:SI (debug_expr:QI D#88))) "verify.c":36:3 -1
+     (nil))
+(debug_insn 134 133 135 2 (debug_marker) "verify.c":37:3 -1
+     (nil))
+(debug_insn 135 134 136 2 (var_location:QI D#81 (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+            (const_int 21 [0x15])) [0 MEM[(const unsigned char *)x_103(D) + 21B]+0 S1 A8])) "verify.c":37:3 -1
+     (nil))
+(debug_insn 136 135 137 2 (var_location:QI D#82 (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+            (const_int 21 [0x15])) [0 MEM[(const unsigned char *)y_104(D) + 21B]+0 S1 A8])) "verify.c":37:3 -1
+     (nil))
+(debug_insn 137 136 138 2 (var_location:QI D#87 (xor:QI (debug_expr:QI D#81)
+        (debug_expr:QI D#82))) "verify.c":37:3 -1
+     (nil))
+(debug_insn 138 137 139 2 (var_location:QI D#92 (ior:QI (debug_expr:QI D#88)
+        (debug_expr:QI D#87))) -1
+     (nil))
+(debug_insn 139 138 140 2 (var_location:SI differentbits (zero_extend:SI (debug_expr:QI D#92))) "verify.c":37:3 -1
+     (nil))
+(debug_insn 140 139 141 2 (debug_marker) "verify.c":38:3 -1
+     (nil))
+(debug_insn 141 140 142 2 (var_location:QI D#85 (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+            (const_int 22 [0x16])) [0 MEM[(const unsigned char *)x_103(D) + 22B]+0 S1 A8])) "verify.c":38:3 -1
+     (nil))
+(debug_insn 142 141 143 2 (var_location:QI D#86 (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+            (const_int 22 [0x16])) [0 MEM[(const unsigned char *)y_104(D) + 22B]+0 S1 A8])) "verify.c":38:3 -1
+     (nil))
+(debug_insn 143 142 144 2 (var_location:QI D#91 (xor:QI (debug_expr:QI D#85)
+        (debug_expr:QI D#86))) "verify.c":38:3 -1
+     (nil))
+(debug_insn 144 143 145 2 (var_location:QI D#96 (ior:QI (debug_expr:QI D#92)
+        (debug_expr:QI D#91))) -1
+     (nil))
+(debug_insn 145 144 146 2 (var_location:SI differentbits (zero_extend:SI (debug_expr:QI D#96))) "verify.c":38:3 -1
+     (nil))
+(debug_insn 146 145 147 2 (debug_marker) "verify.c":39:3 -1
+     (nil))
+(debug_insn 147 146 148 2 (var_location:QI D#89 (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+            (const_int 23 [0x17])) [0 MEM[(const unsigned char *)x_103(D) + 23B]+0 S1 A8])) "verify.c":39:3 -1
+     (nil))
+(debug_insn 148 147 149 2 (var_location:QI D#90 (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+            (const_int 23 [0x17])) [0 MEM[(const unsigned char *)y_104(D) + 23B]+0 S1 A8])) "verify.c":39:3 -1
+     (nil))
+(debug_insn 149 148 150 2 (var_location:QI D#95 (xor:QI (debug_expr:QI D#89)
+        (debug_expr:QI D#90))) "verify.c":39:3 -1
+     (nil))
+(debug_insn 150 149 151 2 (var_location:QI D#100 (ior:QI (debug_expr:QI D#96)
+        (debug_expr:QI D#95))) -1
+     (nil))
+(debug_insn 151 150 152 2 (var_location:SI differentbits (zero_extend:SI (debug_expr:QI D#100))) "verify.c":39:3 -1
+     (nil))
+(debug_insn 152 151 153 2 (debug_marker) "verify.c":40:3 -1
+     (nil))
+(debug_insn 153 152 154 2 (var_location:QI D#93 (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+            (const_int 24 [0x18])) [0 MEM[(const unsigned char *)x_103(D) + 24B]+0 S1 A8])) "verify.c":40:3 -1
+     (nil))
+(debug_insn 154 153 155 2 (var_location:QI D#94 (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+            (const_int 24 [0x18])) [0 MEM[(const unsigned char *)y_104(D) + 24B]+0 S1 A8])) "verify.c":40:3 -1
+     (nil))
+(debug_insn 155 154 156 2 (var_location:QI D#99 (xor:QI (debug_expr:QI D#93)
+        (debug_expr:QI D#94))) "verify.c":40:3 -1
+     (nil))
+(debug_insn 156 155 157 2 (var_location:SI differentbits (zero_extend:SI (ior:QI (debug_expr:QI D#100)
+            (debug_expr:QI D#99)))) "verify.c":40:3 -1
+     (nil))
+(debug_insn 157 156 158 2 (debug_marker) "verify.c":41:3 -1
+     (nil))
+(debug_insn 158 157 159 2 (var_location:QI D#97 (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+            (const_int 25 [0x19])) [0 MEM[(const unsigned char *)x_103(D) + 25B]+0 S1 A8])) "verify.c":41:3 -1
+     (nil))
+(debug_insn 159 158 160 2 (var_location:QI D#98 (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+            (const_int 25 [0x19])) [0 MEM[(const unsigned char *)y_104(D) + 25B]+0 S1 A8])) "verify.c":41:3 -1
+     (nil))
+(debug_insn 160 159 161 2 (var_location:QI D#104 (ior:QI (ior:QI (xor:QI (debug_expr:QI D#97)
+                (debug_expr:QI D#98))
+            (debug_expr:QI D#100))
+        (debug_expr:QI D#99))) -1
+     (nil))
+(debug_insn 161 160 162 2 (var_location:SI differentbits (zero_extend:SI (debug_expr:QI D#104))) "verify.c":41:3 -1
+     (nil))
+(debug_insn 162 161 163 2 (debug_marker) "verify.c":42:3 -1
+     (nil))
+(debug_insn 163 162 164 2 (var_location:QI D#103 (xor:QI (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                (const_int 26 [0x1a])) [0 MEM[(const unsigned char *)x_103(D) + 26B]+0 S1 A8])
+        (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                (const_int 26 [0x1a])) [0 MEM[(const unsigned char *)y_104(D) + 26B]+0 S1 A8]))) "verify.c":42:3 -1
+     (nil))
+(debug_insn 164 163 165 2 (var_location:SI differentbits (zero_extend:SI (ior:QI (debug_expr:QI D#104)
+            (debug_expr:QI D#103)))) "verify.c":42:3 -1
+     (nil))
+(debug_insn 165 164 166 2 (debug_marker) "verify.c":43:3 -1
+     (nil))
+(debug_insn 166 165 167 2 (var_location:QI D#101 (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+            (const_int 27 [0x1b])) [0 MEM[(const unsigned char *)x_103(D) + 27B]+0 S1 A8])) "verify.c":43:3 -1
+     (nil))
+(debug_insn 167 166 168 2 (var_location:QI D#102 (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+            (const_int 27 [0x1b])) [0 MEM[(const unsigned char *)y_104(D) + 27B]+0 S1 A8])) "verify.c":43:3 -1
+     (nil))
+(debug_insn 168 167 169 2 (var_location:SI differentbits (zero_extend:SI (ior:QI (ior:QI (xor:QI (debug_expr:QI D#101)
+                    (debug_expr:QI D#102))
+                (debug_expr:QI D#104))
+            (debug_expr:QI D#103)))) "verify.c":43:3 -1
+     (nil))
+(debug_insn 169 168 281 2 (debug_marker) "verify.c":44:3 -1
+     (nil))
+(debug_insn 281 169 282 2 (var_location:QI D#105 (xor:QI (debug_expr:QI D#101)
+        (debug_expr:QI D#102))) "verify.c":48:43 -1
+     (nil))
+(debug_insn 282 281 170 2 (var_location:QI D#106 (xor:QI (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                (const_int 28 [0x1c])) [0 MEM[(const unsigned char *)x_103(D) + 28B]+0 S1 A8])
+        (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                (const_int 28 [0x1c])) [0 MEM[(const unsigned char *)y_104(D) + 28B]+0 S1 A8]))) "verify.c":48:43 -1
+     (nil))
+(debug_insn 170 282 171 2 (var_location:SI differentbits (zero_extend:SI (ior:QI (ior:QI (ior:QI (debug_expr:QI D#105)
+                    (debug_expr:QI D#106))
+                (debug_expr:QI D#104))
+            (debug_expr:QI D#103)))) "verify.c":44:3 -1
+     (nil))
+(debug_insn 171 170 283 2 (debug_marker) "verify.c":45:3 -1
+     (nil))
+(debug_insn 283 171 284 2 (var_location:QI D#107 (ior:QI (xor:QI (debug_expr:QI D#101)
+            (debug_expr:QI D#102))
+        (xor:QI (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                    (const_int 28 [0x1c])) [0 MEM[(const unsigned char *)x_103(D) + 28B]+0 S1 A8])
+            (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                    (const_int 28 [0x1c])) [0 MEM[(const unsigned char *)y_104(D) + 28B]+0 S1 A8])))) "verify.c":48:43 -1
+     (nil))
+(debug_insn 284 283 172 2 (var_location:QI D#108 (xor:QI (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                (const_int 29 [0x1d])) [0 MEM[(const unsigned char *)x_103(D) + 29B]+0 S1 A8])
+        (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                (const_int 29 [0x1d])) [0 MEM[(const unsigned char *)y_104(D) + 29B]+0 S1 A8]))) "verify.c":48:43 -1
+     (nil))
+(debug_insn 172 284 173 2 (var_location:SI differentbits (zero_extend:SI (ior:QI (ior:QI (ior:QI (debug_expr:QI D#107)
+                    (debug_expr:QI D#108))
+                (debug_expr:QI D#104))
+            (debug_expr:QI D#103)))) "verify.c":45:3 -1
+     (nil))
+(debug_insn 173 172 287 2 (debug_marker) "verify.c":46:3 -1
+     (nil))
+(debug_insn 287 173 288 2 (var_location:DI D#111 (plus:DI (reg/v/f:DI 215 [ x ])
+        (const_int 28 [0x1c]))) "verify.c":48:43 -1
+     (nil))
+(debug_insn 288 287 285 2 (var_location:DI D#112 (plus:DI (reg/v/f:DI 216 [ y ])
+        (const_int 28 [0x1c]))) "verify.c":48:43 -1
+     (nil))
+(debug_insn 285 288 286 2 (var_location:QI D#109 (ior:QI (ior:QI (xor:QI (debug_expr:QI D#101)
+                (debug_expr:QI D#102))
+            (xor:QI (mem:QI (debug_expr:DI D#111) [0 MEM[(const unsigned char *)x_103(D) + 28B]+0 S1 A8])
+                (mem:QI (debug_expr:DI D#112) [0 MEM[(const unsigned char *)y_104(D) + 28B]+0 S1 A8])))
+        (xor:QI (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                    (const_int 29 [0x1d])) [0 MEM[(const unsigned char *)x_103(D) + 29B]+0 S1 A8])
+            (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                    (const_int 29 [0x1d])) [0 MEM[(const unsigned char *)y_104(D) + 29B]+0 S1 A8])))) "verify.c":48:43 -1
+     (nil))
+(debug_insn 286 285 174 2 (var_location:QI D#110 (xor:QI (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                (const_int 30 [0x1e])) [0 MEM[(const unsigned char *)x_103(D) + 30B]+0 S1 A8])
+        (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                (const_int 30 [0x1e])) [0 MEM[(const unsigned char *)y_104(D) + 30B]+0 S1 A8]))) "verify.c":48:43 -1
+     (nil))
+(debug_insn 174 286 175 2 (var_location:SI differentbits (zero_extend:SI (ior:QI (ior:QI (ior:QI (debug_expr:QI D#109)
+                    (debug_expr:QI D#110))
+                (debug_expr:QI D#104))
+            (debug_expr:QI D#103)))) "verify.c":46:3 -1
+     (nil))
+(debug_insn 175 174 291 2 (debug_marker) "verify.c":47:3 -1
+     (nil))
+(debug_insn 291 175 292 2 (var_location:QI D#115 (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+            (const_int 28 [0x1c])) [0 MEM[(const unsigned char *)x_103(D) + 28B]+0 S1 A8])) "verify.c":48:43 -1
+     (nil))
+(debug_insn 292 291 293 2 (var_location:QI D#116 (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+            (const_int 28 [0x1c])) [0 MEM[(const unsigned char *)y_104(D) + 28B]+0 S1 A8])) "verify.c":48:43 -1
+     (nil))
+(debug_insn 293 292 294 2 (var_location:DI D#117 (plus:DI (reg/v/f:DI 215 [ x ])
+        (const_int 29 [0x1d]))) "verify.c":48:43 -1
+     (nil))
+(debug_insn 294 293 289 2 (var_location:DI D#118 (plus:DI (reg/v/f:DI 216 [ y ])
+        (const_int 29 [0x1d]))) "verify.c":48:43 -1
+     (nil))
+(debug_insn 289 294 290 2 (var_location:QI D#113 (ior:QI (ior:QI (ior:QI (xor:QI (debug_expr:QI D#101)
+                    (debug_expr:QI D#102))
+                (xor:QI (debug_expr:QI D#115)
+                    (debug_expr:QI D#116)))
+            (xor:QI (mem:QI (debug_expr:DI D#117) [0 MEM[(const unsigned char *)x_103(D) + 29B]+0 S1 A8])
+                (mem:QI (debug_expr:DI D#118) [0 MEM[(const unsigned char *)y_104(D) + 29B]+0 S1 A8])))
+        (xor:QI (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                    (const_int 30 [0x1e])) [0 MEM[(const unsigned char *)x_103(D) + 30B]+0 S1 A8])
+            (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                    (const_int 30 [0x1e])) [0 MEM[(const unsigned char *)y_104(D) + 30B]+0 S1 A8])))) "verify.c":48:43 -1
+     (nil))
+(debug_insn 290 289 176 2 (var_location:QI D#114 (xor:QI (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                (const_int 31 [0x1f])) [0 MEM[(const unsigned char *)x_103(D) + 31B]+0 S1 A8])
+        (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                (const_int 31 [0x1f])) [0 MEM[(const unsigned char *)y_104(D) + 31B]+0 S1 A8]))) "verify.c":48:43 -1
+     (nil))
+(debug_insn 176 290 177 2 (var_location:SI differentbits (zero_extend:SI (ior:QI (ior:QI (ior:QI (debug_expr:QI D#113)
+                    (debug_expr:QI D#114))
+                (debug_expr:QI D#104))
+            (debug_expr:QI D#103)))) "verify.c":47:3 -1
+     (nil))
+(debug_insn 177 176 178 2 (debug_marker) "verify.c":48:3 -1
+     (nil))
+(insn 178 177 179 2 (set (reg:QI 219)
+        (mem:QI (reg/v/f:DI 215 [ x ]) [0 *x_103(D)+0 S1 A8])) "verify.c":16:3 -1
+     (nil))
+(insn 179 178 180 2 (parallel [
+            (set (reg:QI 218)
+                (xor:QI (reg:QI 219)
+                    (mem:QI (reg/v/f:DI 216 [ y ]) [0 *y_104(D)+0 S1 A8])))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":16:3 -1
+     (expr_list:REG_EQUAL (xor:QI (mem:QI (reg/v/f:DI 215 [ x ]) [0 *x_103(D)+0 S1 A8])
+            (mem:QI (reg/v/f:DI 216 [ y ]) [0 *y_104(D)+0 S1 A8]))
+        (nil)))
+(insn 180 179 181 2 (set (reg:QI 221)
+        (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                (const_int 1 [0x1])) [0 MEM[(const unsigned char *)x_103(D) + 1B]+0 S1 A8])) "verify.c":17:3 -1
+     (nil))
+(insn 181 180 182 2 (parallel [
+            (set (reg:QI 220)
+                (xor:QI (reg:QI 221)
+                    (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                            (const_int 1 [0x1])) [0 MEM[(const unsigned char *)y_104(D) + 1B]+0 S1 A8])))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":17:3 -1
+     (expr_list:REG_EQUAL (xor:QI (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                    (const_int 1 [0x1])) [0 MEM[(const unsigned char *)x_103(D) + 1B]+0 S1 A8])
+            (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                    (const_int 1 [0x1])) [0 MEM[(const unsigned char *)y_104(D) + 1B]+0 S1 A8]))
+        (nil)))
+(insn 182 181 183 2 (parallel [
+            (set (reg:QI 222)
+                (ior:QI (reg:QI 218)
+                    (reg:QI 220)))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":47:3 -1
+     (nil))
+(insn 183 182 184 2 (set (reg:QI 224)
+        (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                (const_int 2 [0x2])) [0 MEM[(const unsigned char *)x_103(D) + 2B]+0 S1 A8])) "verify.c":18:3 -1
+     (nil))
+(insn 184 183 185 2 (parallel [
+            (set (reg:QI 223)
+                (xor:QI (reg:QI 224)
+                    (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                            (const_int 2 [0x2])) [0 MEM[(const unsigned char *)y_104(D) + 2B]+0 S1 A8])))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":18:3 -1
+     (expr_list:REG_EQUAL (xor:QI (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                    (const_int 2 [0x2])) [0 MEM[(const unsigned char *)x_103(D) + 2B]+0 S1 A8])
+            (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                    (const_int 2 [0x2])) [0 MEM[(const unsigned char *)y_104(D) + 2B]+0 S1 A8]))
+        (nil)))
+(insn 185 184 186 2 (parallel [
+            (set (reg:QI 225)
+                (ior:QI (reg:QI 222)
+                    (reg:QI 223)))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":47:3 -1
+     (nil))
+(insn 186 185 187 2 (set (reg:QI 227)
+        (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                (const_int 3 [0x3])) [0 MEM[(const unsigned char *)x_103(D) + 3B]+0 S1 A8])) "verify.c":19:3 -1
+     (nil))
+(insn 187 186 188 2 (parallel [
+            (set (reg:QI 226)
+                (xor:QI (reg:QI 227)
+                    (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                            (const_int 3 [0x3])) [0 MEM[(const unsigned char *)y_104(D) + 3B]+0 S1 A8])))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":19:3 -1
+     (expr_list:REG_EQUAL (xor:QI (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                    (const_int 3 [0x3])) [0 MEM[(const unsigned char *)x_103(D) + 3B]+0 S1 A8])
+            (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                    (const_int 3 [0x3])) [0 MEM[(const unsigned char *)y_104(D) + 3B]+0 S1 A8]))
+        (nil)))
+(insn 188 187 189 2 (parallel [
+            (set (reg:QI 228)
+                (ior:QI (reg:QI 225)
+                    (reg:QI 226)))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":47:3 -1
+     (nil))
+(insn 189 188 190 2 (set (reg:QI 230)
+        (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                (const_int 4 [0x4])) [0 MEM[(const unsigned char *)x_103(D) + 4B]+0 S1 A8])) "verify.c":20:3 -1
+     (nil))
+(insn 190 189 191 2 (parallel [
+            (set (reg:QI 229)
+                (xor:QI (reg:QI 230)
+                    (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                            (const_int 4 [0x4])) [0 MEM[(const unsigned char *)y_104(D) + 4B]+0 S1 A8])))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":20:3 -1
+     (expr_list:REG_EQUAL (xor:QI (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                    (const_int 4 [0x4])) [0 MEM[(const unsigned char *)x_103(D) + 4B]+0 S1 A8])
+            (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                    (const_int 4 [0x4])) [0 MEM[(const unsigned char *)y_104(D) + 4B]+0 S1 A8]))
+        (nil)))
+(insn 191 190 192 2 (parallel [
+            (set (reg:QI 231)
+                (ior:QI (reg:QI 228)
+                    (reg:QI 229)))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":47:3 -1
+     (nil))
+(insn 192 191 193 2 (set (reg:QI 233)
+        (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                (const_int 5 [0x5])) [0 MEM[(const unsigned char *)x_103(D) + 5B]+0 S1 A8])) "verify.c":21:3 -1
+     (nil))
+(insn 193 192 194 2 (parallel [
+            (set (reg:QI 232)
+                (xor:QI (reg:QI 233)
+                    (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                            (const_int 5 [0x5])) [0 MEM[(const unsigned char *)y_104(D) + 5B]+0 S1 A8])))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":21:3 -1
+     (expr_list:REG_EQUAL (xor:QI (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                    (const_int 5 [0x5])) [0 MEM[(const unsigned char *)x_103(D) + 5B]+0 S1 A8])
+            (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                    (const_int 5 [0x5])) [0 MEM[(const unsigned char *)y_104(D) + 5B]+0 S1 A8]))
+        (nil)))
+(insn 194 193 195 2 (parallel [
+            (set (reg:QI 234)
+                (ior:QI (reg:QI 231)
+                    (reg:QI 232)))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":47:3 -1
+     (nil))
+(insn 195 194 196 2 (set (reg:QI 236)
+        (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                (const_int 6 [0x6])) [0 MEM[(const unsigned char *)x_103(D) + 6B]+0 S1 A8])) "verify.c":22:3 -1
+     (nil))
+(insn 196 195 197 2 (parallel [
+            (set (reg:QI 235)
+                (xor:QI (reg:QI 236)
+                    (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                            (const_int 6 [0x6])) [0 MEM[(const unsigned char *)y_104(D) + 6B]+0 S1 A8])))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":22:3 -1
+     (expr_list:REG_EQUAL (xor:QI (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                    (const_int 6 [0x6])) [0 MEM[(const unsigned char *)x_103(D) + 6B]+0 S1 A8])
+            (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                    (const_int 6 [0x6])) [0 MEM[(const unsigned char *)y_104(D) + 6B]+0 S1 A8]))
+        (nil)))
+(insn 197 196 198 2 (parallel [
+            (set (reg:QI 237)
+                (ior:QI (reg:QI 234)
+                    (reg:QI 235)))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":47:3 -1
+     (nil))
+(insn 198 197 199 2 (set (reg:QI 239)
+        (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                (const_int 7 [0x7])) [0 MEM[(const unsigned char *)x_103(D) + 7B]+0 S1 A8])) "verify.c":23:3 -1
+     (nil))
+(insn 199 198 200 2 (parallel [
+            (set (reg:QI 238)
+                (xor:QI (reg:QI 239)
+                    (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                            (const_int 7 [0x7])) [0 MEM[(const unsigned char *)y_104(D) + 7B]+0 S1 A8])))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":23:3 -1
+     (expr_list:REG_EQUAL (xor:QI (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                    (const_int 7 [0x7])) [0 MEM[(const unsigned char *)x_103(D) + 7B]+0 S1 A8])
+            (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                    (const_int 7 [0x7])) [0 MEM[(const unsigned char *)y_104(D) + 7B]+0 S1 A8]))
+        (nil)))
+(insn 200 199 201 2 (parallel [
+            (set (reg:QI 240)
+                (ior:QI (reg:QI 237)
+                    (reg:QI 238)))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":47:3 -1
+     (nil))
+(insn 201 200 202 2 (set (reg:QI 242)
+        (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                (const_int 8 [0x8])) [0 MEM[(const unsigned char *)x_103(D) + 8B]+0 S1 A8])) "verify.c":24:3 -1
+     (nil))
+(insn 202 201 203 2 (parallel [
+            (set (reg:QI 241)
+                (xor:QI (reg:QI 242)
+                    (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                            (const_int 8 [0x8])) [0 MEM[(const unsigned char *)y_104(D) + 8B]+0 S1 A8])))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":24:3 -1
+     (expr_list:REG_EQUAL (xor:QI (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                    (const_int 8 [0x8])) [0 MEM[(const unsigned char *)x_103(D) + 8B]+0 S1 A8])
+            (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                    (const_int 8 [0x8])) [0 MEM[(const unsigned char *)y_104(D) + 8B]+0 S1 A8]))
+        (nil)))
+(insn 203 202 204 2 (parallel [
+            (set (reg:QI 243)
+                (ior:QI (reg:QI 240)
+                    (reg:QI 241)))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":47:3 -1
+     (nil))
+(insn 204 203 205 2 (set (reg:QI 245)
+        (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                (const_int 9 [0x9])) [0 MEM[(const unsigned char *)x_103(D) + 9B]+0 S1 A8])) "verify.c":25:3 -1
+     (nil))
+(insn 205 204 206 2 (parallel [
+            (set (reg:QI 244)
+                (xor:QI (reg:QI 245)
+                    (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                            (const_int 9 [0x9])) [0 MEM[(const unsigned char *)y_104(D) + 9B]+0 S1 A8])))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":25:3 -1
+     (expr_list:REG_EQUAL (xor:QI (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                    (const_int 9 [0x9])) [0 MEM[(const unsigned char *)x_103(D) + 9B]+0 S1 A8])
+            (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                    (const_int 9 [0x9])) [0 MEM[(const unsigned char *)y_104(D) + 9B]+0 S1 A8]))
+        (nil)))
+(insn 206 205 207 2 (parallel [
+            (set (reg:QI 246)
+                (ior:QI (reg:QI 243)
+                    (reg:QI 244)))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":47:3 -1
+     (nil))
+(insn 207 206 208 2 (set (reg:QI 248)
+        (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                (const_int 10 [0xa])) [0 MEM[(const unsigned char *)x_103(D) + 10B]+0 S1 A8])) "verify.c":26:3 -1
+     (nil))
+(insn 208 207 209 2 (parallel [
+            (set (reg:QI 247)
+                (xor:QI (reg:QI 248)
+                    (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                            (const_int 10 [0xa])) [0 MEM[(const unsigned char *)y_104(D) + 10B]+0 S1 A8])))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":26:3 -1
+     (expr_list:REG_EQUAL (xor:QI (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                    (const_int 10 [0xa])) [0 MEM[(const unsigned char *)x_103(D) + 10B]+0 S1 A8])
+            (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                    (const_int 10 [0xa])) [0 MEM[(const unsigned char *)y_104(D) + 10B]+0 S1 A8]))
+        (nil)))
+(insn 209 208 210 2 (parallel [
+            (set (reg:QI 249)
+                (ior:QI (reg:QI 246)
+                    (reg:QI 247)))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":47:3 -1
+     (nil))
+(insn 210 209 211 2 (set (reg:QI 251)
+        (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                (const_int 11 [0xb])) [0 MEM[(const unsigned char *)x_103(D) + 11B]+0 S1 A8])) "verify.c":27:3 -1
+     (nil))
+(insn 211 210 212 2 (parallel [
+            (set (reg:QI 250)
+                (xor:QI (reg:QI 251)
+                    (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                            (const_int 11 [0xb])) [0 MEM[(const unsigned char *)y_104(D) + 11B]+0 S1 A8])))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":27:3 -1
+     (expr_list:REG_EQUAL (xor:QI (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                    (const_int 11 [0xb])) [0 MEM[(const unsigned char *)x_103(D) + 11B]+0 S1 A8])
+            (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                    (const_int 11 [0xb])) [0 MEM[(const unsigned char *)y_104(D) + 11B]+0 S1 A8]))
+        (nil)))
+(insn 212 211 213 2 (parallel [
+            (set (reg:QI 252)
+                (ior:QI (reg:QI 249)
+                    (reg:QI 250)))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":47:3 -1
+     (nil))
+(insn 213 212 214 2 (set (reg:QI 254)
+        (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                (const_int 12 [0xc])) [0 MEM[(const unsigned char *)x_103(D) + 12B]+0 S1 A8])) "verify.c":28:3 -1
+     (nil))
+(insn 214 213 215 2 (parallel [
+            (set (reg:QI 253)
+                (xor:QI (reg:QI 254)
+                    (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                            (const_int 12 [0xc])) [0 MEM[(const unsigned char *)y_104(D) + 12B]+0 S1 A8])))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":28:3 -1
+     (expr_list:REG_EQUAL (xor:QI (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                    (const_int 12 [0xc])) [0 MEM[(const unsigned char *)x_103(D) + 12B]+0 S1 A8])
+            (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                    (const_int 12 [0xc])) [0 MEM[(const unsigned char *)y_104(D) + 12B]+0 S1 A8]))
+        (nil)))
+(insn 215 214 216 2 (parallel [
+            (set (reg:QI 255)
+                (ior:QI (reg:QI 252)
+                    (reg:QI 253)))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":47:3 -1
+     (nil))
+(insn 216 215 217 2 (set (reg:QI 257)
+        (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                (const_int 13 [0xd])) [0 MEM[(const unsigned char *)x_103(D) + 13B]+0 S1 A8])) "verify.c":29:3 -1
+     (nil))
+(insn 217 216 218 2 (parallel [
+            (set (reg:QI 256)
+                (xor:QI (reg:QI 257)
+                    (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                            (const_int 13 [0xd])) [0 MEM[(const unsigned char *)y_104(D) + 13B]+0 S1 A8])))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":29:3 -1
+     (expr_list:REG_EQUAL (xor:QI (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                    (const_int 13 [0xd])) [0 MEM[(const unsigned char *)x_103(D) + 13B]+0 S1 A8])
+            (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                    (const_int 13 [0xd])) [0 MEM[(const unsigned char *)y_104(D) + 13B]+0 S1 A8]))
+        (nil)))
+(insn 218 217 219 2 (parallel [
+            (set (reg:QI 258)
+                (ior:QI (reg:QI 255)
+                    (reg:QI 256)))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":47:3 -1
+     (nil))
+(insn 219 218 220 2 (set (reg:QI 260)
+        (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                (const_int 14 [0xe])) [0 MEM[(const unsigned char *)x_103(D) + 14B]+0 S1 A8])) "verify.c":30:3 -1
+     (nil))
+(insn 220 219 221 2 (parallel [
+            (set (reg:QI 259)
+                (xor:QI (reg:QI 260)
+                    (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                            (const_int 14 [0xe])) [0 MEM[(const unsigned char *)y_104(D) + 14B]+0 S1 A8])))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":30:3 -1
+     (expr_list:REG_EQUAL (xor:QI (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                    (const_int 14 [0xe])) [0 MEM[(const unsigned char *)x_103(D) + 14B]+0 S1 A8])
+            (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                    (const_int 14 [0xe])) [0 MEM[(const unsigned char *)y_104(D) + 14B]+0 S1 A8]))
+        (nil)))
+(insn 221 220 222 2 (parallel [
+            (set (reg:QI 261)
+                (ior:QI (reg:QI 258)
+                    (reg:QI 259)))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":47:3 -1
+     (nil))
+(insn 222 221 223 2 (set (reg:QI 263)
+        (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                (const_int 15 [0xf])) [0 MEM[(const unsigned char *)x_103(D) + 15B]+0 S1 A8])) "verify.c":31:3 -1
+     (nil))
+(insn 223 222 224 2 (parallel [
+            (set (reg:QI 262)
+                (xor:QI (reg:QI 263)
+                    (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                            (const_int 15 [0xf])) [0 MEM[(const unsigned char *)y_104(D) + 15B]+0 S1 A8])))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":31:3 -1
+     (expr_list:REG_EQUAL (xor:QI (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                    (const_int 15 [0xf])) [0 MEM[(const unsigned char *)x_103(D) + 15B]+0 S1 A8])
+            (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                    (const_int 15 [0xf])) [0 MEM[(const unsigned char *)y_104(D) + 15B]+0 S1 A8]))
+        (nil)))
+(insn 224 223 225 2 (parallel [
+            (set (reg:QI 264)
+                (ior:QI (reg:QI 261)
+                    (reg:QI 262)))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":47:3 -1
+     (nil))
+(insn 225 224 226 2 (set (reg:QI 266)
+        (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                (const_int 16 [0x10])) [0 MEM[(const unsigned char *)x_103(D) + 16B]+0 S1 A8])) "verify.c":32:3 -1
+     (nil))
+(insn 226 225 227 2 (parallel [
+            (set (reg:QI 265)
+                (xor:QI (reg:QI 266)
+                    (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                            (const_int 16 [0x10])) [0 MEM[(const unsigned char *)y_104(D) + 16B]+0 S1 A8])))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":32:3 -1
+     (expr_list:REG_EQUAL (xor:QI (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                    (const_int 16 [0x10])) [0 MEM[(const unsigned char *)x_103(D) + 16B]+0 S1 A8])
+            (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                    (const_int 16 [0x10])) [0 MEM[(const unsigned char *)y_104(D) + 16B]+0 S1 A8]))
+        (nil)))
+(insn 227 226 228 2 (parallel [
+            (set (reg:QI 267)
+                (ior:QI (reg:QI 264)
+                    (reg:QI 265)))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":47:3 -1
+     (nil))
+(insn 228 227 229 2 (set (reg:QI 269)
+        (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                (const_int 17 [0x11])) [0 MEM[(const unsigned char *)x_103(D) + 17B]+0 S1 A8])) "verify.c":33:3 -1
+     (nil))
+(insn 229 228 230 2 (parallel [
+            (set (reg:QI 268)
+                (xor:QI (reg:QI 269)
+                    (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                            (const_int 17 [0x11])) [0 MEM[(const unsigned char *)y_104(D) + 17B]+0 S1 A8])))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":33:3 -1
+     (expr_list:REG_EQUAL (xor:QI (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                    (const_int 17 [0x11])) [0 MEM[(const unsigned char *)x_103(D) + 17B]+0 S1 A8])
+            (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                    (const_int 17 [0x11])) [0 MEM[(const unsigned char *)y_104(D) + 17B]+0 S1 A8]))
+        (nil)))
+(insn 230 229 231 2 (parallel [
+            (set (reg:QI 270)
+                (ior:QI (reg:QI 267)
+                    (reg:QI 268)))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":47:3 -1
+     (nil))
+(insn 231 230 232 2 (set (reg:QI 272)
+        (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                (const_int 18 [0x12])) [0 MEM[(const unsigned char *)x_103(D) + 18B]+0 S1 A8])) "verify.c":34:3 -1
+     (nil))
+(insn 232 231 233 2 (parallel [
+            (set (reg:QI 271)
+                (xor:QI (reg:QI 272)
+                    (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                            (const_int 18 [0x12])) [0 MEM[(const unsigned char *)y_104(D) + 18B]+0 S1 A8])))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":34:3 -1
+     (expr_list:REG_EQUAL (xor:QI (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                    (const_int 18 [0x12])) [0 MEM[(const unsigned char *)x_103(D) + 18B]+0 S1 A8])
+            (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                    (const_int 18 [0x12])) [0 MEM[(const unsigned char *)y_104(D) + 18B]+0 S1 A8]))
+        (nil)))
+(insn 233 232 234 2 (parallel [
+            (set (reg:QI 273)
+                (ior:QI (reg:QI 270)
+                    (reg:QI 271)))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":47:3 -1
+     (nil))
+(insn 234 233 235 2 (set (reg:QI 275)
+        (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                (const_int 19 [0x13])) [0 MEM[(const unsigned char *)x_103(D) + 19B]+0 S1 A8])) "verify.c":35:3 -1
+     (nil))
+(insn 235 234 236 2 (parallel [
+            (set (reg:QI 274)
+                (xor:QI (reg:QI 275)
+                    (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                            (const_int 19 [0x13])) [0 MEM[(const unsigned char *)y_104(D) + 19B]+0 S1 A8])))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":35:3 -1
+     (expr_list:REG_EQUAL (xor:QI (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                    (const_int 19 [0x13])) [0 MEM[(const unsigned char *)x_103(D) + 19B]+0 S1 A8])
+            (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                    (const_int 19 [0x13])) [0 MEM[(const unsigned char *)y_104(D) + 19B]+0 S1 A8]))
+        (nil)))
+(insn 236 235 237 2 (parallel [
+            (set (reg:QI 276)
+                (ior:QI (reg:QI 273)
+                    (reg:QI 274)))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":47:3 -1
+     (nil))
+(insn 237 236 238 2 (set (reg:QI 278)
+        (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                (const_int 20 [0x14])) [0 MEM[(const unsigned char *)x_103(D) + 20B]+0 S1 A8])) "verify.c":36:3 -1
+     (nil))
+(insn 238 237 239 2 (parallel [
+            (set (reg:QI 277)
+                (xor:QI (reg:QI 278)
+                    (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                            (const_int 20 [0x14])) [0 MEM[(const unsigned char *)y_104(D) + 20B]+0 S1 A8])))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":36:3 -1
+     (expr_list:REG_EQUAL (xor:QI (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                    (const_int 20 [0x14])) [0 MEM[(const unsigned char *)x_103(D) + 20B]+0 S1 A8])
+            (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                    (const_int 20 [0x14])) [0 MEM[(const unsigned char *)y_104(D) + 20B]+0 S1 A8]))
+        (nil)))
+(insn 239 238 240 2 (parallel [
+            (set (reg:QI 279)
+                (ior:QI (reg:QI 276)
+                    (reg:QI 277)))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":47:3 -1
+     (nil))
+(insn 240 239 241 2 (set (reg:QI 281)
+        (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                (const_int 21 [0x15])) [0 MEM[(const unsigned char *)x_103(D) + 21B]+0 S1 A8])) "verify.c":37:3 -1
+     (nil))
+(insn 241 240 242 2 (parallel [
+            (set (reg:QI 280)
+                (xor:QI (reg:QI 281)
+                    (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                            (const_int 21 [0x15])) [0 MEM[(const unsigned char *)y_104(D) + 21B]+0 S1 A8])))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":37:3 -1
+     (expr_list:REG_EQUAL (xor:QI (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                    (const_int 21 [0x15])) [0 MEM[(const unsigned char *)x_103(D) + 21B]+0 S1 A8])
+            (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                    (const_int 21 [0x15])) [0 MEM[(const unsigned char *)y_104(D) + 21B]+0 S1 A8]))
+        (nil)))
+(insn 242 241 243 2 (parallel [
+            (set (reg:QI 282)
+                (ior:QI (reg:QI 279)
+                    (reg:QI 280)))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":47:3 -1
+     (nil))
+(insn 243 242 244 2 (set (reg:QI 284)
+        (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                (const_int 22 [0x16])) [0 MEM[(const unsigned char *)x_103(D) + 22B]+0 S1 A8])) "verify.c":38:3 -1
+     (nil))
+(insn 244 243 245 2 (parallel [
+            (set (reg:QI 283)
+                (xor:QI (reg:QI 284)
+                    (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                            (const_int 22 [0x16])) [0 MEM[(const unsigned char *)y_104(D) + 22B]+0 S1 A8])))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":38:3 -1
+     (expr_list:REG_EQUAL (xor:QI (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                    (const_int 22 [0x16])) [0 MEM[(const unsigned char *)x_103(D) + 22B]+0 S1 A8])
+            (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                    (const_int 22 [0x16])) [0 MEM[(const unsigned char *)y_104(D) + 22B]+0 S1 A8]))
+        (nil)))
+(insn 245 244 246 2 (parallel [
+            (set (reg:QI 285)
+                (ior:QI (reg:QI 282)
+                    (reg:QI 283)))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":47:3 -1
+     (nil))
+(insn 246 245 247 2 (set (reg:QI 287)
+        (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                (const_int 23 [0x17])) [0 MEM[(const unsigned char *)x_103(D) + 23B]+0 S1 A8])) "verify.c":39:3 -1
+     (nil))
+(insn 247 246 248 2 (parallel [
+            (set (reg:QI 286)
+                (xor:QI (reg:QI 287)
+                    (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                            (const_int 23 [0x17])) [0 MEM[(const unsigned char *)y_104(D) + 23B]+0 S1 A8])))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":39:3 -1
+     (expr_list:REG_EQUAL (xor:QI (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                    (const_int 23 [0x17])) [0 MEM[(const unsigned char *)x_103(D) + 23B]+0 S1 A8])
+            (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                    (const_int 23 [0x17])) [0 MEM[(const unsigned char *)y_104(D) + 23B]+0 S1 A8]))
+        (nil)))
+(insn 248 247 249 2 (parallel [
+            (set (reg:QI 288)
+                (ior:QI (reg:QI 285)
+                    (reg:QI 286)))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":47:3 -1
+     (nil))
+(insn 249 248 250 2 (set (reg:QI 290)
+        (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                (const_int 24 [0x18])) [0 MEM[(const unsigned char *)x_103(D) + 24B]+0 S1 A8])) "verify.c":40:3 -1
+     (nil))
+(insn 250 249 251 2 (parallel [
+            (set (reg:QI 289)
+                (xor:QI (reg:QI 290)
+                    (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                            (const_int 24 [0x18])) [0 MEM[(const unsigned char *)y_104(D) + 24B]+0 S1 A8])))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":40:3 -1
+     (expr_list:REG_EQUAL (xor:QI (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                    (const_int 24 [0x18])) [0 MEM[(const unsigned char *)x_103(D) + 24B]+0 S1 A8])
+            (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                    (const_int 24 [0x18])) [0 MEM[(const unsigned char *)y_104(D) + 24B]+0 S1 A8]))
+        (nil)))
+(insn 251 250 252 2 (parallel [
+            (set (reg:QI 291)
+                (ior:QI (reg:QI 288)
+                    (reg:QI 289)))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":47:3 -1
+     (nil))
+(insn 252 251 253 2 (set (reg:QI 293)
+        (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                (const_int 25 [0x19])) [0 MEM[(const unsigned char *)x_103(D) + 25B]+0 S1 A8])) "verify.c":41:3 -1
+     (nil))
+(insn 253 252 254 2 (parallel [
+            (set (reg:QI 292)
+                (xor:QI (reg:QI 293)
+                    (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                            (const_int 25 [0x19])) [0 MEM[(const unsigned char *)y_104(D) + 25B]+0 S1 A8])))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":41:3 -1
+     (expr_list:REG_EQUAL (xor:QI (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                    (const_int 25 [0x19])) [0 MEM[(const unsigned char *)x_103(D) + 25B]+0 S1 A8])
+            (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                    (const_int 25 [0x19])) [0 MEM[(const unsigned char *)y_104(D) + 25B]+0 S1 A8]))
+        (nil)))
+(insn 254 253 255 2 (parallel [
+            (set (reg:QI 294)
+                (ior:QI (reg:QI 291)
+                    (reg:QI 292)))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":47:3 -1
+     (nil))
+(insn 255 254 256 2 (set (reg:QI 296)
+        (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                (const_int 26 [0x1a])) [0 MEM[(const unsigned char *)x_103(D) + 26B]+0 S1 A8])) "verify.c":42:3 -1
+     (nil))
+(insn 256 255 257 2 (parallel [
+            (set (reg:QI 295)
+                (xor:QI (reg:QI 296)
+                    (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                            (const_int 26 [0x1a])) [0 MEM[(const unsigned char *)y_104(D) + 26B]+0 S1 A8])))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":42:3 -1
+     (expr_list:REG_EQUAL (xor:QI (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                    (const_int 26 [0x1a])) [0 MEM[(const unsigned char *)x_103(D) + 26B]+0 S1 A8])
+            (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                    (const_int 26 [0x1a])) [0 MEM[(const unsigned char *)y_104(D) + 26B]+0 S1 A8]))
+        (nil)))
+(insn 257 256 258 2 (parallel [
+            (set (reg:QI 297)
+                (ior:QI (reg:QI 294)
+                    (reg:QI 295)))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":47:3 -1
+     (nil))
+(insn 258 257 259 2 (set (reg:QI 299)
+        (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                (const_int 27 [0x1b])) [0 MEM[(const unsigned char *)x_103(D) + 27B]+0 S1 A8])) "verify.c":43:3 -1
+     (nil))
+(insn 259 258 260 2 (parallel [
+            (set (reg:QI 298)
+                (xor:QI (reg:QI 299)
+                    (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                            (const_int 27 [0x1b])) [0 MEM[(const unsigned char *)y_104(D) + 27B]+0 S1 A8])))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":43:3 -1
+     (expr_list:REG_EQUAL (xor:QI (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                    (const_int 27 [0x1b])) [0 MEM[(const unsigned char *)x_103(D) + 27B]+0 S1 A8])
+            (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                    (const_int 27 [0x1b])) [0 MEM[(const unsigned char *)y_104(D) + 27B]+0 S1 A8]))
+        (nil)))
+(insn 260 259 261 2 (parallel [
+            (set (reg:QI 300)
+                (ior:QI (reg:QI 297)
+                    (reg:QI 298)))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":47:3 -1
+     (nil))
+(insn 261 260 262 2 (set (reg:QI 302)
+        (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                (const_int 28 [0x1c])) [0 MEM[(const unsigned char *)x_103(D) + 28B]+0 S1 A8])) "verify.c":44:3 -1
+     (nil))
+(insn 262 261 263 2 (parallel [
+            (set (reg:QI 301)
+                (xor:QI (reg:QI 302)
+                    (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                            (const_int 28 [0x1c])) [0 MEM[(const unsigned char *)y_104(D) + 28B]+0 S1 A8])))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":44:3 -1
+     (expr_list:REG_EQUAL (xor:QI (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                    (const_int 28 [0x1c])) [0 MEM[(const unsigned char *)x_103(D) + 28B]+0 S1 A8])
+            (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                    (const_int 28 [0x1c])) [0 MEM[(const unsigned char *)y_104(D) + 28B]+0 S1 A8]))
+        (nil)))
+(insn 263 262 264 2 (parallel [
+            (set (reg:QI 303)
+                (ior:QI (reg:QI 300)
+                    (reg:QI 301)))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":47:3 -1
+     (nil))
+(insn 264 263 265 2 (set (reg:QI 305)
+        (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                (const_int 29 [0x1d])) [0 MEM[(const unsigned char *)x_103(D) + 29B]+0 S1 A8])) "verify.c":45:3 -1
+     (nil))
+(insn 265 264 266 2 (parallel [
+            (set (reg:QI 304)
+                (xor:QI (reg:QI 305)
+                    (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                            (const_int 29 [0x1d])) [0 MEM[(const unsigned char *)y_104(D) + 29B]+0 S1 A8])))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":45:3 -1
+     (expr_list:REG_EQUAL (xor:QI (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                    (const_int 29 [0x1d])) [0 MEM[(const unsigned char *)x_103(D) + 29B]+0 S1 A8])
+            (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                    (const_int 29 [0x1d])) [0 MEM[(const unsigned char *)y_104(D) + 29B]+0 S1 A8]))
+        (nil)))
+(insn 266 265 267 2 (parallel [
+            (set (reg:QI 306)
+                (ior:QI (reg:QI 303)
+                    (reg:QI 304)))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":47:3 -1
+     (nil))
+(insn 267 266 268 2 (set (reg:QI 308)
+        (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                (const_int 30 [0x1e])) [0 MEM[(const unsigned char *)x_103(D) + 30B]+0 S1 A8])) "verify.c":46:3 -1
+     (nil))
+(insn 268 267 269 2 (parallel [
+            (set (reg:QI 307)
+                (xor:QI (reg:QI 308)
+                    (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                            (const_int 30 [0x1e])) [0 MEM[(const unsigned char *)y_104(D) + 30B]+0 S1 A8])))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":46:3 -1
+     (expr_list:REG_EQUAL (xor:QI (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                    (const_int 30 [0x1e])) [0 MEM[(const unsigned char *)x_103(D) + 30B]+0 S1 A8])
+            (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                    (const_int 30 [0x1e])) [0 MEM[(const unsigned char *)y_104(D) + 30B]+0 S1 A8]))
+        (nil)))
+(insn 269 268 270 2 (parallel [
+            (set (reg:QI 309)
+                (ior:QI (reg:QI 306)
+                    (reg:QI 307)))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":47:3 -1
+     (nil))
+(insn 270 269 271 2 (set (reg:QI 311)
+        (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                (const_int 31 [0x1f])) [0 MEM[(const unsigned char *)x_103(D) + 31B]+0 S1 A8])) "verify.c":47:3 -1
+     (nil))
+(insn 271 270 272 2 (parallel [
+            (set (reg:QI 310)
+                (xor:QI (reg:QI 311)
+                    (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                            (const_int 31 [0x1f])) [0 MEM[(const unsigned char *)y_104(D) + 31B]+0 S1 A8])))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":47:3 -1
+     (expr_list:REG_EQUAL (xor:QI (mem:QI (plus:DI (reg/v/f:DI 215 [ x ])
+                    (const_int 31 [0x1f])) [0 MEM[(const unsigned char *)x_103(D) + 31B]+0 S1 A8])
+            (mem:QI (plus:DI (reg/v/f:DI 216 [ y ])
+                    (const_int 31 [0x1f])) [0 MEM[(const unsigned char *)y_104(D) + 31B]+0 S1 A8]))
+        (nil)))
+(insn 272 271 273 2 (parallel [
+            (set (reg:QI 312)
+                (ior:QI (reg:QI 309)
+                    (reg:QI 310)))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":47:3 -1
+     (nil))
+(insn 273 272 274 2 (set (reg:SI 313 [ differentbits ])
+        (zero_extend:SI (reg:QI 312))) "verify.c":47:3 -1
+     (nil))
+(insn 274 273 275 2 (parallel [
+            (set (reg:SI 314)
+                (plus:SI (reg:SI 313 [ differentbits ])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":48:31 -1
+     (nil))
+(insn 275 274 276 2 (parallel [
+            (set (reg:SI 315)
+                (lshiftrt:SI (reg:SI 314)
+                    (const_int 8 [0x8])))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":48:36 -1
+     (nil))
+(insn 276 275 277 2 (parallel [
+            (set (reg:SI 316)
+                (and:SI (reg:SI 315)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":48:13 -1
+     (nil))
+(insn 277 276 278 2 (parallel [
+            (set (reg:SI 217)
+                (plus:SI (reg:SI 316)
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "verify.c":48:43 -1
+     (nil))
+(insn 278 277 296 2 (set (reg:SI 214 [ <retval> ])
+        (reg:SI 217)) "verify.c":48:43 -1
+     (nil))
+(insn 296 278 297 2 (set (reg/i:SI 0 ax)
+        (reg:SI 214 [ <retval> ])) "verify.c":49:1 -1
+     (nil))
+(insn 297 296 0 2 (use (reg/i:SI 0 ax)) "verify.c":49:1 -1
+     (nil))

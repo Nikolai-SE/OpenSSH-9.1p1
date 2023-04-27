@@ -1,0 +1,2569 @@
+
+;; Function input_kex_dh_gex_request (input_kex_dh_gex_request, funcdef_no=371, decl_uid=17416, cgraph_uid=372, symbol_order=371)
+
+Partition 4: size 8 align 8
+	dh_g
+Partition 3: size 8 align 8
+	dh_p
+Partition 2: size 4 align 4
+	nbits
+Partition 1: size 4 align 4
+	max
+Partition 0: size 4 align 4
+	min
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+
+;; Generating RTL for gimple basic block 11
+
+;; Generating RTL for gimple basic block 12
+
+;; Generating RTL for gimple basic block 13
+
+;; Generating RTL for gimple basic block 14
+
+;; Generating RTL for gimple basic block 15
+
+;; Generating RTL for gimple basic block 16
+
+;; Generating RTL for gimple basic block 17
+
+;; Generating RTL for gimple basic block 18
+Edge 6->18 redirected to 21
+Predictions for insn 265 bb 20
+  first match heuristics: 99.96%  exec 1073741824 (estimated locally) hit 2147483640 (estimated locally) (200.0%)
+  combined heuristics: 99.96%  exec 1073741824 (estimated locally) hit 2147483640 (estimated locally) (200.0%)
+  noreturn call heuristics: 99.96%  exec 1073741824 (estimated locally) hit 2147483640 (estimated locally) (200.0%)
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Edge 2->21 redirected to 22
+Edge 4->21 redirected to 22
+Edge 5->21 redirected to 22
+Edge 6->21 redirected to 22
+Redirecting jump 164 from 21 to 22.
+Edge 14->21 redirected to 22
+Edge 15->21 redirected to 22
+Edge 16->21 redirected to 22
+Edge 17->21 redirected to 22
+Edge 18->21 redirected to 22
+Redirecting jump 272 from 21 to 22.
+Merging block 21 into block 20...
+Merged blocks 20 and 21.
+Merged 20 and 21 without moving.
+Removing jump 260.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 10 NOTE_INSN_DELETED)
+(note 10 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 10 3 2 (set (reg/v:SI 109 [ type ])
+        (reg:SI 5 di [ type ])) "kexgexs.c":73:1 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v:SI 110 [ seq ])
+        (reg:SI 4 si [ seq ])) "kexgexs.c":73:1 -1
+     (nil))
+(insn 4 3 5 2 (set (reg/v/f:DI 111 [ ssh ])
+        (reg:DI 1 dx [ ssh ])) "kexgexs.c":73:1 -1
+     (nil))
+(note 5 4 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 5 7 2 (set (reg/f:DI 112)
+        (const_int 40 [0x28])) "kexgexs.c":73:1 -1
+     (nil))
+(insn 7 6 12 2 (parallel [
+            (set (mem/v/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                        (const_int -8 [0xfffffffffffffff8])) [24 D.17535+0 S8 A64])
+                (unspec:DI [
+                        (mem/v/f:DI (reg/f:DI 112) [0 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_SET))
+            (set (scratch:DI)
+                (const_int 0 [0]))
+            (clobber (reg:CC 17 flags))
+        ]) "kexgexs.c":73:1 -1
+     (nil))
+(debug_insn 12 7 13 2 (debug_marker) "kexgexs.c":74:2 -1
+     (nil))
+(insn 13 12 14 2 (set (reg/v/f:DI 99 [ kex ])
+        (mem/f:DI (plus:DI (reg/v/f:DI 111 [ ssh ])
+                (const_int 8 [0x8])) [16 ssh_31(D)->kex+0 S8 A64])) "kexgexs.c":74:14 -1
+     (nil))
+(debug_insn 14 13 15 2 (var_location:DI kex (reg/v/f:DI 99 [ kex ])) "kexgexs.c":74:14 -1
+     (nil))
+(debug_insn 15 14 16 2 (debug_marker) "kexgexs.c":75:2 -1
+     (nil))
+(debug_insn 16 15 17 2 (debug_marker) "kexgexs.c":76:2 -1
+     (nil))
+(insn 17 16 18 2 (set (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -36 [0xffffffffffffffdc])) [1 min+0 S4 A32])
+        (const_int 0 [0])) "kexgexs.c":76:8 -1
+     (nil))
+(insn 18 17 19 2 (set (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [1 max+0 S4 A64])
+        (const_int 0 [0])) "kexgexs.c":76:17 -1
+     (nil))
+(insn 19 18 20 2 (set (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [1 nbits+0 S4 A32])
+        (const_int 0 [0])) "kexgexs.c":76:26 -1
+     (nil))
+(debug_insn 20 19 21 2 (debug_marker) "kexgexs.c":77:2 -1
+     (nil))
+(debug_insn 21 20 22 2 (debug_marker) "kexgexs.c":79:2 -1
+     (nil))
+(insn 22 21 23 2 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "kexgexs.c":79:2 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 23 22 24 2 (set (reg/f:DI 113)
+        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7f6b459ad2d0 *.LC1>)) "kexgexs.c":79:2 -1
+     (nil))
+(insn 24 23 25 2 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [4  S8 A64])
+        (reg/f:DI 113)) "kexgexs.c":79:2 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 25 24 26 2 (set (reg:DI 37 r9)
+        (const_int 0 [0])) "kexgexs.c":79:2 -1
+     (nil))
+(insn 26 25 27 2 (set (reg:SI 36 r8)
+        (const_int 5 [0x5])) "kexgexs.c":79:2 -1
+     (nil))
+(insn 27 26 28 2 (set (reg:SI 2 cx)
+        (const_int 0 [0])) "kexgexs.c":79:2 -1
+     (nil))
+(insn 28 27 29 2 (set (reg:SI 1 dx)
+        (const_int 79 [0x4f])) "kexgexs.c":79:2 -1
+     (nil))
+(insn 29 28 30 2 (set (reg:DI 4 si)
+        (symbol_ref:DI ("__func__.1") [flags 0x2]  <var_decl 0x7f6b4595b870 __func__>)) "kexgexs.c":79:2 -1
+     (nil))
+(insn 30 29 31 2 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f6b459ad240 *.LC0>)) "kexgexs.c":79:2 -1
+     (nil))
+(insn 31 30 32 2 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "kexgexs.c":79:2 -1
+     (nil))
+(call_insn 32 31 33 2 (call (mem:QI (symbol_ref:DI ("sshlog") [flags 0x41]  <function_decl 0x7f6b458db100 sshlog>) [0 sshlog S1 A8])
+        (const_int 16 [0x10])) "kexgexs.c":79:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshlog") [flags 0x41]  <function_decl 0x7f6b458db100 sshlog>)
+        (nil))
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (expr_list:SI (use (reg:SI 1 dx))
+                    (expr_list:SI (use (reg:SI 2 cx))
+                        (expr_list:SI (use (reg:SI 36 r8))
+                            (expr_list:DI (use (reg:DI 37 r9))
+                                (nil)))))))))
+(debug_insn 33 32 34 2 (debug_marker) "kexgexs.c":80:2 -1
+     (nil))
+(insn 34 33 35 2 (set (reg:DI 114)
+        (mem/u/c:DI (const:DI (unspec:DI [
+                        (symbol_ref:DI ("kex_protocol_error") [flags 0x41]  <function_decl 0x7f6b458c8900 kex_protocol_error>)
+                    ] UNSPEC_GOTPCREL)) [29  S8 A8])) "kexgexs.c":80:2 -1
+     (nil))
+(insn 35 34 36 2 (set (reg:DI 1 dx)
+        (reg:DI 114)) "kexgexs.c":80:2 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("kex_protocol_error") [flags 0x41]  <function_decl 0x7f6b458c8900 kex_protocol_error>)
+        (nil)))
+(insn 36 35 37 2 (set (reg:SI 4 si)
+        (const_int 34 [0x22])) "kexgexs.c":80:2 -1
+     (nil))
+(insn 37 36 38 2 (set (reg:DI 5 di)
+        (reg/v/f:DI 111 [ ssh ])) "kexgexs.c":80:2 -1
+     (nil))
+(call_insn 38 37 39 2 (call (mem:QI (symbol_ref:DI ("ssh_dispatch_set") [flags 0x41]  <function_decl 0x7f6b458ee700 ssh_dispatch_set>) [0 ssh_dispatch_set S1 A8])
+        (const_int 0 [0])) "kexgexs.c":80:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("ssh_dispatch_set") [flags 0x41]  <function_decl 0x7f6b458ee700 ssh_dispatch_set>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(debug_insn 39 38 40 2 (debug_marker) "kexgexs.c":82:2 -1
+     (nil))
+(insn 40 39 41 2 (parallel [
+            (set (reg:DI 115)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -36 [0xffffffffffffffdc])))
+            (clobber (reg:CC 17 flags))
+        ]) "kexgexs.c":82:11 -1
+     (nil))
+(insn 41 40 42 2 (set (reg:DI 4 si)
+        (reg:DI 115)) "kexgexs.c":82:11 -1
+     (nil))
+(insn 42 41 43 2 (set (reg:DI 5 di)
+        (reg/v/f:DI 111 [ ssh ])) "kexgexs.c":82:11 -1
+     (nil))
+(call_insn 43 42 44 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshpkt_get_u32") [flags 0x41]  <function_decl 0x7f6b4591ac00 sshpkt_get_u32>) [0 sshpkt_get_u32 S1 A8])
+            (const_int 0 [0]))) "kexgexs.c":82:11 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshpkt_get_u32") [flags 0x41]  <function_decl 0x7f6b4591ac00 sshpkt_get_u32>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 44 43 45 2 (set (reg/v:SI 108 [ <retval> ])
+        (reg:SI 0 ax)) "kexgexs.c":82:11 -1
+     (nil))
+(debug_insn 45 44 46 2 (var_location:SI r (reg/v:SI 108 [ <retval> ])) "kexgexs.c":82:11 -1
+     (nil))
+(insn 46 45 47 2 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "kexgexs.c":82:5 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 47 46 48 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 108 [ <retval> ])
+            (const_int 0 [0]))) "kexgexs.c":82:5 -1
+     (nil))
+(jump_insn 48 47 49 2 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 262)
+            (pc))) "kexgexs.c":82:5 736 {*jcc}
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 262)
+(note 49 48 50 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 50 49 51 4 (parallel [
+            (set (reg:DI 116)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -28 [0xffffffffffffffe4])))
+            (clobber (reg:CC 17 flags))
+        ]) "kexgexs.c":83:11 -1
+     (nil))
+(insn 51 50 52 4 (set (reg:DI 4 si)
+        (reg:DI 116)) "kexgexs.c":83:11 -1
+     (nil))
+(insn 52 51 53 4 (set (reg:DI 5 di)
+        (reg/v/f:DI 111 [ ssh ])) "kexgexs.c":83:11 -1
+     (nil))
+(call_insn 53 52 54 4 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshpkt_get_u32") [flags 0x41]  <function_decl 0x7f6b4591ac00 sshpkt_get_u32>) [0 sshpkt_get_u32 S1 A8])
+            (const_int 0 [0]))) "kexgexs.c":83:11 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshpkt_get_u32") [flags 0x41]  <function_decl 0x7f6b4591ac00 sshpkt_get_u32>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 54 53 55 4 (set (reg/v:SI 108 [ <retval> ])
+        (reg:SI 0 ax)) "kexgexs.c":83:11 -1
+     (nil))
+(debug_insn 55 54 56 4 (var_location:SI r (reg/v:SI 108 [ <retval> ])) "kexgexs.c":83:11 -1
+     (nil))
+(insn 56 55 57 4 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 108 [ <retval> ])
+            (const_int 0 [0]))) "kexgexs.c":82:43 -1
+     (nil))
+(jump_insn 57 56 58 4 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 262)
+            (pc))) "kexgexs.c":82:43 736 {*jcc}
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 262)
+(note 58 57 59 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 59 58 60 5 (parallel [
+            (set (reg:DI 117)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -32 [0xffffffffffffffe0])))
+            (clobber (reg:CC 17 flags))
+        ]) "kexgexs.c":84:11 -1
+     (nil))
+(insn 60 59 61 5 (set (reg:DI 4 si)
+        (reg:DI 117)) "kexgexs.c":84:11 -1
+     (nil))
+(insn 61 60 62 5 (set (reg:DI 5 di)
+        (reg/v/f:DI 111 [ ssh ])) "kexgexs.c":84:11 -1
+     (nil))
+(call_insn 62 61 63 5 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshpkt_get_u32") [flags 0x41]  <function_decl 0x7f6b4591ac00 sshpkt_get_u32>) [0 sshpkt_get_u32 S1 A8])
+            (const_int 0 [0]))) "kexgexs.c":84:11 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshpkt_get_u32") [flags 0x41]  <function_decl 0x7f6b4591ac00 sshpkt_get_u32>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 63 62 64 5 (set (reg/v:SI 108 [ <retval> ])
+        (reg:SI 0 ax)) "kexgexs.c":84:11 -1
+     (nil))
+(debug_insn 64 63 65 5 (var_location:SI r (reg/v:SI 108 [ <retval> ])) "kexgexs.c":84:11 -1
+     (nil))
+(insn 65 64 66 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 108 [ <retval> ])
+            (const_int 0 [0]))) "kexgexs.c":83:45 -1
+     (nil))
+(jump_insn 66 65 67 5 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 262)
+            (pc))) "kexgexs.c":83:45 736 {*jcc}
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 262)
+(note 67 66 68 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 68 67 69 6 (set (reg:DI 5 di)
+        (reg/v/f:DI 111 [ ssh ])) "kexgexs.c":85:11 -1
+     (nil))
+(call_insn 69 68 70 6 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshpkt_get_end") [flags 0x41]  <function_decl 0x7f6b4591d500 sshpkt_get_end>) [0 sshpkt_get_end S1 A8])
+            (const_int 0 [0]))) "kexgexs.c":85:11 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshpkt_get_end") [flags 0x41]  <function_decl 0x7f6b4591d500 sshpkt_get_end>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 70 69 71 6 (set (reg/v:SI 108 [ <retval> ])
+        (reg:SI 0 ax)) "kexgexs.c":85:11 -1
+     (nil))
+(debug_insn 71 70 72 6 (var_location:SI r (reg/v:SI 108 [ <retval> ])) "kexgexs.c":85:11 -1
+     (nil))
+(insn 72 71 73 6 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 108 [ <retval> ])
+            (const_int 0 [0]))) "kexgexs.c":84:43 -1
+     (nil))
+(jump_insn 73 72 74 6 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 262)
+            (pc))) "kexgexs.c":84:43 736 {*jcc}
+     (int_list:REG_BR_PROB 365072228 (nil))
+ -> 262)
+(note 74 73 75 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 75 74 76 7 (debug_marker) "kexgexs.c":87:2 -1
+     (nil))
+(insn 76 75 77 7 (set (reg:SI 82 [ nbits.0_1 ])
+        (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [1 nbits+0 S4 A32])) "kexgexs.c":87:13 -1
+     (nil))
+(insn 77 76 78 7 (set (mem:SI (plus:DI (reg/v/f:DI 99 [ kex ])
+                (const_int 296 [0x128])) [1 kex_32->nbits+0 S4 A64])
+        (reg:SI 82 [ nbits.0_1 ])) "kexgexs.c":87:13 -1
+     (nil))
+(debug_insn 78 77 79 7 (debug_marker) "kexgexs.c":88:2 -1
+     (nil))
+(insn 79 78 80 7 (set (reg:SI 83 [ min.1_2 ])
+        (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -36 [0xffffffffffffffdc])) [1 min+0 S4 A32])) "kexgexs.c":88:11 -1
+     (nil))
+(insn 80 79 81 7 (set (mem:SI (plus:DI (reg/v/f:DI 99 [ kex ])
+                (const_int 288 [0x120])) [1 kex_32->min+0 S4 A64])
+        (reg:SI 83 [ min.1_2 ])) "kexgexs.c":88:11 -1
+     (nil))
+(debug_insn 81 80 82 7 (debug_marker) "kexgexs.c":89:2 -1
+     (nil))
+(insn 82 81 83 7 (set (reg:SI 84 [ max.2_3 ])
+        (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [1 max+0 S4 A64])) "kexgexs.c":89:11 -1
+     (nil))
+(insn 83 82 84 7 (set (mem:SI (plus:DI (reg/v/f:DI 99 [ kex ])
+                (const_int 292 [0x124])) [1 kex_32->max+0 S4 A32])
+        (reg:SI 84 [ max.2_3 ])) "kexgexs.c":89:11 -1
+     (nil))
+(debug_insn 84 83 88 7 (debug_marker) "kexgexs.c":90:2 -1
+     (nil))
+(insn 88 84 87 7 (set (reg:SI 118)
+        (const_int 2048 [0x800])) "kexgexs.c":90:8 -1
+     (nil))
+(insn 87 88 89 7 (set (reg:CC 17 flags)
+        (compare:CC (reg:SI 83 [ min.1_2 ])
+            (const_int 2048 [0x800]))) "kexgexs.c":90:8 -1
+     (nil))
+(insn 89 87 90 7 (set (reg:SI 85 [ _4 ])
+        (if_then_else:SI (geu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (reg:SI 83 [ min.1_2 ])
+            (reg:SI 118))) "kexgexs.c":90:8 -1
+     (nil))
+(insn 90 89 91 7 (set (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -36 [0xffffffffffffffdc])) [1 min+0 S4 A32])
+        (reg:SI 85 [ _4 ])) "kexgexs.c":90:6 -1
+     (nil))
+(debug_insn 91 90 95 7 (debug_marker) "kexgexs.c":91:2 -1
+     (nil))
+(insn 95 91 94 7 (set (reg:SI 119)
+        (const_int 8192 [0x2000])) "kexgexs.c":91:8 -1
+     (nil))
+(insn 94 95 96 7 (set (reg:CC 17 flags)
+        (compare:CC (reg:SI 84 [ max.2_3 ])
+            (const_int 8192 [0x2000]))) "kexgexs.c":91:8 -1
+     (nil))
+(insn 96 94 97 7 (set (reg:SI 86 [ _5 ])
+        (if_then_else:SI (leu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (reg:SI 84 [ max.2_3 ])
+            (reg:SI 119))) "kexgexs.c":91:8 -1
+     (nil))
+(insn 97 96 98 7 (set (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [1 max+0 S4 A64])
+        (reg:SI 86 [ _5 ])) "kexgexs.c":91:6 -1
+     (nil))
+(debug_insn 98 97 99 7 (debug_marker) "kexgexs.c":92:2 -1
+     (nil))
+(debug_insn 99 98 103 7 (debug_marker) "kexgexs.c":93:2 -1
+     (nil))
+(insn 103 99 102 7 (set (reg:SI 120)
+        (const_int 2048 [0x800])) "kexgexs.c":92:10 -1
+     (nil))
+(insn 102 103 104 7 (set (reg:CC 17 flags)
+        (compare:CC (reg:SI 82 [ nbits.0_1 ])
+            (const_int 2048 [0x800]))) "kexgexs.c":92:10 -1
+     (nil))
+(insn 104 102 108 7 (set (reg:SI 88 [ _7 ])
+        (if_then_else:SI (geu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (reg:SI 82 [ nbits.0_1 ])
+            (reg:SI 120))) "kexgexs.c":92:10 -1
+     (nil))
+(insn 108 104 107 7 (set (reg:SI 121)
+        (const_int 8192 [0x2000])) "kexgexs.c":93:10 -1
+     (nil))
+(insn 107 108 109 7 (set (reg:CC 17 flags)
+        (compare:CC (reg:SI 88 [ _7 ])
+            (const_int 8192 [0x2000]))) "kexgexs.c":93:10 -1
+     (nil))
+(insn 109 107 110 7 (set (reg:SI 88 [ _7 ])
+        (if_then_else:SI (leu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (reg:SI 88 [ _7 ])
+            (reg:SI 121))) "kexgexs.c":93:10 -1
+     (nil))
+(insn 110 109 111 7 (set (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [1 nbits+0 S4 A32])
+        (reg:SI 88 [ _7 ])) "kexgexs.c":93:8 -1
+     (nil))
+(debug_insn 111 110 114 7 (debug_marker) "kexgexs.c":95:2 -1
+     (nil))
+(insn 114 111 115 7 (set (reg:CC 17 flags)
+        (compare:CC (reg:SI 84 [ max.2_3 ])
+            (const_int 2047 [0x7ff]))) "kexgexs.c":96:28 -1
+     (nil))
+(insn 115 114 116 7 (set (reg:QI 123)
+        (leu:QI (reg:CC 17 flags)
+            (const_int 0 [0]))) "kexgexs.c":96:28 -1
+     (nil))
+(insn 116 115 117 7 (set (reg:CC 17 flags)
+        (compare:CC (reg:SI 82 [ nbits.0_1 ])
+            (reg:SI 84 [ max.2_3 ]))) "kexgexs.c":95:51 -1
+     (nil))
+(insn 117 116 118 7 (set (reg:QI 125)
+        (gtu:QI (reg:CC 17 flags)
+            (const_int 0 [0]))) "kexgexs.c":95:51 -1
+     (nil))
+(insn 118 117 119 7 (parallel [
+            (set (reg:QI 126)
+                (ior:QI (reg:QI 123)
+                    (reg:QI 125)))
+            (clobber (reg:CC 17 flags))
+        ]) "kexgexs.c":96:28 -1
+     (nil))
+(insn 119 118 120 7 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 126)
+            (const_int 0 [0]))) "kexgexs.c":96:28 -1
+     (nil))
+(jump_insn 120 119 276 7 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 275)
+            (pc))) "kexgexs.c":96:28 736 {*jcc}
+     (int_list:REG_BR_PROB 21987828 (nil))
+ -> 275)
+(note 276 120 121 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 121 276 122 8 (set (reg:CC 17 flags)
+        (compare:CC (reg:SI 82 [ nbits.0_1 ])
+            (reg:SI 84 [ max.2_3 ]))) "kexgexs.c":96:28 -1
+     (nil))
+(insn 122 121 123 8 (set (reg:SI 127)
+        (if_then_else:SI (leu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (reg:SI 82 [ nbits.0_1 ])
+            (reg:SI 84 [ max.2_3 ]))) "kexgexs.c":96:28 -1
+     (nil))
+(insn 123 122 124 8 (set (reg:CC 17 flags)
+        (compare:CC (reg:SI 83 [ min.1_2 ])
+            (reg:SI 127))) "kexgexs.c":96:28 -1
+     (nil))
+(insn 124 123 125 8 (set (reg:QI 129)
+        (gtu:QI (reg:CC 17 flags)
+            (const_int 0 [0]))) "kexgexs.c":96:28 -1
+     (nil))
+(insn 125 124 126 8 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 129)
+            (const_int 0 [0]))) "kexgexs.c":96:28 -1
+     (nil))
+(jump_insn 126 125 127 8 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 275)
+            (pc))) "kexgexs.c":96:28 736 {*jcc}
+     (int_list:REG_BR_PROB 22447500 (nil))
+ -> 275)
+(note 127 126 128 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 128 127 129 9 (debug_marker) "kexgexs.c":102:2 -1
+     (nil))
+(insn 129 128 130 9 (set (reg:SI 100 [ _87 ])
+        (reg:SI 86 [ _5 ])) "kexgexs.c":102:12 -1
+     (nil))
+(insn 130 129 131 9 (set (reg:SI 101 [ _88 ])
+        (reg:SI 88 [ _7 ])) "kexgexs.c":102:12 -1
+     (nil))
+(insn 131 130 132 9 (set (reg:SI 97 [ _23 ])
+        (reg:SI 85 [ _4 ])) "kexgexs.c":102:12 -1
+     (nil))
+(insn 132 131 133 9 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:SI (symbol_ref:DI ("use_privsep") [flags 0x40]  <var_decl 0x7f6b45c87d80 use_privsep>) [1 use_privsep+0 S4 A32])
+            (const_int 0 [0]))) "kexgexs.c":102:12 -1
+     (nil))
+(jump_insn 133 132 134 9 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 142)
+            (pc))) "kexgexs.c":102:12 -1
+     (int_list:REG_BR_PROB 536870916 (nil))
+ -> 142)
+(note 134 133 135 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 135 134 136 10 (set (reg:SI 1 dx)
+        (reg:SI 100 [ _87 ])) "kexgexs.c":102:12 -1
+     (nil))
+(insn 136 135 137 10 (set (reg:SI 4 si)
+        (reg:SI 101 [ _88 ])) "kexgexs.c":102:12 -1
+     (nil))
+(insn 137 136 138 10 (set (reg:SI 5 di)
+        (reg:SI 97 [ _23 ])) "kexgexs.c":102:12 -1
+     (nil))
+(call_insn 138 137 139 10 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("mm_choose_dh") [flags 0x41]  <function_decl 0x7f6b45923b00 mm_choose_dh>) [0 mm_choose_dh S1 A8])
+            (const_int 0 [0]))) "kexgexs.c":102:12 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("mm_choose_dh") [flags 0x41]  <function_decl 0x7f6b45923b00 mm_choose_dh>)
+        (nil))
+    (expr_list:SI (use (reg:SI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (expr_list:SI (use (reg:SI 1 dx))
+                (nil)))))
+(insn 139 138 140 10 (set (reg/f:DI 98 [ iftmp.7_25 ])
+        (reg:DI 0 ax)) "kexgexs.c":102:12 -1
+     (nil))
+(jump_insn 140 139 141 10 (set (pc)
+        (label_ref 149)) -1
+     (nil)
+ -> 149)
+(barrier 141 140 142)
+(code_label 142 141 143 11 3 (nil) [1 uses])
+(note 143 142 144 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 144 143 145 11 (set (reg:SI 1 dx)
+        (reg:SI 100 [ _87 ])) "kexgexs.c":102:12 -1
+     (nil))
+(insn 145 144 146 11 (set (reg:SI 4 si)
+        (reg:SI 101 [ _88 ])) "kexgexs.c":102:12 -1
+     (nil))
+(insn 146 145 147 11 (set (reg:SI 5 di)
+        (reg:SI 97 [ _23 ])) "kexgexs.c":102:12 -1
+     (nil))
+(call_insn 147 146 148 11 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("choose_dh") [flags 0x41]  <function_decl 0x7f6b4591d800 choose_dh>) [0 choose_dh S1 A8])
+            (const_int 0 [0]))) "kexgexs.c":102:12 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("choose_dh") [flags 0x41]  <function_decl 0x7f6b4591d800 choose_dh>)
+        (nil))
+    (expr_list:SI (use (reg:SI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (expr_list:SI (use (reg:SI 1 dx))
+                (nil)))))
+(insn 148 147 149 11 (set (reg/f:DI 98 [ iftmp.7_25 ])
+        (reg:DI 0 ax)) "kexgexs.c":102:12 -1
+     (nil))
+(code_label 149 148 150 12 4 (nil) [1 uses])
+(note 150 149 151 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 151 150 152 12 (set (mem/f:DI (plus:DI (reg/v/f:DI 99 [ kex ])
+                (const_int 280 [0x118])) [12 kex_32->dh+0 S8 A64])
+        (reg/f:DI 98 [ iftmp.7_25 ])) "kexgexs.c":102:10 -1
+     (nil))
+(debug_insn 152 151 153 12 (debug_marker) "kexgexs.c":103:2 -1
+     (nil))
+(insn 153 152 154 12 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/f:DI 98 [ iftmp.7_25 ])
+            (const_int 0 [0]))) "kexgexs.c":103:5 -1
+     (nil))
+(jump_insn 154 153 155 12 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 166)
+            (pc))) "kexgexs.c":103:5 -1
+     (int_list:REG_BR_PROB 1068909988 (nil))
+ -> 166)
+(note 155 154 156 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 156 155 157 13 (debug_marker) "kexgexs.c":104:3 -1
+     (nil))
+(insn 157 156 158 13 (set (reg:DI 4 si)
+        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7f6b459ad360 *.LC2>)) "kexgexs.c":104:3 -1
+     (nil))
+(insn 158 157 159 13 (set (reg:DI 5 di)
+        (reg/v/f:DI 111 [ ssh ])) "kexgexs.c":104:3 -1
+     (nil))
+(insn 159 158 160 13 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "kexgexs.c":104:3 -1
+     (nil))
+(call_insn 160 159 161 13 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshpkt_disconnect") [flags 0x41]  <function_decl 0x7f6b45917c00 sshpkt_disconnect>) [0 sshpkt_disconnect S1 A8])
+            (const_int 0 [0]))) "kexgexs.c":104:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshpkt_disconnect") [flags 0x41]  <function_decl 0x7f6b45917c00 sshpkt_disconnect>)
+        (nil))
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (nil)))))
+(debug_insn 161 160 162 13 (debug_marker) "kexgexs.c":105:3 -1
+     (nil))
+(debug_insn 162 161 163 13 (var_location:SI r (const_int -2 [0xfffffffffffffffe])) "kexgexs.c":105:5 -1
+     (nil))
+(debug_insn 163 162 8 13 (debug_marker) "kexgexs.c":106:3 -1
+     (nil))
+(insn 8 163 164 13 (set (reg/v:SI 108 [ <retval> ])
+        (const_int -2 [0xfffffffffffffffe])) "kexgexs.c":105:5 -1
+     (nil))
+(jump_insn 164 8 165 13 (set (pc)
+        (label_ref:DI 262)) "kexgexs.c":106:3 737 {jump}
+     (nil)
+ -> 262)
+(barrier 165 164 166)
+(code_label 166 165 167 14 5 (nil) [1 uses])
+(note 167 166 168 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 168 167 169 14 (debug_marker) "kexgexs.c":108:2 -1
+     (nil))
+(insn 169 168 170 14 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "kexgexs.c":108:2 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 170 169 171 14 (set (reg/f:DI 130)
+        (symbol_ref/f:DI ("*.LC3") [flags 0x2]  <var_decl 0x7f6b459ad3f0 *.LC3>)) "kexgexs.c":108:2 -1
+     (nil))
+(insn 171 170 172 14 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [4  S8 A64])
+        (reg/f:DI 130)) "kexgexs.c":108:2 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 172 171 173 14 (set (reg:DI 37 r9)
+        (const_int 0 [0])) "kexgexs.c":108:2 -1
+     (nil))
+(insn 173 172 174 14 (set (reg:SI 36 r8)
+        (const_int 5 [0x5])) "kexgexs.c":108:2 -1
+     (nil))
+(insn 174 173 175 14 (set (reg:SI 2 cx)
+        (const_int 0 [0])) "kexgexs.c":108:2 -1
+     (nil))
+(insn 175 174 176 14 (set (reg:SI 1 dx)
+        (const_int 108 [0x6c])) "kexgexs.c":108:2 -1
+     (nil))
+(insn 176 175 177 14 (set (reg:DI 4 si)
+        (symbol_ref:DI ("__func__.1") [flags 0x2]  <var_decl 0x7f6b4595b870 __func__>)) "kexgexs.c":108:2 -1
+     (nil))
+(insn 177 176 178 14 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f6b459ad240 *.LC0>)) "kexgexs.c":108:2 -1
+     (nil))
+(insn 178 177 179 14 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "kexgexs.c":108:2 -1
+     (nil))
+(call_insn 179 178 180 14 (call (mem:QI (symbol_ref:DI ("sshlog") [flags 0x41]  <function_decl 0x7f6b458db100 sshlog>) [0 sshlog S1 A8])
+        (const_int 16 [0x10])) "kexgexs.c":108:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshlog") [flags 0x41]  <function_decl 0x7f6b458db100 sshlog>)
+        (nil))
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (expr_list:SI (use (reg:SI 1 dx))
+                    (expr_list:SI (use (reg:SI 2 cx))
+                        (expr_list:SI (use (reg:SI 36 r8))
+                            (expr_list:DI (use (reg:DI 37 r9))
+                                (nil)))))))))
+(debug_insn 180 179 181 14 (debug_marker) "kexgexs.c":109:2 -1
+     (nil))
+(insn 181 180 182 14 (parallel [
+            (set (reg:DI 131)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -16 [0xfffffffffffffff0])))
+            (clobber (reg:CC 17 flags))
+        ]) "kexgexs.c":109:2 -1
+     (nil))
+(insn 182 181 183 14 (parallel [
+            (set (reg:DI 132)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -24 [0xffffffffffffffe8])))
+            (clobber (reg:CC 17 flags))
+        ]) "kexgexs.c":109:2 -1
+     (nil))
+(insn 183 182 184 14 (set (reg:DI 133)
+        (mem/f:DI (plus:DI (reg/v/f:DI 99 [ kex ])
+                (const_int 280 [0x118])) [12 kex_32->dh+0 S8 A64])) "kexgexs.c":109:2 -1
+     (nil))
+(insn 184 183 185 14 (set (reg:DI 2 cx)
+        (reg:DI 131)) "kexgexs.c":109:2 -1
+     (nil))
+(insn 185 184 186 14 (set (reg:DI 1 dx)
+        (const_int 0 [0])) "kexgexs.c":109:2 -1
+     (nil))
+(insn 186 185 187 14 (set (reg:DI 4 si)
+        (reg:DI 132)) "kexgexs.c":109:2 -1
+     (nil))
+(insn 187 186 188 14 (set (reg:DI 5 di)
+        (reg:DI 133)) "kexgexs.c":109:2 -1
+     (nil))
+(call_insn 188 187 189 14 (call (mem:QI (symbol_ref:DI ("DH_get0_pqg") [flags 0x41]  <function_decl 0x7f6b45fd2900 DH_get0_pqg>) [0 DH_get0_pqg S1 A8])
+        (const_int 0 [0])) "kexgexs.c":109:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("DH_get0_pqg") [flags 0x41]  <function_decl 0x7f6b45fd2900 DH_get0_pqg>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (expr_list:DI (use (reg:DI 2 cx))
+                    (nil))))))
+(debug_insn 189 188 190 14 (debug_marker) "kexgexs.c":110:2 -1
+     (nil))
+(insn 190 189 191 14 (set (reg:SI 4 si)
+        (const_int 31 [0x1f])) "kexgexs.c":110:11 -1
+     (nil))
+(insn 191 190 192 14 (set (reg:DI 5 di)
+        (reg/v/f:DI 111 [ ssh ])) "kexgexs.c":110:11 -1
+     (nil))
+(call_insn 192 191 193 14 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshpkt_start") [flags 0x41]  <function_decl 0x7f6b45917a00 sshpkt_start>) [0 sshpkt_start S1 A8])
+            (const_int 0 [0]))) "kexgexs.c":110:11 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshpkt_start") [flags 0x41]  <function_decl 0x7f6b45917a00 sshpkt_start>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (nil))))
+(insn 193 192 194 14 (set (reg/v:SI 108 [ <retval> ])
+        (reg:SI 0 ax)) "kexgexs.c":110:11 -1
+     (nil))
+(debug_insn 194 193 195 14 (var_location:SI r (reg/v:SI 108 [ <retval> ])) "kexgexs.c":110:11 -1
+     (nil))
+(insn 195 194 196 14 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "kexgexs.c":110:5 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 196 195 197 14 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 108 [ <retval> ])
+            (const_int 0 [0]))) "kexgexs.c":110:5 -1
+     (nil))
+(jump_insn 197 196 198 14 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 262)
+            (pc))) "kexgexs.c":110:5 736 {*jcc}
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 262)
+(note 198 197 199 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(insn 199 198 200 15 (set (reg:DI 134)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [15 dh_p+0 S8 A64])) "kexgexs.c":111:11 -1
+     (nil))
+(insn 200 199 201 15 (set (reg:DI 4 si)
+        (reg:DI 134)) "kexgexs.c":111:11 -1
+     (nil))
+(insn 201 200 202 15 (set (reg:DI 5 di)
+        (reg/v/f:DI 111 [ ssh ])) "kexgexs.c":111:11 -1
+     (nil))
+(call_insn 202 201 203 15 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshpkt_put_bignum2") [flags 0x41]  <function_decl 0x7f6b4591a900 sshpkt_put_bignum2>) [0 sshpkt_put_bignum2 S1 A8])
+            (const_int 0 [0]))) "kexgexs.c":111:11 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshpkt_put_bignum2") [flags 0x41]  <function_decl 0x7f6b4591a900 sshpkt_put_bignum2>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 203 202 204 15 (set (reg/v:SI 108 [ <retval> ])
+        (reg:SI 0 ax)) "kexgexs.c":111:11 -1
+     (nil))
+(debug_insn 204 203 205 15 (var_location:SI r (reg/v:SI 108 [ <retval> ])) "kexgexs.c":111:11 -1
+     (nil))
+(insn 205 204 206 15 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 108 [ <retval> ])
+            (const_int 0 [0]))) "kexgexs.c":110:62 -1
+     (nil))
+(jump_insn 206 205 207 15 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 262)
+            (pc))) "kexgexs.c":110:62 736 {*jcc}
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 262)
+(note 207 206 208 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(insn 208 207 209 16 (set (reg:DI 135)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [15 dh_g+0 S8 A64])) "kexgexs.c":112:11 -1
+     (nil))
+(insn 209 208 210 16 (set (reg:DI 4 si)
+        (reg:DI 135)) "kexgexs.c":112:11 -1
+     (nil))
+(insn 210 209 211 16 (set (reg:DI 5 di)
+        (reg/v/f:DI 111 [ ssh ])) "kexgexs.c":112:11 -1
+     (nil))
+(call_insn 211 210 212 16 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshpkt_put_bignum2") [flags 0x41]  <function_decl 0x7f6b4591a900 sshpkt_put_bignum2>) [0 sshpkt_put_bignum2 S1 A8])
+            (const_int 0 [0]))) "kexgexs.c":112:11 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshpkt_put_bignum2") [flags 0x41]  <function_decl 0x7f6b4591a900 sshpkt_put_bignum2>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 212 211 213 16 (set (reg/v:SI 108 [ <retval> ])
+        (reg:SI 0 ax)) "kexgexs.c":112:11 -1
+     (nil))
+(debug_insn 213 212 214 16 (var_location:SI r (reg/v:SI 108 [ <retval> ])) "kexgexs.c":112:11 -1
+     (nil))
+(insn 214 213 215 16 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 108 [ <retval> ])
+            (const_int 0 [0]))) "kexgexs.c":111:47 -1
+     (nil))
+(jump_insn 215 214 216 16 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 262)
+            (pc))) "kexgexs.c":111:47 736 {*jcc}
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 262)
+(note 216 215 217 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
+(insn 217 216 218 17 (set (reg:DI 5 di)
+        (reg/v/f:DI 111 [ ssh ])) "kexgexs.c":113:11 -1
+     (nil))
+(call_insn 218 217 219 17 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshpkt_send") [flags 0x41]  <function_decl 0x7f6b45917b00 sshpkt_send>) [0 sshpkt_send S1 A8])
+            (const_int 0 [0]))) "kexgexs.c":113:11 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshpkt_send") [flags 0x41]  <function_decl 0x7f6b45917b00 sshpkt_send>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 219 218 220 17 (set (reg/v:SI 108 [ <retval> ])
+        (reg:SI 0 ax)) "kexgexs.c":113:11 -1
+     (nil))
+(debug_insn 220 219 221 17 (var_location:SI r (reg/v:SI 108 [ <retval> ])) "kexgexs.c":113:11 -1
+     (nil))
+(insn 221 220 222 17 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 108 [ <retval> ])
+            (const_int 0 [0]))) "kexgexs.c":112:47 -1
+     (nil))
+(jump_insn 222 221 223 17 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 262)
+            (pc))) "kexgexs.c":112:47 736 {*jcc}
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 262)
+(note 223 222 224 18 [bb 18] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 224 223 225 18 (debug_marker) "kexgexs.c":117:2 -1
+     (nil))
+(insn 225 224 226 18 (set (reg:SI 137)
+        (mem:SI (plus:DI (reg/v/f:DI 99 [ kex ])
+                (const_int 16 [0x10])) [1 kex_32->we_need+0 S4 A64])) "kexgexs.c":117:44 -1
+     (nil))
+(insn 226 225 227 18 (parallel [
+            (set (reg:SI 136)
+                (ashift:SI (reg:SI 137)
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "kexgexs.c":117:44 -1
+     (expr_list:REG_EQUAL (ashift:SI (mem:SI (plus:DI (reg/v/f:DI 99 [ kex ])
+                    (const_int 16 [0x10])) [1 kex_32->we_need+0 S4 A64])
+            (const_int 3 [0x3]))
+        (nil)))
+(insn 227 226 228 18 (set (reg:DI 138)
+        (mem/f:DI (plus:DI (reg/v/f:DI 99 [ kex ])
+                (const_int 280 [0x118])) [12 kex_32->dh+0 S8 A64])) "kexgexs.c":117:11 -1
+     (nil))
+(insn 228 227 229 18 (set (reg:SI 4 si)
+        (reg:SI 136)) "kexgexs.c":117:11 -1
+     (nil))
+(insn 229 228 230 18 (set (reg:DI 5 di)
+        (reg:DI 138)) "kexgexs.c":117:11 -1
+     (nil))
+(call_insn 230 229 231 18 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("dh_gen_key") [flags 0x41]  <function_decl 0x7f6b45923000 dh_gen_key>) [0 dh_gen_key S1 A8])
+            (const_int 0 [0]))) "kexgexs.c":117:11 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("dh_gen_key") [flags 0x41]  <function_decl 0x7f6b45923000 dh_gen_key>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (nil))))
+(insn 231 230 232 18 (set (reg/v:SI 108 [ <retval> ])
+        (reg:SI 0 ax)) "kexgexs.c":117:11 -1
+     (nil))
+(debug_insn 232 231 233 18 (var_location:SI r (reg/v:SI 108 [ <retval> ])) "kexgexs.c":117:11 -1
+     (nil))
+(insn 233 232 234 18 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 108 [ <retval> ])
+            (const_int 0 [0]))) "kexgexs.c":117:5 -1
+     (nil))
+(jump_insn 234 233 235 18 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 262)
+            (pc))) "kexgexs.c":117:5 736 {*jcc}
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 262)
+(note 235 234 236 19 [bb 19] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 236 235 237 19 (debug_marker) "kexgexs.c":120:2 -1
+     (nil))
+(insn 237 236 238 19 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "kexgexs.c":120:2 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 238 237 239 19 (set (reg/f:DI 139)
+        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f6b459ad480 *.LC4>)) "kexgexs.c":120:2 -1
+     (nil))
+(insn 239 238 240 19 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [4  S8 A64])
+        (reg/f:DI 139)) "kexgexs.c":120:2 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 240 239 241 19 (set (reg:DI 37 r9)
+        (const_int 0 [0])) "kexgexs.c":120:2 -1
+     (nil))
+(insn 241 240 242 19 (set (reg:SI 36 r8)
+        (const_int 5 [0x5])) "kexgexs.c":120:2 -1
+     (nil))
+(insn 242 241 243 19 (set (reg:SI 2 cx)
+        (const_int 0 [0])) "kexgexs.c":120:2 -1
+     (nil))
+(insn 243 242 244 19 (set (reg:SI 1 dx)
+        (const_int 120 [0x78])) "kexgexs.c":120:2 -1
+     (nil))
+(insn 244 243 245 19 (set (reg:DI 4 si)
+        (symbol_ref:DI ("__func__.1") [flags 0x2]  <var_decl 0x7f6b4595b870 __func__>)) "kexgexs.c":120:2 -1
+     (nil))
+(insn 245 244 246 19 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f6b459ad240 *.LC0>)) "kexgexs.c":120:2 -1
+     (nil))
+(insn 246 245 247 19 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "kexgexs.c":120:2 -1
+     (nil))
+(call_insn 247 246 248 19 (call (mem:QI (symbol_ref:DI ("sshlog") [flags 0x41]  <function_decl 0x7f6b458db100 sshlog>) [0 sshlog S1 A8])
+        (const_int 16 [0x10])) "kexgexs.c":120:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshlog") [flags 0x41]  <function_decl 0x7f6b458db100 sshlog>)
+        (nil))
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (expr_list:SI (use (reg:SI 1 dx))
+                    (expr_list:SI (use (reg:SI 2 cx))
+                        (expr_list:SI (use (reg:SI 36 r8))
+                            (expr_list:DI (use (reg:DI 37 r9))
+                                (nil)))))))))
+(debug_insn 248 247 249 19 (debug_marker) "kexgexs.c":121:2 -1
+     (nil))
+(insn 249 248 250 19 (set (reg:DI 1 dx)
+        (symbol_ref:DI ("input_kex_dh_gex_init") [flags 0x3]  <function_decl 0x7f6b4596c200 input_kex_dh_gex_init>)) "kexgexs.c":121:2 -1
+     (nil))
+(insn 250 249 251 19 (set (reg:SI 4 si)
+        (const_int 32 [0x20])) "kexgexs.c":121:2 -1
+     (nil))
+(insn 251 250 252 19 (set (reg:DI 5 di)
+        (reg/v/f:DI 111 [ ssh ])) "kexgexs.c":121:2 -1
+     (nil))
+(call_insn 252 251 253 19 (call (mem:QI (symbol_ref:DI ("ssh_dispatch_set") [flags 0x41]  <function_decl 0x7f6b458ee700 ssh_dispatch_set>) [0 ssh_dispatch_set S1 A8])
+        (const_int 0 [0])) "kexgexs.c":121:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("ssh_dispatch_set") [flags 0x41]  <function_decl 0x7f6b458ee700 ssh_dispatch_set>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(debug_insn 253 252 254 19 (debug_marker) "kexgexs.c":122:2 -1
+     (nil))
+(debug_insn 254 253 255 19 (var_location:SI r (const_int 0 [0])) "kexgexs.c":122:4 -1
+     (nil))
+(insn 255 254 272 19 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "kexgexs.c":121:2 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(jump_insn 272 255 273 19 (set (pc)
+        (label_ref:DI 262)) 737 {jump}
+     (nil)
+ -> 262)
+(barrier 273 272 275)
+(code_label 275 273 274 20 7 (nil) [2 uses])
+(note 274 275 9 20 [bb 20] NOTE_INSN_BASIC_BLOCK)
+(insn 9 274 256 20 (set (reg/v:SI 108 [ <retval> ])
+        (const_int -28 [0xffffffffffffffe4])) "kexgexs.c":97:5 -1
+     (nil))
+(note 256 9 258 20 ("out") NOTE_INSN_DELETED_LABEL 2)
+(debug_insn 258 256 259 20 (var_location:SI r (reg/v:SI 108 [ <retval> ])) -1
+     (nil))
+(debug_insn 259 258 262 20 (debug_marker) "kexgexs.c":124:2 -1
+     (nil))
+(code_label 262 259 271 22 1 (nil) [11 uses])
+(note 271 262 263 22 [bb 22] NOTE_INSN_BASIC_BLOCK)
+(insn 263 271 264 22 (set (reg/f:DI 141)
+        (const_int 40 [0x28])) "kexgexs.c":125:1 -1
+     (nil))
+(insn 264 263 265 22 (parallel [
+            (set (reg:CCZ 17 flags)
+                (unspec:CCZ [
+                        (mem/v/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                                (const_int -8 [0xfffffffffffffff8])) [24 D.17535+0 S8 A64])
+                        (mem/v/f:DI (reg/f:DI 141) [0 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_TEST))
+            (clobber (scratch:DI))
+        ]) "kexgexs.c":125:1 -1
+     (nil))
+(jump_insn 265 264 277 22 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 268)
+            (pc))) "kexgexs.c":125:1 -1
+     (int_list:REG_BR_PROB 1073312332 (nil))
+ -> 268)
+(note 277 265 266 23 [bb 23] NOTE_INSN_BASIC_BLOCK)
+(call_insn 266 277 267 23 (call (mem:QI (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7f6b4599f700 __stack_chk_fail>) [0 __stack_chk_fail S1 A8])
+        (const_int 0 [0])) "kexgexs.c":125:1 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7f6b4599f700 __stack_chk_fail>)
+        (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+            (expr_list:REG_NORETURN (const_int 0 [0])
+                (expr_list:REG_EH_REGION (const_int 0 [0])
+                    (nil)))))
+    (nil))
+(barrier 267 266 268)
+(code_label 268 267 278 24 6 (nil) [1 uses])
+(note 278 268 269 24 [bb 24] NOTE_INSN_BASIC_BLOCK)
+(insn 269 278 270 24 (set (reg/i:SI 0 ax)
+        (reg/v:SI 108 [ <retval> ])) "kexgexs.c":125:1 -1
+     (nil))
+(insn 270 269 0 24 (use (reg/i:SI 0 ax)) "kexgexs.c":125:1 -1
+     (nil))
+
+;; Function input_kex_dh_gex_init (input_kex_dh_gex_init, funcdef_no=372, decl_uid=17420, cgraph_uid=373, symbol_order=372)
+
+Partition 7: size 64 align 16
+	hash
+Partition 9: size 8 align 8
+	hashlen
+Partition 8: size 8 align 8
+	slen
+Partition 6: size 8 align 8
+	signature
+Partition 5: size 8 align 8
+	server_host_private
+Partition 4: size 8 align 8
+	server_host_public
+Partition 3: size 8 align 8
+	dh_g
+Partition 2: size 8 align 8
+	dh_p
+Partition 1: size 8 align 8
+	pub_key
+Partition 0: size 8 align 8
+	dh_client_pub
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+
+;; Generating RTL for gimple basic block 11
+
+;; Generating RTL for gimple basic block 12
+
+;; Generating RTL for gimple basic block 13
+
+;; Generating RTL for gimple basic block 14
+
+;; Generating RTL for gimple basic block 15
+
+;; Generating RTL for gimple basic block 16
+
+;; Generating RTL for gimple basic block 17
+
+;; Generating RTL for gimple basic block 18
+
+;; Generating RTL for gimple basic block 19
+
+;; Generating RTL for gimple basic block 20
+Edge 2->20 redirected to 23
+Edge 3->20 redirected to 24
+Edge 4->20 redirected to 25
+Edge 5->20 redirected to 26
+Edge 6->20 redirected to 27
+Edge 7->20 redirected to 28
+Predictions for insn 321 bb 22
+  first match heuristics: 99.96%  exec 1073741824 (estimated locally) hit 2147483640 (estimated locally) (200.0%)
+  combined heuristics: 99.96%  exec 1073741824 (estimated locally) hit 2147483640 (estimated locally) (200.0%)
+  noreturn call heuristics: 99.96%  exec 1073741824 (estimated locally) hit 2147483640 (estimated locally) (200.0%)
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Removing jump 316.
+Merging block 28 into block 27...
+Merged blocks 27 and 28.
+Merged 27 and 28 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 18 NOTE_INSN_DELETED)
+(note 18 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 18 3 2 (set (reg/v:SI 123 [ type ])
+        (reg:SI 5 di [ type ])) "kexgexs.c":129:1 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v:SI 124 [ seq ])
+        (reg:SI 4 si [ seq ])) "kexgexs.c":129:1 -1
+     (nil))
+(insn 4 3 5 2 (set (reg/v/f:DI 125 [ ssh ])
+        (reg:DI 1 dx [ ssh ])) "kexgexs.c":129:1 -1
+     (nil))
+(note 5 4 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 5 7 2 (set (reg/f:DI 126)
+        (const_int 40 [0x28])) "kexgexs.c":129:1 -1
+     (nil))
+(insn 7 6 20 2 (parallel [
+            (set (mem/v/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                        (const_int -8 [0xfffffffffffffff8])) [24 D.17545+0 S8 A64])
+                (unspec:DI [
+                        (mem/v/f:DI (reg/f:DI 126) [0 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_SET))
+            (set (scratch:DI)
+                (const_int 0 [0]))
+            (clobber (reg:CC 17 flags))
+        ]) "kexgexs.c":129:1 -1
+     (nil))
+(debug_insn 20 7 21 2 (debug_marker) "kexgexs.c":130:2 -1
+     (nil))
+(insn 21 20 22 2 (set (reg/v/f:DI 121 [ kex ])
+        (mem/f:DI (plus:DI (reg/v/f:DI 125 [ ssh ])
+                (const_int 8 [0x8])) [16 ssh_49(D)->kex+0 S8 A64])) "kexgexs.c":130:14 -1
+     (nil))
+(debug_insn 22 21 23 2 (var_location:DI kex (reg/v/f:DI 121 [ kex ])) "kexgexs.c":130:14 -1
+     (nil))
+(debug_insn 23 22 24 2 (debug_marker) "kexgexs.c":131:2 -1
+     (nil))
+(insn 24 23 25 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -152 [0xffffffffffffff68])) [15 dh_client_pub+0 S8 A64])
+        (const_int 0 [0])) "kexgexs.c":131:10 -1
+     (nil))
+(debug_insn 25 24 26 2 (debug_marker) "kexgexs.c":132:2 -1
+     (nil))
+(debug_insn 26 25 27 2 (debug_marker) "kexgexs.c":133:2 -1
+     (nil))
+(debug_insn 27 26 28 2 (var_location:DI shared_secret (const_int 0 [0])) "kexgexs.c":133:17 -1
+     (nil))
+(debug_insn 28 27 29 2 (debug_marker) "kexgexs.c":134:2 -1
+     (nil))
+(debug_insn 29 28 30 2 (var_location:DI server_host_key_blob (const_int 0 [0])) "kexgexs.c":134:17 -1
+     (nil))
+(debug_insn 30 29 31 2 (debug_marker) "kexgexs.c":135:2 -1
+     (nil))
+(debug_insn 31 30 32 2 (debug_marker) "kexgexs.c":136:2 -1
+     (nil))
+(insn 32 31 33 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -104 [0xffffffffffffff98])) [26 signature+0 S8 A64])
+        (const_int 0 [0])) "kexgexs.c":136:10 -1
+     (nil))
+(debug_insn 33 32 34 2 (debug_marker) "kexgexs.c":137:2 -1
+     (nil))
+(debug_insn 34 33 35 2 (debug_marker) "kexgexs.c":138:2 -1
+     (nil))
+(debug_insn 35 34 36 2 (debug_marker) "kexgexs.c":139:2 -1
+     (nil))
+(debug_insn 36 35 37 2 (debug_marker) "kexgexs.c":141:2 -1
+     (nil))
+(insn 37 36 38 2 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "kexgexs.c":141:2 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 38 37 39 2 (set (reg/f:DI 127)
+        (symbol_ref/f:DI ("*.LC5") [flags 0x2]  <var_decl 0x7f6b459dd3f0 *.LC5>)) "kexgexs.c":141:2 -1
+     (nil))
+(insn 39 38 40 2 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [4  S8 A64])
+        (reg/f:DI 127)) "kexgexs.c":141:2 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 40 39 41 2 (set (reg:DI 37 r9)
+        (const_int 0 [0])) "kexgexs.c":141:2 -1
+     (nil))
+(insn 41 40 42 2 (set (reg:SI 36 r8)
+        (const_int 5 [0x5])) "kexgexs.c":141:2 -1
+     (nil))
+(insn 42 41 43 2 (set (reg:SI 2 cx)
+        (const_int 0 [0])) "kexgexs.c":141:2 -1
+     (nil))
+(insn 43 42 44 2 (set (reg:SI 1 dx)
+        (const_int 141 [0x8d])) "kexgexs.c":141:2 -1
+     (nil))
+(insn 44 43 45 2 (set (reg:DI 4 si)
+        (symbol_ref:DI ("__func__.0") [flags 0x2]  <var_decl 0x7f6b459762d0 __func__>)) "kexgexs.c":141:2 -1
+     (nil))
+(insn 45 44 46 2 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f6b459ad240 *.LC0>)) "kexgexs.c":141:2 -1
+     (nil))
+(insn 46 45 47 2 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "kexgexs.c":141:2 -1
+     (nil))
+(call_insn 47 46 48 2 (call (mem:QI (symbol_ref:DI ("sshlog") [flags 0x41]  <function_decl 0x7f6b458db100 sshlog>) [0 sshlog S1 A8])
+        (const_int 16 [0x10])) "kexgexs.c":141:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshlog") [flags 0x41]  <function_decl 0x7f6b458db100 sshlog>)
+        (nil))
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (expr_list:SI (use (reg:SI 1 dx))
+                    (expr_list:SI (use (reg:SI 2 cx))
+                        (expr_list:SI (use (reg:SI 36 r8))
+                            (expr_list:DI (use (reg:DI 37 r9))
+                                (nil)))))))))
+(debug_insn 48 47 49 2 (debug_marker) "kexgexs.c":142:2 -1
+     (nil))
+(insn 49 48 50 2 (set (reg:DI 128)
+        (mem/u/c:DI (const:DI (unspec:DI [
+                        (symbol_ref:DI ("kex_protocol_error") [flags 0x41]  <function_decl 0x7f6b458c8900 kex_protocol_error>)
+                    ] UNSPEC_GOTPCREL)) [29  S8 A8])) "kexgexs.c":142:2 -1
+     (nil))
+(insn 50 49 51 2 (set (reg:DI 1 dx)
+        (reg:DI 128)) "kexgexs.c":142:2 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("kex_protocol_error") [flags 0x41]  <function_decl 0x7f6b458c8900 kex_protocol_error>)
+        (nil)))
+(insn 51 50 52 2 (set (reg:SI 4 si)
+        (const_int 32 [0x20])) "kexgexs.c":142:2 -1
+     (nil))
+(insn 52 51 53 2 (set (reg:DI 5 di)
+        (reg/v/f:DI 125 [ ssh ])) "kexgexs.c":142:2 -1
+     (nil))
+(call_insn 53 52 54 2 (call (mem:QI (symbol_ref:DI ("ssh_dispatch_set") [flags 0x41]  <function_decl 0x7f6b458ee700 ssh_dispatch_set>) [0 ssh_dispatch_set S1 A8])
+        (const_int 0 [0])) "kexgexs.c":142:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("ssh_dispatch_set") [flags 0x41]  <function_decl 0x7f6b458ee700 ssh_dispatch_set>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(debug_insn 54 53 55 2 (debug_marker) "kexgexs.c":144:2 -1
+     (nil))
+(insn 55 54 56 2 (parallel [
+            (set (reg:DI 129)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -120 [0xffffffffffffff88])))
+            (clobber (reg:CC 17 flags))
+        ]) "kexgexs.c":144:11 -1
+     (nil))
+(insn 56 55 57 2 (parallel [
+            (set (reg:DI 130)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -112 [0xffffffffffffff90])))
+            (clobber (reg:CC 17 flags))
+        ]) "kexgexs.c":144:11 -1
+     (nil))
+(insn 57 56 58 2 (set (reg:DI 1 dx)
+        (reg:DI 129)) "kexgexs.c":144:11 -1
+     (nil))
+(insn 58 57 59 2 (set (reg:DI 4 si)
+        (reg:DI 130)) "kexgexs.c":144:11 -1
+     (nil))
+(insn 59 58 60 2 (set (reg:DI 5 di)
+        (reg/v/f:DI 125 [ ssh ])) "kexgexs.c":144:11 -1
+     (nil))
+(call_insn 60 59 61 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("kex_load_hostkey") [flags 0x41]  <function_decl 0x7f6b458c8400 kex_load_hostkey>) [0 kex_load_hostkey S1 A8])
+            (const_int 0 [0]))) "kexgexs.c":144:11 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("kex_load_hostkey") [flags 0x41]  <function_decl 0x7f6b458c8400 kex_load_hostkey>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(insn 61 60 62 2 (set (reg/v:SI 122 [ <retval> ])
+        (reg:SI 0 ax)) "kexgexs.c":144:11 -1
+     (nil))
+(debug_insn 62 61 63 2 (var_location:SI r (reg/v:SI 122 [ <retval> ])) "kexgexs.c":144:11 -1
+     (nil))
+(insn 63 62 64 2 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "kexgexs.c":144:5 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 64 63 65 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 122 [ <retval> ])
+            (const_int 0 [0]))) "kexgexs.c":144:5 -1
+     (nil))
+(jump_insn 65 64 66 2 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 331)
+            (pc))) "kexgexs.c":144:5 736 {*jcc}
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 331)
+(note 66 65 67 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 67 66 68 4 (debug_marker) "kexgexs.c":149:2 -1
+     (nil))
+(insn 68 67 69 4 (parallel [
+            (set (reg:DI 131)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -152 [0xffffffffffffff68])))
+            (clobber (reg:CC 17 flags))
+        ]) "kexgexs.c":149:11 -1
+     (nil))
+(insn 69 68 70 4 (set (reg:DI 4 si)
+        (reg:DI 131)) "kexgexs.c":149:11 -1
+     (nil))
+(insn 70 69 71 4 (set (reg:DI 5 di)
+        (reg/v/f:DI 125 [ ssh ])) "kexgexs.c":149:11 -1
+     (nil))
+(call_insn 71 70 72 4 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshpkt_get_bignum2") [flags 0x41]  <function_decl 0x7f6b4591d400 sshpkt_get_bignum2>) [0 sshpkt_get_bignum2 S1 A8])
+            (const_int 0 [0]))) "kexgexs.c":149:11 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshpkt_get_bignum2") [flags 0x41]  <function_decl 0x7f6b4591d400 sshpkt_get_bignum2>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 72 71 73 4 (set (reg/v:SI 122 [ <retval> ])
+        (reg:SI 0 ax)) "kexgexs.c":149:11 -1
+     (nil))
+(debug_insn 73 72 74 4 (var_location:SI r (reg/v:SI 122 [ <retval> ])) "kexgexs.c":149:11 -1
+     (nil))
+(insn 74 73 75 4 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 122 [ <retval> ])
+            (const_int 0 [0]))) "kexgexs.c":149:5 -1
+     (nil))
+(jump_insn 75 74 76 4 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 335)
+            (pc))) "kexgexs.c":149:5 736 {*jcc}
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 335)
+(note 76 75 77 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 77 76 78 5 (set (reg:DI 5 di)
+        (reg/v/f:DI 125 [ ssh ])) "kexgexs.c":150:11 -1
+     (nil))
+(call_insn 78 77 79 5 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshpkt_get_end") [flags 0x41]  <function_decl 0x7f6b4591d500 sshpkt_get_end>) [0 sshpkt_get_end S1 A8])
+            (const_int 0 [0]))) "kexgexs.c":150:11 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshpkt_get_end") [flags 0x41]  <function_decl 0x7f6b4591d500 sshpkt_get_end>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 79 78 80 5 (set (reg/v:SI 122 [ <retval> ])
+        (reg:SI 0 ax)) "kexgexs.c":150:11 -1
+     (nil))
+(debug_insn 80 79 81 5 (var_location:SI r (reg/v:SI 122 [ <retval> ])) "kexgexs.c":150:11 -1
+     (nil))
+(insn 81 80 82 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 122 [ <retval> ])
+            (const_int 0 [0]))) "kexgexs.c":149:57 -1
+     (nil))
+(jump_insn 82 81 83 5 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 339)
+            (pc))) "kexgexs.c":149:57 736 {*jcc}
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 339)
+(note 83 82 84 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 84 83 85 6 (debug_marker) "kexgexs.c":152:2 -1
+     (nil))
+(call_insn 85 84 86 6 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshbuf_new") [flags 0x41]  <function_decl 0x7f6b4592dd00 sshbuf_new>) [0 sshbuf_new S1 A8])
+            (const_int 0 [0]))) "kexgexs.c":152:23 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_new") [flags 0x41]  <function_decl 0x7f6b4592dd00 sshbuf_new>)
+        (nil))
+    (nil))
+(insn 86 85 87 6 (set (reg/v/f:DI 119 [ shared_secret ])
+        (reg:DI 0 ax)) "kexgexs.c":152:23 -1
+     (nil))
+(debug_insn 87 86 88 6 (var_location:DI shared_secret (reg/v/f:DI 119 [ shared_secret ])) "kexgexs.c":152:23 -1
+     (nil))
+(insn 88 87 89 6 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 119 [ shared_secret ])
+            (const_int 0 [0]))) "kexgexs.c":152:5 -1
+     (nil))
+(jump_insn 89 88 90 6 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 343)
+            (pc))) "kexgexs.c":152:5 736 {*jcc}
+     (int_list:REG_BR_PROB 9771052 (nil))
+ -> 343)
+(note 90 89 91 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 91 90 92 7 (debug_marker) "kexgexs.c":156:2 -1
+     (nil))
+(insn 92 91 93 7 (set (reg:DI 132)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -152 [0xffffffffffffff68])) [15 dh_client_pub+0 S8 A64])) "kexgexs.c":156:11 -1
+     (nil))
+(insn 93 92 94 7 (set (reg:DI 1 dx)
+        (reg/v/f:DI 119 [ shared_secret ])) "kexgexs.c":156:11 -1
+     (nil))
+(insn 94 93 95 7 (set (reg:DI 4 si)
+        (reg:DI 132)) "kexgexs.c":156:11 -1
+     (nil))
+(insn 95 94 96 7 (set (reg:DI 5 di)
+        (reg/v/f:DI 121 [ kex ])) "kexgexs.c":156:11 -1
+     (nil))
+(call_insn 96 95 97 7 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("kex_dh_compute_key") [flags 0x41]  <function_decl 0x7f6b458cde00 kex_dh_compute_key>) [0 kex_dh_compute_key S1 A8])
+            (const_int 0 [0]))) "kexgexs.c":156:11 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("kex_dh_compute_key") [flags 0x41]  <function_decl 0x7f6b458cde00 kex_dh_compute_key>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(insn 97 96 98 7 (set (reg/v:SI 122 [ <retval> ])
+        (reg:SI 0 ax)) "kexgexs.c":156:11 -1
+     (nil))
+(debug_insn 98 97 99 7 (var_location:SI r (reg/v:SI 122 [ <retval> ])) "kexgexs.c":156:11 -1
+     (nil))
+(insn 99 98 100 7 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 122 [ <retval> ])
+            (const_int 0 [0]))) "kexgexs.c":156:5 -1
+     (nil))
+(jump_insn 100 99 101 7 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 347)
+            (pc))) "kexgexs.c":156:5 736 {*jcc}
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 347)
+(note 101 100 102 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 102 101 103 8 (debug_marker) "kexgexs.c":158:2 -1
+     (nil))
+(call_insn 103 102 104 8 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshbuf_new") [flags 0x41]  <function_decl 0x7f6b4592dd00 sshbuf_new>) [0 sshbuf_new S1 A8])
+            (const_int 0 [0]))) "kexgexs.c":158:30 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_new") [flags 0x41]  <function_decl 0x7f6b4592dd00 sshbuf_new>)
+        (nil))
+    (nil))
+(insn 104 103 105 8 (set (reg/v/f:DI 120 [ server_host_key_blob ])
+        (reg:DI 0 ax)) "kexgexs.c":158:30 -1
+     (nil))
+(debug_insn 105 104 106 8 (var_location:DI server_host_key_blob (reg/v/f:DI 120 [ server_host_key_blob ])) "kexgexs.c":158:30 -1
+     (nil))
+(insn 106 105 107 8 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 120 [ server_host_key_blob ])
+            (const_int 0 [0]))) "kexgexs.c":158:5 -1
+     (nil))
+(jump_insn 107 106 108 8 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 351)
+            (pc))) "kexgexs.c":158:5 736 {*jcc}
+     (int_list:REG_BR_PROB 9771052 (nil))
+ -> 351)
+(note 108 107 109 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 109 108 110 9 (debug_marker) "kexgexs.c":162:2 -1
+     (nil))
+(insn 110 109 111 9 (set (reg:DI 133)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -120 [0xffffffffffffff88])) [6 server_host_public+0 S8 A64])) "kexgexs.c":162:11 -1
+     (nil))
+(insn 111 110 112 9 (set (reg:DI 4 si)
+        (reg/v/f:DI 120 [ server_host_key_blob ])) "kexgexs.c":162:11 -1
+     (nil))
+(insn 112 111 113 9 (set (reg:DI 5 di)
+        (reg:DI 133)) "kexgexs.c":162:11 -1
+     (nil))
+(call_insn 113 112 114 9 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshkey_putb") [flags 0x41]  <function_decl 0x7f6b45889e00 sshkey_putb>) [0 sshkey_putb S1 A8])
+            (const_int 0 [0]))) "kexgexs.c":162:11 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshkey_putb") [flags 0x41]  <function_decl 0x7f6b45889e00 sshkey_putb>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 114 113 115 9 (set (reg/v:SI 122 [ <retval> ])
+        (reg:SI 0 ax)) "kexgexs.c":162:11 -1
+     (nil))
+(debug_insn 115 114 116 9 (var_location:SI r (reg/v:SI 122 [ <retval> ])) "kexgexs.c":162:11 -1
+     (nil))
+(insn 116 115 117 9 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 122 [ <retval> ])
+            (const_int 0 [0]))) "kexgexs.c":162:5 -1
+     (nil))
+(jump_insn 117 116 118 9 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 278)
+            (pc))) "kexgexs.c":162:5 -1
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 278)
+(note 118 117 119 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 119 118 120 10 (debug_marker) "kexgexs.c":166:2 -1
+     (nil))
+(insn 120 119 121 10 (parallel [
+            (set (reg:DI 134)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -144 [0xffffffffffffff70])))
+            (clobber (reg:CC 17 flags))
+        ]) "kexgexs.c":166:2 -1
+     (nil))
+(insn 121 120 122 10 (set (reg:DI 135)
+        (mem/f:DI (plus:DI (reg/v/f:DI 121 [ kex ])
+                (const_int 280 [0x118])) [12 kex_50->dh+0 S8 A64])) "kexgexs.c":166:2 -1
+     (nil))
+(insn 122 121 123 10 (set (reg:DI 1 dx)
+        (const_int 0 [0])) "kexgexs.c":166:2 -1
+     (nil))
+(insn 123 122 124 10 (set (reg:DI 4 si)
+        (reg:DI 134)) "kexgexs.c":166:2 -1
+     (nil))
+(insn 124 123 125 10 (set (reg:DI 5 di)
+        (reg:DI 135)) "kexgexs.c":166:2 -1
+     (nil))
+(call_insn 125 124 126 10 (call (mem:QI (symbol_ref:DI ("DH_get0_key") [flags 0x41]  <function_decl 0x7f6b45fd2b00 DH_get0_key>) [0 DH_get0_key S1 A8])
+        (const_int 0 [0])) "kexgexs.c":166:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("DH_get0_key") [flags 0x41]  <function_decl 0x7f6b45fd2b00 DH_get0_key>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(debug_insn 126 125 127 10 (debug_marker) "kexgexs.c":167:2 -1
+     (nil))
+(insn 127 126 128 10 (parallel [
+            (set (reg:DI 136)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -128 [0xffffffffffffff80])))
+            (clobber (reg:CC 17 flags))
+        ]) "kexgexs.c":167:2 -1
+     (nil))
+(insn 128 127 129 10 (parallel [
+            (set (reg:DI 137)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -136 [0xffffffffffffff78])))
+            (clobber (reg:CC 17 flags))
+        ]) "kexgexs.c":167:2 -1
+     (nil))
+(insn 129 128 130 10 (set (reg:DI 138)
+        (mem/f:DI (plus:DI (reg/v/f:DI 121 [ kex ])
+                (const_int 280 [0x118])) [12 kex_50->dh+0 S8 A64])) "kexgexs.c":167:2 -1
+     (nil))
+(insn 130 129 131 10 (set (reg:DI 2 cx)
+        (reg:DI 136)) "kexgexs.c":167:2 -1
+     (nil))
+(insn 131 130 132 10 (set (reg:DI 1 dx)
+        (const_int 0 [0])) "kexgexs.c":167:2 -1
+     (nil))
+(insn 132 131 133 10 (set (reg:DI 4 si)
+        (reg:DI 137)) "kexgexs.c":167:2 -1
+     (nil))
+(insn 133 132 134 10 (set (reg:DI 5 di)
+        (reg:DI 138)) "kexgexs.c":167:2 -1
+     (nil))
+(call_insn 134 133 135 10 (call (mem:QI (symbol_ref:DI ("DH_get0_pqg") [flags 0x41]  <function_decl 0x7f6b45fd2900 DH_get0_pqg>) [0 DH_get0_pqg S1 A8])
+        (const_int 0 [0])) "kexgexs.c":167:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("DH_get0_pqg") [flags 0x41]  <function_decl 0x7f6b45fd2900 DH_get0_pqg>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (expr_list:DI (use (reg:DI 2 cx))
+                    (nil))))))
+(debug_insn 135 134 136 10 (debug_marker) "kexgexs.c":168:2 -1
+     (nil))
+(insn 136 135 137 10 (set (mem/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -88 [0xffffffffffffffa8])) [27 hashlen+0 S8 A64])
+        (const_int 64 [0x40])) "kexgexs.c":168:10 -1
+     (nil))
+(debug_insn 137 136 138 10 (debug_marker) "kexgexs.c":169:2 -1
+     (nil))
+(insn 138 137 139 10 (set (reg:DI 5 di)
+        (reg/v/f:DI 119 [ shared_secret ])) "kexgexs.c":169:11 -1
+     (nil))
+(call_insn 139 138 140 10 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshbuf_len") [flags 0x41]  <function_decl 0x7f6b45934500 sshbuf_len>) [0 sshbuf_len S1 A8])
+            (const_int 0 [0]))) "kexgexs.c":169:11 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_len") [flags 0x41]  <function_decl 0x7f6b45934500 sshbuf_len>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 140 139 141 10 (set (reg:DI 86 [ _5 ])
+        (reg:DI 0 ax)) "kexgexs.c":169:11 -1
+     (nil))
+(insn 141 140 142 10 (set (reg:DI 5 di)
+        (reg/v/f:DI 119 [ shared_secret ])) "kexgexs.c":169:11 -1
+     (nil))
+(call_insn 142 141 143 10 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshbuf_ptr") [flags 0x41]  <function_decl 0x7f6b45934700 sshbuf_ptr>) [0 sshbuf_ptr S1 A8])
+            (const_int 0 [0]))) "kexgexs.c":169:11 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_ptr") [flags 0x41]  <function_decl 0x7f6b45934700 sshbuf_ptr>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 143 142 144 10 (set (reg/f:DI 87 [ _6 ])
+        (reg:DI 0 ax)) "kexgexs.c":169:11 -1
+     (nil))
+(insn 144 143 145 10 (set (reg:DI 139)
+        (mem/f:DI (plus:DI (reg/v/f:DI 121 [ kex ])
+                (const_int 80 [0x50])) [5 kex_50->my+0 S8 A64])) "kexgexs.c":169:11 -1
+     (nil))
+(insn 145 144 146 10 (set (reg:DI 140)
+        (mem/f:DI (plus:DI (reg/v/f:DI 121 [ kex ])
+                (const_int 88 [0x58])) [5 kex_50->peer+0 S8 A64])) "kexgexs.c":169:11 -1
+     (nil))
+(insn 146 145 147 10 (set (reg:DI 141)
+        (mem/f:DI (plus:DI (reg/v/f:DI 121 [ kex ])
+                (const_int 104 [0x68])) [5 kex_50->server_version+0 S8 A64])) "kexgexs.c":169:11 -1
+     (nil))
+(insn 147 146 148 10 (set (reg:DI 142)
+        (mem/f:DI (plus:DI (reg/v/f:DI 121 [ kex ])
+                (const_int 96 [0x60])) [5 kex_50->client_version+0 S8 A64])) "kexgexs.c":169:11 -1
+     (nil))
+(insn 148 147 149 10 (set (reg:SI 143)
+        (mem:SI (plus:DI (reg/v/f:DI 121 [ kex ])
+                (const_int 144 [0x90])) [1 kex_50->hash_alg+0 S4 A64])) "kexgexs.c":169:11 -1
+     (nil))
+(insn 149 148 150 10 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "kexgexs.c":169:11 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 150 149 151 10 (parallel [
+            (set (reg:DI 144)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -88 [0xffffffffffffffa8])))
+            (clobber (reg:CC 17 flags))
+        ]) "kexgexs.c":169:11 -1
+     (nil))
+(insn 151 150 152 10 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [30  S8 A64])
+        (reg:DI 144)) "kexgexs.c":169:11 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 152 151 153 10 (parallel [
+            (set (reg:DI 145)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -80 [0xffffffffffffffb0])))
+            (clobber (reg:CC 17 flags))
+        ]) "kexgexs.c":169:11 -1
+     (nil))
+(insn 153 152 154 10 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [26  S8 A64])
+        (reg:DI 145)) "kexgexs.c":169:11 -1
+     (expr_list:REG_ARGS_SIZE (const_int 24 [0x18])
+        (nil)))
+(insn 154 153 155 10 (set (mem:DI (pre_dec:DI (reg/f:DI 7 sp)) [27  S8 A64])
+        (reg:DI 86 [ _5 ])) "kexgexs.c":169:11 -1
+     (expr_list:REG_ARGS_SIZE (const_int 32 [0x20])
+        (nil)))
+(insn 155 154 156 10 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [26  S8 A64])
+        (reg/f:DI 87 [ _6 ])) "kexgexs.c":169:11 -1
+     (expr_list:REG_ARGS_SIZE (const_int 40 [0x28])
+        (nil)))
+(insn 156 155 157 10 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [15  S8 A64])
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -144 [0xffffffffffffff70])) [15 pub_key+0 S8 A64])) "kexgexs.c":169:11 -1
+     (expr_list:REG_ARGS_SIZE (const_int 48 [0x30])
+        (nil)))
+(insn 157 156 158 10 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [15  S8 A64])
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -152 [0xffffffffffffff68])) [15 dh_client_pub+0 S8 A64])) "kexgexs.c":169:11 -1
+     (expr_list:REG_ARGS_SIZE (const_int 56 [0x38])
+        (nil)))
+(insn 158 157 159 10 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [15  S8 A64])
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -128 [0xffffffffffffff80])) [15 dh_g+0 S8 A64])) "kexgexs.c":169:11 -1
+     (expr_list:REG_ARGS_SIZE (const_int 64 [0x40])
+        (nil)))
+(insn 159 158 160 10 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [15  S8 A64])
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -136 [0xffffffffffffff78])) [15 dh_p+0 S8 A64])) "kexgexs.c":169:11 -1
+     (expr_list:REG_ARGS_SIZE (const_int 72 [0x48])
+        (nil)))
+(insn 160 159 161 10 (set (reg:SI 146)
+        (mem:SI (plus:DI (reg/v/f:DI 121 [ kex ])
+                (const_int 292 [0x124])) [1 kex_50->max+0 S4 A32])) "kexgexs.c":169:11 -1
+     (nil))
+(insn 161 160 162 10 (set (mem:SI (pre_modify:DI (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8]))) [1  S4 A32])
+        (reg:SI 146)) "kexgexs.c":169:11 -1
+     (expr_list:REG_ARGS_SIZE (const_int 80 [0x50])
+        (nil)))
+(insn 162 161 163 10 (set (reg:SI 147)
+        (mem:SI (plus:DI (reg/v/f:DI 121 [ kex ])
+                (const_int 296 [0x128])) [1 kex_50->nbits+0 S4 A64])) "kexgexs.c":169:11 -1
+     (nil))
+(insn 163 162 164 10 (set (mem:SI (pre_modify:DI (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8]))) [1  S4 A32])
+        (reg:SI 147)) "kexgexs.c":169:11 -1
+     (expr_list:REG_ARGS_SIZE (const_int 88 [0x58])
+        (nil)))
+(insn 164 163 165 10 (set (reg:SI 148)
+        (mem:SI (plus:DI (reg/v/f:DI 121 [ kex ])
+                (const_int 288 [0x120])) [1 kex_50->min+0 S4 A64])) "kexgexs.c":169:11 -1
+     (nil))
+(insn 165 164 166 10 (set (mem:SI (pre_modify:DI (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8]))) [1  S4 A32])
+        (reg:SI 148)) "kexgexs.c":169:11 -1
+     (expr_list:REG_ARGS_SIZE (const_int 96 [0x60])
+        (nil)))
+(insn 166 165 167 10 (set (reg:DI 37 r9)
+        (reg/v/f:DI 120 [ server_host_key_blob ])) "kexgexs.c":169:11 -1
+     (nil))
+(insn 167 166 168 10 (set (reg:DI 36 r8)
+        (reg:DI 139)) "kexgexs.c":169:11 -1
+     (nil))
+(insn 168 167 169 10 (set (reg:DI 2 cx)
+        (reg:DI 140)) "kexgexs.c":169:11 -1
+     (nil))
+(insn 169 168 170 10 (set (reg:DI 1 dx)
+        (reg:DI 141)) "kexgexs.c":169:11 -1
+     (nil))
+(insn 170 169 171 10 (set (reg:DI 4 si)
+        (reg:DI 142)) "kexgexs.c":169:11 -1
+     (nil))
+(insn 171 170 172 10 (set (reg:SI 5 di)
+        (reg:SI 143)) "kexgexs.c":169:11 -1
+     (nil))
+(call_insn 172 171 173 10 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("kexgex_hash") [flags 0x41]  <function_decl 0x7f6b458cdf00 kexgex_hash>) [0 kexgex_hash S1 A8])
+            (const_int 96 [0x60]))) "kexgexs.c":169:11 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("kexgex_hash") [flags 0x41]  <function_decl 0x7f6b458cdf00 kexgex_hash>)
+        (nil))
+    (expr_list:SI (use (reg:SI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (expr_list:DI (use (reg:DI 2 cx))
+                    (expr_list:DI (use (reg:DI 36 r8))
+                        (expr_list:DI (use (reg:DI 37 r9))
+                            (nil))))))))
+(insn 173 172 174 10 (set (reg/v:SI 122 [ <retval> ])
+        (reg:SI 0 ax)) "kexgexs.c":169:11 -1
+     (nil))
+(debug_insn 174 173 175 10 (var_location:SI r (reg/v:SI 122 [ <retval> ])) "kexgexs.c":169:11 -1
+     (nil))
+(insn 175 174 176 10 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int 96 [0x60])))
+            (clobber (reg:CC 17 flags))
+        ]) "kexgexs.c":169:5 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 176 175 177 10 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 122 [ <retval> ])
+            (const_int 0 [0]))) "kexgexs.c":169:5 -1
+     (nil))
+(jump_insn 177 176 178 10 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 278)
+            (pc))) "kexgexs.c":169:5 -1
+     (int_list:REG_BR_PROB 365072228 (nil))
+ -> 278)
+(note 178 177 179 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 179 178 180 11 (debug_marker) "kexgexs.c":185:2 -1
+     (nil))
+(insn 180 179 181 11 (parallel [
+            (set (reg:DI 149)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -80 [0xffffffffffffffb0])))
+            (clobber (reg:CC 17 flags))
+        ]) "kexgexs.c":185:11 -1
+     (nil))
+(insn 181 180 182 11 (parallel [
+            (set (reg:DI 150)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -96 [0xffffffffffffffa0])))
+            (clobber (reg:CC 17 flags))
+        ]) "kexgexs.c":185:11 -1
+     (nil))
+(insn 182 181 183 11 (parallel [
+            (set (reg:DI 151)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -104 [0xffffffffffffff98])))
+            (clobber (reg:CC 17 flags))
+        ]) "kexgexs.c":185:11 -1
+     (nil))
+(insn 183 182 184 11 (set (reg:DI 152)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -120 [0xffffffffffffff88])) [6 server_host_public+0 S8 A64])) "kexgexs.c":185:11 -1
+     (nil))
+(insn 184 183 185 11 (set (reg:DI 153)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -112 [0xffffffffffffff90])) [6 server_host_private+0 S8 A64])) "kexgexs.c":185:11 -1
+     (nil))
+(insn 185 184 186 11 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [4  S8 A64])
+        (mem/f:DI (plus:DI (reg/v/f:DI 121 [ kex ])
+                (const_int 40 [0x28])) [4 kex_50->hostkey_alg+0 S8 A64])) "kexgexs.c":185:11 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 186 185 187 11 (set (mem:DI (pre_dec:DI (reg/f:DI 7 sp)) [27  S8 A64])
+        (mem/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -88 [0xffffffffffffffa8])) [27 hashlen+0 S8 A64])) "kexgexs.c":185:11 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 187 186 188 11 (set (reg/f:DI 154)
+        (mem/f:DI (plus:DI (reg/v/f:DI 121 [ kex ])
+                (const_int 192 [0xc0])) [10 kex_50->sign+0 S8 A64])) "kexgexs.c":185:11 -1
+     (nil))
+(insn 188 187 189 11 (set (reg:DI 37 r9)
+        (reg:DI 149)) "kexgexs.c":185:11 -1
+     (nil))
+(insn 189 188 190 11 (set (reg:DI 36 r8)
+        (reg:DI 150)) "kexgexs.c":185:11 -1
+     (nil))
+(insn 190 189 191 11 (set (reg:DI 2 cx)
+        (reg:DI 151)) "kexgexs.c":185:11 -1
+     (nil))
+(insn 191 190 192 11 (set (reg:DI 1 dx)
+        (reg:DI 152)) "kexgexs.c":185:11 -1
+     (nil))
+(insn 192 191 193 11 (set (reg:DI 4 si)
+        (reg:DI 153)) "kexgexs.c":185:11 -1
+     (nil))
+(insn 193 192 194 11 (set (reg:DI 5 di)
+        (reg/v/f:DI 125 [ ssh ])) "kexgexs.c":185:11 -1
+     (nil))
+(call_insn 194 193 195 11 (set (reg:SI 0 ax)
+        (call (mem:QI (reg/f:DI 154) [0 *_22 S1 A8])
+            (const_int 16 [0x10]))) "kexgexs.c":185:11 -1
+     (expr_list:REG_CALL_DECL (nil)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (expr_list:DI (use (reg:DI 2 cx))
+                    (expr_list:DI (use (reg:DI 36 r8))
+                        (expr_list:DI (use (reg:DI 37 r9))
+                            (nil))))))))
+(insn 195 194 196 11 (set (reg/v:SI 122 [ <retval> ])
+        (reg:SI 0 ax)) "kexgexs.c":185:11 -1
+     (nil))
+(debug_insn 196 195 197 11 (var_location:SI r (reg/v:SI 122 [ <retval> ])) "kexgexs.c":185:11 -1
+     (nil))
+(insn 197 196 200 11 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "kexgexs.c":185:5 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 200 197 201 11 (set (reg:CCGOC 17 flags)
+        (compare:CCGOC (reg/v:SI 122 [ <retval> ])
+            (const_int 0 [0]))) "kexgexs.c":185:5 -1
+     (nil))
+(jump_insn 201 200 202 11 (set (pc)
+        (if_then_else (lt (reg:CCGOC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 278)
+            (pc))) "kexgexs.c":185:5 -1
+     (int_list:REG_BR_PROB 451937940 (nil))
+ -> 278)
+(note 202 201 203 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 203 202 204 12 (debug_marker) "kexgexs.c":190:2 -1
+     (nil))
+(insn 204 203 205 12 (set (reg:SI 4 si)
+        (const_int 33 [0x21])) "kexgexs.c":190:11 -1
+     (nil))
+(insn 205 204 206 12 (set (reg:DI 5 di)
+        (reg/v/f:DI 125 [ ssh ])) "kexgexs.c":190:11 -1
+     (nil))
+(call_insn 206 205 207 12 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshpkt_start") [flags 0x41]  <function_decl 0x7f6b45917a00 sshpkt_start>) [0 sshpkt_start S1 A8])
+            (const_int 0 [0]))) "kexgexs.c":190:11 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshpkt_start") [flags 0x41]  <function_decl 0x7f6b45917a00 sshpkt_start>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (nil))))
+(insn 207 206 208 12 (set (reg/v:SI 122 [ <retval> ])
+        (reg:SI 0 ax)) "kexgexs.c":190:11 -1
+     (nil))
+(debug_insn 208 207 209 12 (var_location:SI r (reg/v:SI 122 [ <retval> ])) "kexgexs.c":190:11 -1
+     (nil))
+(insn 209 208 210 12 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 122 [ <retval> ])
+            (const_int 0 [0]))) "kexgexs.c":190:5 -1
+     (nil))
+(jump_insn 210 209 211 12 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 278)
+            (pc))) "kexgexs.c":190:5 -1
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 278)
+(note 211 210 212 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 212 211 213 13 (set (reg:DI 4 si)
+        (reg/v/f:DI 120 [ server_host_key_blob ])) "kexgexs.c":191:11 -1
+     (nil))
+(insn 213 212 214 13 (set (reg:DI 5 di)
+        (reg/v/f:DI 125 [ ssh ])) "kexgexs.c":191:11 -1
+     (nil))
+(call_insn 214 213 215 13 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshpkt_put_stringb") [flags 0x41]  <function_decl 0x7f6b4591a700 sshpkt_put_stringb>) [0 sshpkt_put_stringb S1 A8])
+            (const_int 0 [0]))) "kexgexs.c":191:11 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshpkt_put_stringb") [flags 0x41]  <function_decl 0x7f6b4591a700 sshpkt_put_stringb>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 215 214 216 13 (set (reg/v:SI 122 [ <retval> ])
+        (reg:SI 0 ax)) "kexgexs.c":191:11 -1
+     (nil))
+(debug_insn 216 215 217 13 (var_location:SI r (reg/v:SI 122 [ <retval> ])) "kexgexs.c":191:11 -1
+     (nil))
+(insn 217 216 218 13 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 122 [ <retval> ])
+            (const_int 0 [0]))) "kexgexs.c":190:62 -1
+     (nil))
+(jump_insn 218 217 219 13 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 278)
+            (pc))) "kexgexs.c":190:62 -1
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 278)
+(note 219 218 220 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 220 219 221 14 (set (reg:DI 155)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -144 [0xffffffffffffff70])) [15 pub_key+0 S8 A64])) "kexgexs.c":192:11 -1
+     (nil))
+(insn 221 220 222 14 (set (reg:DI 4 si)
+        (reg:DI 155)) "kexgexs.c":192:11 -1
+     (nil))
+(insn 222 221 223 14 (set (reg:DI 5 di)
+        (reg/v/f:DI 125 [ ssh ])) "kexgexs.c":192:11 -1
+     (nil))
+(call_insn 223 222 224 14 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshpkt_put_bignum2") [flags 0x41]  <function_decl 0x7f6b4591a900 sshpkt_put_bignum2>) [0 sshpkt_put_bignum2 S1 A8])
+            (const_int 0 [0]))) "kexgexs.c":192:11 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshpkt_put_bignum2") [flags 0x41]  <function_decl 0x7f6b4591a900 sshpkt_put_bignum2>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 224 223 225 14 (set (reg/v:SI 122 [ <retval> ])
+        (reg:SI 0 ax)) "kexgexs.c":192:11 -1
+     (nil))
+(debug_insn 225 224 226 14 (var_location:SI r (reg/v:SI 122 [ <retval> ])) "kexgexs.c":192:11 -1
+     (nil))
+(insn 226 225 227 14 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 122 [ <retval> ])
+            (const_int 0 [0]))) "kexgexs.c":191:63 -1
+     (nil))
+(jump_insn 227 226 228 14 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 278)
+            (pc))) "kexgexs.c":191:63 -1
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 278)
+(note 228 227 229 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(insn 229 228 230 15 (set (reg:DI 156)
+        (mem/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -96 [0xffffffffffffffa0])) [27 slen+0 S8 A64])) "kexgexs.c":193:11 -1
+     (nil))
+(insn 230 229 231 15 (set (reg:DI 157)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -104 [0xffffffffffffff98])) [26 signature+0 S8 A64])) "kexgexs.c":193:11 -1
+     (nil))
+(insn 231 230 232 15 (set (reg:DI 1 dx)
+        (reg:DI 156)) "kexgexs.c":193:11 -1
+     (nil))
+(insn 232 231 233 15 (set (reg:DI 4 si)
+        (reg:DI 157)) "kexgexs.c":193:11 -1
+     (nil))
+(insn 233 232 234 15 (set (reg:DI 5 di)
+        (reg/v/f:DI 125 [ ssh ])) "kexgexs.c":193:11 -1
+     (nil))
+(call_insn 234 233 235 15 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshpkt_put_string") [flags 0x41]  <function_decl 0x7f6b4591a500 sshpkt_put_string>) [0 sshpkt_put_string S1 A8])
+            (const_int 0 [0]))) "kexgexs.c":193:11 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshpkt_put_string") [flags 0x41]  <function_decl 0x7f6b4591a500 sshpkt_put_string>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(insn 235 234 236 15 (set (reg/v:SI 122 [ <retval> ])
+        (reg:SI 0 ax)) "kexgexs.c":193:11 -1
+     (nil))
+(debug_insn 236 235 237 15 (var_location:SI r (reg/v:SI 122 [ <retval> ])) "kexgexs.c":193:11 -1
+     (nil))
+(insn 237 236 238 15 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 122 [ <retval> ])
+            (const_int 0 [0]))) "kexgexs.c":192:50 -1
+     (nil))
+(jump_insn 238 237 239 15 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 278)
+            (pc))) "kexgexs.c":192:50 -1
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 278)
+(note 239 238 240 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(insn 240 239 241 16 (set (reg:DI 5 di)
+        (reg/v/f:DI 125 [ ssh ])) "kexgexs.c":194:11 -1
+     (nil))
+(call_insn 241 240 242 16 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshpkt_send") [flags 0x41]  <function_decl 0x7f6b45917b00 sshpkt_send>) [0 sshpkt_send S1 A8])
+            (const_int 0 [0]))) "kexgexs.c":194:11 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshpkt_send") [flags 0x41]  <function_decl 0x7f6b45917b00 sshpkt_send>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 242 241 243 16 (set (reg/v:SI 122 [ <retval> ])
+        (reg:SI 0 ax)) "kexgexs.c":194:11 -1
+     (nil))
+(debug_insn 243 242 244 16 (var_location:SI r (reg/v:SI 122 [ <retval> ])) "kexgexs.c":194:11 -1
+     (nil))
+(insn 244 243 245 16 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 122 [ <retval> ])
+            (const_int 0 [0]))) "kexgexs.c":193:57 -1
+     (nil))
+(jump_insn 245 244 246 16 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 278)
+            (pc))) "kexgexs.c":193:57 -1
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 278)
+(note 246 245 247 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 247 246 248 17 (debug_marker) "kexgexs.c":197:2 -1
+     (nil))
+(insn 248 247 249 17 (set (reg:DI 158)
+        (mem/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -88 [0xffffffffffffffa8])) [27 hashlen+0 S8 A64])) "kexgexs.c":197:11 -1
+     (nil))
+(insn 249 248 250 17 (parallel [
+            (set (reg:DI 159)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -80 [0xffffffffffffffb0])))
+            (clobber (reg:CC 17 flags))
+        ]) "kexgexs.c":197:11 -1
+     (nil))
+(insn 250 249 251 17 (set (reg:DI 2 cx)
+        (reg/v/f:DI 119 [ shared_secret ])) "kexgexs.c":197:11 -1
+     (nil))
+(insn 251 250 252 17 (set (reg:SI 1 dx)
+        (subreg:SI (reg:DI 158) 0)) "kexgexs.c":197:11 -1
+     (nil))
+(insn 252 251 253 17 (set (reg:DI 4 si)
+        (reg:DI 159)) "kexgexs.c":197:11 -1
+     (nil))
+(insn 253 252 254 17 (set (reg:DI 5 di)
+        (reg/v/f:DI 125 [ ssh ])) "kexgexs.c":197:11 -1
+     (nil))
+(call_insn 254 253 255 17 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("kex_derive_keys") [flags 0x41]  <function_decl 0x7f6b458c8a00 kex_derive_keys>) [0 kex_derive_keys S1 A8])
+            (const_int 0 [0]))) "kexgexs.c":197:11 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("kex_derive_keys") [flags 0x41]  <function_decl 0x7f6b458c8a00 kex_derive_keys>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:SI (use (reg:SI 1 dx))
+                (expr_list:DI (use (reg:DI 2 cx))
+                    (nil))))))
+(insn 255 254 256 17 (set (reg/v:SI 122 [ <retval> ])
+        (reg:SI 0 ax)) "kexgexs.c":197:11 -1
+     (nil))
+(debug_insn 256 255 257 17 (var_location:SI r (reg/v:SI 122 [ <retval> ])) "kexgexs.c":197:11 -1
+     (nil))
+(insn 257 256 258 17 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 122 [ <retval> ])
+            (const_int 0 [0]))) "kexgexs.c":197:5 -1
+     (nil))
+(jump_insn 258 257 259 17 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 278)
+            (pc))) "kexgexs.c":197:5 -1
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 278)
+(note 259 258 260 18 [bb 18] NOTE_INSN_BASIC_BLOCK)
+(insn 260 259 261 18 (set (reg:DI 5 di)
+        (reg/v/f:DI 125 [ ssh ])) "kexgexs.c":198:11 -1
+     (nil))
+(call_insn 261 260 262 18 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("kex_send_newkeys") [flags 0x41]  <function_decl 0x7f6b458c8b00 kex_send_newkeys>) [0 kex_send_newkeys S1 A8])
+            (const_int 0 [0]))) "kexgexs.c":198:11 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("kex_send_newkeys") [flags 0x41]  <function_decl 0x7f6b458c8b00 kex_send_newkeys>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 262 261 263 18 (set (reg/v:SI 122 [ <retval> ])
+        (reg:SI 0 ax)) "kexgexs.c":198:11 -1
+     (nil))
+(debug_insn 263 262 264 18 (var_location:SI r (reg/v:SI 122 [ <retval> ])) "kexgexs.c":198:11 -1
+     (nil))
+(insn 264 263 265 18 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 122 [ <retval> ])
+            (const_int 0 [0]))) "kexgexs.c":197:68 -1
+     (nil))
+(jump_insn 265 264 266 18 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 278)
+            (pc))) "kexgexs.c":197:68 -1
+     (int_list:REG_BR_PROB 365072228 (nil))
+ -> 278)
+(note 266 265 267 19 [bb 19] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 267 266 268 19 (debug_marker) "kexgexs.c":202:2 -1
+     (nil))
+(insn 268 267 269 19 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/f:DI (plus:DI (reg/v/f:DI 121 [ kex ])
+                    (const_int 128 [0x80])) [6 kex_50->initial_hostkey+0 S8 A64])
+            (const_int 0 [0]))) "kexgexs.c":202:5 -1
+     (nil))
+(jump_insn 269 268 270 19 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 278)
+            (pc))) "kexgexs.c":202:5 -1
+     (int_list:REG_BR_PROB 886588628 (nil))
+ -> 278)
+(note 270 269 271 20 [bb 20] NOTE_INSN_BASIC_BLOCK)
+(insn 271 270 272 20 (parallel [
+            (set (reg:DI 160)
+                (plus:DI (reg/v/f:DI 121 [ kex ])
+                    (const_int 128 [0x80])))
+            (clobber (reg:CC 17 flags))
+        ]) "kexgexs.c":203:11 -1
+     (nil))
+(insn 272 271 273 20 (set (reg:DI 161)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -120 [0xffffffffffffff88])) [6 server_host_public+0 S8 A64])) "kexgexs.c":203:11 -1
+     (nil))
+(insn 273 272 274 20 (set (reg:DI 4 si)
+        (reg:DI 160)) "kexgexs.c":203:11 -1
+     (nil))
+(insn 274 273 275 20 (set (reg:DI 5 di)
+        (reg:DI 161)) "kexgexs.c":203:11 -1
+     (nil))
+(call_insn 275 274 276 20 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshkey_from_private") [flags 0x41]  <function_decl 0x7f6b45cff800 sshkey_from_private>) [0 sshkey_from_private S1 A8])
+            (const_int 0 [0]))) "kexgexs.c":203:11 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshkey_from_private") [flags 0x41]  <function_decl 0x7f6b45cff800 sshkey_from_private>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 276 275 277 20 (set (reg/v:SI 122 [ <retval> ])
+        (reg:SI 0 ax)) "kexgexs.c":203:11 -1
+     (nil))
+(debug_insn 277 276 328 20 (var_location:SI r (reg/v:SI 122 [ <retval> ])) "kexgexs.c":203:11 -1
+     (nil))
+(jump_insn 328 277 329 20 (set (pc)
+        (label_ref 278)) "kexgexs.c":207:2 -1
+     (nil)
+ -> 278)
+(barrier 329 328 331)
+(code_label 331 329 330 21 17 (nil) [1 uses])
+(note 330 331 8 21 [bb 21] NOTE_INSN_BASIC_BLOCK)
+(insn 8 330 9 21 (set (reg/v/f:DI 120 [ server_host_key_blob ])
+        (const_int 0 [0])) "kexgexs.c":134:17 -1
+     (nil))
+(insn 9 8 332 21 (set (reg/v/f:DI 119 [ shared_secret ])
+        (const_int 0 [0])) "kexgexs.c":133:17 -1
+     (nil))
+(jump_insn 332 9 333 21 (set (pc)
+        (label_ref 278)) -1
+     (nil)
+ -> 278)
+(barrier 333 332 335)
+(code_label 335 333 334 22 18 (nil) [1 uses])
+(note 334 335 10 22 [bb 22] NOTE_INSN_BASIC_BLOCK)
+(insn 10 334 11 22 (set (reg/v/f:DI 120 [ server_host_key_blob ])
+        (const_int 0 [0])) "kexgexs.c":134:17 -1
+     (nil))
+(insn 11 10 336 22 (set (reg/v/f:DI 119 [ shared_secret ])
+        (const_int 0 [0])) "kexgexs.c":133:17 -1
+     (nil))
+(jump_insn 336 11 337 22 (set (pc)
+        (label_ref 278)) -1
+     (nil)
+ -> 278)
+(barrier 337 336 339)
+(code_label 339 337 338 23 19 (nil) [1 uses])
+(note 338 339 12 23 [bb 23] NOTE_INSN_BASIC_BLOCK)
+(insn 12 338 13 23 (set (reg/v/f:DI 120 [ server_host_key_blob ])
+        (const_int 0 [0])) "kexgexs.c":134:17 -1
+     (nil))
+(insn 13 12 340 23 (set (reg/v/f:DI 119 [ shared_secret ])
+        (const_int 0 [0])) "kexgexs.c":133:17 -1
+     (nil))
+(jump_insn 340 13 341 23 (set (pc)
+        (label_ref 278)) -1
+     (nil)
+ -> 278)
+(barrier 341 340 343)
+(code_label 343 341 342 24 20 (nil) [1 uses])
+(note 342 343 14 24 [bb 24] NOTE_INSN_BASIC_BLOCK)
+(insn 14 342 15 24 (set (reg/v/f:DI 120 [ server_host_key_blob ])
+        (reg/v/f:DI 119 [ shared_secret ])) "kexgexs.c":134:17 -1
+     (nil))
+(insn 15 14 344 24 (set (reg/v:SI 122 [ <retval> ])
+        (const_int -2 [0xfffffffffffffffe])) "kexgexs.c":153:5 -1
+     (nil))
+(jump_insn 344 15 345 24 (set (pc)
+        (label_ref 278)) -1
+     (nil)
+ -> 278)
+(barrier 345 344 347)
+(code_label 347 345 346 25 21 (nil) [1 uses])
+(note 346 347 16 25 [bb 25] NOTE_INSN_BASIC_BLOCK)
+(insn 16 346 348 25 (set (reg/v/f:DI 120 [ server_host_key_blob ])
+        (const_int 0 [0])) "kexgexs.c":134:17 -1
+     (nil))
+(jump_insn 348 16 349 25 (set (pc)
+        (label_ref 278)) -1
+     (nil)
+ -> 278)
+(barrier 349 348 351)
+(code_label 351 349 350 26 22 (nil) [1 uses])
+(note 350 351 17 26 [bb 26] NOTE_INSN_BASIC_BLOCK)
+(insn 17 350 278 26 (set (reg/v:SI 122 [ <retval> ])
+        (const_int -2 [0xfffffffffffffffe])) "kexgexs.c":159:5 -1
+     (nil))
+(code_label 278 17 279 27 15 ("out") [17 uses])
+(note 279 278 280 27 [bb 27] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 280 279 281 27 (var_location:SI r (reg/v:SI 122 [ <retval> ])) -1
+     (nil))
+(debug_insn 281 280 282 27 (var_location:DI server_host_key_blob (reg/v/f:DI 120 [ server_host_key_blob ])) -1
+     (nil))
+(debug_insn 282 281 283 27 (var_location:DI shared_secret (reg/v/f:DI 119 [ shared_secret ])) -1
+     (nil))
+(debug_insn 283 282 284 27 (debug_marker) "kexgexs.c":208:2 -1
+     (nil))
+(debug_insn 284 283 285 27 (var_location:DI __dest (plus:DI (reg/f:DI 77 virtual-stack-vars)
+        (const_int -80 [0xffffffffffffffb0]))) "kexgexs.c":208:2 -1
+     (nil))
+(debug_insn 285 284 286 27 (var_location:DI __len (const_int 64 [0x40])) "kexgexs.c":208:2 -1
+     (nil))
+(debug_insn 286 285 287 27 (debug_marker:BLK) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":81:1 -1
+     (nil))
+(debug_insn 287 286 288 27 (debug_marker) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":83:3 -1
+     (nil))
+(insn 288 287 289 27 (parallel [
+            (set (reg:DI 162)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -80 [0xffffffffffffffb0])))
+            (clobber (reg:CC 17 flags))
+        ]) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":83:3 -1
+     (nil))
+(insn 289 288 290 27 (set (reg:DI 1 dx)
+        (const_int 64 [0x40])) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":83:3 -1
+     (nil))
+(insn 290 289 291 27 (set (reg:DI 4 si)
+        (const_int 64 [0x40])) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":83:3 -1
+     (nil))
+(insn 291 290 292 27 (set (reg:DI 5 di)
+        (reg:DI 162)) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":83:3 -1
+     (nil))
+(call_insn 292 291 293 27 (call (mem:QI (symbol_ref:DI ("__explicit_bzero_chk") [flags 0x41]  <function_decl 0x7f6b4610b800 __explicit_bzero_chk>) [0 __explicit_bzero_chk S1 A8])
+        (const_int 0 [0])) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":83:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__explicit_bzero_chk") [flags 0x41]  <function_decl 0x7f6b4610b800 __explicit_bzero_chk>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(debug_insn 293 292 294 27 (var_location:DI __dest (clobber (const_int 0 [0]))) "kexgexs.c":208:2 -1
+     (nil))
+(debug_insn 294 293 295 27 (var_location:DI __len (clobber (const_int 0 [0]))) "kexgexs.c":208:2 -1
+     (nil))
+(debug_insn 295 294 296 27 (debug_marker) "kexgexs.c":209:2 -1
+     (nil))
+(insn 296 295 297 27 (set (reg:DI 163)
+        (mem/f:DI (plus:DI (reg/v/f:DI 121 [ kex ])
+                (const_int 280 [0x118])) [12 kex_50->dh+0 S8 A64])) "kexgexs.c":209:2 -1
+     (nil))
+(insn 297 296 298 27 (set (reg:DI 5 di)
+        (reg:DI 163)) "kexgexs.c":209:2 -1
+     (nil))
+(call_insn 298 297 299 27 (call (mem:QI (symbol_ref:DI ("DH_free") [flags 0x41]  <function_decl 0x7f6b45fc4b00 DH_free>) [0 DH_free S1 A8])
+        (const_int 0 [0])) "kexgexs.c":209:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("DH_free") [flags 0x41]  <function_decl 0x7f6b45fc4b00 DH_free>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(debug_insn 299 298 300 27 (debug_marker) "kexgexs.c":210:2 -1
+     (nil))
+(insn 300 299 301 27 (set (mem/f:DI (plus:DI (reg/v/f:DI 121 [ kex ])
+                (const_int 280 [0x118])) [12 kex_50->dh+0 S8 A64])
+        (const_int 0 [0])) "kexgexs.c":210:10 -1
+     (nil))
+(debug_insn 301 300 302 27 (debug_marker) "kexgexs.c":211:2 -1
+     (nil))
+(insn 302 301 303 27 (set (reg:DI 164)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -152 [0xffffffffffffff68])) [15 dh_client_pub+0 S8 A64])) "kexgexs.c":211:2 -1
+     (nil))
+(insn 303 302 304 27 (set (reg:DI 5 di)
+        (reg:DI 164)) "kexgexs.c":211:2 -1
+     (nil))
+(call_insn 304 303 305 27 (call (mem:QI (symbol_ref:DI ("BN_clear_free") [flags 0x41]  <function_decl 0x7f6b45e84e00 BN_clear_free>) [0 BN_clear_free S1 A8])
+        (const_int 0 [0])) "kexgexs.c":211:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("BN_clear_free") [flags 0x41]  <function_decl 0x7f6b45e84e00 BN_clear_free>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(debug_insn 305 304 306 27 (debug_marker) "kexgexs.c":212:2 -1
+     (nil))
+(insn 306 305 307 27 (set (reg:DI 5 di)
+        (reg/v/f:DI 119 [ shared_secret ])) "kexgexs.c":212:2 -1
+     (nil))
+(call_insn 307 306 308 27 (call (mem:QI (symbol_ref:DI ("sshbuf_free") [flags 0x41]  <function_decl 0x7f6b45934100 sshbuf_free>) [0 sshbuf_free S1 A8])
+        (const_int 0 [0])) "kexgexs.c":212:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_free") [flags 0x41]  <function_decl 0x7f6b45934100 sshbuf_free>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(debug_insn 308 307 309 27 (debug_marker) "kexgexs.c":213:2 -1
+     (nil))
+(insn 309 308 310 27 (set (reg:DI 5 di)
+        (reg/v/f:DI 120 [ server_host_key_blob ])) "kexgexs.c":213:2 -1
+     (nil))
+(call_insn 310 309 311 27 (call (mem:QI (symbol_ref:DI ("sshbuf_free") [flags 0x41]  <function_decl 0x7f6b45934100 sshbuf_free>) [0 sshbuf_free S1 A8])
+        (const_int 0 [0])) "kexgexs.c":213:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshbuf_free") [flags 0x41]  <function_decl 0x7f6b45934100 sshbuf_free>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(debug_insn 311 310 312 27 (debug_marker) "kexgexs.c":214:2 -1
+     (nil))
+(insn 312 311 313 27 (set (reg:DI 165)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -104 [0xffffffffffffff98])) [26 signature+0 S8 A64])) "kexgexs.c":214:2 -1
+     (nil))
+(insn 313 312 314 27 (set (reg:DI 5 di)
+        (reg:DI 165)) "kexgexs.c":214:2 -1
+     (nil))
+(call_insn 314 313 315 27 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x7f6b46571900 free>) [0 __builtin_free S1 A8])
+        (const_int 0 [0])) "kexgexs.c":214:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x7f6b46571900 free>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(debug_insn 315 314 319 27 (debug_marker) "kexgexs.c":215:2 -1
+     (nil))
+(insn 319 315 320 27 (set (reg/f:DI 167)
+        (const_int 40 [0x28])) "kexgexs.c":216:1 -1
+     (nil))
+(insn 320 319 321 27 (parallel [
+            (set (reg:CCZ 17 flags)
+                (unspec:CCZ [
+                        (mem/v/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                                (const_int -8 [0xfffffffffffffff8])) [24 D.17545+0 S8 A64])
+                        (mem/v/f:DI (reg/f:DI 167) [0 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_TEST))
+            (clobber (scratch:DI))
+        ]) "kexgexs.c":216:1 -1
+     (nil))
+(jump_insn 321 320 352 27 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 324)
+            (pc))) "kexgexs.c":216:1 -1
+     (int_list:REG_BR_PROB 1073312332 (nil))
+ -> 324)
+(note 352 321 322 29 [bb 29] NOTE_INSN_BASIC_BLOCK)
+(call_insn 322 352 323 29 (call (mem:QI (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7f6b4599f700 __stack_chk_fail>) [0 __stack_chk_fail S1 A8])
+        (const_int 0 [0])) "kexgexs.c":216:1 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7f6b4599f700 __stack_chk_fail>)
+        (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+            (expr_list:REG_NORETURN (const_int 0 [0])
+                (expr_list:REG_EH_REGION (const_int 0 [0])
+                    (nil)))))
+    (nil))
+(barrier 323 322 324)
+(code_label 324 323 353 30 16 (nil) [1 uses])
+(note 353 324 325 30 [bb 30] NOTE_INSN_BASIC_BLOCK)
+(insn 325 353 326 30 (set (reg/i:SI 0 ax)
+        (reg/v:SI 122 [ <retval> ])) "kexgexs.c":216:1 -1
+     (nil))
+(insn 326 325 0 30 (use (reg/i:SI 0 ax)) "kexgexs.c":216:1 -1
+     (nil))
+
+;; Function kexgex_server (kexgex_server, funcdef_no=370, decl_uid=16177, cgraph_uid=371, symbol_order=370)
+
+
+;; Generating RTL for gimple basic block 2
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Removing jump 26.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (reg/v/f:DI 83 [ ssh ])
+        (reg:DI 5 di [ ssh ])) "kexgexs.c":64:1 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 6 3 7 2 (debug_marker) "kexgexs.c":65:2 -1
+     (nil))
+(insn 7 6 8 2 (set (reg:DI 1 dx)
+        (symbol_ref:DI ("input_kex_dh_gex_request") [flags 0x3]  <function_decl 0x7f6b4596c100 input_kex_dh_gex_request>)) "kexgexs.c":65:2 -1
+     (nil))
+(insn 8 7 9 2 (set (reg:SI 4 si)
+        (const_int 34 [0x22])) "kexgexs.c":65:2 -1
+     (nil))
+(insn 9 8 10 2 (set (reg:DI 5 di)
+        (reg/v/f:DI 83 [ ssh ])) "kexgexs.c":65:2 -1
+     (nil))
+(call_insn 10 9 11 2 (call (mem:QI (symbol_ref:DI ("ssh_dispatch_set") [flags 0x41]  <function_decl 0x7f6b458ee700 ssh_dispatch_set>) [0 ssh_dispatch_set S1 A8])
+        (const_int 0 [0])) "kexgexs.c":65:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("ssh_dispatch_set") [flags 0x41]  <function_decl 0x7f6b458ee700 ssh_dispatch_set>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(debug_insn 11 10 12 2 (debug_marker) "kexgexs.c":67:2 -1
+     (nil))
+(insn 12 11 13 2 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "kexgexs.c":67:2 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 13 12 14 2 (set (reg/f:DI 84)
+        (symbol_ref/f:DI ("*.LC6") [flags 0x2]  <var_decl 0x7f6b45a32090 *.LC6>)) "kexgexs.c":67:2 -1
+     (nil))
+(insn 14 13 15 2 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [4  S8 A64])
+        (reg/f:DI 84)) "kexgexs.c":67:2 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 15 14 16 2 (set (reg:DI 37 r9)
+        (const_int 0 [0])) "kexgexs.c":67:2 -1
+     (nil))
+(insn 16 15 17 2 (set (reg:SI 36 r8)
+        (const_int 5 [0x5])) "kexgexs.c":67:2 -1
+     (nil))
+(insn 17 16 18 2 (set (reg:SI 2 cx)
+        (const_int 0 [0])) "kexgexs.c":67:2 -1
+     (nil))
+(insn 18 17 19 2 (set (reg:SI 1 dx)
+        (const_int 67 [0x43])) "kexgexs.c":67:2 -1
+     (nil))
+(insn 19 18 20 2 (set (reg:DI 4 si)
+        (symbol_ref:DI ("__func__.2") [flags 0x2]  <var_decl 0x7f6b4595b360 __func__>)) "kexgexs.c":67:2 -1
+     (nil))
+(insn 20 19 21 2 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f6b459ad240 *.LC0>)) "kexgexs.c":67:2 -1
+     (nil))
+(insn 21 20 22 2 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "kexgexs.c":67:2 -1
+     (nil))
+(call_insn 22 21 23 2 (call (mem:QI (symbol_ref:DI ("sshlog") [flags 0x41]  <function_decl 0x7f6b458db100 sshlog>) [0 sshlog S1 A8])
+        (const_int 16 [0x10])) "kexgexs.c":67:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshlog") [flags 0x41]  <function_decl 0x7f6b458db100 sshlog>)
+        (nil))
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (expr_list:SI (use (reg:SI 1 dx))
+                    (expr_list:SI (use (reg:SI 2 cx))
+                        (expr_list:SI (use (reg:SI 36 r8))
+                            (expr_list:DI (use (reg:DI 37 r9))
+                                (nil)))))))))
+(debug_insn 23 22 24 2 (debug_marker) "kexgexs.c":68:2 -1
+     (nil))
+(insn 24 23 25 2 (set (reg:SI 82 [ <retval> ])
+        (const_int 0 [0])) "kexgexs.c":68:9 -1
+     (nil))
+(insn 25 24 29 2 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "kexgexs.c":68:9 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 29 25 30 2 (set (reg/i:SI 0 ax)
+        (reg:SI 82 [ <retval> ])) "kexgexs.c":69:1 -1
+     (nil))
+(insn 30 29 0 2 (use (reg/i:SI 0 ax)) "kexgexs.c":69:1 -1
+     (nil))

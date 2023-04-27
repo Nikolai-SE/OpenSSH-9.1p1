@@ -1,0 +1,2331 @@
+
+;; Function get_sock_port (get_sock_port, funcdef_no=388, decl_uid=14061, cgraph_uid=389, symbol_order=388)
+
+Partition 0: size 128 align 16
+	from
+Partition 2: size 32 align 16
+	strport
+Partition 1: size 4 align 4
+	fromlen
+
+;; Generating RTL for gimple basic block 2
+Selected stringop expansion strategy: rep_8byte
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+
+;; Generating RTL for gimple basic block 11
+
+;; Generating RTL for gimple basic block 12
+
+;; Generating RTL for gimple basic block 13
+
+;; Generating RTL for gimple basic block 14
+Edge 9->14 redirected to 17
+Predictions for insn 180 bb 16
+  first match heuristics: 99.96%  exec 1073544306 (estimated locally) hit 2147088604 (estimated locally) (200.0%)
+  combined heuristics: 99.96%  exec 1073544306 (estimated locally) hit 2147088604 (estimated locally) (200.0%)
+  noreturn call heuristics: 99.96%  exec 1073544306 (estimated locally) hit 2147088604 (estimated locally) (200.0%)
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Redirecting jump 67 from 16 to 17.
+Redirecting jump 102 from 16 to 17.
+Redirecting jump 187 from 16 to 17.
+Merging block 16 into block 15...
+Merged blocks 15 and 16.
+Merged 15 and 16 without moving.
+Removing jump 175.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 10 NOTE_INSN_DELETED)
+(note 10 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 10 3 2 (set (reg/v:SI 97 [ sock ])
+        (reg:SI 5 di [ sock ])) "canohost.c":157:1 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v:SI 98 [ local ])
+        (reg:SI 4 si [ local ])) "canohost.c":157:1 -1
+     (nil))
+(note 4 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 4 6 2 (set (reg/f:DI 99)
+        (const_int 40 [0x28])) "canohost.c":157:1 -1
+     (nil))
+(insn 6 5 12 2 (parallel [
+            (set (mem/v/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                        (const_int -8 [0xfffffffffffffff8])) [25 D.14238+0 S8 A64])
+                (unspec:DI [
+                        (mem/v/f:DI (reg/f:DI 99) [0 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_SET))
+            (set (scratch:DI)
+                (const_int 0 [0]))
+            (clobber (reg:CC 17 flags))
+        ]) "canohost.c":157:1 -1
+     (nil))
+(debug_insn 12 6 13 2 (debug_marker) "canohost.c":158:2 -1
+     (nil))
+(debug_insn 13 12 14 2 (debug_marker) "canohost.c":159:2 -1
+     (nil))
+(debug_insn 14 13 15 2 (debug_marker) "canohost.c":160:2 -1
+     (nil))
+(debug_insn 15 14 16 2 (debug_marker) "canohost.c":161:2 -1
+     (nil))
+(debug_insn 16 15 17 2 (debug_marker) "canohost.c":164:2 -1
+     (nil))
+(insn 17 16 18 2 (set (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -180 [0xffffffffffffff4c])) [3 fromlen+0 S4 A32])
+        (const_int 128 [0x80])) "canohost.c":164:10 -1
+     (nil))
+(debug_insn 18 17 19 2 (debug_marker) "canohost.c":165:2 -1
+     (nil))
+(debug_insn 19 18 20 2 (var_location:DI __dest (plus:DI (reg/f:DI 77 virtual-stack-vars)
+        (const_int -176 [0xffffffffffffff50]))) "canohost.c":165:2 -1
+     (nil))
+(debug_insn 20 19 21 2 (var_location:SI __ch (const_int 0 [0])) "canohost.c":165:2 -1
+     (nil))
+(debug_insn 21 20 22 2 (var_location:DI __len (const_int 128 [0x80])) "canohost.c":165:2 -1
+     (nil))
+(debug_insn 22 21 23 2 (debug_marker:BLK) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":59:1 -1
+     (nil))
+(debug_insn 23 22 24 2 (debug_marker) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":71:3 -1
+     (nil))
+(insn 24 23 25 2 (parallel [
+            (set (reg:DI 100)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -176 [0xffffffffffffff50])))
+            (clobber (reg:CC 17 flags))
+        ]) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":71:10 -1
+     (nil))
+(insn 25 24 26 2 (set (reg/f:DI 101)
+        (reg:DI 100)) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":71:10 -1
+     (nil))
+(insn 26 25 27 2 (set (reg:DI 102)
+        (const_int 0 [0])) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":71:10 -1
+     (nil))
+(insn 27 26 28 2 (set (reg:DI 103)
+        (const_int 16 [0x10])) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":71:10 -1
+     (nil))
+(insn 28 27 29 2 (parallel [
+            (set (reg:DI 103)
+                (const_int 0 [0]))
+            (set (reg/f:DI 101)
+                (plus:DI (ashift:DI (reg:DI 103)
+                        (const_int 3 [0x3]))
+                    (reg/f:DI 101)))
+            (set (mem/c:BLK (reg/f:DI 101) [0 MEM <char[1:128]> [(void *)&from]+0 S128 A64])
+                (const_int 0 [0]))
+            (use (reg:DI 102))
+            (use (reg:DI 103))
+        ]) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":71:10 -1
+     (nil))
+(debug_insn 29 28 30 2 (var_location:DI __dest (clobber (const_int 0 [0]))) "canohost.c":165:2 -1
+     (nil))
+(debug_insn 30 29 31 2 (var_location:SI __ch (clobber (const_int 0 [0]))) "canohost.c":165:2 -1
+     (nil))
+(debug_insn 31 30 32 2 (var_location:DI __len (clobber (const_int 0 [0]))) "canohost.c":165:2 -1
+     (nil))
+(debug_insn 32 31 33 2 (debug_marker) "canohost.c":166:2 -1
+     (nil))
+(insn 33 32 34 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 98 [ local ])
+            (const_int 0 [0]))) "canohost.c":166:5 -1
+     (nil))
+(jump_insn 34 33 35 2 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 69)
+            (pc))) "canohost.c":166:5 -1
+     (int_list:REG_BR_PROB 536870916 (nil))
+ -> 69)
+(note 35 34 36 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 36 35 37 4 (debug_marker) "canohost.c":167:3 -1
+     (nil))
+(insn 37 36 38 4 (parallel [
+            (set (reg:DI 104)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -176 [0xffffffffffffff50])))
+            (clobber (reg:CC 17 flags))
+        ]) "canohost.c":167:7 -1
+     (nil))
+(insn 38 37 39 4 (set (reg:DI 95 [ D.14137 ])
+        (reg:DI 104)) "canohost.c":167:7 -1
+     (nil))
+(insn 39 38 40 4 (parallel [
+            (set (reg:DI 105)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -180 [0xffffffffffffff4c])))
+            (clobber (reg:CC 17 flags))
+        ]) "canohost.c":167:7 -1
+     (nil))
+(insn 40 39 41 4 (set (reg:DI 1 dx)
+        (reg:DI 105)) "canohost.c":167:7 -1
+     (nil))
+(insn 41 40 42 4 (set (reg:DI 4 si)
+        (reg:DI 95 [ D.14137 ])) "canohost.c":167:7 -1
+     (nil))
+(insn 42 41 43 4 (set (reg:SI 5 di)
+        (reg/v:SI 97 [ sock ])) "canohost.c":167:7 -1
+     (nil))
+(call_insn 43 42 44 4 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("getsockname") [flags 0x41]  <function_decl 0x7f6328b40c00 getsockname>) [0 getsockname S1 A8])
+            (const_int 0 [0]))) "canohost.c":167:7 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("getsockname") [flags 0x41]  <function_decl 0x7f6328b40c00 getsockname>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:SI (use (reg:SI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(insn 44 43 45 4 (set (reg:SI 82 [ _1 ])
+        (reg:SI 0 ax)) "canohost.c":167:7 -1
+     (nil))
+(insn 45 44 46 4 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 82 [ _1 ])
+            (const_int -1 [0xffffffffffffffff]))) "canohost.c":167:6 -1
+     (nil))
+(jump_insn 46 45 47 4 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 104)
+            (pc))) "canohost.c":167:6 -1
+     (int_list:REG_BR_PROB 949617276 (nil))
+ -> 104)
+(note 47 46 48 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 48 47 49 5 (debug_marker) "canohost.c":168:4 -1
+     (nil))
+(call_insn/u 49 48 50 5 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__errno_location") [flags 0x41]  <function_decl 0x7f63288d6b00 __errno_location>) [0 __errno_location S1 A8])
+            (const_int 0 [0]))) "canohost.c":168:4 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__errno_location") [flags 0x41]  <function_decl 0x7f63288d6b00 __errno_location>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (nil))
+(insn 50 49 51 5 (set (reg/f:DI 83 [ _2 ])
+        (reg:DI 0 ax)) "canohost.c":168:4 -1
+     (nil))
+(insn 51 50 52 5 (set (reg:SI 5 di)
+        (mem:SI (reg/f:DI 83 [ _2 ]) [3 *_2+0 S4 A32])) "canohost.c":168:4 -1
+     (nil))
+(call_insn 52 51 53 5 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strerror") [flags 0x41]  <function_decl 0x7f63285c9b00 strerror>) [0 strerror S1 A8])
+            (const_int 0 [0]))) "canohost.c":168:4 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("strerror") [flags 0x41]  <function_decl 0x7f63285c9b00 strerror>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:SI (use (reg:SI 5 di))
+        (nil)))
+(insn 53 52 54 5 (set (reg/f:DI 85 [ _4 ])
+        (reg:DI 0 ax)) "canohost.c":168:4 -1
+     (nil))
+(insn 54 53 55 5 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [26  S8 A64])
+        (reg/f:DI 85 [ _4 ])) "canohost.c":168:4 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 55 54 56 5 (set (reg/f:DI 106)
+        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7f632816c360 *.LC1>)) "canohost.c":168:4 -1
+     (nil))
+(insn 56 55 57 5 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [26  S8 A64])
+        (reg/f:DI 106)) "canohost.c":168:4 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 57 56 58 5 (set (reg:DI 37 r9)
+        (const_int 0 [0])) "canohost.c":168:4 -1
+     (nil))
+(insn 58 57 59 5 (set (reg:SI 36 r8)
+        (const_int 2 [0x2])) "canohost.c":168:4 -1
+     (nil))
+(insn 59 58 60 5 (set (reg:SI 2 cx)
+        (const_int 0 [0])) "canohost.c":168:4 -1
+     (nil))
+(insn 60 59 61 5 (set (reg:SI 1 dx)
+        (const_int 168 [0xa8])) "canohost.c":168:4 -1
+     (nil))
+(insn 61 60 62 5 (set (reg:DI 4 si)
+        (symbol_ref:DI ("__func__.0") [flags 0x2]  <var_decl 0x7f63281202d0 __func__>)) "canohost.c":168:4 -1
+     (nil))
+(insn 62 61 63 5 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f632816c2d0 *.LC0>)) "canohost.c":168:4 -1
+     (nil))
+(insn 63 62 64 5 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "canohost.c":168:4 -1
+     (nil))
+(call_insn 64 63 65 5 (call (mem:QI (symbol_ref:DI ("sshlog") [flags 0x41]  <function_decl 0x7f63280e9700 sshlog>) [0 sshlog S1 A8])
+        (const_int 16 [0x10])) "canohost.c":168:4 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshlog") [flags 0x41]  <function_decl 0x7f63280e9700 sshlog>)
+        (nil))
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (expr_list:SI (use (reg:SI 1 dx))
+                    (expr_list:SI (use (reg:SI 2 cx))
+                        (expr_list:SI (use (reg:SI 36 r8))
+                            (expr_list:DI (use (reg:DI 37 r9))
+                                (nil)))))))))
+(debug_insn 65 64 66 5 (debug_marker) "canohost.c":169:4 -1
+     (nil))
+(insn 66 65 8 5 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "canohost.c":169:11 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 8 66 67 5 (set (reg:SI 96 [ <retval> ])
+        (const_int 0 [0])) "canohost.c":169:11 -1
+     (nil))
+(jump_insn 67 8 68 5 (set (pc)
+        (label_ref:DI 177)) "canohost.c":169:11 737 {jump}
+     (nil)
+ -> 177)
+(barrier 68 67 69)
+(code_label 69 68 70 6 2 (nil) [1 uses])
+(note 70 69 71 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 71 70 72 6 (debug_marker) "canohost.c":172:3 -1
+     (nil))
+(insn 72 71 73 6 (parallel [
+            (set (reg:DI 107)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -176 [0xffffffffffffff50])))
+            (clobber (reg:CC 17 flags))
+        ]) "canohost.c":172:7 -1
+     (nil))
+(insn 73 72 74 6 (set (reg:DI 94 [ D.14142 ])
+        (reg:DI 107)) "canohost.c":172:7 -1
+     (nil))
+(insn 74 73 75 6 (parallel [
+            (set (reg:DI 108)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -180 [0xffffffffffffff4c])))
+            (clobber (reg:CC 17 flags))
+        ]) "canohost.c":172:7 -1
+     (nil))
+(insn 75 74 76 6 (set (reg:DI 1 dx)
+        (reg:DI 108)) "canohost.c":172:7 -1
+     (nil))
+(insn 76 75 77 6 (set (reg:DI 4 si)
+        (reg:DI 94 [ D.14142 ])) "canohost.c":172:7 -1
+     (nil))
+(insn 77 76 78 6 (set (reg:SI 5 di)
+        (reg/v:SI 97 [ sock ])) "canohost.c":172:7 -1
+     (nil))
+(call_insn 78 77 79 6 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("getpeername") [flags 0x41]  <function_decl 0x7f6328b40e00 getpeername>) [0 getpeername S1 A8])
+            (const_int 0 [0]))) "canohost.c":172:7 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("getpeername") [flags 0x41]  <function_decl 0x7f6328b40e00 getpeername>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:SI (use (reg:SI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(insn 79 78 80 6 (set (reg:SI 96 [ <retval> ])
+        (reg:SI 0 ax)) "canohost.c":172:7 -1
+     (nil))
+(insn 80 79 81 6 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 96 [ <retval> ])
+            (const_int -1 [0xffffffffffffffff]))) "canohost.c":172:6 -1
+     (nil))
+(jump_insn 81 80 82 6 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 104)
+            (pc))) "canohost.c":172:6 -1
+     (int_list:REG_BR_PROB 1070842724 (nil))
+ -> 104)
+(note 82 81 83 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 83 82 84 7 (debug_marker) "canohost.c":173:4 -1
+     (nil))
+(call_insn/u 84 83 85 7 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__errno_location") [flags 0x41]  <function_decl 0x7f63288d6b00 __errno_location>) [0 __errno_location S1 A8])
+            (const_int 0 [0]))) "canohost.c":173:4 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__errno_location") [flags 0x41]  <function_decl 0x7f63288d6b00 __errno_location>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (nil))
+(insn 85 84 86 7 (set (reg/f:DI 86 [ _6 ])
+        (reg:DI 0 ax)) "canohost.c":173:4 -1
+     (nil))
+(insn 86 85 87 7 (set (reg:SI 5 di)
+        (mem:SI (reg/f:DI 86 [ _6 ]) [3 *_6+0 S4 A32])) "canohost.c":173:4 -1
+     (nil))
+(call_insn 87 86 88 7 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strerror") [flags 0x41]  <function_decl 0x7f63285c9b00 strerror>) [0 strerror S1 A8])
+            (const_int 0 [0]))) "canohost.c":173:4 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("strerror") [flags 0x41]  <function_decl 0x7f63285c9b00 strerror>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:SI (use (reg:SI 5 di))
+        (nil)))
+(insn 88 87 89 7 (set (reg/f:DI 88 [ _8 ])
+        (reg:DI 0 ax)) "canohost.c":173:4 -1
+     (nil))
+(insn 89 88 90 7 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [26  S8 A64])
+        (reg/f:DI 88 [ _8 ])) "canohost.c":173:4 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 90 89 91 7 (set (reg/f:DI 109)
+        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7f632816c3f0 *.LC2>)) "canohost.c":173:4 -1
+     (nil))
+(insn 91 90 92 7 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [26  S8 A64])
+        (reg/f:DI 109)) "canohost.c":173:4 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 92 91 93 7 (set (reg:DI 37 r9)
+        (const_int 0 [0])) "canohost.c":173:4 -1
+     (nil))
+(insn 93 92 94 7 (set (reg:SI 36 r8)
+        (const_int 5 [0x5])) "canohost.c":173:4 -1
+     (nil))
+(insn 94 93 95 7 (set (reg:SI 2 cx)
+        (const_int 0 [0])) "canohost.c":173:4 -1
+     (nil))
+(insn 95 94 96 7 (set (reg:SI 1 dx)
+        (const_int 173 [0xad])) "canohost.c":173:4 -1
+     (nil))
+(insn 96 95 97 7 (set (reg:DI 4 si)
+        (symbol_ref:DI ("__func__.0") [flags 0x2]  <var_decl 0x7f63281202d0 __func__>)) "canohost.c":173:4 -1
+     (nil))
+(insn 97 96 98 7 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f632816c2d0 *.LC0>)) "canohost.c":173:4 -1
+     (nil))
+(insn 98 97 99 7 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "canohost.c":173:4 -1
+     (nil))
+(call_insn 99 98 100 7 (call (mem:QI (symbol_ref:DI ("sshlog") [flags 0x41]  <function_decl 0x7f63280e9700 sshlog>) [0 sshlog S1 A8])
+        (const_int 16 [0x10])) "canohost.c":173:4 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshlog") [flags 0x41]  <function_decl 0x7f63280e9700 sshlog>)
+        (nil))
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (expr_list:SI (use (reg:SI 1 dx))
+                    (expr_list:SI (use (reg:SI 2 cx))
+                        (expr_list:SI (use (reg:SI 36 r8))
+                            (expr_list:DI (use (reg:DI 37 r9))
+                                (nil)))))))))
+(debug_insn 100 99 101 7 (debug_marker) "canohost.c":174:4 -1
+     (nil))
+(insn 101 100 102 7 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "canohost.c":174:11 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(jump_insn 102 101 103 7 (set (pc)
+        (label_ref:DI 177)) "canohost.c":174:11 737 {jump}
+     (nil)
+ -> 177)
+(barrier 103 102 104)
+(code_label 104 103 105 8 3 (nil) [2 uses])
+(note 105 104 106 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 106 105 107 8 (debug_marker) "canohost.c":179:2 -1
+     (nil))
+(insn 107 106 108 8 (set (reg:HI 89 [ _9 ])
+        (mem/c:HI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -176 [0xffffffffffffff50])) [2 from.ss_family+0 S2 A64])) "canohost.c":179:10 -1
+     (nil))
+(insn 108 107 109 8 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:HI 89 [ _9 ])
+            (const_int 10 [0xa]))) "canohost.c":179:5 -1
+     (nil))
+(jump_insn 109 108 110 8 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 116)
+            (pc))) "canohost.c":179:5 -1
+     (int_list:REG_BR_PROB 708669604 (nil))
+ -> 116)
+(note 110 109 111 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 111 110 112 9 (debug_marker) "canohost.c":180:3 -1
+     (nil))
+(insn 112 111 113 9 (set (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -180 [0xffffffffffffff4c])) [3 fromlen+0 S4 A32])
+        (const_int 28 [0x1c])) "canohost.c":180:11 -1
+     (nil))
+(debug_insn 113 112 7 9 (debug_marker) "canohost.c":183:2 -1
+     (nil))
+(insn 7 113 114 9 (set (reg:SI 90 [ pretmp_10 ])
+        (const_int 28 [0x1c])) "canohost.c":180:11 -1
+     (nil))
+(jump_insn 114 7 115 9 (set (pc)
+        (label_ref 123)) "canohost.c":180:11 -1
+     (nil)
+ -> 123)
+(barrier 115 114 116)
+(code_label 116 115 117 10 5 (nil) [1 uses])
+(note 117 116 118 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 118 117 119 10 (debug_marker) "canohost.c":183:2 -1
+     (nil))
+(insn 119 118 120 10 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:HI 89 [ _9 ])
+            (const_int 2 [0x2]))) "canohost.c":183:5 -1
+     (nil))
+(jump_insn 120 119 121 10 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 190)
+            (pc))) "canohost.c":183:5 736 {*jcc}
+     (int_list:REG_BR_PROB 831661860 (nil))
+ -> 190)
+(note 121 120 122 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 122 121 123 11 (set (reg:SI 90 [ pretmp_10 ])
+        (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -180 [0xffffffffffffff4c])) [3 fromlen+0 S4 A32])) "canohost.c":187:11 -1
+     (nil))
+(code_label 123 122 124 12 6 (nil) [1 uses])
+(note 124 123 125 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 125 124 126 12 (debug_marker) "canohost.c":187:2 -1
+     (nil))
+(insn 126 125 127 12 (parallel [
+            (set (reg:DI 110)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -48 [0xffffffffffffffd0])))
+            (clobber (reg:CC 17 flags))
+        ]) "canohost.c":187:11 -1
+     (nil))
+(insn 127 126 128 12 (parallel [
+            (set (reg:DI 111)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -176 [0xffffffffffffff50])))
+            (clobber (reg:CC 17 flags))
+        ]) "canohost.c":187:11 -1
+     (nil))
+(insn 128 127 129 12 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "canohost.c":187:11 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 129 128 130 12 (set (mem:SI (pre_modify:DI (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8]))) [3  S4 A32])
+        (const_int 2 [0x2])) "canohost.c":187:11 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 130 129 131 12 (set (reg:SI 37 r9)
+        (const_int 32 [0x20])) "canohost.c":187:11 -1
+     (nil))
+(insn 131 130 132 12 (set (reg:DI 36 r8)
+        (reg:DI 110)) "canohost.c":187:11 -1
+     (nil))
+(insn 132 131 133 12 (set (reg:SI 2 cx)
+        (const_int 0 [0])) "canohost.c":187:11 -1
+     (nil))
+(insn 133 132 134 12 (set (reg:DI 1 dx)
+        (const_int 0 [0])) "canohost.c":187:11 -1
+     (nil))
+(insn 134 133 135 12 (set (reg:SI 4 si)
+        (reg:SI 90 [ pretmp_10 ])) "canohost.c":187:11 -1
+     (nil))
+(insn 135 134 136 12 (set (reg:DI 5 di)
+        (reg:DI 111)) "canohost.c":187:11 -1
+     (nil))
+(call_insn 136 135 137 12 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("getnameinfo") [flags 0x41]  <function_decl 0x7f6328958f00 getnameinfo>) [0 getnameinfo S1 A8])
+            (const_int 16 [0x10]))) "canohost.c":187:11 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("getnameinfo") [flags 0x41]  <function_decl 0x7f6328958f00 getnameinfo>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (expr_list:SI (use (reg:SI 2 cx))
+                    (expr_list:DI (use (reg:DI 36 r8))
+                        (expr_list:SI (use (reg:SI 37 r9))
+                            (nil))))))))
+(insn 137 136 138 12 (set (reg/v:SI 92 [ r ])
+        (reg:SI 0 ax)) "canohost.c":187:11 -1
+     (nil))
+(debug_insn 138 137 139 12 (var_location:SI r (reg/v:SI 92 [ r ])) "canohost.c":187:11 -1
+     (nil))
+(insn 139 138 140 12 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "canohost.c":187:5 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 140 139 141 12 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 92 [ r ])
+            (const_int 0 [0]))) "canohost.c":187:5 -1
+     (nil))
+(jump_insn 141 140 142 12 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 159)
+            (pc))) "canohost.c":187:5 -1
+     (int_list:REG_BR_PROB 1073312332 (nil))
+ -> 159)
+(note 142 141 143 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 143 142 144 13 (debug_marker) "canohost.c":189:3 -1
+     (nil))
+(insn 144 143 145 13 (set (reg:SI 5 di)
+        (reg/v:SI 92 [ r ])) "canohost.c":189:3 -1
+     (nil))
+(call_insn 145 144 146 13 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("ssh_gai_strerror") [flags 0x41]  <function_decl 0x7f6328103900 ssh_gai_strerror>) [0 ssh_gai_strerror S1 A8])
+            (const_int 0 [0]))) "canohost.c":189:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("ssh_gai_strerror") [flags 0x41]  <function_decl 0x7f6328103900 ssh_gai_strerror>)
+        (nil))
+    (expr_list:SI (use (reg:SI 5 di))
+        (nil)))
+(insn 146 145 147 13 (set (reg/f:DI 91 [ _14 ])
+        (reg:DI 0 ax)) "canohost.c":189:3 -1
+     (nil))
+(insn 147 146 148 13 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [26  S8 A64])
+        (reg/f:DI 91 [ _14 ])) "canohost.c":189:3 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 148 147 149 13 (set (reg/f:DI 112)
+        (symbol_ref/f:DI ("*.LC3") [flags 0x2]  <var_decl 0x7f632816c480 *.LC3>)) "canohost.c":189:3 -1
+     (nil))
+(insn 149 148 150 13 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [26  S8 A64])
+        (reg/f:DI 112)) "canohost.c":189:3 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 150 149 151 13 (set (reg:DI 37 r9)
+        (const_int 0 [0])) "canohost.c":189:3 -1
+     (nil))
+(insn 151 150 152 13 (set (reg:SI 36 r8)
+        (const_int 1 [0x1])) "canohost.c":189:3 -1
+     (nil))
+(insn 152 151 153 13 (set (reg:SI 2 cx)
+        (const_int 1 [0x1])) "canohost.c":189:3 -1
+     (nil))
+(insn 153 152 154 13 (set (reg:SI 1 dx)
+        (const_int 189 [0xbd])) "canohost.c":189:3 -1
+     (nil))
+(insn 154 153 155 13 (set (reg:DI 4 si)
+        (symbol_ref:DI ("__func__.0") [flags 0x2]  <var_decl 0x7f63281202d0 __func__>)) "canohost.c":189:3 -1
+     (nil))
+(insn 155 154 156 13 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f632816c2d0 *.LC0>)) "canohost.c":189:3 -1
+     (nil))
+(insn 156 155 157 13 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "canohost.c":189:3 -1
+     (nil))
+(call_insn 157 156 158 13 (call (mem:QI (symbol_ref:DI ("sshfatal") [flags 0x41]  <function_decl 0x7f63280e9b00 sshfatal>) [0 sshfatal S1 A8])
+        (const_int 16 [0x10])) "canohost.c":189:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshfatal") [flags 0x41]  <function_decl 0x7f63280e9b00 sshfatal>)
+        (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+            (expr_list:REG_NORETURN (const_int 0 [0])
+                (nil))))
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (expr_list:SI (use (reg:SI 1 dx))
+                    (expr_list:SI (use (reg:SI 2 cx))
+                        (expr_list:SI (use (reg:SI 36 r8))
+                            (expr_list:DI (use (reg:DI 37 r9))
+                                (nil)))))))))
+(barrier 158 157 159)
+(code_label 159 158 160 14 7 (nil) [1 uses])
+(note 160 159 161 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 161 160 162 14 (debug_marker) "canohost.c":191:2 -1
+     (nil))
+(debug_insn 162 161 163 14 (var_location:DI __nptr (plus:DI (reg/f:DI 77 virtual-stack-vars)
+        (const_int -48 [0xffffffffffffffd0]))) "canohost.c":191:2 -1
+     (nil))
+(debug_insn 163 162 164 14 (debug_marker:BLK) "/usr/include/stdlib.h":361:1 -1
+     (nil))
+(debug_insn 164 163 165 14 (debug_marker) "/usr/include/stdlib.h":363:3 -1
+     (nil))
+(insn 165 164 166 14 (parallel [
+            (set (reg:DI 113)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -48 [0xffffffffffffffd0])))
+            (clobber (reg:CC 17 flags))
+        ]) "/usr/include/stdlib.h":363:16 -1
+     (nil))
+(insn 166 165 167 14 (set (reg:SI 1 dx)
+        (const_int 10 [0xa])) "/usr/include/stdlib.h":363:16 -1
+     (nil))
+(insn 167 166 168 14 (set (reg:DI 4 si)
+        (const_int 0 [0])) "/usr/include/stdlib.h":363:16 -1
+     (nil))
+(insn 168 167 169 14 (set (reg:DI 5 di)
+        (reg:DI 113)) "/usr/include/stdlib.h":363:16 -1
+     (nil))
+(call_insn 169 168 170 14 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strtol") [flags 0x41]  <function_decl 0x7f6328839500 strtol>) [0 strtol S1 A8])
+            (const_int 0 [0]))) "/usr/include/stdlib.h":363:16 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("strtol") [flags 0x41]  <function_decl 0x7f6328839500 strtol>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:SI (use (reg:SI 1 dx))
+                (nil)))))
+(insn 170 169 171 14 (set (reg:DI 93 [ _39 ])
+        (reg:DI 0 ax)) "/usr/include/stdlib.h":363:16 -1
+     (nil))
+(insn 171 170 172 14 (set (reg:SI 96 [ <retval> ])
+        (subreg:SI (reg:DI 93 [ _39 ]) 0)) "/usr/include/stdlib.h":363:10 -1
+     (nil))
+(debug_insn 172 171 187 14 (var_location:DI __nptr (clobber (const_int 0 [0]))) "canohost.c":191:9 -1
+     (nil))
+(jump_insn 187 172 188 14 (set (pc)
+        (label_ref:DI 177)) "canohost.c":191:9 737 {jump}
+     (nil)
+ -> 177)
+(barrier 188 187 190)
+(code_label 190 188 189 15 9 (nil) [1 uses])
+(note 189 190 9 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(insn 9 189 177 15 (set (reg:SI 96 [ <retval> ])
+        (const_int 0 [0])) "canohost.c":184:10 -1
+     (nil))
+(code_label 177 9 186 17 1 (nil) [3 uses])
+(note 186 177 178 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
+(insn 178 186 179 17 (set (reg/f:DI 115)
+        (const_int 40 [0x28])) "canohost.c":192:1 -1
+     (nil))
+(insn 179 178 180 17 (parallel [
+            (set (reg:CCZ 17 flags)
+                (unspec:CCZ [
+                        (mem/v/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                                (const_int -8 [0xfffffffffffffff8])) [25 D.14238+0 S8 A64])
+                        (mem/v/f:DI (reg/f:DI 115) [0 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_TEST))
+            (clobber (scratch:DI))
+        ]) "canohost.c":192:1 -1
+     (nil))
+(jump_insn 180 179 191 17 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 183)
+            (pc))) "canohost.c":192:1 -1
+     (int_list:REG_BR_PROB 1073312332 (nil))
+ -> 183)
+(note 191 180 181 18 [bb 18] NOTE_INSN_BASIC_BLOCK)
+(call_insn 181 191 182 18 (call (mem:QI (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7f6328161700 __stack_chk_fail>) [0 __stack_chk_fail S1 A8])
+        (const_int 0 [0])) "canohost.c":192:1 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7f6328161700 __stack_chk_fail>)
+        (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+            (expr_list:REG_NORETURN (const_int 0 [0])
+                (expr_list:REG_EH_REGION (const_int 0 [0])
+                    (nil)))))
+    (nil))
+(barrier 182 181 183)
+(code_label 183 182 192 19 8 (nil) [1 uses])
+(note 192 183 184 19 [bb 19] NOTE_INSN_BASIC_BLOCK)
+(insn 184 192 185 19 (set (reg/i:SI 0 ax)
+        (reg:SI 96 [ <retval> ])) "canohost.c":192:1 -1
+     (nil))
+(insn 185 184 0 19 (use (reg/i:SI 0 ax)) "canohost.c":192:1 -1
+     (nil))
+
+;; Function ipv64_normalise_mapped (ipv64_normalise_mapped, funcdef_no=383, decl_uid=13693, cgraph_uid=384, symbol_order=383)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Edge 2->8 redirected to 9
+Edge 4->8 redirected to 9
+Edge 5->8 redirected to 9
+Edge 6->8 redirected to 9
+Merging block 8 into block 7...
+Merged blocks 7 and 8.
+Merged 7 and 8 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 5 NOTE_INSN_DELETED)
+(note 5 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 5 3 2 (set (reg/v/f:DI 88 [ addr ])
+        (reg:DI 5 di [ addr ])) "canohost.c":40:1 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v/f:DI 89 [ len ])
+        (reg:DI 4 si [ len ])) "canohost.c":40:1 -1
+     (nil))
+(note 4 3 7 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 7 4 8 2 (debug_marker) "canohost.c":41:2 -1
+     (nil))
+(debug_insn 8 7 9 2 (var_location:DI a6 (reg/v/f:DI 88 [ addr ])) "canohost.c":41:23 -1
+     (nil))
+(debug_insn 9 8 10 2 (debug_marker) "canohost.c":42:2 -1
+     (nil))
+(debug_insn 10 9 11 2 (var_location:DI a4 (reg/v/f:DI 88 [ addr ])) "canohost.c":42:22 -1
+     (nil))
+(debug_insn 11 10 12 2 (debug_marker) "canohost.c":43:2 -1
+     (nil))
+(debug_insn 12 11 13 2 (debug_marker) "canohost.c":44:2 -1
+     (nil))
+(debug_insn 13 12 14 2 (debug_marker) "canohost.c":46:2 -1
+     (nil))
+(insn 14 13 15 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem:HI (reg/v/f:DI 88 [ addr ]) [2 addr_6(D)->ss_family+0 S2 A64])
+            (const_int 10 [0xa]))) "canohost.c":46:5 -1
+     (nil))
+(jump_insn 15 14 16 2 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 98)
+            (pc))) "canohost.c":46:5 736 {*jcc}
+     (int_list:REG_BR_PROB 536870916 (nil))
+ -> 98)
+(note 16 15 17 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 17 16 18 4 (debug_marker) "canohost.c":47:7 -1
+     (nil))
+(debug_insn 18 17 19 4 (var_location:DI D#1 (plus:DI (reg/v/f:DI 88 [ addr ])
+        (const_int 8 [0x8]))) "canohost.c":47:7 -1
+     (nil))
+(debug_insn 19 18 20 4 (var_location:DI __a (debug_expr:DI D#1)) "canohost.c":47:7 -1
+     (nil))
+(debug_insn 20 19 21 4 (debug_marker) "canohost.c":47:7 -1
+     (nil))
+(insn 21 20 22 4 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/j:SI (plus:DI (reg/v/f:DI 88 [ addr ])
+                    (const_int 8 [0x8])) [5 MEM[(const struct in6_addr *)addr_6(D) + 8B].__in6_u.__u6_addr32[0]+0 S4 A32])
+            (const_int 0 [0]))) "canohost.c":47:7 -1
+     (nil))
+(jump_insn 22 21 23 4 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 98)
+            (pc))) "canohost.c":47:7 736 {*jcc}
+     (int_list:REG_BR_PROB 365072228 (nil))
+ -> 98)
+(note 23 22 24 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 24 23 25 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/j:SI (plus:DI (reg/v/f:DI 88 [ addr ])
+                    (const_int 12 [0xc])) [5 MEM[(const struct in6_addr *)addr_6(D) + 8B].__in6_u.__u6_addr32[1]+0 S4 A32])
+            (const_int 0 [0]))) "canohost.c":47:7 -1
+     (nil))
+(jump_insn 25 24 26 5 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 98)
+            (pc))) "canohost.c":47:7 736 {*jcc}
+     (int_list:REG_BR_PROB 365072228 (nil))
+ -> 98)
+(note 26 25 27 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 27 26 28 6 (var_location:SI __bsx (const_int 65535 [0xffff])) "canohost.c":47:7 -1
+     (nil))
+(debug_insn 28 27 29 6 (debug_marker) "/usr/include/x86_64-linux-gnu/bits/byteswap.h":52:3 -1
+     (nil))
+(debug_insn 29 28 30 6 (var_location:SI __bsx (clobber (const_int 0 [0]))) "canohost.c":47:7 -1
+     (nil))
+(insn 30 29 31 6 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/j:SI (plus:DI (reg/v/f:DI 88 [ addr ])
+                    (const_int 16 [0x10])) [5 MEM[(const struct in6_addr *)addr_6(D) + 8B].__in6_u.__u6_addr32[2]+0 S4 A32])
+            (const_int -65536 [0xffffffffffff0000]))) "canohost.c":47:7 -1
+     (nil))
+(jump_insn 31 30 32 6 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 98)
+            (pc))) "canohost.c":47:7 736 {*jcc}
+     (int_list:REG_BR_PROB 719407028 (nil))
+ -> 98)
+(note 32 31 33 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 33 32 34 7 (var_location:DI addr (reg/v/f:DI 88 [ addr ])) -1
+     (nil))
+(debug_insn 34 33 35 7 (var_location:DI len (reg/v/f:DI 89 [ len ])) -1
+     (nil))
+(debug_insn 35 34 36 7 (debug_marker:BLK) "canohost.c":39:1 -1
+     (nil))
+(debug_insn 36 35 37 7 (debug_marker) "canohost.c":50:2 -1
+     (nil))
+(insn 37 36 38 7 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "canohost.c":50:2 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 38 37 39 7 (set (reg/f:DI 90)
+        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f6328190ea0 *.LC4>)) "canohost.c":50:2 -1
+     (nil))
+(insn 39 38 40 7 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [26  S8 A64])
+        (reg/f:DI 90)) "canohost.c":50:2 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 40 39 41 7 (set (reg:DI 37 r9)
+        (const_int 0 [0])) "canohost.c":50:2 -1
+     (nil))
+(insn 41 40 42 7 (set (reg:SI 36 r8)
+        (const_int 7 [0x7])) "canohost.c":50:2 -1
+     (nil))
+(insn 42 41 43 7 (set (reg:SI 2 cx)
+        (const_int 0 [0])) "canohost.c":50:2 -1
+     (nil))
+(insn 43 42 44 7 (set (reg:SI 1 dx)
+        (const_int 50 [0x32])) "canohost.c":50:2 -1
+     (nil))
+(insn 44 43 45 7 (set (reg:DI 4 si)
+        (symbol_ref:DI ("__func__.3") [flags 0x2]  <var_decl 0x7f63280c4900 __func__>)) "canohost.c":50:2 -1
+     (nil))
+(insn 45 44 46 7 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f632816c2d0 *.LC0>)) "canohost.c":50:2 -1
+     (nil))
+(insn 46 45 47 7 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "canohost.c":50:2 -1
+     (nil))
+(call_insn 47 46 48 7 (call (mem:QI (symbol_ref:DI ("sshlog") [flags 0x41]  <function_decl 0x7f63280e9700 sshlog>) [0 sshlog S1 A8])
+        (const_int 16 [0x10])) "canohost.c":50:2 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshlog") [flags 0x41]  <function_decl 0x7f63280e9700 sshlog>)
+        (nil))
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (expr_list:SI (use (reg:SI 1 dx))
+                    (expr_list:SI (use (reg:SI 2 cx))
+                        (expr_list:SI (use (reg:SI 36 r8))
+                            (expr_list:DI (use (reg:DI 37 r9))
+                                (nil)))))))))
+(debug_insn 48 47 49 7 (debug_marker) "canohost.c":52:2 -1
+     (nil))
+(debug_insn 49 48 50 7 (var_location:DI D#2 (plus:DI (reg/v/f:DI 88 [ addr ])
+        (const_int 8 [0x8]))) "canohost.c":52:27 -1
+     (nil))
+(debug_insn 50 49 51 7 (var_location:DI __dest (debug_implicit_ptr:DI inaddr)) "canohost.c":52:2 -1
+     (nil))
+(debug_insn 51 50 52 7 (var_location:DI __src (plus:DI (debug_expr:DI D#2)
+        (const_int 12 [0xc]))) "canohost.c":52:2 -1
+     (nil))
+(debug_insn 52 51 53 7 (var_location:DI __len (const_int 4 [0x4])) "canohost.c":52:2 -1
+     (nil))
+(debug_insn 53 52 54 7 (debug_marker) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:3 -1
+     (nil))
+(insn 54 53 55 7 (set (reg:SI 86 [ _10 ])
+        (mem:SI (plus:DI (reg/v/f:DI 88 [ addr ])
+                (const_int 20 [0x14])) [0 MEM <unsigned int> [(char * {ref-all})addr_6(D) + 20B]+0 S4 A8])) -1
+     (nil))
+(debug_insn 55 54 56 7 (var_location:SI inaddr (reg:SI 86 [ _10 ])) -1
+     (nil))
+(debug_insn 56 55 57 7 (var_location:DI __dest (clobber (const_int 0 [0]))) "canohost.c":52:2 -1
+     (nil))
+(debug_insn 57 56 58 7 (var_location:DI __src (clobber (const_int 0 [0]))) "canohost.c":52:2 -1
+     (nil))
+(debug_insn 58 57 59 7 (var_location:DI __len (clobber (const_int 0 [0]))) "canohost.c":52:2 -1
+     (nil))
+(debug_insn 59 58 60 7 (debug_marker) "canohost.c":53:2 -1
+     (nil))
+(insn 60 59 61 7 (set (reg/v:HI 87 [ port ])
+        (mem:HI (plus:DI (reg/v/f:DI 88 [ addr ])
+                (const_int 2 [0x2])) [2 MEM[(struct sockaddr_in6 *)addr_6(D)].sin6_port+0 S2 A16])) "canohost.c":53:7 -1
+     (nil))
+(debug_insn 61 60 62 7 (var_location:HI port (reg/v:HI 87 [ port ])) "canohost.c":53:7 -1
+     (nil))
+(debug_insn 62 61 63 7 (debug_marker) "canohost.c":55:2 -1
+     (nil))
+(debug_insn 63 62 64 7 (var_location:DI __dest (reg/v/f:DI 88 [ addr ])) "canohost.c":55:2 -1
+     (nil))
+(debug_insn 64 63 65 7 (var_location:SI __ch (const_int 0 [0])) "canohost.c":55:2 -1
+     (nil))
+(debug_insn 65 64 66 7 (var_location:DI __len (const_int 16 [0x10])) "canohost.c":55:2 -1
+     (nil))
+(debug_insn 66 65 67 7 (debug_marker:BLK) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":59:1 -1
+     (nil))
+(debug_insn 67 66 68 7 (debug_marker) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":71:3 -1
+     (nil))
+(insn 68 67 69 7 (set (mem:TI (reg/v/f:DI 88 [ addr ]) [0 MEM <char[1:16]> [(void *)addr_6(D)]+0 S16 A8])
+        (const_int 0 [0])) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":71:10 -1
+     (nil))
+(debug_insn 69 68 70 7 (var_location:DI __dest (clobber (const_int 0 [0]))) "canohost.c":55:2 -1
+     (nil))
+(debug_insn 70 69 71 7 (var_location:SI __ch (clobber (const_int 0 [0]))) "canohost.c":55:2 -1
+     (nil))
+(debug_insn 71 70 72 7 (var_location:DI __len (clobber (const_int 0 [0]))) "canohost.c":55:2 -1
+     (nil))
+(debug_insn 72 71 73 7 (debug_marker) "canohost.c":57:2 -1
+     (nil))
+(insn 73 72 74 7 (set (mem:HI (reg/v/f:DI 88 [ addr ]) [2 MEM[(struct sockaddr_in *)addr_6(D)].sin_family+0 S2 A32])
+        (const_int 2 [0x2])) "canohost.c":57:17 -1
+     (nil))
+(debug_insn 74 73 75 7 (debug_marker) "canohost.c":58:2 -1
+     (nil))
+(insn 75 74 76 7 (set (mem:SI (reg/v/f:DI 89 [ len ]) [3 *len_8(D)+0 S4 A32])
+        (const_int 16 [0x10])) "canohost.c":58:7 -1
+     (nil))
+(debug_insn 76 75 77 7 (debug_marker) "canohost.c":59:2 -1
+     (nil))
+(debug_insn 77 76 78 7 (var_location:DI D#3 (plus:DI (reg/v/f:DI 88 [ addr ])
+        (const_int 4 [0x4]))) "canohost.c":59:9 -1
+     (nil))
+(debug_insn 78 77 79 7 (var_location:DI __dest (debug_expr:DI D#3)) "canohost.c":59:9 -1
+     (nil))
+(debug_insn 79 78 80 7 (var_location:DI __src (debug_implicit_ptr:DI inaddr)) "canohost.c":59:9 -1
+     (nil))
+(debug_insn 80 79 81 7 (var_location:DI __len (const_int 4 [0x4])) "canohost.c":59:9 -1
+     (nil))
+(debug_insn 81 80 82 7 (debug_marker:BLK) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":31:1 -1
+     (nil))
+(debug_insn 82 81 83 7 (debug_marker) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:3 -1
+     (nil))
+(insn 83 82 84 7 (set (mem:SI (plus:DI (reg/v/f:DI 88 [ addr ])
+                (const_int 4 [0x4])) [0 MEM <unsigned int> [(char * {ref-all})addr_6(D) + 4B]+0 S4 A8])
+        (reg:SI 86 [ _10 ])) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (nil))
+(debug_insn 84 83 85 7 (var_location:DI __dest (clobber (const_int 0 [0]))) "canohost.c":59:2 -1
+     (nil))
+(debug_insn 85 84 86 7 (var_location:DI __src (clobber (const_int 0 [0]))) "canohost.c":59:2 -1
+     (nil))
+(debug_insn 86 85 87 7 (var_location:DI __len (clobber (const_int 0 [0]))) "canohost.c":59:2 -1
+     (nil))
+(debug_insn 87 86 88 7 (debug_marker) "canohost.c":60:2 -1
+     (nil))
+(insn 88 87 89 7 (set (mem:HI (plus:DI (reg/v/f:DI 88 [ addr ])
+                (const_int 2 [0x2])) [2 MEM[(struct sockaddr_in *)addr_6(D)].sin_port+0 S2 A16])
+        (reg/v:HI 87 [ port ])) "canohost.c":60:15 -1
+     (nil))
+(insn 89 88 92 7 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "canohost.c":60:15 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(debug_insn 92 89 93 7 (var_location:DI addr (clobber (const_int 0 [0]))) -1
+     (nil))
+(debug_insn 93 92 94 7 (var_location:DI len (clobber (const_int 0 [0]))) -1
+     (nil))
+(debug_insn 94 93 95 7 (var_location:DI a6 (clobber (const_int 0 [0]))) -1
+     (nil))
+(debug_insn 95 94 96 7 (var_location:DI a4 (clobber (const_int 0 [0]))) -1
+     (nil))
+(debug_insn 96 95 97 7 (var_location:HI port (clobber (const_int 0 [0]))) -1
+     (nil))
+(debug_insn 97 96 98 7 (var_location:DI __a (clobber (const_int 0 [0]))) -1
+     (nil))
+(code_label 98 97 99 9 17 (nil) [4 uses])
+(note 99 98 0 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+
+;; Function get_socket_address (get_socket_address, funcdef_no=384, decl_uid=14034, cgraph_uid=385, symbol_order=384)
+
+Partition 2: size 1025 align 16
+	ntop
+Partition 0: size 128 align 16
+	addr
+Partition 1: size 4 align 4
+	addrlen
+
+;; Generating RTL for gimple basic block 2
+Selected stringop expansion strategy: rep_8byte
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+
+;; Generating RTL for gimple basic block 11
+
+;; Generating RTL for gimple basic block 12
+
+;; Generating RTL for gimple basic block 13
+
+;; Generating RTL for gimple basic block 14
+Predictions for insn 166 bb 19
+  first match heuristics: 99.96%  exec 1073741824 (estimated locally) hit 2147483640 (estimated locally) (200.0%)
+  combined heuristics: 99.96%  exec 1073741824 (estimated locally) hit 2147483640 (estimated locally) (200.0%)
+  noreturn call heuristics: 99.96%  exec 1073741824 (estimated locally) hit 2147483640 (estimated locally) (200.0%)
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Forwarding edge 5->6 to 11 failed.
+Redirecting jump 58 from 18 to 19.
+Forwarding edge 8->9 to 5 failed.
+Redirecting jump 97 from 18 to 19.
+Redirecting jump 140 from 18 to 19.
+Redirecting jump 149 from 18 to 19.
+Merging block 18 into block 17...
+Merged blocks 17 and 18.
+Merged 17 and 18 without moving.
+Removing jump 161.
+
+
+try_optimize_cfg iteration 2
+
+Forwarding edge 5->6 to 11 failed.
+Forwarding edge 8->9 to 5 failed.
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 11 NOTE_INSN_DELETED)
+(note 11 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 11 3 2 (set (reg/v:SI 92 [ sock ])
+        (reg:SI 5 di [ sock ])) "canohost.c":69:1 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v:SI 93 [ remote ])
+        (reg:SI 4 si [ remote ])) "canohost.c":69:1 -1
+     (nil))
+(insn 4 3 5 2 (set (reg/v:SI 94 [ flags ])
+        (reg:SI 1 dx [ flags ])) "canohost.c":69:1 -1
+     (nil))
+(note 5 4 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 5 7 2 (set (reg/f:DI 95)
+        (const_int 40 [0x28])) "canohost.c":69:1 -1
+     (nil))
+(insn 7 6 13 2 (parallel [
+            (set (mem/v/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                        (const_int -8 [0xfffffffffffffff8])) [25 D.14273+0 S8 A64])
+                (unspec:DI [
+                        (mem/v/f:DI (reg/f:DI 95) [0 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_SET))
+            (set (scratch:DI)
+                (const_int 0 [0]))
+            (clobber (reg:CC 17 flags))
+        ]) "canohost.c":69:1 -1
+     (nil))
+(debug_insn 13 7 14 2 (debug_marker) "canohost.c":70:2 -1
+     (nil))
+(debug_insn 14 13 15 2 (debug_marker) "canohost.c":71:2 -1
+     (nil))
+(debug_insn 15 14 16 2 (debug_marker) "canohost.c":72:2 -1
+     (nil))
+(debug_insn 16 15 17 2 (debug_marker) "canohost.c":73:2 -1
+     (nil))
+(debug_insn 17 16 18 2 (debug_marker) "canohost.c":76:2 -1
+     (nil))
+(insn 18 17 19 2 (set (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -1172 [0xfffffffffffffb6c])) [3 addrlen+0 S4 A32])
+        (const_int 128 [0x80])) "canohost.c":76:10 -1
+     (nil))
+(debug_insn 19 18 20 2 (debug_marker) "canohost.c":77:2 -1
+     (nil))
+(debug_insn 20 19 21 2 (var_location:DI __dest (plus:DI (reg/f:DI 77 virtual-stack-vars)
+        (const_int -1168 [0xfffffffffffffb70]))) "canohost.c":77:2 -1
+     (nil))
+(debug_insn 21 20 22 2 (var_location:SI __ch (const_int 0 [0])) "canohost.c":77:2 -1
+     (nil))
+(debug_insn 22 21 23 2 (var_location:DI __len (const_int 128 [0x80])) "canohost.c":77:2 -1
+     (nil))
+(debug_insn 23 22 24 2 (debug_marker:BLK) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":59:1 -1
+     (nil))
+(debug_insn 24 23 25 2 (debug_marker) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":71:3 -1
+     (nil))
+(insn 25 24 26 2 (parallel [
+            (set (reg:DI 96)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -1168 [0xfffffffffffffb70])))
+            (clobber (reg:CC 17 flags))
+        ]) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":71:10 -1
+     (nil))
+(insn 26 25 27 2 (set (reg/f:DI 97)
+        (reg:DI 96)) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":71:10 -1
+     (nil))
+(insn 27 26 28 2 (set (reg:DI 98)
+        (const_int 0 [0])) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":71:10 -1
+     (nil))
+(insn 28 27 29 2 (set (reg:DI 99)
+        (const_int 16 [0x10])) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":71:10 -1
+     (nil))
+(insn 29 28 30 2 (parallel [
+            (set (reg:DI 99)
+                (const_int 0 [0]))
+            (set (reg/f:DI 97)
+                (plus:DI (ashift:DI (reg:DI 99)
+                        (const_int 3 [0x3]))
+                    (reg/f:DI 97)))
+            (set (mem/c:BLK (reg/f:DI 97) [0 MEM <char[1:128]> [(void *)&addr]+0 S128 A64])
+                (const_int 0 [0]))
+            (use (reg:DI 98))
+            (use (reg:DI 99))
+        ]) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":71:10 -1
+     (nil))
+(debug_insn 30 29 31 2 (var_location:DI __dest (clobber (const_int 0 [0]))) "canohost.c":77:2 -1
+     (nil))
+(debug_insn 31 30 32 2 (var_location:SI __ch (clobber (const_int 0 [0]))) "canohost.c":77:2 -1
+     (nil))
+(debug_insn 32 31 33 2 (var_location:DI __len (clobber (const_int 0 [0]))) "canohost.c":77:2 -1
+     (nil))
+(debug_insn 33 32 34 2 (debug_marker) "canohost.c":79:2 -1
+     (nil))
+(insn 34 33 35 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 93 [ remote ])
+            (const_int 0 [0]))) "canohost.c":79:5 -1
+     (nil))
+(jump_insn 35 34 36 2 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 60)
+            (pc))) "canohost.c":79:5 -1
+     (int_list:REG_BR_PROB 536870916 (nil))
+ -> 60)
+(note 36 35 37 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 37 36 38 4 (debug_marker) "canohost.c":80:3 -1
+     (nil))
+(insn 38 37 39 4 (parallel [
+            (set (reg:DI 100)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -1168 [0xfffffffffffffb70])))
+            (clobber (reg:CC 17 flags))
+        ]) "canohost.c":80:7 -1
+     (nil))
+(insn 39 38 40 4 (set (reg:DI 90 [ D.14099 ])
+        (reg:DI 100)) "canohost.c":80:7 -1
+     (nil))
+(insn 40 39 41 4 (parallel [
+            (set (reg:DI 101)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -1172 [0xfffffffffffffb6c])))
+            (clobber (reg:CC 17 flags))
+        ]) "canohost.c":80:7 -1
+     (nil))
+(insn 41 40 42 4 (set (reg:DI 1 dx)
+        (reg:DI 101)) "canohost.c":80:7 -1
+     (nil))
+(insn 42 41 43 4 (set (reg:DI 4 si)
+        (reg:DI 90 [ D.14099 ])) "canohost.c":80:7 -1
+     (nil))
+(insn 43 42 44 4 (set (reg:SI 5 di)
+        (reg/v:SI 92 [ sock ])) "canohost.c":80:7 -1
+     (nil))
+(call_insn 44 43 45 4 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("getpeername") [flags 0x41]  <function_decl 0x7f6328b40e00 getpeername>) [0 getpeername S1 A8])
+            (const_int 0 [0]))) "canohost.c":80:7 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("getpeername") [flags 0x41]  <function_decl 0x7f6328b40e00 getpeername>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:SI (use (reg:SI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(insn 45 44 46 4 (set (reg:SI 82 [ _1 ])
+        (reg:SI 0 ax)) "canohost.c":80:7 -1
+     (nil))
+(insn 46 45 47 4 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 82 [ _1 ])
+            (const_int 0 [0]))) "canohost.c":80:6 -1
+     (nil))
+(jump_insn 47 46 73 4 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 56)
+            (pc))) "canohost.c":80:6 -1
+     (int_list:REG_BR_PROB 186616332 (nil))
+ -> 56)
+(code_label 73 47 48 5 30 (nil) [1 uses])
+(note 48 73 49 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 49 48 50 5 (debug_marker) "canohost.c":88:2 -1
+     (nil))
+(insn 50 49 51 5 (set (reg:HI 84 [ _3 ])
+        (mem/c:HI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -1168 [0xfffffffffffffb70])) [2 addr.ss_family+0 S2 A64])) "canohost.c":88:10 -1
+     (nil))
+(insn 51 50 52 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:HI 84 [ _3 ])
+            (const_int 10 [0xa]))) "canohost.c":88:5 -1
+     (nil))
+(jump_insn 52 51 55 5 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 77)
+            (pc))) "canohost.c":88:5 -1
+     (int_list:REG_BR_PROB 217325348 (nil))
+ -> 77)
+(note 55 52 53 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 53 55 54 6 (set (pc)
+        (label_ref 88)) -1
+     (nil)
+ -> 88)
+(barrier 54 53 56)
+(code_label 56 54 57 7 26 (nil) [2 uses])
+(note 57 56 8 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 8 57 58 7 (set (reg/f:DI 91 [ <retval> ])
+        (const_int 0 [0])) "canohost.c":81:11 -1
+     (nil))
+(jump_insn 58 8 59 7 (set (pc)
+        (label_ref:DI 163)) 737 {jump}
+     (nil)
+ -> 163)
+(barrier 59 58 60)
+(code_label 60 59 61 8 25 (nil) [1 uses])
+(note 61 60 62 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 62 61 63 8 (debug_marker) "canohost.c":83:3 -1
+     (nil))
+(insn 63 62 64 8 (parallel [
+            (set (reg:DI 102)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -1168 [0xfffffffffffffb70])))
+            (clobber (reg:CC 17 flags))
+        ]) "canohost.c":83:7 -1
+     (nil))
+(insn 64 63 65 8 (set (reg:DI 89 [ D.14104 ])
+        (reg:DI 102)) "canohost.c":83:7 -1
+     (nil))
+(insn 65 64 66 8 (parallel [
+            (set (reg:DI 103)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -1172 [0xfffffffffffffb6c])))
+            (clobber (reg:CC 17 flags))
+        ]) "canohost.c":83:7 -1
+     (nil))
+(insn 66 65 67 8 (set (reg:DI 1 dx)
+        (reg:DI 103)) "canohost.c":83:7 -1
+     (nil))
+(insn 67 66 68 8 (set (reg:DI 4 si)
+        (reg:DI 89 [ D.14104 ])) "canohost.c":83:7 -1
+     (nil))
+(insn 68 67 69 8 (set (reg:SI 5 di)
+        (reg/v:SI 92 [ sock ])) "canohost.c":83:7 -1
+     (nil))
+(call_insn 69 68 70 8 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("getsockname") [flags 0x41]  <function_decl 0x7f6328b40c00 getsockname>) [0 getsockname S1 A8])
+            (const_int 0 [0]))) "canohost.c":83:7 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("getsockname") [flags 0x41]  <function_decl 0x7f6328b40c00 getsockname>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:SI (use (reg:SI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(insn 70 69 71 8 (set (reg:SI 83 [ _2 ])
+        (reg:SI 0 ax)) "canohost.c":83:7 -1
+     (nil))
+(insn 71 70 72 8 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 83 [ _2 ])
+            (const_int 0 [0]))) "canohost.c":83:6 -1
+     (nil))
+(jump_insn 72 71 76 8 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 56)
+            (pc))) "canohost.c":83:6 -1
+     (int_list:REG_BR_PROB 186616332 (nil))
+ -> 56)
+(note 76 72 74 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 74 76 75 9 (set (pc)
+        (label_ref 73)) -1
+     (nil)
+ -> 73)
+(barrier 75 74 77)
+(code_label 77 75 78 10 27 (nil) [1 uses])
+(note 78 77 79 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 79 78 80 10 (debug_marker) "canohost.c":89:3 -1
+     (nil))
+(insn 80 79 81 10 (set (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -1172 [0xfffffffffffffb6c])) [3 addrlen+0 S4 A32])
+        (const_int 28 [0x1c])) "canohost.c":89:11 -1
+     (nil))
+(debug_insn 81 80 82 10 (debug_marker) "canohost.c":90:3 -1
+     (nil))
+(insn 82 81 83 10 (parallel [
+            (set (reg:DI 104)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -1172 [0xfffffffffffffb6c])))
+            (clobber (reg:CC 17 flags))
+        ]) "canohost.c":90:3 -1
+     (nil))
+(insn 83 82 84 10 (parallel [
+            (set (reg:DI 105)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -1168 [0xfffffffffffffb70])))
+            (clobber (reg:CC 17 flags))
+        ]) "canohost.c":90:3 -1
+     (nil))
+(insn 84 83 85 10 (set (reg:DI 4 si)
+        (reg:DI 104)) "canohost.c":90:3 -1
+     (nil))
+(insn 85 84 86 10 (set (reg:DI 5 di)
+        (reg:DI 105)) "canohost.c":90:3 -1
+     (nil))
+(call_insn 86 85 87 10 (call (mem:QI (symbol_ref:DI ("ipv64_normalise_mapped") [flags 0x3]  <function_decl 0x7f63280f5200 ipv64_normalise_mapped>) [0 ipv64_normalise_mapped S1 A8])
+        (const_int 0 [0])) "canohost.c":90:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("ipv64_normalise_mapped") [flags 0x3]  <function_decl 0x7f63280f5200 ipv64_normalise_mapped>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 87 86 88 10 (set (reg:HI 84 [ _3 ])
+        (mem/c:HI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -1168 [0xfffffffffffffb70])) [2 addr.ss_family+0 S2 A64])) "canohost.c":93:14 -1
+     (nil))
+(code_label 88 87 89 11 28 (nil) [1 uses])
+(note 89 88 90 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 90 89 91 11 (debug_marker) "canohost.c":93:2 -1
+     (nil))
+(insn 91 90 92 11 (parallel [
+            (set (reg:HI 106)
+                (and:HI (reg:HI 84 [ _3 ])
+                    (const_int -9 [0xfffffffffffffff7])))
+            (clobber (reg:CC 17 flags))
+        ]) "canohost.c":93:2 -1
+     (nil))
+(insn 92 91 93 11 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:HI 106)
+            (const_int 2 [0x2]))) "canohost.c":93:2 -1
+     (nil))
+(jump_insn 93 92 94 11 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 100)
+            (pc))) "canohost.c":93:2 -1
+     (int_list:REG_BR_PROB 178956982 (nil))
+ -> 100)
+(note 94 93 95 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 95 94 96 12 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:HI 84 [ _3 ])
+            (const_int 1 [0x1]))) "canohost.c":93:2 -1
+     (nil))
+(jump_insn 96 95 99 12 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 151)
+            (pc))) "canohost.c":93:2 -1
+     (int_list:REG_BR_PROB 429496734 (nil))
+ -> 151)
+(note 99 96 10 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 10 99 97 13 (set (reg/f:DI 91 [ <retval> ])
+        (const_int 0 [0])) "canohost.c":93:2 -1
+     (nil))
+(jump_insn 97 10 98 13 (set (pc)
+        (label_ref:DI 163)) "canohost.c":93:2 737 {jump}
+     (nil)
+ -> 163)
+(barrier 98 97 100)
+(code_label 100 98 101 14 31 (nil) [1 uses])
+(note 101 100 102 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 102 101 103 14 (debug_marker) "canohost.c":97:3 -1
+     (nil))
+(insn 103 102 104 14 (parallel [
+            (set (reg:DI 107)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -1040 [0xfffffffffffffbf0])))
+            (clobber (reg:CC 17 flags))
+        ]) "canohost.c":97:12 -1
+     (nil))
+(insn 104 103 105 14 (set (reg:SI 108)
+        (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -1172 [0xfffffffffffffb6c])) [3 addrlen+0 S4 A32])) "canohost.c":97:12 -1
+     (nil))
+(insn 105 104 106 14 (parallel [
+            (set (reg:DI 109)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -1168 [0xfffffffffffffb70])))
+            (clobber (reg:CC 17 flags))
+        ]) "canohost.c":97:12 -1
+     (nil))
+(insn 106 105 107 14 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "canohost.c":97:12 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 107 106 108 14 (set (mem:SI (pre_modify:DI (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8]))) [3  S4 A32])
+        (reg/v:SI 94 [ flags ])) "canohost.c":97:12 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 108 107 109 14 (set (reg:SI 37 r9)
+        (const_int 0 [0])) "canohost.c":97:12 -1
+     (nil))
+(insn 109 108 110 14 (set (reg:DI 36 r8)
+        (const_int 0 [0])) "canohost.c":97:12 -1
+     (nil))
+(insn 110 109 111 14 (set (reg:SI 2 cx)
+        (const_int 1025 [0x401])) "canohost.c":97:12 -1
+     (nil))
+(insn 111 110 112 14 (set (reg:DI 1 dx)
+        (reg:DI 107)) "canohost.c":97:12 -1
+     (nil))
+(insn 112 111 113 14 (set (reg:SI 4 si)
+        (reg:SI 108)) "canohost.c":97:12 -1
+     (nil))
+(insn 113 112 114 14 (set (reg:DI 5 di)
+        (reg:DI 109)) "canohost.c":97:12 -1
+     (nil))
+(call_insn 114 113 115 14 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("getnameinfo") [flags 0x41]  <function_decl 0x7f6328958f00 getnameinfo>) [0 getnameinfo S1 A8])
+            (const_int 16 [0x10]))) "canohost.c":97:12 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("getnameinfo") [flags 0x41]  <function_decl 0x7f6328958f00 getnameinfo>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (expr_list:SI (use (reg:SI 2 cx))
+                    (expr_list:DI (use (reg:DI 36 r8))
+                        (expr_list:SI (use (reg:SI 37 r9))
+                            (nil))))))))
+(insn 115 114 116 14 (set (reg/v:SI 88 [ r ])
+        (reg:SI 0 ax)) "canohost.c":97:12 -1
+     (nil))
+(debug_insn 116 115 117 14 (var_location:SI r (reg/v:SI 88 [ r ])) "canohost.c":97:12 -1
+     (nil))
+(insn 117 116 118 14 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "canohost.c":97:6 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 118 117 119 14 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 88 [ r ])
+            (const_int 0 [0]))) "canohost.c":97:6 -1
+     (nil))
+(jump_insn 119 118 120 14 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 142)
+            (pc))) "canohost.c":97:6 -1
+     (int_list:REG_BR_PROB 887125500 (nil))
+ -> 142)
+(note 120 119 121 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 121 120 122 15 (debug_marker) "canohost.c":99:4 -1
+     (nil))
+(insn 122 121 123 15 (set (reg:SI 5 di)
+        (reg/v:SI 88 [ r ])) "canohost.c":99:4 -1
+     (nil))
+(call_insn 123 122 124 15 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("ssh_gai_strerror") [flags 0x41]  <function_decl 0x7f6328103900 ssh_gai_strerror>) [0 ssh_gai_strerror S1 A8])
+            (const_int 0 [0]))) "canohost.c":99:4 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("ssh_gai_strerror") [flags 0x41]  <function_decl 0x7f6328103900 ssh_gai_strerror>)
+        (nil))
+    (expr_list:SI (use (reg:SI 5 di))
+        (nil)))
+(insn 124 123 125 15 (set (reg/f:DI 86 [ _6 ])
+        (reg:DI 0 ax)) "canohost.c":99:4 -1
+     (nil))
+(insn 125 124 126 15 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "canohost.c":99:4 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 126 125 127 15 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [26  S8 A64])
+        (reg/f:DI 86 [ _6 ])) "canohost.c":99:4 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 127 126 128 15 (set (mem:SI (pre_modify:DI (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8]))) [3  S4 A32])
+        (reg/v:SI 94 [ flags ])) "canohost.c":99:4 -1
+     (expr_list:REG_ARGS_SIZE (const_int 24 [0x18])
+        (nil)))
+(insn 128 127 129 15 (set (reg/f:DI 110)
+        (symbol_ref/f:DI ("*.LC5") [flags 0x2]  <var_decl 0x7f63281a47e0 *.LC5>)) "canohost.c":99:4 -1
+     (nil))
+(insn 129 128 130 15 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [26  S8 A64])
+        (reg/f:DI 110)) "canohost.c":99:4 -1
+     (expr_list:REG_ARGS_SIZE (const_int 32 [0x20])
+        (nil)))
+(insn 130 129 131 15 (set (reg:DI 37 r9)
+        (const_int 0 [0])) "canohost.c":99:4 -1
+     (nil))
+(insn 131 130 132 15 (set (reg:SI 36 r8)
+        (const_int 2 [0x2])) "canohost.c":99:4 -1
+     (nil))
+(insn 132 131 133 15 (set (reg:SI 2 cx)
+        (const_int 1 [0x1])) "canohost.c":99:4 -1
+     (nil))
+(insn 133 132 134 15 (set (reg:SI 1 dx)
+        (const_int 99 [0x63])) "canohost.c":99:4 -1
+     (nil))
+(insn 134 133 135 15 (set (reg:DI 4 si)
+        (symbol_ref:DI ("__func__.2") [flags 0x2]  <var_decl 0x7f63280c4bd0 __func__>)) "canohost.c":99:4 -1
+     (nil))
+(insn 135 134 136 15 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f632816c2d0 *.LC0>)) "canohost.c":99:4 -1
+     (nil))
+(insn 136 135 137 15 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "canohost.c":99:4 -1
+     (nil))
+(call_insn 137 136 138 15 (call (mem:QI (symbol_ref:DI ("sshlog") [flags 0x41]  <function_decl 0x7f63280e9700 sshlog>) [0 sshlog S1 A8])
+        (const_int 32 [0x20])) "canohost.c":99:4 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshlog") [flags 0x41]  <function_decl 0x7f63280e9700 sshlog>)
+        (nil))
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (expr_list:SI (use (reg:SI 1 dx))
+                    (expr_list:SI (use (reg:SI 2 cx))
+                        (expr_list:SI (use (reg:SI 36 r8))
+                            (expr_list:DI (use (reg:DI 37 r9))
+                                (nil)))))))))
+(debug_insn 138 137 139 15 (debug_marker) "canohost.c":101:4 -1
+     (nil))
+(insn 139 138 9 15 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int 32 [0x20])))
+            (clobber (reg:CC 17 flags))
+        ]) "canohost.c":101:11 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 9 139 140 15 (set (reg/f:DI 91 [ <retval> ])
+        (const_int 0 [0])) "canohost.c":101:11 -1
+     (nil))
+(jump_insn 140 9 141 15 (set (pc)
+        (label_ref:DI 163)) "canohost.c":101:11 737 {jump}
+     (nil)
+ -> 163)
+(barrier 141 140 142)
+(code_label 142 141 143 16 33 (nil) [1 uses])
+(note 143 142 144 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 144 143 145 16 (debug_marker) "canohost.c":103:3 -1
+     (nil))
+(insn 145 144 146 16 (parallel [
+            (set (reg:DI 111)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -1040 [0xfffffffffffffbf0])))
+            (clobber (reg:CC 17 flags))
+        ]) "canohost.c":103:10 -1
+     (nil))
+(insn 146 145 147 16 (set (reg:DI 5 di)
+        (reg:DI 111)) "canohost.c":103:10 -1
+     (nil))
+(call_insn 147 146 148 16 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("xstrdup") [flags 0x41]  <function_decl 0x7f632867c400 xstrdup>) [0 xstrdup S1 A8])
+            (const_int 0 [0]))) "canohost.c":103:10 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("xstrdup") [flags 0x41]  <function_decl 0x7f632867c400 xstrdup>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 148 147 149 16 (set (reg/f:DI 91 [ <retval> ])
+        (reg:DI 0 ax)) "canohost.c":103:10 -1
+     (nil))
+(jump_insn 149 148 150 16 (set (pc)
+        (label_ref:DI 163)) "canohost.c":103:10 737 {jump}
+     (nil)
+ -> 163)
+(barrier 150 149 151)
+(code_label 151 150 152 17 32 (nil) [1 uses])
+(note 152 151 153 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 153 152 154 17 (debug_marker) "canohost.c":106:3 -1
+     (nil))
+(insn 154 153 155 17 (parallel [
+            (set (reg:DI 112)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -1168 [0xfffffffffffffb70])))
+            (clobber (reg:CC 17 flags))
+        ]) "canohost.c":106:10 -1
+     (nil))
+(insn 155 154 156 17 (parallel [
+            (set (reg:DI 113)
+                (plus:DI (reg:DI 112)
+                    (const_int 2 [0x2])))
+            (clobber (reg:CC 17 flags))
+        ]) "canohost.c":106:10 -1
+     (nil))
+(insn 156 155 157 17 (set (reg:DI 5 di)
+        (reg:DI 113)) "canohost.c":106:10 -1
+     (nil))
+(call_insn 157 156 158 17 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("xstrdup") [flags 0x41]  <function_decl 0x7f632867c400 xstrdup>) [0 xstrdup S1 A8])
+            (const_int 0 [0]))) "canohost.c":106:10 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("xstrdup") [flags 0x41]  <function_decl 0x7f632867c400 xstrdup>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 158 157 163 17 (set (reg/f:DI 91 [ <retval> ])
+        (reg:DI 0 ax)) "canohost.c":106:10 -1
+     (nil))
+(code_label 163 158 172 19 24 (nil) [4 uses])
+(note 172 163 164 19 [bb 19] NOTE_INSN_BASIC_BLOCK)
+(insn 164 172 165 19 (set (reg/f:DI 115)
+        (const_int 40 [0x28])) "canohost.c":111:1 -1
+     (nil))
+(insn 165 164 166 19 (parallel [
+            (set (reg:CCZ 17 flags)
+                (unspec:CCZ [
+                        (mem/v/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                                (const_int -8 [0xfffffffffffffff8])) [25 D.14273+0 S8 A64])
+                        (mem/v/f:DI (reg/f:DI 115) [0 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_TEST))
+            (clobber (scratch:DI))
+        ]) "canohost.c":111:1 -1
+     (nil))
+(jump_insn 166 165 173 19 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 169)
+            (pc))) "canohost.c":111:1 -1
+     (int_list:REG_BR_PROB 1073312332 (nil))
+ -> 169)
+(note 173 166 167 20 [bb 20] NOTE_INSN_BASIC_BLOCK)
+(call_insn 167 173 168 20 (call (mem:QI (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7f6328161700 __stack_chk_fail>) [0 __stack_chk_fail S1 A8])
+        (const_int 0 [0])) "canohost.c":111:1 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7f6328161700 __stack_chk_fail>)
+        (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+            (expr_list:REG_NORETURN (const_int 0 [0])
+                (expr_list:REG_EH_REGION (const_int 0 [0])
+                    (nil)))))
+    (nil))
+(barrier 168 167 169)
+(code_label 169 168 174 21 34 (nil) [1 uses])
+(note 174 169 170 21 [bb 21] NOTE_INSN_BASIC_BLOCK)
+(insn 170 174 171 21 (set (reg/i:DI 0 ax)
+        (reg/f:DI 91 [ <retval> ])) "canohost.c":111:1 -1
+     (nil))
+(insn 171 170 0 21 (use (reg/i:DI 0 ax)) "canohost.c":111:1 -1
+     (nil))
+
+;; Function get_peer_ipaddr (get_peer_ipaddr, funcdef_no=385, decl_uid=13682, cgraph_uid=386, symbol_order=385)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Edge 2->5 redirected to 6
+deleting block 5
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (reg/v:SI 83 [ sock ])
+        (reg:SI 5 di [ sock ])) "canohost.c":115:1 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 6 3 7 2 (debug_marker) "canohost.c":116:2 -1
+     (nil))
+(debug_insn 7 6 8 2 (debug_marker) "canohost.c":118:2 -1
+     (nil))
+(insn 8 7 9 2 (set (reg:SI 1 dx)
+        (const_int 1 [0x1])) "canohost.c":118:11 -1
+     (nil))
+(insn 9 8 10 2 (set (reg:SI 4 si)
+        (const_int 1 [0x1])) "canohost.c":118:11 -1
+     (nil))
+(insn 10 9 11 2 (set (reg:SI 5 di)
+        (reg/v:SI 83 [ sock ])) "canohost.c":118:11 -1
+     (nil))
+(call_insn 11 10 12 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("get_socket_address") [flags 0x3]  <function_decl 0x7f6328116300 get_socket_address>) [0 get_socket_address S1 A8])
+            (const_int 0 [0]))) "canohost.c":118:11 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("get_socket_address") [flags 0x3]  <function_decl 0x7f6328116300 get_socket_address>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:SI (use (reg:SI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (expr_list:SI (use (reg:SI 1 dx))
+                (nil)))))
+(insn 12 11 13 2 (set (reg/v/f:DI 82 [ <retval> ])
+        (reg:DI 0 ax)) "canohost.c":118:11 -1
+     (nil))
+(debug_insn 13 12 14 2 (var_location:DI p (reg/v/f:DI 82 [ <retval> ])) "canohost.c":118:11 -1
+     (nil))
+(insn 14 13 15 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 82 [ <retval> ])
+            (const_int 0 [0]))) "canohost.c":118:5 -1
+     (nil))
+(jump_insn 15 14 16 2 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 26)
+            (pc))) "canohost.c":118:5 736 {*jcc}
+     (int_list:REG_BR_PROB 761605076 (nil))
+ -> 26)
+(note 16 15 17 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 17 16 18 4 (debug_marker) "canohost.c":120:2 -1
+     (nil))
+(insn 18 17 19 4 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC6") [flags 0x2]  <var_decl 0x7f63281c7750 *.LC6>)) "canohost.c":120:9 -1
+     (nil))
+(call_insn/j 19 18 20 4 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("xstrdup") [flags 0x41]  <function_decl 0x7f632867c400 xstrdup>) [0 xstrdup S1 A8])
+            (const_int 0 [0]))) "canohost.c":120:9 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("xstrdup") [flags 0x41]  <function_decl 0x7f632867c400 xstrdup>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(barrier 20 19 26)
+(code_label 26 20 29 6 42 (nil) [1 uses])
+(note 29 26 27 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 27 29 28 6 (set (reg/i:DI 0 ax)
+        (reg/v/f:DI 82 [ <retval> ])) "canohost.c":121:1 -1
+     (nil))
+(insn 28 27 0 6 (use (reg/i:DI 0 ax)) "canohost.c":121:1 -1
+     (nil))
+
+;; Function get_local_ipaddr (get_local_ipaddr, funcdef_no=386, decl_uid=13686, cgraph_uid=387, symbol_order=386)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Edge 2->5 redirected to 6
+deleting block 5
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (reg/v:SI 83 [ sock ])
+        (reg:SI 5 di [ sock ])) "canohost.c":125:1 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 6 3 7 2 (debug_marker) "canohost.c":126:2 -1
+     (nil))
+(debug_insn 7 6 8 2 (debug_marker) "canohost.c":128:2 -1
+     (nil))
+(insn 8 7 9 2 (set (reg:SI 1 dx)
+        (const_int 1 [0x1])) "canohost.c":128:11 -1
+     (nil))
+(insn 9 8 10 2 (set (reg:SI 4 si)
+        (const_int 0 [0])) "canohost.c":128:11 -1
+     (nil))
+(insn 10 9 11 2 (set (reg:SI 5 di)
+        (reg/v:SI 83 [ sock ])) "canohost.c":128:11 -1
+     (nil))
+(call_insn 11 10 12 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("get_socket_address") [flags 0x3]  <function_decl 0x7f6328116300 get_socket_address>) [0 get_socket_address S1 A8])
+            (const_int 0 [0]))) "canohost.c":128:11 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("get_socket_address") [flags 0x3]  <function_decl 0x7f6328116300 get_socket_address>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:SI (use (reg:SI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (expr_list:SI (use (reg:SI 1 dx))
+                (nil)))))
+(insn 12 11 13 2 (set (reg/v/f:DI 82 [ <retval> ])
+        (reg:DI 0 ax)) "canohost.c":128:11 -1
+     (nil))
+(debug_insn 13 12 14 2 (var_location:DI p (reg/v/f:DI 82 [ <retval> ])) "canohost.c":128:11 -1
+     (nil))
+(insn 14 13 15 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 82 [ <retval> ])
+            (const_int 0 [0]))) "canohost.c":128:5 -1
+     (nil))
+(jump_insn 15 14 16 2 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 26)
+            (pc))) "canohost.c":128:5 736 {*jcc}
+     (int_list:REG_BR_PROB 761605076 (nil))
+ -> 26)
+(note 16 15 17 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 17 16 18 4 (debug_marker) "canohost.c":130:2 -1
+     (nil))
+(insn 18 17 19 4 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC6") [flags 0x2]  <var_decl 0x7f63281c7750 *.LC6>)) "canohost.c":130:9 -1
+     (nil))
+(call_insn/j 19 18 20 4 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("xstrdup") [flags 0x41]  <function_decl 0x7f632867c400 xstrdup>) [0 xstrdup S1 A8])
+            (const_int 0 [0]))) "canohost.c":130:9 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("xstrdup") [flags 0x41]  <function_decl 0x7f632867c400 xstrdup>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(barrier 20 19 26)
+(code_label 26 20 29 6 46 (nil) [1 uses])
+(note 29 26 27 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 27 29 28 6 (set (reg/i:DI 0 ax)
+        (reg/v/f:DI 82 [ <retval> ])) "canohost.c":131:1 -1
+     (nil))
+(insn 28 27 0 6 (use (reg/i:DI 0 ax)) "canohost.c":131:1 -1
+     (nil))
+
+;; Function get_local_name (get_local_name, funcdef_no=387, decl_uid=13688, cgraph_uid=388, symbol_order=387)
+
+Partition 0: size 1025 align 16
+	myname
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+Predictions for insn 78 bb 8
+  first match heuristics: 99.96%  exec 1073741824 (estimated locally) hit 2147483640 (estimated locally) (200.0%)
+  combined heuristics: 99.96%  exec 1073741824 (estimated locally) hit 2147483640 (estimated locally) (200.0%)
+  noreturn call heuristics: 99.96%  exec 1073741824 (estimated locally) hit 2147483640 (estimated locally) (200.0%)
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Edge 2->7 redirected to 8
+Redirecting jump 60 from 7 to 8.
+Merging block 7 into block 6...
+Merged blocks 6 and 7.
+Merged 6 and 7 without moving.
+Removing jump 73.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 6 NOTE_INSN_DELETED)
+(note 6 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 6 3 2 (set (reg/v:SI 87 [ fd ])
+        (reg:SI 5 di [ fd ])) "canohost.c":135:1 -1
+     (nil))
+(note 3 2 4 2 NOTE_INSN_FUNCTION_BEG)
+(insn 4 3 5 2 (set (reg/f:DI 88)
+        (const_int 40 [0x28])) "canohost.c":135:1 -1
+     (nil))
+(insn 5 4 8 2 (parallel [
+            (set (mem/v/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                        (const_int -8 [0xfffffffffffffff8])) [25 D.14285+0 S8 A64])
+                (unspec:DI [
+                        (mem/v/f:DI (reg/f:DI 88) [0 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_SET))
+            (set (scratch:DI)
+                (const_int 0 [0]))
+            (clobber (reg:CC 17 flags))
+        ]) "canohost.c":135:1 -1
+     (nil))
+(debug_insn 8 5 9 2 (debug_marker) "canohost.c":136:2 -1
+     (nil))
+(debug_insn 9 8 10 2 (debug_marker) "canohost.c":139:2 -1
+     (nil))
+(insn 10 9 11 2 (set (reg:SI 1 dx)
+        (const_int 8 [0x8])) "canohost.c":139:14 -1
+     (nil))
+(insn 11 10 12 2 (set (reg:SI 4 si)
+        (const_int 0 [0])) "canohost.c":139:14 -1
+     (nil))
+(insn 12 11 13 2 (set (reg:SI 5 di)
+        (reg/v:SI 87 [ fd ])) "canohost.c":139:14 -1
+     (nil))
+(call_insn 13 12 14 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("get_socket_address") [flags 0x3]  <function_decl 0x7f6328116300 get_socket_address>) [0 get_socket_address S1 A8])
+            (const_int 0 [0]))) "canohost.c":139:14 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("get_socket_address") [flags 0x3]  <function_decl 0x7f6328116300 get_socket_address>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:SI (use (reg:SI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (expr_list:SI (use (reg:SI 1 dx))
+                (nil)))))
+(insn 14 13 15 2 (set (reg/v/f:DI 86 [ <retval> ])
+        (reg:DI 0 ax)) "canohost.c":139:14 -1
+     (nil))
+(debug_insn 15 14 16 2 (var_location:DI host (reg/v/f:DI 86 [ <retval> ])) "canohost.c":139:14 -1
+     (nil))
+(insn 16 15 17 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 86 [ <retval> ])
+            (const_int 0 [0]))) "canohost.c":139:5 -1
+     (nil))
+(jump_insn 17 16 18 2 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 75)
+            (pc))) "canohost.c":139:5 736 {*jcc}
+     (int_list:REG_BR_PROB 761605076 (nil))
+ -> 75)
+(note 18 17 19 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 19 18 20 4 (debug_marker) "canohost.c":143:2 -1
+     (nil))
+(debug_insn 20 19 21 4 (var_location:DI __buf (plus:DI (reg/f:DI 77 virtual-stack-vars)
+        (const_int -1040 [0xfffffffffffffbf0]))) "canohost.c":143:2 -1
+     (nil))
+(debug_insn 21 20 22 4 (var_location:DI __buflen (const_int 1025 [0x401])) "canohost.c":143:2 -1
+     (nil))
+(debug_insn 22 21 23 4 (debug_marker:BLK) "/usr/include/x86_64-linux-gnu/bits/unistd.h":344:1 -1
+     (nil))
+(debug_insn 23 22 24 4 (debug_marker) "/usr/include/x86_64-linux-gnu/bits/unistd.h":346:3 -1
+     (nil))
+(debug_insn 24 23 25 4 (debug_marker) "/usr/include/x86_64-linux-gnu/bits/unistd.h":348:7 -1
+     (nil))
+(debug_insn 25 24 26 4 (debug_marker) "/usr/include/x86_64-linux-gnu/bits/unistd.h":351:7 -1
+     (nil))
+(debug_insn 26 25 27 4 (debug_marker) "/usr/include/x86_64-linux-gnu/bits/unistd.h":354:3 -1
+     (nil))
+(insn 27 26 28 4 (parallel [
+            (set (reg:DI 89)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -1040 [0xfffffffffffffbf0])))
+            (clobber (reg:CC 17 flags))
+        ]) "/usr/include/x86_64-linux-gnu/bits/unistd.h":354:10 -1
+     (nil))
+(insn 28 27 29 4 (set (reg:DI 4 si)
+        (const_int 1025 [0x401])) "/usr/include/x86_64-linux-gnu/bits/unistd.h":354:10 -1
+     (nil))
+(insn 29 28 30 4 (set (reg:DI 5 di)
+        (reg:DI 89)) "/usr/include/x86_64-linux-gnu/bits/unistd.h":354:10 -1
+     (nil))
+(call_insn 30 29 31 4 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("*gethostname") [flags 0x41]  <function_decl 0x7f6328673600 __gethostname_alias>) [0 __gethostname_alias S1 A8])
+            (const_int 0 [0]))) "/usr/include/x86_64-linux-gnu/bits/unistd.h":354:10 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("*gethostname") [flags 0x41]  <function_decl 0x7f6328673600 __gethostname_alias>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 31 30 32 4 (set (reg:SI 85 [ _17 ])
+        (reg:SI 0 ax)) "/usr/include/x86_64-linux-gnu/bits/unistd.h":354:10 -1
+     (nil))
+(debug_insn 32 31 33 4 (var_location:DI __buf (clobber (const_int 0 [0]))) "canohost.c":143:6 -1
+     (nil))
+(debug_insn 33 32 34 4 (var_location:DI __buflen (clobber (const_int 0 [0]))) "canohost.c":143:6 -1
+     (nil))
+(insn 34 33 35 4 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 85 [ _17 ])
+            (const_int -1 [0xffffffffffffffff]))) "canohost.c":143:5 -1
+     (nil))
+(jump_insn 35 34 36 4 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 62)
+            (pc))) "canohost.c":143:5 -1
+     (int_list:REG_BR_PROB 708669604 (nil))
+ -> 62)
+(note 36 35 37 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 37 36 38 5 (debug_marker) "canohost.c":144:3 -1
+     (nil))
+(call_insn/u 38 37 39 5 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__errno_location") [flags 0x41]  <function_decl 0x7f63288d6b00 __errno_location>) [0 __errno_location S1 A8])
+            (const_int 0 [0]))) "canohost.c":144:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__errno_location") [flags 0x41]  <function_decl 0x7f63288d6b00 __errno_location>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (nil))
+(insn 39 38 40 5 (set (reg/f:DI 82 [ _1 ])
+        (reg:DI 0 ax)) "canohost.c":144:3 -1
+     (nil))
+(insn 40 39 41 5 (set (reg:SI 5 di)
+        (mem:SI (reg/f:DI 82 [ _1 ]) [3 *_1+0 S4 A32])) "canohost.c":144:3 -1
+     (nil))
+(call_insn 41 40 42 5 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strerror") [flags 0x41]  <function_decl 0x7f63285c9b00 strerror>) [0 strerror S1 A8])
+            (const_int 0 [0]))) "canohost.c":144:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("strerror") [flags 0x41]  <function_decl 0x7f63285c9b00 strerror>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:SI (use (reg:SI 5 di))
+        (nil)))
+(insn 42 41 43 5 (set (reg/f:DI 84 [ _3 ])
+        (reg:DI 0 ax)) "canohost.c":144:3 -1
+     (nil))
+(insn 43 42 44 5 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [26  S8 A64])
+        (reg/f:DI 84 [ _3 ])) "canohost.c":144:3 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 44 43 45 5 (set (reg/f:DI 90)
+        (symbol_ref/f:DI ("*.LC7") [flags 0x2]  <var_decl 0x7f63281d95a0 *.LC7>)) "canohost.c":144:3 -1
+     (nil))
+(insn 45 44 46 5 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [26  S8 A64])
+        (reg/f:DI 90)) "canohost.c":144:3 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 46 45 47 5 (set (reg:DI 37 r9)
+        (const_int 0 [0])) "canohost.c":144:3 -1
+     (nil))
+(insn 47 46 48 5 (set (reg:SI 36 r8)
+        (const_int 4 [0x4])) "canohost.c":144:3 -1
+     (nil))
+(insn 48 47 49 5 (set (reg:SI 2 cx)
+        (const_int 1 [0x1])) "canohost.c":144:3 -1
+     (nil))
+(insn 49 48 50 5 (set (reg:SI 1 dx)
+        (const_int 144 [0x90])) "canohost.c":144:3 -1
+     (nil))
+(insn 50 49 51 5 (set (reg:DI 4 si)
+        (symbol_ref:DI ("__func__.1") [flags 0x2]  <var_decl 0x7f6328120000 __func__>)) "canohost.c":144:3 -1
+     (nil))
+(insn 51 50 52 5 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f632816c2d0 *.LC0>)) "canohost.c":144:3 -1
+     (nil))
+(insn 52 51 53 5 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "canohost.c":144:3 -1
+     (nil))
+(call_insn 53 52 54 5 (call (mem:QI (symbol_ref:DI ("sshlog") [flags 0x41]  <function_decl 0x7f63280e9700 sshlog>) [0 sshlog S1 A8])
+        (const_int 16 [0x10])) "canohost.c":144:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshlog") [flags 0x41]  <function_decl 0x7f63280e9700 sshlog>)
+        (nil))
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (expr_list:SI (use (reg:SI 1 dx))
+                    (expr_list:SI (use (reg:SI 2 cx))
+                        (expr_list:SI (use (reg:SI 36 r8))
+                            (expr_list:DI (use (reg:DI 37 r9))
+                                (nil)))))))))
+(debug_insn 54 53 55 5 (debug_marker) "canohost.c":145:3 -1
+     (nil))
+(insn 55 54 56 5 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC6") [flags 0x2]  <var_decl 0x7f63281c7750 *.LC6>)) "canohost.c":145:10 -1
+     (nil))
+(call_insn 56 55 57 5 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("xstrdup") [flags 0x41]  <function_decl 0x7f632867c400 xstrdup>) [0 xstrdup S1 A8])
+            (const_int 0 [0]))) "canohost.c":145:10 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("xstrdup") [flags 0x41]  <function_decl 0x7f632867c400 xstrdup>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 57 56 58 5 (set (reg/v/f:DI 86 [ <retval> ])
+        (reg:DI 0 ax)) "canohost.c":145:10 -1
+     (nil))
+(debug_insn 58 57 59 5 (var_location:DI host (reg/v/f:DI 86 [ <retval> ])) "canohost.c":145:10 -1
+     (nil))
+(insn 59 58 60 5 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(jump_insn 60 59 61 5 (set (pc)
+        (label_ref:DI 75)) 737 {jump}
+     (nil)
+ -> 75)
+(barrier 61 60 62)
+(code_label 62 61 63 6 52 (nil) [1 uses])
+(note 63 62 64 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 64 63 65 6 (debug_marker) "canohost.c":147:3 -1
+     (nil))
+(insn 65 64 66 6 (parallel [
+            (set (reg:DI 91)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -1040 [0xfffffffffffffbf0])))
+            (clobber (reg:CC 17 flags))
+        ]) "canohost.c":147:10 -1
+     (nil))
+(insn 66 65 67 6 (set (reg:DI 5 di)
+        (reg:DI 91)) "canohost.c":147:10 -1
+     (nil))
+(call_insn 67 66 68 6 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("xstrdup") [flags 0x41]  <function_decl 0x7f632867c400 xstrdup>) [0 xstrdup S1 A8])
+            (const_int 0 [0]))) "canohost.c":147:10 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("xstrdup") [flags 0x41]  <function_decl 0x7f632867c400 xstrdup>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 68 67 69 6 (set (reg/v/f:DI 86 [ <retval> ])
+        (reg:DI 0 ax)) "canohost.c":147:10 -1
+     (nil))
+(debug_insn 69 68 72 6 (var_location:DI host (reg/v/f:DI 86 [ <retval> ])) "canohost.c":147:10 -1
+     (nil))
+(debug_insn 72 69 75 6 (var_location:DI host (clobber (const_int 0 [0]))) -1
+     (nil))
+(code_label 75 72 84 8 50 (nil) [2 uses])
+(note 84 75 76 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 76 84 77 8 (set (reg/f:DI 93)
+        (const_int 40 [0x28])) "canohost.c":151:1 -1
+     (nil))
+(insn 77 76 78 8 (parallel [
+            (set (reg:CCZ 17 flags)
+                (unspec:CCZ [
+                        (mem/v/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                                (const_int -8 [0xfffffffffffffff8])) [25 D.14285+0 S8 A64])
+                        (mem/v/f:DI (reg/f:DI 93) [0 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_TEST))
+            (clobber (scratch:DI))
+        ]) "canohost.c":151:1 -1
+     (nil))
+(jump_insn 78 77 85 8 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 81)
+            (pc))) "canohost.c":151:1 -1
+     (int_list:REG_BR_PROB 1073312332 (nil))
+ -> 81)
+(note 85 78 79 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(call_insn 79 85 80 9 (call (mem:QI (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7f6328161700 __stack_chk_fail>) [0 __stack_chk_fail S1 A8])
+        (const_int 0 [0])) "canohost.c":151:1 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7f6328161700 __stack_chk_fail>)
+        (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+            (expr_list:REG_NORETURN (const_int 0 [0])
+                (expr_list:REG_EH_REGION (const_int 0 [0])
+                    (nil)))))
+    (nil))
+(barrier 80 79 81)
+(code_label 81 80 86 10 53 (nil) [1 uses])
+(note 86 81 82 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 82 86 83 10 (set (reg/i:DI 0 ax)
+        (reg/v/f:DI 86 [ <retval> ])) "canohost.c":151:1 -1
+     (nil))
+(insn 83 82 0 10 (use (reg/i:DI 0 ax)) "canohost.c":151:1 -1
+     (nil))
+
+;; Function get_peer_port (get_peer_port, funcdef_no=389, decl_uid=13684, cgraph_uid=390, symbol_order=389)
+
+
+;; Generating RTL for gimple basic block 2
+deleting block 4
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (reg/v:SI 83 [ sock ])
+        (reg:SI 5 di [ sock ])) "canohost.c":196:1 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 6 3 7 2 (debug_marker) "canohost.c":197:2 -1
+     (nil))
+(insn 7 6 8 2 (set (reg:SI 4 si)
+        (const_int 0 [0])) "canohost.c":197:9 -1
+     (nil))
+(insn 8 7 9 2 (set (reg:SI 5 di)
+        (reg/v:SI 83 [ sock ])) "canohost.c":197:9 -1
+     (nil))
+(call_insn/j 9 8 10 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("get_sock_port") [flags 0x3]  <function_decl 0x7f6328116d00 get_sock_port>) [0 get_sock_port S1 A8])
+            (const_int 0 [0]))) "canohost.c":197:9 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("get_sock_port") [flags 0x3]  <function_decl 0x7f6328116d00 get_sock_port>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:SI (use (reg:SI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (nil))))
+(barrier 10 9 0)
+
+;; Function get_local_port (get_local_port, funcdef_no=390, decl_uid=13690, cgraph_uid=391, symbol_order=390)
+
+
+;; Generating RTL for gimple basic block 2
+deleting block 4
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (reg/v:SI 83 [ sock ])
+        (reg:SI 5 di [ sock ])) "canohost.c":202:1 -1
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 6 3 7 2 (debug_marker) "canohost.c":203:2 -1
+     (nil))
+(insn 7 6 8 2 (set (reg:SI 4 si)
+        (const_int 1 [0x1])) "canohost.c":203:9 -1
+     (nil))
+(insn 8 7 9 2 (set (reg:SI 5 di)
+        (reg/v:SI 83 [ sock ])) "canohost.c":203:9 -1
+     (nil))
+(call_insn/j 9 8 10 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("get_sock_port") [flags 0x3]  <function_decl 0x7f6328116d00 get_sock_port>) [0 get_sock_port S1 A8])
+            (const_int 0 [0]))) "canohost.c":203:9 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("get_sock_port") [flags 0x3]  <function_decl 0x7f6328116d00 get_sock_port>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:SI (use (reg:SI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (nil))))
+(barrier 10 9 0)

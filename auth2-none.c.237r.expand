@@ -1,0 +1,254 @@
+
+;; Function userauth_none (userauth_none, funcdef_no=387, decl_uid=16582, cgraph_uid=388, symbol_order=388)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Edge 5->10 redirected to 11
+Edge 6->10 redirected to 11
+deleting block 10
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 5 NOTE_INSN_DELETED)
+(note 5 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 5 3 2 (set (reg/v/f:DI 86 [ ssh ])
+        (reg:DI 5 di [ ssh ])) "auth2-none.c":63:1 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v/f:DI 87 [ method ])
+        (reg:DI 4 si [ method ])) "auth2-none.c":63:1 -1
+     (nil))
+(note 4 3 7 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 7 4 8 2 (debug_marker) "auth2-none.c":64:2 -1
+     (nil))
+(debug_insn 8 7 9 2 (debug_marker) "auth2-none.c":66:2 -1
+     (nil))
+(insn 9 8 10 2 (set (mem/c:SI (symbol_ref:DI ("none_enabled") [flags 0x2]  <var_decl 0x7f032461c750 none_enabled>) [1 none_enabled+0 S4 A32])
+        (const_int 0 [0])) "auth2-none.c":66:15 -1
+     (nil))
+(debug_insn 10 9 11 2 (debug_marker) "auth2-none.c":67:2 -1
+     (nil))
+(insn 11 10 12 2 (set (reg:DI 5 di)
+        (reg/v/f:DI 86 [ ssh ])) "auth2-none.c":67:11 -1
+     (nil))
+(call_insn 12 11 13 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("sshpkt_get_end") [flags 0x41]  <function_decl 0x7f0324633b00 sshpkt_get_end>) [0 sshpkt_get_end S1 A8])
+            (const_int 0 [0]))) "auth2-none.c":67:11 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshpkt_get_end") [flags 0x41]  <function_decl 0x7f0324633b00 sshpkt_get_end>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 13 12 14 2 (set (reg/v:SI 83 [ r ])
+        (reg:SI 0 ax)) "auth2-none.c":67:11 -1
+     (nil))
+(debug_insn 14 13 15 2 (var_location:SI r (reg/v:SI 83 [ r ])) "auth2-none.c":67:11 -1
+     (nil))
+(insn 15 14 16 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 83 [ r ])
+            (const_int 0 [0]))) "auth2-none.c":67:5 -1
+     (nil))
+(jump_insn 16 15 17 2 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 34)
+            (pc))) "auth2-none.c":67:5 -1
+     (int_list:REG_BR_PROB 1073312332 (nil))
+ -> 34)
+(note 17 16 18 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 18 17 19 4 (debug_marker) "auth2-none.c":68:3 -1
+     (nil))
+(insn 19 18 20 4 (set (reg:SI 5 di)
+        (reg/v:SI 83 [ r ])) "auth2-none.c":68:3 -1
+     (nil))
+(call_insn 20 19 21 4 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("ssh_err") [flags 0x41]  <function_decl 0x7f0324633e00 ssh_err>) [0 ssh_err S1 A8])
+            (const_int 0 [0]))) "auth2-none.c":68:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("ssh_err") [flags 0x41]  <function_decl 0x7f0324633e00 ssh_err>)
+        (nil))
+    (expr_list:SI (use (reg:SI 5 di))
+        (nil)))
+(insn 21 20 22 4 (set (reg/f:DI 82 [ _1 ])
+        (reg:DI 0 ax)) "auth2-none.c":68:3 -1
+     (nil))
+(insn 22 21 23 4 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "auth2-none.c":68:3 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 23 22 24 4 (set (reg/f:DI 88)
+        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7f0324229900 *.LC1>)) "auth2-none.c":68:3 -1
+     (nil))
+(insn 24 23 25 4 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [0  S8 A64])
+        (reg/f:DI 88)) "auth2-none.c":68:3 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 25 24 26 4 (set (reg:DI 37 r9)
+        (reg/f:DI 82 [ _1 ])) "auth2-none.c":68:3 -1
+     (nil))
+(insn 26 25 27 4 (set (reg:SI 36 r8)
+        (const_int 1 [0x1])) "auth2-none.c":68:3 -1
+     (nil))
+(insn 27 26 28 4 (set (reg:SI 2 cx)
+        (const_int 1 [0x1])) "auth2-none.c":68:3 -1
+     (nil))
+(insn 28 27 29 4 (set (reg:SI 1 dx)
+        (const_int 68 [0x44])) "auth2-none.c":68:3 -1
+     (nil))
+(insn 29 28 30 4 (set (reg:DI 4 si)
+        (symbol_ref:DI ("__func__.0") [flags 0x2]  <var_decl 0x7f032461c870 __func__>)) "auth2-none.c":68:3 -1
+     (nil))
+(insn 30 29 31 4 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f0324229870 *.LC0>)) "auth2-none.c":68:3 -1
+     (nil))
+(insn 31 30 32 4 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "auth2-none.c":68:3 -1
+     (nil))
+(call_insn 32 31 33 4 (call (mem:QI (symbol_ref:DI ("sshfatal") [flags 0x41]  <function_decl 0x7f0324645000 sshfatal>) [0 sshfatal S1 A8])
+        (const_int 16 [0x10])) "auth2-none.c":68:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("sshfatal") [flags 0x41]  <function_decl 0x7f0324645000 sshfatal>)
+        (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+            (expr_list:REG_NORETURN (const_int 0 [0])
+                (nil))))
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (expr_list:SI (use (reg:SI 1 dx))
+                    (expr_list:SI (use (reg:SI 2 cx))
+                        (expr_list:SI (use (reg:SI 36 r8))
+                            (expr_list:DI (use (reg:DI 37 r9))
+                                (nil)))))))))
+(barrier 33 32 34)
+(code_label 34 33 35 5 2 (nil) [1 uses])
+(note 35 34 36 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 36 35 37 5 (debug_marker) "auth2-none.c":69:2 -1
+     (nil))
+(insn 37 36 38 5 (set (reg/f:DI 89)
+        (symbol_ref:DI ("options") [flags 0x40]  <var_decl 0x7f032461c6c0 options>)) "auth2-none.c":69:13 -1
+     (nil))
+(insn 38 37 39 5 (set (reg:SI 85 [ <retval> ])
+        (mem/c:SI (plus:DI (reg/f:DI 89)
+                (const_int 1352 [0x548])) [1 options.permit_empty_passwd+0 S4 A64])) "auth2-none.c":69:13 -1
+     (nil))
+(insn 39 38 40 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 85 [ <retval> ])
+            (const_int 0 [0]))) "auth2-none.c":69:5 -1
+     (nil))
+(jump_insn 40 39 41 5 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 75)
+            (pc))) "auth2-none.c":69:5 736 {*jcc}
+     (int_list:REG_BR_PROB 536870916 (nil))
+ -> 75)
+(note 41 40 42 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 42 41 43 6 (var_location:DI D#1 (entry_value:DI (reg:DI 4 si [ method ]))) -1
+     (nil))
+(debug_insn 43 42 44 6 (var_location:DI ssh (reg/v/f:DI 86 [ ssh ])) -1
+     (nil))
+(debug_insn 44 43 45 6 (debug_marker:BLK) "auth2-none.c":62:1 -1
+     (nil))
+(debug_insn 45 44 46 6 (var_location:DI D#2 (debug_expr:DI D#1)) -1
+     (nil))
+(debug_insn 46 45 47 6 (var_location:DI method (debug_expr:DI D#2)) -1
+     (nil))
+(insn 47 46 48 6 (set (reg/f:DI 90)
+        (symbol_ref:DI ("options") [flags 0x40]  <var_decl 0x7f032461c6c0 options>)) "auth2-none.c":69:44 -1
+     (nil))
+(insn 48 47 49 6 (set (reg:SI 85 [ <retval> ])
+        (mem/c:SI (plus:DI (reg/f:DI 90)
+                (const_int 1344 [0x540])) [1 options.password_authentication+0 S4 A64])) "auth2-none.c":69:44 -1
+     (nil))
+(insn 49 48 50 6 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 85 [ <retval> ])
+            (const_int 0 [0]))) "auth2-none.c":69:34 -1
+     (nil))
+(jump_insn 50 49 51 6 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 75)
+            (pc))) "auth2-none.c":69:34 736 {*jcc}
+     (int_list:REG_BR_PROB 708669604 (nil))
+ -> 75)
+(note 51 50 52 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 52 51 53 7 (debug_marker) "auth2-none.c":70:3 -1
+     (nil))
+(insn 53 52 54 7 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:SI (symbol_ref:DI ("use_privsep") [flags 0x40]  <var_decl 0x7f032461c630 use_privsep>) [1 use_privsep+0 S4 A32])
+            (const_int 0 [0]))) "auth2-none.c":70:11 -1
+     (nil))
+(jump_insn 54 53 55 7 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 61)
+            (pc))) "auth2-none.c":70:11 -1
+     (int_list:REG_BR_PROB 536870916 (nil))
+ -> 61)
+(note 55 54 56 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 56 55 57 8 (set (reg:DI 4 si)
+        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7f0324229990 *.LC2>)) "auth2-none.c":70:11 -1
+     (nil))
+(insn 57 56 58 8 (set (reg:DI 5 di)
+        (reg/v/f:DI 86 [ ssh ])) "auth2-none.c":70:11 -1
+     (nil))
+(call_insn/j 58 57 59 8 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("mm_auth_password") [flags 0x41]  <function_decl 0x7f0324212b00 mm_auth_password>) [0 mm_auth_password S1 A8])
+            (const_int 0 [0]))) "auth2-none.c":70:11 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("mm_auth_password") [flags 0x41]  <function_decl 0x7f0324212b00 mm_auth_password>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(barrier 59 58 61)
+(code_label 61 59 62 9 4 (nil) [1 uses])
+(note 62 61 63 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 63 62 64 9 (set (reg:DI 4 si)
+        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7f0324229990 *.LC2>)) "auth2-none.c":70:11 -1
+     (nil))
+(insn 64 63 65 9 (set (reg:DI 5 di)
+        (reg/v/f:DI 86 [ ssh ])) "auth2-none.c":70:11 -1
+     (nil))
+(call_insn/j 65 64 66 9 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("auth_password") [flags 0x41]  <function_decl 0x7f03245d0300 auth_password>) [0 auth_password S1 A8])
+            (const_int 0 [0]))) "auth2-none.c":70:11 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("auth_password") [flags 0x41]  <function_decl 0x7f03245d0300 auth_password>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(barrier 66 65 75)
+(code_label 75 66 78 11 1 (nil) [2 uses])
+(note 78 75 76 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 76 78 77 11 (set (reg/i:SI 0 ax)
+        (reg:SI 85 [ <retval> ])) "auth2-none.c":72:1 -1
+     (nil))
+(insn 77 76 0 11 (use (reg/i:SI 0 ax)) "auth2-none.c":72:1 -1
+     (nil))

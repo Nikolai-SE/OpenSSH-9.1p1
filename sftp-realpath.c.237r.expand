@@ -1,0 +1,2252 @@
+
+;; Function sftp_realpath (sftp_realpath, funcdef_no=90, decl_uid=7781, cgraph_uid=91, symbol_order=90)
+
+Partition 3: size 4096 align 16
+	symlink
+Partition 2: size 4096 align 16
+	next_token
+Partition 1: size 4096 align 16
+	left
+Partition 0: size 144 align 16
+	sb
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+
+;; Generating RTL for gimple basic block 11
+
+;; Generating RTL for gimple basic block 12
+
+;; Generating RTL for gimple basic block 13
+
+;; Generating RTL for gimple basic block 14
+
+;; Generating RTL for gimple basic block 15
+
+;; Generating RTL for gimple basic block 16
+
+;; Generating RTL for gimple basic block 17
+
+;; Generating RTL for gimple basic block 18
+
+;; Generating RTL for gimple basic block 19
+
+;; Generating RTL for gimple basic block 20
+
+;; Generating RTL for gimple basic block 21
+
+;; Generating RTL for gimple basic block 22
+
+;; Generating RTL for gimple basic block 23
+
+;; Generating RTL for gimple basic block 24
+
+;; Generating RTL for gimple basic block 25
+
+;; Generating RTL for gimple basic block 26
+
+;; Generating RTL for gimple basic block 27
+
+;; Generating RTL for gimple basic block 28
+
+;; Generating RTL for gimple basic block 29
+
+;; Generating RTL for gimple basic block 30
+
+;; Generating RTL for gimple basic block 31
+
+;; Generating RTL for gimple basic block 32
+
+;; Generating RTL for gimple basic block 33
+
+;; Generating RTL for gimple basic block 34
+
+;; Generating RTL for gimple basic block 35
+
+;; Generating RTL for gimple basic block 36
+
+;; Generating RTL for gimple basic block 37
+
+;; Generating RTL for gimple basic block 38
+
+;; Generating RTL for gimple basic block 39
+
+;; Generating RTL for gimple basic block 40
+
+;; Generating RTL for gimple basic block 41
+
+;; Generating RTL for gimple basic block 42
+
+;; Generating RTL for gimple basic block 43
+
+;; Generating RTL for gimple basic block 44
+
+;; Generating RTL for gimple basic block 45
+
+;; Generating RTL for gimple basic block 46
+
+;; Generating RTL for gimple basic block 47
+
+;; Generating RTL for gimple basic block 48
+
+;; Generating RTL for gimple basic block 49
+
+;; Generating RTL for gimple basic block 50
+
+;; Generating RTL for gimple basic block 51
+
+;; Generating RTL for gimple basic block 52
+
+;; Generating RTL for gimple basic block 53
+
+;; Generating RTL for gimple basic block 54
+
+;; Generating RTL for gimple basic block 55
+
+;; Generating RTL for gimple basic block 56
+
+;; Generating RTL for gimple basic block 57
+
+;; Generating RTL for gimple basic block 58
+
+;; Generating RTL for gimple basic block 59
+
+;; Generating RTL for gimple basic block 60
+
+;; Generating RTL for gimple basic block 61
+Edge 4->7 redirected to 66
+Edge 5->7 redirected to 67
+Edge 8->58 redirected to 68
+Edge 16->18 redirected to 69
+Edge 52->58 redirected to 70
+Edge 53->58 redirected to 71
+Predictions for insn 253 bb 26
+  DS theory heuristics: 66.00%  exec 681798377 (estimated locally) hit 1363596749 (estimated locally) (200.0%)
+  combined heuristics: 66.00%  exec 681798377 (estimated locally) hit 1363596749 (estimated locally) (200.0%)
+  opcode values nonequal heuristics: 66.00%  exec 681798377 (estimated locally) hit 1363596749 (estimated locally) (200.0%)
+Predictions for insn 268 bb 27
+  DS theory heuristics: 66.00%  exec 456804913 (estimated locally) hit 913609823 (estimated locally) (200.0%)
+  combined heuristics: 66.00%  exec 456804913 (estimated locally) hit 913609823 (estimated locally) (200.0%)
+  opcode values nonequal heuristics: 66.00%  exec 456804913 (estimated locally) hit 913609823 (estimated locally) (200.0%)
+Predictions for insn 270 bb 76
+  no prediction heuristics: 50.00%  exec 155313672 (estimated locally) hit 310627343 (estimated locally) (200.0%)
+  combined heuristics: 50.00%  exec 155313672 (estimated locally) hit 310627343 (estimated locally) (200.0%)
+Predictions for insn 656 bb 65
+  first match heuristics: 99.96%  exec 177901805 (estimated locally) hit 355803609 (estimated locally) (200.0%)
+  combined heuristics: 99.96%  exec 177901805 (estimated locally) hit 355803609 (estimated locally) (200.0%)
+  noreturn call heuristics: 99.96%  exec 177901805 (estimated locally) hit 355803609 (estimated locally) (200.0%)
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Redirecting jump 42 from 75 to 80.
+Redirecting jump 63 from 75 to 80.
+Redirecting jump 119 from 75 to 80.
+Redirecting jump 128 from 75 to 80.
+Forwarding edge 20->21 to 66 failed.
+Edge 46->69 redirected to 70
+Edge 47->69 redirected to 70
+Redirecting jump 359 from 75 to 80.
+Edge 52->69 redirected to 70
+Redirecting jump 545 from 75 to 80.
+deleting block 69
+Redirecting jump 669 from 75 to 80.
+Redirecting jump 675 from 75 to 80.
+Redirecting jump 679 from 75 to 80.
+Merging block 75 into block 74...
+Merged blocks 74 and 75.
+Merged 74 and 75 without moving.
+Forwarding edge 77->78 to 76 failed.
+
+
+try_optimize_cfg iteration 2
+
+Forwarding edge 20->21 to 66 failed.
+Forwarding edge 77->78 to 76 failed.
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 24 NOTE_INSN_DELETED)
+(note 24 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 24 3 2 (set (reg/v/f:DI 138 [ path ])
+        (reg:DI 5 di [ path ])) "sftp-realpath.c":59:1 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v/f:DI 139 [ resolved ])
+        (reg:DI 4 si [ resolved ])) "sftp-realpath.c":59:1 -1
+     (nil))
+(note 4 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 4 6 2 (set (reg/f:DI 140)
+        (const_int 40 [0x28])) "sftp-realpath.c":59:1 -1
+     (nil))
+(insn 6 5 26 2 (parallel [
+            (set (mem/v/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                        (const_int -8 [0xfffffffffffffff8])) [5 D.7942+0 S8 A64])
+                (unspec:DI [
+                        (mem/v/f:DI (reg/f:DI 140) [0 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_SET))
+            (set (scratch:DI)
+                (const_int 0 [0]))
+            (clobber (reg:CC 17 flags))
+        ]) "sftp-realpath.c":59:1 -1
+     (nil))
+(debug_insn 26 6 27 2 (debug_marker) "sftp-realpath.c":60:2 -1
+     (nil))
+(debug_insn 27 26 28 2 (debug_marker) "sftp-realpath.c":61:2 -1
+     (nil))
+(debug_insn 28 27 29 2 (debug_marker) "sftp-realpath.c":62:2 -1
+     (nil))
+(debug_insn 29 28 30 2 (debug_marker) "sftp-realpath.c":63:2 -1
+     (nil))
+(debug_insn 30 29 31 2 (debug_marker) "sftp-realpath.c":64:2 -1
+     (nil))
+(debug_insn 31 30 32 2 (debug_marker) "sftp-realpath.c":65:2 -1
+     (nil))
+(debug_insn 32 31 33 2 (debug_marker) "sftp-realpath.c":67:2 -1
+     (nil))
+(insn 33 32 34 2 (set (reg:QI 82 [ _1 ])
+        (mem:QI (reg/v/f:DI 138 [ path ]) [0 *path_71(D)+0 S1 A8])) "sftp-realpath.c":67:10 -1
+     (nil))
+(call_insn/u 34 33 35 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__errno_location") [flags 0x41]  <function_decl 0x7f0cea60db00 __errno_location>) [0 __errno_location S1 A8])
+            (const_int 0 [0]))) "sftp-realpath.c":68:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__errno_location") [flags 0x41]  <function_decl 0x7f0cea60db00 __errno_location>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (nil))
+(insn 35 34 36 2 (set (reg/f:DI 136 [ _173 ])
+        (reg:DI 0 ax)) "sftp-realpath.c":68:3 -1
+     (nil))
+(insn 36 35 37 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 82 [ _1 ])
+            (const_int 0 [0]))) "sftp-realpath.c":67:5 -1
+     (nil))
+(jump_insn 37 36 38 2 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 44)
+            (pc))) "sftp-realpath.c":67:5 -1
+     (int_list:REG_BR_PROB 887125500 (nil))
+ -> 44)
+(note 38 37 39 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 39 38 40 4 (debug_marker) "sftp-realpath.c":68:3 -1
+     (nil))
+(insn 40 39 41 4 (set (mem:SI (reg/f:DI 136 [ _173 ]) [1 *_173+0 S4 A32])
+        (const_int 2 [0x2])) "sftp-realpath.c":68:9 -1
+     (nil))
+(debug_insn 41 40 16 4 (debug_marker) "sftp-realpath.c":69:3 -1
+     (nil))
+(insn 16 41 42 4 (set (reg/f:DI 137 [ <retval> ])
+        (const_int 0 [0])) "sftp-realpath.c":69:10 -1
+     (nil))
+(jump_insn 42 16 43 4 (set (pc)
+        (label_ref:DI 653)) "sftp-realpath.c":69:10 737 {jump}
+     (nil)
+ -> 653)
+(barrier 43 42 44)
+(code_label 44 43 45 5 2 (nil) [1 uses])
+(note 45 44 46 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 46 45 47 5 (debug_marker) "sftp-realpath.c":72:2 -1
+     (nil))
+(insn 47 46 48 5 (set (reg/v:SI 123 [ serrno ])
+        (mem:SI (reg/f:DI 136 [ _173 ]) [1 *_173+0 S4 A32])) "sftp-realpath.c":72:9 -1
+     (nil))
+(debug_insn 48 47 49 5 (var_location:SI serrno (reg/v:SI 123 [ serrno ])) "sftp-realpath.c":72:9 -1
+     (nil))
+(debug_insn 49 48 50 5 (debug_marker) "sftp-realpath.c":74:2 -1
+     (nil))
+(insn 50 49 51 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 139 [ resolved ])
+            (const_int 0 [0]))) "sftp-realpath.c":74:5 -1
+     (nil))
+(jump_insn 51 50 52 5 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 664)
+            (pc))) "sftp-realpath.c":74:5 736 {*jcc}
+     (int_list:REG_BR_PROB 886588628 (nil))
+ -> 664)
+(note 52 51 53 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 53 52 54 6 (debug_marker) "sftp-realpath.c":75:3 -1
+     (nil))
+(insn 54 53 55 6 (set (reg:DI 5 di)
+        (const_int 4096 [0x1000])) "sftp-realpath.c":75:14 -1
+     (nil))
+(call_insn 55 54 56 6 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x7f0cea784400 malloc>) [0 __builtin_malloc S1 A8])
+            (const_int 0 [0]))) "sftp-realpath.c":75:14 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x7f0cea784400 malloc>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 56 55 57 6 (set (reg/f:DI 141)
+        (reg:DI 0 ax)) "sftp-realpath.c":75:14 -1
+     (expr_list:REG_NOALIAS (reg/f:DI 141)
+        (nil)))
+(insn 57 56 58 6 (set (reg/v/f:DI 139 [ resolved ])
+        (reg/f:DI 141)) "sftp-realpath.c":75:14 -1
+     (nil))
+(debug_insn 58 57 59 6 (var_location:DI resolved (reg/v/f:DI 139 [ resolved ])) "sftp-realpath.c":75:14 -1
+     (nil))
+(debug_insn 59 58 60 6 (debug_marker) "sftp-realpath.c":76:3 -1
+     (nil))
+(insn 60 59 61 6 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 139 [ resolved ])
+            (const_int 0 [0]))) "sftp-realpath.c":76:6 -1
+     (nil))
+(jump_insn 61 60 552 6 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 668)
+            (pc))) "sftp-realpath.c":76:6 736 {*jcc}
+     (int_list:REG_BR_PROB 1073312332 (nil))
+ -> 668)
+(code_label 552 61 62 7 32 (nil) [1 uses])
+(note 62 552 22 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 22 62 63 7 (set (reg/f:DI 137 [ <retval> ])
+        (const_int 0 [0])) "sftp-realpath.c":77:11 -1
+     (nil))
+(jump_insn 63 22 64 7 (set (pc)
+        (label_ref:DI 653)) 737 {jump}
+     (nil)
+ -> 653)
+(barrier 64 63 664)
+(code_label 664 64 663 8 37 (nil) [1 uses])
+(note 663 664 7 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 7 663 665 8 (set (reg/v:SI 121 [ mem_allocated ])
+        (const_int 0 [0])) "sftp-realpath.c":80:17 -1
+     (nil))
+(jump_insn 665 7 666 8 (set (pc)
+        (label_ref 65)) -1
+     (nil)
+ -> 65)
+(barrier 666 665 668)
+(code_label 668 666 667 9 38 (nil) [1 uses])
+(note 667 668 8 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 8 667 65 9 (set (reg/v:SI 121 [ mem_allocated ])
+        (const_int 1 [0x1])) "sftp-realpath.c":78:17 -1
+     (nil))
+(code_label 65 8 66 10 4 (nil) [1 uses])
+(note 66 65 67 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 67 66 68 10 (var_location:SI mem_allocated (reg/v:SI 121 [ mem_allocated ])) -1
+     (nil))
+(debug_insn 68 67 69 10 (var_location:DI resolved (reg/v/f:DI 139 [ resolved ])) -1
+     (nil))
+(debug_insn 69 68 70 10 (debug_marker) "sftp-realpath.c":82:2 -1
+     (nil))
+(debug_insn 70 69 71 10 (var_location:SI symlinks (const_int 0 [0])) "sftp-realpath.c":82:11 -1
+     (nil))
+(debug_insn 71 70 72 10 (debug_marker) "sftp-realpath.c":83:2 -1
+     (nil))
+(insn 72 71 73 10 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 82 [ _1 ])
+            (const_int 47 [0x2f]))) "sftp-realpath.c":83:5 -1
+     (nil))
+(jump_insn 73 72 74 10 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 95)
+            (pc))) "sftp-realpath.c":83:5 -1
+     (int_list:REG_BR_PROB 708669604 (nil))
+ -> 95)
+(note 74 73 75 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 75 74 76 11 (debug_marker) "sftp-realpath.c":84:3 -1
+     (nil))
+(debug_insn 76 75 77 11 (debug_marker) "sftp-realpath.c":85:3 -1
+     (nil))
+(insn 77 76 78 11 (set (mem:HI (reg/v/f:DI 139 [ resolved ]) [0 MEM <unsigned short> [(char *)resolved_46]+0 S2 A8])
+        (const_int 47 [0x2f])) "sftp-realpath.c":84:15 -1
+     (nil))
+(debug_insn 78 77 79 11 (debug_marker) "sftp-realpath.c":86:3 -1
+     (nil))
+(insn 79 78 80 11 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem:QI (plus:DI (reg/v/f:DI 138 [ path ])
+                    (const_int 1 [0x1])) [0 MEM[(const char *)path_71(D) + 1B]+0 S1 A8])
+            (const_int 0 [0]))) "sftp-realpath.c":86:6 -1
+     (nil))
+(jump_insn 80 79 81 11 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 672)
+            (pc))) "sftp-realpath.c":86:6 736 {*jcc}
+     (int_list:REG_BR_PROB 548896828 (nil))
+ -> 672)
+(note 81 80 82 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 82 81 83 12 (debug_marker) "sftp-realpath.c":88:3 -1
+     (nil))
+(debug_insn 83 82 84 12 (var_location:DI resolved_len (const_int 1 [0x1])) "sftp-realpath.c":88:16 -1
+     (nil))
+(debug_insn 84 83 85 12 (debug_marker) "sftp-realpath.c":89:3 -1
+     (nil))
+(insn 85 84 86 12 (parallel [
+            (set (reg:DI 142)
+                (plus:DI (reg/v/f:DI 138 [ path ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "sftp-realpath.c":89:14 -1
+     (nil))
+(insn 86 85 87 12 (parallel [
+            (set (reg:DI 143)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -12304 [0xffffffffffffcff0])))
+            (clobber (reg:CC 17 flags))
+        ]) "sftp-realpath.c":89:14 -1
+     (nil))
+(insn 87 86 88 12 (set (reg:DI 1 dx)
+        (const_int 4096 [0x1000])) "sftp-realpath.c":89:14 -1
+     (nil))
+(insn 88 87 89 12 (set (reg:DI 4 si)
+        (reg:DI 142)) "sftp-realpath.c":89:14 -1
+     (nil))
+(insn 89 88 90 12 (set (reg:DI 5 di)
+        (reg:DI 143)) "sftp-realpath.c":89:14 -1
+     (nil))
+(call_insn 90 89 91 12 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strlcpy") [flags 0x41]  <function_decl 0x7f0cea2e1700 strlcpy>) [0 strlcpy S1 A8])
+            (const_int 0 [0]))) "sftp-realpath.c":89:14 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("strlcpy") [flags 0x41]  <function_decl 0x7f0cea2e1700 strlcpy>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(insn 91 90 92 12 (set (reg/v:DI 83 [ left_len ])
+        (reg:DI 0 ax)) "sftp-realpath.c":89:14 -1
+     (nil))
+(debug_insn 92 91 9 12 (var_location:DI left_len (reg/v:DI 83 [ left_len ])) "sftp-realpath.c":89:14 -1
+     (nil))
+(insn 9 92 10 12 (set (reg:QI 122 [ prephitmp_67 ])
+        (const_int 0 [0])) -1
+     (nil))
+(insn 10 9 93 12 (set (reg/v:DI 120 [ resolved_len ])
+        (const_int 1 [0x1])) "sftp-realpath.c":88:16 -1
+     (nil))
+(jump_insn 93 10 94 12 (set (pc)
+        (label_ref 152)) -1
+     (nil)
+ -> 152)
+(barrier 94 93 95)
+(code_label 95 94 96 13 5 (nil) [1 uses])
+(note 96 95 97 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 97 96 98 13 (debug_marker) "sftp-realpath.c":91:3 -1
+     (nil))
+(debug_insn 98 97 99 13 (var_location:DI __buf (reg/v/f:DI 139 [ resolved ])) "sftp-realpath.c":91:3 -1
+     (nil))
+(debug_insn 99 98 100 13 (var_location:DI __size (const_int 4096 [0x1000])) "sftp-realpath.c":91:3 -1
+     (nil))
+(debug_insn 100 99 101 13 (debug_marker:BLK) "/usr/include/x86_64-linux-gnu/bits/unistd.h":200:1 -1
+     (nil))
+(debug_insn 101 100 102 13 (debug_marker) "/usr/include/x86_64-linux-gnu/bits/unistd.h":202:3 -1
+     (nil))
+(debug_insn 102 101 103 13 (debug_marker) "/usr/include/x86_64-linux-gnu/bits/unistd.h":210:3 -1
+     (nil))
+(insn 103 102 104 13 (set (reg:DI 4 si)
+        (const_int 4096 [0x1000])) "/usr/include/x86_64-linux-gnu/bits/unistd.h":210:10 -1
+     (nil))
+(insn 104 103 105 13 (set (reg:DI 5 di)
+        (reg/v/f:DI 139 [ resolved ])) "/usr/include/x86_64-linux-gnu/bits/unistd.h":210:10 -1
+     (nil))
+(call_insn 105 104 106 13 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("*getcwd") [flags 0x41]  <function_decl 0x7f0cea38f800 __getcwd_alias>) [0 __getcwd_alias S1 A8])
+            (const_int 0 [0]))) "/usr/include/x86_64-linux-gnu/bits/unistd.h":210:10 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("*getcwd") [flags 0x41]  <function_decl 0x7f0cea38f800 __getcwd_alias>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 106 105 107 13 (set (reg/f:DI 137 [ <retval> ])
+        (reg:DI 0 ax)) "/usr/include/x86_64-linux-gnu/bits/unistd.h":210:10 -1
+     (nil))
+(debug_insn 107 106 108 13 (var_location:DI __buf (clobber (const_int 0 [0]))) "sftp-realpath.c":91:7 -1
+     (nil))
+(debug_insn 108 107 109 13 (var_location:DI __size (clobber (const_int 0 [0]))) "sftp-realpath.c":91:7 -1
+     (nil))
+(insn 109 108 110 13 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/f:DI 137 [ <retval> ])
+            (const_int 0 [0]))) "sftp-realpath.c":91:6 -1
+     (nil))
+(jump_insn 110 109 111 13 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 130)
+            (pc))) "sftp-realpath.c":91:6 -1
+     (int_list:REG_BR_PROB 907633964 (nil))
+ -> 130)
+(note 111 110 112 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 112 111 113 14 (debug_marker) "sftp-realpath.c":92:4 -1
+     (nil))
+(insn 113 112 114 14 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 121 [ mem_allocated ])
+            (const_int 0 [0]))) "sftp-realpath.c":92:7 -1
+     (nil))
+(jump_insn 114 113 115 14 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 121)
+            (pc))) "sftp-realpath.c":92:7 -1
+     (int_list:REG_BR_PROB 536870916 (nil))
+ -> 121)
+(note 115 114 116 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 116 115 117 15 (debug_marker) "sftp-realpath.c":93:5 -1
+     (nil))
+(insn 117 116 118 15 (set (reg:DI 5 di)
+        (reg/v/f:DI 139 [ resolved ])) "sftp-realpath.c":93:5 -1
+     (nil))
+(call_insn 118 117 119 15 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x7f0cea77c900 free>) [0 __builtin_free S1 A8])
+        (const_int 0 [0])) "sftp-realpath.c":93:5 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x7f0cea77c900 free>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(jump_insn 119 118 120 15 (set (pc)
+        (label_ref:DI 653)) 737 {jump}
+     (nil)
+ -> 653)
+(barrier 120 119 121)
+(code_label 121 120 122 16 8 (nil) [1 uses])
+(note 122 121 123 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 123 122 124 16 (debug_marker) "sftp-realpath.c":95:5 -1
+     (nil))
+(insn 124 123 125 16 (set (reg:DI 1 dx)
+        (const_int 4096 [0x1000])) "sftp-realpath.c":95:5 -1
+     (nil))
+(insn 125 124 126 16 (set (reg:DI 4 si)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f0cea3eaa20 *.LC0>)) "sftp-realpath.c":95:5 -1
+     (nil))
+(insn 126 125 127 16 (set (reg:DI 5 di)
+        (reg/v/f:DI 139 [ resolved ])) "sftp-realpath.c":95:5 -1
+     (nil))
+(call_insn 127 126 128 16 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strlcpy") [flags 0x41]  <function_decl 0x7f0cea2e1700 strlcpy>) [0 strlcpy S1 A8])
+            (const_int 0 [0]))) "sftp-realpath.c":95:5 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("strlcpy") [flags 0x41]  <function_decl 0x7f0cea2e1700 strlcpy>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(jump_insn 128 127 129 16 (set (pc)
+        (label_ref:DI 653)) "sftp-realpath.c":95:5 737 {jump}
+     (nil)
+ -> 653)
+(barrier 129 128 130)
+(code_label 130 129 131 17 7 (nil) [1 uses])
+(note 131 130 132 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 132 131 133 17 (debug_marker) "sftp-realpath.c":98:3 -1
+     (nil))
+(insn 133 132 134 17 (set (reg:DI 5 di)
+        (reg/v/f:DI 139 [ resolved ])) "sftp-realpath.c":98:18 -1
+     (nil))
+(call_insn/i 134 133 135 17 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x7f0cea75c500 strlen>) [0 __builtin_strlen S1 A8])
+            (const_int 0 [0]))) "sftp-realpath.c":98:18 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x7f0cea75c500 strlen>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 135 134 136 17 (set (reg:DI 145)
+        (reg:DI 0 ax)) "sftp-realpath.c":98:18 -1
+     (nil))
+(insn 136 135 137 17 (set (reg:DI 146)
+        (reg:DI 145)) "sftp-realpath.c":98:18 -1
+     (nil))
+(insn 137 136 138 17 (set (reg/v:DI 120 [ resolved_len ])
+        (reg:DI 146)) "sftp-realpath.c":98:18 -1
+     (nil))
+(debug_insn 138 137 139 17 (var_location:DI resolved_len (reg/v:DI 120 [ resolved_len ])) "sftp-realpath.c":98:18 -1
+     (nil))
+(debug_insn 139 138 140 17 (debug_marker) "sftp-realpath.c":99:3 -1
+     (nil))
+(insn 140 139 141 17 (parallel [
+            (set (reg:DI 147)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -12304 [0xffffffffffffcff0])))
+            (clobber (reg:CC 17 flags))
+        ]) "sftp-realpath.c":99:14 -1
+     (nil))
+(insn 141 140 142 17 (set (reg:DI 1 dx)
+        (const_int 4096 [0x1000])) "sftp-realpath.c":99:14 -1
+     (nil))
+(insn 142 141 143 17 (set (reg:DI 4 si)
+        (reg/v/f:DI 138 [ path ])) "sftp-realpath.c":99:14 -1
+     (nil))
+(insn 143 142 144 17 (set (reg:DI 5 di)
+        (reg:DI 147)) "sftp-realpath.c":99:14 -1
+     (nil))
+(call_insn 144 143 145 17 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strlcpy") [flags 0x41]  <function_decl 0x7f0cea2e1700 strlcpy>) [0 strlcpy S1 A8])
+            (const_int 0 [0]))) "sftp-realpath.c":99:14 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("strlcpy") [flags 0x41]  <function_decl 0x7f0cea2e1700 strlcpy>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(insn 145 144 146 17 (set (reg/v:DI 83 [ left_len ])
+        (reg:DI 0 ax)) "sftp-realpath.c":99:14 -1
+     (nil))
+(debug_insn 146 145 149 17 (var_location:DI left_len (reg/v:DI 83 [ left_len ])) "sftp-realpath.c":99:14 -1
+     (nil))
+(insn 149 146 150 17 (set (reg:CC 17 flags)
+        (compare:CC (reg/v:DI 120 [ resolved_len ])
+            (const_int 4095 [0xfff]))) "sftp-realpath.c":101:47 -1
+     (nil))
+(insn 150 149 151 17 (set (reg:QI 148)
+        (gtu:QI (reg:CC 17 flags)
+            (const_int 0 [0]))) "sftp-realpath.c":101:47 -1
+     (nil))
+(insn 151 150 152 17 (set (reg:QI 122 [ prephitmp_67 ])
+        (reg:QI 148)) "sftp-realpath.c":101:47 -1
+     (nil))
+(code_label 152 151 153 18 6 (nil) [1 uses])
+(note 153 152 154 18 [bb 18] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 154 153 155 18 (var_location:DI resolved_len (reg/v:DI 120 [ resolved_len ])) -1
+     (nil))
+(debug_insn 155 154 156 18 (var_location:DI left_len (reg/v:DI 83 [ left_len ])) -1
+     (nil))
+(debug_insn 156 155 159 18 (debug_marker) "sftp-realpath.c":101:2 -1
+     (nil))
+(insn 159 156 160 18 (set (reg:CC 17 flags)
+        (compare:CC (reg/v:DI 83 [ left_len ])
+            (const_int 4095 [0xfff]))) "sftp-realpath.c":101:15 -1
+     (nil))
+(insn 160 159 161 18 (set (reg:QI 150)
+        (gtu:QI (reg:CC 17 flags)
+            (const_int 0 [0]))) "sftp-realpath.c":101:15 -1
+     (nil))
+(insn 161 160 162 18 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 150)
+            (const_int 0 [0]))) "sftp-realpath.c":101:5 -1
+     (nil))
+(jump_insn 162 161 683 18 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 175)
+            (pc))) "sftp-realpath.c":101:5 -1
+     (int_list:REG_BR_PROB 182536116 (nil))
+ -> 175)
+(note 683 162 163 19 [bb 19] NOTE_INSN_BASIC_BLOCK)
+(insn 163 683 164 19 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 122 [ prephitmp_67 ])
+            (const_int 0 [0]))) "sftp-realpath.c":101:5 -1
+     (nil))
+(jump_insn 164 163 165 19 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 175)
+            (pc))) "sftp-realpath.c":101:5 -1
+     (int_list:REG_BR_PROB 219923028 (nil))
+ -> 175)
+(note 165 164 166 20 [bb 20] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 166 165 167 20 (var_location:SI symlinks (const_int 0 [0])) -1
+     (nil))
+(debug_insn 167 166 168 20 (var_location:DI resolved_len (reg/v:DI 120 [ resolved_len ])) -1
+     (nil))
+(debug_insn 168 167 169 20 (var_location:DI left_len (reg/v:DI 83 [ left_len ])) -1
+     (nil))
+(debug_insn 169 168 170 20 (debug_marker) "sftp-realpath.c":109:8 -1
+     (nil))
+(insn 170 169 171 20 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:DI 83 [ left_len ])
+            (const_int 0 [0]))) "sftp-realpath.c":109:8 -1
+     (nil))
+(jump_insn 171 170 174 20 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 674)
+            (pc))) "sftp-realpath.c":109:8 736 {*jcc}
+     (int_list:REG_BR_PROB 1052266988 (nil))
+ -> 674)
+(note 174 171 172 21 [bb 21] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 172 174 173 21 (set (pc)
+        (label_ref 530)) "sftp-realpath.c":109:8 -1
+     (nil)
+ -> 530)
+(barrier 173 172 175)
+(code_label 175 173 176 22 9 (nil) [2 uses])
+(note 176 175 177 22 [bb 22] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 177 176 178 22 (debug_marker) "sftp-realpath.c":102:3 -1
+     (nil))
+(insn 178 177 179 22 (set (mem:SI (reg/f:DI 136 [ _173 ]) [1 *_173+0 S4 A32])
+        (const_int 36 [0x24])) "sftp-realpath.c":102:9 -1
+     (nil))
+(debug_insn 179 178 180 22 (debug_marker) "sftp-realpath.c":103:3 -1
+     (nil))
+(jump_insn 180 179 181 22 (set (pc)
+        (label_ref 549)) "sftp-realpath.c":103:3 -1
+     (nil)
+ -> 549)
+(barrier 181 180 674)
+(code_label 674 181 673 23 40 (nil) [1 uses])
+(note 673 674 11 23 [bb 23] NOTE_INSN_BASIC_BLOCK)
+(insn 11 673 182 23 (set (reg/v:SI 88 [ symlinks ])
+        (const_int 0 [0])) "sftp-realpath.c":82:11 -1
+     (nil))
+(code_label 182 11 183 24 10 (nil) [1 uses])
+(note 183 182 184 24 [bb 24] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 184 183 185 24 (var_location:SI symlinks (reg/v:SI 88 [ symlinks ])) -1
+     (nil))
+(debug_insn 185 184 186 24 (var_location:DI resolved_len (reg/v:DI 120 [ resolved_len ])) -1
+     (nil))
+(debug_insn 186 185 187 24 (var_location:DI left_len (reg/v:DI 83 [ left_len ])) -1
+     (nil))
+(debug_insn 187 186 188 24 (debug_marker) "sftp-realpath.c":114:3 -1
+     (nil))
+(insn 188 187 189 24 (parallel [
+            (set (reg:DI 151)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -12304 [0xffffffffffffcff0])))
+            (clobber (reg:CC 17 flags))
+        ]) "sftp-realpath.c":114:7 -1
+     (nil))
+(insn 189 188 190 24 (set (reg:SI 4 si)
+        (const_int 47 [0x2f])) "sftp-realpath.c":114:7 -1
+     (nil))
+(insn 190 189 191 24 (set (reg:DI 5 di)
+        (reg:DI 151)) "sftp-realpath.c":114:7 -1
+     (nil))
+(call_insn/i 191 190 192 24 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strchr") [flags 0x41]  <function_decl 0x7f0cea75a900 strchr>) [0 __builtin_strchr S1 A8])
+            (const_int 0 [0]))) "sftp-realpath.c":114:7 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("strchr") [flags 0x41]  <function_decl 0x7f0cea75a900 strchr>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (nil))))
+(insn 192 191 193 24 (set (reg/v/f:DI 124 [ p ])
+        (reg:DI 0 ax)) "sftp-realpath.c":114:7 -1
+     (nil))
+(debug_insn 193 192 194 24 (var_location:DI p (reg/v/f:DI 124 [ p ])) "sftp-realpath.c":114:7 -1
+     (nil))
+(debug_insn 194 193 195 24 (debug_marker) "sftp-realpath.c":115:3 -1
+     (nil))
+(insn 195 194 196 24 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 124 [ p ])
+            (const_int 0 [0]))) "sftp-realpath.c":115:13 -1
+     (nil))
+(jump_insn 196 195 197 24 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 608)
+            (pc))) "sftp-realpath.c":115:13 -1
+     (int_list:REG_BR_PROB 751619284 (nil))
+ -> 608)
+(note 197 196 198 25 [bb 25] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 198 197 199 25 (var_location:DI s (plus:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+            (reg/v:DI 83 [ left_len ]))
+        (const_int -12304 [0xffffffffffffcff0]))) "sftp-realpath.c":115:5 -1
+     (nil))
+(debug_insn 199 198 200 25 (debug_marker) "sftp-realpath.c":116:3 -1
+     (nil))
+(insn 200 199 203 25 (set (reg:DI 130 [ _126 ])
+        (reg/v:DI 83 [ left_len ])) -1
+     (nil))
+(insn 203 200 204 25 (set (reg:CCGC 17 flags)
+        (compare:CCGC (reg:DI 130 [ _126 ])
+            (const_int 4095 [0xfff]))) "sftp-realpath.c":116:6 -1
+     (nil))
+(jump_insn 204 203 618 25 (set (pc)
+        (if_then_else (le (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 627)
+            (pc))) "sftp-realpath.c":116:6 -1
+     (int_list:REG_BR_PROB 1073741828 (nil))
+ -> 627)
+(code_label 618 204 205 26 34 (nil) [1 uses])
+(note 205 618 206 26 [bb 26] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 206 205 207 26 (debug_marker) "sftp-realpath.c":117:4 -1
+     (nil))
+(insn 207 206 208 26 (set (mem:SI (reg/f:DI 136 [ _173 ]) [1 *_173+0 S4 A32])
+        (const_int 36 [0x24])) "sftp-realpath.c":117:10 -1
+     (nil))
+(debug_insn 208 207 209 26 (debug_marker) "sftp-realpath.c":118:4 -1
+     (nil))
+(jump_insn 209 208 210 26 (set (pc)
+        (label_ref 549)) "sftp-realpath.c":118:4 -1
+     (nil)
+ -> 549)
+(barrier 210 209 605)
+(code_label 605 210 211 27 33 (nil) [2 uses])
+(note 211 605 212 27 [bb 27] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 212 211 213 27 (var_location:DI __dest (clobber (const_int 0 [0]))) "sftp-realpath.c":120:3 -1
+     (nil))
+(debug_insn 213 212 214 27 (var_location:DI __src (clobber (const_int 0 [0]))) "sftp-realpath.c":120:3 -1
+     (nil))
+(debug_insn 214 213 215 27 (var_location:DI __len (clobber (const_int 0 [0]))) "sftp-realpath.c":120:3 -1
+     (nil))
+(debug_insn 215 214 216 27 (var_location:DI left_len (clobber (const_int 0 [0]))) "sftp-realpath.c":122:12 -1
+     (nil))
+(debug_insn 216 215 217 27 (var_location:DI __dest (clobber (const_int 0 [0]))) "sftp-realpath.c":124:4 -1
+     (nil))
+(debug_insn 217 216 218 27 (var_location:DI __src (clobber (const_int 0 [0]))) "sftp-realpath.c":124:4 -1
+     (nil))
+(debug_insn 218 217 219 27 (var_location:DI __len (clobber (const_int 0 [0]))) "sftp-realpath.c":124:4 -1
+     (nil))
+(debug_insn 219 218 220 27 (debug_marker) "sftp-realpath.c":125:3 -1
+     (nil))
+(insn 220 219 221 27 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem:QI (plus:DI (plus:DI (reg/v/f:DI 139 [ resolved ])
+                        (reg/v:DI 120 [ resolved_len ]))
+                    (const_int -1 [0xffffffffffffffff])) [0 *_18+0 S1 A8])
+            (const_int 47 [0x2f]))) "sftp-realpath.c":125:6 -1
+     (nil))
+(jump_insn 221 220 222 27 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 242)
+            (pc))) "sftp-realpath.c":125:6 -1
+     (int_list:REG_BR_PROB 365072228 (nil))
+ -> 242)
+(note 222 221 223 28 [bb 28] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 223 222 224 28 (debug_marker) "sftp-realpath.c":126:4 -1
+     (nil))
+(insn 224 223 227 28 (parallel [
+            (set (reg:DI 94 [ _20 ])
+                (plus:DI (reg/v:DI 120 [ resolved_len ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "sftp-realpath.c":126:21 -1
+     (nil))
+(insn 227 224 228 28 (set (reg:CC 17 flags)
+        (compare:CC (reg:DI 94 [ _20 ])
+            (const_int 4095 [0xfff]))) "sftp-realpath.c":126:7 -1
+     (nil))
+(jump_insn 228 227 229 28 (set (pc)
+        (if_then_else (leu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 235)
+            (pc))) "sftp-realpath.c":126:7 -1
+     (int_list:REG_BR_PROB 1052266988 (nil))
+ -> 235)
+(note 229 228 230 29 [bb 29] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 230 229 231 29 (debug_marker) "sftp-realpath.c":127:5 -1
+     (nil))
+(insn 231 230 232 29 (set (mem:SI (reg/f:DI 136 [ _173 ]) [1 *_173+0 S4 A32])
+        (const_int 36 [0x24])) "sftp-realpath.c":127:11 -1
+     (nil))
+(debug_insn 232 231 233 29 (debug_marker) "sftp-realpath.c":128:5 -1
+     (nil))
+(jump_insn 233 232 234 29 (set (pc)
+        (label_ref 549)) "sftp-realpath.c":128:5 -1
+     (nil)
+ -> 549)
+(barrier 234 233 235)
+(code_label 235 234 236 30 16 (nil) [1 uses])
+(note 236 235 237 30 [bb 30] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 237 236 238 30 (debug_marker) "sftp-realpath.c":130:4 -1
+     (nil))
+(debug_insn 238 237 239 30 (var_location:DI resolved_len (reg:DI 94 [ _20 ])) "sftp-realpath.c":130:25 -1
+     (nil))
+(insn 239 238 240 30 (set (mem:QI (plus:DI (reg/v/f:DI 139 [ resolved ])
+                (reg/v:DI 120 [ resolved_len ])) [0 *_21+0 S1 A8])
+        (const_int 47 [0x2f])) "sftp-realpath.c":130:29 -1
+     (nil))
+(debug_insn 240 239 241 30 (debug_marker) "sftp-realpath.c":131:4 -1
+     (nil))
+(insn 241 240 13 30 (set (mem:QI (plus:DI (reg/v/f:DI 139 [ resolved ])
+                (reg:DI 94 [ _20 ])) [0 *_22+0 S1 A8])
+        (const_int 0 [0])) "sftp-realpath.c":131:27 -1
+     (nil))
+(insn 13 241 242 30 (set (reg/v:DI 120 [ resolved_len ])
+        (reg:DI 94 [ _20 ])) "sftp-realpath.c":131:27 -1
+     (nil))
+(code_label 242 13 243 31 15 (nil) [1 uses])
+(note 243 242 244 31 [bb 31] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 244 243 245 31 (var_location:DI resolved_len (reg/v:DI 120 [ resolved_len ])) -1
+     (nil))
+(debug_insn 245 244 246 31 (debug_marker) "sftp-realpath.c":133:3 -1
+     (nil))
+(insn 246 245 247 31 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -8208 [0xffffffffffffdff0])) [0 next_token[0]+0 S1 A64])
+            (const_int 0 [0]))) "sftp-realpath.c":133:6 -1
+     (nil))
+(jump_insn 247 246 248 31 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 522)
+            (pc))) "sftp-realpath.c":133:6 -1
+     (int_list:REG_BR_PROB 354334804 (nil))
+ -> 522)
+(note 248 247 249 32 [bb 32] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 249 248 250 32 (debug_marker) "sftp-realpath.c":135:8 -1
+     (nil))
+(insn 250 249 251 32 (parallel [
+            (set (reg:DI 152)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -8208 [0xffffffffffffdff0])))
+            (clobber (reg:CC 17 flags))
+        ]) "sftp-realpath.c":135:12 -1
+     (nil))
+(insn 251 250 252 32 (set (reg/f:DI 153)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f0cea3eaa20 *.LC0>)) "sftp-realpath.c":135:12 -1
+     (nil))
+(insn 252 251 253 32 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:HI (reg:DI 152) [0 MEM <char[1:2]> [(void *)&next_token]+0 S2 A64])
+            (const_int 46 [0x2e]))) "sftp-realpath.c":135:12 -1
+     (nil))
+(jump_insn 253 252 684 32 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 258)
+            (pc))) "sftp-realpath.c":135:12 -1
+     (int_list:REG_BR_PROB 708669604 (nil))
+ -> 258)
+(note 684 253 254 33 [bb 33] NOTE_INSN_BASIC_BLOCK)
+(insn 254 684 255 33 (set (reg:SI 98 [ _24 ])
+        (const_int 0 [0])) "sftp-realpath.c":135:12 -1
+     (nil))
+(jump_insn 255 254 256 33 (set (pc)
+        (label_ref 260)) "sftp-realpath.c":135:12 -1
+     (nil)
+ -> 260)
+(barrier 256 255 257)
+(barrier 257 256 258)
+(code_label 258 257 685 34 18 (nil) [1 uses])
+(note 685 258 259 34 [bb 34] NOTE_INSN_BASIC_BLOCK)
+(insn 259 685 260 34 (set (reg:SI 98 [ _24 ])
+        (const_int 1 [0x1])) "sftp-realpath.c":135:12 -1
+     (nil))
+(code_label 260 259 686 35 19 (nil) [1 uses])
+(note 686 260 261 35 [bb 35] NOTE_INSN_BASIC_BLOCK)
+(insn 261 686 262 35 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 98 [ _24 ])
+            (const_int 0 [0]))) "sftp-realpath.c":135:11 -1
+     (nil))
+(jump_insn 262 261 263 35 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 522)
+            (pc))) "sftp-realpath.c":135:11 -1
+     (int_list:REG_BR_PROB 354334804 (nil))
+ -> 522)
+(note 263 262 264 36 [bb 36] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 264 263 265 36 (debug_marker) "sftp-realpath.c":137:8 -1
+     (nil))
+(insn 265 264 266 36 (parallel [
+            (set (reg:DI 154)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -8208 [0xffffffffffffdff0])))
+            (clobber (reg:CC 17 flags))
+        ]) "sftp-realpath.c":137:12 -1
+     (nil))
+(insn 266 265 267 36 (set (reg/f:DI 155)
+        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7f0cea3eaab0 *.LC1>)) "sftp-realpath.c":137:12 -1
+     (nil))
+(insn 267 266 268 36 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:HI (reg:DI 154) [0 MEM <char[1:3]> [(void *)&next_token]+0 S2 A64])
+            (const_int 11822 [0x2e2e]))) "sftp-realpath.c":137:12 -1
+     (nil))
+(jump_insn 268 267 687 36 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 275)
+            (pc))) "sftp-realpath.c":137:12 -1
+     (int_list:REG_BR_PROB 708669604 (nil))
+ -> 275)
+(note 687 268 269 37 [bb 37] NOTE_INSN_BASIC_BLOCK)
+(insn 269 687 270 37 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:QI (plus:DI (reg:DI 154)
+                    (const_int 2 [0x2])) [0 MEM <char[1:3]> [(void *)&next_token]+2 S1 A16])
+            (const_int 0 [0]))) "sftp-realpath.c":137:12 -1
+     (nil))
+(jump_insn 270 269 688 37 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 275)
+            (pc))) "sftp-realpath.c":137:12 -1
+     (int_list:REG_BR_PROB 536870916 (nil))
+ -> 275)
+(note 688 270 271 38 [bb 38] NOTE_INSN_BASIC_BLOCK)
+(insn 271 688 272 38 (set (reg:SI 99 [ _25 ])
+        (const_int 0 [0])) "sftp-realpath.c":137:12 -1
+     (nil))
+(jump_insn 272 271 273 38 (set (pc)
+        (label_ref 277)) "sftp-realpath.c":137:12 -1
+     (nil)
+ -> 277)
+(barrier 273 272 274)
+(barrier 274 273 275)
+(code_label 275 274 689 39 20 (nil) [2 uses])
+(note 689 275 276 39 [bb 39] NOTE_INSN_BASIC_BLOCK)
+(insn 276 689 277 39 (set (reg:SI 99 [ _25 ])
+        (const_int 1 [0x1])) "sftp-realpath.c":137:12 -1
+     (nil))
+(code_label 277 276 690 40 21 (nil) [1 uses])
+(note 690 277 278 40 [bb 40] NOTE_INSN_BASIC_BLOCK)
+(insn 278 690 279 40 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 99 [ _25 ])
+            (const_int 0 [0]))) "sftp-realpath.c":137:11 -1
+     (nil))
+(jump_insn 279 278 280 40 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 307)
+            (pc))) "sftp-realpath.c":137:11 -1
+     (int_list:REG_BR_PROB 536870916 (nil))
+ -> 307)
+(note 280 279 281 41 [bb 41] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 281 280 284 41 (debug_marker) "sftp-realpath.c":142:4 -1
+     (nil))
+(insn 284 281 285 41 (set (reg:CC 17 flags)
+        (compare:CC (reg/v:DI 120 [ resolved_len ])
+            (const_int 1 [0x1]))) "sftp-realpath.c":142:7 -1
+     (nil))
+(jump_insn 285 284 286 41 (set (pc)
+        (if_then_else (leu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 522)
+            (pc))) "sftp-realpath.c":142:7 -1
+     (int_list:REG_BR_PROB 440234148 (nil))
+ -> 522)
+(note 286 285 287 42 [bb 42] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 287 286 288 42 (debug_marker) "sftp-realpath.c":143:5 -1
+     (nil))
+(insn 288 287 289 42 (set (mem:QI (plus:DI (plus:DI (reg/v/f:DI 139 [ resolved ])
+                    (reg/v:DI 120 [ resolved_len ]))
+                (const_int -1 [0xffffffffffffffff])) [0 *_27+0 S1 A8])
+        (const_int 0 [0])) "sftp-realpath.c":143:32 -1
+     (nil))
+(debug_insn 289 288 290 42 (debug_marker) "sftp-realpath.c":144:5 -1
+     (nil))
+(insn 290 289 291 42 (set (reg:SI 4 si)
+        (const_int 47 [0x2f])) "sftp-realpath.c":144:9 -1
+     (nil))
+(insn 291 290 292 42 (set (reg:DI 5 di)
+        (reg/v/f:DI 139 [ resolved ])) "sftp-realpath.c":144:9 -1
+     (nil))
+(call_insn/i 292 291 293 42 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strrchr") [flags 0x41]  <function_decl 0x7f0cea760300 strrchr>) [0 __builtin_strrchr S1 A8])
+            (const_int 0 [0]))) "sftp-realpath.c":144:9 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("strrchr") [flags 0x41]  <function_decl 0x7f0cea760300 strrchr>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (nil))))
+(insn 293 292 294 42 (set (reg/f:DI 102 [ _28 ])
+        (reg:DI 0 ax)) "sftp-realpath.c":144:9 -1
+     (nil))
+(debug_insn 294 293 295 42 (var_location:DI q (plus:DI (reg/f:DI 102 [ _28 ])
+        (const_int 1 [0x1]))) "sftp-realpath.c":144:7 -1
+     (nil))
+(debug_insn 295 294 296 42 (debug_marker) "sftp-realpath.c":145:5 -1
+     (nil))
+(insn 296 295 297 42 (set (mem:QI (plus:DI (reg/f:DI 102 [ _28 ])
+                (const_int 1 [0x1])) [0 MEM[(char *)_28 + 1B]+0 S1 A8])
+        (const_int 0 [0])) "sftp-realpath.c":145:8 -1
+     (nil))
+(debug_insn 297 296 298 42 (debug_marker) "sftp-realpath.c":146:5 -1
+     (nil))
+(insn 298 297 299 42 (parallel [
+            (set (reg:DI 156 [ q ])
+                (plus:DI (reg/f:DI 102 [ _28 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "sftp-realpath.c":144:7 -1
+     (nil))
+(insn 299 298 300 42 (set (reg:DI 4 si)
+        (reg/v/f:DI 139 [ resolved ])) "sftp-realpath.c":146:22 -1
+     (nil))
+(insn 300 299 301 42 (set (reg:DI 5 di)
+        (reg:DI 156 [ q ])) "sftp-realpath.c":146:22 -1
+     (nil))
+(call_insn/u 301 300 302 42 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__subvdi3") [flags 0x41]  <function_decl 0x7f0cea3f0f00 __subvdi3>) [0  S1 A8])
+            (const_int 0 [0]))) "sftp-realpath.c":146:22 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__subvdi3") [flags 0x41]  <function_decl 0x7f0cea3f0f00 __subvdi3>)
+        (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+            (nil)))
+    (expr_list (use (reg:DI 4 si))
+        (expr_list (use (reg:DI 5 di))
+            (nil))))
+(insn 302 301 303 42 (set (reg:DI 157)
+        (reg:DI 0 ax)) "sftp-realpath.c":146:22 -1
+     (nil))
+(insn 303 302 304 42 (set (reg/v:DI 120 [ resolved_len ])
+        (reg:DI 157)) "sftp-realpath.c":146:18 -1
+     (nil))
+(debug_insn 304 303 305 42 (var_location:DI resolved_len (reg/v:DI 120 [ resolved_len ])) "sftp-realpath.c":146:18 -1
+     (nil))
+(jump_insn 305 304 306 42 (set (pc)
+        (label_ref 522)) "sftp-realpath.c":146:18 -1
+     (nil)
+ -> 522)
+(barrier 306 305 307)
+(code_label 307 306 308 43 22 (nil) [1 uses])
+(note 308 307 309 43 [bb 43] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 309 308 310 43 (debug_marker) "sftp-realpath.c":156:3 -1
+     (nil))
+(insn 310 309 311 43 (parallel [
+            (set (reg:DI 158)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -8208 [0xffffffffffffdff0])))
+            (clobber (reg:CC 17 flags))
+        ]) "sftp-realpath.c":156:18 -1
+     (nil))
+(insn 311 310 312 43 (set (reg:DI 1 dx)
+        (const_int 4096 [0x1000])) "sftp-realpath.c":156:18 -1
+     (nil))
+(insn 312 311 313 43 (set (reg:DI 4 si)
+        (reg:DI 158)) "sftp-realpath.c":156:18 -1
+     (nil))
+(insn 313 312 314 43 (set (reg:DI 5 di)
+        (reg/v/f:DI 139 [ resolved ])) "sftp-realpath.c":156:18 -1
+     (nil))
+(call_insn 314 313 315 43 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strlcat") [flags 0x41]  <function_decl 0x7f0cea2e1800 strlcat>) [0 strlcat S1 A8])
+            (const_int 0 [0]))) "sftp-realpath.c":156:18 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("strlcat") [flags 0x41]  <function_decl 0x7f0cea2e1800 strlcat>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(insn 315 314 316 43 (set (reg/v:DI 120 [ resolved_len ])
+        (reg:DI 0 ax)) "sftp-realpath.c":156:18 -1
+     (nil))
+(debug_insn 316 315 317 43 (var_location:DI resolved_len (reg/v:DI 120 [ resolved_len ])) "sftp-realpath.c":156:18 -1
+     (nil))
+(debug_insn 317 316 320 43 (debug_marker) "sftp-realpath.c":157:3 -1
+     (nil))
+(insn 320 317 321 43 (set (reg:CC 17 flags)
+        (compare:CC (reg/v:DI 120 [ resolved_len ])
+            (const_int 4095 [0xfff]))) "sftp-realpath.c":157:6 -1
+     (nil))
+(jump_insn 321 320 322 43 (set (pc)
+        (if_then_else (leu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 328)
+            (pc))) "sftp-realpath.c":157:6 -1
+     (int_list:REG_BR_PROB 1052266988 (nil))
+ -> 328)
+(note 322 321 323 44 [bb 44] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 323 322 324 44 (debug_marker) "sftp-realpath.c":158:4 -1
+     (nil))
+(insn 324 323 325 44 (set (mem:SI (reg/f:DI 136 [ _173 ]) [1 *_173+0 S4 A32])
+        (const_int 36 [0x24])) "sftp-realpath.c":158:10 -1
+     (nil))
+(debug_insn 325 324 326 44 (debug_marker) "sftp-realpath.c":159:4 -1
+     (nil))
+(jump_insn 326 325 327 44 (set (pc)
+        (label_ref 549)) "sftp-realpath.c":159:4 -1
+     (nil)
+ -> 549)
+(barrier 327 326 328)
+(code_label 328 327 329 45 23 (nil) [1 uses])
+(note 329 328 330 45 [bb 45] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 330 329 331 45 (debug_marker) "sftp-realpath.c":161:3 -1
+     (nil))
+(debug_insn 331 330 332 45 (var_location:DI __path (reg/v/f:DI 139 [ resolved ])) "sftp-realpath.c":161:3 -1
+     (nil))
+(debug_insn 332 331 333 45 (var_location:DI __statbuf (plus:DI (reg/f:DI 77 virtual-stack-vars)
+        (const_int -12448 [0xffffffffffffcf60]))) "sftp-realpath.c":161:3 -1
+     (nil))
+(debug_insn 333 332 334 45 (debug_marker:BLK) "/usr/include/x86_64-linux-gnu/sys/stat.h":460:1 -1
+     (nil))
+(debug_insn 334 333 335 45 (debug_marker) "/usr/include/x86_64-linux-gnu/sys/stat.h":462:3 -1
+     (nil))
+(insn 335 334 336 45 (parallel [
+            (set (reg:DI 159)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -12448 [0xffffffffffffcf60])))
+            (clobber (reg:CC 17 flags))
+        ]) "/usr/include/x86_64-linux-gnu/sys/stat.h":462:10 -1
+     (nil))
+(insn 336 335 337 45 (set (reg:DI 1 dx)
+        (reg:DI 159)) "/usr/include/x86_64-linux-gnu/sys/stat.h":462:10 -1
+     (nil))
+(insn 337 336 338 45 (set (reg:DI 4 si)
+        (reg/v/f:DI 139 [ resolved ])) "/usr/include/x86_64-linux-gnu/sys/stat.h":462:10 -1
+     (nil))
+(insn 338 337 339 45 (set (reg:SI 5 di)
+        (const_int 1 [0x1])) "/usr/include/x86_64-linux-gnu/sys/stat.h":462:10 -1
+     (nil))
+(call_insn 339 338 340 45 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__lxstat") [flags 0x41]  <function_decl 0x7f0cea503300 __lxstat>) [0 __lxstat S1 A8])
+            (const_int 0 [0]))) "/usr/include/x86_64-linux-gnu/sys/stat.h":462:10 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__lxstat") [flags 0x41]  <function_decl 0x7f0cea503300 __lxstat>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:SI (use (reg:SI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(insn 340 339 341 45 (set (reg:SI 131 [ _130 ])
+        (reg:SI 0 ax)) "/usr/include/x86_64-linux-gnu/sys/stat.h":462:10 -1
+     (nil))
+(debug_insn 341 340 342 45 (var_location:DI __path (clobber (const_int 0 [0]))) "sftp-realpath.c":161:7 -1
+     (nil))
+(debug_insn 342 341 343 45 (var_location:DI __statbuf (clobber (const_int 0 [0]))) "sftp-realpath.c":161:7 -1
+     (nil))
+(insn 343 342 344 45 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 131 [ _130 ])
+            (const_int 0 [0]))) "sftp-realpath.c":161:6 -1
+     (nil))
+(jump_insn 344 343 345 45 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 361)
+            (pc))) "sftp-realpath.c":161:6 -1
+     (int_list:REG_BR_PROB 1052266988 (nil))
+ -> 361)
+(note 345 344 346 46 [bb 46] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 346 345 347 46 (debug_marker) "sftp-realpath.c":162:4 -1
+     (nil))
+(insn 347 346 348 46 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem:SI (reg/f:DI 136 [ _173 ]) [1 *_173+0 S4 A32])
+            (const_int 2 [0x2]))) "sftp-realpath.c":162:7 -1
+     (nil))
+(insn 348 347 349 46 (set (reg:QI 161)
+        (eq:QI (reg:CCZ 17 flags)
+            (const_int 0 [0]))) "sftp-realpath.c":162:7 -1
+     (nil))
+(insn 349 348 350 46 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 161)
+            (const_int 0 [0]))) "sftp-realpath.c":162:24 -1
+     (nil))
+(jump_insn 350 349 691 46 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 549)
+            (pc))) "sftp-realpath.c":162:24 736 {*jcc}
+     (int_list:REG_BR_PROB 456340284 (nil))
+ -> 549)
+(note 691 350 351 47 [bb 47] NOTE_INSN_BASIC_BLOCK)
+(insn 351 691 352 47 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 124 [ p ])
+            (const_int 0 [0]))) "sftp-realpath.c":162:24 -1
+     (nil))
+(insn 352 351 353 47 (set (reg:QI 163)
+        (eq:QI (reg:CCZ 17 flags)
+            (const_int 0 [0]))) "sftp-realpath.c":162:24 -1
+     (nil))
+(insn 353 352 354 47 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 163)
+            (const_int 0 [0]))) "sftp-realpath.c":162:24 -1
+     (nil))
+(jump_insn 354 353 355 47 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 549)
+            (pc))) "sftp-realpath.c":162:24 736 {*jcc}
+     (int_list:REG_BR_PROB 793635268 (nil))
+ -> 549)
+(note 355 354 356 48 [bb 48] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 356 355 357 48 (debug_marker) "sftp-realpath.c":163:5 -1
+     (nil))
+(insn 357 356 358 48 (set (mem:SI (reg/f:DI 136 [ _173 ]) [1 *_173+0 S4 A32])
+        (reg/v:SI 123 [ serrno ])) "sftp-realpath.c":163:11 -1
+     (nil))
+(debug_insn 358 357 18 48 (debug_marker) "sftp-realpath.c":164:5 -1
+     (nil))
+(insn 18 358 359 48 (set (reg/f:DI 137 [ <retval> ])
+        (reg/v/f:DI 139 [ resolved ])) "sftp-realpath.c":164:12 -1
+     (nil))
+(jump_insn 359 18 360 48 (set (pc)
+        (label_ref:DI 653)) "sftp-realpath.c":164:12 737 {jump}
+     (nil)
+ -> 653)
+(barrier 360 359 361)
+(code_label 361 360 362 49 24 (nil) [1 uses])
+(note 362 361 363 49 [bb 49] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 363 362 364 49 (debug_marker) "sftp-realpath.c":168:3 -1
+     (nil))
+(insn 364 363 365 49 (set (reg:SI 165)
+        (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -12424 [0xffffffffffffcf78])) [1 sb.st_mode+0 S4 A64])) "sftp-realpath.c":168:7 -1
+     (nil))
+(insn 365 364 366 49 (parallel [
+            (set (reg:SI 164)
+                (and:SI (reg:SI 165)
+                    (const_int 61440 [0xf000])))
+            (clobber (reg:CC 17 flags))
+        ]) "sftp-realpath.c":168:7 -1
+     (expr_list:REG_EQUAL (and:SI (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -12424 [0xffffffffffffcf78])) [1 sb.st_mode+0 S4 A64])
+            (const_int 61440 [0xf000]))
+        (nil)))
+(insn 366 365 367 49 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 164)
+            (const_int 40960 [0xa000]))) "sftp-realpath.c":168:6 -1
+     (nil))
+(jump_insn 367 366 368 49 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 522)
+            (pc))) "sftp-realpath.c":168:6 -1
+     (int_list:REG_BR_PROB 708669604 (nil))
+ -> 522)
+(note 368 367 369 50 [bb 50] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 369 368 370 50 (debug_marker) "sftp-realpath.c":169:4 -1
+     (nil))
+(insn 370 369 371 50 (parallel [
+            (set (reg/v:SI 125 [ symlinks ])
+                (plus:SI (reg/v:SI 88 [ symlinks ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "sftp-realpath.c":169:16 -1
+     (nil))
+(debug_insn 371 370 374 50 (var_location:SI symlinks (reg/v:SI 125 [ symlinks ])) "sftp-realpath.c":169:16 -1
+     (nil))
+(insn 374 371 375 50 (set (reg:CC 17 flags)
+        (compare:CC (reg/v:SI 88 [ symlinks ])
+            (const_int 32 [0x20]))) "sftp-realpath.c":169:7 -1
+     (nil))
+(jump_insn 375 374 376 50 (set (pc)
+        (if_then_else (leu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 382)
+            (pc))) "sftp-realpath.c":169:7 -1
+     (int_list:REG_BR_PROB 1052266988 (nil))
+ -> 382)
+(note 376 375 377 51 [bb 51] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 377 376 378 51 (debug_marker) "sftp-realpath.c":170:5 -1
+     (nil))
+(insn 378 377 379 51 (set (mem:SI (reg/f:DI 136 [ _173 ]) [1 *_173+0 S4 A32])
+        (const_int 40 [0x28])) "sftp-realpath.c":170:11 -1
+     (nil))
+(debug_insn 379 378 380 51 (debug_marker) "sftp-realpath.c":171:5 -1
+     (nil))
+(jump_insn 380 379 381 51 (set (pc)
+        (label_ref 549)) "sftp-realpath.c":171:5 -1
+     (nil)
+ -> 549)
+(barrier 381 380 382)
+(code_label 382 381 383 52 26 (nil) [1 uses])
+(note 383 382 384 52 [bb 52] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 384 383 385 52 (debug_marker) "sftp-realpath.c":173:4 -1
+     (nil))
+(debug_insn 385 384 386 52 (var_location:DI __path (reg/v/f:DI 139 [ resolved ])) "sftp-realpath.c":173:4 -1
+     (nil))
+(debug_insn 386 385 387 52 (var_location:DI __buf (plus:DI (reg/f:DI 77 virtual-stack-vars)
+        (const_int -4112 [0xffffffffffffeff0]))) "sftp-realpath.c":173:4 -1
+     (nil))
+(debug_insn 387 386 388 52 (var_location:DI __len (const_int 4095 [0xfff])) "sftp-realpath.c":173:4 -1
+     (nil))
+(debug_insn 388 387 389 52 (debug_marker:BLK) "/usr/include/x86_64-linux-gnu/bits/unistd.h":139:1 -1
+     (nil))
+(debug_insn 389 388 390 52 (debug_marker) "/usr/include/x86_64-linux-gnu/bits/unistd.h":142:3 -1
+     (nil))
+(debug_insn 390 389 391 52 (debug_marker) "/usr/include/x86_64-linux-gnu/bits/unistd.h":144:7 -1
+     (nil))
+(debug_insn 391 390 392 52 (debug_marker) "/usr/include/x86_64-linux-gnu/bits/unistd.h":147:7 -1
+     (nil))
+(debug_insn 392 391 393 52 (debug_marker) "/usr/include/x86_64-linux-gnu/bits/unistd.h":150:3 -1
+     (nil))
+(insn 393 392 394 52 (parallel [
+            (set (reg:DI 166)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -4112 [0xffffffffffffeff0])))
+            (clobber (reg:CC 17 flags))
+        ]) "/usr/include/x86_64-linux-gnu/bits/unistd.h":150:10 -1
+     (nil))
+(insn 394 393 395 52 (set (reg:DI 1 dx)
+        (const_int 4095 [0xfff])) "/usr/include/x86_64-linux-gnu/bits/unistd.h":150:10 -1
+     (nil))
+(insn 395 394 396 52 (set (reg:DI 4 si)
+        (reg:DI 166)) "/usr/include/x86_64-linux-gnu/bits/unistd.h":150:10 -1
+     (nil))
+(insn 396 395 397 52 (set (reg:DI 5 di)
+        (reg/v/f:DI 139 [ resolved ])) "/usr/include/x86_64-linux-gnu/bits/unistd.h":150:10 -1
+     (nil))
+(call_insn 397 396 398 52 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("*readlink") [flags 0x41]  <function_decl 0x7f0cea384e00 __readlink_alias>) [0 __readlink_alias S1 A8])
+            (const_int 0 [0]))) "/usr/include/x86_64-linux-gnu/bits/unistd.h":150:10 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("*readlink") [flags 0x41]  <function_decl 0x7f0cea384e00 __readlink_alias>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(insn 398 397 399 52 (set (reg:DI 132 [ _131 ])
+        (reg:DI 0 ax)) "/usr/include/x86_64-linux-gnu/bits/unistd.h":150:10 -1
+     (nil))
+(debug_insn 399 398 400 52 (var_location:DI __path (clobber (const_int 0 [0]))) "sftp-realpath.c":173:11 -1
+     (nil))
+(debug_insn 400 399 401 52 (var_location:DI __buf (clobber (const_int 0 [0]))) "sftp-realpath.c":173:11 -1
+     (nil))
+(debug_insn 401 400 402 52 (var_location:DI __len (clobber (const_int 0 [0]))) "sftp-realpath.c":173:11 -1
+     (nil))
+(insn 402 401 403 52 (set (reg/v:SI 126 [ slen ])
+        (subreg:SI (reg:DI 132 [ _131 ]) 0)) "sftp-realpath.c":173:9 -1
+     (nil))
+(debug_insn 403 402 404 52 (var_location:SI slen (reg/v:SI 126 [ slen ])) "sftp-realpath.c":173:9 -1
+     (nil))
+(debug_insn 404 403 407 52 (debug_marker) "sftp-realpath.c":174:4 -1
+     (nil))
+(insn 407 404 408 52 (set (reg:CCGOC 17 flags)
+        (compare:CCGOC (reg/v:SI 126 [ slen ])
+            (const_int 0 [0]))) "sftp-realpath.c":174:7 -1
+     (nil))
+(jump_insn 408 407 409 52 (set (pc)
+        (if_then_else (lt (reg:CCGOC 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 549)
+            (pc))) "sftp-realpath.c":174:7 736 {*jcc}
+     (int_list:REG_BR_PROB 21474844 (nil))
+ -> 549)
+(note 409 408 410 53 [bb 53] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 410 409 411 53 (debug_marker) "sftp-realpath.c":176:4 -1
+     (nil))
+(insn 411 410 412 53 (set (reg:DI 167)
+        (sign_extend:DI (reg/v:SI 126 [ slen ]))) "sftp-realpath.c":176:18 -1
+     (nil))
+(insn 412 411 413 53 (set (mem:QI (plus:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (reg:DI 167))
+                (const_int -4112 [0xffffffffffffeff0])) [0 symlink[slen_96]+0 S1 A8])
+        (const_int 0 [0])) "sftp-realpath.c":176:18 -1
+     (nil))
+(debug_insn 413 412 414 53 (debug_marker) "sftp-realpath.c":177:4 -1
+     (nil))
+(insn 414 413 415 53 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -4112 [0xffffffffffffeff0])) [0 symlink[0]+0 S1 A64])
+            (const_int 47 [0x2f]))) "sftp-realpath.c":177:7 -1
+     (nil))
+(jump_insn 415 414 416 53 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 423)
+            (pc))) "sftp-realpath.c":177:7 -1
+     (int_list:REG_BR_PROB 708669604 (nil))
+ -> 423)
+(note 416 415 417 54 [bb 54] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 417 416 418 54 (debug_marker) "sftp-realpath.c":178:5 -1
+     (nil))
+(insn 418 417 419 54 (set (mem:QI (plus:DI (reg/v/f:DI 139 [ resolved ])
+                (const_int 1 [0x1])) [0 MEM[(char *)resolved_46 + 1B]+0 S1 A8])
+        (const_int 0 [0])) "sftp-realpath.c":178:17 -1
+     (nil))
+(debug_insn 419 418 420 54 (debug_marker) "sftp-realpath.c":179:5 -1
+     (nil))
+(debug_insn 420 419 14 54 (var_location:DI resolved_len (const_int 1 [0x1])) "sftp-realpath.c":179:18 -1
+     (nil))
+(insn 14 420 421 54 (set (reg/v:DI 120 [ resolved_len ])
+        (const_int 1 [0x1])) "sftp-realpath.c":179:18 -1
+     (nil))
+(jump_insn 421 14 422 54 (set (pc)
+        (label_ref 449)) -1
+     (nil)
+ -> 449)
+(barrier 422 421 423)
+(code_label 423 422 424 55 27 (nil) [1 uses])
+(note 424 423 425 55 [bb 55] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 425 424 428 55 (debug_marker) "sftp-realpath.c":180:11 -1
+     (nil))
+(insn 428 425 429 55 (set (reg:CC 17 flags)
+        (compare:CC (reg/v:DI 120 [ resolved_len ])
+            (const_int 1 [0x1]))) "sftp-realpath.c":180:14 -1
+     (nil))
+(jump_insn 429 428 430 55 (set (pc)
+        (if_then_else (leu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 449)
+            (pc))) "sftp-realpath.c":180:14 -1
+     (int_list:REG_BR_PROB 440234148 (nil))
+ -> 449)
+(note 430 429 431 56 [bb 56] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 431 430 432 56 (debug_marker) "sftp-realpath.c":182:5 -1
+     (nil))
+(insn 432 431 433 56 (set (mem:QI (plus:DI (plus:DI (reg/v/f:DI 139 [ resolved ])
+                    (reg/v:DI 120 [ resolved_len ]))
+                (const_int -1 [0xffffffffffffffff])) [0 *_35+0 S1 A8])
+        (const_int 0 [0])) "sftp-realpath.c":182:32 -1
+     (nil))
+(debug_insn 433 432 434 56 (debug_marker) "sftp-realpath.c":183:5 -1
+     (nil))
+(insn 434 433 435 56 (set (reg:SI 4 si)
+        (const_int 47 [0x2f])) "sftp-realpath.c":183:9 -1
+     (nil))
+(insn 435 434 436 56 (set (reg:DI 5 di)
+        (reg/v/f:DI 139 [ resolved ])) "sftp-realpath.c":183:9 -1
+     (nil))
+(call_insn/i 436 435 437 56 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strrchr") [flags 0x41]  <function_decl 0x7f0cea760300 strrchr>) [0 __builtin_strrchr S1 A8])
+            (const_int 0 [0]))) "sftp-realpath.c":183:9 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("strrchr") [flags 0x41]  <function_decl 0x7f0cea760300 strrchr>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (nil))))
+(insn 437 436 438 56 (set (reg/f:DI 110 [ _36 ])
+        (reg:DI 0 ax)) "sftp-realpath.c":183:9 -1
+     (nil))
+(debug_insn 438 437 439 56 (var_location:DI q (plus:DI (reg/f:DI 110 [ _36 ])
+        (const_int 1 [0x1]))) "sftp-realpath.c":183:7 -1
+     (nil))
+(debug_insn 439 438 440 56 (debug_marker) "sftp-realpath.c":184:5 -1
+     (nil))
+(insn 440 439 441 56 (set (mem:QI (plus:DI (reg/f:DI 110 [ _36 ])
+                (const_int 1 [0x1])) [0 MEM[(char *)_36 + 1B]+0 S1 A8])
+        (const_int 0 [0])) "sftp-realpath.c":184:8 -1
+     (nil))
+(debug_insn 441 440 442 56 (debug_marker) "sftp-realpath.c":185:5 -1
+     (nil))
+(insn 442 441 443 56 (parallel [
+            (set (reg:DI 168 [ q ])
+                (plus:DI (reg/f:DI 110 [ _36 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "sftp-realpath.c":183:7 -1
+     (nil))
+(insn 443 442 444 56 (set (reg:DI 4 si)
+        (reg/v/f:DI 139 [ resolved ])) "sftp-realpath.c":185:22 -1
+     (nil))
+(insn 444 443 445 56 (set (reg:DI 5 di)
+        (reg:DI 168 [ q ])) "sftp-realpath.c":185:22 -1
+     (nil))
+(call_insn/u 445 444 446 56 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__subvdi3") [flags 0x41]  <function_decl 0x7f0cea3f0f00 __subvdi3>) [0  S1 A8])
+            (const_int 0 [0]))) "sftp-realpath.c":185:22 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__subvdi3") [flags 0x41]  <function_decl 0x7f0cea3f0f00 __subvdi3>)
+        (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+            (nil)))
+    (expr_list (use (reg:DI 4 si))
+        (expr_list (use (reg:DI 5 di))
+            (nil))))
+(insn 446 445 447 56 (set (reg:DI 169)
+        (reg:DI 0 ax)) "sftp-realpath.c":185:22 -1
+     (nil))
+(insn 447 446 448 56 (set (reg/v:DI 120 [ resolved_len ])
+        (reg:DI 169)) "sftp-realpath.c":185:18 -1
+     (nil))
+(debug_insn 448 447 449 56 (var_location:DI resolved_len (reg/v:DI 120 [ resolved_len ])) "sftp-realpath.c":185:18 -1
+     (nil))
+(code_label 449 448 450 57 28 (nil) [2 uses])
+(note 450 449 451 57 [bb 57] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 451 450 452 57 (var_location:DI resolved_len (reg/v:DI 120 [ resolved_len ])) -1
+     (nil))
+(debug_insn 452 451 453 57 (debug_marker) "sftp-realpath.c":193:4 -1
+     (nil))
+(insn 453 452 454 57 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 124 [ p ])
+            (const_int 0 [0]))) "sftp-realpath.c":193:7 -1
+     (nil))
+(jump_insn 454 453 455 57 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 511)
+            (pc))) "sftp-realpath.c":193:7 -1
+     (int_list:REG_BR_PROB 187153204 (nil))
+ -> 511)
+(note 455 454 456 58 [bb 58] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 456 455 457 58 (debug_marker) "sftp-realpath.c":194:5 -1
+     (nil))
+(insn 457 456 458 58 (set (reg:SI 4 si)
+        (const_int -1 [0xffffffffffffffff])) "sftp-realpath.c":194:22 -1
+     (nil))
+(insn 458 457 459 58 (set (reg:SI 5 di)
+        (reg/v:SI 126 [ slen ])) "sftp-realpath.c":194:22 -1
+     (nil))
+(call_insn/u 459 458 460 58 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__addvsi3") [flags 0x41]  <function_decl 0x7f0cea3f0000 __addvsi3>) [0  S1 A8])
+            (const_int 0 [0]))) "sftp-realpath.c":194:22 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__addvsi3") [flags 0x41]  <function_decl 0x7f0cea3f0000 __addvsi3>)
+        (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+            (nil)))
+    (expr_list (use (reg:SI 4 si))
+        (expr_list (use (reg:SI 5 di))
+            (nil))))
+(insn 460 459 461 58 (set (reg:SI 170)
+        (reg:SI 0 ax)) "sftp-realpath.c":194:22 -1
+     (nil))
+(insn 461 460 462 58 (set (reg:DI 171)
+        (sign_extend:DI (reg:SI 170))) "sftp-realpath.c":194:16 -1
+     (nil))
+(insn 462 461 463 58 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem:QI (plus:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                        (reg:DI 171))
+                    (const_int -4112 [0xffffffffffffeff0])) [0 symlink[_38]+0 S1 A8])
+            (const_int 47 [0x2f]))) "sftp-realpath.c":194:8 -1
+     (nil))
+(jump_insn 463 462 464 58 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 489)
+            (pc))) "sftp-realpath.c":194:8 -1
+     (int_list:REG_BR_PROB 217325348 (nil))
+ -> 489)
+(note 464 463 465 59 [bb 59] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 465 464 466 59 (debug_marker) "sftp-realpath.c":195:6 -1
+     (nil))
+(insn 466 465 467 59 (set (reg:SI 4 si)
+        (const_int 1 [0x1])) "sftp-realpath.c":195:15 -1
+     (nil))
+(insn 467 466 468 59 (set (reg:SI 5 di)
+        (reg/v:SI 126 [ slen ])) "sftp-realpath.c":195:15 -1
+     (nil))
+(call_insn/u 468 467 469 59 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__addvsi3") [flags 0x41]  <function_decl 0x7f0cea3f0000 __addvsi3>) [0  S1 A8])
+            (const_int 0 [0]))) "sftp-realpath.c":195:15 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__addvsi3") [flags 0x41]  <function_decl 0x7f0cea3f0000 __addvsi3>)
+        (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+            (nil)))
+    (expr_list (use (reg:SI 4 si))
+        (expr_list (use (reg:SI 5 di))
+            (nil))))
+(insn 469 468 470 59 (set (reg:SI 172)
+        (reg:SI 0 ax)) "sftp-realpath.c":195:15 -1
+     (nil))
+(insn 470 469 473 59 (set (reg:SI 114 [ _40 ])
+        (reg:SI 172)) "sftp-realpath.c":195:15 -1
+     (nil))
+(insn 473 470 474 59 (set (reg:CCGC 17 flags)
+        (compare:CCGC (reg:SI 114 [ _40 ])
+            (const_int 4095 [0xfff]))) "sftp-realpath.c":195:9 -1
+     (nil))
+(jump_insn 474 473 475 59 (set (pc)
+        (if_then_else (le (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 481)
+            (pc))) "sftp-realpath.c":195:9 -1
+     (int_list:REG_BR_PROB 1052266988 (nil))
+ -> 481)
+(note 475 474 476 60 [bb 60] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 476 475 477 60 (debug_marker) "sftp-realpath.c":197:7 -1
+     (nil))
+(insn 477 476 478 60 (set (mem:SI (reg/f:DI 136 [ _173 ]) [1 *_173+0 S4 A32])
+        (const_int 36 [0x24])) "sftp-realpath.c":197:13 -1
+     (nil))
+(debug_insn 478 477 479 60 (debug_marker) "sftp-realpath.c":198:7 -1
+     (nil))
+(jump_insn 479 478 480 60 (set (pc)
+        (label_ref 549)) "sftp-realpath.c":198:7 -1
+     (nil)
+ -> 549)
+(barrier 480 479 481)
+(code_label 481 480 482 61 31 (nil) [1 uses])
+(note 482 481 483 61 [bb 61] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 483 482 484 61 (debug_marker) "sftp-realpath.c":200:6 -1
+     (nil))
+(insn 484 483 485 61 (set (reg:DI 173)
+        (sign_extend:DI (reg/v:SI 126 [ slen ]))) "sftp-realpath.c":200:20 -1
+     (nil))
+(insn 485 484 486 61 (set (mem:QI (plus:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (reg:DI 173))
+                (const_int -4112 [0xffffffffffffeff0])) [0 symlink[slen_96]+0 S1 A8])
+        (const_int 47 [0x2f])) "sftp-realpath.c":200:20 -1
+     (nil))
+(debug_insn 486 485 487 61 (debug_marker) "sftp-realpath.c":201:6 -1
+     (nil))
+(insn 487 486 488 61 (set (reg:DI 174)
+        (sign_extend:DI (reg:SI 114 [ _40 ]))) "sftp-realpath.c":201:24 -1
+     (nil))
+(insn 488 487 489 61 (set (mem:QI (plus:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (reg:DI 174))
+                (const_int -4112 [0xffffffffffffeff0])) [0 symlink[_40]+0 S1 A8])
+        (const_int 0 [0])) "sftp-realpath.c":201:24 -1
+     (nil))
+(code_label 489 488 490 62 30 (nil) [1 uses])
+(note 490 489 491 62 [bb 62] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 491 490 492 62 (debug_marker) "sftp-realpath.c":203:5 -1
+     (nil))
+(insn 492 491 493 62 (parallel [
+            (set (reg:DI 175)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -12304 [0xffffffffffffcff0])))
+            (clobber (reg:CC 17 flags))
+        ]) "sftp-realpath.c":203:16 -1
+     (nil))
+(insn 493 492 494 62 (parallel [
+            (set (reg:DI 176)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -4112 [0xffffffffffffeff0])))
+            (clobber (reg:CC 17 flags))
+        ]) "sftp-realpath.c":203:16 -1
+     (nil))
+(insn 494 493 495 62 (set (reg:DI 1 dx)
+        (const_int 4096 [0x1000])) "sftp-realpath.c":203:16 -1
+     (nil))
+(insn 495 494 496 62 (set (reg:DI 4 si)
+        (reg:DI 175)) "sftp-realpath.c":203:16 -1
+     (nil))
+(insn 496 495 497 62 (set (reg:DI 5 di)
+        (reg:DI 176)) "sftp-realpath.c":203:16 -1
+     (nil))
+(call_insn 497 496 498 62 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strlcat") [flags 0x41]  <function_decl 0x7f0cea2e1800 strlcat>) [0 strlcat S1 A8])
+            (const_int 0 [0]))) "sftp-realpath.c":203:16 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("strlcat") [flags 0x41]  <function_decl 0x7f0cea2e1800 strlcat>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(insn 498 497 499 62 (set (reg/v:DI 128 [ left_len ])
+        (reg:DI 0 ax)) "sftp-realpath.c":203:16 -1
+     (nil))
+(debug_insn 499 498 500 62 (var_location:DI left_len (reg/v:DI 128 [ left_len ])) "sftp-realpath.c":203:16 -1
+     (nil))
+(debug_insn 500 499 503 62 (debug_marker) "sftp-realpath.c":204:5 -1
+     (nil))
+(insn 503 500 504 62 (set (reg:CC 17 flags)
+        (compare:CC (reg/v:DI 128 [ left_len ])
+            (const_int 4095 [0xfff]))) "sftp-realpath.c":204:8 -1
+     (nil))
+(jump_insn 504 503 505 62 (set (pc)
+        (if_then_else (leu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 511)
+            (pc))) "sftp-realpath.c":204:8 -1
+     (int_list:REG_BR_PROB 1052266988 (nil))
+ -> 511)
+(note 505 504 506 63 [bb 63] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 506 505 507 63 (debug_marker) "sftp-realpath.c":205:6 -1
+     (nil))
+(insn 507 506 508 63 (set (mem:SI (reg/f:DI 136 [ _173 ]) [1 *_173+0 S4 A32])
+        (const_int 36 [0x24])) "sftp-realpath.c":205:12 -1
+     (nil))
+(debug_insn 508 507 509 63 (debug_marker) "sftp-realpath.c":206:6 -1
+     (nil))
+(jump_insn 509 508 510 63 (set (pc)
+        (label_ref 549)) "sftp-realpath.c":206:6 -1
+     (nil)
+ -> 549)
+(barrier 510 509 511)
+(code_label 511 510 512 64 29 (nil) [2 uses])
+(note 512 511 513 64 [bb 64] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 513 512 514 64 (debug_marker) "sftp-realpath.c":209:4 -1
+     (nil))
+(insn 514 513 515 64 (parallel [
+            (set (reg:DI 177)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -4112 [0xffffffffffffeff0])))
+            (clobber (reg:CC 17 flags))
+        ]) "sftp-realpath.c":209:15 -1
+     (nil))
+(insn 515 514 516 64 (parallel [
+            (set (reg:DI 178)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -12304 [0xffffffffffffcff0])))
+            (clobber (reg:CC 17 flags))
+        ]) "sftp-realpath.c":209:15 -1
+     (nil))
+(insn 516 515 517 64 (set (reg:DI 1 dx)
+        (const_int 4096 [0x1000])) "sftp-realpath.c":209:15 -1
+     (nil))
+(insn 517 516 518 64 (set (reg:DI 4 si)
+        (reg:DI 177)) "sftp-realpath.c":209:15 -1
+     (nil))
+(insn 518 517 519 64 (set (reg:DI 5 di)
+        (reg:DI 178)) "sftp-realpath.c":209:15 -1
+     (nil))
+(call_insn 519 518 520 64 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("strlcpy") [flags 0x41]  <function_decl 0x7f0cea2e1700 strlcpy>) [0 strlcpy S1 A8])
+            (const_int 0 [0]))) "sftp-realpath.c":209:15 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("strlcpy") [flags 0x41]  <function_decl 0x7f0cea2e1700 strlcpy>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(insn 520 519 521 64 (set (reg/v:DI 83 [ left_len ])
+        (reg:DI 0 ax)) "sftp-realpath.c":209:15 -1
+     (nil))
+(debug_insn 521 520 15 64 (var_location:DI left_len (reg/v:DI 83 [ left_len ])) "sftp-realpath.c":209:15 -1
+     (nil))
+(insn 15 521 522 64 (set (reg/v:SI 88 [ symlinks ])
+        (reg/v:SI 125 [ symlinks ])) "sftp-realpath.c":169:16 -1
+     (nil))
+(code_label 522 15 523 65 17 (nil) [5 uses])
+(note 523 522 524 65 [bb 65] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 524 523 525 65 (var_location:SI symlinks (reg/v:SI 88 [ symlinks ])) -1
+     (nil))
+(debug_insn 525 524 526 65 (var_location:DI resolved_len (reg/v:DI 120 [ resolved_len ])) -1
+     (nil))
+(debug_insn 526 525 527 65 (var_location:DI left_len (reg/v:DI 83 [ left_len ])) -1
+     (nil))
+(debug_insn 527 526 528 65 (debug_marker) "sftp-realpath.c":109:8 -1
+     (nil))
+(insn 528 527 529 65 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:DI 83 [ left_len ])
+            (const_int 0 [0]))) "sftp-realpath.c":109:8 -1
+     (nil))
+(jump_insn 529 528 530 65 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 182)
+            (pc))) "sftp-realpath.c":109:8 -1
+     (int_list:REG_BR_PROB 1052266988 (nil))
+ -> 182)
+(code_label 530 529 531 66 11 (nil) [1 uses])
+(note 531 530 532 66 [bb 66] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 532 531 535 66 (debug_marker) "sftp-realpath.c":217:2 -1
+     (nil))
+(insn 535 532 536 66 (set (reg:CC 17 flags)
+        (compare:CC (reg/v:DI 120 [ resolved_len ])
+            (const_int 1 [0x1]))) "sftp-realpath.c":217:5 -1
+     (nil))
+(jump_insn 536 535 537 66 (set (pc)
+        (if_then_else (leu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 678)
+            (pc))) "sftp-realpath.c":217:5 736 {*jcc}
+     (int_list:REG_BR_PROB 440234148 (nil))
+ -> 678)
+(note 537 536 538 67 [bb 67] NOTE_INSN_BASIC_BLOCK)
+(insn 538 537 539 67 (parallel [
+            (set (reg:DI 179)
+                (plus:DI (reg/v:DI 120 [ resolved_len ])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "sftp-realpath.c":217:34 -1
+     (nil))
+(insn 539 538 540 67 (parallel [
+            (set (reg/f:DI 116 [ _42 ])
+                (plus:DI (reg/v/f:DI 139 [ resolved ])
+                    (reg:DI 179)))
+            (clobber (reg:CC 17 flags))
+        ]) "sftp-realpath.c":217:34 -1
+     (nil))
+(insn 540 539 541 67 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem:QI (reg/f:DI 116 [ _42 ]) [0 *_42+0 S1 A8])
+            (const_int 47 [0x2f]))) "sftp-realpath.c":217:23 -1
+     (nil))
+(jump_insn 541 540 542 67 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 682)
+            (pc))) "sftp-realpath.c":217:23 736 {*jcc}
+     (int_list:REG_BR_PROB 708669604 (nil))
+ -> 682)
+(note 542 541 543 68 [bb 68] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 543 542 544 68 (debug_marker) "sftp-realpath.c":218:3 -1
+     (nil))
+(insn 544 543 19 68 (set (mem:QI (reg/f:DI 116 [ _42 ]) [0 *_42+0 S1 A8])
+        (const_int 0 [0])) "sftp-realpath.c":218:30 -1
+     (nil))
+(insn 19 544 545 68 (set (reg/f:DI 137 [ <retval> ])
+        (reg/v/f:DI 139 [ resolved ])) "sftp-realpath.c":218:30 -1
+     (nil))
+(jump_insn 545 19 546 68 (set (pc)
+        (label_ref:DI 653)) "sftp-realpath.c":218:30 737 {jump}
+     (nil)
+ -> 653)
+(barrier 546 545 549)
+(code_label 549 546 550 70 12 ("err") [10 uses])
+(note 550 549 551 70 [bb 70] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 551 550 553 70 (debug_marker) "sftp-realpath.c":222:2 -1
+     (nil))
+(insn 553 551 554 70 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 121 [ mem_allocated ])
+            (const_int 0 [0]))) "sftp-realpath.c":222:5 -1
+     (nil))
+(jump_insn 554 553 555 70 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 552)
+            (pc))) "sftp-realpath.c":222:5 -1
+     (int_list:REG_BR_PROB 719407028 (nil))
+ -> 552)
+(note 555 554 556 71 [bb 71] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 556 555 557 71 (debug_marker) "sftp-realpath.c":223:3 -1
+     (nil))
+(insn 557 556 558 71 (set (reg:DI 5 di)
+        (reg/v/f:DI 139 [ resolved ])) "sftp-realpath.c":223:3 -1
+     (nil))
+(call_insn 558 557 20 71 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x7f0cea77c900 free>) [0 __builtin_free S1 A8])
+        (const_int 0 [0])) "sftp-realpath.c":223:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x7f0cea77c900 free>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 20 558 669 71 (set (reg/f:DI 137 [ <retval> ])
+        (const_int 0 [0])) "sftp-realpath.c":224:9 -1
+     (nil))
+(jump_insn 669 20 670 71 (set (pc)
+        (label_ref:DI 653)) 737 {jump}
+     (nil)
+ -> 653)
+(barrier 670 669 672)
+(code_label 672 670 671 72 39 (nil) [1 uses])
+(note 671 672 17 72 [bb 72] NOTE_INSN_BASIC_BLOCK)
+(insn 17 671 675 72 (set (reg/f:DI 137 [ <retval> ])
+        (reg/v/f:DI 139 [ resolved ])) -1
+     (nil))
+(jump_insn 675 17 676 72 (set (pc)
+        (label_ref:DI 653)) 737 {jump}
+     (nil)
+ -> 653)
+(barrier 676 675 678)
+(code_label 678 676 677 73 41 (nil) [1 uses])
+(note 677 678 21 73 [bb 73] NOTE_INSN_BASIC_BLOCK)
+(insn 21 677 679 73 (set (reg/f:DI 137 [ <retval> ])
+        (reg/v/f:DI 139 [ resolved ])) -1
+     (nil))
+(jump_insn 679 21 680 73 (set (pc)
+        (label_ref:DI 653)) 737 {jump}
+     (nil)
+ -> 653)
+(barrier 680 679 682)
+(code_label 682 680 681 74 42 (nil) [1 uses])
+(note 681 682 23 74 [bb 74] NOTE_INSN_BASIC_BLOCK)
+(insn 23 681 561 74 (set (reg/f:DI 137 [ <retval> ])
+        (reg/v/f:DI 139 [ resolved ])) -1
+     (nil))
+(jump_insn 561 23 562 74 (set (pc)
+        (label_ref 653)) "sftp-realpath.c":225:1 -1
+     (nil)
+ -> 653)
+(barrier 562 561 623)
+(code_label 623 562 563 76 35 (nil) [1 uses])
+(note 563 623 564 76 [bb 76] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 564 563 565 76 (debug_marker) "sftp-realpath.c":120:3 -1
+     (nil))
+(insn 565 564 566 76 (set (reg:DI 133 [ _163 ])
+        (reg:DI 135 [ _168 ])) "sftp-realpath.c":120:3 -1
+     (nil))
+(debug_insn 566 565 567 76 (var_location:DI __dest (plus:DI (reg/f:DI 77 virtual-stack-vars)
+        (const_int -8208 [0xffffffffffffdff0]))) "sftp-realpath.c":120:3 -1
+     (nil))
+(debug_insn 567 566 568 76 (var_location:DI __src (plus:DI (reg/f:DI 77 virtual-stack-vars)
+        (const_int -12304 [0xffffffffffffcff0]))) "sftp-realpath.c":120:3 -1
+     (nil))
+(debug_insn 568 567 569 76 (var_location:DI __len (reg:DI 133 [ _163 ])) "sftp-realpath.c":120:3 -1
+     (nil))
+(debug_insn 569 568 570 76 (debug_marker:BLK) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":31:1 -1
+     (nil))
+(debug_insn 570 569 571 76 (debug_marker) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:3 -1
+     (nil))
+(insn 571 570 572 76 (parallel [
+            (set (reg:DI 181)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -12304 [0xffffffffffffcff0])))
+            (clobber (reg:CC 17 flags))
+        ]) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (nil))
+(insn 572 571 573 76 (parallel [
+            (set (reg:DI 182)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -8208 [0xffffffffffffdff0])))
+            (clobber (reg:CC 17 flags))
+        ]) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (nil))
+(insn 573 572 574 76 (set (reg:DI 2 cx)
+        (const_int 4096 [0x1000])) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (nil))
+(insn 574 573 575 76 (set (reg:DI 1 dx)
+        (reg:DI 133 [ _163 ])) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (nil))
+(insn 575 574 576 76 (set (reg:DI 4 si)
+        (reg:DI 181)) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (nil))
+(insn 576 575 577 76 (set (reg:DI 5 di)
+        (reg:DI 182)) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (nil))
+(call_insn 577 576 578 76 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__memcpy_chk") [flags 0x41]  <function_decl 0x7f0cea787900 __builtin___memcpy_chk>) [0 __builtin___memcpy_chk S1 A8])
+            (const_int 0 [0]))) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__memcpy_chk") [flags 0x41]  <function_decl 0x7f0cea787900 __builtin___memcpy_chk>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (set (reg:DI 0 ax)
+            (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (expr_list:DI (use (reg:DI 1 dx))
+                    (expr_list:DI (use (reg:DI 2 cx))
+                        (nil)))))))
+(debug_insn 578 577 579 76 (var_location:DI __dest (clobber (const_int 0 [0]))) "sftp-realpath.c":120:3 -1
+     (nil))
+(debug_insn 579 578 580 76 (var_location:DI __src (clobber (const_int 0 [0]))) "sftp-realpath.c":120:3 -1
+     (nil))
+(debug_insn 580 579 581 76 (var_location:DI __len (clobber (const_int 0 [0]))) "sftp-realpath.c":120:3 -1
+     (nil))
+(debug_insn 581 580 582 76 (debug_marker) "sftp-realpath.c":121:3 -1
+     (nil))
+(insn 582 581 583 76 (set (mem:QI (plus:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (reg:DI 135 [ _168 ]))
+                (const_int -8208 [0xffffffffffffdff0])) [0 next_token[_168]+0 S1 A8])
+        (const_int 0 [0])) "sftp-realpath.c":121:24 -1
+     (nil))
+(debug_insn 583 582 584 76 (debug_marker) "sftp-realpath.c":122:3 -1
+     (nil))
+(insn 584 583 585 76 (parallel [
+            (set (reg/v:DI 83 [ left_len ])
+                (minus:DI (reg/v:DI 83 [ left_len ])
+                    (reg:DI 133 [ _163 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "sftp-realpath.c":122:12 -1
+     (nil))
+(debug_insn 585 584 586 76 (var_location:DI left_len (reg/v:DI 83 [ left_len ])) "sftp-realpath.c":122:12 -1
+     (nil))
+(debug_insn 586 585 587 76 (debug_marker) "sftp-realpath.c":123:3 -1
+     (nil))
+(debug_insn 587 586 588 76 (var_location:DI __dest (clobber (const_int 0 [0]))) "sftp-realpath.c":120:3 -1
+     (nil))
+(debug_insn 588 587 589 76 (var_location:DI __src (clobber (const_int 0 [0]))) "sftp-realpath.c":120:3 -1
+     (nil))
+(debug_insn 589 588 590 76 (var_location:DI __len (clobber (const_int 0 [0]))) "sftp-realpath.c":120:3 -1
+     (nil))
+(debug_insn 590 589 591 76 (var_location:DI left_len (reg/v:DI 83 [ left_len ])) "sftp-realpath.c":122:12 -1
+     (nil))
+(debug_insn 591 590 592 76 (debug_marker) "sftp-realpath.c":124:4 -1
+     (nil))
+(debug_insn 592 591 593 76 (var_location:DI __dest (plus:DI (reg/f:DI 77 virtual-stack-vars)
+        (const_int -12304 [0xffffffffffffcff0]))) "sftp-realpath.c":124:20 -1
+     (nil))
+(debug_insn 593 592 594 76 (var_location:DI __src (plus:DI (reg/v/f:DI 124 [ p ])
+        (const_int 1 [0x1]))) "sftp-realpath.c":124:20 -1
+     (nil))
+(debug_insn 594 593 595 76 (var_location:DI __len (plus:DI (reg/v:DI 83 [ left_len ])
+        (const_int 1 [0x1]))) "sftp-realpath.c":124:20 -1
+     (nil))
+(debug_insn 595 594 596 76 (debug_marker:BLK) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":38:1 -1
+     (nil))
+(debug_insn 596 595 597 76 (debug_marker) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":40:3 -1
+     (nil))
+(insn 597 596 598 76 (parallel [
+            (set (reg:DI 183)
+                (plus:DI (reg/v:DI 83 [ left_len ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "sftp-realpath.c":124:4 -1
+     (nil))
+(insn 598 597 599 76 (parallel [
+            (set (reg:DI 184)
+                (plus:DI (reg/v/f:DI 124 [ p ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "sftp-realpath.c":124:20 -1
+     (nil))
+(insn 599 598 600 76 (parallel [
+            (set (reg:DI 185)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -12304 [0xffffffffffffcff0])))
+            (clobber (reg:CC 17 flags))
+        ]) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":40:10 -1
+     (nil))
+(insn 600 599 601 76 (set (reg:DI 2 cx)
+        (const_int 4096 [0x1000])) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":40:10 -1
+     (nil))
+(insn 601 600 602 76 (set (reg:DI 1 dx)
+        (reg:DI 183)) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":40:10 -1
+     (nil))
+(insn 602 601 603 76 (set (reg:DI 4 si)
+        (reg:DI 184)) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":40:10 -1
+     (nil))
+(insn 603 602 604 76 (set (reg:DI 5 di)
+        (reg:DI 185)) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":40:10 -1
+     (nil))
+(call_insn 604 603 606 76 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__memmove_chk") [flags 0x41]  <function_decl 0x7f0cea787b00 __builtin___memmove_chk>) [0 __builtin___memmove_chk S1 A8])
+            (const_int 0 [0]))) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":40:10 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__memmove_chk") [flags 0x41]  <function_decl 0x7f0cea787b00 __builtin___memmove_chk>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (set (reg:DI 0 ax)
+            (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (expr_list:DI (use (reg:DI 1 dx))
+                    (expr_list:DI (use (reg:DI 2 cx))
+                        (nil)))))))
+(jump_insn 606 604 607 76 (set (pc)
+        (label_ref 605)) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":40:10 -1
+     (nil)
+ -> 605)
+(barrier 607 606 608)
+(code_label 608 607 609 77 13 (nil) [1 uses])
+(note 609 608 610 77 [bb 77] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 610 609 611 77 (var_location:DI s (reg/v/f:DI 124 [ p ])) "sftp-realpath.c":115:5 -1
+     (nil))
+(debug_insn 611 610 612 77 (debug_marker) "sftp-realpath.c":116:3 -1
+     (nil))
+(insn 612 611 613 77 (parallel [
+            (set (reg:DI 186)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -12304 [0xffffffffffffcff0])))
+            (clobber (reg:CC 17 flags))
+        ]) "sftp-realpath.c":116:9 -1
+     (nil))
+(insn 613 612 614 77 (set (reg:DI 4 si)
+        (reg:DI 186)) "sftp-realpath.c":116:9 -1
+     (nil))
+(insn 614 613 615 77 (set (reg:DI 5 di)
+        (reg/v/f:DI 124 [ p ])) "sftp-realpath.c":116:9 -1
+     (nil))
+(call_insn/u 615 614 616 77 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__subvdi3") [flags 0x41]  <function_decl 0x7f0cea3f0f00 __subvdi3>) [0  S1 A8])
+            (const_int 0 [0]))) "sftp-realpath.c":116:9 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__subvdi3") [flags 0x41]  <function_decl 0x7f0cea3f0f00 __subvdi3>)
+        (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+            (nil)))
+    (expr_list (use (reg:DI 4 si))
+        (expr_list (use (reg:DI 5 di))
+            (nil))))
+(insn 616 615 617 77 (set (reg:DI 187)
+        (reg:DI 0 ax)) "sftp-realpath.c":116:9 -1
+     (nil))
+(insn 617 616 621 77 (set (reg:DI 135 [ _168 ])
+        (reg:DI 187)) "sftp-realpath.c":116:9 -1
+     (nil))
+(insn 621 617 622 77 (set (reg:CCGC 17 flags)
+        (compare:CCGC (reg:DI 135 [ _168 ])
+            (const_int 4095 [0xfff]))) "sftp-realpath.c":116:6 -1
+     (nil))
+(jump_insn 622 621 626 77 (set (pc)
+        (if_then_else (gt (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 618)
+            (pc))) "sftp-realpath.c":116:6 -1
+     (int_list:REG_BR_PROB 269960172 (nil))
+ -> 618)
+(note 626 622 624 78 [bb 78] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 624 626 625 78 (set (pc)
+        (label_ref 623)) "sftp-realpath.c":116:6 -1
+     (nil)
+ -> 623)
+(barrier 625 624 627)
+(code_label 627 625 628 79 14 (nil) [1 uses])
+(note 628 627 629 79 [bb 79] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 629 628 630 79 (var_location:DI s (plus:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+            (reg/v:DI 83 [ left_len ]))
+        (const_int -12304 [0xffffffffffffcff0]))) "sftp-realpath.c":115:5 -1
+     (nil))
+(debug_insn 630 629 631 79 (debug_marker) "sftp-realpath.c":120:3 -1
+     (nil))
+(debug_insn 631 630 632 79 (var_location:DI __dest (plus:DI (reg/f:DI 77 virtual-stack-vars)
+        (const_int -8208 [0xffffffffffffdff0]))) "sftp-realpath.c":120:3 -1
+     (nil))
+(debug_insn 632 631 633 79 (var_location:DI __src (plus:DI (reg/f:DI 77 virtual-stack-vars)
+        (const_int -12304 [0xffffffffffffcff0]))) "sftp-realpath.c":120:3 -1
+     (nil))
+(debug_insn 633 632 634 79 (var_location:DI __len (reg/v:DI 83 [ left_len ])) "sftp-realpath.c":120:3 -1
+     (nil))
+(debug_insn 634 633 635 79 (debug_marker:BLK) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":31:1 -1
+     (nil))
+(debug_insn 635 634 636 79 (debug_marker) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:3 -1
+     (nil))
+(insn 636 635 637 79 (parallel [
+            (set (reg:DI 188)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -12304 [0xffffffffffffcff0])))
+            (clobber (reg:CC 17 flags))
+        ]) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (nil))
+(insn 637 636 638 79 (parallel [
+            (set (reg:DI 189)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -8208 [0xffffffffffffdff0])))
+            (clobber (reg:CC 17 flags))
+        ]) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (nil))
+(insn 638 637 639 79 (set (reg:DI 2 cx)
+        (const_int 4096 [0x1000])) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (nil))
+(insn 639 638 640 79 (set (reg:DI 1 dx)
+        (reg/v:DI 83 [ left_len ])) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (nil))
+(insn 640 639 641 79 (set (reg:DI 4 si)
+        (reg:DI 188)) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (nil))
+(insn 641 640 642 79 (set (reg:DI 5 di)
+        (reg:DI 189)) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (nil))
+(call_insn 642 641 643 79 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__memcpy_chk") [flags 0x41]  <function_decl 0x7f0cea787900 __builtin___memcpy_chk>) [0 __builtin___memcpy_chk S1 A8])
+            (const_int 0 [0]))) "/usr/include/x86_64-linux-gnu/bits/string_fortified.h":34:10 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__memcpy_chk") [flags 0x41]  <function_decl 0x7f0cea787900 __builtin___memcpy_chk>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (set (reg:DI 0 ax)
+            (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (expr_list:DI (use (reg:DI 1 dx))
+                    (expr_list:DI (use (reg:DI 2 cx))
+                        (nil)))))))
+(debug_insn 643 642 644 79 (var_location:DI __dest (clobber (const_int 0 [0]))) "sftp-realpath.c":120:3 -1
+     (nil))
+(debug_insn 644 643 645 79 (var_location:DI __src (clobber (const_int 0 [0]))) "sftp-realpath.c":120:3 -1
+     (nil))
+(debug_insn 645 644 646 79 (var_location:DI __len (clobber (const_int 0 [0]))) "sftp-realpath.c":120:3 -1
+     (nil))
+(debug_insn 646 645 647 79 (debug_marker) "sftp-realpath.c":121:3 -1
+     (nil))
+(insn 647 646 648 79 (set (mem:QI (plus:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (reg:DI 130 [ _126 ]))
+                (const_int -8208 [0xffffffffffffdff0])) [0 next_token[_126]+0 S1 A8])
+        (const_int 0 [0])) "sftp-realpath.c":121:24 -1
+     (nil))
+(debug_insn 648 647 649 79 (debug_marker) "sftp-realpath.c":122:3 -1
+     (nil))
+(debug_insn 649 648 650 79 (var_location:DI left_len (const_int 0 [0])) "sftp-realpath.c":122:12 -1
+     (nil))
+(debug_insn 650 649 12 79 (debug_marker) "sftp-realpath.c":123:3 -1
+     (nil))
+(insn 12 650 651 79 (set (reg/v:DI 83 [ left_len ])
+        (const_int 0 [0])) "sftp-realpath.c":122:12 -1
+     (nil))
+(jump_insn 651 12 652 79 (set (pc)
+        (label_ref 605)) "sftp-realpath.c":121:24 -1
+     (nil)
+ -> 605)
+(barrier 652 651 653)
+(code_label 653 652 662 80 1 (nil) [10 uses])
+(note 662 653 654 80 [bb 80] NOTE_INSN_BASIC_BLOCK)
+(insn 654 662 655 80 (set (reg/f:DI 190)
+        (const_int 40 [0x28])) "sftp-realpath.c":225:1 -1
+     (nil))
+(insn 655 654 656 80 (parallel [
+            (set (reg:CCZ 17 flags)
+                (unspec:CCZ [
+                        (mem/v/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                                (const_int -8 [0xfffffffffffffff8])) [5 D.7942+0 S8 A64])
+                        (mem/v/f:DI (reg/f:DI 190) [0 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_TEST))
+            (clobber (scratch:DI))
+        ]) "sftp-realpath.c":225:1 -1
+     (nil))
+(jump_insn 656 655 692 80 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 659)
+            (pc))) "sftp-realpath.c":225:1 -1
+     (int_list:REG_BR_PROB 1073312332 (nil))
+ -> 659)
+(note 692 656 657 81 [bb 81] NOTE_INSN_BASIC_BLOCK)
+(call_insn 657 692 658 81 (call (mem:QI (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7f0cea3f0100 __stack_chk_fail>) [0 __stack_chk_fail S1 A8])
+        (const_int 0 [0])) "sftp-realpath.c":225:1 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7f0cea3f0100 __stack_chk_fail>)
+        (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+            (expr_list:REG_NORETURN (const_int 0 [0])
+                (expr_list:REG_EH_REGION (const_int 0 [0])
+                    (nil)))))
+    (nil))
+(barrier 658 657 659)
+(code_label 659 658 693 82 36 (nil) [1 uses])
+(note 693 659 660 82 [bb 82] NOTE_INSN_BASIC_BLOCK)
+(insn 660 693 661 82 (set (reg/i:DI 0 ax)
+        (reg/f:DI 137 [ <retval> ])) "sftp-realpath.c":225:1 -1
+     (nil))
+(insn 661 660 0 82 (use (reg/i:DI 0 ax)) "sftp-realpath.c":225:1 -1
+     (nil))

@@ -1,0 +1,3251 @@
+
+;; Function poly1305_auth (poly1305_auth, funcdef_no=66, decl_uid=6635, cgraph_uid=67, symbol_order=66)
+
+Partition 0: size 16 align 16
+	mp
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+Selected stringop expansion strategy: libcall
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+Selected stringop expansion strategy: loop
+Edge 2->6 redirected to 14
+Edge 5->4 redirected to 15
+Predictions for insn 779 bb 10
+  no prediction heuristics: 50.00%  exec 105119324 (estimated locally) hit 210238647 (estimated locally) (200.0%)
+  combined heuristics: 50.00%  exec 105119324 (estimated locally) hit 210238647 (estimated locally) (200.0%)
+Predictions for insn 792 bb 18
+  no prediction heuristics: 50.00%  exec 47303696 (estimated locally) hit 94607392 (estimated locally) (200.0%)
+  combined heuristics: 50.00%  exec 47303696 (estimated locally) hit 94607392 (estimated locally) (200.0%)
+Predictions for insn 845 bb 12
+  first match heuristics: 99.96%  exec 229275455 (estimated locally) hit 458550908 (estimated locally) (200.0%)
+  combined heuristics: 99.96%  exec 229275455 (estimated locally) hit 458550908 (estimated locally) (200.0%)
+  noreturn call heuristics: 99.96%  exec 229275455 (estimated locally) hit 458550908 (estimated locally) (200.0%)
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Redirecting jump 788 from 26 to 13.
+Edge 17->26 redirected to 13
+Edge 18->20 redirected to 13
+Merging block 20 into block 19...
+Merged blocks 19 and 20.
+Merged 19 and 20 without moving.
+Redirecting jump 802 from 26 to 13.
+Edge 21->26 redirected to 13
+Merging block 25 into block 24...
+Merged blocks 24 and 25.
+Merged 24 and 25 without moving.
+Merging block 26 into block 24...
+Merged blocks 24 and 26.
+Merged 24 and 26 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 23 NOTE_INSN_DELETED)
+(note 23 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 23 3 2 (set (reg/v/f:DI 319 [ out ])
+        (reg:DI 5 di [ out ])) "poly1305.c":34:131 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v/f:DI 320 [ m ])
+        (reg:DI 4 si [ m ])) "poly1305.c":34:131 -1
+     (nil))
+(insn 4 3 5 2 (set (reg/v:DI 321 [ inlen ])
+        (reg:DI 1 dx [ inlen ])) "poly1305.c":34:131 -1
+     (nil))
+(insn 5 4 6 2 (set (reg/v/f:DI 322 [ key ])
+        (reg:DI 2 cx [ key ])) "poly1305.c":34:131 -1
+     (nil))
+(note 6 5 7 2 NOTE_INSN_FUNCTION_BEG)
+(insn 7 6 8 2 (set (reg/f:DI 323)
+        (const_int 40 [0x28])) "poly1305.c":34:131 -1
+     (nil))
+(insn 8 7 25 2 (parallel [
+            (set (mem/v/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                        (const_int -8 [0xfffffffffffffff8])) [2 D.6703+0 S8 A64])
+                (unspec:DI [
+                        (mem/v/f:DI (reg/f:DI 323) [0 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_SET))
+            (set (scratch:DI)
+                (const_int 0 [0]))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":34:131 -1
+     (nil))
+(debug_insn 25 8 26 2 (debug_marker) "poly1305.c":35:2 -1
+     (nil))
+(debug_insn 26 25 27 2 (debug_marker) "poly1305.c":36:2 -1
+     (nil))
+(debug_insn 27 26 28 2 (debug_marker) "poly1305.c":37:2 -1
+     (nil))
+(debug_insn 28 27 29 2 (debug_marker) "poly1305.c":38:2 -1
+     (nil))
+(debug_insn 29 28 30 2 (debug_marker) "poly1305.c":39:2 -1
+     (nil))
+(debug_insn 30 29 31 2 (debug_marker) "poly1305.c":40:2 -1
+     (nil))
+(debug_insn 31 30 32 2 (debug_marker) "poly1305.c":41:2 -1
+     (nil))
+(debug_insn 32 31 33 2 (debug_marker) "poly1305.c":42:2 -1
+     (nil))
+(debug_insn 33 32 34 2 (debug_marker) "poly1305.c":43:2 -1
+     (nil))
+(debug_insn 34 33 35 2 (debug_marker) "poly1305.c":44:2 -1
+     (nil))
+(debug_insn 35 34 36 2 (debug_marker) "poly1305.c":45:2 -1
+     (nil))
+(debug_insn 36 35 37 2 (debug_marker) "poly1305.c":48:2 -1
+     (nil))
+(insn 37 36 38 2 (set (reg/v:SI 213 [ t0 ])
+        (mem:SI (reg/v/f:DI 322 [ key ]) [0 MEM <unsigned int> [(const unsigned char *)key_427(D)]+0 S4 A8])) "poly1305.c":48:5 -1
+     (nil))
+(debug_insn 38 37 39 2 (var_location:QI D#52 (mem:QI (reg/v/f:DI 322 [ key ]) [0 *key_427(D)+0 S1 A8])) "poly1305.c":48:7 -1
+     (nil))
+(debug_insn 39 38 40 2 (var_location:SI D#51 (zero_extend:SI (debug_expr:QI D#52))) "poly1305.c":48:7 -1
+     (nil))
+(debug_insn 40 39 41 2 (var_location:QI D#50 (mem:QI (plus:DI (reg/v/f:DI 322 [ key ])
+            (const_int 1 [0x1])) [0 MEM[(const unsigned char *)key_427(D) + 1B]+0 S1 A8])) "poly1305.c":48:7 -1
+     (nil))
+(debug_insn 41 40 42 2 (var_location:SI D#49 (zero_extend:SI (debug_expr:QI D#50))) "poly1305.c":48:7 -1
+     (nil))
+(debug_insn 42 41 43 2 (var_location:SI D#48 (ashift:SI (debug_expr:SI D#49)
+        (const_int 8 [0x8]))) "poly1305.c":48:7 -1
+     (nil))
+(debug_insn 43 42 44 2 (var_location:QI D#47 (mem:QI (plus:DI (reg/v/f:DI 322 [ key ])
+            (const_int 2 [0x2])) [0 MEM[(const unsigned char *)key_427(D) + 2B]+0 S1 A8])) "poly1305.c":48:7 -1
+     (nil))
+(debug_insn 44 43 45 2 (var_location:SI D#46 (zero_extend:SI (debug_expr:QI D#47))) "poly1305.c":48:7 -1
+     (nil))
+(debug_insn 45 44 46 2 (var_location:SI D#45 (ashift:SI (debug_expr:SI D#46)
+        (const_int 16 [0x10]))) "poly1305.c":48:7 -1
+     (nil))
+(debug_insn 46 45 47 2 (var_location:SI D#44 (ior:SI (debug_expr:SI D#48)
+        (debug_expr:SI D#45))) -1
+     (nil))
+(debug_insn 47 46 48 2 (var_location:SI D#43 (ior:SI (debug_expr:SI D#51)
+        (debug_expr:SI D#44))) "poly1305.c":48:7 -1
+     (nil))
+(debug_insn 48 47 49 2 (var_location:QI D#42 (mem:QI (plus:DI (reg/v/f:DI 322 [ key ])
+            (const_int 3 [0x3])) [0 MEM[(const unsigned char *)key_427(D) + 3B]+0 S1 A8])) "poly1305.c":48:7 -1
+     (nil))
+(debug_insn 49 48 50 2 (var_location:SI D#41 (zero_extend:SI (debug_expr:QI D#42))) "poly1305.c":48:7 -1
+     (nil))
+(debug_insn 50 49 51 2 (var_location:SI D#40 (ashift:SI (debug_expr:SI D#41)
+        (const_int 24 [0x18]))) "poly1305.c":48:7 -1
+     (nil))
+(debug_insn 51 50 52 2 (var_location:SI t0 (ior:SI (debug_expr:SI D#43)
+        (debug_expr:SI D#40))) "poly1305.c":48:5 -1
+     (nil))
+(debug_insn 52 51 53 2 (debug_marker) "poly1305.c":49:2 -1
+     (nil))
+(insn 53 52 54 2 (set (reg/v:SI 214 [ t1 ])
+        (mem:SI (plus:DI (reg/v/f:DI 322 [ key ])
+                (const_int 4 [0x4])) [0 MEM <unsigned int> [(const unsigned char *)key_427(D) + 4B]+0 S4 A8])) "poly1305.c":49:5 -1
+     (nil))
+(debug_insn 54 53 55 2 (var_location:QI D#39 (mem:QI (plus:DI (reg/v/f:DI 322 [ key ])
+            (const_int 4 [0x4])) [0 MEM[(const unsigned char *)key_427(D) + 4B]+0 S1 A8])) "poly1305.c":49:7 -1
+     (nil))
+(debug_insn 55 54 56 2 (var_location:SI D#38 (zero_extend:SI (debug_expr:QI D#39))) "poly1305.c":49:7 -1
+     (nil))
+(debug_insn 56 55 57 2 (var_location:QI D#37 (mem:QI (plus:DI (reg/v/f:DI 322 [ key ])
+            (const_int 5 [0x5])) [0 MEM[(const unsigned char *)key_427(D) + 5B]+0 S1 A8])) "poly1305.c":49:7 -1
+     (nil))
+(debug_insn 57 56 58 2 (var_location:SI D#36 (zero_extend:SI (debug_expr:QI D#37))) "poly1305.c":49:7 -1
+     (nil))
+(debug_insn 58 57 59 2 (var_location:SI D#35 (ashift:SI (debug_expr:SI D#36)
+        (const_int 8 [0x8]))) "poly1305.c":49:7 -1
+     (nil))
+(debug_insn 59 58 60 2 (var_location:QI D#34 (mem:QI (plus:DI (reg/v/f:DI 322 [ key ])
+            (const_int 6 [0x6])) [0 MEM[(const unsigned char *)key_427(D) + 6B]+0 S1 A8])) "poly1305.c":49:7 -1
+     (nil))
+(debug_insn 60 59 61 2 (var_location:SI D#33 (zero_extend:SI (debug_expr:QI D#34))) "poly1305.c":49:7 -1
+     (nil))
+(debug_insn 61 60 62 2 (var_location:SI D#32 (ashift:SI (debug_expr:SI D#33)
+        (const_int 16 [0x10]))) "poly1305.c":49:7 -1
+     (nil))
+(debug_insn 62 61 63 2 (var_location:SI D#31 (ior:SI (debug_expr:SI D#35)
+        (debug_expr:SI D#32))) -1
+     (nil))
+(debug_insn 63 62 64 2 (var_location:SI D#30 (ior:SI (debug_expr:SI D#38)
+        (debug_expr:SI D#31))) "poly1305.c":49:7 -1
+     (nil))
+(debug_insn 64 63 65 2 (var_location:QI D#29 (mem:QI (plus:DI (reg/v/f:DI 322 [ key ])
+            (const_int 7 [0x7])) [0 MEM[(const unsigned char *)key_427(D) + 7B]+0 S1 A8])) "poly1305.c":49:7 -1
+     (nil))
+(debug_insn 65 64 66 2 (var_location:SI D#28 (zero_extend:SI (debug_expr:QI D#29))) "poly1305.c":49:7 -1
+     (nil))
+(debug_insn 66 65 67 2 (var_location:SI D#27 (ashift:SI (debug_expr:SI D#28)
+        (const_int 24 [0x18]))) "poly1305.c":49:7 -1
+     (nil))
+(debug_insn 67 66 68 2 (var_location:SI t1 (ior:SI (debug_expr:SI D#30)
+        (debug_expr:SI D#27))) "poly1305.c":49:5 -1
+     (nil))
+(debug_insn 68 67 69 2 (debug_marker) "poly1305.c":50:2 -1
+     (nil))
+(insn 69 68 70 2 (set (reg/v:SI 215 [ t2 ])
+        (mem:SI (plus:DI (reg/v/f:DI 322 [ key ])
+                (const_int 8 [0x8])) [0 MEM <unsigned int> [(const unsigned char *)key_427(D) + 8B]+0 S4 A8])) "poly1305.c":50:5 -1
+     (nil))
+(debug_insn 70 69 71 2 (var_location:QI D#26 (mem:QI (plus:DI (reg/v/f:DI 322 [ key ])
+            (const_int 8 [0x8])) [0 MEM[(const unsigned char *)key_427(D) + 8B]+0 S1 A8])) "poly1305.c":50:7 -1
+     (nil))
+(debug_insn 71 70 72 2 (var_location:SI D#25 (zero_extend:SI (debug_expr:QI D#26))) "poly1305.c":50:7 -1
+     (nil))
+(debug_insn 72 71 73 2 (var_location:QI D#24 (mem:QI (plus:DI (reg/v/f:DI 322 [ key ])
+            (const_int 9 [0x9])) [0 MEM[(const unsigned char *)key_427(D) + 9B]+0 S1 A8])) "poly1305.c":50:7 -1
+     (nil))
+(debug_insn 73 72 74 2 (var_location:SI D#23 (zero_extend:SI (debug_expr:QI D#24))) "poly1305.c":50:7 -1
+     (nil))
+(debug_insn 74 73 75 2 (var_location:SI D#22 (ashift:SI (debug_expr:SI D#23)
+        (const_int 8 [0x8]))) "poly1305.c":50:7 -1
+     (nil))
+(debug_insn 75 74 76 2 (var_location:QI D#21 (mem:QI (plus:DI (reg/v/f:DI 322 [ key ])
+            (const_int 10 [0xa])) [0 MEM[(const unsigned char *)key_427(D) + 10B]+0 S1 A8])) "poly1305.c":50:7 -1
+     (nil))
+(debug_insn 76 75 77 2 (var_location:SI D#20 (zero_extend:SI (debug_expr:QI D#21))) "poly1305.c":50:7 -1
+     (nil))
+(debug_insn 77 76 78 2 (var_location:SI D#19 (ashift:SI (debug_expr:SI D#20)
+        (const_int 16 [0x10]))) "poly1305.c":50:7 -1
+     (nil))
+(debug_insn 78 77 79 2 (var_location:SI D#18 (ior:SI (debug_expr:SI D#22)
+        (debug_expr:SI D#19))) -1
+     (nil))
+(debug_insn 79 78 80 2 (var_location:SI D#17 (ior:SI (debug_expr:SI D#25)
+        (debug_expr:SI D#18))) "poly1305.c":50:7 -1
+     (nil))
+(debug_insn 80 79 81 2 (var_location:QI D#16 (mem:QI (plus:DI (reg/v/f:DI 322 [ key ])
+            (const_int 11 [0xb])) [0 MEM[(const unsigned char *)key_427(D) + 11B]+0 S1 A8])) "poly1305.c":50:7 -1
+     (nil))
+(debug_insn 81 80 82 2 (var_location:SI D#15 (zero_extend:SI (debug_expr:QI D#16))) "poly1305.c":50:7 -1
+     (nil))
+(debug_insn 82 81 83 2 (var_location:SI D#14 (ashift:SI (debug_expr:SI D#15)
+        (const_int 24 [0x18]))) "poly1305.c":50:7 -1
+     (nil))
+(debug_insn 83 82 84 2 (var_location:SI t2 (ior:SI (debug_expr:SI D#17)
+        (debug_expr:SI D#14))) "poly1305.c":50:5 -1
+     (nil))
+(debug_insn 84 83 85 2 (debug_marker) "poly1305.c":51:2 -1
+     (nil))
+(insn 85 84 86 2 (set (reg/v:SI 216 [ t3 ])
+        (mem:SI (plus:DI (reg/v/f:DI 322 [ key ])
+                (const_int 12 [0xc])) [0 MEM <unsigned int> [(const unsigned char *)key_427(D) + 12B]+0 S4 A8])) "poly1305.c":51:5 -1
+     (nil))
+(debug_insn 86 85 87 2 (var_location:QI D#13 (mem:QI (plus:DI (reg/v/f:DI 322 [ key ])
+            (const_int 12 [0xc])) [0 MEM[(const unsigned char *)key_427(D) + 12B]+0 S1 A8])) "poly1305.c":51:7 -1
+     (nil))
+(debug_insn 87 86 88 2 (var_location:SI D#12 (zero_extend:SI (debug_expr:QI D#13))) "poly1305.c":51:7 -1
+     (nil))
+(debug_insn 88 87 89 2 (var_location:QI D#11 (mem:QI (plus:DI (reg/v/f:DI 322 [ key ])
+            (const_int 13 [0xd])) [0 MEM[(const unsigned char *)key_427(D) + 13B]+0 S1 A8])) "poly1305.c":51:7 -1
+     (nil))
+(debug_insn 89 88 90 2 (var_location:SI D#10 (zero_extend:SI (debug_expr:QI D#11))) "poly1305.c":51:7 -1
+     (nil))
+(debug_insn 90 89 91 2 (var_location:SI D#9 (ashift:SI (debug_expr:SI D#10)
+        (const_int 8 [0x8]))) "poly1305.c":51:7 -1
+     (nil))
+(debug_insn 91 90 92 2 (var_location:QI D#8 (mem:QI (plus:DI (reg/v/f:DI 322 [ key ])
+            (const_int 14 [0xe])) [0 MEM[(const unsigned char *)key_427(D) + 14B]+0 S1 A8])) "poly1305.c":51:7 -1
+     (nil))
+(debug_insn 92 91 93 2 (var_location:SI D#7 (zero_extend:SI (debug_expr:QI D#8))) "poly1305.c":51:7 -1
+     (nil))
+(debug_insn 93 92 94 2 (var_location:SI D#6 (ashift:SI (debug_expr:SI D#7)
+        (const_int 16 [0x10]))) "poly1305.c":51:7 -1
+     (nil))
+(debug_insn 94 93 95 2 (var_location:SI D#5 (ior:SI (debug_expr:SI D#9)
+        (debug_expr:SI D#6))) -1
+     (nil))
+(debug_insn 95 94 96 2 (var_location:SI D#4 (ior:SI (debug_expr:SI D#12)
+        (debug_expr:SI D#5))) "poly1305.c":51:7 -1
+     (nil))
+(debug_insn 96 95 97 2 (var_location:QI D#3 (mem:QI (plus:DI (reg/v/f:DI 322 [ key ])
+            (const_int 15 [0xf])) [0 MEM[(const unsigned char *)key_427(D) + 15B]+0 S1 A8])) "poly1305.c":51:7 -1
+     (nil))
+(debug_insn 97 96 98 2 (var_location:SI D#2 (zero_extend:SI (debug_expr:QI D#3))) "poly1305.c":51:7 -1
+     (nil))
+(debug_insn 98 97 99 2 (var_location:SI D#1 (ashift:SI (debug_expr:SI D#2)
+        (const_int 24 [0x18]))) "poly1305.c":51:7 -1
+     (nil))
+(debug_insn 99 98 100 2 (var_location:SI t3 (ior:SI (debug_expr:SI D#4)
+        (debug_expr:SI D#1))) "poly1305.c":51:5 -1
+     (nil))
+(debug_insn 100 99 101 2 (debug_marker) "poly1305.c":54:2 -1
+     (nil))
+(insn 101 100 102 2 (parallel [
+            (set (reg/v:SI 217 [ r0 ])
+                (and:SI (reg/v:SI 213 [ t0 ])
+                    (const_int 67108863 [0x3ffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":54:5 -1
+     (nil))
+(debug_insn 102 101 103 2 (var_location:SI r0 (reg/v:SI 217 [ r0 ])) "poly1305.c":54:5 -1
+     (nil))
+(debug_insn 103 102 104 2 (debug_marker) "poly1305.c":54:23 -1
+     (nil))
+(insn 104 103 105 2 (parallel [
+            (set (reg/v:SI 218 [ t0 ])
+                (lshiftrt:SI (reg/v:SI 213 [ t0 ])
+                    (const_int 26 [0x1a])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":54:26 -1
+     (nil))
+(debug_insn 105 104 106 2 (var_location:SI t0 (reg/v:SI 218 [ t0 ])) "poly1305.c":54:26 -1
+     (nil))
+(debug_insn 106 105 107 2 (debug_marker) "poly1305.c":54:34 -1
+     (nil))
+(debug_insn 107 106 108 2 (var_location:SI t0 (ior:SI (ashift:SI (reg/v:SI 214 [ t1 ])
+            (const_int 6 [0x6]))
+        (reg/v:SI 218 [ t0 ]))) "poly1305.c":54:37 -1
+     (nil))
+(debug_insn 108 107 109 2 (debug_marker) "poly1305.c":55:2 -1
+     (nil))
+(insn 109 108 110 2 (parallel [
+            (set (reg:SI 324)
+                (ashift:SI (reg/v:SI 214 [ t1 ])
+                    (const_int 6 [0x6])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":54:43 -1
+     (nil))
+(insn 110 109 111 2 (parallel [
+            (set (reg:SI 325 [ t0 ])
+                (ior:SI (reg:SI 324)
+                    (reg/v:SI 218 [ t0 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":54:37 -1
+     (nil))
+(insn 111 110 112 2 (parallel [
+            (set (reg/v:SI 220 [ r1 ])
+                (and:SI (reg:SI 325 [ t0 ])
+                    (const_int 67108611 [0x3ffff03])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":55:5 -1
+     (nil))
+(debug_insn 112 111 113 2 (var_location:SI r1 (reg/v:SI 220 [ r1 ])) "poly1305.c":55:5 -1
+     (nil))
+(debug_insn 113 112 114 2 (debug_marker) "poly1305.c":55:23 -1
+     (nil))
+(insn 114 113 115 2 (parallel [
+            (set (reg/v:SI 221 [ t1 ])
+                (lshiftrt:SI (reg/v:SI 214 [ t1 ])
+                    (const_int 20 [0x14])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":55:26 -1
+     (nil))
+(debug_insn 115 114 116 2 (var_location:SI t1 (reg/v:SI 221 [ t1 ])) "poly1305.c":55:26 -1
+     (nil))
+(debug_insn 116 115 117 2 (debug_marker) "poly1305.c":55:34 -1
+     (nil))
+(debug_insn 117 116 118 2 (var_location:SI t1 (ior:SI (ashift:SI (reg/v:SI 215 [ t2 ])
+            (const_int 12 [0xc]))
+        (reg/v:SI 221 [ t1 ]))) "poly1305.c":55:37 -1
+     (nil))
+(debug_insn 118 117 119 2 (debug_marker) "poly1305.c":56:2 -1
+     (nil))
+(insn 119 118 120 2 (parallel [
+            (set (reg:SI 326)
+                (ashift:SI (reg/v:SI 215 [ t2 ])
+                    (const_int 12 [0xc])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":55:43 -1
+     (nil))
+(insn 120 119 121 2 (parallel [
+            (set (reg:SI 327 [ t1 ])
+                (ior:SI (reg:SI 326)
+                    (reg/v:SI 221 [ t1 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":55:37 -1
+     (nil))
+(insn 121 120 122 2 (parallel [
+            (set (reg/v:SI 223 [ r2 ])
+                (and:SI (reg:SI 327 [ t1 ])
+                    (const_int 67092735 [0x3ffc0ff])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":56:5 -1
+     (nil))
+(debug_insn 122 121 123 2 (var_location:SI r2 (reg/v:SI 223 [ r2 ])) "poly1305.c":56:5 -1
+     (nil))
+(debug_insn 123 122 124 2 (debug_marker) "poly1305.c":56:23 -1
+     (nil))
+(insn 124 123 125 2 (parallel [
+            (set (reg/v:SI 224 [ t2 ])
+                (lshiftrt:SI (reg/v:SI 215 [ t2 ])
+                    (const_int 14 [0xe])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":56:26 -1
+     (nil))
+(debug_insn 125 124 126 2 (var_location:SI t2 (reg/v:SI 224 [ t2 ])) "poly1305.c":56:26 -1
+     (nil))
+(debug_insn 126 125 127 2 (debug_marker) "poly1305.c":56:34 -1
+     (nil))
+(debug_insn 127 126 128 2 (var_location:SI t2 (ior:SI (ashift:SI (reg/v:SI 216 [ t3 ])
+            (const_int 18 [0x12]))
+        (reg/v:SI 224 [ t2 ]))) "poly1305.c":56:37 -1
+     (nil))
+(debug_insn 128 127 129 2 (debug_marker) "poly1305.c":57:2 -1
+     (nil))
+(insn 129 128 130 2 (parallel [
+            (set (reg:SI 328)
+                (ashift:SI (reg/v:SI 216 [ t3 ])
+                    (const_int 18 [0x12])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":56:43 -1
+     (nil))
+(insn 130 129 131 2 (parallel [
+            (set (reg:SI 329 [ t2 ])
+                (ior:SI (reg:SI 328)
+                    (reg/v:SI 224 [ t2 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":56:37 -1
+     (nil))
+(insn 131 130 132 2 (parallel [
+            (set (reg/v:SI 226 [ r3 ])
+                (and:SI (reg:SI 329 [ t2 ])
+                    (const_int 66076671 [0x3f03fff])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":57:5 -1
+     (nil))
+(debug_insn 132 131 133 2 (var_location:SI r3 (reg/v:SI 226 [ r3 ])) "poly1305.c":57:5 -1
+     (nil))
+(debug_insn 133 132 134 2 (debug_marker) "poly1305.c":57:23 -1
+     (nil))
+(debug_insn 134 133 135 2 (var_location:SI t3 (lshiftrt:SI (reg/v:SI 216 [ t3 ])
+        (const_int 8 [0x8]))) "poly1305.c":57:26 -1
+     (nil))
+(debug_insn 135 134 136 2 (debug_marker) "poly1305.c":58:2 -1
+     (nil))
+(insn 136 135 137 2 (parallel [
+            (set (reg:SI 330 [ t3 ])
+                (lshiftrt:SI (reg/v:SI 216 [ t3 ])
+                    (const_int 8 [0x8])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":57:26 -1
+     (nil))
+(insn 137 136 138 2 (parallel [
+            (set (reg/v:SI 228 [ r4 ])
+                (and:SI (reg:SI 330 [ t3 ])
+                    (const_int 1048575 [0xfffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":58:5 -1
+     (nil))
+(debug_insn 138 137 139 2 (var_location:SI r4 (reg/v:SI 228 [ r4 ])) "poly1305.c":58:5 -1
+     (nil))
+(debug_insn 139 138 140 2 (debug_marker) "poly1305.c":60:2 -1
+     (nil))
+(insn 140 139 141 2 (set (reg:SI 331)
+        (reg/v:SI 220 [ r1 ])) "poly1305.c":60:5 -1
+     (nil))
+(insn 141 140 142 2 (parallel [
+            (set (reg:SI 332)
+                (ashift:SI (reg:SI 331)
+                    (const_int 2 [0x2])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":60:5 -1
+     (nil))
+(insn 142 141 143 2 (parallel [
+            (set (reg:SI 333)
+                (plus:SI (reg:SI 332)
+                    (reg/v:SI 220 [ r1 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":60:5 -1
+     (expr_list:REG_EQUAL (mult:SI (reg/v:SI 220 [ r1 ])
+            (const_int 5 [0x5]))
+        (nil)))
+(insn 143 142 144 2 (set (reg/v:SI 229 [ s1 ])
+        (reg:SI 333)) "poly1305.c":60:5 -1
+     (nil))
+(debug_insn 144 143 145 2 (var_location:SI s1 (reg/v:SI 229 [ s1 ])) "poly1305.c":60:5 -1
+     (nil))
+(debug_insn 145 144 146 2 (debug_marker) "poly1305.c":61:2 -1
+     (nil))
+(insn 146 145 147 2 (set (reg:SI 334)
+        (reg/v:SI 223 [ r2 ])) "poly1305.c":61:5 -1
+     (nil))
+(insn 147 146 148 2 (parallel [
+            (set (reg:SI 335)
+                (ashift:SI (reg:SI 334)
+                    (const_int 2 [0x2])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":61:5 -1
+     (nil))
+(insn 148 147 149 2 (parallel [
+            (set (reg:SI 336)
+                (plus:SI (reg:SI 335)
+                    (reg/v:SI 223 [ r2 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":61:5 -1
+     (expr_list:REG_EQUAL (mult:SI (reg/v:SI 223 [ r2 ])
+            (const_int 5 [0x5]))
+        (nil)))
+(insn 149 148 150 2 (set (reg/v:SI 230 [ s2 ])
+        (reg:SI 336)) "poly1305.c":61:5 -1
+     (nil))
+(debug_insn 150 149 151 2 (var_location:SI s2 (reg/v:SI 230 [ s2 ])) "poly1305.c":61:5 -1
+     (nil))
+(debug_insn 151 150 152 2 (debug_marker) "poly1305.c":62:2 -1
+     (nil))
+(insn 152 151 153 2 (set (reg:SI 337)
+        (reg/v:SI 226 [ r3 ])) "poly1305.c":62:5 -1
+     (nil))
+(insn 153 152 154 2 (parallel [
+            (set (reg:SI 338)
+                (ashift:SI (reg:SI 337)
+                    (const_int 2 [0x2])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":62:5 -1
+     (nil))
+(insn 154 153 155 2 (parallel [
+            (set (reg:SI 339)
+                (plus:SI (reg:SI 338)
+                    (reg/v:SI 226 [ r3 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":62:5 -1
+     (expr_list:REG_EQUAL (mult:SI (reg/v:SI 226 [ r3 ])
+            (const_int 5 [0x5]))
+        (nil)))
+(insn 155 154 156 2 (set (reg/v:SI 231 [ s3 ])
+        (reg:SI 339)) "poly1305.c":62:5 -1
+     (nil))
+(debug_insn 156 155 157 2 (var_location:SI s3 (reg/v:SI 231 [ s3 ])) "poly1305.c":62:5 -1
+     (nil))
+(debug_insn 157 156 158 2 (debug_marker) "poly1305.c":63:2 -1
+     (nil))
+(insn 158 157 159 2 (set (reg:SI 340)
+        (reg/v:SI 228 [ r4 ])) "poly1305.c":63:5 -1
+     (nil))
+(insn 159 158 160 2 (parallel [
+            (set (reg:SI 341)
+                (ashift:SI (reg:SI 340)
+                    (const_int 2 [0x2])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":63:5 -1
+     (nil))
+(insn 160 159 161 2 (parallel [
+            (set (reg:SI 342)
+                (plus:SI (reg:SI 341)
+                    (reg/v:SI 228 [ r4 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":63:5 -1
+     (expr_list:REG_EQUAL (mult:SI (reg/v:SI 228 [ r4 ])
+            (const_int 5 [0x5]))
+        (nil)))
+(insn 161 160 162 2 (set (reg/v:SI 232 [ s4 ])
+        (reg:SI 342)) "poly1305.c":63:5 -1
+     (nil))
+(debug_insn 162 161 163 2 (var_location:SI s4 (reg/v:SI 232 [ s4 ])) "poly1305.c":63:5 -1
+     (nil))
+(debug_insn 163 162 164 2 (debug_marker) "poly1305.c":66:2 -1
+     (nil))
+(debug_insn 164 163 165 2 (var_location:SI h0 (const_int 0 [0])) "poly1305.c":66:5 -1
+     (nil))
+(debug_insn 165 164 166 2 (debug_marker) "poly1305.c":67:2 -1
+     (nil))
+(debug_insn 166 165 167 2 (var_location:SI h1 (const_int 0 [0])) "poly1305.c":67:5 -1
+     (nil))
+(debug_insn 167 166 168 2 (debug_marker) "poly1305.c":68:2 -1
+     (nil))
+(debug_insn 168 167 169 2 (var_location:SI h2 (const_int 0 [0])) "poly1305.c":68:5 -1
+     (nil))
+(debug_insn 169 168 170 2 (debug_marker) "poly1305.c":69:2 -1
+     (nil))
+(debug_insn 170 169 171 2 (var_location:SI h3 (const_int 0 [0])) "poly1305.c":69:5 -1
+     (nil))
+(debug_insn 171 170 172 2 (debug_marker) "poly1305.c":70:2 -1
+     (nil))
+(debug_insn 172 171 173 2 (var_location:SI h4 (const_int 0 [0])) "poly1305.c":70:5 -1
+     (nil))
+(debug_insn 173 172 174 2 (debug_marker) "poly1305.c":73:2 -1
+     (nil))
+(insn 174 173 175 2 (set (reg:SI 311 [ pretmp_2237 ])
+        (mem:SI (plus:DI (reg/v/f:DI 322 [ key ])
+                (const_int 16 [0x10])) [0 MEM <unsigned int> [(const unsigned char *)key_427(D) + 16B]+0 S4 A8])) "poly1305.c":151:45 -1
+     (nil))
+(insn 175 174 176 2 (set (reg:SI 313 [ pretmp_2252 ])
+        (mem:SI (plus:DI (reg/v/f:DI 322 [ key ])
+                (const_int 20 [0x14])) [0 MEM <unsigned int> [(const unsigned char *)key_427(D) + 20B]+0 S4 A8])) "poly1305.c":152:45 -1
+     (nil))
+(insn 176 175 177 2 (set (reg:SI 315 [ pretmp_2267 ])
+        (mem:SI (plus:DI (reg/v/f:DI 322 [ key ])
+                (const_int 24 [0x18])) [0 MEM <unsigned int> [(const unsigned char *)key_427(D) + 24B]+0 S4 A8])) "poly1305.c":153:45 -1
+     (nil))
+(insn 177 176 180 2 (set (reg:SI 317 [ pretmp_2282 ])
+        (mem:SI (plus:DI (reg/v/f:DI 322 [ key ])
+                (const_int 28 [0x1c])) [0 MEM <unsigned int> [(const unsigned char *)key_427(D) + 28B]+0 S4 A8])) "poly1305.c":154:45 -1
+     (nil))
+(insn 180 177 181 2 (set (reg:CC 17 flags)
+        (compare:CC (reg/v:DI 321 [ inlen ])
+            (const_int 15 [0xf]))) "poly1305.c":73:5 -1
+     (nil))
+(jump_insn 181 180 182 2 (set (pc)
+        (if_then_else (leu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 854)
+            (pc))) "poly1305.c":73:5 736 {*jcc}
+     (int_list:REG_BR_PROB 365072228 (nil))
+ -> 854)
+(note 182 181 183 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 183 182 184 4 (set (reg:DI 302 [ prephitmp_2088 ])
+        (zero_extend:DI (reg/v:SI 217 [ r0 ]))) "poly1305.c":91:10 -1
+     (nil))
+(insn 184 183 185 4 (set (reg:DI 303 [ prephitmp_2090 ])
+        (zero_extend:DI (reg/v:SI 232 [ s4 ]))) "poly1305.c":91:31 -1
+     (nil))
+(insn 185 184 186 4 (set (reg:DI 304 [ prephitmp_2092 ])
+        (zero_extend:DI (reg/v:SI 230 [ s2 ]))) "poly1305.c":91:73 -1
+     (nil))
+(insn 186 185 187 4 (set (reg:DI 305 [ prephitmp_2094 ])
+        (zero_extend:DI (reg/v:SI 231 [ s3 ]))) "poly1305.c":91:52 -1
+     (nil))
+(insn 187 186 188 4 (set (reg:DI 306 [ prephitmp_2096 ])
+        (zero_extend:DI (reg/v:SI 229 [ s1 ]))) "poly1305.c":91:94 -1
+     (nil))
+(insn 188 187 189 4 (set (reg:DI 307 [ prephitmp_2098 ])
+        (zero_extend:DI (reg/v:SI 220 [ r1 ]))) "poly1305.c":92:10 -1
+     (nil))
+(insn 189 188 190 4 (set (reg:DI 308 [ prephitmp_2100 ])
+        (zero_extend:DI (reg/v:SI 223 [ r2 ]))) "poly1305.c":93:10 -1
+     (nil))
+(insn 190 189 191 4 (set (reg:DI 309 [ prephitmp_2102 ])
+        (zero_extend:DI (reg/v:SI 226 [ r3 ]))) "poly1305.c":94:10 -1
+     (nil))
+(insn 191 190 9 4 (set (reg:DI 310 [ prephitmp_2104 ])
+        (zero_extend:DI (reg/v:SI 228 [ r4 ]))) "poly1305.c":95:10 -1
+     (nil))
+(insn 9 191 10 4 (set (reg/v:SI 212 [ h4 ])
+        (const_int 0 [0])) "poly1305.c":70:5 -1
+     (nil))
+(insn 10 9 11 4 (set (reg/v:SI 210 [ h3 ])
+        (const_int 0 [0])) "poly1305.c":69:5 -1
+     (nil))
+(insn 11 10 12 4 (set (reg/v:SI 208 [ h2 ])
+        (const_int 0 [0])) "poly1305.c":68:5 -1
+     (nil))
+(insn 12 11 13 4 (set (reg/v:SI 206 [ h1 ])
+        (const_int 0 [0])) "poly1305.c":67:5 -1
+     (nil))
+(insn 13 12 855 4 (set (reg/v:SI 204 [ h0 ])
+        (const_int 0 [0])) "poly1305.c":66:5 -1
+     (nil))
+(jump_insn 855 13 856 4 (set (pc)
+        (label_ref 192)) -1
+     (nil)
+ -> 192)
+(barrier 856 855 858)
+(code_label 858 856 857 5 16 (nil) [1 uses])
+(note 857 858 14 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 14 857 192 5 (set (reg/v/f:DI 320 [ m ])
+        (reg/v/f:DI 202 [ m ])) -1
+     (nil))
+(code_label 192 14 193 6 3 ("poly1305_donna_16bytes") [1 uses])
+(note 193 192 194 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 194 193 195 6 (var_location:SI h4 (reg/v:SI 212 [ h4 ])) -1
+     (nil))
+(debug_insn 195 194 196 6 (var_location:SI h3 (reg/v:SI 210 [ h3 ])) -1
+     (nil))
+(debug_insn 196 195 197 6 (var_location:SI h2 (reg/v:SI 208 [ h2 ])) -1
+     (nil))
+(debug_insn 197 196 198 6 (var_location:SI h1 (reg/v:SI 206 [ h1 ])) -1
+     (nil))
+(debug_insn 198 197 199 6 (var_location:SI h0 (reg/v:SI 204 [ h0 ])) -1
+     (nil))
+(debug_insn 199 198 200 6 (var_location:DI inlen (reg/v:DI 321 [ inlen ])) -1
+     (nil))
+(debug_insn 200 199 201 6 (var_location:DI m (reg/v/f:DI 320 [ m ])) -1
+     (nil))
+(debug_insn 201 200 202 6 (debug_marker) "poly1305.c":75:2 -1
+     (nil))
+(insn 202 201 203 6 (parallel [
+            (set (reg/v/f:DI 202 [ m ])
+                (plus:DI (reg/v/f:DI 320 [ m ])
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":75:4 -1
+     (nil))
+(debug_insn 203 202 204 6 (var_location:DI m (reg/v/f:DI 202 [ m ])) "poly1305.c":75:4 -1
+     (nil))
+(debug_insn 204 203 205 6 (debug_marker) "poly1305.c":76:2 -1
+     (nil))
+(insn 205 204 206 6 (parallel [
+            (set (reg/v:DI 321 [ inlen ])
+                (plus:DI (reg/v:DI 321 [ inlen ])
+                    (const_int -16 [0xfffffffffffffff0])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":76:8 -1
+     (nil))
+(debug_insn 206 205 207 6 (var_location:DI inlen (reg/v:DI 321 [ inlen ])) "poly1305.c":76:8 -1
+     (nil))
+(debug_insn 207 206 208 6 (debug_marker) "poly1305.c":78:2 -1
+     (nil))
+(debug_insn 208 207 209 6 (var_location:QI D#156 (mem:QI (reg/v/f:DI 320 [ m ]) [0 *m_398+0 S1 A8])) "poly1305.c":78:7 -1
+     (nil))
+(debug_insn 209 208 210 6 (var_location:SI D#155 (zero_extend:SI (debug_expr:QI D#156))) "poly1305.c":78:7 -1
+     (nil))
+(debug_insn 210 209 211 6 (var_location:QI D#154 (mem:QI (plus:DI (reg/v/f:DI 320 [ m ])
+            (const_int 1 [0x1])) [0 MEM[(const unsigned char *)m_398 + 1B]+0 S1 A8])) "poly1305.c":78:7 -1
+     (nil))
+(debug_insn 211 210 212 6 (var_location:SI D#153 (zero_extend:SI (debug_expr:QI D#154))) "poly1305.c":78:7 -1
+     (nil))
+(debug_insn 212 211 213 6 (var_location:SI D#152 (ashift:SI (debug_expr:SI D#153)
+        (const_int 8 [0x8]))) "poly1305.c":78:7 -1
+     (nil))
+(debug_insn 213 212 214 6 (var_location:QI D#151 (mem:QI (plus:DI (reg/v/f:DI 320 [ m ])
+            (const_int 2 [0x2])) [0 MEM[(const unsigned char *)m_398 + 2B]+0 S1 A8])) "poly1305.c":78:7 -1
+     (nil))
+(debug_insn 214 213 215 6 (var_location:SI D#150 (zero_extend:SI (debug_expr:QI D#151))) "poly1305.c":78:7 -1
+     (nil))
+(debug_insn 215 214 216 6 (var_location:SI D#149 (ashift:SI (debug_expr:SI D#150)
+        (const_int 16 [0x10]))) "poly1305.c":78:7 -1
+     (nil))
+(debug_insn 216 215 217 6 (var_location:SI D#148 (ior:SI (debug_expr:SI D#152)
+        (debug_expr:SI D#149))) -1
+     (nil))
+(debug_insn 217 216 218 6 (var_location:SI D#147 (ior:SI (debug_expr:SI D#155)
+        (debug_expr:SI D#148))) "poly1305.c":78:7 -1
+     (nil))
+(debug_insn 218 217 219 6 (var_location:QI D#146 (mem:QI (plus:DI (reg/v/f:DI 320 [ m ])
+            (const_int 3 [0x3])) [0 MEM[(const unsigned char *)m_398 + 3B]+0 S1 A8])) "poly1305.c":78:7 -1
+     (nil))
+(debug_insn 219 218 220 6 (var_location:SI D#145 (zero_extend:SI (debug_expr:QI D#146))) "poly1305.c":78:7 -1
+     (nil))
+(debug_insn 220 219 221 6 (var_location:SI D#144 (ashift:SI (debug_expr:SI D#145)
+        (const_int 24 [0x18]))) "poly1305.c":78:7 -1
+     (nil))
+(debug_insn 221 220 222 6 (var_location:SI t0 (ior:SI (debug_expr:SI D#147)
+        (debug_expr:SI D#144))) "poly1305.c":78:5 -1
+     (nil))
+(debug_insn 222 221 223 6 (debug_marker) "poly1305.c":79:2 -1
+     (nil))
+(debug_insn 223 222 224 6 (var_location:QI D#143 (mem:QI (plus:DI (reg/v/f:DI 320 [ m ])
+            (const_int 4 [0x4])) [0 MEM[(const unsigned char *)m_398 + 4B]+0 S1 A8])) "poly1305.c":79:7 -1
+     (nil))
+(debug_insn 224 223 225 6 (var_location:SI D#142 (zero_extend:SI (debug_expr:QI D#143))) "poly1305.c":79:7 -1
+     (nil))
+(debug_insn 225 224 226 6 (var_location:QI D#141 (mem:QI (plus:DI (reg/v/f:DI 320 [ m ])
+            (const_int 5 [0x5])) [0 MEM[(const unsigned char *)m_398 + 5B]+0 S1 A8])) "poly1305.c":79:7 -1
+     (nil))
+(debug_insn 226 225 227 6 (var_location:SI D#140 (zero_extend:SI (debug_expr:QI D#141))) "poly1305.c":79:7 -1
+     (nil))
+(debug_insn 227 226 228 6 (var_location:SI D#139 (ashift:SI (debug_expr:SI D#140)
+        (const_int 8 [0x8]))) "poly1305.c":79:7 -1
+     (nil))
+(debug_insn 228 227 229 6 (var_location:QI D#138 (mem:QI (plus:DI (reg/v/f:DI 320 [ m ])
+            (const_int 6 [0x6])) [0 MEM[(const unsigned char *)m_398 + 6B]+0 S1 A8])) "poly1305.c":79:7 -1
+     (nil))
+(debug_insn 229 228 230 6 (var_location:SI D#137 (zero_extend:SI (debug_expr:QI D#138))) "poly1305.c":79:7 -1
+     (nil))
+(debug_insn 230 229 231 6 (var_location:SI D#136 (ashift:SI (debug_expr:SI D#137)
+        (const_int 16 [0x10]))) "poly1305.c":79:7 -1
+     (nil))
+(debug_insn 231 230 232 6 (var_location:SI D#135 (ior:SI (debug_expr:SI D#139)
+        (debug_expr:SI D#136))) -1
+     (nil))
+(debug_insn 232 231 233 6 (var_location:SI D#134 (ior:SI (debug_expr:SI D#142)
+        (debug_expr:SI D#135))) "poly1305.c":79:7 -1
+     (nil))
+(debug_insn 233 232 234 6 (var_location:QI D#133 (mem:QI (plus:DI (reg/v/f:DI 320 [ m ])
+            (const_int 7 [0x7])) [0 MEM[(const unsigned char *)m_398 + 7B]+0 S1 A8])) "poly1305.c":79:7 -1
+     (nil))
+(debug_insn 234 233 235 6 (var_location:SI D#132 (zero_extend:SI (debug_expr:QI D#133))) "poly1305.c":79:7 -1
+     (nil))
+(debug_insn 235 234 236 6 (var_location:SI D#131 (ashift:SI (debug_expr:SI D#132)
+        (const_int 24 [0x18]))) "poly1305.c":79:7 -1
+     (nil))
+(debug_insn 236 235 237 6 (var_location:SI t1 (ior:SI (debug_expr:SI D#134)
+        (debug_expr:SI D#131))) "poly1305.c":79:5 -1
+     (nil))
+(debug_insn 237 236 238 6 (debug_marker) "poly1305.c":80:2 -1
+     (nil))
+(debug_insn 238 237 239 6 (var_location:QI D#130 (mem:QI (plus:DI (reg/v/f:DI 320 [ m ])
+            (const_int 8 [0x8])) [0 MEM[(const unsigned char *)m_398 + 8B]+0 S1 A8])) "poly1305.c":80:7 -1
+     (nil))
+(debug_insn 239 238 240 6 (var_location:SI D#129 (zero_extend:SI (debug_expr:QI D#130))) "poly1305.c":80:7 -1
+     (nil))
+(debug_insn 240 239 241 6 (var_location:QI D#128 (mem:QI (plus:DI (reg/v/f:DI 320 [ m ])
+            (const_int 9 [0x9])) [0 MEM[(const unsigned char *)m_398 + 9B]+0 S1 A8])) "poly1305.c":80:7 -1
+     (nil))
+(debug_insn 241 240 242 6 (var_location:SI D#127 (zero_extend:SI (debug_expr:QI D#128))) "poly1305.c":80:7 -1
+     (nil))
+(debug_insn 242 241 243 6 (var_location:SI D#126 (ashift:SI (debug_expr:SI D#127)
+        (const_int 8 [0x8]))) "poly1305.c":80:7 -1
+     (nil))
+(debug_insn 243 242 244 6 (var_location:QI D#125 (mem:QI (plus:DI (reg/v/f:DI 320 [ m ])
+            (const_int 10 [0xa])) [0 MEM[(const unsigned char *)m_398 + 10B]+0 S1 A8])) "poly1305.c":80:7 -1
+     (nil))
+(debug_insn 244 243 245 6 (var_location:SI D#124 (zero_extend:SI (debug_expr:QI D#125))) "poly1305.c":80:7 -1
+     (nil))
+(debug_insn 245 244 246 6 (var_location:SI D#123 (ashift:SI (debug_expr:SI D#124)
+        (const_int 16 [0x10]))) "poly1305.c":80:7 -1
+     (nil))
+(debug_insn 246 245 247 6 (var_location:SI D#122 (ior:SI (debug_expr:SI D#126)
+        (debug_expr:SI D#123))) -1
+     (nil))
+(debug_insn 247 246 248 6 (var_location:SI D#121 (ior:SI (debug_expr:SI D#129)
+        (debug_expr:SI D#122))) "poly1305.c":80:7 -1
+     (nil))
+(debug_insn 248 247 249 6 (var_location:QI D#120 (mem:QI (plus:DI (reg/v/f:DI 320 [ m ])
+            (const_int 11 [0xb])) [0 MEM[(const unsigned char *)m_398 + 11B]+0 S1 A8])) "poly1305.c":80:7 -1
+     (nil))
+(debug_insn 249 248 250 6 (var_location:SI D#119 (zero_extend:SI (debug_expr:QI D#120))) "poly1305.c":80:7 -1
+     (nil))
+(debug_insn 250 249 251 6 (var_location:SI D#118 (ashift:SI (debug_expr:SI D#119)
+        (const_int 24 [0x18]))) "poly1305.c":80:7 -1
+     (nil))
+(debug_insn 251 250 252 6 (var_location:SI t2 (ior:SI (debug_expr:SI D#121)
+        (debug_expr:SI D#118))) "poly1305.c":80:5 -1
+     (nil))
+(debug_insn 252 251 253 6 (debug_marker) "poly1305.c":81:2 -1
+     (nil))
+(debug_insn 253 252 254 6 (var_location:QI D#117 (mem:QI (plus:DI (reg/v/f:DI 320 [ m ])
+            (const_int 12 [0xc])) [0 MEM[(const unsigned char *)m_398 + 12B]+0 S1 A8])) "poly1305.c":81:7 -1
+     (nil))
+(debug_insn 254 253 255 6 (var_location:SI D#116 (zero_extend:SI (debug_expr:QI D#117))) "poly1305.c":81:7 -1
+     (nil))
+(debug_insn 255 254 256 6 (var_location:QI D#115 (mem:QI (plus:DI (reg/v/f:DI 320 [ m ])
+            (const_int 13 [0xd])) [0 MEM[(const unsigned char *)m_398 + 13B]+0 S1 A8])) "poly1305.c":81:7 -1
+     (nil))
+(debug_insn 256 255 257 6 (var_location:SI D#114 (zero_extend:SI (debug_expr:QI D#115))) "poly1305.c":81:7 -1
+     (nil))
+(debug_insn 257 256 258 6 (var_location:SI D#113 (ashift:SI (debug_expr:SI D#114)
+        (const_int 8 [0x8]))) "poly1305.c":81:7 -1
+     (nil))
+(debug_insn 258 257 259 6 (var_location:QI D#112 (mem:QI (plus:DI (reg/v/f:DI 320 [ m ])
+            (const_int 14 [0xe])) [0 MEM[(const unsigned char *)m_398 + 14B]+0 S1 A8])) "poly1305.c":81:7 -1
+     (nil))
+(debug_insn 259 258 260 6 (var_location:SI D#111 (zero_extend:SI (debug_expr:QI D#112))) "poly1305.c":81:7 -1
+     (nil))
+(debug_insn 260 259 261 6 (var_location:SI D#110 (ashift:SI (debug_expr:SI D#111)
+        (const_int 16 [0x10]))) "poly1305.c":81:7 -1
+     (nil))
+(debug_insn 261 260 262 6 (var_location:SI D#109 (ior:SI (debug_expr:SI D#113)
+        (debug_expr:SI D#110))) -1
+     (nil))
+(debug_insn 262 261 263 6 (var_location:SI D#108 (ior:SI (debug_expr:SI D#116)
+        (debug_expr:SI D#109))) "poly1305.c":81:7 -1
+     (nil))
+(debug_insn 263 262 264 6 (var_location:QI D#107 (mem:QI (plus:DI (reg/v/f:DI 320 [ m ])
+            (const_int 15 [0xf])) [0 MEM[(const unsigned char *)m_398 + 15B]+0 S1 A8])) "poly1305.c":81:7 -1
+     (nil))
+(debug_insn 264 263 265 6 (var_location:SI D#106 (zero_extend:SI (debug_expr:QI D#107))) "poly1305.c":81:7 -1
+     (nil))
+(debug_insn 265 264 266 6 (var_location:SI D#105 (ashift:SI (debug_expr:SI D#106)
+        (const_int 24 [0x18]))) "poly1305.c":81:7 -1
+     (nil))
+(debug_insn 266 265 267 6 (var_location:SI t3 (ior:SI (debug_expr:SI D#108)
+        (debug_expr:SI D#105))) "poly1305.c":81:5 -1
+     (nil))
+(debug_insn 267 266 268 6 (debug_marker) "poly1305.c":83:2 -1
+     (nil))
+(insn 268 267 269 6 (set (reg:SI 344)
+        (mem:SI (reg/v/f:DI 320 [ m ]) [0 MEM <unsigned int> [(const unsigned char *)m_398]+0 S4 A8])) "poly1305.c":83:11 -1
+     (nil))
+(insn 269 268 270 6 (parallel [
+            (set (reg:SI 343)
+                (and:SI (reg:SI 344)
+                    (const_int 67108863 [0x3ffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":83:11 -1
+     (expr_list:REG_EQUAL (and:SI (mem:SI (reg/v/f:DI 320 [ m ]) [0 MEM <unsigned int> [(const unsigned char *)m_398]+0 S4 A8])
+            (const_int 67108863 [0x3ffffff]))
+        (nil)))
+(insn 270 269 271 6 (parallel [
+            (set (reg/v:SI 203 [ h0 ])
+                (plus:SI (reg:SI 343)
+                    (reg/v:SI 204 [ h0 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":83:5 -1
+     (nil))
+(debug_insn 271 270 272 6 (var_location:SI h0 (reg/v:SI 203 [ h0 ])) "poly1305.c":83:5 -1
+     (nil))
+(debug_insn 272 271 273 6 (debug_marker) "poly1305.c":84:2 -1
+     (nil))
+(insn 273 272 274 6 (set (reg:DI 346)
+        (mem:DI (reg/v/f:DI 320 [ m ]) [0 MEM <long unsigned int> [(const unsigned char *)m_398]+0 S8 A8])) "poly1305.c":84:37 -1
+     (nil))
+(insn 274 273 275 6 (parallel [
+            (set (reg:DI 345)
+                (lshiftrt:DI (reg:DI 346)
+                    (const_int 26 [0x1a])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":84:37 -1
+     (expr_list:REG_EQUAL (lshiftrt:DI (mem:DI (reg/v/f:DI 320 [ m ]) [0 MEM <long unsigned int> [(const unsigned char *)m_398]+0 S8 A8])
+            (const_int 26 [0x1a]))
+        (nil)))
+(insn 275 274 276 6 (parallel [
+            (set (reg:SI 347)
+                (and:SI (subreg:SI (reg:DI 345) 0)
+                    (const_int 67108863 [0x3ffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":84:44 -1
+     (nil))
+(insn 276 275 277 6 (parallel [
+            (set (reg/v:SI 205 [ h1 ])
+                (plus:SI (reg:SI 347)
+                    (reg/v:SI 206 [ h1 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":84:5 -1
+     (nil))
+(debug_insn 277 276 278 6 (var_location:SI h1 (reg/v:SI 205 [ h1 ])) "poly1305.c":84:5 -1
+     (nil))
+(debug_insn 278 277 279 6 (debug_marker) "poly1305.c":85:2 -1
+     (nil))
+(insn 279 278 280 6 (set (reg:DI 349)
+        (mem:DI (plus:DI (reg/v/f:DI 320 [ m ])
+                (const_int 4 [0x4])) [0 MEM <long unsigned int> [(const unsigned char *)m_398 + 4B]+0 S8 A8])) "poly1305.c":85:37 -1
+     (nil))
+(insn 280 279 281 6 (parallel [
+            (set (reg:DI 348)
+                (lshiftrt:DI (reg:DI 349)
+                    (const_int 20 [0x14])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":85:37 -1
+     (expr_list:REG_EQUAL (lshiftrt:DI (mem:DI (plus:DI (reg/v/f:DI 320 [ m ])
+                    (const_int 4 [0x4])) [0 MEM <long unsigned int> [(const unsigned char *)m_398 + 4B]+0 S8 A8])
+            (const_int 20 [0x14]))
+        (nil)))
+(insn 281 280 282 6 (parallel [
+            (set (reg:SI 350)
+                (and:SI (subreg:SI (reg:DI 348) 0)
+                    (const_int 67108863 [0x3ffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":85:44 -1
+     (nil))
+(insn 282 281 283 6 (parallel [
+            (set (reg/v:SI 207 [ h2 ])
+                (plus:SI (reg:SI 350)
+                    (reg/v:SI 208 [ h2 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":85:5 -1
+     (nil))
+(debug_insn 283 282 284 6 (var_location:SI h2 (reg/v:SI 207 [ h2 ])) "poly1305.c":85:5 -1
+     (nil))
+(debug_insn 284 283 285 6 (debug_marker) "poly1305.c":86:2 -1
+     (nil))
+(insn 285 284 286 6 (set (reg:DI 352)
+        (mem:DI (plus:DI (reg/v/f:DI 320 [ m ])
+                (const_int 8 [0x8])) [0 MEM <long unsigned int> [(const unsigned char *)m_398 + 8B]+0 S8 A8])) "poly1305.c":86:37 -1
+     (nil))
+(insn 286 285 287 6 (parallel [
+            (set (reg:DI 351)
+                (lshiftrt:DI (reg:DI 352)
+                    (const_int 14 [0xe])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":86:37 -1
+     (expr_list:REG_EQUAL (lshiftrt:DI (mem:DI (plus:DI (reg/v/f:DI 320 [ m ])
+                    (const_int 8 [0x8])) [0 MEM <long unsigned int> [(const unsigned char *)m_398 + 8B]+0 S8 A8])
+            (const_int 14 [0xe]))
+        (nil)))
+(insn 287 286 288 6 (parallel [
+            (set (reg:SI 353)
+                (and:SI (subreg:SI (reg:DI 351) 0)
+                    (const_int 67108863 [0x3ffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":86:44 -1
+     (nil))
+(insn 288 287 289 6 (parallel [
+            (set (reg/v:SI 209 [ h3 ])
+                (plus:SI (reg:SI 353)
+                    (reg/v:SI 210 [ h3 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":86:5 -1
+     (nil))
+(debug_insn 289 288 290 6 (var_location:SI h3 (reg/v:SI 209 [ h3 ])) "poly1305.c":86:5 -1
+     (nil))
+(debug_insn 290 289 291 6 (debug_marker) "poly1305.c":87:2 -1
+     (nil))
+(insn 291 290 292 6 (set (reg:SI 355)
+        (mem:SI (plus:DI (reg/v/f:DI 320 [ m ])
+                (const_int 12 [0xc])) [0 MEM <unsigned int> [(const unsigned char *)m_398 + 12B]+0 S4 A8])) "poly1305.c":87:12 -1
+     (nil))
+(insn 292 291 293 6 (parallel [
+            (set (reg:SI 354)
+                (lshiftrt:SI (reg:SI 355)
+                    (const_int 8 [0x8])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":87:12 -1
+     (expr_list:REG_EQUAL (lshiftrt:SI (mem:SI (plus:DI (reg/v/f:DI 320 [ m ])
+                    (const_int 12 [0xc])) [0 MEM <unsigned int> [(const unsigned char *)m_398 + 12B]+0 S4 A8])
+            (const_int 8 [0x8]))
+        (nil)))
+(insn 293 292 294 6 (parallel [
+            (set (reg:SI 356)
+                (ior:SI (reg:SI 354)
+                    (const_int 16777216 [0x1000000])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":87:18 -1
+     (nil))
+(insn 294 293 295 6 (parallel [
+            (set (reg/v:SI 211 [ h4 ])
+                (plus:SI (reg:SI 356)
+                    (reg/v:SI 212 [ h4 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":87:5 -1
+     (nil))
+(debug_insn 295 294 296 6 (var_location:SI h4 (reg/v:SI 211 [ h4 ])) "poly1305.c":87:5 -1
+     (nil))
+(code_label 296 295 297 7 4 ("poly1305_donna_mul") [1 uses])
+(note 297 296 298 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 298 297 299 7 (var_location:SI h4 (reg/v:SI 211 [ h4 ])) -1
+     (nil))
+(debug_insn 299 298 300 7 (var_location:SI h3 (reg/v:SI 209 [ h3 ])) -1
+     (nil))
+(debug_insn 300 299 301 7 (var_location:SI h2 (reg/v:SI 207 [ h2 ])) -1
+     (nil))
+(debug_insn 301 300 302 7 (var_location:SI h1 (reg/v:SI 205 [ h1 ])) -1
+     (nil))
+(debug_insn 302 301 303 7 (var_location:SI h0 (reg/v:SI 203 [ h0 ])) -1
+     (nil))
+(debug_insn 303 302 304 7 (var_location:DI inlen (reg/v:DI 321 [ inlen ])) -1
+     (nil))
+(debug_insn 304 303 305 7 (var_location:DI m (reg/v/f:DI 202 [ m ])) -1
+     (nil))
+(debug_insn 305 304 306 7 (debug_marker) "poly1305.c":91:2 -1
+     (nil))
+(insn 306 305 307 7 (set (reg:DI 103 [ _130 ])
+        (zero_extend:DI (reg/v:SI 203 [ h0 ]))) "poly1305.c":91:10 -1
+     (nil))
+(insn 307 306 308 7 (set (reg:DI 105 [ _133 ])
+        (zero_extend:DI (reg/v:SI 205 [ h1 ]))) "poly1305.c":91:31 -1
+     (nil))
+(insn 308 307 309 7 (set (reg:DI 107 [ _137 ])
+        (zero_extend:DI (reg/v:SI 209 [ h3 ]))) "poly1305.c":91:73 -1
+     (nil))
+(insn 309 308 310 7 (set (reg:DI 109 [ _140 ])
+        (zero_extend:DI (reg/v:SI 207 [ h2 ]))) "poly1305.c":91:52 -1
+     (nil))
+(insn 310 309 311 7 (set (reg:DI 112 [ _145 ])
+        (zero_extend:DI (reg/v:SI 211 [ h4 ]))) "poly1305.c":91:94 -1
+     (nil))
+(insn 311 310 312 7 (parallel [
+            (set (reg:DI 357)
+                (mult:DI (reg:DI 103 [ _130 ])
+                    (reg:DI 302 [ prephitmp_2088 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":91:10 -1
+     (nil))
+(insn 312 311 313 7 (parallel [
+            (set (reg:DI 358)
+                (mult:DI (reg:DI 105 [ _133 ])
+                    (reg:DI 303 [ prephitmp_2090 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":91:31 -1
+     (nil))
+(insn 313 312 314 7 (parallel [
+            (set (reg:DI 359)
+                (plus:DI (reg:DI 357)
+                    (reg:DI 358)))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":91:71 -1
+     (nil))
+(insn 314 313 315 7 (parallel [
+            (set (reg:DI 360)
+                (mult:DI (reg:DI 107 [ _137 ])
+                    (reg:DI 304 [ prephitmp_2092 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":91:73 -1
+     (nil))
+(insn 315 314 316 7 (parallel [
+            (set (reg:DI 361)
+                (plus:DI (reg:DI 359)
+                    (reg:DI 360)))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":91:71 -1
+     (nil))
+(insn 316 315 317 7 (parallel [
+            (set (reg:DI 362)
+                (mult:DI (reg:DI 109 [ _140 ])
+                    (reg:DI 305 [ prephitmp_2094 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":91:52 -1
+     (nil))
+(insn 317 316 318 7 (parallel [
+            (set (reg:DI 363)
+                (plus:DI (reg:DI 361)
+                    (reg:DI 362)))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":91:71 -1
+     (nil))
+(insn 318 317 319 7 (parallel [
+            (set (reg:DI 364)
+                (mult:DI (reg:DI 112 [ _145 ])
+                    (reg:DI 306 [ prephitmp_2096 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":91:94 -1
+     (nil))
+(insn 319 318 320 7 (parallel [
+            (set (reg:DI 114 [ _148 ])
+                (plus:DI (reg:DI 363)
+                    (reg:DI 364)))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":91:92 -1
+     (nil))
+(debug_insn 320 319 321 7 (var_location:DI t$0 (reg:DI 114 [ _148 ])) "poly1305.c":91:8 -1
+     (nil))
+(debug_insn 321 320 834 7 (debug_marker) "poly1305.c":92:2 -1
+     (nil))
+(debug_insn 834 321 835 7 (var_location:DI D#157 (mult:DI (reg:DI 103 [ _130 ])
+        (reg:DI 307 [ prephitmp_2098 ]))) -1
+     (nil))
+(debug_insn 835 834 322 7 (var_location:DI D#158 (mult:DI (reg:DI 112 [ _145 ])
+        (reg:DI 304 [ prephitmp_2092 ]))) -1
+     (nil))
+(debug_insn 322 835 323 7 (var_location:DI t$1 (plus:DI (plus:DI (plus:DI (plus:DI (debug_expr:DI D#157)
+                    (debug_expr:DI D#158))
+                (mult:DI (reg:DI 107 [ _137 ])
+                    (reg:DI 305 [ prephitmp_2094 ])))
+            (mult:DI (reg:DI 105 [ _133 ])
+                (reg:DI 302 [ prephitmp_2088 ])))
+        (mult:DI (reg:DI 109 [ _140 ])
+            (reg:DI 303 [ prephitmp_2090 ])))) "poly1305.c":92:8 -1
+     (nil))
+(debug_insn 323 322 836 7 (debug_marker) "poly1305.c":93:2 -1
+     (nil))
+(debug_insn 836 323 837 7 (var_location:DI D#159 (mult:DI (reg:DI 103 [ _130 ])
+        (reg:DI 308 [ prephitmp_2100 ]))) -1
+     (nil))
+(debug_insn 837 836 324 7 (var_location:DI D#160 (mult:DI (reg:DI 112 [ _145 ])
+        (reg:DI 305 [ prephitmp_2094 ]))) -1
+     (nil))
+(debug_insn 324 837 325 7 (var_location:DI t$2 (plus:DI (plus:DI (plus:DI (plus:DI (debug_expr:DI D#159)
+                    (debug_expr:DI D#160))
+                (mult:DI (reg:DI 107 [ _137 ])
+                    (reg:DI 303 [ prephitmp_2090 ])))
+            (mult:DI (reg:DI 105 [ _133 ])
+                (reg:DI 307 [ prephitmp_2098 ])))
+        (mult:DI (reg:DI 109 [ _140 ])
+            (reg:DI 302 [ prephitmp_2088 ])))) "poly1305.c":93:8 -1
+     (nil))
+(debug_insn 325 324 838 7 (debug_marker) "poly1305.c":94:2 -1
+     (nil))
+(debug_insn 838 325 839 7 (var_location:DI D#161 (mult:DI (reg:DI 103 [ _130 ])
+        (reg:DI 309 [ prephitmp_2102 ]))) -1
+     (nil))
+(debug_insn 839 838 326 7 (var_location:DI D#162 (mult:DI (reg:DI 112 [ _145 ])
+        (reg:DI 303 [ prephitmp_2090 ]))) -1
+     (nil))
+(debug_insn 326 839 327 7 (var_location:DI t$3 (plus:DI (plus:DI (plus:DI (plus:DI (debug_expr:DI D#161)
+                    (debug_expr:DI D#162))
+                (mult:DI (reg:DI 107 [ _137 ])
+                    (reg:DI 302 [ prephitmp_2088 ])))
+            (mult:DI (reg:DI 105 [ _133 ])
+                (reg:DI 308 [ prephitmp_2100 ])))
+        (mult:DI (reg:DI 109 [ _140 ])
+            (reg:DI 307 [ prephitmp_2098 ])))) "poly1305.c":94:8 -1
+     (nil))
+(debug_insn 327 326 840 7 (debug_marker) "poly1305.c":95:2 -1
+     (nil))
+(debug_insn 840 327 841 7 (var_location:DI D#163 (mult:DI (reg:DI 103 [ _130 ])
+        (reg:DI 310 [ prephitmp_2104 ]))) -1
+     (nil))
+(debug_insn 841 840 328 7 (var_location:DI D#164 (mult:DI (reg:DI 112 [ _145 ])
+        (reg:DI 302 [ prephitmp_2088 ]))) -1
+     (nil))
+(debug_insn 328 841 329 7 (var_location:DI t$4 (plus:DI (plus:DI (plus:DI (plus:DI (debug_expr:DI D#163)
+                    (debug_expr:DI D#164))
+                (mult:DI (reg:DI 107 [ _137 ])
+                    (reg:DI 307 [ prephitmp_2098 ])))
+            (mult:DI (reg:DI 105 [ _133 ])
+                (reg:DI 309 [ prephitmp_2102 ])))
+        (mult:DI (reg:DI 109 [ _140 ])
+            (reg:DI 308 [ prephitmp_2100 ])))) "poly1305.c":95:8 -1
+     (nil))
+(debug_insn 329 328 330 7 (debug_marker) "poly1305.c":97:18 -1
+     (nil))
+(insn 330 329 331 7 (parallel [
+            (set (reg/v:SI 281 [ h0 ])
+                (and:SI (subreg:SI (reg:DI 114 [ _148 ]) 0)
+                    (const_int 67108863 [0x3ffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":97:21 -1
+     (nil))
+(debug_insn 331 330 332 7 (var_location:SI h0 (reg/v:SI 281 [ h0 ])) "poly1305.c":97:21 -1
+     (nil))
+(debug_insn 332 331 333 7 (debug_marker) "poly1305.c":97:51 -1
+     (nil))
+(debug_insn 333 332 334 7 (var_location:DI c (lshiftrt:DI (reg:DI 114 [ _148 ])
+        (const_int 26 [0x1a]))) "poly1305.c":97:53 -1
+     (nil))
+(debug_insn 334 333 335 7 (debug_marker) "poly1305.c":98:2 -1
+     (nil))
+(insn 335 334 336 7 (parallel [
+            (set (reg:DI 365)
+                (mult:DI (reg:DI 103 [ _130 ])
+                    (reg:DI 307 [ prephitmp_2098 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":92:10 -1
+     (nil))
+(insn 336 335 337 7 (parallel [
+            (set (reg:DI 366)
+                (mult:DI (reg:DI 105 [ _133 ])
+                    (reg:DI 302 [ prephitmp_2088 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":92:31 -1
+     (nil))
+(insn 337 336 338 7 (parallel [
+            (set (reg:DI 367)
+                (plus:DI (reg:DI 365)
+                    (reg:DI 366)))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":92:71 -1
+     (nil))
+(insn 338 337 339 7 (parallel [
+            (set (reg:DI 368)
+                (mult:DI (reg:DI 107 [ _137 ])
+                    (reg:DI 305 [ prephitmp_2094 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":92:73 -1
+     (nil))
+(insn 339 338 340 7 (parallel [
+            (set (reg:DI 369)
+                (plus:DI (reg:DI 367)
+                    (reg:DI 368)))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":92:71 -1
+     (nil))
+(insn 340 339 341 7 (parallel [
+            (set (reg:DI 370)
+                (mult:DI (reg:DI 109 [ _140 ])
+                    (reg:DI 303 [ prephitmp_2090 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":92:52 -1
+     (nil))
+(insn 341 340 342 7 (parallel [
+            (set (reg:DI 371)
+                (plus:DI (reg:DI 369)
+                    (reg:DI 370)))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":92:71 -1
+     (nil))
+(insn 342 341 343 7 (parallel [
+            (set (reg:DI 372)
+                (mult:DI (reg:DI 112 [ _145 ])
+                    (reg:DI 304 [ prephitmp_2092 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":92:94 -1
+     (nil))
+(insn 343 342 344 7 (parallel [
+            (set (reg:DI 373)
+                (plus:DI (reg:DI 371)
+                    (reg:DI 372)))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":92:92 -1
+     (nil))
+(insn 344 343 345 7 (parallel [
+            (set (reg:DI 374 [ c ])
+                (lshiftrt:DI (reg:DI 114 [ _148 ])
+                    (const_int 26 [0x1a])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":97:53 -1
+     (nil))
+(insn 345 344 346 7 (parallel [
+            (set (reg:DI 144 [ _190 ])
+                (plus:DI (reg:DI 373)
+                    (reg:DI 374 [ c ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":98:7 -1
+     (nil))
+(debug_insn 346 345 347 7 (var_location:DI t$1 (reg:DI 144 [ _190 ])) "poly1305.c":98:7 -1
+     (nil))
+(debug_insn 347 346 348 7 (debug_marker) "poly1305.c":98:18 -1
+     (nil))
+(insn 348 347 349 7 (parallel [
+            (set (reg/v:SI 206 [ h1 ])
+                (and:SI (subreg:SI (reg:DI 144 [ _190 ]) 0)
+                    (const_int 67108863 [0x3ffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":98:21 -1
+     (nil))
+(debug_insn 349 348 350 7 (var_location:SI h1 (reg/v:SI 206 [ h1 ])) "poly1305.c":98:21 -1
+     (nil))
+(debug_insn 350 349 351 7 (debug_marker) "poly1305.c":98:51 -1
+     (nil))
+(debug_insn 351 350 352 7 (var_location:SI b (subreg:SI (lshiftrt:DI (reg:DI 144 [ _190 ])
+            (const_int 26 [0x1a])) 0)) "poly1305.c":98:53 -1
+     (nil))
+(debug_insn 352 351 353 7 (debug_marker) "poly1305.c":99:2 -1
+     (nil))
+(insn 353 352 354 7 (parallel [
+            (set (reg:DI 375)
+                (mult:DI (reg:DI 103 [ _130 ])
+                    (reg:DI 308 [ prephitmp_2100 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":93:10 -1
+     (nil))
+(insn 354 353 355 7 (parallel [
+            (set (reg:DI 376)
+                (mult:DI (reg:DI 105 [ _133 ])
+                    (reg:DI 307 [ prephitmp_2098 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":93:31 -1
+     (nil))
+(insn 355 354 356 7 (parallel [
+            (set (reg:DI 377)
+                (plus:DI (reg:DI 375)
+                    (reg:DI 376)))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":93:71 -1
+     (nil))
+(insn 356 355 357 7 (parallel [
+            (set (reg:DI 378)
+                (mult:DI (reg:DI 107 [ _137 ])
+                    (reg:DI 303 [ prephitmp_2090 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":93:73 -1
+     (nil))
+(insn 357 356 358 7 (parallel [
+            (set (reg:DI 379)
+                (plus:DI (reg:DI 377)
+                    (reg:DI 378)))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":93:71 -1
+     (nil))
+(insn 358 357 359 7 (parallel [
+            (set (reg:DI 380)
+                (mult:DI (reg:DI 109 [ _140 ])
+                    (reg:DI 302 [ prephitmp_2088 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":93:52 -1
+     (nil))
+(insn 359 358 360 7 (parallel [
+            (set (reg:DI 381)
+                (plus:DI (reg:DI 379)
+                    (reg:DI 380)))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":93:71 -1
+     (nil))
+(insn 360 359 361 7 (parallel [
+            (set (reg:DI 382)
+                (mult:DI (reg:DI 112 [ _145 ])
+                    (reg:DI 305 [ prephitmp_2094 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":93:94 -1
+     (nil))
+(insn 361 360 362 7 (parallel [
+            (set (reg:DI 383)
+                (plus:DI (reg:DI 381)
+                    (reg:DI 382)))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":93:92 -1
+     (nil))
+(insn 362 361 363 7 (parallel [
+            (set (reg:DI 384)
+                (lshiftrt:DI (reg:DI 144 [ _190 ])
+                    (const_int 26 [0x1a])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":98:71 -1
+     (nil))
+(insn 363 362 364 7 (set (reg:DI 385)
+        (zero_extend:DI (subreg:SI (reg:DI 384) 0))) "poly1305.c":99:7 -1
+     (nil))
+(insn 364 363 365 7 (parallel [
+            (set (reg:DI 147 [ _193 ])
+                (plus:DI (reg:DI 383)
+                    (reg:DI 385)))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":99:7 -1
+     (nil))
+(debug_insn 365 364 366 7 (var_location:DI t$2 (reg:DI 147 [ _193 ])) "poly1305.c":99:7 -1
+     (nil))
+(debug_insn 366 365 367 7 (debug_marker) "poly1305.c":99:18 -1
+     (nil))
+(insn 367 366 368 7 (parallel [
+            (set (reg/v:SI 208 [ h2 ])
+                (and:SI (subreg:SI (reg:DI 147 [ _193 ]) 0)
+                    (const_int 67108863 [0x3ffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":99:21 -1
+     (nil))
+(debug_insn 368 367 369 7 (var_location:SI h2 (reg/v:SI 208 [ h2 ])) "poly1305.c":99:21 -1
+     (nil))
+(debug_insn 369 368 370 7 (debug_marker) "poly1305.c":99:51 -1
+     (nil))
+(debug_insn 370 369 371 7 (var_location:SI b (subreg:SI (lshiftrt:DI (reg:DI 147 [ _193 ])
+            (const_int 26 [0x1a])) 0)) "poly1305.c":99:53 -1
+     (nil))
+(debug_insn 371 370 372 7 (debug_marker) "poly1305.c":100:2 -1
+     (nil))
+(insn 372 371 373 7 (parallel [
+            (set (reg:DI 386)
+                (mult:DI (reg:DI 103 [ _130 ])
+                    (reg:DI 309 [ prephitmp_2102 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":94:10 -1
+     (nil))
+(insn 373 372 374 7 (parallel [
+            (set (reg:DI 387)
+                (mult:DI (reg:DI 105 [ _133 ])
+                    (reg:DI 308 [ prephitmp_2100 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":94:31 -1
+     (nil))
+(insn 374 373 375 7 (parallel [
+            (set (reg:DI 388)
+                (plus:DI (reg:DI 386)
+                    (reg:DI 387)))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":94:71 -1
+     (nil))
+(insn 375 374 376 7 (parallel [
+            (set (reg:DI 389)
+                (mult:DI (reg:DI 107 [ _137 ])
+                    (reg:DI 302 [ prephitmp_2088 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":94:73 -1
+     (nil))
+(insn 376 375 377 7 (parallel [
+            (set (reg:DI 390)
+                (plus:DI (reg:DI 388)
+                    (reg:DI 389)))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":94:71 -1
+     (nil))
+(insn 377 376 378 7 (parallel [
+            (set (reg:DI 391)
+                (mult:DI (reg:DI 109 [ _140 ])
+                    (reg:DI 307 [ prephitmp_2098 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":94:52 -1
+     (nil))
+(insn 378 377 379 7 (parallel [
+            (set (reg:DI 392)
+                (plus:DI (reg:DI 390)
+                    (reg:DI 391)))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":94:71 -1
+     (nil))
+(insn 379 378 380 7 (parallel [
+            (set (reg:DI 393)
+                (mult:DI (reg:DI 112 [ _145 ])
+                    (reg:DI 303 [ prephitmp_2090 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":94:94 -1
+     (nil))
+(insn 380 379 381 7 (parallel [
+            (set (reg:DI 394)
+                (plus:DI (reg:DI 392)
+                    (reg:DI 393)))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":94:92 -1
+     (nil))
+(insn 381 380 382 7 (parallel [
+            (set (reg:DI 395)
+                (lshiftrt:DI (reg:DI 147 [ _193 ])
+                    (const_int 26 [0x1a])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":99:71 -1
+     (nil))
+(insn 382 381 383 7 (set (reg:DI 396)
+        (zero_extend:DI (subreg:SI (reg:DI 395) 0))) "poly1305.c":100:7 -1
+     (nil))
+(insn 383 382 384 7 (parallel [
+            (set (reg:DI 150 [ _196 ])
+                (plus:DI (reg:DI 394)
+                    (reg:DI 396)))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":100:7 -1
+     (nil))
+(debug_insn 384 383 385 7 (var_location:DI t$3 (reg:DI 150 [ _196 ])) "poly1305.c":100:7 -1
+     (nil))
+(debug_insn 385 384 386 7 (debug_marker) "poly1305.c":100:18 -1
+     (nil))
+(insn 386 385 387 7 (parallel [
+            (set (reg/v:SI 210 [ h3 ])
+                (and:SI (subreg:SI (reg:DI 150 [ _196 ]) 0)
+                    (const_int 67108863 [0x3ffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":100:21 -1
+     (nil))
+(debug_insn 387 386 388 7 (var_location:SI h3 (reg/v:SI 210 [ h3 ])) "poly1305.c":100:21 -1
+     (nil))
+(debug_insn 388 387 389 7 (debug_marker) "poly1305.c":100:51 -1
+     (nil))
+(debug_insn 389 388 390 7 (var_location:SI b (subreg:SI (lshiftrt:DI (reg:DI 150 [ _196 ])
+            (const_int 26 [0x1a])) 0)) "poly1305.c":100:53 -1
+     (nil))
+(debug_insn 390 389 391 7 (debug_marker) "poly1305.c":101:2 -1
+     (nil))
+(insn 391 390 392 7 (parallel [
+            (set (reg:DI 397)
+                (mult:DI (reg:DI 103 [ _130 ])
+                    (reg:DI 310 [ prephitmp_2104 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":95:10 -1
+     (nil))
+(insn 392 391 393 7 (parallel [
+            (set (reg:DI 398)
+                (mult:DI (reg:DI 105 [ _133 ])
+                    (reg:DI 309 [ prephitmp_2102 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":95:31 -1
+     (nil))
+(insn 393 392 394 7 (parallel [
+            (set (reg:DI 399)
+                (plus:DI (reg:DI 397)
+                    (reg:DI 398)))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":95:71 -1
+     (nil))
+(insn 394 393 395 7 (parallel [
+            (set (reg:DI 400)
+                (mult:DI (reg:DI 107 [ _137 ])
+                    (reg:DI 307 [ prephitmp_2098 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":95:73 -1
+     (nil))
+(insn 395 394 396 7 (parallel [
+            (set (reg:DI 401)
+                (plus:DI (reg:DI 399)
+                    (reg:DI 400)))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":95:71 -1
+     (nil))
+(insn 396 395 397 7 (parallel [
+            (set (reg:DI 402)
+                (mult:DI (reg:DI 109 [ _140 ])
+                    (reg:DI 308 [ prephitmp_2100 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":95:52 -1
+     (nil))
+(insn 397 396 398 7 (parallel [
+            (set (reg:DI 403)
+                (plus:DI (reg:DI 401)
+                    (reg:DI 402)))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":95:71 -1
+     (nil))
+(insn 398 397 399 7 (parallel [
+            (set (reg:DI 404)
+                (mult:DI (reg:DI 112 [ _145 ])
+                    (reg:DI 302 [ prephitmp_2088 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":95:94 -1
+     (nil))
+(insn 399 398 400 7 (parallel [
+            (set (reg:DI 405)
+                (plus:DI (reg:DI 403)
+                    (reg:DI 404)))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":95:92 -1
+     (nil))
+(insn 400 399 401 7 (parallel [
+            (set (reg:DI 406)
+                (lshiftrt:DI (reg:DI 150 [ _196 ])
+                    (const_int 26 [0x1a])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":100:71 -1
+     (nil))
+(insn 401 400 402 7 (set (reg:DI 407)
+        (zero_extend:DI (subreg:SI (reg:DI 406) 0))) "poly1305.c":101:7 -1
+     (nil))
+(insn 402 401 403 7 (parallel [
+            (set (reg:DI 153 [ _199 ])
+                (plus:DI (reg:DI 405)
+                    (reg:DI 407)))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":101:7 -1
+     (nil))
+(debug_insn 403 402 404 7 (var_location:DI t$4 (reg:DI 153 [ _199 ])) "poly1305.c":101:7 -1
+     (nil))
+(debug_insn 404 403 405 7 (debug_marker) "poly1305.c":101:18 -1
+     (nil))
+(insn 405 404 406 7 (parallel [
+            (set (reg/v:SI 212 [ h4 ])
+                (and:SI (subreg:SI (reg:DI 153 [ _199 ]) 0)
+                    (const_int 67108863 [0x3ffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":101:21 -1
+     (nil))
+(debug_insn 406 405 407 7 (var_location:SI h4 (reg/v:SI 212 [ h4 ])) "poly1305.c":101:21 -1
+     (nil))
+(debug_insn 407 406 408 7 (debug_marker) "poly1305.c":101:51 -1
+     (nil))
+(debug_insn 408 407 409 7 (var_location:SI b (subreg:SI (lshiftrt:DI (reg:DI 153 [ _199 ])
+            (const_int 26 [0x1a])) 0)) "poly1305.c":101:53 -1
+     (nil))
+(debug_insn 409 408 410 7 (debug_marker) "poly1305.c":102:2 -1
+     (nil))
+(insn 410 409 411 7 (parallel [
+            (set (reg:DI 408)
+                (lshiftrt:DI (reg:DI 153 [ _199 ])
+                    (const_int 26 [0x1a])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":101:71 -1
+     (nil))
+(insn 411 410 412 7 (set (reg:SI 409)
+        (subreg:SI (reg:DI 408) 0)) "poly1305.c":102:10 -1
+     (nil))
+(insn 412 411 413 7 (set (reg:SI 410)
+        (reg:SI 409)) "poly1305.c":102:10 -1
+     (nil))
+(insn 413 412 414 7 (parallel [
+            (set (reg:SI 411)
+                (ashift:SI (reg:SI 410)
+                    (const_int 2 [0x2])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":102:10 -1
+     (nil))
+(insn 414 413 415 7 (parallel [
+            (set (reg:SI 412)
+                (plus:SI (reg:SI 411)
+                    (reg:SI 409)))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":102:10 -1
+     (expr_list:REG_EQUAL (mult:SI (reg:SI 409)
+            (const_int 5 [0x5]))
+        (nil)))
+(insn 415 414 416 7 (parallel [
+            (set (reg/v:SI 204 [ h0 ])
+                (plus:SI (reg:SI 412)
+                    (reg/v:SI 281 [ h0 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":102:5 -1
+     (nil))
+(debug_insn 416 415 417 7 (var_location:SI h0 (reg/v:SI 204 [ h0 ])) "poly1305.c":102:5 -1
+     (nil))
+(debug_insn 417 416 420 7 (debug_marker) "poly1305.c":104:2 -1
+     (nil))
+(insn 420 417 421 7 (set (reg:CC 17 flags)
+        (compare:CC (reg/v:DI 321 [ inlen ])
+            (const_int 15 [0xf]))) "poly1305.c":104:5 -1
+     (nil))
+(jump_insn 421 420 850 7 (set (pc)
+        (if_then_else (gtu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 858)
+            (pc))) "poly1305.c":104:5 736 {*jcc}
+     (int_list:REG_BR_PROB 365072228 (nil))
+ -> 858)
+(note 850 421 22 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 22 850 851 8 (set (reg/v/f:DI 320 [ m ])
+        (reg/v/f:DI 202 [ m ])) "poly1305.c":107:1 -1
+     (nil))
+(jump_insn 851 22 852 8 (set (pc)
+        (label_ref 422)) "poly1305.c":107:1 -1
+     (nil)
+ -> 422)
+(barrier 852 851 854)
+(code_label 854 852 853 9 15 (nil) [1 uses])
+(note 853 854 17 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 17 853 18 9 (set (reg/v:SI 212 [ h4 ])
+        (const_int 0 [0])) "poly1305.c":70:5 -1
+     (nil))
+(insn 18 17 19 9 (set (reg/v:SI 210 [ h3 ])
+        (const_int 0 [0])) "poly1305.c":69:5 -1
+     (nil))
+(insn 19 18 20 9 (set (reg/v:SI 208 [ h2 ])
+        (const_int 0 [0])) "poly1305.c":68:5 -1
+     (nil))
+(insn 20 19 21 9 (set (reg/v:SI 206 [ h1 ])
+        (const_int 0 [0])) "poly1305.c":67:5 -1
+     (nil))
+(insn 21 20 422 9 (set (reg/v:SI 204 [ h0 ])
+        (const_int 0 [0])) "poly1305.c":66:5 -1
+     (nil))
+(code_label 422 21 423 10 2 ("poly1305_donna_atmost15bytes") [1 uses])
+(note 423 422 424 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 424 423 425 10 (var_location:SI h4 (reg/v:SI 212 [ h4 ])) -1
+     (nil))
+(debug_insn 425 424 426 10 (var_location:SI h3 (reg/v:SI 210 [ h3 ])) -1
+     (nil))
+(debug_insn 426 425 427 10 (var_location:SI h2 (reg/v:SI 208 [ h2 ])) -1
+     (nil))
+(debug_insn 427 426 428 10 (var_location:SI h1 (reg/v:SI 206 [ h1 ])) -1
+     (nil))
+(debug_insn 428 427 429 10 (var_location:SI h0 (reg/v:SI 204 [ h0 ])) -1
+     (nil))
+(debug_insn 429 428 430 10 (var_location:DI inlen (reg/v:DI 321 [ inlen ])) -1
+     (nil))
+(debug_insn 430 429 431 10 (var_location:DI m (reg/v/f:DI 320 [ m ])) -1
+     (nil))
+(debug_insn 431 430 432 10 (debug_marker) "poly1305.c":108:2 -1
+     (nil))
+(insn 432 431 433 10 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:DI 321 [ inlen ])
+            (const_int 0 [0]))) "poly1305.c":108:5 -1
+     (nil))
+(jump_insn 433 432 434 10 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 639)
+            (pc))) "poly1305.c":108:5 -1
+     (int_list:REG_BR_PROB 365072228 (nil))
+ -> 639)
+(note 434 433 435 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 435 434 436 11 (debug_marker) "poly1305.c":108:14 -1
+     (nil))
+(debug_insn 436 435 437 11 (var_location poly1305_donna_finish (clobber (const_int 0 [0]))) "poly1305.c":128:1 -1
+     (nil))
+(debug_insn 437 436 438 11 (debug_marker) "poly1305.c":129:15 -1
+     (nil))
+(debug_insn 438 437 439 11 (var_location:SI b (lshiftrt:SI (reg/v:SI 204 [ h0 ])
+        (const_int 26 [0x1a]))) "poly1305.c":129:17 -1
+     (nil))
+(debug_insn 439 438 440 11 (debug_marker) "poly1305.c":129:29 -1
+     (nil))
+(insn 440 439 441 11 (parallel [
+            (set (reg/v:SI 242 [ h0 ])
+                (and:SI (reg/v:SI 204 [ h0 ])
+                    (const_int 67108863 [0x3ffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":129:32 -1
+     (nil))
+(debug_insn 441 440 442 11 (var_location:SI h0 (reg/v:SI 242 [ h0 ])) "poly1305.c":129:32 -1
+     (nil))
+(debug_insn 442 441 443 11 (debug_marker) "poly1305.c":130:2 -1
+     (nil))
+(insn 443 442 444 11 (parallel [
+            (set (reg:SI 413 [ b ])
+                (lshiftrt:SI (reg/v:SI 204 [ h0 ])
+                    (const_int 26 [0x1a])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":129:17 -1
+     (nil))
+(insn 444 443 445 11 (parallel [
+            (set (reg/v:SI 243 [ h1 ])
+                (plus:SI (reg:SI 413 [ b ])
+                    (reg/v:SI 206 [ h1 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":130:5 -1
+     (nil))
+(debug_insn 445 444 446 11 (var_location:SI h1 (reg/v:SI 243 [ h1 ])) "poly1305.c":130:5 -1
+     (nil))
+(debug_insn 446 445 447 11 (debug_marker) "poly1305.c":130:15 -1
+     (nil))
+(debug_insn 447 446 448 11 (var_location:SI b (lshiftrt:SI (reg/v:SI 243 [ h1 ])
+        (const_int 26 [0x1a]))) "poly1305.c":130:17 -1
+     (nil))
+(debug_insn 448 447 449 11 (debug_marker) "poly1305.c":130:29 -1
+     (nil))
+(insn 449 448 450 11 (parallel [
+            (set (reg/v:SI 245 [ h1 ])
+                (and:SI (reg/v:SI 243 [ h1 ])
+                    (const_int 67108863 [0x3ffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":130:32 -1
+     (nil))
+(debug_insn 450 449 451 11 (var_location:SI h1 (reg/v:SI 245 [ h1 ])) "poly1305.c":130:32 -1
+     (nil))
+(debug_insn 451 450 452 11 (debug_marker) "poly1305.c":131:2 -1
+     (nil))
+(insn 452 451 453 11 (parallel [
+            (set (reg:SI 414 [ b ])
+                (lshiftrt:SI (reg/v:SI 243 [ h1 ])
+                    (const_int 26 [0x1a])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":130:17 -1
+     (nil))
+(insn 453 452 454 11 (parallel [
+            (set (reg/v:SI 246 [ h2 ])
+                (plus:SI (reg:SI 414 [ b ])
+                    (reg/v:SI 208 [ h2 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":131:5 -1
+     (nil))
+(debug_insn 454 453 455 11 (var_location:SI h2 (reg/v:SI 246 [ h2 ])) "poly1305.c":131:5 -1
+     (nil))
+(debug_insn 455 454 456 11 (debug_marker) "poly1305.c":131:15 -1
+     (nil))
+(debug_insn 456 455 457 11 (var_location:SI b (lshiftrt:SI (reg/v:SI 246 [ h2 ])
+        (const_int 26 [0x1a]))) "poly1305.c":131:17 -1
+     (nil))
+(debug_insn 457 456 458 11 (debug_marker) "poly1305.c":131:29 -1
+     (nil))
+(insn 458 457 459 11 (parallel [
+            (set (reg/v:SI 248 [ h2 ])
+                (and:SI (reg/v:SI 246 [ h2 ])
+                    (const_int 67108863 [0x3ffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":131:32 -1
+     (nil))
+(debug_insn 459 458 460 11 (var_location:SI h2 (reg/v:SI 248 [ h2 ])) "poly1305.c":131:32 -1
+     (nil))
+(debug_insn 460 459 461 11 (debug_marker) "poly1305.c":132:2 -1
+     (nil))
+(insn 461 460 462 11 (parallel [
+            (set (reg:SI 415 [ b ])
+                (lshiftrt:SI (reg/v:SI 246 [ h2 ])
+                    (const_int 26 [0x1a])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":131:17 -1
+     (nil))
+(insn 462 461 463 11 (parallel [
+            (set (reg/v:SI 249 [ h3 ])
+                (plus:SI (reg:SI 415 [ b ])
+                    (reg/v:SI 210 [ h3 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":132:5 -1
+     (nil))
+(debug_insn 463 462 464 11 (var_location:SI h3 (reg/v:SI 249 [ h3 ])) "poly1305.c":132:5 -1
+     (nil))
+(debug_insn 464 463 465 11 (debug_marker) "poly1305.c":132:15 -1
+     (nil))
+(debug_insn 465 464 466 11 (var_location:SI b (lshiftrt:SI (reg/v:SI 249 [ h3 ])
+        (const_int 26 [0x1a]))) "poly1305.c":132:17 -1
+     (nil))
+(debug_insn 466 465 467 11 (debug_marker) "poly1305.c":132:29 -1
+     (nil))
+(insn 467 466 468 11 (parallel [
+            (set (reg/v:SI 251 [ h3 ])
+                (and:SI (reg/v:SI 249 [ h3 ])
+                    (const_int 67108863 [0x3ffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":132:32 -1
+     (nil))
+(debug_insn 468 467 469 11 (var_location:SI h3 (reg/v:SI 251 [ h3 ])) "poly1305.c":132:32 -1
+     (nil))
+(debug_insn 469 468 470 11 (debug_marker) "poly1305.c":133:2 -1
+     (nil))
+(insn 470 469 471 11 (parallel [
+            (set (reg:SI 416 [ b ])
+                (lshiftrt:SI (reg/v:SI 249 [ h3 ])
+                    (const_int 26 [0x1a])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":132:17 -1
+     (nil))
+(insn 471 470 472 11 (parallel [
+            (set (reg/v:SI 252 [ h4 ])
+                (plus:SI (reg:SI 416 [ b ])
+                    (reg/v:SI 212 [ h4 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":133:5 -1
+     (nil))
+(debug_insn 472 471 473 11 (var_location:SI h4 (reg/v:SI 252 [ h4 ])) "poly1305.c":133:5 -1
+     (nil))
+(debug_insn 473 472 474 11 (debug_marker) "poly1305.c":133:15 -1
+     (nil))
+(debug_insn 474 473 475 11 (var_location:SI b (lshiftrt:SI (reg/v:SI 252 [ h4 ])
+        (const_int 26 [0x1a]))) "poly1305.c":133:17 -1
+     (nil))
+(debug_insn 475 474 476 11 (debug_marker) "poly1305.c":133:29 -1
+     (nil))
+(insn 476 475 477 11 (parallel [
+            (set (reg/v:SI 254 [ h4 ])
+                (and:SI (reg/v:SI 252 [ h4 ])
+                    (const_int 67108863 [0x3ffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":133:32 -1
+     (nil))
+(debug_insn 477 476 478 11 (var_location:SI h4 (reg/v:SI 254 [ h4 ])) "poly1305.c":133:32 -1
+     (nil))
+(debug_insn 478 477 479 11 (debug_marker) "poly1305.c":134:2 -1
+     (nil))
+(insn 479 478 480 11 (parallel [
+            (set (reg:SI 417 [ b ])
+                (lshiftrt:SI (reg/v:SI 252 [ h4 ])
+                    (const_int 26 [0x1a])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":133:17 -1
+     (nil))
+(insn 480 479 481 11 (set (reg:SI 418)
+        (reg:SI 417 [ b ])) "poly1305.c":134:10 -1
+     (nil))
+(insn 481 480 482 11 (parallel [
+            (set (reg:SI 419)
+                (ashift:SI (reg:SI 418)
+                    (const_int 2 [0x2])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":134:10 -1
+     (nil))
+(insn 482 481 483 11 (parallel [
+            (set (reg:SI 420)
+                (plus:SI (reg:SI 419)
+                    (reg:SI 417 [ b ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":134:10 -1
+     (expr_list:REG_EQUAL (mult:SI (reg:SI 417 [ b ])
+            (const_int 5 [0x5]))
+        (nil)))
+(insn 483 482 484 11 (parallel [
+            (set (reg/v:SI 255 [ h0 ])
+                (plus:SI (reg:SI 420)
+                    (reg/v:SI 242 [ h0 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":134:5 -1
+     (nil))
+(debug_insn 484 483 485 11 (var_location:SI h0 (reg/v:SI 255 [ h0 ])) "poly1305.c":134:5 -1
+     (nil))
+(debug_insn 485 484 486 11 (debug_marker) "poly1305.c":134:15 -1
+     (nil))
+(debug_insn 486 485 487 11 (var_location:SI b (lshiftrt:SI (reg/v:SI 255 [ h0 ])
+        (const_int 26 [0x1a]))) "poly1305.c":134:17 -1
+     (nil))
+(debug_insn 487 486 488 11 (debug_marker) "poly1305.c":134:29 -1
+     (nil))
+(insn 488 487 489 11 (parallel [
+            (set (reg/v:SI 257 [ h0 ])
+                (and:SI (reg/v:SI 255 [ h0 ])
+                    (const_int 67108863 [0x3ffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":134:32 -1
+     (nil))
+(debug_insn 489 488 490 11 (var_location:SI h0 (reg/v:SI 257 [ h0 ])) "poly1305.c":134:32 -1
+     (nil))
+(debug_insn 490 489 491 11 (debug_marker) "poly1305.c":135:2 -1
+     (nil))
+(insn 491 490 492 11 (parallel [
+            (set (reg:SI 421 [ b ])
+                (lshiftrt:SI (reg/v:SI 255 [ h0 ])
+                    (const_int 26 [0x1a])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":134:17 -1
+     (nil))
+(insn 492 491 493 11 (parallel [
+            (set (reg/v:SI 258 [ h1 ])
+                (plus:SI (reg:SI 421 [ b ])
+                    (reg/v:SI 245 [ h1 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":135:5 -1
+     (nil))
+(debug_insn 493 492 494 11 (var_location:SI h1 (reg/v:SI 258 [ h1 ])) "poly1305.c":135:5 -1
+     (nil))
+(debug_insn 494 493 495 11 (debug_marker) "poly1305.c":137:2 -1
+     (nil))
+(insn 495 494 496 11 (parallel [
+            (set (reg/v:SI 259 [ g0 ])
+                (plus:SI (reg/v:SI 257 [ h0 ])
+                    (const_int 5 [0x5])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":137:5 -1
+     (nil))
+(debug_insn 496 495 497 11 (var_location:SI g0 (reg/v:SI 259 [ g0 ])) "poly1305.c":137:5 -1
+     (nil))
+(debug_insn 497 496 498 11 (debug_marker) "poly1305.c":137:15 -1
+     (nil))
+(debug_insn 498 497 499 11 (var_location:SI b (lshiftrt:SI (reg/v:SI 259 [ g0 ])
+        (const_int 26 [0x1a]))) "poly1305.c":137:17 -1
+     (nil))
+(debug_insn 499 498 500 11 (debug_marker) "poly1305.c":137:29 -1
+     (nil))
+(debug_insn 500 499 501 11 (var_location:SI g0 (and:SI (reg/v:SI 259 [ g0 ])
+        (const_int 67108863 [0x3ffffff]))) "poly1305.c":137:32 -1
+     (nil))
+(debug_insn 501 500 502 11 (debug_marker) "poly1305.c":138:2 -1
+     (nil))
+(insn 502 501 503 11 (parallel [
+            (set (reg:SI 422 [ b ])
+                (lshiftrt:SI (reg/v:SI 259 [ g0 ])
+                    (const_int 26 [0x1a])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":137:17 -1
+     (nil))
+(insn 503 502 504 11 (parallel [
+            (set (reg/v:SI 261 [ g1 ])
+                (plus:SI (reg:SI 422 [ b ])
+                    (reg/v:SI 258 [ h1 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":138:5 -1
+     (nil))
+(debug_insn 504 503 505 11 (var_location:SI g1 (reg/v:SI 261 [ g1 ])) "poly1305.c":138:5 -1
+     (nil))
+(debug_insn 505 504 506 11 (debug_marker) "poly1305.c":138:15 -1
+     (nil))
+(debug_insn 506 505 507 11 (var_location:SI b (lshiftrt:SI (reg/v:SI 261 [ g1 ])
+        (const_int 26 [0x1a]))) "poly1305.c":138:17 -1
+     (nil))
+(debug_insn 507 506 508 11 (debug_marker) "poly1305.c":138:29 -1
+     (nil))
+(debug_insn 508 507 509 11 (var_location:SI g1 (and:SI (reg/v:SI 261 [ g1 ])
+        (const_int 67108863 [0x3ffffff]))) "poly1305.c":138:32 -1
+     (nil))
+(debug_insn 509 508 510 11 (debug_marker) "poly1305.c":139:2 -1
+     (nil))
+(insn 510 509 511 11 (parallel [
+            (set (reg:SI 423 [ b ])
+                (lshiftrt:SI (reg/v:SI 261 [ g1 ])
+                    (const_int 26 [0x1a])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":138:17 -1
+     (nil))
+(insn 511 510 512 11 (parallel [
+            (set (reg/v:SI 263 [ g2 ])
+                (plus:SI (reg:SI 423 [ b ])
+                    (reg/v:SI 248 [ h2 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":139:5 -1
+     (nil))
+(debug_insn 512 511 513 11 (var_location:SI g2 (reg/v:SI 263 [ g2 ])) "poly1305.c":139:5 -1
+     (nil))
+(debug_insn 513 512 514 11 (debug_marker) "poly1305.c":139:15 -1
+     (nil))
+(debug_insn 514 513 515 11 (var_location:SI b (lshiftrt:SI (reg/v:SI 263 [ g2 ])
+        (const_int 26 [0x1a]))) "poly1305.c":139:17 -1
+     (nil))
+(debug_insn 515 514 516 11 (debug_marker) "poly1305.c":139:29 -1
+     (nil))
+(debug_insn 516 515 517 11 (var_location:SI g2 (and:SI (reg/v:SI 263 [ g2 ])
+        (const_int 67108863 [0x3ffffff]))) "poly1305.c":139:32 -1
+     (nil))
+(debug_insn 517 516 518 11 (debug_marker) "poly1305.c":140:2 -1
+     (nil))
+(insn 518 517 519 11 (parallel [
+            (set (reg:SI 424 [ b ])
+                (lshiftrt:SI (reg/v:SI 263 [ g2 ])
+                    (const_int 26 [0x1a])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":139:17 -1
+     (nil))
+(insn 519 518 520 11 (parallel [
+            (set (reg/v:SI 265 [ g3 ])
+                (plus:SI (reg:SI 424 [ b ])
+                    (reg/v:SI 251 [ h3 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":140:5 -1
+     (nil))
+(debug_insn 520 519 521 11 (var_location:SI g3 (reg/v:SI 265 [ g3 ])) "poly1305.c":140:5 -1
+     (nil))
+(debug_insn 521 520 522 11 (debug_marker) "poly1305.c":140:15 -1
+     (nil))
+(debug_insn 522 521 523 11 (var_location:SI b (lshiftrt:SI (reg/v:SI 265 [ g3 ])
+        (const_int 26 [0x1a]))) "poly1305.c":140:17 -1
+     (nil))
+(debug_insn 523 522 524 11 (debug_marker) "poly1305.c":140:29 -1
+     (nil))
+(debug_insn 524 523 525 11 (var_location:SI g3 (and:SI (reg/v:SI 265 [ g3 ])
+        (const_int 67108863 [0x3ffffff]))) "poly1305.c":140:32 -1
+     (nil))
+(debug_insn 525 524 526 11 (debug_marker) "poly1305.c":141:2 -1
+     (nil))
+(insn 526 525 527 11 (parallel [
+            (set (reg:SI 425 [ b ])
+                (lshiftrt:SI (reg/v:SI 265 [ g3 ])
+                    (const_int 26 [0x1a])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":140:17 -1
+     (nil))
+(insn 527 526 528 11 (parallel [
+            (set (reg:SI 426)
+                (plus:SI (reg/v:SI 254 [ h4 ])
+                    (const_int -67108864 [0xfffffffffc000000])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":141:5 -1
+     (nil))
+(insn 528 527 529 11 (parallel [
+            (set (reg/v:SI 267 [ g4 ])
+                (plus:SI (reg:SI 425 [ b ])
+                    (reg:SI 426)))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":141:5 -1
+     (nil))
+(debug_insn 529 528 530 11 (var_location:SI g4 (reg/v:SI 267 [ g4 ])) "poly1305.c":141:5 -1
+     (nil))
+(debug_insn 530 529 531 11 (debug_marker) "poly1305.c":143:2 -1
+     (nil))
+(insn 531 530 532 11 (parallel [
+            (set (reg:SI 173 [ _281 ])
+                (lshiftrt:SI (reg/v:SI 267 [ g4 ])
+                    (const_int 31 [0x1f])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":143:10 -1
+     (nil))
+(insn 532 531 533 11 (parallel [
+            (set (reg/v:SI 268 [ b ])
+                (plus:SI (reg:SI 173 [ _281 ])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":143:4 -1
+     (nil))
+(debug_insn 533 532 534 11 (var_location:SI b (reg/v:SI 268 [ b ])) "poly1305.c":143:4 -1
+     (nil))
+(debug_insn 534 533 535 11 (debug_marker) "poly1305.c":144:2 -1
+     (nil))
+(insn 535 534 536 11 (parallel [
+            (set (reg:SI 236 [ _451 ])
+                (neg:SI (reg:SI 173 [ _281 ])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(debug_insn 536 535 537 11 (var_location:SI nb (reg:SI 236 [ _451 ])) "poly1305.c":144:5 -1
+     (nil))
+(debug_insn 537 536 538 11 (debug_marker) "poly1305.c":145:2 -1
+     (nil))
+(insn 538 537 539 11 (parallel [
+            (set (reg:SI 174 [ _282 ])
+                (and:SI (reg:SI 236 [ _451 ])
+                    (reg/v:SI 257 [ h0 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":145:11 -1
+     (nil))
+(debug_insn 539 538 540 11 (var_location:SI h0 (ior:SI (and:SI (and:SI (reg/v:SI 259 [ g0 ])
+                (reg/v:SI 268 [ b ]))
+            (const_int 67108863 [0x3ffffff]))
+        (reg:SI 174 [ _282 ]))) "poly1305.c":145:5 -1
+     (nil))
+(debug_insn 540 539 541 11 (debug_marker) "poly1305.c":146:2 -1
+     (nil))
+(insn 541 540 542 11 (parallel [
+            (set (reg:SI 176 [ _284 ])
+                (and:SI (reg:SI 236 [ _451 ])
+                    (reg/v:SI 258 [ h1 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":146:11 -1
+     (nil))
+(insn 542 541 543 11 (parallel [
+            (set (reg:SI 427)
+                (and:SI (reg/v:SI 261 [ g1 ])
+                    (reg/v:SI 268 [ b ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":146:23 -1
+     (nil))
+(insn 543 542 544 11 (parallel [
+            (set (reg:SI 428)
+                (and:SI (reg:SI 427)
+                    (const_int 67108863 [0x3ffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":146:23 -1
+     (nil))
+(insn 544 543 545 11 (parallel [
+            (set (reg/v:SI 270 [ h1 ])
+                (ior:SI (reg:SI 428)
+                    (reg:SI 176 [ _284 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":146:5 -1
+     (nil))
+(debug_insn 545 544 546 11 (var_location:SI h1 (reg/v:SI 270 [ h1 ])) "poly1305.c":146:5 -1
+     (nil))
+(debug_insn 546 545 547 11 (debug_marker) "poly1305.c":147:2 -1
+     (nil))
+(insn 547 546 548 11 (parallel [
+            (set (reg:SI 178 [ _286 ])
+                (and:SI (reg:SI 236 [ _451 ])
+                    (reg/v:SI 248 [ h2 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":147:11 -1
+     (nil))
+(insn 548 547 549 11 (parallel [
+            (set (reg:SI 429)
+                (and:SI (reg/v:SI 263 [ g2 ])
+                    (reg/v:SI 268 [ b ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":147:23 -1
+     (nil))
+(insn 549 548 550 11 (parallel [
+            (set (reg:SI 430)
+                (and:SI (reg:SI 429)
+                    (const_int 67108863 [0x3ffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":147:23 -1
+     (nil))
+(insn 550 549 551 11 (parallel [
+            (set (reg/v:SI 271 [ h2 ])
+                (ior:SI (reg:SI 430)
+                    (reg:SI 178 [ _286 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":147:5 -1
+     (nil))
+(debug_insn 551 550 552 11 (var_location:SI h2 (reg/v:SI 271 [ h2 ])) "poly1305.c":147:5 -1
+     (nil))
+(debug_insn 552 551 553 11 (debug_marker) "poly1305.c":148:2 -1
+     (nil))
+(insn 553 552 554 11 (parallel [
+            (set (reg:SI 180 [ _288 ])
+                (and:SI (reg:SI 236 [ _451 ])
+                    (reg/v:SI 251 [ h3 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":148:11 -1
+     (nil))
+(insn 554 553 555 11 (parallel [
+            (set (reg:SI 431)
+                (and:SI (reg/v:SI 265 [ g3 ])
+                    (reg/v:SI 268 [ b ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":148:23 -1
+     (nil))
+(insn 555 554 556 11 (parallel [
+            (set (reg:SI 432)
+                (and:SI (reg:SI 431)
+                    (const_int 67108863 [0x3ffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":148:23 -1
+     (nil))
+(insn 556 555 557 11 (parallel [
+            (set (reg/v:SI 272 [ h3 ])
+                (ior:SI (reg:SI 432)
+                    (reg:SI 180 [ _288 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":148:5 -1
+     (nil))
+(debug_insn 557 556 558 11 (var_location:SI h3 (reg/v:SI 272 [ h3 ])) "poly1305.c":148:5 -1
+     (nil))
+(debug_insn 558 557 559 11 (debug_marker) "poly1305.c":149:2 -1
+     (nil))
+(insn 559 558 560 11 (parallel [
+            (set (reg:SI 182 [ _290 ])
+                (and:SI (reg:SI 236 [ _451 ])
+                    (reg/v:SI 254 [ h4 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":149:11 -1
+     (nil))
+(debug_insn 560 559 561 11 (var_location:SI h4 (ior:SI (and:SI (reg/v:SI 267 [ g4 ])
+            (reg/v:SI 268 [ b ]))
+        (reg:SI 182 [ _290 ]))) "poly1305.c":149:5 -1
+     (nil))
+(debug_insn 561 560 562 11 (debug_marker) "poly1305.c":151:2 -1
+     (nil))
+(insn 562 561 563 11 (parallel [
+            (set (reg:SI 433)
+                (and:SI (reg/v:SI 259 [ g0 ])
+                    (reg/v:SI 268 [ b ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":145:23 -1
+     (nil))
+(insn 563 562 564 11 (parallel [
+            (set (reg:SI 434)
+                (and:SI (reg:SI 433)
+                    (const_int 67108863 [0x3ffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":145:23 -1
+     (nil))
+(insn 564 563 565 11 (parallel [
+            (set (reg:SI 435 [ h0 ])
+                (ior:SI (reg:SI 434)
+                    (reg:SI 174 [ _282 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":145:5 -1
+     (nil))
+(insn 565 564 566 11 (parallel [
+            (set (reg:SI 436)
+                (ashift:SI (reg/v:SI 270 [ h1 ])
+                    (const_int 26 [0x1a])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":151:25 -1
+     (nil))
+(insn 566 565 567 11 (parallel [
+            (set (reg:SI 437)
+                (ior:SI (reg:SI 435 [ h0 ])
+                    (reg:SI 436)))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":151:19 -1
+     (nil))
+(insn 567 566 568 11 (set (reg:DI 438)
+        (zero_extend:DI (reg:SI 437))) "poly1305.c":151:19 -1
+     (nil))
+(insn 568 567 569 11 (set (reg:DI 439)
+        (zero_extend:DI (reg:SI 311 [ pretmp_2237 ]))) "poly1305.c":151:35 -1
+     (nil))
+(insn 569 568 570 11 (parallel [
+            (set (reg/v:DI 274 [ f0 ])
+                (plus:DI (reg:DI 438)
+                    (reg:DI 439)))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":151:5 -1
+     (nil))
+(debug_insn 570 569 571 11 (var_location:DI f0 (reg/v:DI 274 [ f0 ])) "poly1305.c":151:5 -1
+     (nil))
+(debug_insn 571 570 572 11 (debug_marker) "poly1305.c":152:2 -1
+     (nil))
+(insn 572 571 573 11 (parallel [
+            (set (reg:SI 440)
+                (lshiftrt:SI (reg/v:SI 270 [ h1 ])
+                    (const_int 6 [0x6])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":152:12 -1
+     (nil))
+(insn 573 572 574 11 (parallel [
+            (set (reg:SI 441)
+                (ashift:SI (reg/v:SI 271 [ h2 ])
+                    (const_int 20 [0x14])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":152:25 -1
+     (nil))
+(insn 574 573 575 11 (parallel [
+            (set (reg:SI 442)
+                (ior:SI (reg:SI 440)
+                    (reg:SI 441)))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":152:19 -1
+     (nil))
+(insn 575 574 576 11 (set (reg:DI 443)
+        (zero_extend:DI (reg:SI 442))) "poly1305.c":152:19 -1
+     (nil))
+(insn 576 575 577 11 (set (reg:DI 444)
+        (zero_extend:DI (reg:SI 313 [ pretmp_2252 ]))) "poly1305.c":152:35 -1
+     (nil))
+(insn 577 576 578 11 (parallel [
+            (set (reg/v:DI 275 [ f1 ])
+                (plus:DI (reg:DI 443)
+                    (reg:DI 444)))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":152:5 -1
+     (nil))
+(debug_insn 578 577 579 11 (var_location:DI f1 (reg/v:DI 275 [ f1 ])) "poly1305.c":152:5 -1
+     (nil))
+(debug_insn 579 578 580 11 (debug_marker) "poly1305.c":153:2 -1
+     (nil))
+(insn 580 579 581 11 (parallel [
+            (set (reg:SI 445)
+                (lshiftrt:SI (reg/v:SI 271 [ h2 ])
+                    (const_int 12 [0xc])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":153:12 -1
+     (nil))
+(insn 581 580 582 11 (parallel [
+            (set (reg:SI 446)
+                (ashift:SI (reg/v:SI 272 [ h3 ])
+                    (const_int 14 [0xe])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":153:25 -1
+     (nil))
+(insn 582 581 583 11 (parallel [
+            (set (reg:SI 447)
+                (ior:SI (reg:SI 445)
+                    (reg:SI 446)))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":153:19 -1
+     (nil))
+(insn 583 582 584 11 (set (reg:DI 448)
+        (zero_extend:DI (reg:SI 447))) "poly1305.c":153:19 -1
+     (nil))
+(insn 584 583 585 11 (set (reg:DI 449)
+        (zero_extend:DI (reg:SI 315 [ pretmp_2267 ]))) "poly1305.c":153:35 -1
+     (nil))
+(insn 585 584 586 11 (parallel [
+            (set (reg/v:DI 276 [ f2 ])
+                (plus:DI (reg:DI 448)
+                    (reg:DI 449)))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":153:5 -1
+     (nil))
+(debug_insn 586 585 587 11 (var_location:DI f2 (reg/v:DI 276 [ f2 ])) "poly1305.c":153:5 -1
+     (nil))
+(debug_insn 587 586 588 11 (debug_marker) "poly1305.c":154:2 -1
+     (nil))
+(insn 588 587 589 11 (parallel [
+            (set (reg:SI 450)
+                (and:SI (reg/v:SI 267 [ g4 ])
+                    (reg/v:SI 268 [ b ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":149:23 -1
+     (nil))
+(insn 589 588 590 11 (parallel [
+            (set (reg:SI 451 [ h4 ])
+                (ior:SI (reg:SI 450)
+                    (reg:SI 182 [ _290 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":149:5 -1
+     (nil))
+(insn 590 589 591 11 (parallel [
+            (set (reg:SI 452)
+                (ashift:SI (reg:SI 451 [ h4 ])
+                    (const_int 8 [0x8])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":154:25 -1
+     (nil))
+(insn 591 590 592 11 (parallel [
+            (set (reg:SI 453)
+                (lshiftrt:SI (reg/v:SI 272 [ h3 ])
+                    (const_int 18 [0x12])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":154:12 -1
+     (nil))
+(insn 592 591 593 11 (parallel [
+            (set (reg:SI 454)
+                (ior:SI (reg:SI 452)
+                    (reg:SI 453)))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":154:19 -1
+     (nil))
+(insn 593 592 594 11 (set (reg:DI 455)
+        (zero_extend:DI (reg:SI 454))) "poly1305.c":154:19 -1
+     (nil))
+(insn 594 593 595 11 (set (reg:DI 456)
+        (zero_extend:DI (reg:SI 317 [ pretmp_2282 ]))) "poly1305.c":154:35 -1
+     (nil))
+(insn 595 594 596 11 (parallel [
+            (set (reg/v:DI 277 [ f3 ])
+                (plus:DI (reg:DI 455)
+                    (reg:DI 456)))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":154:5 -1
+     (nil))
+(debug_insn 596 595 597 11 (var_location:DI f3 (reg/v:DI 277 [ f3 ])) "poly1305.c":154:5 -1
+     (nil))
+(debug_insn 597 596 598 11 (debug_marker) "poly1305.c":156:2 -1
+     (nil))
+(debug_insn 598 597 599 11 (debug_marker) "poly1305.c":156:2 -1
+     (nil))
+(debug_insn 599 598 600 11 (debug_marker) "poly1305.c":156:2 -1
+     (nil))
+(debug_insn 600 599 601 11 (debug_marker) "poly1305.c":156:2 -1
+     (nil))
+(debug_insn 601 600 602 11 (debug_marker) "poly1305.c":156:2 -1
+     (nil))
+(insn 602 601 603 11 (set (mem:SI (reg/v/f:DI 319 [ out ]) [0 MEM <unsigned int> [(unsigned char *)out_510(D)]+0 S4 A8])
+        (subreg:SI (reg/v:DI 274 [ f0 ]) 0)) "poly1305.c":156:2 -1
+     (nil))
+(debug_insn 603 602 604 11 (debug_marker) "poly1305.c":156:2 -1
+     (nil))
+(debug_insn 604 603 605 11 (debug_marker) "poly1305.c":156:27 -1
+     (nil))
+(insn 605 604 606 11 (parallel [
+            (set (reg:DI 457)
+                (lshiftrt:DI (reg/v:DI 274 [ f0 ])
+                    (const_int 32 [0x20])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":156:37 -1
+     (nil))
+(insn 606 605 607 11 (parallel [
+            (set (reg/v:DI 278 [ f1 ])
+                (plus:DI (reg:DI 457)
+                    (reg/v:DI 275 [ f1 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":156:30 -1
+     (nil))
+(debug_insn 607 606 608 11 (var_location:DI f1 (reg/v:DI 278 [ f1 ])) "poly1305.c":156:30 -1
+     (nil))
+(debug_insn 608 607 609 11 (debug_marker) "poly1305.c":157:2 -1
+     (nil))
+(debug_insn 609 608 610 11 (debug_marker) "poly1305.c":157:2 -1
+     (nil))
+(debug_insn 610 609 611 11 (debug_marker) "poly1305.c":157:2 -1
+     (nil))
+(debug_insn 611 610 612 11 (debug_marker) "poly1305.c":157:2 -1
+     (nil))
+(debug_insn 612 611 613 11 (debug_marker) "poly1305.c":157:2 -1
+     (nil))
+(insn 613 612 614 11 (set (mem:SI (plus:DI (reg/v/f:DI 319 [ out ])
+                (const_int 4 [0x4])) [0 MEM <unsigned int> [(unsigned char *)out_510(D) + 4B]+0 S4 A8])
+        (subreg:SI (reg/v:DI 278 [ f1 ]) 0)) "poly1305.c":157:2 -1
+     (nil))
+(debug_insn 614 613 615 11 (debug_marker) "poly1305.c":157:2 -1
+     (nil))
+(debug_insn 615 614 616 11 (debug_marker) "poly1305.c":157:27 -1
+     (nil))
+(insn 616 615 617 11 (parallel [
+            (set (reg:DI 458)
+                (lshiftrt:DI (reg/v:DI 278 [ f1 ])
+                    (const_int 32 [0x20])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":157:37 -1
+     (nil))
+(insn 617 616 618 11 (parallel [
+            (set (reg/v:DI 279 [ f2 ])
+                (plus:DI (reg:DI 458)
+                    (reg/v:DI 276 [ f2 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":157:30 -1
+     (nil))
+(debug_insn 618 617 619 11 (var_location:DI f2 (reg/v:DI 279 [ f2 ])) "poly1305.c":157:30 -1
+     (nil))
+(debug_insn 619 618 620 11 (debug_marker) "poly1305.c":158:2 -1
+     (nil))
+(debug_insn 620 619 621 11 (debug_marker) "poly1305.c":158:2 -1
+     (nil))
+(debug_insn 621 620 622 11 (debug_marker) "poly1305.c":158:2 -1
+     (nil))
+(debug_insn 622 621 623 11 (debug_marker) "poly1305.c":158:2 -1
+     (nil))
+(debug_insn 623 622 624 11 (debug_marker) "poly1305.c":158:2 -1
+     (nil))
+(insn 624 623 625 11 (set (mem:SI (plus:DI (reg/v/f:DI 319 [ out ])
+                (const_int 8 [0x8])) [0 MEM <unsigned int> [(unsigned char *)out_510(D) + 8B]+0 S4 A8])
+        (subreg:SI (reg/v:DI 279 [ f2 ]) 0)) "poly1305.c":158:2 -1
+     (nil))
+(debug_insn 625 624 626 11 (debug_marker) "poly1305.c":158:2 -1
+     (nil))
+(debug_insn 626 625 627 11 (debug_marker) "poly1305.c":158:27 -1
+     (nil))
+(debug_insn 627 626 628 11 (var_location:DI f3 (plus:DI (lshiftrt:DI (reg/v:DI 279 [ f2 ])
+            (const_int 32 [0x20]))
+        (reg/v:DI 277 [ f3 ]))) "poly1305.c":158:30 -1
+     (nil))
+(debug_insn 628 627 629 11 (debug_marker) "poly1305.c":159:2 -1
+     (nil))
+(debug_insn 629 628 630 11 (debug_marker) "poly1305.c":159:2 -1
+     (nil))
+(debug_insn 630 629 631 11 (debug_marker) "poly1305.c":159:2 -1
+     (nil))
+(debug_insn 631 630 632 11 (debug_marker) "poly1305.c":159:2 -1
+     (nil))
+(debug_insn 632 631 633 11 (debug_marker) "poly1305.c":159:2 -1
+     (nil))
+(insn 633 632 634 11 (parallel [
+            (set (reg:DI 459)
+                (lshiftrt:DI (reg/v:DI 279 [ f2 ])
+                    (const_int 32 [0x20])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":158:37 -1
+     (nil))
+(insn 634 633 635 11 (parallel [
+            (set (reg:DI 460 [ f3 ])
+                (plus:DI (reg:DI 459)
+                    (reg/v:DI 277 [ f3 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":158:30 -1
+     (nil))
+(insn 635 634 636 11 (set (mem:SI (plus:DI (reg/v/f:DI 319 [ out ])
+                (const_int 12 [0xc])) [0 MEM <unsigned int> [(unsigned char *)out_510(D) + 12B]+0 S4 A8])
+        (subreg:SI (reg:DI 460 [ f3 ]) 0)) "poly1305.c":159:2 -1
+     (nil))
+(debug_insn 636 635 637 11 (debug_marker) "poly1305.c":159:2 -1
+     (nil))
+(jump_insn 637 636 638 11 (set (pc)
+        (label_ref 842)) "poly1305.c":160:1 -1
+     (nil)
+ -> 842)
+(barrier 638 637 639)
+(code_label 639 638 640 12 5 (nil) [1 uses])
+(note 640 639 641 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 641 640 642 12 (parallel [
+            (set (reg:DI 461)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -32 [0xffffffffffffffe0])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":110:36 -1
+     (nil))
+(insn 642 641 643 12 (set (reg:DI 462)
+        (reg:DI 461)) "poly1305.c":110:36 -1
+     (nil))
+(insn 643 642 644 12 (set (reg:DI 463)
+        (reg/v/f:DI 320 [ m ])) "poly1305.c":110:36 -1
+     (nil))
+(insn 644 643 645 12 (set (reg:DI 464)
+        (reg/v:DI 321 [ inlen ])) "poly1305.c":110:36 -1
+     (nil))
+(insn 645 644 646 12 (set (reg:DI 1 dx)
+        (reg:DI 464)) "poly1305.c":110:36 -1
+     (nil))
+(insn 646 645 647 12 (set (reg:DI 4 si)
+        (reg:DI 463)) "poly1305.c":110:36 -1
+     (nil))
+(insn 647 646 648 12 (set (reg:DI 5 di)
+        (reg:DI 462)) "poly1305.c":110:36 -1
+     (nil))
+(call_insn 648 647 649 12 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("memcpy") [flags 0x41]  <function_decl 0x7f9572df2700 __builtin_memcpy>) [0 __builtin_memcpy S1 A8])
+            (const_int 0 [0]))) "poly1305.c":110:36 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("memcpy") [flags 0x41]  <function_decl 0x7f9572df2700 __builtin_memcpy>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (set (reg:DI 0 ax)
+            (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (expr_list:DI (use (reg:DI 1 dx))
+                    (nil))))))
+(insn 649 648 650 12 (set (reg:DI 465)
+        (reg:DI 0 ax)) "poly1305.c":110:36 -1
+     (nil))
+(insn 650 649 651 12 (set (reg:DI 466)
+        (reg:DI 465)) "poly1305.c":110:36 -1
+     (nil))
+(debug_insn 651 650 652 12 (var_location:DI j (clobber (const_int 0 [0]))) -1
+     (nil))
+(debug_insn 652 651 653 12 (debug_marker) "poly1305.c":111:2 -1
+     (nil))
+(insn 653 652 654 12 (parallel [
+            (set (reg/v:DI 237 [ j ])
+                (plus:DI (reg/v:DI 321 [ inlen ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":111:6 -1
+     (nil))
+(debug_insn 654 653 655 12 (var_location:DI j (reg/v:DI 237 [ j ])) "poly1305.c":111:6 -1
+     (nil))
+(insn 655 654 656 12 (set (mem:QI (plus:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (reg/v:DI 321 [ inlen ]))
+                (const_int -32 [0xffffffffffffffe0])) [0 mp[inlen_403]+0 S1 A8])
+        (const_int 1 [0x1])) "poly1305.c":111:10 -1
+     (nil))
+(debug_insn 656 655 657 12 (debug_marker) "poly1305.c":112:2 -1
+     (nil))
+(debug_insn 657 656 658 12 (var_location:DI j (reg/v:DI 237 [ j ])) -1
+     (nil))
+(debug_insn 658 657 661 12 (debug_marker) "poly1305.c":112:9 -1
+     (nil))
+(insn 661 658 662 12 (set (reg:CC 17 flags)
+        (compare:CC (reg/v:DI 237 [ j ])
+            (const_int 15 [0xf]))) "poly1305.c":112:2 -1
+     (nil))
+(jump_insn 662 661 831 12 (set (pc)
+        (if_then_else (leu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 767)
+            (pc))) "poly1305.c":112:2 -1
+     (int_list:REG_BR_PROB 955630228 (nil))
+ -> 767)
+(code_label 831 662 663 13 13 (nil) [6 uses])
+(note 663 831 664 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 664 663 665 13 (var_location:DI j (clobber (const_int 0 [0]))) -1
+     (nil))
+(debug_insn 665 664 666 13 (debug_marker) "poly1305.c":113:2 -1
+     (nil))
+(debug_insn 666 665 667 13 (var_location:DI inlen (const_int 0 [0])) "poly1305.c":113:8 -1
+     (nil))
+(debug_insn 667 666 668 13 (debug_marker) "poly1305.c":115:2 -1
+     (nil))
+(debug_insn 668 667 669 13 (var_location:QI D#104 (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+            (const_int -32 [0xffffffffffffffe0])) [0 mp[0]+0 S1 A64])) "poly1305.c":115:7 -1
+     (nil))
+(debug_insn 669 668 670 13 (var_location:SI D#103 (zero_extend:SI (debug_expr:QI D#104))) "poly1305.c":115:7 -1
+     (nil))
+(debug_insn 670 669 671 13 (var_location:QI D#102 (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+            (const_int -31 [0xffffffffffffffe1])) [0 mp[1]+0 S1 A8])) "poly1305.c":115:7 -1
+     (nil))
+(debug_insn 671 670 672 13 (var_location:SI D#101 (zero_extend:SI (debug_expr:QI D#102))) "poly1305.c":115:7 -1
+     (nil))
+(debug_insn 672 671 673 13 (var_location:SI D#100 (ashift:SI (debug_expr:SI D#101)
+        (const_int 8 [0x8]))) "poly1305.c":115:7 -1
+     (nil))
+(debug_insn 673 672 674 13 (var_location:QI D#99 (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+            (const_int -30 [0xffffffffffffffe2])) [0 mp[2]+0 S1 A16])) "poly1305.c":115:7 -1
+     (nil))
+(debug_insn 674 673 675 13 (var_location:SI D#98 (zero_extend:SI (debug_expr:QI D#99))) "poly1305.c":115:7 -1
+     (nil))
+(debug_insn 675 674 676 13 (var_location:SI D#97 (ashift:SI (debug_expr:SI D#98)
+        (const_int 16 [0x10]))) "poly1305.c":115:7 -1
+     (nil))
+(debug_insn 676 675 677 13 (var_location:SI D#96 (ior:SI (debug_expr:SI D#100)
+        (debug_expr:SI D#97))) -1
+     (nil))
+(debug_insn 677 676 678 13 (var_location:SI D#95 (ior:SI (debug_expr:SI D#103)
+        (debug_expr:SI D#96))) "poly1305.c":115:7 -1
+     (nil))
+(debug_insn 678 677 679 13 (var_location:QI D#94 (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+            (const_int -29 [0xffffffffffffffe3])) [0 mp[3]+0 S1 A8])) "poly1305.c":115:7 -1
+     (nil))
+(debug_insn 679 678 680 13 (var_location:SI D#93 (zero_extend:SI (debug_expr:QI D#94))) "poly1305.c":115:7 -1
+     (nil))
+(debug_insn 680 679 681 13 (var_location:SI D#92 (ashift:SI (debug_expr:SI D#93)
+        (const_int 24 [0x18]))) "poly1305.c":115:7 -1
+     (nil))
+(debug_insn 681 680 682 13 (var_location:SI t0 (ior:SI (debug_expr:SI D#95)
+        (debug_expr:SI D#92))) "poly1305.c":115:5 -1
+     (nil))
+(debug_insn 682 681 683 13 (debug_marker) "poly1305.c":116:2 -1
+     (nil))
+(debug_insn 683 682 684 13 (var_location:QI D#91 (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+            (const_int -28 [0xffffffffffffffe4])) [0 mp[4]+0 S1 A32])) "poly1305.c":116:7 -1
+     (nil))
+(debug_insn 684 683 685 13 (var_location:SI D#90 (zero_extend:SI (debug_expr:QI D#91))) "poly1305.c":116:7 -1
+     (nil))
+(debug_insn 685 684 686 13 (var_location:QI D#89 (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+            (const_int -27 [0xffffffffffffffe5])) [0 mp[5]+0 S1 A8])) "poly1305.c":116:7 -1
+     (nil))
+(debug_insn 686 685 687 13 (var_location:SI D#88 (zero_extend:SI (debug_expr:QI D#89))) "poly1305.c":116:7 -1
+     (nil))
+(debug_insn 687 686 688 13 (var_location:SI D#87 (ashift:SI (debug_expr:SI D#88)
+        (const_int 8 [0x8]))) "poly1305.c":116:7 -1
+     (nil))
+(debug_insn 688 687 689 13 (var_location:QI D#86 (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+            (const_int -26 [0xffffffffffffffe6])) [0 mp[6]+0 S1 A16])) "poly1305.c":116:7 -1
+     (nil))
+(debug_insn 689 688 690 13 (var_location:SI D#85 (zero_extend:SI (debug_expr:QI D#86))) "poly1305.c":116:7 -1
+     (nil))
+(debug_insn 690 689 691 13 (var_location:SI D#84 (ashift:SI (debug_expr:SI D#85)
+        (const_int 16 [0x10]))) "poly1305.c":116:7 -1
+     (nil))
+(debug_insn 691 690 692 13 (var_location:SI D#83 (ior:SI (debug_expr:SI D#87)
+        (debug_expr:SI D#84))) -1
+     (nil))
+(debug_insn 692 691 693 13 (var_location:SI D#82 (ior:SI (debug_expr:SI D#90)
+        (debug_expr:SI D#83))) "poly1305.c":116:7 -1
+     (nil))
+(debug_insn 693 692 694 13 (var_location:QI D#81 (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+            (const_int -25 [0xffffffffffffffe7])) [0 mp[7]+0 S1 A8])) "poly1305.c":116:7 -1
+     (nil))
+(debug_insn 694 693 695 13 (var_location:SI D#80 (zero_extend:SI (debug_expr:QI D#81))) "poly1305.c":116:7 -1
+     (nil))
+(debug_insn 695 694 696 13 (var_location:SI D#79 (ashift:SI (debug_expr:SI D#80)
+        (const_int 24 [0x18]))) "poly1305.c":116:7 -1
+     (nil))
+(debug_insn 696 695 697 13 (var_location:SI t1 (ior:SI (debug_expr:SI D#82)
+        (debug_expr:SI D#79))) "poly1305.c":116:5 -1
+     (nil))
+(debug_insn 697 696 698 13 (debug_marker) "poly1305.c":117:2 -1
+     (nil))
+(debug_insn 698 697 699 13 (var_location:QI D#78 (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+            (const_int -24 [0xffffffffffffffe8])) [0 mp[8]+0 S1 A64])) "poly1305.c":117:7 -1
+     (nil))
+(debug_insn 699 698 700 13 (var_location:SI D#77 (zero_extend:SI (debug_expr:QI D#78))) "poly1305.c":117:7 -1
+     (nil))
+(debug_insn 700 699 701 13 (var_location:QI D#76 (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+            (const_int -23 [0xffffffffffffffe9])) [0 mp[9]+0 S1 A8])) "poly1305.c":117:7 -1
+     (nil))
+(debug_insn 701 700 702 13 (var_location:SI D#75 (zero_extend:SI (debug_expr:QI D#76))) "poly1305.c":117:7 -1
+     (nil))
+(debug_insn 702 701 703 13 (var_location:SI D#74 (ashift:SI (debug_expr:SI D#75)
+        (const_int 8 [0x8]))) "poly1305.c":117:7 -1
+     (nil))
+(debug_insn 703 702 704 13 (var_location:QI D#73 (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+            (const_int -22 [0xffffffffffffffea])) [0 mp[10]+0 S1 A16])) "poly1305.c":117:7 -1
+     (nil))
+(debug_insn 704 703 705 13 (var_location:SI D#72 (zero_extend:SI (debug_expr:QI D#73))) "poly1305.c":117:7 -1
+     (nil))
+(debug_insn 705 704 706 13 (var_location:SI D#71 (ashift:SI (debug_expr:SI D#72)
+        (const_int 16 [0x10]))) "poly1305.c":117:7 -1
+     (nil))
+(debug_insn 706 705 707 13 (var_location:SI D#70 (ior:SI (debug_expr:SI D#74)
+        (debug_expr:SI D#71))) -1
+     (nil))
+(debug_insn 707 706 708 13 (var_location:SI D#69 (ior:SI (debug_expr:SI D#77)
+        (debug_expr:SI D#70))) "poly1305.c":117:7 -1
+     (nil))
+(debug_insn 708 707 709 13 (var_location:QI D#68 (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+            (const_int -21 [0xffffffffffffffeb])) [0 mp[11]+0 S1 A8])) "poly1305.c":117:7 -1
+     (nil))
+(debug_insn 709 708 710 13 (var_location:SI D#67 (zero_extend:SI (debug_expr:QI D#68))) "poly1305.c":117:7 -1
+     (nil))
+(debug_insn 710 709 711 13 (var_location:SI D#66 (ashift:SI (debug_expr:SI D#67)
+        (const_int 24 [0x18]))) "poly1305.c":117:7 -1
+     (nil))
+(debug_insn 711 710 712 13 (var_location:SI t2 (ior:SI (debug_expr:SI D#69)
+        (debug_expr:SI D#66))) "poly1305.c":117:5 -1
+     (nil))
+(debug_insn 712 711 713 13 (debug_marker) "poly1305.c":118:2 -1
+     (nil))
+(debug_insn 713 712 714 13 (var_location:QI D#65 (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+            (const_int -20 [0xffffffffffffffec])) [0 mp[12]+0 S1 A32])) "poly1305.c":118:7 -1
+     (nil))
+(debug_insn 714 713 715 13 (var_location:SI D#64 (zero_extend:SI (debug_expr:QI D#65))) "poly1305.c":118:7 -1
+     (nil))
+(debug_insn 715 714 716 13 (var_location:QI D#63 (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+            (const_int -19 [0xffffffffffffffed])) [0 mp[13]+0 S1 A8])) "poly1305.c":118:7 -1
+     (nil))
+(debug_insn 716 715 717 13 (var_location:SI D#62 (zero_extend:SI (debug_expr:QI D#63))) "poly1305.c":118:7 -1
+     (nil))
+(debug_insn 717 716 718 13 (var_location:SI D#61 (ashift:SI (debug_expr:SI D#62)
+        (const_int 8 [0x8]))) "poly1305.c":118:7 -1
+     (nil))
+(debug_insn 718 717 719 13 (var_location:QI D#60 (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+            (const_int -18 [0xffffffffffffffee])) [0 mp[14]+0 S1 A16])) "poly1305.c":118:7 -1
+     (nil))
+(debug_insn 719 718 720 13 (var_location:SI D#59 (zero_extend:SI (debug_expr:QI D#60))) "poly1305.c":118:7 -1
+     (nil))
+(debug_insn 720 719 721 13 (var_location:SI D#58 (ashift:SI (debug_expr:SI D#59)
+        (const_int 16 [0x10]))) "poly1305.c":118:7 -1
+     (nil))
+(debug_insn 721 720 722 13 (var_location:SI D#57 (ior:SI (debug_expr:SI D#61)
+        (debug_expr:SI D#58))) -1
+     (nil))
+(debug_insn 722 721 723 13 (var_location:SI D#56 (ior:SI (debug_expr:SI D#64)
+        (debug_expr:SI D#57))) "poly1305.c":118:7 -1
+     (nil))
+(debug_insn 723 722 724 13 (var_location:QI D#55 (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+            (const_int -17 [0xffffffffffffffef])) [0 mp[15]+0 S1 A8])) "poly1305.c":118:7 -1
+     (nil))
+(debug_insn 724 723 725 13 (var_location:SI D#54 (zero_extend:SI (debug_expr:QI D#55))) "poly1305.c":118:7 -1
+     (nil))
+(debug_insn 725 724 726 13 (var_location:SI D#53 (ashift:SI (debug_expr:SI D#54)
+        (const_int 24 [0x18]))) "poly1305.c":118:7 -1
+     (nil))
+(debug_insn 726 725 727 13 (var_location:SI t3 (ior:SI (debug_expr:SI D#56)
+        (debug_expr:SI D#53))) "poly1305.c":118:5 -1
+     (nil))
+(debug_insn 727 726 728 13 (debug_marker) "poly1305.c":120:2 -1
+     (nil))
+(insn 728 727 729 13 (set (reg:SI 468)
+        (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [0 MEM <unsigned int> [(unsigned char *)&mp]+0 S4 A64])) "poly1305.c":120:11 -1
+     (nil))
+(insn 729 728 730 13 (parallel [
+            (set (reg:SI 467)
+                (and:SI (reg:SI 468)
+                    (const_int 67108863 [0x3ffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":120:11 -1
+     (expr_list:REG_EQUAL (and:SI (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -32 [0xffffffffffffffe0])) [0 MEM <unsigned int> [(unsigned char *)&mp]+0 S4 A64])
+            (const_int 67108863 [0x3ffffff]))
+        (nil)))
+(insn 730 729 731 13 (parallel [
+            (set (reg/v:SI 203 [ h0 ])
+                (plus:SI (reg:SI 467)
+                    (reg/v:SI 204 [ h0 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":120:5 -1
+     (nil))
+(debug_insn 731 730 732 13 (var_location:SI h0 (reg/v:SI 203 [ h0 ])) "poly1305.c":120:5 -1
+     (nil))
+(debug_insn 732 731 733 13 (debug_marker) "poly1305.c":121:2 -1
+     (nil))
+(insn 733 732 734 13 (set (reg:DI 470)
+        (mem/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [0 MEM <long unsigned int> [(unsigned char *)&mp]+0 S8 A64])) "poly1305.c":121:37 -1
+     (nil))
+(insn 734 733 735 13 (parallel [
+            (set (reg:DI 469)
+                (lshiftrt:DI (reg:DI 470)
+                    (const_int 26 [0x1a])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":121:37 -1
+     (expr_list:REG_EQUAL (lshiftrt:DI (mem/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -32 [0xffffffffffffffe0])) [0 MEM <long unsigned int> [(unsigned char *)&mp]+0 S8 A64])
+            (const_int 26 [0x1a]))
+        (nil)))
+(insn 735 734 736 13 (parallel [
+            (set (reg:SI 471)
+                (and:SI (subreg:SI (reg:DI 469) 0)
+                    (const_int 67108863 [0x3ffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":121:44 -1
+     (nil))
+(insn 736 735 737 13 (parallel [
+            (set (reg/v:SI 205 [ h1 ])
+                (plus:SI (reg:SI 471)
+                    (reg/v:SI 206 [ h1 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":121:5 -1
+     (nil))
+(debug_insn 737 736 738 13 (var_location:SI h1 (reg/v:SI 205 [ h1 ])) "poly1305.c":121:5 -1
+     (nil))
+(debug_insn 738 737 739 13 (debug_marker) "poly1305.c":122:2 -1
+     (nil))
+(insn 739 738 740 13 (set (reg:DI 473)
+        (mem/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [0 MEM <long unsigned int> [(unsigned char *)&mp + 4B]+0 S8 A32])) "poly1305.c":122:37 -1
+     (nil))
+(insn 740 739 741 13 (parallel [
+            (set (reg:DI 472)
+                (lshiftrt:DI (reg:DI 473)
+                    (const_int 20 [0x14])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":122:37 -1
+     (expr_list:REG_EQUAL (lshiftrt:DI (mem/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -28 [0xffffffffffffffe4])) [0 MEM <long unsigned int> [(unsigned char *)&mp + 4B]+0 S8 A32])
+            (const_int 20 [0x14]))
+        (nil)))
+(insn 741 740 742 13 (parallel [
+            (set (reg:SI 474)
+                (and:SI (subreg:SI (reg:DI 472) 0)
+                    (const_int 67108863 [0x3ffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":122:44 -1
+     (nil))
+(insn 742 741 743 13 (parallel [
+            (set (reg/v:SI 207 [ h2 ])
+                (plus:SI (reg:SI 474)
+                    (reg/v:SI 208 [ h2 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":122:5 -1
+     (nil))
+(debug_insn 743 742 744 13 (var_location:SI h2 (reg/v:SI 207 [ h2 ])) "poly1305.c":122:5 -1
+     (nil))
+(debug_insn 744 743 745 13 (debug_marker) "poly1305.c":123:2 -1
+     (nil))
+(insn 745 744 746 13 (set (reg:DI 476)
+        (mem/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [0 MEM <long unsigned int> [(unsigned char *)&mp + 8B]+0 S8 A64])) "poly1305.c":123:37 -1
+     (nil))
+(insn 746 745 747 13 (parallel [
+            (set (reg:DI 475)
+                (lshiftrt:DI (reg:DI 476)
+                    (const_int 14 [0xe])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":123:37 -1
+     (expr_list:REG_EQUAL (lshiftrt:DI (mem/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -24 [0xffffffffffffffe8])) [0 MEM <long unsigned int> [(unsigned char *)&mp + 8B]+0 S8 A64])
+            (const_int 14 [0xe]))
+        (nil)))
+(insn 747 746 748 13 (parallel [
+            (set (reg:SI 477)
+                (and:SI (subreg:SI (reg:DI 475) 0)
+                    (const_int 67108863 [0x3ffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":123:44 -1
+     (nil))
+(insn 748 747 749 13 (parallel [
+            (set (reg/v:SI 209 [ h3 ])
+                (plus:SI (reg:SI 477)
+                    (reg/v:SI 210 [ h3 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":123:5 -1
+     (nil))
+(debug_insn 749 748 750 13 (var_location:SI h3 (reg/v:SI 209 [ h3 ])) "poly1305.c":123:5 -1
+     (nil))
+(debug_insn 750 749 751 13 (debug_marker) "poly1305.c":124:2 -1
+     (nil))
+(insn 751 750 752 13 (set (reg:SI 479)
+        (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [0 MEM <unsigned int> [(unsigned char *)&mp + 12B]+0 S4 A32])) "poly1305.c":124:12 -1
+     (nil))
+(insn 752 751 753 13 (parallel [
+            (set (reg:SI 478)
+                (lshiftrt:SI (reg:SI 479)
+                    (const_int 8 [0x8])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":124:12 -1
+     (expr_list:REG_EQUAL (lshiftrt:SI (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -20 [0xffffffffffffffec])) [0 MEM <unsigned int> [(unsigned char *)&mp + 12B]+0 S4 A32])
+            (const_int 8 [0x8]))
+        (nil)))
+(insn 753 752 754 13 (parallel [
+            (set (reg/v:SI 211 [ h4 ])
+                (plus:SI (reg:SI 478)
+                    (reg/v:SI 212 [ h4 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":124:5 -1
+     (nil))
+(debug_insn 754 753 755 13 (var_location:SI h4 (reg/v:SI 211 [ h4 ])) "poly1305.c":124:5 -1
+     (nil))
+(debug_insn 755 754 756 13 (debug_marker) "poly1305.c":126:2 -1
+     (nil))
+(insn 756 755 757 13 (set (reg:DI 302 [ prephitmp_2088 ])
+        (zero_extend:DI (reg/v:SI 217 [ r0 ]))) "poly1305.c":91:10 -1
+     (nil))
+(insn 757 756 758 13 (set (reg:DI 303 [ prephitmp_2090 ])
+        (zero_extend:DI (reg/v:SI 232 [ s4 ]))) "poly1305.c":91:31 -1
+     (nil))
+(insn 758 757 759 13 (set (reg:DI 304 [ prephitmp_2092 ])
+        (zero_extend:DI (reg/v:SI 230 [ s2 ]))) "poly1305.c":91:73 -1
+     (nil))
+(insn 759 758 760 13 (set (reg:DI 305 [ prephitmp_2094 ])
+        (zero_extend:DI (reg/v:SI 231 [ s3 ]))) "poly1305.c":91:52 -1
+     (nil))
+(insn 760 759 761 13 (set (reg:DI 306 [ prephitmp_2096 ])
+        (zero_extend:DI (reg/v:SI 229 [ s1 ]))) "poly1305.c":91:94 -1
+     (nil))
+(insn 761 760 762 13 (set (reg:DI 307 [ prephitmp_2098 ])
+        (zero_extend:DI (reg/v:SI 220 [ r1 ]))) "poly1305.c":92:10 -1
+     (nil))
+(insn 762 761 763 13 (set (reg:DI 308 [ prephitmp_2100 ])
+        (zero_extend:DI (reg/v:SI 223 [ r2 ]))) "poly1305.c":93:10 -1
+     (nil))
+(insn 763 762 764 13 (set (reg:DI 309 [ prephitmp_2102 ])
+        (zero_extend:DI (reg/v:SI 226 [ r3 ]))) "poly1305.c":94:10 -1
+     (nil))
+(insn 764 763 15 13 (set (reg:DI 310 [ prephitmp_2104 ])
+        (zero_extend:DI (reg/v:SI 228 [ r4 ]))) "poly1305.c":95:10 -1
+     (nil))
+(insn 15 764 16 13 (set (reg/v/f:DI 202 [ m ])
+        (reg/v/f:DI 320 [ m ])) "poly1305.c":126:2 -1
+     (nil))
+(insn 16 15 765 13 (set (reg/v:DI 321 [ inlen ])
+        (const_int 0 [0])) "poly1305.c":113:8 -1
+     (nil))
+(jump_insn 765 16 766 13 (set (pc)
+        (label_ref 296)) "poly1305.c":126:2 -1
+     (nil)
+ -> 296)
+(barrier 766 765 767)
+(code_label 767 766 768 14 6 (nil) [1 uses])
+(note 768 767 769 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 769 768 770 14 (set (reg:DI 481)
+        (const_int 15 [0xf])) "poly1305.c":112:28 -1
+     (nil))
+(insn 770 769 771 14 (parallel [
+            (set (reg:DI 480)
+                (minus:DI (reg:DI 481)
+                    (reg/v:DI 321 [ inlen ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":112:28 -1
+     (nil))
+(insn 771 770 772 14 (parallel [
+            (set (reg:DI 482)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -32 [0xffffffffffffffe0])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":112:28 -1
+     (nil))
+(insn 772 771 773 14 (parallel [
+            (set (reg:DI 483)
+                (plus:DI (reg:DI 482)
+                    (reg/v:DI 237 [ j ])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":112:28 -1
+     (nil))
+(insn 773 772 774 14 (set (reg:SI 484)
+        (subreg:SI (reg:DI 480) 0)) "poly1305.c":112:28 -1
+     (nil))
+(insn 774 773 775 14 (set (reg/f:DI 485)
+        (reg:DI 483)) "poly1305.c":112:28 -1
+     (nil))
+(insn 775 774 778 14 (set (reg:DI 486)
+        (const_int 0 [0])) "poly1305.c":112:28 -1
+     (nil))
+(insn 778 775 779 14 (set (reg:CC 17 flags)
+        (compare:CC (reg:SI 484)
+            (const_int 8 [0x8]))) "poly1305.c":112:28 -1
+     (nil))
+(jump_insn 779 778 859 14 (set (pc)
+        (if_then_else (geu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 804)
+            (pc))) "poly1305.c":112:28 -1
+     (int_list:REG_BR_PROB 536870916 (nil))
+ -> 804)
+(note 859 779 780 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(insn 780 859 781 15 (parallel [
+            (set (reg:SI 487)
+                (and:SI (reg:SI 484)
+                    (const_int 4 [0x4])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":112:28 -1
+     (nil))
+(insn 781 780 782 15 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 487)
+            (const_int 0 [0]))) "poly1305.c":112:28 -1
+     (nil))
+(jump_insn 782 781 860 15 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 790)
+            (pc))) "poly1305.c":112:28 -1
+     (int_list:REG_BR_PROB 966367644 (nil))
+ -> 790)
+(note 860 782 783 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(insn 783 860 784 16 (set (mem:SI (reg/f:DI 485) [0  S4 A8])
+        (subreg:SI (reg:DI 486) 0)) "poly1305.c":112:28 -1
+     (nil))
+(insn 784 783 785 16 (set (reg:DI 488)
+        (zero_extend:DI (reg:SI 484))) "poly1305.c":112:28 -1
+     (nil))
+(insn 785 784 786 16 (parallel [
+            (set (reg:DI 489)
+                (plus:DI (reg/f:DI 485)
+                    (reg:DI 488)))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":112:28 -1
+     (nil))
+(insn 786 785 787 16 (parallel [
+            (set (reg/f:DI 490)
+                (plus:DI (reg:DI 489)
+                    (const_int 4 [0x4])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":112:28 -1
+     (nil))
+(insn 787 786 788 16 (set (mem:SI (plus:DI (reg/f:DI 490)
+                (const_int -8 [0xfffffffffffffff8])) [0  S4 A8])
+        (subreg:SI (reg:DI 486) 0)) "poly1305.c":112:28 -1
+     (nil))
+(jump_insn 788 787 789 16 (set (pc)
+        (label_ref:DI 831)) "poly1305.c":112:28 737 {jump}
+     (nil)
+ -> 831)
+(barrier 789 788 790)
+(code_label 790 789 861 17 9 (nil) [1 uses])
+(note 861 790 791 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
+(insn 791 861 792 17 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 484)
+            (const_int 0 [0]))) "poly1305.c":112:28 -1
+     (nil))
+(jump_insn 792 791 862 17 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 831)
+            (pc))) "poly1305.c":112:28 736 {*jcc}
+     (int_list:REG_BR_PROB 536870916 (nil))
+ -> 831)
+(note 862 792 793 18 [bb 18] NOTE_INSN_BASIC_BLOCK)
+(insn 793 862 794 18 (set (mem:QI (reg/f:DI 485) [0  S1 A8])
+        (subreg:QI (reg:DI 486) 0)) "poly1305.c":112:28 -1
+     (nil))
+(insn 794 793 795 18 (parallel [
+            (set (reg:SI 491)
+                (and:SI (reg:SI 484)
+                    (const_int 2 [0x2])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":112:28 -1
+     (nil))
+(insn 795 794 796 18 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 491)
+            (const_int 0 [0]))) "poly1305.c":112:28 -1
+     (nil))
+(jump_insn 796 795 863 18 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 831)
+            (pc))) "poly1305.c":112:28 736 {*jcc}
+     (int_list:REG_BR_PROB 966367644 (nil))
+ -> 831)
+(note 863 796 797 19 [bb 19] NOTE_INSN_BASIC_BLOCK)
+(insn 797 863 798 19 (set (reg:DI 493)
+        (zero_extend:DI (reg:SI 484))) "poly1305.c":112:28 -1
+     (nil))
+(insn 798 797 799 19 (set (reg:DI 492)
+        (reg:DI 493)) "poly1305.c":112:28 -1
+     (nil))
+(insn 799 798 800 19 (parallel [
+            (set (reg/f:DI 494)
+                (plus:DI (reg/f:DI 485)
+                    (reg:DI 492)))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":112:28 -1
+     (nil))
+(insn 800 799 802 19 (set (mem:HI (plus:DI (reg/f:DI 494)
+                (const_int -2 [0xfffffffffffffffe])) [0  S2 A8])
+        (subreg:HI (reg:DI 486) 0)) "poly1305.c":112:28 -1
+     (nil))
+(jump_insn 802 800 803 19 (set (pc)
+        (label_ref:DI 831)) "poly1305.c":112:28 737 {jump}
+     (nil)
+ -> 831)
+(barrier 803 802 804)
+(code_label 804 803 865 21 7 (nil) [1 uses])
+(note 865 804 805 21 [bb 21] NOTE_INSN_BASIC_BLOCK)
+(insn 805 865 806 21 (set (mem:DI (reg/f:DI 485) [0  S8 A8])
+        (reg:DI 486)) "poly1305.c":112:28 -1
+     (nil))
+(insn 806 805 807 21 (set (reg:DI 495)
+        (zero_extend:DI (reg:SI 484))) "poly1305.c":112:28 -1
+     (nil))
+(insn 807 806 808 21 (parallel [
+            (set (reg:DI 496)
+                (plus:DI (reg/f:DI 485)
+                    (reg:DI 495)))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":112:28 -1
+     (nil))
+(insn 808 807 809 21 (parallel [
+            (set (reg/f:DI 497)
+                (plus:DI (reg:DI 496)
+                    (const_int 8 [0x8])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":112:28 -1
+     (nil))
+(insn 809 808 810 21 (set (mem:DI (plus:DI (reg/f:DI 497)
+                (const_int -16 [0xfffffffffffffff0])) [0  S8 A8])
+        (reg:DI 486)) "poly1305.c":112:28 -1
+     (nil))
+(insn 810 809 811 21 (parallel [
+            (set (reg/f:DI 498)
+                (plus:DI (reg/f:DI 485)
+                    (const_int 8 [0x8])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":112:28 -1
+     (nil))
+(insn 811 810 812 21 (parallel [
+            (set (reg/f:DI 498)
+                (and:DI (reg/f:DI 498)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":112:28 -1
+     (nil))
+(insn 812 811 813 21 (parallel [
+            (set (reg/f:DI 485)
+                (minus:DI (reg/f:DI 485)
+                    (reg/f:DI 498)))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":112:28 -1
+     (nil))
+(insn 813 812 814 21 (parallel [
+            (set (reg:SI 484)
+                (plus:SI (reg:SI 484)
+                    (subreg:SI (reg/f:DI 485) 0)))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":112:28 -1
+     (nil))
+(insn 814 813 817 21 (parallel [
+            (set (reg:SI 484)
+                (and:SI (reg:SI 484)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":112:28 -1
+     (nil))
+(insn 817 814 818 21 (set (reg:CC 17 flags)
+        (compare:CC (reg:SI 484)
+            (const_int 8 [0x8]))) "poly1305.c":112:28 -1
+     (nil))
+(jump_insn 818 817 866 21 (set (pc)
+        (if_then_else (ltu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 831)
+            (pc))) "poly1305.c":112:28 736 {*jcc}
+     (int_list:REG_BR_PROB 214748372 (nil))
+ -> 831)
+(note 866 818 819 22 [bb 22] NOTE_INSN_BASIC_BLOCK)
+(insn 819 866 820 22 (parallel [
+            (set (reg:SI 500)
+                (and:SI (reg:SI 484)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":112:28 -1
+     (nil))
+(insn 820 819 821 22 (set (reg:SI 499)
+        (const_int 0 [0])) "poly1305.c":112:28 -1
+     (nil))
+(code_label 821 820 867 23 11 (nil) [1 uses])
+(note 867 821 822 23 [bb 23] NOTE_INSN_BASIC_BLOCK)
+(insn 822 867 823 23 (set (reg:DI 501)
+        (zero_extend:DI (reg:SI 499))) "poly1305.c":112:28 -1
+     (nil))
+(insn 823 822 824 23 (set (mem:DI (plus:DI (reg/f:DI 498)
+                (reg:DI 501)) [0  S8 A64])
+        (reg:DI 486)) "poly1305.c":112:28 -1
+     (nil))
+(insn 824 823 825 23 (parallel [
+            (set (reg:SI 499)
+                (plus:SI (reg:SI 499)
+                    (const_int 8 [0x8])))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":112:28 -1
+     (nil))
+(insn 825 824 826 23 (set (reg:CC 17 flags)
+        (compare:CC (reg:SI 499)
+            (reg:SI 500))) "poly1305.c":112:28 -1
+     (nil))
+(jump_insn 826 825 868 23 (set (pc)
+        (if_then_else (ltu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 821)
+            (pc))) "poly1305.c":112:28 -1
+     (int_list:REG_BR_PROB 858993460 (nil))
+ -> 821)
+(note 868 826 827 24 [bb 24] NOTE_INSN_BASIC_BLOCK)
+(insn 827 868 828 24 (set (reg:DI 502)
+        (zero_extend:DI (reg:SI 499))) "poly1305.c":112:28 -1
+     (nil))
+(insn 828 827 832 24 (parallel [
+            (set (reg/f:DI 498)
+                (plus:DI (reg/f:DI 498)
+                    (reg:DI 502)))
+            (clobber (reg:CC 17 flags))
+        ]) "poly1305.c":112:28 -1
+     (nil))
+(jump_insn 832 828 833 24 (set (pc)
+        (label_ref 831)) -1
+     (nil)
+ -> 831)
+(barrier 833 832 842)
+(code_label 842 833 849 27 1 (nil) [1 uses])
+(note 849 842 843 27 [bb 27] NOTE_INSN_BASIC_BLOCK)
+(insn 843 849 844 27 (set (reg/f:DI 503)
+        (const_int 40 [0x28])) "poly1305.c":160:1 -1
+     (nil))
+(insn 844 843 845 27 (parallel [
+            (set (reg:CCZ 17 flags)
+                (unspec:CCZ [
+                        (mem/v/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                                (const_int -8 [0xfffffffffffffff8])) [2 D.6703+0 S8 A64])
+                        (mem/v/f:DI (reg/f:DI 503) [0 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_TEST))
+            (clobber (scratch:DI))
+        ]) "poly1305.c":160:1 -1
+     (nil))
+(jump_insn 845 844 871 27 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 848)
+            (pc))) "poly1305.c":160:1 -1
+     (int_list:REG_BR_PROB 1073312332 (nil))
+ -> 848)
+(note 871 845 846 28 [bb 28] NOTE_INSN_BASIC_BLOCK)
+(call_insn 846 871 847 28 (call (mem:QI (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7f9572a31e00 __stack_chk_fail>) [0 __stack_chk_fail S1 A8])
+        (const_int 0 [0])) "poly1305.c":160:1 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7f9572a31e00 __stack_chk_fail>)
+        (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+            (expr_list:REG_NORETURN (const_int 0 [0])
+                (expr_list:REG_EH_REGION (const_int 0 [0])
+                    (nil)))))
+    (nil))
+(barrier 847 846 848)
+(code_label 848 847 872 29 14 (nil) [1 uses])
+(note 872 848 0 29 [bb 29] NOTE_INSN_BASIC_BLOCK)

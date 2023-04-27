@@ -1,0 +1,1834 @@
+
+;; Function get_hram (get_hram, funcdef_no=66, decl_uid=6805, cgraph_uid=67, symbol_order=66)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+deleting block 9
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 9 NOTE_INSN_DELETED)
+(note 9 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 9 3 2 (set (reg/v/f:DI 86 [ hram ])
+        (reg:DI 5 di [ hram ])) "ed25519.c":15:1 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v/f:DI 87 [ sm ])
+        (reg:DI 4 si [ sm ])) "ed25519.c":15:1 -1
+     (nil))
+(insn 4 3 5 2 (set (reg/v/f:DI 88 [ pk ])
+        (reg:DI 1 dx [ pk ])) "ed25519.c":15:1 -1
+     (nil))
+(insn 5 4 6 2 (set (reg/v/f:DI 89 [ playground ])
+        (reg:DI 2 cx [ playground ])) "ed25519.c":15:1 -1
+     (nil))
+(insn 6 5 7 2 (set (reg/v:DI 90 [ smlen ])
+        (reg:DI 36 r8 [ smlen ])) "ed25519.c":15:1 -1
+     (nil))
+(note 7 6 11 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 11 7 12 2 (debug_marker) "ed25519.c":16:3 -1
+     (nil))
+(debug_insn 12 11 13 2 (debug_marker) "ed25519.c":18:3 -1
+     (nil))
+(debug_insn 13 12 14 2 (var_location:DI i (const_int 0 [0])) -1
+     (nil))
+(debug_insn 14 13 8 2 (debug_marker) "ed25519.c":18:15 -1
+     (nil))
+(insn 8 14 24 2 (set (reg/v:DI 85 [ i ])
+        (const_int 0 [0])) "ed25519.c":18:10 -1
+     (nil))
+(code_label 24 8 15 4 2 (nil) [1 uses])
+(note 15 24 16 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 16 15 17 4 (var_location:DI i (reg/v:DI 85 [ i ])) -1
+     (nil))
+(debug_insn 17 16 18 4 (debug_marker) "ed25519.c":18:30 -1
+     (nil))
+(insn 18 17 19 4 (set (reg:QI 82 [ _3 ])
+        (mem:QI (plus:DI (reg/v/f:DI 87 [ sm ])
+                (reg/v:DI 85 [ i ])) [0 MEM[base: sm_22(D), index: i_38, offset: 0B]+0 S1 A8])) "ed25519.c":18:48 -1
+     (nil))
+(insn 19 18 20 4 (set (mem:QI (plus:DI (reg/v/f:DI 89 [ playground ])
+                (reg/v:DI 85 [ i ])) [0 MEM[base: playground_20(D), index: i_38, offset: 0B]+0 S1 A8])
+        (reg:QI 82 [ _3 ])) "ed25519.c":18:44 -1
+     (nil))
+(debug_insn 20 19 21 4 (debug_marker) "ed25519.c":18:22 -1
+     (nil))
+(insn 21 20 22 4 (parallel [
+            (set (reg/v:DI 85 [ i ])
+                (plus:DI (reg/v:DI 85 [ i ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":18:22 -1
+     (nil))
+(debug_insn 22 21 23 4 (var_location:DI i (reg/v:DI 85 [ i ])) -1
+     (nil))
+(debug_insn 23 22 25 4 (debug_marker) "ed25519.c":18:15 -1
+     (nil))
+(insn 25 23 26 4 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:DI 85 [ i ])
+            (const_int 32 [0x20]))) "ed25519.c":18:3 -1
+     (nil))
+(jump_insn 26 25 36 4 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 24)
+            (pc))) "ed25519.c":18:3 -1
+     (int_list:REG_BR_PROB 1040190860 (nil))
+ -> 24)
+(code_label 36 26 27 5 3 (nil) [1 uses])
+(note 27 36 28 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 28 27 29 5 (var_location:DI i (reg/v:DI 85 [ i ])) -1
+     (nil))
+(debug_insn 29 28 30 5 (debug_marker) "ed25519.c":19:30 -1
+     (nil))
+(insn 30 29 31 5 (set (reg:QI 83 [ _7 ])
+        (mem:QI (plus:DI (plus:DI (reg/v/f:DI 88 [ pk ])
+                    (reg/v:DI 85 [ i ]))
+                (const_int -32 [0xffffffffffffffe0])) [0 MEM[base: pk_25(D), index: i_39, offset: -32B]+0 S1 A8])) "ed25519.c":19:48 -1
+     (nil))
+(insn 31 30 32 5 (set (mem:QI (plus:DI (reg/v/f:DI 89 [ playground ])
+                (reg/v:DI 85 [ i ])) [0 MEM[base: playground_20(D), index: i_39, offset: 0B]+0 S1 A8])
+        (reg:QI 83 [ _7 ])) "ed25519.c":19:44 -1
+     (nil))
+(debug_insn 32 31 33 5 (debug_marker) "ed25519.c":19:22 -1
+     (nil))
+(insn 33 32 34 5 (parallel [
+            (set (reg/v:DI 85 [ i ])
+                (plus:DI (reg/v:DI 85 [ i ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":19:22 -1
+     (nil))
+(debug_insn 34 33 35 5 (var_location:DI i (reg/v:DI 85 [ i ])) -1
+     (nil))
+(debug_insn 35 34 37 5 (debug_marker) "ed25519.c":19:15 -1
+     (nil))
+(insn 37 35 38 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:DI 85 [ i ])
+            (const_int 64 [0x40]))) "ed25519.c":19:3 -1
+     (nil))
+(jump_insn 38 37 39 5 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 36)
+            (pc))) "ed25519.c":19:3 -1
+     (int_list:REG_BR_PROB 1040190860 (nil))
+ -> 36)
+(note 39 38 40 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 40 39 41 6 (var_location:DI i (const_int 64 [0x40])) -1
+     (nil))
+(debug_insn 41 40 44 6 (debug_marker) "ed25519.c":20:15 -1
+     (nil))
+(insn 44 41 45 6 (set (reg:CC 17 flags)
+        (compare:CC (reg/v:DI 90 [ smlen ])
+            (const_int 64 [0x40]))) "ed25519.c":20:3 -1
+     (nil))
+(jump_insn 45 44 55 6 (set (pc)
+        (if_then_else (leu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 58)
+            (pc))) "ed25519.c":20:3 -1
+     (int_list:REG_BR_PROB 118111604 (nil))
+ -> 58)
+(code_label 55 45 46 7 5 (nil) [1 uses])
+(note 46 55 47 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 47 46 48 7 (var_location:DI i (reg/v:DI 85 [ i ])) -1
+     (nil))
+(debug_insn 48 47 49 7 (debug_marker) "ed25519.c":20:30 -1
+     (nil))
+(insn 49 48 50 7 (set (reg:QI 84 [ _10 ])
+        (mem:QI (plus:DI (reg/v/f:DI 87 [ sm ])
+                (reg/v:DI 85 [ i ])) [0 MEM[base: sm_22(D), index: i_14, offset: 0B]+0 S1 A8])) "ed25519.c":20:48 -1
+     (nil))
+(insn 50 49 51 7 (set (mem:QI (plus:DI (reg/v/f:DI 89 [ playground ])
+                (reg/v:DI 85 [ i ])) [0 MEM[base: playground_20(D), index: i_14, offset: 0B]+0 S1 A8])
+        (reg:QI 84 [ _10 ])) "ed25519.c":20:44 -1
+     (nil))
+(debug_insn 51 50 52 7 (debug_marker) "ed25519.c":20:25 -1
+     (nil))
+(insn 52 51 53 7 (parallel [
+            (set (reg/v:DI 85 [ i ])
+                (plus:DI (reg/v:DI 85 [ i ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":20:25 -1
+     (nil))
+(debug_insn 53 52 54 7 (var_location:DI i (reg/v:DI 85 [ i ])) -1
+     (nil))
+(debug_insn 54 53 56 7 (debug_marker) "ed25519.c":20:15 -1
+     (nil))
+(insn 56 54 57 7 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:DI 90 [ smlen ])
+            (reg/v:DI 85 [ i ]))) "ed25519.c":20:3 -1
+     (nil))
+(jump_insn 57 56 58 7 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 55)
+            (pc))) "ed25519.c":20:3 -1
+     (int_list:REG_BR_PROB 955630228 (nil))
+ -> 55)
+(code_label 58 57 59 8 4 (nil) [1 uses])
+(note 59 58 60 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 60 59 61 8 (debug_marker) "ed25519.c":22:3 -1
+     (nil))
+(insn 61 60 62 8 (set (reg:DI 1 dx)
+        (reg/v:DI 90 [ smlen ])) "ed25519.c":22:3 -1
+     (nil))
+(insn 62 61 63 8 (set (reg:DI 4 si)
+        (reg/v/f:DI 89 [ playground ])) "ed25519.c":22:3 -1
+     (nil))
+(insn 63 62 64 8 (set (reg:DI 5 di)
+        (reg/v/f:DI 86 [ hram ])) "ed25519.c":22:3 -1
+     (nil))
+(call_insn/j 64 63 65 8 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("crypto_hash_sha512") [flags 0x41]  <function_decl 0x7f1ebc85bf00 crypto_hash_sha512>) [0 crypto_hash_sha512 S1 A8])
+            (const_int 0 [0]))) "ed25519.c":22:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("crypto_hash_sha512") [flags 0x41]  <function_decl 0x7f1ebc85bf00 crypto_hash_sha512>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(barrier 65 64 0)
+
+;; Function crypto_sign_ed25519_keypair (crypto_sign_ed25519_keypair, funcdef_no=67, decl_uid=6660, cgraph_uid=68, symbol_order=67)
+
+Partition 1: size 512 align 16
+	gepk
+Partition 0: size 128 align 16
+	scsk
+Partition 2: size 64 align 16
+	extsk
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+Predictions for insn 72 bb 6
+  first match heuristics: 99.96%  exec 32534376 (estimated locally) hit 65068752 (estimated locally) (200.0%)
+  combined heuristics: 99.96%  exec 32534376 (estimated locally) hit 65068752 (estimated locally) (200.0%)
+  noreturn call heuristics: 99.96%  exec 32534376 (estimated locally) hit 65068752 (estimated locally) (200.0%)
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Removing jump 67.
+Merging block 6 into block 5...
+Merged blocks 5 and 6.
+Merged 5 and 6 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 8 NOTE_INSN_DELETED)
+(note 8 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 8 3 2 (set (reg/v/f:DI 90 [ pk ])
+        (reg:DI 5 di [ pk ])) "ed25519.c":30:1 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v/f:DI 91 [ sk ])
+        (reg:DI 4 si [ sk ])) "ed25519.c":30:1 -1
+     (nil))
+(note 4 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 4 6 2 (set (reg/f:DI 92)
+        (const_int 40 [0x28])) "ed25519.c":30:1 -1
+     (nil))
+(insn 6 5 10 2 (parallel [
+            (set (mem/v/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                        (const_int -8 [0xfffffffffffffff8])) [2 D.6946+0 S8 A64])
+                (unspec:DI [
+                        (mem/v/f:DI (reg/f:DI 92) [0 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_SET))
+            (set (scratch:DI)
+                (const_int 0 [0]))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":30:1 -1
+     (nil))
+(debug_insn 10 6 11 2 (debug_marker) "ed25519.c":31:3 -1
+     (nil))
+(debug_insn 11 10 12 2 (debug_marker) "ed25519.c":32:3 -1
+     (nil))
+(debug_insn 12 11 13 2 (debug_marker) "ed25519.c":33:3 -1
+     (nil))
+(debug_insn 13 12 14 2 (debug_marker) "ed25519.c":34:3 -1
+     (nil))
+(debug_insn 14 13 15 2 (debug_marker) "ed25519.c":36:3 -1
+     (nil))
+(insn 15 14 16 2 (set (reg:DI 4 si)
+        (const_int 32 [0x20])) "ed25519.c":36:3 -1
+     (nil))
+(insn 16 15 17 2 (set (reg:DI 5 di)
+        (reg/v/f:DI 91 [ sk ])) "ed25519.c":36:3 -1
+     (nil))
+(call_insn 17 16 18 2 (call (mem:QI (symbol_ref:DI ("arc4random_buf") [flags 0x41]  <function_decl 0x7f1ebc853400 arc4random_buf>) [0 arc4random_buf S1 A8])
+        (const_int 0 [0])) "ed25519.c":36:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("arc4random_buf") [flags 0x41]  <function_decl 0x7f1ebc853400 arc4random_buf>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(debug_insn 18 17 19 2 (debug_marker) "ed25519.c":37:3 -1
+     (nil))
+(insn 19 18 20 2 (parallel [
+            (set (reg:DI 93)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -80 [0xffffffffffffffb0])))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":37:3 -1
+     (nil))
+(insn 20 19 21 2 (set (reg:DI 1 dx)
+        (const_int 32 [0x20])) "ed25519.c":37:3 -1
+     (nil))
+(insn 21 20 22 2 (set (reg:DI 4 si)
+        (reg/v/f:DI 91 [ sk ])) "ed25519.c":37:3 -1
+     (nil))
+(insn 22 21 23 2 (set (reg:DI 5 di)
+        (reg:DI 93)) "ed25519.c":37:3 -1
+     (nil))
+(call_insn 23 22 24 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("crypto_hash_sha512") [flags 0x41]  <function_decl 0x7f1ebc85bf00 crypto_hash_sha512>) [0 crypto_hash_sha512 S1 A8])
+            (const_int 0 [0]))) "ed25519.c":37:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("crypto_hash_sha512") [flags 0x41]  <function_decl 0x7f1ebc85bf00 crypto_hash_sha512>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(debug_insn 24 23 25 2 (debug_marker) "ed25519.c":38:3 -1
+     (nil))
+(insn 25 24 26 2 (parallel [
+            (set (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                        (const_int -80 [0xffffffffffffffb0])) [0 extsk[0]+0 S1 A64])
+                (and:QI (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                            (const_int -80 [0xffffffffffffffb0])) [0 extsk[0]+0 S1 A64])
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":38:12 -1
+     (nil))
+(debug_insn 26 25 27 2 (debug_marker) "ed25519.c":39:3 -1
+     (nil))
+(debug_insn 27 26 28 2 (debug_marker) "ed25519.c":40:3 -1
+     (nil))
+(insn 28 27 29 2 (set (reg:QI 95)
+        (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -49 [0xffffffffffffffcf])) [0 extsk[31]+0 S1 A8])) "ed25519.c":39:13 -1
+     (nil))
+(insn 29 28 30 2 (parallel [
+            (set (reg:QI 94)
+                (and:QI (reg:QI 95)
+                    (const_int 127 [0x7f])))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":39:13 -1
+     (expr_list:REG_EQUAL (and:QI (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -49 [0xffffffffffffffcf])) [0 extsk[31]+0 S1 A8])
+            (const_int 127 [0x7f]))
+        (nil)))
+(insn 30 29 31 2 (parallel [
+            (set (reg:QI 96)
+                (ior:QI (reg:QI 94)
+                    (const_int 64 [0x40])))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":40:13 -1
+     (nil))
+(insn 31 30 32 2 (set (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -49 [0xffffffffffffffcf])) [0 extsk[31]+0 S1 A8])
+        (reg:QI 96)) "ed25519.c":40:13 -1
+     (nil))
+(debug_insn 32 31 33 2 (debug_marker) "ed25519.c":42:3 -1
+     (nil))
+(insn 33 32 34 2 (parallel [
+            (set (reg:DI 97)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -80 [0xffffffffffffffb0])))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":42:3 -1
+     (nil))
+(insn 34 33 35 2 (parallel [
+            (set (reg:DI 98)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -720 [0xfffffffffffffd30])))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":42:3 -1
+     (nil))
+(insn 35 34 36 2 (set (reg:DI 4 si)
+        (reg:DI 97)) "ed25519.c":42:3 -1
+     (nil))
+(insn 36 35 37 2 (set (reg:DI 5 di)
+        (reg:DI 98)) "ed25519.c":42:3 -1
+     (nil))
+(call_insn 37 36 38 2 (call (mem:QI (symbol_ref:DI ("crypto_sign_ed25519_ref_sc25519_from32bytes") [flags 0x41]  <function_decl 0x7f1ebc86a700 crypto_sign_ed25519_ref_sc25519_from32bytes>) [0 crypto_sign_ed25519_ref_sc25519_from32bytes S1 A8])
+        (const_int 0 [0])) "ed25519.c":42:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("crypto_sign_ed25519_ref_sc25519_from32bytes") [flags 0x41]  <function_decl 0x7f1ebc86a700 crypto_sign_ed25519_ref_sc25519_from32bytes>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(debug_insn 38 37 39 2 (debug_marker) "ed25519.c":44:3 -1
+     (nil))
+(insn 39 38 40 2 (parallel [
+            (set (reg:DI 99)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -720 [0xfffffffffffffd30])))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":44:3 -1
+     (nil))
+(insn 40 39 41 2 (parallel [
+            (set (reg:DI 100)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -592 [0xfffffffffffffdb0])))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":44:3 -1
+     (nil))
+(insn 41 40 42 2 (set (reg:DI 4 si)
+        (reg:DI 99)) "ed25519.c":44:3 -1
+     (nil))
+(insn 42 41 43 2 (set (reg:DI 5 di)
+        (reg:DI 100)) "ed25519.c":44:3 -1
+     (nil))
+(call_insn 43 42 44 2 (call (mem:QI (symbol_ref:DI ("crypto_sign_ed25519_ref_scalarmult_base") [flags 0x41]  <function_decl 0x7f1ebc873a00 crypto_sign_ed25519_ref_scalarmult_base>) [0 crypto_sign_ed25519_ref_scalarmult_base S1 A8])
+        (const_int 0 [0])) "ed25519.c":44:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("crypto_sign_ed25519_ref_scalarmult_base") [flags 0x41]  <function_decl 0x7f1ebc873a00 crypto_sign_ed25519_ref_scalarmult_base>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(debug_insn 44 43 45 2 (debug_marker) "ed25519.c":45:3 -1
+     (nil))
+(insn 45 44 46 2 (parallel [
+            (set (reg:DI 101)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -592 [0xfffffffffffffdb0])))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":45:3 -1
+     (nil))
+(insn 46 45 47 2 (set (reg:DI 4 si)
+        (reg:DI 101)) "ed25519.c":45:3 -1
+     (nil))
+(insn 47 46 48 2 (set (reg:DI 5 di)
+        (reg/v/f:DI 90 [ pk ])) "ed25519.c":45:3 -1
+     (nil))
+(call_insn 48 47 49 2 (call (mem:QI (symbol_ref:DI ("crypto_sign_ed25519_ref_pack") [flags 0x41]  <function_decl 0x7f1ebc873700 crypto_sign_ed25519_ref_pack>) [0 crypto_sign_ed25519_ref_pack S1 A8])
+        (const_int 0 [0])) "ed25519.c":45:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("crypto_sign_ed25519_ref_pack") [flags 0x41]  <function_decl 0x7f1ebc873700 crypto_sign_ed25519_ref_pack>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(debug_insn 49 48 50 2 (debug_marker) "ed25519.c":46:3 -1
+     (nil))
+(debug_insn 50 49 51 2 (var_location:SI i (const_int 0 [0])) -1
+     (nil))
+(debug_insn 51 50 7 2 (debug_marker) "ed25519.c":46:11 -1
+     (nil))
+(insn 7 51 61 2 (set (reg:DI 88 [ ivtmp.38 ])
+        (const_int 0 [0])) "ed25519.c":45:3 -1
+     (nil))
+(code_label 61 7 52 4 11 (nil) [1 uses])
+(note 52 61 53 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 53 52 54 4 (var_location:SI i (subreg:SI (reg:DI 88 [ ivtmp.38 ]) 0)) -1
+     (nil))
+(debug_insn 54 53 55 4 (debug_marker) "ed25519.c":47:5 -1
+     (nil))
+(insn 55 54 56 4 (set (reg:QI 87 [ _11 ])
+        (mem:QI (plus:DI (reg/v/f:DI 90 [ pk ])
+                (reg:DI 88 [ ivtmp.38 ])) [0 MEM[base: pk_22(D), index: ivtmp.38_13, offset: 0B]+0 S1 A8])) "ed25519.c":47:20 -1
+     (nil))
+(insn 56 55 57 4 (set (mem:QI (plus:DI (plus:DI (reg/v/f:DI 91 [ sk ])
+                    (reg:DI 88 [ ivtmp.38 ]))
+                (const_int 32 [0x20])) [0 MEM[base: sk_15(D), index: ivtmp.38_13, offset: 32B]+0 S1 A8])
+        (reg:QI 87 [ _11 ])) "ed25519.c":47:16 -1
+     (nil))
+(debug_insn 57 56 58 4 (debug_marker) "ed25519.c":46:16 -1
+     (nil))
+(debug_insn 58 57 59 4 (var_location:SI i (plus:SI (subreg:SI (reg:DI 88 [ ivtmp.38 ]) 0)
+        (const_int 1 [0x1]))) -1
+     (nil))
+(debug_insn 59 58 60 4 (debug_marker) "ed25519.c":46:11 -1
+     (nil))
+(insn 60 59 62 4 (parallel [
+            (set (reg:DI 88 [ ivtmp.38 ])
+                (plus:DI (reg:DI 88 [ ivtmp.38 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":46:3 -1
+     (nil))
+(insn 62 60 63 4 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:DI 88 [ ivtmp.38 ])
+            (const_int 32 [0x20]))) "ed25519.c":46:3 -1
+     (nil))
+(jump_insn 63 62 64 4 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 61)
+            (pc))) "ed25519.c":46:3 -1
+     (int_list:REG_BR_PROB 1040190860 (nil))
+ -> 61)
+(note 64 63 65 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 65 64 66 5 (debug_marker) "ed25519.c":48:3 -1
+     (nil))
+(insn 66 65 70 5 (set (reg:SI 89 [ <retval> ])
+        (const_int 0 [0])) "ed25519.c":48:10 -1
+     (nil))
+(insn 70 66 71 5 (set (reg/f:DI 103)
+        (const_int 40 [0x28])) "ed25519.c":49:1 -1
+     (nil))
+(insn 71 70 72 5 (parallel [
+            (set (reg:CCZ 17 flags)
+                (unspec:CCZ [
+                        (mem/v/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                                (const_int -8 [0xfffffffffffffff8])) [2 D.6946+0 S8 A64])
+                        (mem/v/f:DI (reg/f:DI 103) [0 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_TEST))
+            (clobber (scratch:DI))
+        ]) "ed25519.c":49:1 -1
+     (nil))
+(jump_insn 72 71 79 5 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 75)
+            (pc))) "ed25519.c":49:1 -1
+     (int_list:REG_BR_PROB 1073312332 (nil))
+ -> 75)
+(note 79 72 73 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(call_insn 73 79 74 7 (call (mem:QI (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7f1ebc8b2a00 __stack_chk_fail>) [0 __stack_chk_fail S1 A8])
+        (const_int 0 [0])) "ed25519.c":49:1 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7f1ebc8b2a00 __stack_chk_fail>)
+        (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+            (expr_list:REG_NORETURN (const_int 0 [0])
+                (expr_list:REG_EH_REGION (const_int 0 [0])
+                    (nil)))))
+    (nil))
+(barrier 74 73 75)
+(code_label 75 74 80 8 12 (nil) [1 uses])
+(note 80 75 76 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 76 80 77 8 (set (reg/i:SI 0 ax)
+        (reg:SI 89 [ <retval> ])) "ed25519.c":49:1 -1
+     (nil))
+(insn 77 76 0 8 (use (reg/i:SI 0 ax)) "ed25519.c":49:1 -1
+     (nil))
+
+;; Function crypto_sign_ed25519 (crypto_sign_ed25519, funcdef_no=68, decl_uid=6651, cgraph_uid=69, symbol_order=68)
+
+Partition 3: size 512 align 16
+	ger
+Partition 2: size 128 align 16
+	scsk
+Partition 1: size 128 align 16
+	scs
+Partition 0: size 128 align 16
+	sck
+Partition 8: size 64 align 16
+	hram
+Partition 7: size 64 align 16
+	hmg
+Partition 6: size 64 align 16
+	extsk
+Partition 5: size 32 align 16
+	s
+Partition 4: size 32 align 16
+	r
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+Predictions for insn 156 bb 6
+  first match heuristics: 99.96%  exec 32534376 (estimated locally) hit 65068752 (estimated locally) (200.0%)
+  combined heuristics: 99.96%  exec 32534376 (estimated locally) hit 65068752 (estimated locally) (200.0%)
+  noreturn call heuristics: 99.96%  exec 32534376 (estimated locally) hit 65068752 (estimated locally) (200.0%)
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Removing jump 151.
+Merging block 7 into block 6...
+Merged blocks 6 and 7.
+Merged 6 and 7 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 11 NOTE_INSN_DELETED)
+(note 11 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 11 3 2 (set (reg/v/f:DI 94 [ sm ])
+        (reg:DI 5 di [ sm ])) "ed25519.c":56:1 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v/f:DI 95 [ smlen ])
+        (reg:DI 4 si [ smlen ])) "ed25519.c":56:1 -1
+     (nil))
+(insn 4 3 5 2 (set (reg/v/f:DI 96 [ m ])
+        (reg:DI 1 dx [ m ])) "ed25519.c":56:1 -1
+     (nil))
+(insn 5 4 6 2 (set (reg/v:DI 97 [ mlen ])
+        (reg:DI 2 cx [ mlen ])) "ed25519.c":56:1 -1
+     (nil))
+(insn 6 5 7 2 (set (reg/v/f:DI 98 [ sk ])
+        (reg:DI 36 r8 [ sk ])) "ed25519.c":56:1 -1
+     (nil))
+(note 7 6 8 2 NOTE_INSN_FUNCTION_BEG)
+(insn 8 7 9 2 (set (reg/f:DI 99)
+        (const_int 40 [0x28])) "ed25519.c":56:1 -1
+     (nil))
+(insn 9 8 13 2 (parallel [
+            (set (mem/v/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                        (const_int -8 [0xfffffffffffffff8])) [2 D.6958+0 S8 A64])
+                (unspec:DI [
+                        (mem/v/f:DI (reg/f:DI 99) [0 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_SET))
+            (set (scratch:DI)
+                (const_int 0 [0]))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":56:1 -1
+     (nil))
+(debug_insn 13 9 14 2 (debug_marker) "ed25519.c":57:3 -1
+     (nil))
+(debug_insn 14 13 15 2 (debug_marker) "ed25519.c":58:3 -1
+     (nil))
+(debug_insn 15 14 16 2 (debug_marker) "ed25519.c":59:3 -1
+     (nil))
+(debug_insn 16 15 17 2 (debug_marker) "ed25519.c":60:3 -1
+     (nil))
+(debug_insn 17 16 18 2 (debug_marker) "ed25519.c":61:3 -1
+     (nil))
+(debug_insn 18 17 19 2 (debug_marker) "ed25519.c":62:3 -1
+     (nil))
+(debug_insn 19 18 20 2 (debug_marker) "ed25519.c":63:3 -1
+     (nil))
+(debug_insn 20 19 21 2 (debug_marker) "ed25519.c":64:3 -1
+     (nil))
+(debug_insn 21 20 22 2 (debug_marker) "ed25519.c":66:3 -1
+     (nil))
+(insn 22 21 23 2 (parallel [
+            (set (reg:DI 100)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -208 [0xffffffffffffff30])))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":66:3 -1
+     (nil))
+(insn 23 22 24 2 (set (reg:DI 1 dx)
+        (const_int 32 [0x20])) "ed25519.c":66:3 -1
+     (nil))
+(insn 24 23 25 2 (set (reg:DI 4 si)
+        (reg/v/f:DI 98 [ sk ])) "ed25519.c":66:3 -1
+     (nil))
+(insn 25 24 26 2 (set (reg:DI 5 di)
+        (reg:DI 100)) "ed25519.c":66:3 -1
+     (nil))
+(call_insn 26 25 27 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("crypto_hash_sha512") [flags 0x41]  <function_decl 0x7f1ebc85bf00 crypto_hash_sha512>) [0 crypto_hash_sha512 S1 A8])
+            (const_int 0 [0]))) "ed25519.c":66:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("crypto_hash_sha512") [flags 0x41]  <function_decl 0x7f1ebc85bf00 crypto_hash_sha512>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(debug_insn 27 26 28 2 (debug_marker) "ed25519.c":67:3 -1
+     (nil))
+(insn 28 27 29 2 (parallel [
+            (set (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                        (const_int -208 [0xffffffffffffff30])) [0 extsk[0]+0 S1 A64])
+                (and:QI (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                            (const_int -208 [0xffffffffffffff30])) [0 extsk[0]+0 S1 A64])
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":67:12 -1
+     (nil))
+(debug_insn 29 28 30 2 (debug_marker) "ed25519.c":68:3 -1
+     (nil))
+(debug_insn 30 29 31 2 (debug_marker) "ed25519.c":69:3 -1
+     (nil))
+(insn 31 30 32 2 (set (reg:QI 102)
+        (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -177 [0xffffffffffffff4f])) [0 extsk[31]+0 S1 A8])) "ed25519.c":68:13 -1
+     (nil))
+(insn 32 31 33 2 (parallel [
+            (set (reg:QI 101)
+                (and:QI (reg:QI 102)
+                    (const_int 127 [0x7f])))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":68:13 -1
+     (expr_list:REG_EQUAL (and:QI (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -177 [0xffffffffffffff4f])) [0 extsk[31]+0 S1 A8])
+            (const_int 127 [0x7f]))
+        (nil)))
+(insn 33 32 34 2 (parallel [
+            (set (reg:QI 103)
+                (ior:QI (reg:QI 101)
+                    (const_int 64 [0x40])))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":69:13 -1
+     (nil))
+(insn 34 33 35 2 (set (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -177 [0xffffffffffffff4f])) [0 extsk[31]+0 S1 A8])
+        (reg:QI 103)) "ed25519.c":69:13 -1
+     (nil))
+(debug_insn 35 34 36 2 (debug_marker) "ed25519.c":71:3 -1
+     (nil))
+(insn 36 35 37 2 (parallel [
+            (set (reg:DI 87 [ _6 ])
+                (plus:DI (reg/v:DI 97 [ mlen ])
+                    (const_int 64 [0x40])))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":71:16 -1
+     (nil))
+(insn 37 36 38 2 (set (mem:DI (reg/v/f:DI 95 [ smlen ]) [1 *smlen_36(D)+0 S8 A64])
+        (reg:DI 87 [ _6 ])) "ed25519.c":71:10 -1
+     (nil))
+(debug_insn 38 37 39 2 (debug_marker) "ed25519.c":72:3 -1
+     (nil))
+(debug_insn 39 38 40 2 (var_location:DI i (const_int 0 [0])) -1
+     (nil))
+(debug_insn 40 39 41 2 (debug_marker) "ed25519.c":72:11 -1
+     (nil))
+(insn 41 40 42 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:DI 97 [ mlen ])
+            (const_int 0 [0]))) "ed25519.c":72:3 -1
+     (nil))
+(jump_insn 42 41 163 2 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 55)
+            (pc))) "ed25519.c":72:3 -1
+     (int_list:REG_BR_PROB 118111604 (nil))
+ -> 55)
+(note 163 42 10 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 10 163 52 4 (set (reg/v:DI 91 [ i ])
+        (const_int 0 [0])) "ed25519.c":72:8 -1
+     (nil))
+(code_label 52 10 43 5 18 (nil) [1 uses])
+(note 43 52 44 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 44 43 45 5 (var_location:DI i (reg/v:DI 91 [ i ])) -1
+     (nil))
+(debug_insn 45 44 46 5 (debug_marker) "ed25519.c":73:5 -1
+     (nil))
+(insn 46 45 47 5 (set (reg:QI 88 [ _10 ])
+        (mem:QI (plus:DI (reg/v/f:DI 96 [ m ])
+                (reg/v:DI 91 [ i ])) [0 MEM[base: m_64(D), index: i_27, offset: 0B]+0 S1 A8])) "ed25519.c":73:19 -1
+     (nil))
+(insn 47 46 48 5 (set (mem:QI (plus:DI (plus:DI (reg/v/f:DI 94 [ sm ])
+                    (reg/v:DI 91 [ i ]))
+                (const_int 64 [0x40])) [0 MEM[base: sm_38(D), index: i_27, offset: 64B]+0 S1 A8])
+        (reg:QI 88 [ _10 ])) "ed25519.c":73:16 -1
+     (nil))
+(debug_insn 48 47 49 5 (debug_marker) "ed25519.c":72:18 -1
+     (nil))
+(insn 49 48 50 5 (parallel [
+            (set (reg/v:DI 91 [ i ])
+                (plus:DI (reg/v:DI 91 [ i ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":72:19 -1
+     (nil))
+(debug_insn 50 49 51 5 (var_location:DI i (reg/v:DI 91 [ i ])) -1
+     (nil))
+(debug_insn 51 50 53 5 (debug_marker) "ed25519.c":72:11 -1
+     (nil))
+(insn 53 51 54 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:DI 97 [ mlen ])
+            (reg/v:DI 91 [ i ]))) "ed25519.c":72:3 -1
+     (nil))
+(jump_insn 54 53 55 5 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 52)
+            (pc))) "ed25519.c":72:3 -1
+     (int_list:REG_BR_PROB 955630228 (nil))
+ -> 52)
+(code_label 55 54 56 6 17 (nil) [1 uses])
+(note 56 55 57 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 57 56 58 6 (parallel [
+            (set (reg/f:DI 92 [ _74 ])
+                (plus:DI (reg/v/f:DI 94 [ sm ])
+                    (const_int 32 [0x20])))
+            (clobber (reg:CC 17 flags))
+        ]) -1
+     (nil))
+(insn 58 57 59 6 (parallel [
+            (set (reg:DI 104)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -208 [0xffffffffffffff30])))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":75:16 -1
+     (nil))
+(insn 59 58 60 6 (parallel [
+            (set (reg:DI 105)
+                (plus:DI (reg:DI 104)
+                    (const_int 32 [0x20])))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":75:16 -1
+     (nil))
+(insn 60 59 61 6 (set (reg:TI 106)
+        (mem/c:TI (reg:DI 105) [0 MEM <char[1:32]> [(void *)&extsk + 32B]+0 S16 A64])) "ed25519.c":75:16 -1
+     (nil))
+(insn 61 60 62 6 (set (mem:TI (reg/f:DI 92 [ _74 ]) [0 MEM <char[1:32]> [(void *)_74]+0 S16 A8])
+        (reg:TI 106)) "ed25519.c":75:16 -1
+     (nil))
+(insn 62 61 63 6 (set (reg:TI 107)
+        (mem/c:TI (plus:DI (reg:DI 105)
+                (const_int 16 [0x10])) [0 MEM <char[1:32]> [(void *)&extsk + 32B]+16 S16 A64])) "ed25519.c":75:16 -1
+     (nil))
+(insn 63 62 64 6 (set (mem:TI (plus:DI (reg/f:DI 92 [ _74 ])
+                (const_int 16 [0x10])) [0 MEM <char[1:32]> [(void *)_74]+16 S16 A8])
+        (reg:TI 107)) "ed25519.c":75:16 -1
+     (nil))
+(debug_insn 64 63 65 6 (var_location:DI i (clobber (const_int 0 [0]))) -1
+     (nil))
+(debug_insn 65 64 66 6 (debug_marker) "ed25519.c":77:3 -1
+     (nil))
+(insn 66 65 67 6 (parallel [
+            (set (reg:DI 108)
+                (plus:DI (reg/v:DI 97 [ mlen ])
+                    (const_int 32 [0x20])))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":77:3 -1
+     (nil))
+(insn 67 66 68 6 (parallel [
+            (set (reg:DI 109)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -144 [0xffffffffffffff70])))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":77:3 -1
+     (nil))
+(insn 68 67 69 6 (set (reg:DI 1 dx)
+        (reg:DI 108)) "ed25519.c":77:3 -1
+     (nil))
+(insn 69 68 70 6 (set (reg:DI 4 si)
+        (reg/f:DI 92 [ _74 ])) "ed25519.c":77:3 -1
+     (nil))
+(insn 70 69 71 6 (set (reg:DI 5 di)
+        (reg:DI 109)) "ed25519.c":77:3 -1
+     (nil))
+(call_insn 71 70 72 6 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("crypto_hash_sha512") [flags 0x41]  <function_decl 0x7f1ebc85bf00 crypto_hash_sha512>) [0 crypto_hash_sha512 S1 A8])
+            (const_int 0 [0]))) "ed25519.c":77:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("crypto_hash_sha512") [flags 0x41]  <function_decl 0x7f1ebc85bf00 crypto_hash_sha512>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(debug_insn 72 71 73 6 (debug_marker) "ed25519.c":80:3 -1
+     (nil))
+(insn 73 72 74 6 (parallel [
+            (set (reg:DI 110)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -144 [0xffffffffffffff70])))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":80:3 -1
+     (nil))
+(insn 74 73 75 6 (parallel [
+            (set (reg:DI 111)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -1168 [0xfffffffffffffb70])))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":80:3 -1
+     (nil))
+(insn 75 74 76 6 (set (reg:DI 4 si)
+        (reg:DI 110)) "ed25519.c":80:3 -1
+     (nil))
+(insn 76 75 77 6 (set (reg:DI 5 di)
+        (reg:DI 111)) "ed25519.c":80:3 -1
+     (nil))
+(call_insn 77 76 78 6 (call (mem:QI (symbol_ref:DI ("crypto_sign_ed25519_ref_sc25519_from64bytes") [flags 0x41]  <function_decl 0x7f1ebc86a900 crypto_sign_ed25519_ref_sc25519_from64bytes>) [0 crypto_sign_ed25519_ref_sc25519_from64bytes S1 A8])
+        (const_int 0 [0])) "ed25519.c":80:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("crypto_sign_ed25519_ref_sc25519_from64bytes") [flags 0x41]  <function_decl 0x7f1ebc86a900 crypto_sign_ed25519_ref_sc25519_from64bytes>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(debug_insn 78 77 79 6 (debug_marker) "ed25519.c":81:3 -1
+     (nil))
+(insn 79 78 80 6 (parallel [
+            (set (reg:DI 112)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -1168 [0xfffffffffffffb70])))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":81:3 -1
+     (nil))
+(insn 80 79 81 6 (parallel [
+            (set (reg:DI 113)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -784 [0xfffffffffffffcf0])))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":81:3 -1
+     (nil))
+(insn 81 80 82 6 (set (reg:DI 4 si)
+        (reg:DI 112)) "ed25519.c":81:3 -1
+     (nil))
+(insn 82 81 83 6 (set (reg:DI 5 di)
+        (reg:DI 113)) "ed25519.c":81:3 -1
+     (nil))
+(call_insn 83 82 84 6 (call (mem:QI (symbol_ref:DI ("crypto_sign_ed25519_ref_scalarmult_base") [flags 0x41]  <function_decl 0x7f1ebc873a00 crypto_sign_ed25519_ref_scalarmult_base>) [0 crypto_sign_ed25519_ref_scalarmult_base S1 A8])
+        (const_int 0 [0])) "ed25519.c":81:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("crypto_sign_ed25519_ref_scalarmult_base") [flags 0x41]  <function_decl 0x7f1ebc873a00 crypto_sign_ed25519_ref_scalarmult_base>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(debug_insn 84 83 85 6 (debug_marker) "ed25519.c":82:3 -1
+     (nil))
+(insn 85 84 86 6 (parallel [
+            (set (reg:DI 114)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -784 [0xfffffffffffffcf0])))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":82:3 -1
+     (nil))
+(insn 86 85 87 6 (parallel [
+            (set (reg:DI 115)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -272 [0xfffffffffffffef0])))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":82:3 -1
+     (nil))
+(insn 87 86 88 6 (set (reg:DI 4 si)
+        (reg:DI 114)) "ed25519.c":82:3 -1
+     (nil))
+(insn 88 87 89 6 (set (reg:DI 5 di)
+        (reg:DI 115)) "ed25519.c":82:3 -1
+     (nil))
+(call_insn 89 88 90 6 (call (mem:QI (symbol_ref:DI ("crypto_sign_ed25519_ref_pack") [flags 0x41]  <function_decl 0x7f1ebc873700 crypto_sign_ed25519_ref_pack>) [0 crypto_sign_ed25519_ref_pack S1 A8])
+        (const_int 0 [0])) "ed25519.c":82:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("crypto_sign_ed25519_ref_pack") [flags 0x41]  <function_decl 0x7f1ebc873700 crypto_sign_ed25519_ref_pack>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(debug_insn 90 89 91 6 (debug_marker) "ed25519.c":85:3 -1
+     (nil))
+(debug_insn 91 90 92 6 (var_location:DI i (const_int 0 [0])) -1
+     (nil))
+(debug_insn 92 91 93 6 (debug_marker) "ed25519.c":85:11 -1
+     (nil))
+(insn 93 92 94 6 (set (reg:TI 116)
+        (mem/c:TI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -272 [0xfffffffffffffef0])) [0 MEM <unsigned char[32]> [(char * {ref-all})&r]+0 S16 A64])) "ed25519.c":86:11 -1
+     (nil))
+(insn 94 93 95 6 (set (mem:TI (reg/v/f:DI 94 [ sm ]) [0 MEM <unsigned char[32]> [(char * {ref-all})sm_38(D)]+0 S16 A8])
+        (reg:TI 116)) "ed25519.c":86:11 -1
+     (nil))
+(insn 95 94 96 6 (set (reg:TI 117)
+        (mem/c:TI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -256 [0xffffffffffffff00])) [0 MEM <unsigned char[32]> [(char * {ref-all})&r]+16 S16 A64])) "ed25519.c":86:11 -1
+     (nil))
+(insn 96 95 97 6 (set (mem:TI (plus:DI (reg/v/f:DI 94 [ sm ])
+                (const_int 16 [0x10])) [0 MEM <unsigned char[32]> [(char * {ref-all})sm_38(D)]+16 S16 A8])
+        (reg:TI 117)) "ed25519.c":86:11 -1
+     (nil))
+(debug_insn 97 96 98 6 (var_location:DI i (clobber (const_int 0 [0]))) -1
+     (nil))
+(debug_insn 98 97 99 6 (debug_marker) "ed25519.c":88:3 -1
+     (nil))
+(insn 99 98 100 6 (parallel [
+            (set (reg:DI 118)
+                (plus:DI (reg/v/f:DI 98 [ sk ])
+                    (const_int 32 [0x20])))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":88:3 -1
+     (nil))
+(insn 100 99 101 6 (parallel [
+            (set (reg:DI 119)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -80 [0xffffffffffffffb0])))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":88:3 -1
+     (nil))
+(insn 101 100 102 6 (set (reg:DI 36 r8)
+        (reg:DI 87 [ _6 ])) "ed25519.c":88:3 -1
+     (nil))
+(insn 102 101 103 6 (set (reg:DI 2 cx)
+        (reg/v/f:DI 94 [ sm ])) "ed25519.c":88:3 -1
+     (nil))
+(insn 103 102 104 6 (set (reg:DI 1 dx)
+        (reg:DI 118)) "ed25519.c":88:3 -1
+     (nil))
+(insn 104 103 105 6 (set (reg:DI 4 si)
+        (reg/v/f:DI 94 [ sm ])) "ed25519.c":88:3 -1
+     (nil))
+(insn 105 104 106 6 (set (reg:DI 5 di)
+        (reg:DI 119)) "ed25519.c":88:3 -1
+     (nil))
+(call_insn 106 105 107 6 (call (mem:QI (symbol_ref:DI ("get_hram") [flags 0x3]  <function_decl 0x7f1ebc873b00 get_hram>) [0 get_hram S1 A8])
+        (const_int 0 [0])) "ed25519.c":88:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("get_hram") [flags 0x3]  <function_decl 0x7f1ebc873b00 get_hram>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (expr_list:DI (use (reg:DI 2 cx))
+                    (expr_list:DI (use (reg:DI 36 r8))
+                        (nil)))))))
+(debug_insn 107 106 108 6 (debug_marker) "ed25519.c":90:3 -1
+     (nil))
+(insn 108 107 109 6 (parallel [
+            (set (reg:DI 120)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -80 [0xffffffffffffffb0])))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":90:3 -1
+     (nil))
+(insn 109 108 110 6 (parallel [
+            (set (reg:DI 121)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -1040 [0xfffffffffffffbf0])))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":90:3 -1
+     (nil))
+(insn 110 109 111 6 (set (reg:DI 4 si)
+        (reg:DI 120)) "ed25519.c":90:3 -1
+     (nil))
+(insn 111 110 112 6 (set (reg:DI 5 di)
+        (reg:DI 121)) "ed25519.c":90:3 -1
+     (nil))
+(call_insn 112 111 113 6 (call (mem:QI (symbol_ref:DI ("crypto_sign_ed25519_ref_sc25519_from64bytes") [flags 0x41]  <function_decl 0x7f1ebc86a900 crypto_sign_ed25519_ref_sc25519_from64bytes>) [0 crypto_sign_ed25519_ref_sc25519_from64bytes S1 A8])
+        (const_int 0 [0])) "ed25519.c":90:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("crypto_sign_ed25519_ref_sc25519_from64bytes") [flags 0x41]  <function_decl 0x7f1ebc86a900 crypto_sign_ed25519_ref_sc25519_from64bytes>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(debug_insn 113 112 114 6 (debug_marker) "ed25519.c":91:3 -1
+     (nil))
+(insn 114 113 115 6 (parallel [
+            (set (reg:DI 122)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -208 [0xffffffffffffff30])))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":91:3 -1
+     (nil))
+(insn 115 114 116 6 (parallel [
+            (set (reg:DI 123)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -912 [0xfffffffffffffc70])))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":91:3 -1
+     (nil))
+(insn 116 115 117 6 (set (reg:DI 4 si)
+        (reg:DI 122)) "ed25519.c":91:3 -1
+     (nil))
+(insn 117 116 118 6 (set (reg:DI 5 di)
+        (reg:DI 123)) "ed25519.c":91:3 -1
+     (nil))
+(call_insn 118 117 119 6 (call (mem:QI (symbol_ref:DI ("crypto_sign_ed25519_ref_sc25519_from32bytes") [flags 0x41]  <function_decl 0x7f1ebc86a700 crypto_sign_ed25519_ref_sc25519_from32bytes>) [0 crypto_sign_ed25519_ref_sc25519_from32bytes S1 A8])
+        (const_int 0 [0])) "ed25519.c":91:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("crypto_sign_ed25519_ref_sc25519_from32bytes") [flags 0x41]  <function_decl 0x7f1ebc86a700 crypto_sign_ed25519_ref_sc25519_from32bytes>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(debug_insn 119 118 120 6 (debug_marker) "ed25519.c":92:3 -1
+     (nil))
+(insn 120 119 121 6 (parallel [
+            (set (reg:DI 124)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -912 [0xfffffffffffffc70])))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":92:3 -1
+     (nil))
+(insn 121 120 122 6 (parallel [
+            (set (reg:DI 125)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -1040 [0xfffffffffffffbf0])))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":92:3 -1
+     (nil))
+(insn 122 121 123 6 (parallel [
+            (set (reg:DI 126)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -1040 [0xfffffffffffffbf0])))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":92:3 -1
+     (nil))
+(insn 123 122 124 6 (set (reg:DI 1 dx)
+        (reg:DI 124)) "ed25519.c":92:3 -1
+     (nil))
+(insn 124 123 125 6 (set (reg:DI 4 si)
+        (reg:DI 125)) "ed25519.c":92:3 -1
+     (nil))
+(insn 125 124 126 6 (set (reg:DI 5 di)
+        (reg:DI 126)) "ed25519.c":92:3 -1
+     (nil))
+(call_insn 126 125 127 6 (call (mem:QI (symbol_ref:DI ("crypto_sign_ed25519_ref_sc25519_mul") [flags 0x41]  <function_decl 0x7f1ebc873100 crypto_sign_ed25519_ref_sc25519_mul>) [0 crypto_sign_ed25519_ref_sc25519_mul S1 A8])
+        (const_int 0 [0])) "ed25519.c":92:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("crypto_sign_ed25519_ref_sc25519_mul") [flags 0x41]  <function_decl 0x7f1ebc873100 crypto_sign_ed25519_ref_sc25519_mul>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(debug_insn 127 126 128 6 (debug_marker) "ed25519.c":94:3 -1
+     (nil))
+(insn 128 127 129 6 (parallel [
+            (set (reg:DI 127)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -1168 [0xfffffffffffffb70])))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":94:3 -1
+     (nil))
+(insn 129 128 130 6 (parallel [
+            (set (reg:DI 128)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -1040 [0xfffffffffffffbf0])))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":94:3 -1
+     (nil))
+(insn 130 129 131 6 (parallel [
+            (set (reg:DI 129)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -1040 [0xfffffffffffffbf0])))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":94:3 -1
+     (nil))
+(insn 131 130 132 6 (set (reg:DI 1 dx)
+        (reg:DI 127)) "ed25519.c":94:3 -1
+     (nil))
+(insn 132 131 133 6 (set (reg:DI 4 si)
+        (reg:DI 128)) "ed25519.c":94:3 -1
+     (nil))
+(insn 133 132 134 6 (set (reg:DI 5 di)
+        (reg:DI 129)) "ed25519.c":94:3 -1
+     (nil))
+(call_insn 134 133 135 6 (call (mem:QI (symbol_ref:DI ("crypto_sign_ed25519_ref_sc25519_add") [flags 0x41]  <function_decl 0x7f1ebc86af00 crypto_sign_ed25519_ref_sc25519_add>) [0 crypto_sign_ed25519_ref_sc25519_add S1 A8])
+        (const_int 0 [0])) "ed25519.c":94:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("crypto_sign_ed25519_ref_sc25519_add") [flags 0x41]  <function_decl 0x7f1ebc86af00 crypto_sign_ed25519_ref_sc25519_add>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(debug_insn 135 134 136 6 (debug_marker) "ed25519.c":96:3 -1
+     (nil))
+(insn 136 135 137 6 (parallel [
+            (set (reg:DI 130)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -1040 [0xfffffffffffffbf0])))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":96:3 -1
+     (nil))
+(insn 137 136 138 6 (parallel [
+            (set (reg:DI 131)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -240 [0xffffffffffffff10])))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":96:3 -1
+     (nil))
+(insn 138 137 139 6 (set (reg:DI 4 si)
+        (reg:DI 130)) "ed25519.c":96:3 -1
+     (nil))
+(insn 139 138 140 6 (set (reg:DI 5 di)
+        (reg:DI 131)) "ed25519.c":96:3 -1
+     (nil))
+(call_insn 140 139 141 6 (call (mem:QI (symbol_ref:DI ("crypto_sign_ed25519_ref_sc25519_to32bytes") [flags 0x41]  <function_decl 0x7f1ebc86ab00 crypto_sign_ed25519_ref_sc25519_to32bytes>) [0 crypto_sign_ed25519_ref_sc25519_to32bytes S1 A8])
+        (const_int 0 [0])) "ed25519.c":96:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("crypto_sign_ed25519_ref_sc25519_to32bytes") [flags 0x41]  <function_decl 0x7f1ebc86ab00 crypto_sign_ed25519_ref_sc25519_to32bytes>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(debug_insn 141 140 142 6 (debug_marker) "ed25519.c":97:3 -1
+     (nil))
+(debug_insn 142 141 143 6 (var_location:DI i (const_int 0 [0])) -1
+     (nil))
+(debug_insn 143 142 144 6 (debug_marker) "ed25519.c":97:11 -1
+     (nil))
+(insn 144 143 145 6 (set (reg:TI 132)
+        (mem/c:TI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -240 [0xffffffffffffff10])) [0 MEM <unsigned char[32]> [(char * {ref-all})&s]+0 S16 A64])) "ed25519.c":98:16 -1
+     (nil))
+(insn 145 144 146 6 (set (mem:TI (plus:DI (reg/v/f:DI 94 [ sm ])
+                (const_int 32 [0x20])) [0 MEM <unsigned char[32]> [(char * {ref-all})sm_38(D) + 32B]+0 S16 A8])
+        (reg:TI 132)) "ed25519.c":98:16 -1
+     (nil))
+(insn 146 145 147 6 (set (reg:TI 133)
+        (mem/c:TI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -224 [0xffffffffffffff20])) [0 MEM <unsigned char[32]> [(char * {ref-all})&s]+16 S16 A64])) "ed25519.c":98:16 -1
+     (nil))
+(insn 147 146 148 6 (set (mem:TI (plus:DI (reg/v/f:DI 94 [ sm ])
+                (const_int 48 [0x30])) [0 MEM <unsigned char[32]> [(char * {ref-all})sm_38(D) + 32B]+16 S16 A8])
+        (reg:TI 133)) "ed25519.c":98:16 -1
+     (nil))
+(debug_insn 148 147 149 6 (var_location:DI i (clobber (const_int 0 [0]))) -1
+     (nil))
+(debug_insn 149 148 150 6 (debug_marker) "ed25519.c":100:3 -1
+     (nil))
+(insn 150 149 154 6 (set (reg:SI 93 [ <retval> ])
+        (const_int 0 [0])) "ed25519.c":100:10 -1
+     (nil))
+(insn 154 150 155 6 (set (reg/f:DI 135)
+        (const_int 40 [0x28])) "ed25519.c":101:1 -1
+     (nil))
+(insn 155 154 156 6 (parallel [
+            (set (reg:CCZ 17 flags)
+                (unspec:CCZ [
+                        (mem/v/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                                (const_int -8 [0xfffffffffffffff8])) [2 D.6958+0 S8 A64])
+                        (mem/v/f:DI (reg/f:DI 135) [0 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_TEST))
+            (clobber (scratch:DI))
+        ]) "ed25519.c":101:1 -1
+     (nil))
+(jump_insn 156 155 164 6 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 159)
+            (pc))) "ed25519.c":101:1 -1
+     (int_list:REG_BR_PROB 1073312332 (nil))
+ -> 159)
+(note 164 156 157 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(call_insn 157 164 158 8 (call (mem:QI (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7f1ebc8b2a00 __stack_chk_fail>) [0 __stack_chk_fail S1 A8])
+        (const_int 0 [0])) "ed25519.c":101:1 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7f1ebc8b2a00 __stack_chk_fail>)
+        (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+            (expr_list:REG_NORETURN (const_int 0 [0])
+                (expr_list:REG_EH_REGION (const_int 0 [0])
+                    (nil)))))
+    (nil))
+(barrier 158 157 159)
+(code_label 159 158 165 9 19 (nil) [1 uses])
+(note 165 159 160 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 160 165 161 9 (set (reg/i:SI 0 ax)
+        (reg:SI 93 [ <retval> ])) "ed25519.c":101:1 -1
+     (nil))
+(insn 161 160 0 9 (use (reg/i:SI 0 ax)) "ed25519.c":101:1 -1
+     (nil))
+
+;; Function crypto_sign_ed25519_open (crypto_sign_ed25519_open, funcdef_no=69, decl_uid=6657, cgraph_uid=70, symbol_order=69)
+
+Partition 2: size 512 align 16
+	get2
+Partition 1: size 512 align 16
+	get1
+Partition 4: size 128 align 16
+	scs
+Partition 3: size 128 align 16
+	schram
+Partition 5: size 64 align 16
+	hram
+Partition 0: size 32 align 16
+	t2
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+
+;; Generating RTL for gimple basic block 11
+Edge 6->10 redirected to 15
+Predictions for insn 148 bb 14
+  first match heuristics: 99.96%  exec 246415743 (estimated locally) hit 492831484 (estimated locally) (200.0%)
+  combined heuristics: 99.96%  exec 246415743 (estimated locally) hit 492831484 (estimated locally) (200.0%)
+  noreturn call heuristics: 99.96%  exec 246415743 (estimated locally) hit 492831484 (estimated locally) (200.0%)
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Redirecting jump 32 from 15 to 16.
+Forwarding edge 7->8 to 16 failed.
+Redirecting jump 99 from 15 to 16.
+Redirecting jump 127 from 15 to 16.
+Forwarding edge 14->15 to 16 failed.
+Deleted label in block 15.
+Removing jump 143.
+
+
+try_optimize_cfg iteration 2
+
+Forwarding edge 7->8 to 16 failed.
+Forwarding edge 14->15 to 16 failed.
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 15 NOTE_INSN_DELETED)
+(note 15 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 15 3 2 (set (reg/v/f:DI 96 [ m ])
+        (reg:DI 5 di [ m ])) "ed25519.c":108:1 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v/f:DI 97 [ mlen ])
+        (reg:DI 4 si [ mlen ])) "ed25519.c":108:1 -1
+     (nil))
+(insn 4 3 5 2 (set (reg/v/f:DI 98 [ sm ])
+        (reg:DI 1 dx [ sm ])) "ed25519.c":108:1 -1
+     (nil))
+(insn 5 4 6 2 (set (reg/v:DI 99 [ smlen ])
+        (reg:DI 2 cx [ smlen ])) "ed25519.c":108:1 -1
+     (nil))
+(insn 6 5 7 2 (set (reg/v/f:DI 100 [ pk ])
+        (reg:DI 36 r8 [ pk ])) "ed25519.c":108:1 -1
+     (nil))
+(note 7 6 8 2 NOTE_INSN_FUNCTION_BEG)
+(insn 8 7 9 2 (set (reg/f:DI 101)
+        (const_int 40 [0x28])) "ed25519.c":108:1 -1
+     (nil))
+(insn 9 8 17 2 (parallel [
+            (set (mem/v/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                        (const_int -8 [0xfffffffffffffff8])) [2 D.6972+0 S8 A64])
+                (unspec:DI [
+                        (mem/v/f:DI (reg/f:DI 101) [0 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_SET))
+            (set (scratch:DI)
+                (const_int 0 [0]))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":108:1 -1
+     (nil))
+(debug_insn 17 9 18 2 (debug_marker) "ed25519.c":109:3 -1
+     (nil))
+(debug_insn 18 17 19 2 (debug_marker) "ed25519.c":110:3 -1
+     (nil))
+(debug_insn 19 18 20 2 (debug_marker) "ed25519.c":111:3 -1
+     (nil))
+(debug_insn 20 19 21 2 (debug_marker) "ed25519.c":112:3 -1
+     (nil))
+(debug_insn 21 20 22 2 (debug_marker) "ed25519.c":113:3 -1
+     (nil))
+(debug_insn 22 21 23 2 (debug_marker) "ed25519.c":114:3 -1
+     (nil))
+(debug_insn 23 22 24 2 (debug_marker) "ed25519.c":116:3 -1
+     (nil))
+(insn 24 23 25 2 (set (reg:DI 102)
+        (const_int -1 [0xffffffffffffffff])) "ed25519.c":116:9 -1
+     (nil))
+(insn 25 24 26 2 (set (mem:DI (reg/v/f:DI 97 [ mlen ]) [1 *mlen_21(D)+0 S8 A64])
+        (reg:DI 102)) "ed25519.c":116:9 -1
+     (nil))
+(debug_insn 26 25 29 2 (debug_marker) "ed25519.c":117:3 -1
+     (nil))
+(insn 29 26 30 2 (set (reg:CC 17 flags)
+        (compare:CC (reg/v:DI 99 [ smlen ])
+            (const_int 63 [0x3f]))) "ed25519.c":117:6 -1
+     (nil))
+(jump_insn 30 29 42 2 (set (pc)
+        (if_then_else (gtu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 34)
+            (pc))) "ed25519.c":117:6 -1
+     (int_list:REG_BR_PROB 1051300620 (nil))
+ -> 34)
+(code_label 42 30 31 4 29 (nil) [1 uses])
+(note 31 42 14 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 14 31 32 4 (set (reg/v:SI 95 [ <retval> ])
+        (const_int -1 [0xffffffffffffffff])) "ed25519.c":117:26 -1
+     (nil))
+(jump_insn 32 14 33 4 (set (pc)
+        (label_ref:DI 145)) 737 {jump}
+     (nil)
+ -> 145)
+(barrier 33 32 34)
+(code_label 34 33 35 5 27 (nil) [1 uses])
+(note 35 34 36 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 36 35 37 5 (debug_marker) "ed25519.c":119:3 -1
+     (nil))
+(insn 37 36 38 5 (parallel [
+            (set (reg:DI 103)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -1136 [0xfffffffffffffb90])))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":119:7 -1
+     (nil))
+(insn 38 37 39 5 (set (reg:DI 4 si)
+        (reg/v/f:DI 100 [ pk ])) "ed25519.c":119:7 -1
+     (nil))
+(insn 39 38 40 5 (set (reg:DI 5 di)
+        (reg:DI 103)) "ed25519.c":119:7 -1
+     (nil))
+(call_insn 40 39 41 5 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("crypto_sign_ed25519_ref_unpackneg_vartime") [flags 0x41]  <function_decl 0x7f1ebc873600 crypto_sign_ed25519_ref_unpackneg_vartime>) [0 crypto_sign_ed25519_ref_unpackneg_vartime S1 A8])
+            (const_int 0 [0]))) "ed25519.c":119:7 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("crypto_sign_ed25519_ref_unpackneg_vartime") [flags 0x41]  <function_decl 0x7f1ebc873600 crypto_sign_ed25519_ref_unpackneg_vartime>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 41 40 43 5 (set (reg:SI 82 [ _1 ])
+        (reg:SI 0 ax)) "ed25519.c":119:7 -1
+     (nil))
+(insn 43 41 44 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 82 [ _1 ])
+            (const_int 0 [0]))) "ed25519.c":119:6 -1
+     (nil))
+(jump_insn 44 43 45 5 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 42)
+            (pc))) "ed25519.c":119:6 -1
+     (int_list:REG_BR_PROB 22441212 (nil))
+ -> 42)
+(note 45 44 46 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 46 45 47 6 (debug_marker) "ed25519.c":121:3 -1
+     (nil))
+(insn 47 46 48 6 (parallel [
+            (set (reg:DI 104)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -80 [0xffffffffffffffb0])))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":121:3 -1
+     (nil))
+(insn 48 47 49 6 (set (reg:DI 36 r8)
+        (reg/v:DI 99 [ smlen ])) "ed25519.c":121:3 -1
+     (nil))
+(insn 49 48 50 6 (set (reg:DI 2 cx)
+        (reg/v/f:DI 96 [ m ])) "ed25519.c":121:3 -1
+     (nil))
+(insn 50 49 51 6 (set (reg:DI 1 dx)
+        (reg/v/f:DI 100 [ pk ])) "ed25519.c":121:3 -1
+     (nil))
+(insn 51 50 52 6 (set (reg:DI 4 si)
+        (reg/v/f:DI 98 [ sm ])) "ed25519.c":121:3 -1
+     (nil))
+(insn 52 51 53 6 (set (reg:DI 5 di)
+        (reg:DI 104)) "ed25519.c":121:3 -1
+     (nil))
+(call_insn 53 52 54 6 (call (mem:QI (symbol_ref:DI ("get_hram") [flags 0x3]  <function_decl 0x7f1ebc873b00 get_hram>) [0 get_hram S1 A8])
+        (const_int 0 [0])) "ed25519.c":121:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("get_hram") [flags 0x3]  <function_decl 0x7f1ebc873b00 get_hram>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (expr_list:DI (use (reg:DI 2 cx))
+                    (expr_list:DI (use (reg:DI 36 r8))
+                        (nil)))))))
+(debug_insn 54 53 55 6 (debug_marker) "ed25519.c":123:3 -1
+     (nil))
+(insn 55 54 56 6 (parallel [
+            (set (reg:DI 105)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -80 [0xffffffffffffffb0])))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":123:3 -1
+     (nil))
+(insn 56 55 57 6 (parallel [
+            (set (reg:DI 106)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -1392 [0xfffffffffffffa90])))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":123:3 -1
+     (nil))
+(insn 57 56 58 6 (set (reg:DI 4 si)
+        (reg:DI 105)) "ed25519.c":123:3 -1
+     (nil))
+(insn 58 57 59 6 (set (reg:DI 5 di)
+        (reg:DI 106)) "ed25519.c":123:3 -1
+     (nil))
+(call_insn 59 58 60 6 (call (mem:QI (symbol_ref:DI ("crypto_sign_ed25519_ref_sc25519_from64bytes") [flags 0x41]  <function_decl 0x7f1ebc86a900 crypto_sign_ed25519_ref_sc25519_from64bytes>) [0 crypto_sign_ed25519_ref_sc25519_from64bytes S1 A8])
+        (const_int 0 [0])) "ed25519.c":123:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("crypto_sign_ed25519_ref_sc25519_from64bytes") [flags 0x41]  <function_decl 0x7f1ebc86a900 crypto_sign_ed25519_ref_sc25519_from64bytes>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(debug_insn 60 59 61 6 (debug_marker) "ed25519.c":125:3 -1
+     (nil))
+(insn 61 60 62 6 (parallel [
+            (set (reg:DI 107)
+                (plus:DI (reg/v/f:DI 98 [ sm ])
+                    (const_int 32 [0x20])))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":125:3 -1
+     (nil))
+(insn 62 61 63 6 (parallel [
+            (set (reg:DI 108)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -1264 [0xfffffffffffffb10])))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":125:3 -1
+     (nil))
+(insn 63 62 64 6 (set (reg:DI 4 si)
+        (reg:DI 107)) "ed25519.c":125:3 -1
+     (nil))
+(insn 64 63 65 6 (set (reg:DI 5 di)
+        (reg:DI 108)) "ed25519.c":125:3 -1
+     (nil))
+(call_insn 65 64 66 6 (call (mem:QI (symbol_ref:DI ("crypto_sign_ed25519_ref_sc25519_from32bytes") [flags 0x41]  <function_decl 0x7f1ebc86a700 crypto_sign_ed25519_ref_sc25519_from32bytes>) [0 crypto_sign_ed25519_ref_sc25519_from32bytes S1 A8])
+        (const_int 0 [0])) "ed25519.c":125:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("crypto_sign_ed25519_ref_sc25519_from32bytes") [flags 0x41]  <function_decl 0x7f1ebc86a700 crypto_sign_ed25519_ref_sc25519_from32bytes>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(debug_insn 66 65 67 6 (debug_marker) "ed25519.c":127:3 -1
+     (nil))
+(insn 67 66 68 6 (parallel [
+            (set (reg:DI 109)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -1264 [0xfffffffffffffb10])))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":127:3 -1
+     (nil))
+(insn 68 67 69 6 (parallel [
+            (set (reg:DI 110)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -1392 [0xfffffffffffffa90])))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":127:3 -1
+     (nil))
+(insn 69 68 70 6 (parallel [
+            (set (reg:DI 111)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -1136 [0xfffffffffffffb90])))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":127:3 -1
+     (nil))
+(insn 70 69 71 6 (parallel [
+            (set (reg:DI 112)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -624 [0xfffffffffffffd90])))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":127:3 -1
+     (nil))
+(insn 71 70 72 6 (set (reg:DI 36 r8)
+        (reg:DI 109)) "ed25519.c":127:3 -1
+     (nil))
+(insn 72 71 73 6 (set (reg:DI 2 cx)
+        (symbol_ref:DI ("crypto_sign_ed25519_ref_ge25519_base") [flags 0x40]  <var_decl 0x7f1ebc7bccf0 crypto_sign_ed25519_ref_ge25519_base>)) "ed25519.c":127:3 -1
+     (nil))
+(insn 73 72 74 6 (set (reg:DI 1 dx)
+        (reg:DI 110)) "ed25519.c":127:3 -1
+     (nil))
+(insn 74 73 75 6 (set (reg:DI 4 si)
+        (reg:DI 111)) "ed25519.c":127:3 -1
+     (nil))
+(insn 75 74 76 6 (set (reg:DI 5 di)
+        (reg:DI 112)) "ed25519.c":127:3 -1
+     (nil))
+(call_insn 76 75 77 6 (call (mem:QI (symbol_ref:DI ("crypto_sign_ed25519_ref_double_scalarmult_vartime") [flags 0x41]  <function_decl 0x7f1ebc873900 crypto_sign_ed25519_ref_double_scalarmult_vartime>) [0 crypto_sign_ed25519_ref_double_scalarmult_vartime S1 A8])
+        (const_int 0 [0])) "ed25519.c":127:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("crypto_sign_ed25519_ref_double_scalarmult_vartime") [flags 0x41]  <function_decl 0x7f1ebc873900 crypto_sign_ed25519_ref_double_scalarmult_vartime>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (expr_list:DI (use (reg:DI 2 cx))
+                    (expr_list:DI (use (reg:DI 36 r8))
+                        (nil)))))))
+(debug_insn 77 76 78 6 (debug_marker) "ed25519.c":128:3 -1
+     (nil))
+(insn 78 77 79 6 (parallel [
+            (set (reg:DI 113)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -624 [0xfffffffffffffd90])))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":128:3 -1
+     (nil))
+(insn 79 78 80 6 (parallel [
+            (set (reg:DI 114)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -112 [0xffffffffffffff90])))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":128:3 -1
+     (nil))
+(insn 80 79 81 6 (set (reg:DI 4 si)
+        (reg:DI 113)) "ed25519.c":128:3 -1
+     (nil))
+(insn 81 80 82 6 (set (reg:DI 5 di)
+        (reg:DI 114)) "ed25519.c":128:3 -1
+     (nil))
+(call_insn 82 81 83 6 (call (mem:QI (symbol_ref:DI ("crypto_sign_ed25519_ref_pack") [flags 0x41]  <function_decl 0x7f1ebc873700 crypto_sign_ed25519_ref_pack>) [0 crypto_sign_ed25519_ref_pack S1 A8])
+        (const_int 0 [0])) "ed25519.c":128:3 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("crypto_sign_ed25519_ref_pack") [flags 0x41]  <function_decl 0x7f1ebc873700 crypto_sign_ed25519_ref_pack>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(debug_insn 83 82 84 6 (debug_marker) "ed25519.c":130:3 -1
+     (nil))
+(insn 84 83 85 6 (parallel [
+            (set (reg:DI 115)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -112 [0xffffffffffffff90])))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":130:9 -1
+     (nil))
+(insn 85 84 86 6 (set (reg:DI 4 si)
+        (reg:DI 115)) "ed25519.c":130:9 -1
+     (nil))
+(insn 86 85 87 6 (set (reg:DI 5 di)
+        (reg/v/f:DI 98 [ sm ])) "ed25519.c":130:9 -1
+     (nil))
+(call_insn 87 86 88 6 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("crypto_verify_32") [flags 0x41]  <function_decl 0x7f1ebc863000 crypto_verify_32>) [0 crypto_verify_32 S1 A8])
+            (const_int 0 [0]))) "ed25519.c":130:9 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("crypto_verify_32") [flags 0x41]  <function_decl 0x7f1ebc863000 crypto_verify_32>)
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 88 87 89 6 (set (reg/v:SI 95 [ <retval> ])
+        (reg:SI 0 ax)) "ed25519.c":130:9 -1
+     (nil))
+(debug_insn 89 88 90 6 (var_location:SI ret (reg/v:SI 95 [ <retval> ])) "ed25519.c":130:9 -1
+     (nil))
+(debug_insn 90 89 91 6 (debug_marker) "ed25519.c":132:3 -1
+     (nil))
+(insn 91 90 92 6 (parallel [
+            (set (reg:DI 92 [ _17 ])
+                (plus:DI (reg/v:DI 99 [ smlen ])
+                    (const_int -64 [0xffffffffffffffc0])))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":140:20 -1
+     (nil))
+(insn 92 91 93 6 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 95 [ <retval> ])
+            (const_int 0 [0]))) "ed25519.c":132:6 -1
+     (nil))
+(jump_insn 93 92 94 6 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 102)
+            (pc))) "ed25519.c":132:6 -1
+     (int_list:REG_BR_PROB 536870916 (nil))
+ -> 102)
+(note 94 93 95 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 95 94 96 7 (var_location:SI i (const_int 0 [0])) -1
+     (nil))
+(debug_insn 96 95 97 7 (debug_marker) "ed25519.c":140:13 -1
+     (nil))
+(insn 97 96 98 7 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:DI 92 [ _17 ])
+            (const_int 0 [0]))) "ed25519.c":140:5 -1
+     (nil))
+(jump_insn 98 97 101 7 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 156)
+            (pc))) "ed25519.c":140:5 736 {*jcc}
+     (int_list:REG_BR_PROB 955630228 (nil))
+ -> 156)
+(note 101 98 99 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 99 101 100 8 (set (pc)
+        (label_ref:DI 145)) "ed25519.c":140:5 737 {jump}
+     (nil)
+ -> 145)
+(barrier 100 99 102)
+(code_label 102 100 103 9 30 (nil) [1 uses])
+(note 103 102 104 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 104 103 105 9 (var_location:SI i (const_int 0 [0])) -1
+     (nil))
+(debug_insn 105 104 106 9 (debug_marker) "ed25519.c":134:13 -1
+     (nil))
+(insn 106 105 107 9 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:DI 92 [ _17 ])
+            (const_int 0 [0]))) "ed25519.c":134:5 -1
+     (nil))
+(jump_insn 107 106 157 9 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 123)
+            (pc))) "ed25519.c":134:5 -1
+     (int_list:REG_BR_PROB 118111604 (nil))
+ -> 123)
+(note 157 107 10 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 10 157 11 10 (set (reg/v:SI 94 [ i ])
+        (const_int 0 [0])) "ed25519.c":134:10 -1
+     (nil))
+(insn 11 10 120 10 (set (reg:DI 89 [ _8 ])
+        (const_int 0 [0])) "ed25519.c":134:14 -1
+     (nil))
+(code_label 120 11 108 11 33 (nil) [1 uses])
+(note 108 120 109 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 109 108 110 11 (var_location:SI i (reg/v:SI 94 [ i ])) -1
+     (nil))
+(debug_insn 110 109 111 11 (debug_marker) "ed25519.c":135:7 -1
+     (nil))
+(insn 111 110 112 11 (parallel [
+            (set (reg:SI 116)
+                (plus:SI (reg/v:SI 94 [ i ])
+                    (const_int 64 [0x40])))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":135:19 -1
+     (nil))
+(insn 112 111 113 11 (set (reg:DI 117)
+        (zero_extend:DI (reg:SI 116))) "ed25519.c":135:19 -1
+     (nil))
+(insn 113 112 114 11 (set (reg:QI 88 [ _7 ])
+        (mem:QI (plus:DI (reg/v/f:DI 98 [ sm ])
+                (reg:DI 117)) [0 *_5+0 S1 A8])) "ed25519.c":135:16 -1
+     (nil))
+(insn 114 113 115 11 (set (mem:QI (plus:DI (reg/v/f:DI 96 [ m ])
+                (reg:DI 89 [ _8 ])) [0 *_6+0 S1 A8])
+        (reg:QI 88 [ _7 ])) "ed25519.c":135:12 -1
+     (nil))
+(debug_insn 115 114 116 11 (debug_marker) "ed25519.c":134:24 -1
+     (nil))
+(insn 116 115 117 11 (parallel [
+            (set (reg/v:SI 94 [ i ])
+                (plus:SI (reg/v:SI 94 [ i ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":134:25 -1
+     (nil))
+(debug_insn 117 116 118 11 (var_location:SI i (reg/v:SI 94 [ i ])) -1
+     (nil))
+(debug_insn 118 117 119 11 (debug_marker) "ed25519.c":134:13 -1
+     (nil))
+(insn 119 118 121 11 (set (reg:DI 89 [ _8 ])
+        (zero_extend:DI (reg/v:SI 94 [ i ]))) "ed25519.c":134:14 -1
+     (nil))
+(insn 121 119 122 11 (set (reg:CC 17 flags)
+        (compare:CC (reg:DI 89 [ _8 ])
+            (reg:DI 92 [ _17 ]))) "ed25519.c":134:5 -1
+     (nil))
+(jump_insn 122 121 123 11 (set (pc)
+        (if_then_else (ltu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 120)
+            (pc))) "ed25519.c":134:5 -1
+     (int_list:REG_BR_PROB 955630228 (nil))
+ -> 120)
+(code_label 123 122 124 12 32 (nil) [1 uses])
+(note 124 123 125 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 125 124 126 12 (debug_marker) "ed25519.c":136:5 -1
+     (nil))
+(insn 126 125 127 12 (set (mem:DI (reg/v/f:DI 97 [ mlen ]) [1 *mlen_21(D)+0 S8 A64])
+        (reg:DI 92 [ _17 ])) "ed25519.c":136:11 -1
+     (nil))
+(jump_insn 127 126 128 12 (set (pc)
+        (label_ref:DI 145)) 737 {jump}
+     (nil)
+ -> 145)
+(barrier 128 127 156)
+(code_label 156 128 155 13 35 (nil) [1 uses])
+(note 155 156 12 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 12 155 13 13 (set (reg/v:SI 93 [ i ])
+        (const_int 0 [0])) "ed25519.c":140:10 -1
+     (nil))
+(insn 13 12 129 13 (set (reg:DI 91 [ _12 ])
+        (const_int 0 [0])) "ed25519.c":140:14 -1
+     (nil))
+(code_label 129 13 130 14 31 (nil) [1 uses])
+(note 130 129 131 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 131 130 132 14 (var_location:SI i (reg/v:SI 93 [ i ])) -1
+     (nil))
+(debug_insn 132 131 133 14 (debug_marker) "ed25519.c":141:7 -1
+     (nil))
+(insn 133 132 134 14 (set (mem:QI (plus:DI (reg/v/f:DI 96 [ m ])
+                (reg:DI 91 [ _12 ])) [0 *_11+0 S1 A8])
+        (const_int 0 [0])) "ed25519.c":141:12 -1
+     (nil))
+(debug_insn 134 133 135 14 (debug_marker) "ed25519.c":140:24 -1
+     (nil))
+(insn 135 134 136 14 (parallel [
+            (set (reg/v:SI 93 [ i ])
+                (plus:SI (reg/v:SI 93 [ i ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "ed25519.c":140:25 -1
+     (nil))
+(debug_insn 136 135 137 14 (var_location:SI i (reg/v:SI 93 [ i ])) -1
+     (nil))
+(debug_insn 137 136 138 14 (debug_marker) "ed25519.c":140:13 -1
+     (nil))
+(insn 138 137 139 14 (set (reg:DI 91 [ _12 ])
+        (zero_extend:DI (reg/v:SI 93 [ i ]))) "ed25519.c":140:14 -1
+     (nil))
+(insn 139 138 140 14 (set (reg:CC 17 flags)
+        (compare:CC (reg:DI 91 [ _12 ])
+            (reg:DI 92 [ _17 ]))) "ed25519.c":140:5 -1
+     (nil))
+(jump_insn 140 139 142 14 (set (pc)
+        (if_then_else (ltu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 129)
+            (pc))) "ed25519.c":140:5 -1
+     (int_list:REG_BR_PROB 955630228 (nil))
+ -> 129)
+(note 142 140 145 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(code_label 145 142 154 16 26 (nil) [3 uses])
+(note 154 145 146 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(insn 146 154 147 16 (set (reg/f:DI 119)
+        (const_int 40 [0x28])) "ed25519.c":144:1 -1
+     (nil))
+(insn 147 146 148 16 (parallel [
+            (set (reg:CCZ 17 flags)
+                (unspec:CCZ [
+                        (mem/v/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                                (const_int -8 [0xfffffffffffffff8])) [2 D.6972+0 S8 A64])
+                        (mem/v/f:DI (reg/f:DI 119) [0 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_TEST))
+            (clobber (scratch:DI))
+        ]) "ed25519.c":144:1 -1
+     (nil))
+(jump_insn 148 147 158 16 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 151)
+            (pc))) "ed25519.c":144:1 -1
+     (int_list:REG_BR_PROB 1073312332 (nil))
+ -> 151)
+(note 158 148 149 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
+(call_insn 149 158 150 17 (call (mem:QI (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7f1ebc8b2a00 __stack_chk_fail>) [0 __stack_chk_fail S1 A8])
+        (const_int 0 [0])) "ed25519.c":144:1 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7f1ebc8b2a00 __stack_chk_fail>)
+        (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+            (expr_list:REG_NORETURN (const_int 0 [0])
+                (expr_list:REG_EH_REGION (const_int 0 [0])
+                    (nil)))))
+    (nil))
+(barrier 150 149 151)
+(code_label 151 150 159 18 34 (nil) [1 uses])
+(note 159 151 152 18 [bb 18] NOTE_INSN_BASIC_BLOCK)
+(insn 152 159 153 18 (set (reg/i:SI 0 ax)
+        (reg/v:SI 95 [ <retval> ])) "ed25519.c":144:1 -1
+     (nil))
+(insn 153 152 0 18 (use (reg/i:SI 0 ax)) "ed25519.c":144:1 -1
+     (nil))
