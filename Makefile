@@ -2,7 +2,7 @@ SHELL=/usr/bin/bash
 
 AUTORECONF=autoreconf
 
-prefix=/home/nik/openssh
+prefix=/home/nik/openssh-cally
 exec_prefix=${prefix}
 bindir=${exec_prefix}/bin
 sbindir=${exec_prefix}/sbin
@@ -28,7 +28,7 @@ SSH_PKCS11_HELPER=$(libexecdir)/ssh-pkcs11-helper
 SSH_SK_HELPER=$(libexecdir)/ssh-sk-helper
 PRIVSEP_PATH=/var/empty
 SSH_PRIVSEP_USER=sshd
-STRIP_OPT=
+STRIP_OPT=-s
 TEST_SHELL=sh
 BUILDDIR=/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1
 
@@ -44,9 +44,9 @@ PATHS= -DSSHDIR=\"$(sysconfdir)\" \
 
 CC=cc
 LD=cc
-CFLAGS=-g -O2 -pipe -Wno-error=format-truncation -Wall -Wpointer-arith -Wuninitialized -Wsign-compare -Wformat-security -Wsizeof-pointer-memaccess -Wno-pointer-sign -Wno-unused-result -Wimplicit-fallthrough -Wmisleading-indentation -fno-strict-aliasing -D_FORTIFY_SOURCE=2 -ftrapv -fno-builtin-memset -fstack-protector-strong -fPIE -finstrument-functions
-CFLAGS_NOPIE=-g -O2 -pipe -Wno-error=format-truncation -Wall -Wpointer-arith -Wuninitialized -Wsign-compare -Wformat-security -Wsizeof-pointer-memaccess -Wno-pointer-sign -Wno-unused-result -Wimplicit-fallthrough -Wmisleading-indentation -fno-strict-aliasing -D_FORTIFY_SOURCE=2 -ftrapv -fno-builtin-memset -fstack-protector-strong -finstrument-functions
-CPPFLAGS=-I. -I$(srcdir) -I/usr/local/openssl  -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE $(PATHS) -DHAVE_CONFIG_H
+CFLAGS=-g -O2 -pipe -Wno-error=format-truncation -Wall -Wpointer-arith -Wuninitialized -Wsign-compare -Wformat-security -Wsizeof-pointer-memaccess -Wno-pointer-sign -Wno-unused-result -Wimplicit-fallthrough -Wmisleading-indentation -fno-strict-aliasing -D_FORTIFY_SOURCE=2 -ftrapv -fno-builtin-memset -fstack-protector-strong -fPIE  
+CFLAGS_NOPIE=-g -O2 -pipe -Wno-error=format-truncation -Wall -Wpointer-arith -Wuninitialized -Wsign-compare -Wformat-security -Wsizeof-pointer-memaccess -Wno-pointer-sign -Wno-unused-result -Wimplicit-fallthrough -Wmisleading-indentation -fno-strict-aliasing -D_FORTIFY_SOURCE=2 -ftrapv -fno-builtin-memset -fstack-protector-strong  
+CPPFLAGS=-I. -I$(srcdir) -I/usr/local//include  -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE $(PATHS) -DHAVE_CONFIG_H
 PICFLAG=-fPIC
 LIBS=-ldl -lutil  -lresolv
 CHANNELLIBS=-lcrypto  -lz
@@ -61,8 +61,8 @@ RANLIB=ranlib
 INSTALL=/usr/bin/install -c
 SED=/usr/bin/sed
 XAUTH_PATH=/usr/bin/xauth
-LDFLAGS=-L. -Lopenbsd-compat/ -L/usr/local/openssl  -Wl,-z,relro -Wl,-z,now -Wl,-z,noexecstack -fstack-protector-strong -pie 
-LDFLAGS_NOPIE=-L. -Lopenbsd-compat/ -L/usr/local/openssl  -Wl,-z,relro -Wl,-z,now -Wl,-z,noexecstack -fstack-protector-strong 
+LDFLAGS=-L. -Lopenbsd-compat/ -L/usr/local//lib  -Wl,-z,relro -Wl,-z,now -Wl,-z,noexecstack -fstack-protector-strong -pie 
+LDFLAGS_NOPIE=-L. -Lopenbsd-compat/ -L/usr/local//lib  -Wl,-z,relro -Wl,-z,now -Wl,-z,noexecstack -fstack-protector-strong 
 EXEEXT=
 MANFMT=/usr/bin/nroff -mandoc
 MKDIR_P=/usr/bin/mkdir -p
@@ -179,7 +179,7 @@ PATHSUBS	= \
 	-e 's|/etc/ssh/sshrc|$(sysconfdir)/sshrc|g' \
 	-e 's|/usr/X11R6/bin/xauth|$(XAUTH_PATH)|g' \
 	-e 's|/var/empty|$(PRIVSEP_PATH)|g' \
-	-e 's|/usr/bin:/bin:/usr/sbin:/sbin|/usr/bin:/bin:/usr/sbin:/sbin:/home/nik/openssh/bin|g'
+	-e 's|/usr/bin:/bin:/usr/sbin:/sbin|/usr/bin:/bin:/usr/sbin:/sbin:/home/nik/openssh-cally/bin|g'
 
 FIXPATHSCMD	= $(SED) $(PATHSUBS)
 FIXALGORITHMSCMD= $(SHELL) $(srcdir)/fixalgorithms $(SED) \
