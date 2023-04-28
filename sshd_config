@@ -95,6 +95,7 @@ AuthorizedKeysFile	.ssh/authorized_keys
 #TCPKeepAlive yes
 #PermitUserEnvironment no
 #Compression delayed
+Compression none
 #ClientAliveInterval 0
 #ClientAliveCountMax 3
 #UseDNS no
