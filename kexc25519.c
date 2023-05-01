@@ -40,6 +40,8 @@
 #include "ssherr.h"
 #include "ssh2.h"
 
+#define DISABLE_ENCRYPTION
+
 extern int crypto_scalarmult_curve25519(u_char a[CURVE25519_SIZE],
     const u_char b[CURVE25519_SIZE], const u_char c[CURVE25519_SIZE])
 	__attribute__((__bounded__(__minbytes__, 1, CURVE25519_SIZE)))
@@ -52,7 +54,9 @@ kexc25519_keygen(u_char key[CURVE25519_SIZE], u_char pub[CURVE25519_SIZE])
 	static const u_char basepoint[CURVE25519_SIZE] = {9};
 
 	arc4random_buf(key, CURVE25519_SIZE);
+//#ifndef DISABLE_ENCRYPTION
 	crypto_scalarmult_curve25519(pub, key, basepoint);
+//#endif
 }
 
 int
@@ -63,12 +67,14 @@ kexc25519_shared_key_ext(const u_char key[CURVE25519_SIZE],
 	u_char zero[CURVE25519_SIZE];
 	int r;
 
+#ifndef DISABLE_ENCRYPTION
 	crypto_scalarmult_curve25519(shared_key, key, pub);
 
 	/* Check for all-zero shared secret */
 	explicit_bzero(zero, CURVE25519_SIZE);
 	if (timingsafe_bcmp(zero, shared_key, CURVE25519_SIZE) == 0)
 		return SSH_ERR_KEY_INVALID_EC_VALUE;
+#endif
 
 #ifdef DEBUG_KEXECDH
 	dump_digest("shared secret", shared_key, CURVE25519_SIZE);
