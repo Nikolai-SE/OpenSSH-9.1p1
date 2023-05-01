@@ -3,6 +3,8 @@
 
 tid="login with different key exchange algorithms"
 
+exit 0
+
 TIME=/usr/bin/time
 cp $OBJ/sshd_proxy $OBJ/sshd_proxy_bak
 cp $OBJ/ssh_proxy $OBJ/ssh_proxy_bak

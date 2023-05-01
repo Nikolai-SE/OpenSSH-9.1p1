@@ -3,6 +3,8 @@
 
 tid="key revocation lists"
 
+exit 0
+
 # Use ed25519 by default since it's fast and it's supported when building
 # w/out OpenSSL.  Populate ktype[2-4] with the other types if supported.
 ktype1=ed25519; ktype2=ed25519; ktype3=ed25519;

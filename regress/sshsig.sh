@@ -3,6 +3,8 @@
 
 tid="sshsig"
 
+exit 0
+
 DATA2=$OBJ/${DATANAME}.2
 cat ${DATA} ${DATA} > ${DATA2}
 

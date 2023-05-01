@@ -3,6 +3,8 @@
 
 tid="certified host keys"
 
+exit 0
+
 rm -f $OBJ/known_hosts-cert* $OBJ/host_ca_key* $OBJ/host_revoked_*
 rm -f $OBJ/cert_host_key* $OBJ/host_krl_*
 

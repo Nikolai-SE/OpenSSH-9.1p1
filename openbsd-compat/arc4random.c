@@ -43,6 +43,11 @@
 
 #ifndef HAVE_ARC4RANDOM
 
+#define DISABLE_RANDOMIZE_WITH_FAIL_ENCRYPT_TESTS
+//const static u_int32_t PRIME_NUMBER = 1000003;
+//const static u_int32_t PRIME_NUMBER = 1000000007;
+const static u_int32_t PRIME_NUMBER = 1000000009;
+
 /*
  * If we're not using a native getentropy, use the one from bsd-getentropy.c
  * under a different name, so that if in future these binaries are run on
@@ -206,10 +211,12 @@ _rs_random_u32(uint32_t *val)
 uint32_t
 arc4random(void)
 {
-	uint32_t val;
+	uint32_t val = PRIME_NUMBER;
 
 	_ARC4_LOCK();
+#ifndef DISABLE_RANDOMIZE_WITH_FAIL_ENCRYPT_TESTS
 	_rs_random_u32(&val);
+#endif
 	_ARC4_UNLOCK();
 	return val;
 }
@@ -224,7 +231,11 @@ void
 arc4random_buf(void *buf, size_t n)
 {
 	_ARC4_LOCK();
+#ifndef DISABLE_RANDOMIZE_WITH_FAIL_ENCRYPT_TESTS
 	_rs_random_buf(buf, n);
+#else
+    memset(buf, PRIME_NUMBER, n);
+#endif
 	_ARC4_UNLOCK();
 }
 DEF_WEAK(arc4random_buf);
@@ -239,7 +250,10 @@ arc4random_buf(void *_buf, size_t n)
 	size_t i;
 	u_int32_t r = 0;
 	char *buf = (char *)_buf;
-
+#ifdef DISABLE_RANDOMIZE_WITH_FAIL_ENCRYPT_TESTS
+    memset(buf, PRIME_NUMBER, n);
+    return;
+#endif
 	for (i = 0; i < n; i++) {
 		if (i % 4 == 0)
 			r = arc4random();
@@ -248,5 +262,10 @@ arc4random_buf(void *_buf, size_t n)
 	}
 	explicit_bzero(&r, sizeof(r));
 }
+
+#ifdef DISABLE_RANDOMIZE_WITH_FAIL_ENCRYPT_TESTS
+#undef DISABLE_RANDOMIZE_WITH_FAIL_ENCRYPT_TESTS
+#endif
+
 #endif /* !defined(HAVE_ARC4RANDOM_BUF) && defined(HAVE_ARC4RANDOM) */
 

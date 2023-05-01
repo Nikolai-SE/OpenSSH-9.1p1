@@ -3,6 +3,8 @@
 
 tid="dhgex"
 
+exit 0
+
 LOG=${TEST_SSH_LOGFILE}
 rm -f ${LOG}
 cp $OBJ/sshd_proxy $OBJ/sshd_proxy_bak

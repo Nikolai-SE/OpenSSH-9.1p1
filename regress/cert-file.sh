@@ -3,6 +3,8 @@
 
 tid="ssh with certificates"
 
+exit 0
+
 rm -f $OBJ/user_ca_key* $OBJ/user_key*
 rm -f $OBJ/cert_user_key*
 

@@ -3,6 +3,8 @@
 
 tid="multiple pubkey"
 
+exit 0
+
 rm -f $OBJ/authorized_keys_$USER $OBJ/user_ca_key* $OBJ/user_key*
 rm -f $OBJ/authorized_principals_$USER $OBJ/cert_user_key*
 

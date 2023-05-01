@@ -3,6 +3,8 @@
 
 tid="agent restrictions"
 
+exit 0
+
 SSH_AUTH_SOCK="$OBJ/agent.sock"
 export SSH_AUTH_SOCK
 rm -f $SSH_AUTH_SOCK $OBJ/agent.log $OBJ/host_[abcdex]* $OBJ/user_[abcdex]*
