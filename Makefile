@@ -2,7 +2,7 @@ SHELL=/usr/bin/bash
 
 AUTORECONF=autoreconf
 
-prefix=/home/nik/openssh
+prefix=/home/nik/openssh-custom
 exec_prefix=${prefix}
 bindir=${exec_prefix}/bin
 sbindir=${exec_prefix}/sbin
@@ -44,8 +44,8 @@ PATHS= -DSSHDIR=\"$(sysconfdir)\" \
 
 CC=cc
 LD=cc
-CFLAGS=-g -O2 -pipe -Wno-error=format-truncation -Wall -Wpointer-arith -Wuninitialized -Wsign-compare -Wformat-security -Wsizeof-pointer-memaccess -Wno-pointer-sign -Wno-unused-result -Wimplicit-fallthrough -Wmisleading-indentation -fno-strict-aliasing -D_FORTIFY_SOURCE=2 -ftrapv -fno-builtin-memset -fstack-protector-strong -fPIE -finstrument-functions
-CFLAGS_NOPIE=-g -O2 -pipe -Wno-error=format-truncation -Wall -Wpointer-arith -Wuninitialized -Wsign-compare -Wformat-security -Wsizeof-pointer-memaccess -Wno-pointer-sign -Wno-unused-result -Wimplicit-fallthrough -Wmisleading-indentation -fno-strict-aliasing -D_FORTIFY_SOURCE=2 -ftrapv -fno-builtin-memset -fstack-protector-strong -finstrument-functions
+CFLAGS=-g -O2 -pipe -Wno-error=format-truncation -Wall -Wpointer-arith -Wuninitialized -Wsign-compare -Wformat-security -Wsizeof-pointer-memaccess -Wno-pointer-sign -Wno-unused-result -Wimplicit-fallthrough -Wmisleading-indentation -fno-strict-aliasing -D_FORTIFY_SOURCE=2 -ftrapv -fno-builtin-memset -fstack-protector-strong -fPIE  
+CFLAGS_NOPIE=-g -O2 -pipe -Wno-error=format-truncation -Wall -Wpointer-arith -Wuninitialized -Wsign-compare -Wformat-security -Wsizeof-pointer-memaccess -Wno-pointer-sign -Wno-unused-result -Wimplicit-fallthrough -Wmisleading-indentation -fno-strict-aliasing -D_FORTIFY_SOURCE=2 -ftrapv -fno-builtin-memset -fstack-protector-strong  
 CPPFLAGS=-I. -I$(srcdir) -I/usr/local/openssl  -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE $(PATHS) -DHAVE_CONFIG_H
 PICFLAG=-fPIC
 LIBS=-ldl -lutil  -lresolv
@@ -179,7 +179,7 @@ PATHSUBS	= \
 	-e 's|/etc/ssh/sshrc|$(sysconfdir)/sshrc|g' \
 	-e 's|/usr/X11R6/bin/xauth|$(XAUTH_PATH)|g' \
 	-e 's|/var/empty|$(PRIVSEP_PATH)|g' \
-	-e 's|/usr/bin:/bin:/usr/sbin:/sbin|/usr/bin:/bin:/usr/sbin:/sbin:/home/nik/openssh/bin|g'
+	-e 's|/usr/bin:/bin:/usr/sbin:/sbin|/usr/bin:/bin:/usr/sbin:/sbin:/home/nik/openssh-custom/bin|g'
 
 FIXPATHSCMD	= $(SED) $(PATHSUBS)
 FIXALGORITHMSCMD= $(SHELL) $(srcdir)/fixalgorithms $(SED) \
