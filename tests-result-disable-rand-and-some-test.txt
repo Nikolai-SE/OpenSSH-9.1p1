@@ -1,0 +1,1511 @@
+Makefile:684: warning: ignoring prerequisites on suffix rule definition
+/usr/bin/mkdir -p `pwd`/regress/unittests/test_helper
+(cd openbsd-compat && make)
+make[1]: вход в каталог «/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/openbsd-compat»
+make[1]: Цель «all» не требует выполнения команд.
+make[1]: выход из каталога «/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/openbsd-compat»
+/usr/bin/mkdir -p `pwd`/regress/unittests/authopt
+/usr/bin/mkdir -p `pwd`/regress/unittests/bitmap
+/usr/bin/mkdir -p `pwd`/regress/unittests/conversion
+/usr/bin/mkdir -p `pwd`/regress/unittests/hostkeys
+/usr/bin/mkdir -p `pwd`/regress/unittests/kex
+/usr/bin/mkdir -p `pwd`/regress/unittests/match
+/usr/bin/mkdir -p `pwd`/regress/unittests/misc
+/usr/bin/mkdir -p `pwd`/regress/unittests/sshbuf
+/usr/bin/mkdir -p `pwd`/regress/unittests/sshkey
+/usr/bin/mkdir -p `pwd`/regress/unittests/sshsig
+/usr/bin/mkdir -p `pwd`/regress/unittests/utf8
+/usr/bin/mkdir -p `pwd`/regress/misc/sk-dummy
+[ -f `pwd`/regress/Makefile ] || \
+    ln -s `cd . && pwd`/regress/Makefile `pwd`/regress/Makefile
+cd ./regress || exit $?; \
+EGREP='/usr/bin/grep -E' \
+make \
+	.CURDIR="/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress" \
+	.OBJDIR="/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress" \
+	BUILDDIR="/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1" \
+	OBJ="/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress" \
+	PATH="/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1:${PATH}" \
+	TEST_ENV=MALLOC_OPTIONS="" \
+	TEST_MALLOC_OPTIONS="" \
+	TEST_SSH_SCP="/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/scp" \
+	TEST_SSH_SSH="/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/ssh" \
+	TEST_SSH_SSHD="/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/sshd" \
+	TEST_SSH_SSHAGENT="/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/ssh-agent" \
+	TEST_SSH_SSHADD="/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/ssh-add" \
+	TEST_SSH_SSHKEYGEN="/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/ssh-keygen" \
+	TEST_SSH_SSHPKCS11HELPER="/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/ssh-pkcs11-helper" \
+	TEST_SSH_SSHKEYSCAN="/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/ssh-keyscan" \
+	TEST_SSH_SFTP="/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/sftp" \
+	TEST_SSH_PKCS11_HELPER="/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/ssh-pkcs11-helper" \
+	TEST_SSH_SK_HELPER="/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/ssh-sk-helper" \
+	TEST_SSH_SFTPSERVER="/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/sftp-server" \
+	TEST_SSH_MODULI_FILE="/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/moduli" \
+	TEST_SSH_PLINK="plink" \
+	TEST_SSH_PUTTYGEN="puttygen" \
+	TEST_SSH_CONCH="conch" \
+	TEST_SSH_IPV6="yes" \
+	TEST_SSH_UTF8="no" \
+	TEST_SHELL="sh" \
+	EXEEXT="" \
+	file-tests && echo all file-tests passed
+cd ./regress || exit $?; \
+EGREP='/usr/bin/grep -E' \
+make \
+	.CURDIR="/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress" \
+	.OBJDIR="/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress" \
+	BUILDDIR="/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1" \
+	OBJ="/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress" \
+	PATH="/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1:${PATH}" \
+	TEST_ENV=MALLOC_OPTIONS="" \
+	TEST_MALLOC_OPTIONS="" \
+	TEST_SSH_SCP="/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/scp" \
+	TEST_SSH_SSH="/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/ssh" \
+	TEST_SSH_SSHD="/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/sshd" \
+	TEST_SSH_SSHAGENT="/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/ssh-agent" \
+	TEST_SSH_SSHADD="/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/ssh-add" \
+	TEST_SSH_SSHKEYGEN="/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/ssh-keygen" \
+	TEST_SSH_SSHPKCS11HELPER="/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/ssh-pkcs11-helper" \
+	TEST_SSH_SSHKEYSCAN="/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/ssh-keyscan" \
+	TEST_SSH_SFTP="/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/sftp" \
+	TEST_SSH_PKCS11_HELPER="/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/ssh-pkcs11-helper" \
+	TEST_SSH_SK_HELPER="/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/ssh-sk-helper" \
+	TEST_SSH_SFTPSERVER="/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/sftp-server" \
+	TEST_SSH_MODULI_FILE="/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/moduli" \
+	TEST_SSH_PLINK="plink" \
+	TEST_SSH_PUTTYGEN="puttygen" \
+	TEST_SSH_CONCH="conch" \
+	TEST_SSH_IPV6="yes" \
+	TEST_SSH_UTF8="no" \
+	TEST_SHELL="sh" \
+	EXEEXT="" \
+	t-exec && echo all t-exec passed
+cd ./regress || exit $?; \
+EGREP='/usr/bin/grep -E' \
+make \
+	.CURDIR="/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress" \
+	.OBJDIR="/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress" \
+	BUILDDIR="/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1" \
+	OBJ="/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress" \
+	PATH="/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1:${PATH}" \
+	TEST_ENV=MALLOC_OPTIONS="" \
+	TEST_MALLOC_OPTIONS="" \
+	TEST_SSH_SCP="/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/scp" \
+	TEST_SSH_SSH="/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/ssh" \
+	TEST_SSH_SSHD="/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/sshd" \
+	TEST_SSH_SSHAGENT="/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/ssh-agent" \
+	TEST_SSH_SSHADD="/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/ssh-add" \
+	TEST_SSH_SSHKEYGEN="/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/ssh-keygen" \
+	TEST_SSH_SSHPKCS11HELPER="/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/ssh-pkcs11-helper" \
+	TEST_SSH_SSHKEYSCAN="/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/ssh-keyscan" \
+	TEST_SSH_SFTP="/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/sftp" \
+	TEST_SSH_PKCS11_HELPER="/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/ssh-pkcs11-helper" \
+	TEST_SSH_SK_HELPER="/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/ssh-sk-helper" \
+	TEST_SSH_SFTPSERVER="/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/sftp-server" \
+	TEST_SSH_MODULI_FILE="/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/moduli" \
+	TEST_SSH_PLINK="plink" \
+	TEST_SSH_PUTTYGEN="puttygen" \
+	TEST_SSH_CONCH="conch" \
+	TEST_SSH_IPV6="yes" \
+	TEST_SSH_UTF8="no" \
+	TEST_SHELL="sh" \
+	EXEEXT="" \
+	interop-tests && echo all interop-tests passed
+cd ./regress || exit $?; \
+make \
+	.CURDIR="/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress" \
+	.OBJDIR="/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress" \
+	OBJ="/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress" \
+	unit && echo unit tests passed
+make[1]: вход в каталог «/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress»
+/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/ssh-keygen -if /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/rsa_ssh2.prv | diff - /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/rsa_openssh.prv
+make[1]: вход в каталог «/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress»
+set -e ; if test -z "" ; then \
+	V="" ; \
+	test "x" = "x" || \
+	    V=/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/valgrind-unit.sh ; \
+	 $V /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/unittests/sshbuf/test_sshbuf ; \
+	 $V /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/unittests/sshkey/test_sshkey \
+		-d /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/unittests/sshkey/testdata ; \
+	$V /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/unittests/sshsig/test_sshsig \
+		-d /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/unittests/sshsig/testdata ; \
+	$V /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/unittests/authopt/test_authopt \
+		-d /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/unittests/authopt/testdata ; \
+	$V /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/unittests/bitmap/test_bitmap ; \
+	$V /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/unittests/conversion/test_conversion ; \
+	$V /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/unittests/kex/test_kex ; \
+	$V /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/unittests/hostkeys/test_hostkeys \
+		-d /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/unittests/hostkeys/testdata ; \
+	$V /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/unittests/match/test_match ; \
+	$V /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/unittests/misc/test_misc ; \
+	if test "x" = "xyes"  ; then \
+		$V /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/unittests/utf8/test_utf8 ; \
+	fi \
+fi
+make[1]: вход в каталог «/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress»
+make[1]: вход в каталог «/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress»
+run test putty-transfer.sh ...
+run test connect.sh ...
+test_sshbuf: .................................................................................................tr '\n' '\r' </home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/rsa_ssh2.prv > /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/rsa_ssh2_cr.prv
+/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/ssh-keygen -if /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/rsa_ssh2_cr.prv | diff - /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/rsa_openssh.prv
+awk '{print $0 "\r"}' /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/rsa_ssh2.prv > /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/rsa_ssh2_crnl.prv
+/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/ssh-keygen -if /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/rsa_ssh2_crnl.prv | diff - /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/rsa_openssh.prv
+cat /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/rsa_openssh.prv > /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/t2.out
+chmod 600 /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/t2.out
+/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/ssh-keygen -yf /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/t2.out | diff - /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/rsa_openssh.pub
+/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/ssh-keygen -ef /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/rsa_openssh.pub >/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/t3.out
+/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/ssh-keygen -if /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/t3.out | diff - /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/rsa_openssh.pub
+/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/ssh-keygen -E md5 -lf /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/rsa_openssh.pub |\
+	awk '{print $2}' | diff - /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/t4.ok
+/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/ssh-keygen -Bf /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/rsa_openssh.pub |\
+	awk '{print $2}' | diff - /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/t5.ok
+/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/ssh-keygen -if /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/dsa_ssh2.prv > /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/t6.out1
+/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/ssh-keygen -if /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/dsa_ssh2.pub > /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/t6.out2
+chmod 600 /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/t6.out1
+/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/ssh-keygen -yf /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/t6.out1 | diff - /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/t6.out2
+/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/ssh-keygen -lf /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/t7.out > /dev/null
+/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/ssh-keygen -Bf /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/t7.out > /dev/null
+/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/ssh-keygen -lf /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/t8.out > /dev/null
+/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/ssh-keygen -Bf /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/t8.out > /dev/null
+! /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/ssh -Q key-plain | grep ecdsa >/dev/null || \
+/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/ssh-keygen -lf /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/t9.out > /dev/null
+! /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/ssh -Q key-plain | grep ecdsa >/dev/null || \
+/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/ssh-keygen -Bf /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/t9.out > /dev/null
+/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/ssh-keygen -lf /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/t10.out > /dev/null
+/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/ssh-keygen -Bf /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/t10.out > /dev/null
+/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/ssh-keygen -E sha256 -lf /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/rsa_openssh.pub |\
+	awk '{print $2}' | diff - /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/t11.ok
+./home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/ssh-keygen -lf /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/t12.out.pub | grep test-comment-1234 >/dev/null
+make[1]: выход из каталога «/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress»
+all file-tests passed
+/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/ssh-rsa already exists.
+Overwrite (y/n)? ssh-keygen for ssh-rsa failed
+SKIPPED: putty interop tests not enabled
+make[1]: *** [Makefile:236: t-exec-interop] Ошибка 1
+make[1]: выход из каталога «/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress»
+make: *** [Makefile:723: interop-tests] Ошибка 2
+make: *** Ожидание завершения заданий…
+ok simple connect
+run test proxy-connect.sh ...
+plain username comp=no
+plain username comp=yes
+username with style
+ok proxy connect
+run test sshfp-connect.sh ...
+SKIPPED: TEST_SSH_SSHFP_DOMAIN not set.
+run test connect-privsep.sh ...
+ok proxy connect with privsep
+run test connect-uri.sh ...
+uri connect: no trailing slash
+uri connect: trailing slash
+uri connect: with path name
+ok uri connect
+run test proto-version.sh ...
+ok sshd version with different protocol combinations
+run test proto-mismatch.sh ...
+ok protocol version mismatch
+run test exit-status.sh ...
+test remote exit status: status 0
+test remote exit status: status 1
+.... 103 tests ok
+test_sshkey: ...................................................................................test remote exit status: status 4
+test remote exit status: status 5
+.test remote exit status: status 44
+ok remote exit status
+run test exit-status-signal.sh ...
+.ok exit status on signal
+run test envpass.sh ...
+test environment passing: pass env, don't accept
+.test environment passing: setenv, don't accept
+test environment passing: don't pass env, accept
+test environment passing: pass single env, accept single env
+test environment passing: pass multiple env, accept multiple env
+test environment passing: setenv, accept
+test environment passing: setenv, first match wins
+test environment passing: server setenv wins
+test environment passing: server setenv wins
+ok environment passing
+run test transfer.sh ...
+..ok transfer data
+run test banner.sh ...
+test banner: missing banner file
+test banner: size 0
+test banner: size 10
+test banner: size 100
+test banner: size 1000
+test banner: size 10000
+.test banner: size 100000
+..test banner: suppress banner (-q)
+ok banner
+run test rekey.sh ...
+client rekey KexAlgorithms=diffie-hellman-group1-sha1
+..client rekey KexAlgorithms=diffie-hellman-group14-sha1
+client rekey KexAlgorithms=diffie-hellman-group14-sha256
+....client rekey KexAlgorithms=diffie-hellman-group16-sha512
+......client rekey KexAlgorithms=diffie-hellman-group18-sha512
+. 104 tests ok
+test_sshsig: ........ 8 tests ok
+test_authopt: .................................................................................................................................................. 146 tests ok
+test_bitmap: .client rekey KexAlgorithms=diffie-hellman-group-exchange-sha1
+client rekey KexAlgorithms=diffie-hellman-group-exchange-sha256
+client rekey KexAlgorithms=ecdh-sha2-nistp256
+client rekey KexAlgorithms=ecdh-sha2-nistp384
+. 2 tests ok
+test_conversion: . 1 tests ok
+test_kex: ............................................................................................................................................................................................................................................................................................................................................................................................................ 396 tests ok
+test_hostkeys: .................. 18 tests ok
+test_match: ...... 6 tests ok
+test_misc: ..................................... 37 tests ok
+make[1]: выход из каталога «/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress»
+unit tests passed
+client rekey KexAlgorithms=ecdh-sha2-nistp521
+client rekey KexAlgorithms=curve25519-sha256
+client rekey KexAlgorithms=curve25519-sha256@libssh.org
+client rekey KexAlgorithms=sntrup761x25519-sha512@openssh.com
+client rekey Ciphers=3des-cbc
+client rekey Ciphers=aes128-cbc
+client rekey Ciphers=aes192-cbc
+client rekey Ciphers=aes256-cbc
+client rekey Ciphers=aes128-ctr
+client rekey Ciphers=aes192-ctr
+client rekey Ciphers=aes256-ctr
+client rekey Ciphers=aes128-gcm@openssh.com
+client rekey Ciphers=aes256-gcm@openssh.com
+client rekey Ciphers=chacha20-poly1305@openssh.com
+client rekey MACs=hmac-sha1
+client rekey MACs=hmac-sha1-96
+client rekey MACs=hmac-sha2-256
+client rekey MACs=hmac-sha2-512
+client rekey MACs=hmac-md5
+client rekey MACs=hmac-md5-96
+client rekey MACs=umac-64@openssh.com
+client rekey MACs=umac-128@openssh.com
+client rekey MACs=hmac-sha1-etm@openssh.com
+client rekey MACs=hmac-sha1-96-etm@openssh.com
+client rekey MACs=hmac-sha2-256-etm@openssh.com
+client rekey MACs=hmac-sha2-512-etm@openssh.com
+client rekey MACs=hmac-md5-etm@openssh.com
+client rekey MACs=hmac-md5-96-etm@openssh.com
+client rekey MACs=umac-64-etm@openssh.com
+client rekey MACs=umac-128-etm@openssh.com
+client rekey aes128-gcm@openssh.com diffie-hellman-group1-sha1
+client rekey aes128-gcm@openssh.com diffie-hellman-group14-sha1
+client rekey aes128-gcm@openssh.com diffie-hellman-group14-sha256
+client rekey aes128-gcm@openssh.com diffie-hellman-group16-sha512
+client rekey aes128-gcm@openssh.com diffie-hellman-group18-sha512
+client rekey aes128-gcm@openssh.com diffie-hellman-group-exchange-sha1
+client rekey aes128-gcm@openssh.com diffie-hellman-group-exchange-sha256
+client rekey aes128-gcm@openssh.com ecdh-sha2-nistp256
+client rekey aes128-gcm@openssh.com ecdh-sha2-nistp384
+client rekey aes128-gcm@openssh.com ecdh-sha2-nistp521
+client rekey aes128-gcm@openssh.com curve25519-sha256
+client rekey aes128-gcm@openssh.com curve25519-sha256@libssh.org
+client rekey aes128-gcm@openssh.com sntrup761x25519-sha512@openssh.com
+client rekey aes256-gcm@openssh.com diffie-hellman-group1-sha1
+client rekey aes256-gcm@openssh.com diffie-hellman-group14-sha1
+client rekey aes256-gcm@openssh.com diffie-hellman-group14-sha256
+client rekey aes256-gcm@openssh.com diffie-hellman-group16-sha512
+client rekey aes256-gcm@openssh.com diffie-hellman-group18-sha512
+client rekey aes256-gcm@openssh.com diffie-hellman-group-exchange-sha1
+client rekey aes256-gcm@openssh.com diffie-hellman-group-exchange-sha256
+client rekey aes256-gcm@openssh.com ecdh-sha2-nistp256
+client rekey aes256-gcm@openssh.com ecdh-sha2-nistp384
+client rekey aes256-gcm@openssh.com ecdh-sha2-nistp521
+client rekey aes256-gcm@openssh.com curve25519-sha256
+client rekey aes256-gcm@openssh.com curve25519-sha256@libssh.org
+client rekey aes256-gcm@openssh.com sntrup761x25519-sha512@openssh.com
+client rekey chacha20-poly1305@openssh.com diffie-hellman-group1-sha1
+client rekey chacha20-poly1305@openssh.com diffie-hellman-group14-sha1
+client rekey chacha20-poly1305@openssh.com diffie-hellman-group14-sha256
+client rekey chacha20-poly1305@openssh.com diffie-hellman-group16-sha512
+client rekey chacha20-poly1305@openssh.com diffie-hellman-group18-sha512
+client rekey chacha20-poly1305@openssh.com diffie-hellman-group-exchange-sha1
+client rekey chacha20-poly1305@openssh.com diffie-hellman-group-exchange-sha256
+client rekey chacha20-poly1305@openssh.com ecdh-sha2-nistp256
+client rekey chacha20-poly1305@openssh.com ecdh-sha2-nistp384
+client rekey chacha20-poly1305@openssh.com ecdh-sha2-nistp521
+client rekey chacha20-poly1305@openssh.com curve25519-sha256
+client rekey chacha20-poly1305@openssh.com curve25519-sha256@libssh.org
+client rekey chacha20-poly1305@openssh.com sntrup761x25519-sha512@openssh.com
+client rekeylimit 16
+client rekeylimit 1k
+client rekeylimit 128k
+client rekeylimit 256k
+client rekeylimit default 5
+client rekeylimit default 10
+client rekeylimit default 5 no data
+client rekeylimit default 10 no data
+server rekeylimit 16
+server rekeylimit 1k
+server rekeylimit 128k
+server rekeylimit 256k
+server rekeylimit default 5 no data
+server rekeylimit default 10 no data
+rekeylimit parsing
+ok rekey
+run test dhgex.sh ...
+run test stderr-data.sh ...
+test stderr data transfer: ()
+test stderr data transfer: (-n)
+ok stderr data transfer
+run test stderr-after-eof.sh ...
+ok stderr data after eof
+run test broken-pipe.sh ...
+ok broken pipe test
+run test try-ciphers.sh ...
+test try ciphers: cipher 3des-cbc mac hmac-sha1
+test try ciphers: cipher 3des-cbc mac hmac-sha1-96
+test try ciphers: cipher 3des-cbc mac hmac-sha2-256
+test try ciphers: cipher 3des-cbc mac hmac-sha2-512
+test try ciphers: cipher 3des-cbc mac hmac-md5
+test try ciphers: cipher 3des-cbc mac hmac-md5-96
+test try ciphers: cipher 3des-cbc mac umac-64@openssh.com
+test try ciphers: cipher 3des-cbc mac umac-128@openssh.com
+test try ciphers: cipher 3des-cbc mac hmac-sha1-etm@openssh.com
+test try ciphers: cipher 3des-cbc mac hmac-sha1-96-etm@openssh.com
+test try ciphers: cipher 3des-cbc mac hmac-sha2-256-etm@openssh.com
+test try ciphers: cipher 3des-cbc mac hmac-sha2-512-etm@openssh.com
+test try ciphers: cipher 3des-cbc mac hmac-md5-etm@openssh.com
+test try ciphers: cipher 3des-cbc mac hmac-md5-96-etm@openssh.com
+test try ciphers: cipher 3des-cbc mac umac-64-etm@openssh.com
+test try ciphers: cipher 3des-cbc mac umac-128-etm@openssh.com
+test try ciphers: cipher aes128-cbc mac hmac-sha1
+test try ciphers: cipher aes128-cbc mac hmac-sha1-96
+test try ciphers: cipher aes128-cbc mac hmac-sha2-256
+test try ciphers: cipher aes128-cbc mac hmac-sha2-512
+test try ciphers: cipher aes128-cbc mac hmac-md5
+test try ciphers: cipher aes128-cbc mac hmac-md5-96
+test try ciphers: cipher aes128-cbc mac umac-64@openssh.com
+test try ciphers: cipher aes128-cbc mac umac-128@openssh.com
+test try ciphers: cipher aes128-cbc mac hmac-sha1-etm@openssh.com
+test try ciphers: cipher aes128-cbc mac hmac-sha1-96-etm@openssh.com
+test try ciphers: cipher aes128-cbc mac hmac-sha2-256-etm@openssh.com
+test try ciphers: cipher aes128-cbc mac hmac-sha2-512-etm@openssh.com
+test try ciphers: cipher aes128-cbc mac hmac-md5-etm@openssh.com
+test try ciphers: cipher aes128-cbc mac hmac-md5-96-etm@openssh.com
+test try ciphers: cipher aes128-cbc mac umac-64-etm@openssh.com
+test try ciphers: cipher aes128-cbc mac umac-128-etm@openssh.com
+test try ciphers: cipher aes192-cbc mac hmac-sha1
+test try ciphers: cipher aes192-cbc mac hmac-sha1-96
+test try ciphers: cipher aes192-cbc mac hmac-sha2-256
+test try ciphers: cipher aes192-cbc mac hmac-sha2-512
+test try ciphers: cipher aes192-cbc mac hmac-md5
+test try ciphers: cipher aes192-cbc mac hmac-md5-96
+test try ciphers: cipher aes192-cbc mac umac-64@openssh.com
+test try ciphers: cipher aes192-cbc mac umac-128@openssh.com
+test try ciphers: cipher aes192-cbc mac hmac-sha1-etm@openssh.com
+test try ciphers: cipher aes192-cbc mac hmac-sha1-96-etm@openssh.com
+test try ciphers: cipher aes192-cbc mac hmac-sha2-256-etm@openssh.com
+test try ciphers: cipher aes192-cbc mac hmac-sha2-512-etm@openssh.com
+test try ciphers: cipher aes192-cbc mac hmac-md5-etm@openssh.com
+test try ciphers: cipher aes192-cbc mac hmac-md5-96-etm@openssh.com
+test try ciphers: cipher aes192-cbc mac umac-64-etm@openssh.com
+test try ciphers: cipher aes192-cbc mac umac-128-etm@openssh.com
+test try ciphers: cipher aes256-cbc mac hmac-sha1
+test try ciphers: cipher aes256-cbc mac hmac-sha1-96
+test try ciphers: cipher aes256-cbc mac hmac-sha2-256
+test try ciphers: cipher aes256-cbc mac hmac-sha2-512
+test try ciphers: cipher aes256-cbc mac hmac-md5
+test try ciphers: cipher aes256-cbc mac hmac-md5-96
+test try ciphers: cipher aes256-cbc mac umac-64@openssh.com
+test try ciphers: cipher aes256-cbc mac umac-128@openssh.com
+test try ciphers: cipher aes256-cbc mac hmac-sha1-etm@openssh.com
+test try ciphers: cipher aes256-cbc mac hmac-sha1-96-etm@openssh.com
+test try ciphers: cipher aes256-cbc mac hmac-sha2-256-etm@openssh.com
+test try ciphers: cipher aes256-cbc mac hmac-sha2-512-etm@openssh.com
+test try ciphers: cipher aes256-cbc mac hmac-md5-etm@openssh.com
+test try ciphers: cipher aes256-cbc mac hmac-md5-96-etm@openssh.com
+test try ciphers: cipher aes256-cbc mac umac-64-etm@openssh.com
+test try ciphers: cipher aes256-cbc mac umac-128-etm@openssh.com
+test try ciphers: cipher aes128-ctr mac hmac-sha1
+test try ciphers: cipher aes128-ctr mac hmac-sha1-96
+test try ciphers: cipher aes128-ctr mac hmac-sha2-256
+test try ciphers: cipher aes128-ctr mac hmac-sha2-512
+test try ciphers: cipher aes128-ctr mac hmac-md5
+test try ciphers: cipher aes128-ctr mac hmac-md5-96
+test try ciphers: cipher aes128-ctr mac umac-64@openssh.com
+test try ciphers: cipher aes128-ctr mac umac-128@openssh.com
+test try ciphers: cipher aes128-ctr mac hmac-sha1-etm@openssh.com
+test try ciphers: cipher aes128-ctr mac hmac-sha1-96-etm@openssh.com
+test try ciphers: cipher aes128-ctr mac hmac-sha2-256-etm@openssh.com
+test try ciphers: cipher aes128-ctr mac hmac-sha2-512-etm@openssh.com
+test try ciphers: cipher aes128-ctr mac hmac-md5-etm@openssh.com
+test try ciphers: cipher aes128-ctr mac hmac-md5-96-etm@openssh.com
+test try ciphers: cipher aes128-ctr mac umac-64-etm@openssh.com
+test try ciphers: cipher aes128-ctr mac umac-128-etm@openssh.com
+test try ciphers: cipher aes192-ctr mac hmac-sha1
+test try ciphers: cipher aes192-ctr mac hmac-sha1-96
+test try ciphers: cipher aes192-ctr mac hmac-sha2-256
+test try ciphers: cipher aes192-ctr mac hmac-sha2-512
+test try ciphers: cipher aes192-ctr mac hmac-md5
+test try ciphers: cipher aes192-ctr mac hmac-md5-96
+test try ciphers: cipher aes192-ctr mac umac-64@openssh.com
+test try ciphers: cipher aes192-ctr mac umac-128@openssh.com
+test try ciphers: cipher aes192-ctr mac hmac-sha1-etm@openssh.com
+test try ciphers: cipher aes192-ctr mac hmac-sha1-96-etm@openssh.com
+test try ciphers: cipher aes192-ctr mac hmac-sha2-256-etm@openssh.com
+test try ciphers: cipher aes192-ctr mac hmac-sha2-512-etm@openssh.com
+test try ciphers: cipher aes192-ctr mac hmac-md5-etm@openssh.com
+test try ciphers: cipher aes192-ctr mac hmac-md5-96-etm@openssh.com
+test try ciphers: cipher aes192-ctr mac umac-64-etm@openssh.com
+test try ciphers: cipher aes192-ctr mac umac-128-etm@openssh.com
+test try ciphers: cipher aes256-ctr mac hmac-sha1
+test try ciphers: cipher aes256-ctr mac hmac-sha1-96
+test try ciphers: cipher aes256-ctr mac hmac-sha2-256
+test try ciphers: cipher aes256-ctr mac hmac-sha2-512
+test try ciphers: cipher aes256-ctr mac hmac-md5
+test try ciphers: cipher aes256-ctr mac hmac-md5-96
+test try ciphers: cipher aes256-ctr mac umac-64@openssh.com
+test try ciphers: cipher aes256-ctr mac umac-128@openssh.com
+test try ciphers: cipher aes256-ctr mac hmac-sha1-etm@openssh.com
+test try ciphers: cipher aes256-ctr mac hmac-sha1-96-etm@openssh.com
+test try ciphers: cipher aes256-ctr mac hmac-sha2-256-etm@openssh.com
+test try ciphers: cipher aes256-ctr mac hmac-sha2-512-etm@openssh.com
+test try ciphers: cipher aes256-ctr mac hmac-md5-etm@openssh.com
+test try ciphers: cipher aes256-ctr mac hmac-md5-96-etm@openssh.com
+test try ciphers: cipher aes256-ctr mac umac-64-etm@openssh.com
+test try ciphers: cipher aes256-ctr mac umac-128-etm@openssh.com
+test try ciphers: cipher aes128-gcm@openssh.com mac hmac-sha1
+test try ciphers: cipher aes256-gcm@openssh.com mac hmac-sha1
+test try ciphers: cipher chacha20-poly1305@openssh.com mac hmac-sha1
+ok try ciphers
+run test yes-head.sh ...
+ok yes pipe head
+run test login-timeout.sh ...
+ok connect after login grace timeout
+run test agent.sh ...
+ok simple agent test
+run test agent-getpeereid.sh ...
+SKIPPED: skipped (running as root)
+run test agent-timeout.sh ...
+ok agent timeout test
+run test agent-ptrace.sh ...
+Skipped: running as root
+run test agent-subprocess.sh ...
+ok agent subprocess
+run test keyscan.sh ...
+ok keyscan
+run test keygen-change.sh ...
+ok change passphrase for key
+run test keygen-comment.sh ...
+ok Comment extraction from private key
+run test keygen-convert.sh ...
+ok convert keys
+run test keygen-knownhosts.sh ...
+/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/kh.hosts updated.
+Original contents retained as /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/kh.hosts.old
+/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/kh.hosts updated.
+Original contents retained as /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/kh.hosts.old
+/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/kh.hosts updated.
+Original contents retained as /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/kh.hosts.old
+/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/kh.hosts updated.
+Original contents retained as /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/kh.hosts.old
+/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/kh.hashed updated.
+Original contents retained as /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/kh.hashed.old
+ok ssh-keygen known_hosts
+run test keygen-moduli.sh ...
+ok keygen moduli
+run test keygen-sshfp.sh ...
+ok keygen-sshfp
+run test key-options.sh ...
+key option command="echo bar"
+key option no-pty,command="echo bar"
+key option pty default
+key option pty no-pty
+key option pty restrict
+key option pty restrict,pty
+key option environment
+key option from="127.0.0.1"
+key option from="127.0.0.0/8"
+key option expiry-time default
+key option expiry-time invalid
+key option expiry-time expired
+key option expiry-time valid
+ok key options
+run test scp.sh ...
+tid: simple copy local file to local file
+scp: scp mode: simple copy local file to remote file
+scp: scp mode: simple copy remote file to local file
+scp: scp mode: copy local file to remote file in place
+scp: scp mode: copy remote file to local file in place
+scp: scp mode: copy local file to remote file clobber
+-rw-r--r-- 1 root root 1435344 мая  1 16:58 /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/copy
+-rw-r--r-- 1 root root 1435344 мая  1 16:58 /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/data
+scp: scp mode: copy remote file to local file clobber
+scp: scp mode: simple copy local file to remote dir
+scp: scp mode: simple copy local file to local dir
+scp: scp mode: simple copy remote file to local dir
+scp: scp mode: recursive local dir to remote dir
+scp: scp mode: recursive local dir to local dir
+scp: scp mode: recursive remote dir to local dir
+scp: scp mode: shell metacharacters
+scp: scp mode: disallow bad server #0
+scp: scp mode: disallow bad server #1
+scp: scp mode: disallow bad server #2
+scp: scp mode: disallow bad server #3
+scp: scp mode: disallow bad server #4
+scp: scp mode: disallow bad server #5
+scp: scp mode: disallow bad server #6
+scp: scp mode: disallow bad server #7
+scp: scp mode: detect non-directory target
+/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/copy2: Not a directory
+tid: simple copy local file to local file
+scp: sftp mode: simple copy local file to remote file
+scp: sftp mode: simple copy remote file to local file
+scp: sftp mode: copy local file to remote file in place
+scp: sftp mode: copy remote file to local file in place
+scp: sftp mode: copy local file to remote file clobber
+-rw-r--r-- 1 root root 1435344 мая  1 16:58 /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/copy
+-rw-r--r-- 1 root root 1435344 мая  1 16:58 /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/data
+scp: sftp mode: copy remote file to local file clobber
+scp: sftp mode: simple copy local file to remote dir
+scp: sftp mode: simple copy local file to local dir
+scp: sftp mode: simple copy remote file to local dir
+scp: sftp mode: recursive local dir to remote dir
+scp: sftp mode: recursive local dir to local dir
+scp: sftp mode: recursive remote dir to local dir
+scp: sftp mode: shell metacharacters
+scp: sftp mode: disallow bad server #0
+scp: sftp mode: disallow bad server #1
+scp: sftp mode: disallow bad server #2
+scp: sftp mode: disallow bad server #3
+scp: sftp mode: disallow bad server #4
+scp: sftp mode: disallow bad server #5
+scp: sftp mode: disallow bad server #6
+scp: sftp mode: disallow bad server #7
+scp: sftp mode: detect non-directory target
+/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/copy2: Not a directory
+ok scp
+run test scp3.sh ...
+scp3: scp mode: simple copy remote file to remote file
+scp3: scp mode: simple copy remote file to remote dir
+scp3: scp mode: recursive remote dir to remote dir
+scp3: scp mode: detect non-directory target
+scp3: sftp mode: simple copy remote file to remote file
+scp3: sftp mode: simple copy remote file to remote dir
+scp3: sftp mode: recursive remote dir to remote dir
+scp3: sftp mode: detect non-directory target
+/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/scp: /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/copy2: destination is not a directory
+/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/scp: /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress/copy2: destination is not a directory
+ok scp3
+run test scp-uri.sh ...
+scp-uri: scp mode: simple copy local file to remote file
+scp-uri: scp mode: simple copy remote file to local file
+scp-uri: scp mode: simple copy local file to remote dir
+scp-uri: scp mode: simple copy remote file to local dir
+scp-uri: scp mode: recursive local dir to remote dir
+scp-uri: scp mode: recursive remote dir to local dir
+scp-uri: sftp mode: simple copy local file to remote file
+scp-uri: sftp mode: simple copy remote file to local file
+scp-uri: sftp mode: simple copy local file to remote dir
+scp-uri: sftp mode: simple copy remote file to local dir
+scp-uri: sftp mode: recursive local dir to remote dir
+scp-uri: sftp mode: recursive remote dir to local dir
+ok scp-uri
+run test sftp.sh ...
+test basic sftp put/get: buffer_size 5 num_requests 1
+test basic sftp put/get: buffer_size 5 num_requests 2
+test basic sftp put/get: buffer_size 5 num_requests 10
+test basic sftp put/get: buffer_size 1000 num_requests 1
+test basic sftp put/get: buffer_size 1000 num_requests 2
+test basic sftp put/get: buffer_size 1000 num_requests 10
+test basic sftp put/get: buffer_size 32000 num_requests 1
+test basic sftp put/get: buffer_size 32000 num_requests 2
+test basic sftp put/get: buffer_size 32000 num_requests 10
+test basic sftp put/get: buffer_size 64000 num_requests 1
+test basic sftp put/get: buffer_size 64000 num_requests 2
+test basic sftp put/get: buffer_size 64000 num_requests 10
+ok basic sftp put/get
+run test sftp-chroot.sh ...
+test sftp in chroot: get
+ok sftp in chroot
+run test sftp-cmds.sh ...
+sftp commands: lls
+sftp commands: lls w/path
+sftp commands: ls
+sftp commands: shell
+sftp commands: pwd
+sftp commands: lpwd
+sftp commands: quit
+sftp commands: help
+sftp commands: get
+sftp commands: get quoted
+sftp commands: get filename with quotes
+sftp commands: get filename with spaces
+sftp commands: get filename with glob metacharacters
+sftp commands: get to directory
+sftp commands: glob get to directory
+sftp commands: get to local dir
+sftp commands: glob get to local dir
+sftp commands: put
+sftp commands: put filename with quotes
+sftp commands: put filename with spaces
+sftp commands: put to directory
+sftp commands: glob put to directory
+sftp commands: put to local dir
+sftp commands: glob put to local dir
+sftp commands: rename
+sftp commands: rename directory
+sftp commands: ln
+sftp commands: ln -s
+sftp commands: cp
+sftp commands: mkdir
+sftp commands: chdir
+sftp commands: rmdir
+sftp commands: lmkdir
+sftp commands: lchdir
+ok sftp commands
+run test sftp-badcmds.sh ...
+sftp invalid commands: get nonexistent
+sftp invalid commands: glob get to nonexistent directory
+sftp invalid commands: put nonexistent
+sftp invalid commands: glob put to nonexistent directory
+sftp invalid commands: rename nonexistent
+sftp invalid commands: rename target exists (directory)
+sftp invalid commands: glob put files to local file
+ok sftp invalid commands
+run test sftp-batch.sh ...
+sftp batchfile: good commands
+sftp batchfile: bad commands
+sftp batchfile: comments and blanks
+sftp batchfile: junk command
+ok sftp batchfile
+run test sftp-glob.sh ...
+sftp glob: file glob
+sftp glob: dir glob
+sftp glob: quoted glob
+sftp glob: escaped glob
+sftp glob: escaped quote
+sftp glob: quoted quote
+sftp glob: single-quoted quote
+sftp glob: escaped space
+sftp glob: quoted space
+sftp glob: escaped slash
+sftp glob: quoted slash
+sftp glob: escaped slash at EOL
+sftp glob: quoted slash at EOL
+sftp glob: escaped slash+quote
+sftp glob: quoted slash+quote
+ok sftp glob
+run test sftp-perm.sh ...
+sftp permissions: read-only upload
+sftp permissions: read-only setstat
+sftp permissions: read-only rm
+sftp permissions: read-only mkdir
+sftp permissions: read-only rmdir
+sftp permissions: read-only posix-rename
+sftp permissions: read-only oldrename
+sftp permissions: read-only symlink
+sftp permissions: read-only hardlink
+sftp permissions: explicit open
+sftp permissions: explicit read
+sftp permissions: explicit write
+sftp permissions: explicit lstat
+sftp permissions: explicit opendir
+sftp permissions: explicit readdir
+sftp permissions: explicit setstat
+sftp permissions: explicit remove
+sftp permissions: explicit mkdir
+sftp permissions: explicit rmdir
+sftp permissions: explicit rename
+sftp permissions: explicit symlink
+sftp permissions: explicit hardlink
+sftp permissions: explicit statvfs
+ok sftp permissions
+run test sftp-uri.sh ...
+sftp-uri: non-interactive fetch to local file
+sftp-uri: non-interactive fetch to local dir
+sftp-uri: put to remote directory (trailing slash)
+sftp-uri: put to remote directory (no slash)
+ok sftp-uri
+run test reconfigure.sh ...
+ok simple connect after reconfigure
+run test dynamic-forward.sh ...
+skipped (no suitable ProxyCommand found)
+run test forwarding.sh ...
+ok local and remote forwarding
+run test multiplex.sh ...
+test connection multiplexing: setenv
+test connection multiplexing: envpass
+test connection multiplexing: transfer
+test connection multiplexing: forward
+test connection multiplexing: status 0 ()
+test connection multiplexing: status 0 (-Oproxy)
+test connection multiplexing: status 1 ()
+test connection multiplexing: status 1 (-Oproxy)
+test connection multiplexing: status 4 ()
+test connection multiplexing: status 4 (-Oproxy)
+test connection multiplexing: status 5 ()
+test connection multiplexing: status 5 (-Oproxy)
+test connection multiplexing: status 44 ()
+test connection multiplexing: status 44 (-Oproxy)
+test connection multiplexing: cmd check
+test connection multiplexing: cmd forward local (TCP)
+test connection multiplexing: cmd forward remote (TCP)
+test connection multiplexing: cmd forward local (UNIX)
+test connection multiplexing: cmd forward remote (UNIX)
+test connection multiplexing: cmd exit
+test connection multiplexing: cmd stop
+ok connection multiplexing
+run test reexec.sh ...
+test config passing
+test reexec fallback
+ok reexec tests
+run test brokenkeys.sh ...
+ok broken keys
+run test sshcfgparse.sh ...
+reparse minimal config
+ssh -W opts
+user first match
+pubkeyacceptedalgorithms
+agentforwarding
+command line override
+ok ssh config parse
+run test cfgparse.sh ...
+reparse minimal config
+reparse regress config
+listenaddress order
+ok sshd config parse
+run test cfgmatch.sh ...
+ok sshd_config match
+run test cfgmatchlisten.sh ...
+ok sshd_config matchlisten
+run test percent.sh ...
+percent expansions matchexec percent
+percent expansions localcommand percent
+percent expansions remotecommand percent
+percent expansions controlpath percent
+percent expansions identityagent percent
+percent expansions forwardagent percent
+percent expansions localforward percent
+percent expansions remoteforward percent
+percent expansions userknownhostsfile percent
+percent expansions controlpath dollar
+percent expansions identityagent dollar
+percent expansions forwardagent dollar
+percent expansions localforward dollar
+percent expansions remoteforward dollar
+percent expansions userknownhostsfile dollar
+percent expansions controlpath tilde
+percent expansions identityagent tilde
+percent expansions forwardagent tilde
+ok percent expansions
+run test addrmatch.sh ...
+test first entry for user 192.168.0.1 somehost
+test negative match for user 192.168.30.1 somehost
+test no match for user 19.0.0.1 somehost
+test list middle for user 10.255.255.254 somehost
+test faked IP in hostname for user 192.168.30.1 192.168.0.1
+test bare IP4 address for user 1.1.1.1 somehost.example.com
+test localaddress for user 19.0.0.1 somehost
+test localport for user 19.0.0.1 somehost
+test bare IP6 address for user ::1 somehost.example.com
+test deny IPv6 for user ::2 somehost.example.com
+test IP6 negated for user ::3 somehost
+test IP6 no match for user ::4 somehost
+test IP6 network for user 2000::1 somehost
+test IP6 network for user 2001::1 somehost
+test IP6 localaddress for user ::5 somehost
+test IP6 localport for user ::5 somehost
+test invalid Match address 10.0.1.0/8
+test invalid Match localaddress 10.0.1.0/8
+test invalid Match address 10.0.0.1/24
+test invalid Match localaddress 10.0.0.1/24
+test invalid Match address 2000:aa:bb:01::/56
+test invalid Match localaddress 2000:aa:bb:01::/56
+ok address match
+run test localcommand.sh ...
+test localcommand: proto  localcommand
+ok localcommand
+run test forcecommand.sh ...
+ok forced command
+run test portnum.sh ...
+port number parsing: invalid port 0
+port number parsing: invalid port 65536
+port number parsing: invalid port 131073
+port number parsing: invalid port 2000blah
+port number parsing: invalid port blah2000
+port number parsing: valid port 1
+port number parsing: valid port 22
+port number parsing: valid port 2222
+port number parsing: valid port 22222
+port number parsing: valid port 65535
+ok port number parsing
+run test keytype.sh ...
+keygen ed25519, 512 bits
+keygen ed25519-sk, n/a bits
+keygen rsa, 2048 bits
+keygen rsa, 3072 bits
+keygen dsa, 1024 bits
+keygen ecdsa, 256 bits
+keygen ecdsa, 384 bits
+keygen ecdsa, 521 bits
+keygen ecdsa-sk, n/a bits
+userkey ed25519-512, hostkey ed25519-512
+userkey ed25519-512, hostkey ed25519-512
+userkey ed25519-512, hostkey ed25519-512
+userkey ed25519-sk, hostkey ed25519-sk
+userkey ed25519-sk, hostkey ed25519-sk
+userkey ed25519-sk, hostkey ed25519-sk
+userkey rsa-2048, hostkey rsa-2048
+userkey rsa-2048, hostkey rsa-2048
+userkey rsa-2048, hostkey rsa-2048
+userkey rsa-3072, hostkey rsa-3072
+userkey rsa-3072, hostkey rsa-3072
+userkey rsa-3072, hostkey rsa-3072
+userkey dsa-1024, hostkey dsa-1024
+userkey dsa-1024, hostkey dsa-1024
+userkey dsa-1024, hostkey dsa-1024
+userkey ecdsa-256, hostkey ecdsa-256
+userkey ecdsa-256, hostkey ecdsa-256
+userkey ecdsa-256, hostkey ecdsa-256
+userkey ecdsa-384, hostkey ecdsa-384
+userkey ecdsa-384, hostkey ecdsa-384
+userkey ecdsa-384, hostkey ecdsa-384
+userkey ecdsa-521, hostkey ecdsa-521
+userkey ecdsa-521, hostkey ecdsa-521
+userkey ecdsa-521, hostkey ecdsa-521
+userkey ecdsa-sk, hostkey ecdsa-sk
+userkey ecdsa-sk, hostkey ecdsa-sk
+userkey ecdsa-sk, hostkey ecdsa-sk
+ok login with different key types
+run test kextype.sh ...
+run test cert-hostkey.sh ...
+run test cert-userkey.sh ...
+certified user keys: sign user ed25519 cert
+certified user keys: sign user sk-ssh-ed25519@openssh.com cert
+certified user keys: sign user rsa cert
+certified user keys: sign user dsa cert
+certified user keys: sign user ecdsa-sha2-nistp256 cert
+certified user keys: sign user ecdsa-sha2-nistp384 cert
+certified user keys: sign user ecdsa-sha2-nistp521 cert
+certified user keys: sign user sk-ecdsa-sha2-nistp256@openssh.com cert
+certified user keys: sign user rsa-sha2-256 cert
+certified user keys: sign user rsa-sha2-512 cert
+certified user keys: ed25519 missing authorized_principals
+certified user keys: ed25519 empty authorized_principals
+certified user keys: ed25519 wrong authorized_principals
+certified user keys: ed25519 correct authorized_principals
+certified user keys: ed25519 authorized_principals bad key opt
+certified user keys: ed25519 authorized_principals command=false
+certified user keys: ed25519 authorized_principals command=true
+certified user keys: ed25519 wrong principals key option
+certified user keys: ed25519 correct principals key option
+certified user keys: sk-ssh-ed25519@openssh.com missing authorized_principals
+certified user keys: sk-ssh-ed25519@openssh.com empty authorized_principals
+certified user keys: sk-ssh-ed25519@openssh.com wrong authorized_principals
+certified user keys: sk-ssh-ed25519@openssh.com correct authorized_principals
+certified user keys: sk-ssh-ed25519@openssh.com authorized_principals bad key opt
+certified user keys: sk-ssh-ed25519@openssh.com authorized_principals command=false
+certified user keys: sk-ssh-ed25519@openssh.com authorized_principals command=true
+certified user keys: sk-ssh-ed25519@openssh.com wrong principals key option
+certified user keys: sk-ssh-ed25519@openssh.com correct principals key option
+certified user keys: rsa missing authorized_principals
+certified user keys: rsa empty authorized_principals
+certified user keys: rsa wrong authorized_principals
+certified user keys: rsa correct authorized_principals
+certified user keys: rsa authorized_principals bad key opt
+certified user keys: rsa authorized_principals command=false
+certified user keys: rsa authorized_principals command=true
+certified user keys: rsa wrong principals key option
+certified user keys: rsa correct principals key option
+certified user keys: dsa missing authorized_principals
+certified user keys: dsa empty authorized_principals
+certified user keys: dsa wrong authorized_principals
+certified user keys: dsa correct authorized_principals
+certified user keys: dsa authorized_principals bad key opt
+certified user keys: dsa authorized_principals command=false
+certified user keys: dsa authorized_principals command=true
+certified user keys: dsa wrong principals key option
+certified user keys: dsa correct principals key option
+certified user keys: ecdsa-sha2-nistp256 missing authorized_principals
+certified user keys: ecdsa-sha2-nistp256 empty authorized_principals
+certified user keys: ecdsa-sha2-nistp256 wrong authorized_principals
+certified user keys: ecdsa-sha2-nistp256 correct authorized_principals
+certified user keys: ecdsa-sha2-nistp256 authorized_principals bad key opt
+certified user keys: ecdsa-sha2-nistp256 authorized_principals command=false
+certified user keys: ecdsa-sha2-nistp256 authorized_principals command=true
+certified user keys: ecdsa-sha2-nistp256 wrong principals key option
+certified user keys: ecdsa-sha2-nistp256 correct principals key option
+certified user keys: ecdsa-sha2-nistp384 missing authorized_principals
+certified user keys: ecdsa-sha2-nistp384 empty authorized_principals
+certified user keys: ecdsa-sha2-nistp384 wrong authorized_principals
+certified user keys: ecdsa-sha2-nistp384 correct authorized_principals
+certified user keys: ecdsa-sha2-nistp384 authorized_principals bad key opt
+certified user keys: ecdsa-sha2-nistp384 authorized_principals command=false
+certified user keys: ecdsa-sha2-nistp384 authorized_principals command=true
+certified user keys: ecdsa-sha2-nistp384 wrong principals key option
+certified user keys: ecdsa-sha2-nistp384 correct principals key option
+certified user keys: ecdsa-sha2-nistp521 missing authorized_principals
+certified user keys: ecdsa-sha2-nistp521 empty authorized_principals
+certified user keys: ecdsa-sha2-nistp521 wrong authorized_principals
+certified user keys: ecdsa-sha2-nistp521 correct authorized_principals
+certified user keys: ecdsa-sha2-nistp521 authorized_principals bad key opt
+certified user keys: ecdsa-sha2-nistp521 authorized_principals command=false
+certified user keys: ecdsa-sha2-nistp521 authorized_principals command=true
+certified user keys: ecdsa-sha2-nistp521 wrong principals key option
+certified user keys: ecdsa-sha2-nistp521 correct principals key option
+certified user keys: sk-ecdsa-sha2-nistp256@openssh.com missing authorized_principals
+certified user keys: sk-ecdsa-sha2-nistp256@openssh.com empty authorized_principals
+certified user keys: sk-ecdsa-sha2-nistp256@openssh.com wrong authorized_principals
+certified user keys: sk-ecdsa-sha2-nistp256@openssh.com correct authorized_principals
+certified user keys: sk-ecdsa-sha2-nistp256@openssh.com authorized_principals bad key opt
+certified user keys: sk-ecdsa-sha2-nistp256@openssh.com authorized_principals command=false
+certified user keys: sk-ecdsa-sha2-nistp256@openssh.com authorized_principals command=true
+certified user keys: sk-ecdsa-sha2-nistp256@openssh.com wrong principals key option
+certified user keys: sk-ecdsa-sha2-nistp256@openssh.com correct principals key option
+certified user keys: rsa-sha2-256 missing authorized_principals
+certified user keys: rsa-sha2-256 empty authorized_principals
+certified user keys: rsa-sha2-256 wrong authorized_principals
+certified user keys: rsa-sha2-256 correct authorized_principals
+certified user keys: rsa-sha2-256 authorized_principals bad key opt
+certified user keys: rsa-sha2-256 authorized_principals command=false
+certified user keys: rsa-sha2-256 authorized_principals command=true
+certified user keys: rsa-sha2-256 wrong principals key option
+certified user keys: rsa-sha2-256 correct principals key option
+certified user keys: rsa-sha2-512 missing authorized_principals
+certified user keys: rsa-sha2-512 empty authorized_principals
+certified user keys: rsa-sha2-512 wrong authorized_principals
+certified user keys: rsa-sha2-512 correct authorized_principals
+certified user keys: rsa-sha2-512 authorized_principals bad key opt
+certified user keys: rsa-sha2-512 authorized_principals command=false
+certified user keys: rsa-sha2-512 authorized_principals command=true
+certified user keys: rsa-sha2-512 wrong principals key option
+certified user keys: rsa-sha2-512 correct principals key option
+certified user keys: ed25519 authorized_keys connect
+certified user keys: ed25519 authorized_keys revoked key
+certified user keys: ed25519 authorized_keys revoked via KRL
+certified user keys: ed25519 authorized_keys empty KRL
+certified user keys: sk-ssh-ed25519@openssh.com authorized_keys connect
+certified user keys: sk-ssh-ed25519@openssh.com authorized_keys revoked key
+certified user keys: sk-ssh-ed25519@openssh.com authorized_keys revoked via KRL
+certified user keys: sk-ssh-ed25519@openssh.com authorized_keys empty KRL
+certified user keys: rsa authorized_keys connect
+certified user keys: rsa authorized_keys revoked key
+certified user keys: rsa authorized_keys revoked via KRL
+certified user keys: rsa authorized_keys empty KRL
+certified user keys: dsa authorized_keys connect
+certified user keys: dsa authorized_keys revoked key
+certified user keys: dsa authorized_keys revoked via KRL
+certified user keys: dsa authorized_keys empty KRL
+certified user keys: ecdsa-sha2-nistp256 authorized_keys connect
+certified user keys: ecdsa-sha2-nistp256 authorized_keys revoked key
+certified user keys: ecdsa-sha2-nistp256 authorized_keys revoked via KRL
+certified user keys: ecdsa-sha2-nistp256 authorized_keys empty KRL
+certified user keys: ecdsa-sha2-nistp384 authorized_keys connect
+certified user keys: ecdsa-sha2-nistp384 authorized_keys revoked key
+certified user keys: ecdsa-sha2-nistp384 authorized_keys revoked via KRL
+certified user keys: ecdsa-sha2-nistp384 authorized_keys empty KRL
+certified user keys: ecdsa-sha2-nistp521 authorized_keys connect
+certified user keys: ecdsa-sha2-nistp521 authorized_keys revoked key
+certified user keys: ecdsa-sha2-nistp521 authorized_keys revoked via KRL
+certified user keys: ecdsa-sha2-nistp521 authorized_keys empty KRL
+certified user keys: sk-ecdsa-sha2-nistp256@openssh.com authorized_keys connect
+certified user keys: sk-ecdsa-sha2-nistp256@openssh.com authorized_keys revoked key
+certified user keys: sk-ecdsa-sha2-nistp256@openssh.com authorized_keys revoked via KRL
+certified user keys: sk-ecdsa-sha2-nistp256@openssh.com authorized_keys empty KRL
+certified user keys: rsa-sha2-256 authorized_keys connect
+certified user keys: rsa-sha2-256 authorized_keys revoked key
+certified user keys: rsa-sha2-256 authorized_keys revoked via KRL
+certified user keys: rsa-sha2-256 authorized_keys empty KRL
+certified user keys: rsa-sha2-512 authorized_keys connect
+certified user keys: rsa-sha2-512 authorized_keys revoked key
+certified user keys: rsa-sha2-512 authorized_keys revoked via KRL
+certified user keys: rsa-sha2-512 authorized_keys empty KRL
+certified user keys: rsa-sha2-512 authorized_keys revoked CA key
+certified user keys: authorized_keys CA does not authenticate
+certified user keys: ensure CA key does not authenticate user
+certified user keys: ed25519 TrustedUserCAKeys connect
+certified user keys: ed25519 TrustedUserCAKeys revoked key
+certified user keys: ed25519 TrustedUserCAKeys revoked via KRL
+certified user keys: ed25519 TrustedUserCAKeys empty KRL
+certified user keys: sk-ssh-ed25519@openssh.com TrustedUserCAKeys connect
+certified user keys: sk-ssh-ed25519@openssh.com TrustedUserCAKeys revoked key
+certified user keys: sk-ssh-ed25519@openssh.com TrustedUserCAKeys revoked via KRL
+certified user keys: sk-ssh-ed25519@openssh.com TrustedUserCAKeys empty KRL
+certified user keys: rsa TrustedUserCAKeys connect
+certified user keys: rsa TrustedUserCAKeys revoked key
+certified user keys: rsa TrustedUserCAKeys revoked via KRL
+certified user keys: rsa TrustedUserCAKeys empty KRL
+certified user keys: dsa TrustedUserCAKeys connect
+certified user keys: dsa TrustedUserCAKeys revoked key
+certified user keys: dsa TrustedUserCAKeys revoked via KRL
+certified user keys: dsa TrustedUserCAKeys empty KRL
+certified user keys: ecdsa-sha2-nistp256 TrustedUserCAKeys connect
+certified user keys: ecdsa-sha2-nistp256 TrustedUserCAKeys revoked key
+certified user keys: ecdsa-sha2-nistp256 TrustedUserCAKeys revoked via KRL
+certified user keys: ecdsa-sha2-nistp256 TrustedUserCAKeys empty KRL
+certified user keys: ecdsa-sha2-nistp384 TrustedUserCAKeys connect
+certified user keys: ecdsa-sha2-nistp384 TrustedUserCAKeys revoked key
+certified user keys: ecdsa-sha2-nistp384 TrustedUserCAKeys revoked via KRL
+certified user keys: ecdsa-sha2-nistp384 TrustedUserCAKeys empty KRL
+certified user keys: ecdsa-sha2-nistp521 TrustedUserCAKeys connect
+certified user keys: ecdsa-sha2-nistp521 TrustedUserCAKeys revoked key
+certified user keys: ecdsa-sha2-nistp521 TrustedUserCAKeys revoked via KRL
+certified user keys: ecdsa-sha2-nistp521 TrustedUserCAKeys empty KRL
+certified user keys: sk-ecdsa-sha2-nistp256@openssh.com TrustedUserCAKeys connect
+certified user keys: sk-ecdsa-sha2-nistp256@openssh.com TrustedUserCAKeys revoked key
+certified user keys: sk-ecdsa-sha2-nistp256@openssh.com TrustedUserCAKeys revoked via KRL
+certified user keys: sk-ecdsa-sha2-nistp256@openssh.com TrustedUserCAKeys empty KRL
+certified user keys: rsa-sha2-256 TrustedUserCAKeys connect
+certified user keys: rsa-sha2-256 TrustedUserCAKeys revoked key
+certified user keys: rsa-sha2-256 TrustedUserCAKeys revoked via KRL
+certified user keys: rsa-sha2-256 TrustedUserCAKeys empty KRL
+certified user keys: rsa-sha2-512 TrustedUserCAKeys connect
+certified user keys: rsa-sha2-512 TrustedUserCAKeys revoked key
+certified user keys: rsa-sha2-512 TrustedUserCAKeys revoked via KRL
+certified user keys: rsa-sha2-512 TrustedUserCAKeys empty KRL
+certified user keys: rsa-sha2-512 TrustedUserCAKeys revoked CA key
+certified user keys: TrustedUserCAKeys CA does not authenticate
+certified user keys: ensure CA key does not authenticate user
+certified user keys: correct principal auth authorized_keys expect success rsa
+certified user keys: correct principal auth authorized_keys expect success ed25519
+certified user keys: correct principal auth TrustedUserCAKeys expect success rsa
+certified user keys: correct principal auth TrustedUserCAKeys expect success ed25519
+certified user keys: host-certificate auth authorized_keys expect failure rsa
+certified user keys: host-certificate auth authorized_keys expect failure ed25519
+certified user keys: host-certificate auth TrustedUserCAKeys expect failure rsa
+certified user keys: host-certificate auth TrustedUserCAKeys expect failure ed25519
+certified user keys: wrong principals auth authorized_keys expect failure rsa
+certified user keys: wrong principals auth authorized_keys expect failure ed25519
+certified user keys: wrong principals auth TrustedUserCAKeys expect failure rsa
+certified user keys: wrong principals auth TrustedUserCAKeys expect failure ed25519
+certified user keys: cert not yet valid auth authorized_keys expect failure rsa
+certified user keys: cert not yet valid auth authorized_keys expect failure ed25519
+certified user keys: cert not yet valid auth TrustedUserCAKeys expect failure rsa
+certified user keys: cert not yet valid auth TrustedUserCAKeys expect failure ed25519
+certified user keys: cert expired auth authorized_keys expect failure rsa
+certified user keys: cert expired auth authorized_keys expect failure ed25519
+certified user keys: cert expired auth TrustedUserCAKeys expect failure rsa
+certified user keys: cert expired auth TrustedUserCAKeys expect failure ed25519
+certified user keys: cert valid interval auth authorized_keys expect success rsa
+certified user keys: cert valid interval auth authorized_keys expect success ed25519
+certified user keys: cert valid interval auth TrustedUserCAKeys expect success rsa
+certified user keys: cert valid interval auth TrustedUserCAKeys expect success ed25519
+certified user keys: wrong source-address auth authorized_keys expect failure rsa
+certified user keys: wrong source-address auth authorized_keys expect failure ed25519
+certified user keys: wrong source-address auth TrustedUserCAKeys expect failure rsa
+certified user keys: wrong source-address auth TrustedUserCAKeys expect failure ed25519
+certified user keys: force-command auth authorized_keys expect failure rsa
+certified user keys: force-command auth authorized_keys expect failure ed25519
+certified user keys: force-command auth TrustedUserCAKeys expect failure rsa
+certified user keys: force-command auth TrustedUserCAKeys expect failure ed25519
+certified user keys: empty principals auth authorized_keys expect success rsa
+certified user keys: empty principals auth authorized_keys expect success ed25519
+certified user keys: empty principals auth TrustedUserCAKeys expect failure rsa
+certified user keys: empty principals auth TrustedUserCAKeys expect failure ed25519
+certified user keys: AuthorizedPrincipalsFile principals auth TrustedUserCAKeys expect success rsa
+certified user keys: AuthorizedPrincipalsFile principals auth TrustedUserCAKeys expect success ed25519
+certified user keys: AuthorizedPrincipalsFile no principals auth TrustedUserCAKeys expect failure rsa
+certified user keys: AuthorizedPrincipalsFile no principals auth TrustedUserCAKeys expect failure ed25519
+certified user keys: principals key option principals auth authorized_keys expect success rsa
+certified user keys: principals key option principals auth authorized_keys expect success ed25519
+certified user keys: principals key option no principals auth authorized_keys expect failure rsa
+certified user keys: principals key option no principals auth authorized_keys expect failure ed25519
+certified user keys: force-command match true auth authorized_keys expect success rsa
+certified user keys: force-command match true auth authorized_keys expect success ed25519
+certified user keys: force-command match true auth authorized_keys expect failure rsa
+certified user keys: force-command match true auth authorized_keys expect failure ed25519
+certified user keys: force-command mismatch 1 auth authorized_keys expect failure rsa
+certified user keys: force-command mismatch 1 auth authorized_keys expect failure ed25519
+certified user keys: force-command mismatch 2 auth authorized_keys expect failure rsa
+certified user keys: force-command mismatch 2 auth authorized_keys expect failure ed25519
+certified user keys: user ed25519 connect wrong cert
+notify_start: exec(/home/nik/openssh/libexec/ssh-askpass): No such file or directory
+certified user keys: user sk-ssh-ed25519@openssh.com connect wrong cert
+certified user keys: user rsa connect wrong cert
+certified user keys: user dsa connect wrong cert
+certified user keys: user ecdsa-sha2-nistp256 connect wrong cert
+certified user keys: user ecdsa-sha2-nistp384 connect wrong cert
+certified user keys: user ecdsa-sha2-nistp521 connect wrong cert
+notify_start: exec(/home/nik/openssh/libexec/ssh-askpass): No such file or directory
+certified user keys: user sk-ecdsa-sha2-nistp256@openssh.com connect wrong cert
+certified user keys: user rsa-sha2-256 connect wrong cert
+certified user keys: user rsa-sha2-512 connect wrong cert
+ok certified user keys
+run test host-expand.sh ...
+ok expand %h and %n
+run test keys-command.sh ...
+SKIPPED: /var/run/keycommand_root.325862 not executable (/var/run mounted noexec?)
+run test forward-control.sh ...
+check_lfwd done (expecting Y): default configuration
+check_rfwd done (expecting Y): default configuration
+check_lfwd done (expecting Y): AllowTcpForwarding=yes
+check_rfwd done (expecting Y): AllowTcpForwarding=yes
+check_lfwd done (expecting N): AllowTcpForwarding=yes, !PermitOpen
+check_rfwd done (expecting Y): AllowTcpForwarding=yes, !PermitOpen
+check_lfwd done (expecting Y): AllowTcpForwarding=yes, PermitOpen
+check_rfwd done (expecting Y): AllowTcpForwarding=yes, PermitOpen
+check_lfwd done (expecting N): AllowTcpForwarding=yes, !permitopen
+check_rfwd done (expecting Y): AllowTcpForwarding=yes, !permitopen
+check_lfwd done (expecting Y): AllowTcpForwarding=yes, permitopen
+check_rfwd done (expecting Y): AllowTcpForwarding=yes, permitopen
+check_lfwd done (expecting N): AllowTcpForwarding=yes, no-port-forwarding
+check_rfwd done (expecting N): AllowTcpForwarding=yes, no-port-forwarding
+check_lfwd done (expecting N): AllowTcpForwarding=yes, restrict
+check_rfwd done (expecting N): AllowTcpForwarding=yes, restrict
+check_lfwd done (expecting Y): AllowTcpForwarding=yes, restrict,port-forwarding
+check_rfwd done (expecting Y): AllowTcpForwarding=yes, restrict,port-forwarding
+check_lfwd done (expecting Y): AllowTcpForwarding=local
+check_rfwd done (expecting N): AllowTcpForwarding=local
+check_lfwd done (expecting N): AllowTcpForwarding=local, !PermitOpen
+check_rfwd done (expecting N): AllowTcpForwarding=local, !PermitOpen
+check_lfwd done (expecting Y): AllowTcpForwarding=local, PermitOpen
+check_rfwd done (expecting N): AllowTcpForwarding=local, PermitOpen
+check_lfwd done (expecting N): AllowTcpForwarding=local, !permitopen
+check_rfwd done (expecting N): AllowTcpForwarding=local, !permitopen
+check_lfwd done (expecting Y): AllowTcpForwarding=local, permitopen
+check_rfwd done (expecting N): AllowTcpForwarding=local, permitopen
+check_lfwd done (expecting N): AllowTcpForwarding=local, no-port-forwarding
+check_rfwd done (expecting N): AllowTcpForwarding=local, no-port-forwarding
+check_lfwd done (expecting N): AllowTcpForwarding=local, restrict
+check_rfwd done (expecting N): AllowTcpForwarding=local, restrict
+check_lfwd done (expecting Y): AllowTcpForwarding=local, restrict,port-forwarding
+check_rfwd done (expecting N): AllowTcpForwarding=local, restrict,port-forwarding
+check_lfwd done (expecting N): AllowTcpForwarding=remote
+check_rfwd done (expecting Y): AllowTcpForwarding=remote
+check_lfwd done (expecting N): AllowTcpForwarding=remote, !PermitOpen
+check_rfwd done (expecting Y): AllowTcpForwarding=remote, !PermitOpen
+check_lfwd done (expecting N): AllowTcpForwarding=remote, PermitOpen
+check_rfwd done (expecting Y): AllowTcpForwarding=remote, PermitOpen
+check_lfwd done (expecting N): AllowTcpForwarding=remote, !permitopen
+check_rfwd done (expecting Y): AllowTcpForwarding=remote, !permitopen
+check_lfwd done (expecting N): AllowTcpForwarding=remote, permitopen
+check_rfwd done (expecting Y): AllowTcpForwarding=remote, permitopen
+check_lfwd done (expecting N): AllowTcpForwarding=remote, no-port-forwarding
+check_rfwd done (expecting N): AllowTcpForwarding=remote, no-port-forwarding
+check_lfwd done (expecting N): AllowTcpForwarding=remote, restrict
+check_rfwd done (expecting N): AllowTcpForwarding=remote, restrict
+check_lfwd done (expecting N): AllowTcpForwarding=remote, restrict,port-forwarding
+check_rfwd done (expecting Y): AllowTcpForwarding=remote, restrict,port-forwarding
+check_lfwd done (expecting N): AllowTcpForwarding=no
+check_rfwd done (expecting N): AllowTcpForwarding=no
+check_lfwd done (expecting N): AllowTcpForwarding=no, !PermitOpen
+check_rfwd done (expecting N): AllowTcpForwarding=no, !PermitOpen
+check_lfwd done (expecting N): AllowTcpForwarding=no, PermitOpen
+check_rfwd done (expecting N): AllowTcpForwarding=no, PermitOpen
+check_lfwd done (expecting N): AllowTcpForwarding=no, !permitopen
+check_rfwd done (expecting N): AllowTcpForwarding=no, !permitopen
+check_lfwd done (expecting N): AllowTcpForwarding=no, permitopen
+check_rfwd done (expecting N): AllowTcpForwarding=no, permitopen
+check_lfwd done (expecting N): AllowTcpForwarding=no, no-port-forwarding
+check_rfwd done (expecting N): AllowTcpForwarding=no, no-port-forwarding
+check_lfwd done (expecting N): AllowTcpForwarding=no, restrict
+check_rfwd done (expecting N): AllowTcpForwarding=no, restrict
+check_lfwd done (expecting N): AllowTcpForwarding=no, restrict,port-forwarding
+check_rfwd done (expecting N): AllowTcpForwarding=no, restrict,port-forwarding
+check_lfwd done (expecting Y): AllowTcpForwarding=yes, !PermitListen
+check_rfwd done (expecting N): AllowTcpForwarding=yes, !PermitListen
+check_lfwd done (expecting Y): AllowTcpForwarding=yes, PermitListen
+check_rfwd done (expecting Y): AllowTcpForwarding=yes, PermitListen
+check_lfwd done (expecting Y): AllowTcpForwarding=local, !PermitListen
+check_rfwd done (expecting N): AllowTcpForwarding=local, !PermitListen
+check_lfwd done (expecting Y): AllowTcpForwarding=local, PermitListen
+check_rfwd done (expecting N): AllowTcpForwarding=local, PermitListen
+check_lfwd done (expecting N): AllowTcpForwarding=remote, !PermitListen
+check_rfwd done (expecting N): AllowTcpForwarding=remote, !PermitListen
+check_lfwd done (expecting N): AllowTcpForwarding=remote, PermitListen
+check_rfwd done (expecting Y): AllowTcpForwarding=remote, PermitListen
+check_lfwd done (expecting N): AllowTcpForwarding=no, !PermitListen
+check_rfwd done (expecting N): AllowTcpForwarding=no, !PermitListen
+check_lfwd done (expecting N): AllowTcpForwarding=no, PermitListen
+check_rfwd done (expecting N): AllowTcpForwarding=no, PermitListen
+ok sshd control of local and remote forwarding
+run test integrity.sh ...
+test integrity: hmac-sha1 @2900
+test integrity: hmac-sha1 @2901
+test integrity: hmac-sha1 @2902
+test integrity: hmac-sha1 @2903
+test integrity: hmac-sha1 @2904
+test integrity: hmac-sha1 @2905
+test integrity: hmac-sha1 @2906
+test integrity: hmac-sha1 @2907
+test integrity: hmac-sha1 @2908
+test integrity: hmac-sha1 @2909
+test integrity: 10 errors: mac 10 padding 0 length 0 timeout 0
+test integrity: hmac-sha1-96 @2900
+test integrity: hmac-sha1-96 @2901
+test integrity: hmac-sha1-96 @2902
+test integrity: hmac-sha1-96 @2903
+test integrity: hmac-sha1-96 @2904
+test integrity: hmac-sha1-96 @2905
+test integrity: hmac-sha1-96 @2906
+test integrity: hmac-sha1-96 @2907
+test integrity: hmac-sha1-96 @2908
+test integrity: hmac-sha1-96 @2909
+test integrity: 10 errors: mac 10 padding 0 length 0 timeout 0
+test integrity: hmac-sha2-256 @2900
+test integrity: hmac-sha2-256 @2901
+test integrity: hmac-sha2-256 @2902
+test integrity: hmac-sha2-256 @2903
+test integrity: hmac-sha2-256 @2904
+test integrity: hmac-sha2-256 @2905
+test integrity: hmac-sha2-256 @2906
+test integrity: hmac-sha2-256 @2907
+test integrity: hmac-sha2-256 @2908
+test integrity: hmac-sha2-256 @2909
+test integrity: 10 errors: mac 10 padding 0 length 0 timeout 0
+test integrity: hmac-sha2-512 @2900
+test integrity: hmac-sha2-512 @2901
+test integrity: hmac-sha2-512 @2902
+test integrity: hmac-sha2-512 @2903
+test integrity: hmac-sha2-512 @2904
+test integrity: hmac-sha2-512 @2905
+test integrity: hmac-sha2-512 @2906
+test integrity: hmac-sha2-512 @2907
+test integrity: hmac-sha2-512 @2908
+test integrity: hmac-sha2-512 @2909
+test integrity: 10 errors: mac 10 padding 0 length 0 timeout 0
+test integrity: hmac-md5 @2900
+test integrity: hmac-md5 @2901
+test integrity: hmac-md5 @2902
+test integrity: hmac-md5 @2903
+test integrity: hmac-md5 @2904
+test integrity: hmac-md5 @2905
+test integrity: hmac-md5 @2906
+test integrity: hmac-md5 @2907
+test integrity: hmac-md5 @2908
+test integrity: hmac-md5 @2909
+test integrity: 10 errors: mac 10 padding 0 length 0 timeout 0
+test integrity: hmac-md5-96 @2900
+test integrity: hmac-md5-96 @2901
+test integrity: hmac-md5-96 @2902
+test integrity: hmac-md5-96 @2903
+test integrity: hmac-md5-96 @2904
+test integrity: hmac-md5-96 @2905
+test integrity: hmac-md5-96 @2906
+test integrity: hmac-md5-96 @2907
+test integrity: hmac-md5-96 @2908
+test integrity: hmac-md5-96 @2909
+test integrity: 10 errors: mac 10 padding 0 length 0 timeout 0
+test integrity: umac-64@openssh.com @2900
+test integrity: umac-64@openssh.com @2901
+test integrity: umac-64@openssh.com @2902
+test integrity: umac-64@openssh.com @2903
+test integrity: umac-64@openssh.com @2904
+test integrity: umac-64@openssh.com @2905
+test integrity: umac-64@openssh.com @2906
+test integrity: umac-64@openssh.com @2907
+test integrity: umac-64@openssh.com @2908
+test integrity: umac-64@openssh.com @2909
+test integrity: 10 errors: mac 10 padding 0 length 0 timeout 0
+test integrity: umac-128@openssh.com @2900
+test integrity: umac-128@openssh.com @2901
+test integrity: umac-128@openssh.com @2902
+test integrity: umac-128@openssh.com @2903
+test integrity: umac-128@openssh.com @2904
+test integrity: umac-128@openssh.com @2905
+test integrity: umac-128@openssh.com @2906
+test integrity: umac-128@openssh.com @2907
+test integrity: umac-128@openssh.com @2908
+test integrity: umac-128@openssh.com @2909
+test integrity: 10 errors: mac 10 padding 0 length 0 timeout 0
+test integrity: hmac-sha1-etm@openssh.com @2900
+test integrity: hmac-sha1-etm@openssh.com @2901
+test integrity: hmac-sha1-etm@openssh.com @2902
+test integrity: hmac-sha1-etm@openssh.com @2903
+test integrity: hmac-sha1-etm@openssh.com @2904
+test integrity: hmac-sha1-etm@openssh.com @2905
+test integrity: hmac-sha1-etm@openssh.com @2906
+test integrity: hmac-sha1-etm@openssh.com @2907
+test integrity: hmac-sha1-etm@openssh.com @2908
+test integrity: hmac-sha1-etm@openssh.com @2909
+test integrity: 10 errors: mac 10 padding 0 length 0 timeout 0
+test integrity: hmac-sha1-96-etm@openssh.com @2900
+test integrity: hmac-sha1-96-etm@openssh.com @2901
+test integrity: hmac-sha1-96-etm@openssh.com @2902
+test integrity: hmac-sha1-96-etm@openssh.com @2903
+test integrity: hmac-sha1-96-etm@openssh.com @2904
+test integrity: hmac-sha1-96-etm@openssh.com @2905
+test integrity: hmac-sha1-96-etm@openssh.com @2906
+test integrity: hmac-sha1-96-etm@openssh.com @2907
+test integrity: hmac-sha1-96-etm@openssh.com @2908
+test integrity: hmac-sha1-96-etm@openssh.com @2909
+test integrity: 10 errors: mac 10 padding 0 length 0 timeout 0
+test integrity: hmac-sha2-256-etm@openssh.com @2900
+test integrity: hmac-sha2-256-etm@openssh.com @2901
+test integrity: hmac-sha2-256-etm@openssh.com @2902
+test integrity: hmac-sha2-256-etm@openssh.com @2903
+test integrity: hmac-sha2-256-etm@openssh.com @2904
+test integrity: hmac-sha2-256-etm@openssh.com @2905
+test integrity: hmac-sha2-256-etm@openssh.com @2906
+test integrity: hmac-sha2-256-etm@openssh.com @2907
+test integrity: hmac-sha2-256-etm@openssh.com @2908
+test integrity: hmac-sha2-256-etm@openssh.com @2909
+test integrity: 10 errors: mac 10 padding 0 length 0 timeout 0
+test integrity: hmac-sha2-512-etm@openssh.com @2900
+test integrity: hmac-sha2-512-etm@openssh.com @2901
+test integrity: hmac-sha2-512-etm@openssh.com @2902
+test integrity: hmac-sha2-512-etm@openssh.com @2903
+test integrity: hmac-sha2-512-etm@openssh.com @2904
+test integrity: hmac-sha2-512-etm@openssh.com @2905
+test integrity: hmac-sha2-512-etm@openssh.com @2906
+test integrity: hmac-sha2-512-etm@openssh.com @2907
+test integrity: hmac-sha2-512-etm@openssh.com @2908
+test integrity: hmac-sha2-512-etm@openssh.com @2909
+test integrity: 10 errors: mac 10 padding 0 length 0 timeout 0
+test integrity: hmac-md5-etm@openssh.com @2900
+test integrity: hmac-md5-etm@openssh.com @2901
+test integrity: hmac-md5-etm@openssh.com @2902
+test integrity: hmac-md5-etm@openssh.com @2903
+test integrity: hmac-md5-etm@openssh.com @2904
+test integrity: hmac-md5-etm@openssh.com @2905
+test integrity: hmac-md5-etm@openssh.com @2906
+test integrity: hmac-md5-etm@openssh.com @2907
+test integrity: hmac-md5-etm@openssh.com @2908
+test integrity: hmac-md5-etm@openssh.com @2909
+test integrity: 10 errors: mac 10 padding 0 length 0 timeout 0
+test integrity: hmac-md5-96-etm@openssh.com @2900
+test integrity: hmac-md5-96-etm@openssh.com @2901
+test integrity: hmac-md5-96-etm@openssh.com @2902
+test integrity: hmac-md5-96-etm@openssh.com @2903
+test integrity: hmac-md5-96-etm@openssh.com @2904
+test integrity: hmac-md5-96-etm@openssh.com @2905
+test integrity: hmac-md5-96-etm@openssh.com @2906
+test integrity: hmac-md5-96-etm@openssh.com @2907
+test integrity: hmac-md5-96-etm@openssh.com @2908
+test integrity: hmac-md5-96-etm@openssh.com @2909
+test integrity: 10 errors: mac 10 padding 0 length 0 timeout 0
+test integrity: umac-64-etm@openssh.com @2900
+test integrity: umac-64-etm@openssh.com @2901
+test integrity: umac-64-etm@openssh.com @2902
+test integrity: umac-64-etm@openssh.com @2903
+test integrity: umac-64-etm@openssh.com @2904
+test integrity: umac-64-etm@openssh.com @2905
+test integrity: umac-64-etm@openssh.com @2906
+test integrity: umac-64-etm@openssh.com @2907
+test integrity: umac-64-etm@openssh.com @2908
+test integrity: umac-64-etm@openssh.com @2909
+test integrity: 10 errors: mac 10 padding 0 length 0 timeout 0
+test integrity: umac-128-etm@openssh.com @2900
+test integrity: umac-128-etm@openssh.com @2901
+test integrity: umac-128-etm@openssh.com @2902
+test integrity: umac-128-etm@openssh.com @2903
+test integrity: umac-128-etm@openssh.com @2904
+test integrity: umac-128-etm@openssh.com @2905
+test integrity: umac-128-etm@openssh.com @2906
+test integrity: umac-128-etm@openssh.com @2907
+test integrity: umac-128-etm@openssh.com @2908
+test integrity: umac-128-etm@openssh.com @2909
+test integrity: 10 errors: mac 10 padding 0 length 0 timeout 0
+test integrity: aes128-gcm@openssh.com @2900
+test integrity: aes128-gcm@openssh.com @2901
+test integrity: aes128-gcm@openssh.com @2902
+test integrity: aes128-gcm@openssh.com @2903
+test integrity: aes128-gcm@openssh.com @2904
+test integrity: aes128-gcm@openssh.com @2905
+test integrity: aes128-gcm@openssh.com @2906
+test integrity: aes128-gcm@openssh.com @2907
+test integrity: aes128-gcm@openssh.com @2908
+test integrity: aes128-gcm@openssh.com @2909
+test integrity: 10 errors: mac 10 padding 0 length 0 timeout 0
+test integrity: aes256-gcm@openssh.com @2900
+test integrity: aes256-gcm@openssh.com @2901
+test integrity: aes256-gcm@openssh.com @2902
+test integrity: aes256-gcm@openssh.com @2903
+test integrity: aes256-gcm@openssh.com @2904
+test integrity: aes256-gcm@openssh.com @2905
+test integrity: aes256-gcm@openssh.com @2906
+test integrity: aes256-gcm@openssh.com @2907
+test integrity: aes256-gcm@openssh.com @2908
+test integrity: aes256-gcm@openssh.com @2909
+test integrity: 10 errors: mac 10 padding 0 length 0 timeout 0
+test integrity: chacha20-poly1305@openssh.com @2900
+test integrity: chacha20-poly1305@openssh.com @2901
+test integrity: chacha20-poly1305@openssh.com @2902
+test integrity: chacha20-poly1305@openssh.com @2903
+test integrity: chacha20-poly1305@openssh.com @2904
+test integrity: chacha20-poly1305@openssh.com @2905
+test integrity: chacha20-poly1305@openssh.com @2906
+test integrity: chacha20-poly1305@openssh.com @2907
+test integrity: chacha20-poly1305@openssh.com @2908
+test integrity: chacha20-poly1305@openssh.com @2909
+test integrity: 10 errors: mac 10 padding 0 length 0 timeout 0
+ok integrity
+run test krl.sh ...
+run test multipubkey.sh ...
+run test limit-keytype.sh ...
+allow rsa,ed25519
+allow ed25519
+allow cert only
+match w/ no match
+match w/ matching
+ok restrict pubkey type
+run test hostkey-agent.sh ...
+key type ssh-ed25519
+key type sk-ssh-ed25519@openssh.com
+key type ssh-rsa
+key type ssh-dss
+key type ecdsa-sha2-nistp256
+key type ecdsa-sha2-nistp384
+key type ecdsa-sha2-nistp521
+key type sk-ecdsa-sha2-nistp256@openssh.com
+cert type ssh-ed25519-cert-v01@openssh.com
+cert type sk-ssh-ed25519-cert-v01@openssh.com
+cert type ssh-rsa-cert-v01@openssh.com
+cert type rsa-sha2-256-cert-v01@openssh.com
+cert type rsa-sha2-512-cert-v01@openssh.com
+cert type ssh-dss-cert-v01@openssh.com
+cert type ecdsa-sha2-nistp256-cert-v01@openssh.com
+cert type ecdsa-sha2-nistp384-cert-v01@openssh.com
+cert type ecdsa-sha2-nistp521-cert-v01@openssh.com
+cert type sk-ecdsa-sha2-nistp256-cert-v01@openssh.com
+ok hostkey agent
+run test hostkey-rotate.sh ...
+run test principals-command.sh ...
+SKIPPED: /var/run/principals_command_root.331016 not executable  (/var/run mounted noexec?)
+run test cert-file.sh ...
+run test cfginclude.sh ...
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+ok config include
+run test servcfginclude.sh ...
+ok server config include
+run test allow-deny-users.sh ...
+ok AllowUsers/DenyUsers
+run test authinfo.sh ...
+ExposeAuthInfo=no
+ExposeAuthInfo=yes
+ok authinfo
+run test sshsig.sh ...
+run test knownhosts.sh ...
+ok known hosts
+run test knownhosts-command.sh ...
+simple connection
+no keys
+bad exit status
+keytype ssh-ed25519
+keytype sk-ssh-ed25519@openssh.com
+keytype ssh-rsa
+keytype ecdsa-sha2-nistp256
+keytype ecdsa-sha2-nistp384
+keytype ecdsa-sha2-nistp521
+keytype sk-ecdsa-sha2-nistp256@openssh.com
+ok known hosts command
+run test agent-restrict.sh ...
+run test hostbased.sh ...
+SKIPPED: TEST_SSH_HOSTBASED_AUTH not set.
+make[1]: выход из каталога «/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1/regress»
+all t-exec passed
