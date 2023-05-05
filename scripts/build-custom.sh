@@ -2,6 +2,7 @@
 
 USERNAME=nik
 
+cd ..
 sudo rm -rf ~/openssh-custom/*
 ./configure --prefix=/home/$USERNAME/openssh-custom/ --with-ssl-dir=/usr/local/openssl --disable-strip
 make clean
