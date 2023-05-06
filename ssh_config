@@ -18,8 +18,8 @@
 # ssh_config(5) man page.
 
 Port 2022
-Ciphers aes128-ctr,aes192-ctr,aes256-ctr,aes128-cbc,3des-cbc,none
-MACs hmac-md5,hmac-sha1,umac-64@openssh.com,none
+Ciphers none
+MACs none
 
 # Host *
 #   ForwardAgent no

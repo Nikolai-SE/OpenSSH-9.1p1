@@ -13,6 +13,7 @@
 Port 2022
 # Compression delayed # (default)
 ListenAddress 127.0.0.1
+Ciphers none
 
 #Port 22
 #AddressFamily any
