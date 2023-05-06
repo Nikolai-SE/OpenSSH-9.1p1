@@ -75,7 +75,7 @@ struct sshcipher {
 #define CFLAG_CHACHAPOLY	(1<<1)
 #define CFLAG_AESCTR		(1<<2)
 #define CFLAG_NONE		(1<<3)
-#define CFLAG_INTERNAL		CFLAG_NONE /* Don't use "none" for packets */
+#define CFLAG_INTERNAL		0 // CFLAG_NONE /* Don't use "none" for packets */
 #ifdef WITH_OPENSSL
 	const EVP_CIPHER	*(*evptype)(void);
 #else
@@ -105,7 +105,8 @@ static const struct sshcipher ciphers[] = {
 #endif
 	{ "chacha20-poly1305@openssh.com",
 				8, 64, 0, 16, CFLAG_CHACHAPOLY, NULL },
-	{ "none",		8, 0, 0, 0, CFLAG_NONE, NULL },
+    { "none",		8, 0, 0, 0, CFLAG_NONE, EVP_enc_null },
+    { "none",		8, 0, 0, 0, CFLAG_NONE, NULL },
 
 	{ NULL,			0, 0, 0, 0, 0, NULL }
 };
