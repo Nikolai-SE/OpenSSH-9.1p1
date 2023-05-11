@@ -42,11 +42,15 @@ PATHS= -DSSHDIR=\"$(sysconfdir)\" \
 	-D_PATH_SSH_PIDDIR=\"$(piddir)\" \
 	-D_PATH_PRIVSEP_CHROOT_DIR=\"$(PRIVSEP_PATH)\"
 
-CC=cc
-LD=cc
+LIB_PROTOBUF_MUTATOR_DIR=/usr/local/include/libprotobuf-mutator/src
+
+#CC=cc
+#LD=cc
+CC=clang
+LD=clang
 CFLAGS=-g -O2 -pipe -Wno-error=format-truncation -Wall -Wpointer-arith -Wuninitialized -Wsign-compare -Wformat-security -Wsizeof-pointer-memaccess -Wno-pointer-sign -Wno-unused-result -Wimplicit-fallthrough -Wmisleading-indentation -fno-strict-aliasing -D_FORTIFY_SOURCE=2 -ftrapv -fno-builtin-memset -fstack-protector-strong -fPIE  
 CFLAGS_NOPIE=-g -O2 -pipe -Wno-error=format-truncation -Wall -Wpointer-arith -Wuninitialized -Wsign-compare -Wformat-security -Wsizeof-pointer-memaccess -Wno-pointer-sign -Wno-unused-result -Wimplicit-fallthrough -Wmisleading-indentation -fno-strict-aliasing -D_FORTIFY_SOURCE=2 -ftrapv -fno-builtin-memset -fstack-protector-strong  
-CPPFLAGS=-I. -I$(srcdir) -I/usr/local/openssl  -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE $(PATHS) -DHAVE_CONFIG_H
+CPPFLAGS=-I. -I$(srcdir) -I/usr/local/openssl  -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE $(PATHS) -DHAVE_CONFIG_H -I$(LIB_PROTOBUF_MUTATOR_DIR)
 PICFLAG=-fPIC
 LIBS=-ldl -lutil  -lresolv
 CHANNELLIBS=-lcrypto  -lz
