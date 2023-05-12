@@ -1532,11 +1532,18 @@ prepare_proctitle(int ac, char **av)
 	return ret;
 }
 
+#include "fuzz-libfuzzer.h"
+
 /*
  * Main program for the daemon.
  */
 int
-main(int ac, char **av)
+#ifdef FUZZ_LIBFUZZER
+main_sshd
+#else
+main
+#endif
+(int ac, char **av)
 {
 	struct ssh *ssh = NULL;
 	extern char *optarg;
