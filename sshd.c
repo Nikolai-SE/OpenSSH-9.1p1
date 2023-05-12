@@ -1536,7 +1536,7 @@ prepare_proctitle(int ac, char **av)
  * Main program for the daemon.
  */
 int
-main(int ac, char **av)
+main_sshd(int ac, char **av)
 {
 	struct ssh *ssh = NULL;
 	extern char *optarg;
