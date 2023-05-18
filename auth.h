@@ -30,6 +30,7 @@
 
 #include <signal.h>
 #include <stdio.h>
+#include "hostfile.h"
 
 #ifdef HAVE_LOGIN_CAP
 #include <login_cap.h>

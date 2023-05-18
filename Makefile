@@ -42,19 +42,21 @@ PATHS= -DSSHDIR=\"$(sysconfdir)\" \
 	-D_PATH_SSH_PIDDIR=\"$(piddir)\" \
 	-D_PATH_PRIVSEP_CHROOT_DIR=\"$(PRIVSEP_PATH)\"
 
-LIB_PROTOBUF_MUTATOR_DIR=/usr/local/include/libprotobuf-mutator/src
+LIB_PROTOBUF_MUTATOR_DIR=/usr/local/include/libprotobuf-mutator
 
-LIBFUZZER_FLAG=
+LIBFUZZER_FLAG=-fsanitize=fuzzer
+#MEMMEM_NOTMEM=-Dmemmem=memmem2
+MEMMEM_NOTMEM=
 
-#CC=cc
-#LD=cc
 CC=clang
 LD=clang
-CFLAGS=-g -O2 -pipe -Wno-error=format-truncation -Wall -Wpointer-arith -Wuninitialized -Wsign-compare -Wformat-security -Wsizeof-pointer-memaccess -Wno-pointer-sign -Wno-unused-result -Wimplicit-fallthrough -Wmisleading-indentation -fno-strict-aliasing -D_FORTIFY_SOURCE=2 -ftrapv -fno-builtin-memset -fstack-protector-strong -fPIE $(LIBFUZZER_FLAG)
-CFLAGS_NOPIE=-g -O2 -pipe -Wno-error=format-truncation -Wall -Wpointer-arith -Wuninitialized -Wsign-compare -Wformat-security -Wsizeof-pointer-memaccess -Wno-pointer-sign -Wno-unused-result -Wimplicit-fallthrough -Wmisleading-indentation -fno-strict-aliasing -D_FORTIFY_SOURCE=2 -ftrapv -fno-builtin-memset -fstack-protector-strong $(LIBFUZZER_FLAG)
+CXX=clang++
+LDXX=clang++
+CFLAGS=-g -O2 -pipe -Wno-error=format-truncation -Wall -Wpointer-arith -Wuninitialized -Wsign-compare -Wformat-security -Wsizeof-pointer-memaccess -Wno-pointer-sign -Wno-unused-result -Wimplicit-fallthrough -Wmisleading-indentation -fno-strict-aliasing -D_FORTIFY_SOURCE=2 -ftrapv -fno-builtin-memset -fstack-protector-strong -fPIE $(LIBFUZZER_FLAG) $(MEMMEM_NOTMEM)
+CFLAGS_NOPIE=-g -O2 -pipe -Wno-error=format-truncation -Wall -Wpointer-arith -Wuninitialized -Wsign-compare -Wformat-security -Wsizeof-pointer-memaccess -Wno-pointer-sign -Wno-unused-result -Wimplicit-fallthrough -Wmisleading-indentation -fno-strict-aliasing -D_FORTIFY_SOURCE=2 -ftrapv -fno-builtin-memset -fstack-protector-strong $(LIBFUZZER_FLAG) $(MEMMEM_NOTMEM)
 CPPFLAGS=-I. -I$(srcdir) -I/usr/local/openssl -I$(LIB_PROTOBUF_MUTATOR_DIR) -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE $(PATHS) -DHAVE_CONFIG_H
 PICFLAG=-fPIC
-LIBS=-ldl -lutil  -lresolv
+LIBS=-ldl -lutil  -lresolv -lprotobuf
 CHANNELLIBS=-lcrypto  -lz
 K5LIBS=
 GSSLIBS=
@@ -214,6 +216,50 @@ ssh$(EXEEXT): $(LIBCOMPAT) libssh.a $(SSHOBJS)
 
 sshd$(EXEEXT): libssh.a	$(LIBCOMPAT) $(SSHDOBJS)
 	$(LD) -o $@ $(SSHDOBJS) $(LDFLAGS) -lssh -lopenbsd-compat $(SSHDLIBS) $(LIBS) $(GSSLIBS) $(K5LIBS) $(CHANNELLIBS)
+
+
+
+##### COMPILING WITH  libprotobuf-mutator ###################
+
+# -DNDEBUG
+
+fuzz-libprotobuff.o: message.pb.cc fuzz-libprotobuff.cc # $(LIBCOMPAT) # libssh.a  $(SSHDOBJS)
+	$(CXX)   -c -I. message.pb.cc fuzz-libprotobuff.cc -I$(LIB_PROTOBUF_MUTATOR_DIR) $(LIBFUZZER_FLAG) -fPIE
+
+# $(SSHDOBJS) $(LDFLAGS)  -lssh -lopenbsd-compat $(SSHDLIBS) $(LIBS) $(GSSLIBS) $(K5LIBS) $(CHANNELLIBS)
+
+# -o fuzz-libprotobuff.o
+
+#$(CXX) -c -o fuzz-libprotobuff.o fuzz-libprotobuff.cpp # -std=gnu++14
+
+#sshd-libprotobuf-mutator$(EXEEXT): libssh.a	$(LIBCOMPAT) $(SSHDOBJS) fuzz-libprotobuff.o
+#	$(LDXX) -o $@ $(SSHDOBJS) fuzz-libprotobuff.o $(LDFLAGS)  -lssh -lopenbsd-compat $(SSHDLIBS) $(LIBS) $(GSSLIBS) $(K5LIBS) $(CHANNELLIBS)
+
+# /usr/local/lib/libprotobuf-mutator-libfuzzer.a
+# /usr/local/lib/libprotobuf-mutator.a
+# /home/nik/libprotobuf-mutator/build/src
+# /usr/local/include/libprotobuf-mutator/src/libfuzzer/libfuzzer_macro.h
+
+LBPRTBMTR=/home/nik/libprotobuf-mutator/build/src
+
+# 	-I $(LIB_PROTOBUF_MUTATOR_DIR) -L $(LIB_PROTOBUF_MUTATOR_DIR) \
+#
+# libfuzzer_macro.cc.o
+#	-L /usr/local/lib/libprotobuf-mutator.a -L /usr/local/lib/libprotobuf-mutator-libfuzzer.a \
+
+sshd-libprotobuf-mutator: libssh.a	$(LIBCOMPAT) $(SSHDOBJS) fuzz-libprotobuff.o
+	$(LDXX)  -I $(LIB_PROTOBUF_MUTATOR_DIR) \
+	-lprotobuf -lprotobuf-mutator \
+	-l:libprotobuf-mutator.a \
+	-l:libprotobuf-mutator-libfuzzer.a \
+	-o $@ message.pb.o fuzz-libprotobuff.o $(SSHDOBJS) $(LDFLAGS)  -lssh -lopenbsd-compat $(SSHDLIBS) $(LIBS) $(GSSLIBS) $(K5LIBS) $(CHANNELLIBS)
+
+#	$(LD) -l -I/usr/local/include/libprotobuf-mutator -o $@ message.pb.o fuzz-libprotobuff.o $(SSHDOBJS) $(LDFLAGS)  -lssh -lopenbsd-compat $(SSHDLIBS) $(LIBS) $(GSSLIBS) $(K5LIBS) $(CHANNELLIBS)
+
+
+#############################################################
+
+
 
 scp$(EXEEXT): $(LIBCOMPAT) libssh.a $(SCP_OBJS)
 	$(LD) -o $@ $(SCP_OBJS) $(LDFLAGS) -lssh -lopenbsd-compat $(LIBS)
