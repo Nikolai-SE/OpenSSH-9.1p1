@@ -52,10 +52,11 @@ CC=clang
 LD=clang
 CXX=clang++
 LDXX=clang++
-CFLAGS=-g -O2 -pipe -Wno-error=format-truncation -Wall -Wpointer-arith -Wuninitialized -Wsign-compare -Wformat-security -Wsizeof-pointer-memaccess -Wno-pointer-sign -Wno-unused-result -Wimplicit-fallthrough -Wmisleading-indentation -fno-strict-aliasing -D_FORTIFY_SOURCE=2 -ftrapv -fno-builtin-memset -fstack-protector-strong -fPIE $(LIBFUZZER_FLAG) $(MEMMEM_NOTMEM)
+CFLAGS=-g -O2 -pipe -Wno-error=format-truncation -Wall -Wpointer-arith -Wuninitialized -Wsign-compare -Wformat-security -Wsizeof-pointer-memaccess -Wno-pointer-sign -Wno-unused-result -Wimplicit-fallthrough -Wmisleading-indentation -fno-strict-aliasing -D_FORTIFY_SOURCE=2 -ftrapv -fno-builtin-memset -fstack-protector-strong $(LIBFUZZER_FLAG) $(MEMMEM_NOTMEM)
 CFLAGS_NOPIE=-g -O2 -pipe -Wno-error=format-truncation -Wall -Wpointer-arith -Wuninitialized -Wsign-compare -Wformat-security -Wsizeof-pointer-memaccess -Wno-pointer-sign -Wno-unused-result -Wimplicit-fallthrough -Wmisleading-indentation -fno-strict-aliasing -D_FORTIFY_SOURCE=2 -ftrapv -fno-builtin-memset -fstack-protector-strong $(LIBFUZZER_FLAG) $(MEMMEM_NOTMEM)
 CPPFLAGS=-I. -I$(srcdir) -I/usr/local/openssl -I$(LIB_PROTOBUF_MUTATOR_DIR) -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE $(PATHS) -DHAVE_CONFIG_H
-PICFLAG=-fPIC
+#PICFLAG=-fPIC
+PICFLAG=
 LIBS=-ldl -lutil  -lresolv -lprotobuf
 CHANNELLIBS=-lcrypto  -lz
 K5LIBS=
@@ -69,7 +70,7 @@ RANLIB=ranlib
 INSTALL=/usr/bin/install -c
 SED=/usr/bin/sed
 XAUTH_PATH=/usr/bin/xauth
-LDFLAGS=-L. -Lopenbsd-compat/ -L/usr/local/openssl  -Wl,-z,relro -Wl,-z,now -Wl,-z,noexecstack -fstack-protector-strong -pie 	$(LIBFUZZER_FLAG)
+LDFLAGS=-L. -Lopenbsd-compat/ -L/usr/local/openssl  -Wl,-z,relro -Wl,-z,now -Wl,-z,noexecstack -fstack-protector-strong	$(LIBFUZZER_FLAG)
 LDFLAGS_NOPIE=-L. -Lopenbsd-compat/ -L/usr/local/openssl  -Wl,-z,relro -Wl,-z,now -Wl,-z,noexecstack -fstack-protector-strong  	$(LIBFUZZER_FLAG)
 EXEEXT=
 MANFMT=/usr/bin/nroff -mandoc
@@ -221,16 +222,66 @@ sshd$(EXEEXT): libssh.a	$(LIBCOMPAT) $(SSHDOBJS)
 
 ##### COMPILING WITH  libprotobuf-mutator ###################
 
+
+LIBABSL_STATIC=-labsl_bad_any_cast_impl -labsl_bad_optional_access  \
+                 -labsl_bad_variant_access -labsl_base -labsl_city  \
+                 -labsl_civil_time -labsl_cord -labsl_cord_internal  \
+                 -labsl_cordz_functions -labsl_cordz_handle -labsl_cordz_info  \
+                 -labsl_cordz_sample_token -labsl_crc32c -labsl_crc_cord_state  \
+                 -labsl_crc_cpu_detect -labsl_crc_internal -labsl_debugging_internal  \
+                 -labsl_demangle_internal -labsl_die_if_null -labsl_examine_stack  \
+                 -labsl_exponential_biased -labsl_failure_signal_handler -labsl_flags  \
+                 -labsl_flags_commandlineflag -labsl_flags_commandlineflag_internal  \
+                 -labsl_flags_config -labsl_flags_internal -labsl_flags_marshalling  \
+                 -labsl_flags_parse -labsl_flags_private_handle_accessor  \
+                 -labsl_flags_program_name -labsl_flags_reflection -labsl_flags_usage  \
+                 -labsl_flags_usage_internal -labsl_graphcycles_internal -labsl_hash  \
+                 -labsl_hashtablez_sampler -labsl_int128 -labsl_leak_check  \
+                 -labsl_log_entry -labsl_log_flags -labsl_log_globals  \
+                 -labsl_log_initialize -labsl_log_internal_check_op  \
+                 -labsl_log_internal_conditions -labsl_log_internal_format  \
+                 -labsl_log_internal_globals -labsl_log_internal_log_sink_set  \
+                 -labsl_log_internal_message -labsl_log_internal_nullguard  \
+                 -labsl_log_internal_proto -labsl_log_severity -labsl_log_sink  \
+                 -labsl_low_level_hash -labsl_malloc_internal -labsl_periodic_sampler  \
+                 -labsl_random_distributions  \
+                 -labsl_random_internal_distribution_test_util  \
+                 -labsl_random_internal_platform -labsl_random_internal_pool_urbg  \
+                 -labsl_random_internal_randen -labsl_random_internal_randen_hwaes  \
+                 -labsl_random_internal_randen_hwaes_impl  \
+                 -labsl_random_internal_randen_slow -labsl_random_internal_seed_material  \
+                 -labsl_random_seed_gen_exception -labsl_random_seed_sequences  \
+                 -labsl_raw_hash_set -labsl_raw_logging_internal  \
+                 -labsl_scoped_set_env -labsl_spinlock_wait -labsl_stacktrace  \
+                 -labsl_status -labsl_statusor -labsl_strerror  \
+                 -labsl_str_format_internal -labsl_strings -labsl_strings_internal  \
+                 -labsl_symbolize -labsl_synchronization -labsl_throw_delegate  \
+                 -labsl_time -labsl_time_zone
+
+OTHER_LIBS=-lprotobufd -lprotoc -lprotobuf-lite -lprotocd \
+            -lprotobuf-lited -lutf8_range \
+            -lgmock   -lprotobuf-mutator -lutf8_validity \
+            -lprotobuf -lprotobuf-mutator-libfuzzer
+
 # -DNDEBUG
+# /usr/local/lib/libprotobuf-mutator.a /usr/local/lib/libprotobuf-mutator-libfuzzer.a \
+-lprotobuf -lprotobuf-mutator \
+
+#/home/nik/libprotobuf-mutator/build/external.protobuf/include/google/protobuf/any.pb.h
+#-I src -I port
 
 fuzz-libprotobuff.o: message.pb.cc fuzz-libprotobuff.cc # $(LIBCOMPAT) # libssh.a  $(SSHDOBJS)
-	$(CXX)   -c -I. message.pb.cc fuzz-libprotobuff.cc -I$(LIB_PROTOBUF_MUTATOR_DIR) $(LIBFUZZER_FLAG) -fPIE
+	$(CXX) -c -I. -I src -I port \
+	$(LIBABSL_STATIC) $(OTHER_LIBS) -DNDEBUG \
+	-lprotobuf  -lprotobuf-mutator -lprotobuf-mutator-libfuzzer \
+ 	message.pb.cc fuzz-libprotobuff.cc src/*.cc src/libfuzzer/*.cc  \
+	$(LIBFUZZER_FLAG)  # -I$(LIB_PROTOBUF_MUTATOR_DIR)
+
+# binary_format.o libfuzzer_macro.o libfuzzer_mutator.o
+# mutator.o text_format.o utf8_fix.o
+
 
 # $(SSHDOBJS) $(LDFLAGS)  -lssh -lopenbsd-compat $(SSHDLIBS) $(LIBS) $(GSSLIBS) $(K5LIBS) $(CHANNELLIBS)
-
-# -o fuzz-libprotobuff.o
-
-#$(CXX) -c -o fuzz-libprotobuff.o fuzz-libprotobuff.cpp # -std=gnu++14
 
 #sshd-libprotobuf-mutator$(EXEEXT): libssh.a	$(LIBCOMPAT) $(SSHDOBJS) fuzz-libprotobuff.o
 #	$(LDXX) -o $@ $(SSHDOBJS) fuzz-libprotobuff.o $(LDFLAGS)  -lssh -lopenbsd-compat $(SSHDLIBS) $(LIBS) $(GSSLIBS) $(K5LIBS) $(CHANNELLIBS)
@@ -240,19 +291,29 @@ fuzz-libprotobuff.o: message.pb.cc fuzz-libprotobuff.cc # $(LIBCOMPAT) # libssh.
 # /home/nik/libprotobuf-mutator/build/src
 # /usr/local/include/libprotobuf-mutator/src/libfuzzer/libfuzzer_macro.h
 
-LBPRTBMTR=/home/nik/libprotobuf-mutator/build/src
+#LBPRTBMTR=/home/nik/libprotobuf-mutator/build/src
 
 # 	-I $(LIB_PROTOBUF_MUTATOR_DIR) -L $(LIB_PROTOBUF_MUTATOR_DIR) \
 #
 # libfuzzer_macro.cc.o
 #	-L /usr/local/lib/libprotobuf-mutator.a -L /usr/local/lib/libprotobuf-mutator-libfuzzer.a \
+# -lprotobuf-mutator
 
+#	 /usr/local/lib/libprotobuf-mutator.a /usr/local/lib/libprotobuf-mutator-libfuzzer.a \
+
+# -I $(LIB_PROTOBUF_MUTATOR_DIR) -lprotobuf-mutator
+# binary_format.o libfuzzer_macro.o libfuzzer_mutator.o \
+# 	mutator.o text_format.o utf8_fix.o \
+	/usr/local/lib/libprotobuf-mutator.a /usr/local/lib/libprotobuf-mutator-libfuzzer.a \
+#
+#  -labsl
+
+# -lprotobuf  -lprotobuf-mutator -lprotobuf-mutator-libfuzzer
 sshd-libprotobuf-mutator: libssh.a	$(LIBCOMPAT) $(SSHDOBJS) fuzz-libprotobuff.o
-	$(LDXX)  -I $(LIB_PROTOBUF_MUTATOR_DIR) \
-	-lprotobuf -lprotobuf-mutator \
-	-l:libprotobuf-mutator.a \
-	-l:libprotobuf-mutator-libfuzzer.a \
-	-o $@ message.pb.o fuzz-libprotobuff.o $(SSHDOBJS) $(LDFLAGS)  -lssh -lopenbsd-compat $(SSHDLIBS) $(LIBS) $(GSSLIBS) $(K5LIBS) $(CHANNELLIBS)
+	$(LDXX) -DNDEBUG \
+	$(LIBABSL_STATIC) $(OTHER_LIBS) \
+	-o $@ message.pb.o fuzz-libprotobuff.o \
+	$(SSHDOBJS) $(LDFLAGS)  -lssh -lopenbsd-compat $(SSHDLIBS) $(LIBS) $(GSSLIBS) $(K5LIBS) $(CHANNELLIBS)
 
 #	$(LD) -l -I/usr/local/include/libprotobuf-mutator -o $@ message.pb.o fuzz-libprotobuff.o $(SSHDOBJS) $(LDFLAGS)  -lssh -lopenbsd-compat $(SSHDLIBS) $(LIBS) $(GSSLIBS) $(K5LIBS) $(CHANNELLIBS)
 

@@ -68,12 +68,13 @@ DEFINE_PROTO_FUZZER(const Msg& message) {
   google::protobuf::FileDescriptorProto file;
 
   // Emulate a bug.
-  if (message.optional_uint64() ==
-          std::hash<std::string>{}(message.optional_string()) &&
+  if (
+      message.optional_uint64() == std::hash<std::string>{}(message.optional_string()) &&
       message.optional_string() == "abcdefghijklmnopqrstuvwxyz" &&
       !std::isnan(message.optional_float()) &&
-      std::fabs(message.optional_float()) > 1000 &&
-      message.any().UnpackTo(&file) && !file.name().empty()) {
+      std::fabs(message.optional_float()) > 1000
+      && message.any().UnpackTo(&file) && !file.name().empty()
+      ) {
     std::cerr << message.DebugString() << "\n";
     abort();
   }
