@@ -42,7 +42,6 @@ PATHS= -DSSHDIR=\"$(sysconfdir)\" \
 	-D_PATH_SSH_PIDDIR=\"$(piddir)\" \
 	-D_PATH_PRIVSEP_CHROOT_DIR=\"$(PRIVSEP_PATH)\"
 
-LIB_PROTOBUF_MUTATOR_DIR=/usr/local/include/libprotobuf-mutator
 
 LIBFUZZER_FLAG=-fsanitize=fuzzer
 #MEMMEM_NOTMEM=-Dmemmem=memmem2
@@ -52,12 +51,12 @@ CC=clang
 LD=clang
 CXX=clang++
 LDXX=clang++
-CFLAGS=-g -O2 -pipe -Wno-error=format-truncation -Wall -Wpointer-arith -Wuninitialized -Wsign-compare -Wformat-security -Wsizeof-pointer-memaccess -Wno-pointer-sign -Wno-unused-result -Wimplicit-fallthrough -Wmisleading-indentation -fno-strict-aliasing -D_FORTIFY_SOURCE=2 -ftrapv -fno-builtin-memset -fstack-protector-strong $(LIBFUZZER_FLAG) $(MEMMEM_NOTMEM)
+CFLAGS=-g -O2 -pipe -Wno-error=format-truncation -Wall -Wpointer-arith -Wuninitialized -Wsign-compare -Wformat-security -Wsizeof-pointer-memaccess -Wno-pointer-sign -Wno-unused-result -Wimplicit-fallthrough -Wmisleading-indentation -fno-strict-aliasing -D_FORTIFY_SOURCE=2 -ftrapv -fno-builtin-memset -fstack-protector-strong -fPIE $(LIBFUZZER_FLAG) $(MEMMEM_NOTMEM)
 CFLAGS_NOPIE=-g -O2 -pipe -Wno-error=format-truncation -Wall -Wpointer-arith -Wuninitialized -Wsign-compare -Wformat-security -Wsizeof-pointer-memaccess -Wno-pointer-sign -Wno-unused-result -Wimplicit-fallthrough -Wmisleading-indentation -fno-strict-aliasing -D_FORTIFY_SOURCE=2 -ftrapv -fno-builtin-memset -fstack-protector-strong $(LIBFUZZER_FLAG) $(MEMMEM_NOTMEM)
 CPPFLAGS=-I. -I$(srcdir) -I/usr/local/openssl -I$(LIB_PROTOBUF_MUTATOR_DIR) -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE $(PATHS) -DHAVE_CONFIG_H
-#PICFLAG=-fPIC
-PICFLAG=
-LIBS=-ldl -lutil  -lresolv -lprotobuf
+PICFLAG=-fPIC
+#PICFLAG=
+LIBS=-ldl -lutil  -lresolv
 CHANNELLIBS=-lcrypto  -lz
 K5LIBS=
 GSSLIBS=
@@ -221,7 +220,38 @@ sshd$(EXEEXT): libssh.a	$(LIBCOMPAT) $(SSHDOBJS)
 
 
 ##### COMPILING WITH  libprotobuf-mutator ###################
+#CXX_STD=-std=c++14
+CXX_STD=
 
+# -DNDEBUG
+# /usr/local/lib/libprotobuf-mutator.a /usr/local/lib/libprotobuf-mutator-libfuzzer.a \
+-lprotobuf -lprotobuf-mutator \
+
+#/home/nik/libprotobuf-mutator/build/external.protobuf/include/google/protobuf/any.pb.h
+#-I src -I port
+
+# $(LIBABSL_STATIC) $(PROTO_LIBS)
+# src/*.cc src/libfuzzer/*.cc -I src -I port
+#
+#	-L/usr/local/lib \
+#	$(LIBABSL_STATIC) \
+#	$(PROTO_LIBS) \
+# -DNDEBUG
+# $(PROTO_LIBS) \
+
+fuzz-libprotobuff.o: message.pb.cc fuzz-libprotobuff.cc mutator_src/mutator.cc
+	$(CXX) -c $(CXX_STD) -DNDEBUG -I. -I./mutator_src -I/usr/local/include/libprotobuf-mutator/ \
+message.pb.cc fuzz-libprotobuff.cc mutator_src/mutator.cc $(LIBFUZZER_FLAG)
+
+# binary_format.o libfuzzer_macro.o libfuzzer_mutator.o
+# mutator.o text_format.o utf8_fix.o
+
+# -I $(LIB_PROTOBUF_MUTATOR_DIR) -lprotobuf-mutator
+# binary_format.o libfuzzer_macro.o libfuzzer_mutator.o \
+# 	mutator.o text_format.o utf8_fix.o \
+	/usr/local/lib/libprotobuf-mutator.a /usr/local/lib/libprotobuf-mutator-libfuzzer.a \
+#
+#  -labsl
 
 LIBABSL_STATIC=-labsl_bad_any_cast_impl -labsl_bad_optional_access  \
                  -labsl_bad_variant_access -labsl_base -labsl_city  \
@@ -258,65 +288,15 @@ LIBABSL_STATIC=-labsl_bad_any_cast_impl -labsl_bad_optional_access  \
                  -labsl_symbolize -labsl_synchronization -labsl_throw_delegate  \
                  -labsl_time -labsl_time_zone
 
-OTHER_LIBS=-lprotobufd -lprotoc -lprotobuf-lite -lprotocd \
-            -lprotobuf-lited -lutf8_range \
-            -lgmock   -lprotobuf-mutator -lutf8_validity \
-            -lprotobuf -lprotobuf-mutator-libfuzzer
-
-# -DNDEBUG
-# /usr/local/lib/libprotobuf-mutator.a /usr/local/lib/libprotobuf-mutator-libfuzzer.a \
--lprotobuf -lprotobuf-mutator \
-
-#/home/nik/libprotobuf-mutator/build/external.protobuf/include/google/protobuf/any.pb.h
-#-I src -I port
-
-fuzz-libprotobuff.o: message.pb.cc fuzz-libprotobuff.cc # $(LIBCOMPAT) # libssh.a  $(SSHDOBJS)
-	$(CXX) -c -I. -I src -I port \
-	$(LIBABSL_STATIC) $(OTHER_LIBS) -DNDEBUG \
-	-lprotobuf  -lprotobuf-mutator -lprotobuf-mutator-libfuzzer \
- 	message.pb.cc fuzz-libprotobuff.cc src/*.cc src/libfuzzer/*.cc  \
-	$(LIBFUZZER_FLAG)  # -I$(LIB_PROTOBUF_MUTATOR_DIR)
-
-# binary_format.o libfuzzer_macro.o libfuzzer_mutator.o
-# mutator.o text_format.o utf8_fix.o
-
-
-# $(SSHDOBJS) $(LDFLAGS)  -lssh -lopenbsd-compat $(SSHDLIBS) $(LIBS) $(GSSLIBS) $(K5LIBS) $(CHANNELLIBS)
-
-#sshd-libprotobuf-mutator$(EXEEXT): libssh.a	$(LIBCOMPAT) $(SSHDOBJS) fuzz-libprotobuff.o
-#	$(LDXX) -o $@ $(SSHDOBJS) fuzz-libprotobuff.o $(LDFLAGS)  -lssh -lopenbsd-compat $(SSHDLIBS) $(LIBS) $(GSSLIBS) $(K5LIBS) $(CHANNELLIBS)
-
-# /usr/local/lib/libprotobuf-mutator-libfuzzer.a
-# /usr/local/lib/libprotobuf-mutator.a
-# /home/nik/libprotobuf-mutator/build/src
-# /usr/local/include/libprotobuf-mutator/src/libfuzzer/libfuzzer_macro.h
-
-#LBPRTBMTR=/home/nik/libprotobuf-mutator/build/src
-
-# 	-I $(LIB_PROTOBUF_MUTATOR_DIR) -L $(LIB_PROTOBUF_MUTATOR_DIR) \
-#
-# libfuzzer_macro.cc.o
-#	-L /usr/local/lib/libprotobuf-mutator.a -L /usr/local/lib/libprotobuf-mutator-libfuzzer.a \
+# -lprotoc -lprotobuf-lite -lprotobuf -lprotoc
 # -lprotobuf-mutator
 
-#	 /usr/local/lib/libprotobuf-mutator.a /usr/local/lib/libprotobuf-mutator-libfuzzer.a \
+PROTO_LIBS=-lprotoc -lprotobuf -lprotobuf-mutator-libfuzzer # -lutf8_range -lutf8_validity -lgmock
 
-# -I $(LIB_PROTOBUF_MUTATOR_DIR) -lprotobuf-mutator
-# binary_format.o libfuzzer_macro.o libfuzzer_mutator.o \
-# 	mutator.o text_format.o utf8_fix.o \
-	/usr/local/lib/libprotobuf-mutator.a /usr/local/lib/libprotobuf-mutator-libfuzzer.a \
-#
-#  -labsl
-
-# -lprotobuf  -lprotobuf-mutator -lprotobuf-mutator-libfuzzer
 sshd-libprotobuf-mutator: libssh.a	$(LIBCOMPAT) $(SSHDOBJS) fuzz-libprotobuff.o
-	$(LDXX) -DNDEBUG \
-	$(LIBABSL_STATIC) $(OTHER_LIBS) \
-	-o $@ message.pb.o fuzz-libprotobuff.o \
-	$(SSHDOBJS) $(LDFLAGS)  -lssh -lopenbsd-compat $(SSHDLIBS) $(LIBS) $(GSSLIBS) $(K5LIBS) $(CHANNELLIBS)
-
-#	$(LD) -l -I/usr/local/include/libprotobuf-mutator -o $@ message.pb.o fuzz-libprotobuff.o $(SSHDOBJS) $(LDFLAGS)  -lssh -lopenbsd-compat $(SSHDLIBS) $(LIBS) $(GSSLIBS) $(K5LIBS) $(CHANNELLIBS)
-
+	$(LDXX)  -DNDEBUG  $(CXX_STD)  \
+	-o $@ fuzz-libprotobuff.o message.pb.o  mutator.o  \
+	$(SSHDOBJS) $(LDFLAGS)  -lssh -lopenbsd-compat $(SSHDLIBS) $(LIBS) $(GSSLIBS) $(K5LIBS) $(CHANNELLIBS) $(LIBABSL_STATIC) $(PROTO_LIBS)
 
 #############################################################
 
