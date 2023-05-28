@@ -4,20 +4,24 @@
 
 #ifdef __cplusplus
 
-//#include "libprotobuf-mutator/src/mutator.h"
-//#include "libprotobuf-mutator/port/protobuf.h"
-//#include "libprotobuf-mutator/src/libfuzzer/libfuzzer_macro.h"
-
-//#include <cstdlib>
-//#include <iostream>
 #include <cmath>
 #include <stdio.h>
 
+//#include "libprotobuf-mutator/src/mutator.h"
+//#include "libprotobuf-mutator/port/protobuf.h"
+//#include "libprotobuf-mutator/src/libfuzzer/libfuzzer_macro.h"
+#include <libprotobuf-mutator/port/protobuf.h>
+#include <libprotobuf-mutator/src/mutator.h>
+#include <libprotobuf-mutator/src/libfuzzer/libfuzzer_macro.h>
+
+//#include <cstdlib>
+//#include <iostream>
+
 #include "message.pb.h"
 
-#include "src/mutator.h"
-#include "port/protobuf.h"
-#include "src/libfuzzer/libfuzzer_macro.h"
+//#include "mutator_src/mutator.h"
+//#include "port/protobuf.h"
+//#include "src/libfuzzer/libfuzzer_macro.h"
 
 
 extern "C"
