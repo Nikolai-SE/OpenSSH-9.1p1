@@ -1,2 +1,7 @@
 *.o
 /.depend
+*.iml
+modules.xml
+.idea/misc.xml
+*.ipr
+.idea/vcs.xml
