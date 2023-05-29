@@ -9,4 +9,4 @@ mkdir $MY_CORPUS
 mkdir $SEEDS
 mkdir $CRASHES
 cd $CRASHES || exit 1
-../../.././sshd-libprotobuf-mutator ../$MY_CORPUS ../$SEEDS -jobs=4
+.././sshd-libprotobuf-mutator.out ../$MY_CORPUS ../$SEEDS -jobs=4
