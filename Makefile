@@ -44,8 +44,6 @@ PATHS= -DSSHDIR=\"$(sysconfdir)\" \
 
 
 LIBFUZZER_FLAG=-fsanitize=address,fuzzer
-LIB_PROTOBUF_MUTATOR_DIR=/usr/local/include/libprotobuf-mutator/src
-
 
 CC=clang
 LD=clang
@@ -224,14 +222,13 @@ CXX_STD=-std=c++14
 #	 pkg-config --cflags protobuf         # print compiler flags
 #    pkg-config --libs protobuf           # print linker flags
 #    pkg-config --cflags --libs protobuf  # print both
-# -I$(LIB_PROTOBUF_MUTATOR_DIR)
 
 fuzz-libprotobuff.o: message.pb.cc fuzz-libprotobuff.cc src/mutator.cc
 	$(CXX) -c $(CXX_STD) -I. `pkg-config --cflags protobuf ` -I/usr/local/include/libprotobuf-mutator \
 	message.pb.cc fuzz-libprotobuff.cc src/mutator.cc \
 	$(LIBFUZZER_FLAG)
 
-PROTO_LIBS=-lprotoc -lprotobuf -lprotobuf-mutator -lprotobuf-mutator-libfuzzer # -lutf8_range -lutf8_validity -lgmock
+PROTO_LIBS=-lprotoc -lprotobuf -lprotobuf-mutator -lprotobuf-mutator-libfuzzer
 
 sshd-libprotobuf-mutator: libssh.a	$(LIBCOMPAT) $(SSHDOBJS) fuzz-libprotobuff.o message.pb.o mutator.o
 	$(LDXX) $(CXX_STD)  \
