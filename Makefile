@@ -53,7 +53,7 @@ CXX=clang++
 LDXX=clang++
 CFLAGS=-g -O2 -pipe -Wno-error=format-truncation -Wall -Wpointer-arith -Wuninitialized -Wsign-compare -Wformat-security -Wsizeof-pointer-memaccess -Wno-pointer-sign -Wno-unused-result -Wimplicit-fallthrough -Wmisleading-indentation -fno-strict-aliasing -D_FORTIFY_SOURCE=2 -ftrapv -fno-builtin-memset -fstack-protector-strong -fPIE $(LIBFUZZER_FLAG)
 CFLAGS_NOPIE=-g -O2 -pipe -Wno-error=format-truncation -Wall -Wpointer-arith -Wuninitialized -Wsign-compare -Wformat-security -Wsizeof-pointer-memaccess -Wno-pointer-sign -Wno-unused-result -Wimplicit-fallthrough -Wmisleading-indentation -fno-strict-aliasing -D_FORTIFY_SOURCE=2 -ftrapv -fno-builtin-memset -fstack-protector-strong $(LIBFUZZER_FLAG)
-CPPFLAGS=-I. -I$(srcdir) -I/usr/local/openssl -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE $(PATHS) -DHAVE_CONFIG_H -I$(LIB_PROTOBUF_MUTATOR_DIR)
+CPPFLAGS=-I. -I$(srcdir) -I/usr/local/openssl -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE $(PATHS) -DHAVE_CONFIG_H
 PICFLAG=#-fPIC
 LIBS=-ldl -lutil  -lresolv
 CHANNELLIBS=-lcrypto  -lz
@@ -224,9 +224,10 @@ CXX_STD=-std=c++14
 #	 pkg-config --cflags protobuf         # print compiler flags
 #    pkg-config --libs protobuf           # print linker flags
 #    pkg-config --cflags --libs protobuf  # print both
+# -I$(LIB_PROTOBUF_MUTATOR_DIR)
 
 fuzz-libprotobuff.o: message.pb.cc fuzz-libprotobuff.cc src/mutator.cc
-	$(CXX) -c $(CXX_STD) -I. `pkg-config --cflags protobuf ` -I/usr/local/include/libprotobuf-mutator  \
+	$(CXX) -c $(CXX_STD) -I. `pkg-config --cflags protobuf ` -I/usr/local/include/libprotobuf-mutator \
 	message.pb.cc fuzz-libprotobuff.cc src/mutator.cc \
 	$(LIBFUZZER_FLAG)
 
