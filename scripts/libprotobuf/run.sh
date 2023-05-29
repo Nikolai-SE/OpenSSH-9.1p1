@@ -1,7 +1,12 @@
 #!/bin/bash
 
 CUR_DIR=scripts/libprotobuf
-OUT_DIR=sshd-libprotobuf-mutator-out
-mkdir $OUT_DIR
-cd ../../
-./sshd-libprotobuf-mutator $CUR_DIR/$OUT_DIR
+SEEDS=sshd-libprotobuf-mutator-seeds
+MY_CORPUS=sshd-libprotobuf-mutator-corpus
+CRASHES=sshd-libprotobuf-mutator-crashes
+
+mkdir $MY_CORPUS
+mkdir $SEEDS
+mkdir $CRASHES
+cd $CRASHES || exit 1
+../../.././sshd-libprotobuf-mutator ../$MY_CORPUS ../$SEEDS -jobs=4

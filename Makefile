@@ -43,9 +43,7 @@ PATHS= -DSSHDIR=\"$(sysconfdir)\" \
 	-D_PATH_PRIVSEP_CHROOT_DIR=\"$(PRIVSEP_PATH)\"
 
 
-LIBFUZZER_FLAG=-fsanitize=fuzzer
-#MEMMEM_NOTMEM=-Dmemmem=memmem2
-MEMMEM_NOTMEM=
+LIBFUZZER_FLAG=-fsanitize=address,fuzzer
 LIB_PROTOBUF_MUTATOR_DIR=/usr/local/include/libprotobuf-mutator/src
 
 
@@ -53,11 +51,10 @@ CC=clang
 LD=clang
 CXX=clang++
 LDXX=clang++
-CFLAGS=-g -O2 -pipe -Wno-error=format-truncation -Wall -Wpointer-arith -Wuninitialized -Wsign-compare -Wformat-security -Wsizeof-pointer-memaccess -Wno-pointer-sign -Wno-unused-result -Wimplicit-fallthrough -Wmisleading-indentation -fno-strict-aliasing -D_FORTIFY_SOURCE=2 -ftrapv -fno-builtin-memset -fstack-protector-strong -fPIE $(LIBFUZZER_FLAG) $(MEMMEM_NOTMEM)
-CFLAGS_NOPIE=-g -O2 -pipe -Wno-error=format-truncation -Wall -Wpointer-arith -Wuninitialized -Wsign-compare -Wformat-security -Wsizeof-pointer-memaccess -Wno-pointer-sign -Wno-unused-result -Wimplicit-fallthrough -Wmisleading-indentation -fno-strict-aliasing -D_FORTIFY_SOURCE=2 -ftrapv -fno-builtin-memset -fstack-protector-strong $(LIBFUZZER_FLAG) $(MEMMEM_NOTMEM)
+CFLAGS=-g -O2 -pipe -Wno-error=format-truncation -Wall -Wpointer-arith -Wuninitialized -Wsign-compare -Wformat-security -Wsizeof-pointer-memaccess -Wno-pointer-sign -Wno-unused-result -Wimplicit-fallthrough -Wmisleading-indentation -fno-strict-aliasing -D_FORTIFY_SOURCE=2 -ftrapv -fno-builtin-memset -fstack-protector-strong -fPIE $(LIBFUZZER_FLAG)
+CFLAGS_NOPIE=-g -O2 -pipe -Wno-error=format-truncation -Wall -Wpointer-arith -Wuninitialized -Wsign-compare -Wformat-security -Wsizeof-pointer-memaccess -Wno-pointer-sign -Wno-unused-result -Wimplicit-fallthrough -Wmisleading-indentation -fno-strict-aliasing -D_FORTIFY_SOURCE=2 -ftrapv -fno-builtin-memset -fstack-protector-strong $(LIBFUZZER_FLAG)
 CPPFLAGS=-I. -I$(srcdir) -I/usr/local/openssl -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE $(PATHS) -DHAVE_CONFIG_H -I$(LIB_PROTOBUF_MUTATOR_DIR)
-PICFLAG=-fPIC
-#PICFLAG=
+PICFLAG=#-fPIC
 LIBS=-ldl -lutil  -lresolv
 CHANNELLIBS=-lcrypto  -lz
 K5LIBS=
@@ -193,7 +190,7 @@ PATHSUBS	= \
 
 FIXPATHSCMD	= $(SED) $(PATHSUBS)
 FIXALGORITHMSCMD= $(SHELL) $(srcdir)/fixalgorithms $(SED) \
-		     
+
 
 all: $(CONFIGFILES) $(MANPAGES) $(TARGETS)
 
@@ -222,136 +219,16 @@ sshd$(EXEEXT): libssh.a	$(LIBCOMPAT) $(SSHDOBJS)
 
 
 ##### COMPILING WITH  libprotobuf-mutator ###################
-#CXX_STD=-std=c++14
-CXX_STD=
-
-# -DNDEBUG
-# /usr/local/lib/libprotobuf-mutator.a /usr/local/lib/libprotobuf-mutator-libfuzzer.a \
--lprotobuf -lprotobuf-mutator \
-
-#/home/nik/libprotobuf-mutator/build/external.protobuf/include/google/protobuf/any.pb.h
-#-I src -I port
-
-# $(LIBABSL_STATIC) $(PROTO_LIBS)
-# src/*.cc src/libfuzzer/*.cc -I src -I port
-#
-#	-L/usr/local/lib \
-#	$(LIBABSL_STATIC) \
-#	$(PROTO_LIBS) \
-# -DNDEBUG
-# $(PROTO_LIBS) \
-# src/binary_format.cc src/text_format.cc -I./src  src/mutator.cc
+CXX_STD=-std=c++14
 
 #	 pkg-config --cflags protobuf         # print compiler flags
 #    pkg-config --libs protobuf           # print linker flags
 #    pkg-config --cflags --libs protobuf  # print both
-#
 
-fuzz-libprotobuff.o: message.pb.cc fuzz-libprotobuff.cc src/mutator.cc # src/binary_format.cc src/text_format.cc
+fuzz-libprotobuff.o: message.pb.cc fuzz-libprotobuff.cc src/mutator.cc
 	$(CXX) -c $(CXX_STD) -I. `pkg-config --cflags protobuf ` -I/usr/local/include/libprotobuf-mutator  \
 	message.pb.cc fuzz-libprotobuff.cc src/mutator.cc \
 	$(LIBFUZZER_FLAG)
-
-# $(LIBABSL_STATIC)
-# src/binary_format.cc src/text_format.cc \
-# binary_format.o libfuzzer_macro.o libfuzzer_mutator.o
-# mutator.o text_format.o utf8_fix.o
-
-# -I $(LIB_PROTOBUF_MUTATOR_DIR)
-# binary_format.o libfuzzer_macro.o libfuzzer_mutator.o \
-# 	mutator.o text_format.o utf8_fix.o \
-	/usr/local/lib/libprotobuf-mutator.a /usr/local/lib/libprotobuf-mutator-libfuzzer.a \
-#
-#  -labsl
-
-LIBABSL_STATIC=-labsl_bad_any_cast_impl -labsl_bad_optional_access  \
-                 -labsl_bad_variant_access -labsl_base -labsl_city  \
-                 -labsl_civil_time -labsl_cord -labsl_cord_internal  \
-                 -labsl_cordz_functions -labsl_cordz_handle -labsl_cordz_info  \
-                 -labsl_cordz_sample_token -labsl_crc32c -labsl_crc_cord_state  \
-                 -labsl_crc_cpu_detect -labsl_crc_internal -labsl_debugging_internal  \
-                 -labsl_demangle_internal -labsl_die_if_null -labsl_examine_stack  \
-                 -labsl_exponential_biased -labsl_failure_signal_handler -labsl_flags  \
-                 -labsl_flags_commandlineflag -labsl_flags_commandlineflag_internal  \
-                 -labsl_flags_config -labsl_flags_internal -labsl_flags_marshalling  \
-                 -labsl_flags_parse -labsl_flags_private_handle_accessor  \
-                 -labsl_flags_program_name -labsl_flags_reflection -labsl_flags_usage  \
-                 -labsl_flags_usage_internal -labsl_graphcycles_internal -labsl_hash  \
-                 -labsl_hashtablez_sampler -labsl_int128 -labsl_leak_check  \
-                 -labsl_log_entry -labsl_log_flags -labsl_log_globals  \
-                 -labsl_log_initialize -labsl_log_internal_check_op  \
-                 -labsl_log_internal_conditions -labsl_log_internal_format  \
-                 -labsl_log_internal_globals -labsl_log_internal_log_sink_set  \
-                 -labsl_log_internal_message -labsl_log_internal_nullguard  \
-                 -labsl_log_internal_proto -labsl_log_severity -labsl_log_sink  \
-                 -labsl_low_level_hash -labsl_malloc_internal -labsl_periodic_sampler  \
-                 -labsl_random_distributions  \
-                 -labsl_random_internal_distribution_test_util  \
-                 -labsl_random_internal_platform -labsl_random_internal_pool_urbg  \
-                 -labsl_random_internal_randen -labsl_random_internal_randen_hwaes  \
-                 -labsl_random_internal_randen_hwaes_impl  \
-                 -labsl_random_internal_randen_slow -labsl_random_internal_seed_material  \
-                 -labsl_random_seed_gen_exception -labsl_random_seed_sequences  \
-                 -labsl_raw_hash_set -labsl_raw_logging_internal  \
-                 -labsl_scoped_set_env -labsl_spinlock_wait -labsl_stacktrace  \
-                 -labsl_status -labsl_statusor -labsl_strerror  \
-                 -labsl_str_format_internal -labsl_strings -labsl_strings_internal  \
-                 -labsl_symbolize -labsl_synchronization -labsl_throw_delegate  \
-                 -labsl_time -labsl_time_zone
-
-# lib([0-9a-z_-]*?).a  -> -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/lib($1).a
-# /home/nik/libprotobuf-mutator/build/external.protobuf/lib  libabsl_flags
-
-LIB_ABSL_CUSTOM=-l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_flags.a                           -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_log_internal_format.a                     -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_raw_logging_internal.a \
--l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_bad_any_cast_impl.a       -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_flags_commandlineflag.a           -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_log_internal_globals.a                    -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_scoped_set_env.a \
--l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_bad_optional_access.a     -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_flags_commandlineflag_internal.a  -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_log_internal_log_sink_set.a               -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_spinlock_wait.a \
--l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_bad_variant_access.a      -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_flags_config.a                    -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_log_internal_message.a                    -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_stacktrace.a \
--l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_base.a                    -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_flags_internal.a                  -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_log_internal_nullguard.a                  -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_status.a \
--l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_city.a                    -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_flags_marshalling.a               -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_log_internal_proto.a                      -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_statusor.a \
--l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_civil_time.a              -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_flags_parse.a                     -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_log_severity.a                            -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_strerror.a \
--l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_cord.a                    -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_flags_private_handle_accessor.a   -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_log_sink.a                                -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_str_format_internal.a \
--l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_cord_internal.a           -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_flags_program_name.a              -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_low_level_hash.a                          -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_strings.a \
--l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_cordz_functions.a         -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_flags_reflection.a                -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_malloc_internal.a                         -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_strings_internal.a \
--l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_cordz_handle.a            -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_flags_usage.a                     -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_periodic_sampler.a                        -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_symbolize.a \
--l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_cordz_info.a              -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_flags_usage_internal.a            -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_random_distributions.a                    -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_synchronization.a \
--l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_cordz_sample_token.a      -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_graphcycles_internal.a            -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_random_internal_distribution_test_util.a  -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_throw_delegate.a \
--l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_crc32c.a                  -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_hash.a                            -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_random_internal_platform.a                -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_time.a \
--l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_crc_cord_state.a          -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_hashtablez_sampler.a              -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_random_internal_pool_urbg.a               -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_time_zone.a \
--l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_crc_cpu_detect.a          -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_int128.a                          -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_random_internal_randen.a                  -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libprotobufd.a \
--l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_crc_internal.a            -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_leak_check.a                      -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_random_internal_randen_hwaes.a            -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libprotobuf-lited.a \
--l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_debugging_internal.a      -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_log_entry.a                       -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_random_internal_randen_hwaes_impl.a       -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libprotocd.a \
--l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_demangle_internal.a       -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_log_flags.a                       -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_random_internal_randen_slow.a             -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libutf8_range.a \
--l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_die_if_null.a             -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_log_globals.a                     -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_random_internal_seed_material.a           -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libutf8_validity.a \
--l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_examine_stack.a           -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_log_initialize.a                  -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_random_seed_gen_exception.a \
--l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_exponential_biased.a      -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_log_internal_check_op.a           -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_random_seed_sequences.a \
--l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_failure_signal_handler.a  -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_log_internal_conditions.a         -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/libabsl_raw_hash_set.a -l:/home/nik/libprotobuf-mutator/build/external.protobuf/lib/utf8_validity.a
-
-LIB_ABSL_CUSTOM_LOCAL=-l:lib/libabsl_flags.a                           -l:lib/libabsl_log_internal_format.a                     -l:lib/libabsl_raw_logging_internal.a \
-	-l:lib/libabsl_bad_any_cast_impl.a       -l:lib/libabsl_flags_commandlineflag.a           -l:lib/libabsl_log_internal_globals.a                    -l:lib/libabsl_scoped_set_env.a \
-	-l:lib/libabsl_bad_optional_access.a     -l:lib/libabsl_flags_commandlineflag_internal.a  -l:lib/libabsl_log_internal_log_sink_set.a               -l:lib/libabsl_spinlock_wait.a \
-	-l:lib/libabsl_bad_variant_access.a      -l:lib/libabsl_flags_config.a                    -l:lib/libabsl_log_internal_message.a                    -l:lib/libabsl_stacktrace.a \
-	-l:lib/libabsl_base.a                    -l:lib/libabsl_flags_internal.a                  -l:lib/libabsl_log_internal_nullguard.a                  -l:lib/libabsl_status.a \
-	-l:lib/libabsl_city.a                    -l:lib/libabsl_flags_marshalling.a               -l:lib/libabsl_log_internal_proto.a                      -l:lib/libabsl_statusor.a \
-	-l:lib/libabsl_civil_time.a              -l:lib/libabsl_flags_parse.a                     -l:lib/libabsl_log_severity.a                            -l:lib/libabsl_strerror.a \
-	-l:lib/libabsl_cord.a                    -l:lib/libabsl_flags_private_handle_accessor.a   -l:lib/libabsl_log_sink.a                                -l:lib/libabsl_str_format_internal.a \
-	-l:lib/libabsl_cord_internal.a           -l:lib/libabsl_flags_program_name.a              -l:lib/libabsl_low_level_hash.a                          -l:lib/libabsl_strings.a \
-	-l:lib/libabsl_cordz_functions.a         -l:lib/libabsl_flags_reflection.a                -l:lib/libabsl_malloc_internal.a                         -l:lib/libabsl_strings_internal.a \
-	-l:lib/libabsl_cordz_handle.a            -l:lib/libabsl_flags_usage.a                     -l:lib/libabsl_periodic_sampler.a                        -l:lib/libabsl_symbolize.a \
-	-l:lib/libabsl_cordz_info.a              -l:lib/libabsl_flags_usage_internal.a            -l:lib/libabsl_random_distributions.a                    -l:lib/libabsl_synchronization.a \
-	-l:lib/libabsl_cordz_sample_token.a      -l:lib/libabsl_graphcycles_internal.a            -l:lib/libabsl_random_internal_distribution_test_util.a  -l:lib/libabsl_throw_delegate.a \
-	-l:lib/libabsl_crc32c.a                  -l:lib/libabsl_hash.a                            -l:lib/libabsl_random_internal_platform.a                -l:lib/libabsl_time.a \
-	-l:lib/libabsl_crc_cord_state.a          -l:lib/libabsl_hashtablez_sampler.a              -l:lib/libabsl_random_internal_pool_urbg.a               -l:lib/libabsl_time_zone.a \
-	-l:lib/libabsl_crc_cpu_detect.a          -l:lib/libabsl_int128.a                          -l:lib/libabsl_random_internal_randen.a                  -l:lib/libprotobufd.a \
-	-l:lib/libabsl_crc_internal.a            -l:lib/libabsl_leak_check.a                      -l:lib/libabsl_random_internal_randen_hwaes.a            -l:lib/libprotobuf-lited.a \
-	-l:lib/libabsl_debugging_internal.a      -l:lib/libabsl_log_entry.a                       -l:lib/libabsl_random_internal_randen_hwaes_impl.a       -l:lib/libprotocd.a \
-	-l:lib/libabsl_demangle_internal.a       -l:lib/libabsl_log_flags.a                       -l:lib/libabsl_random_internal_randen_slow.a             -l:lib/libutf8_range.a \
-	-l:lib/libabsl_die_if_null.a             -l:lib/libabsl_log_globals.a                     -l:lib/libabsl_random_internal_seed_material.a           -l:lib/libutf8_validity.a \
-	-l:lib/libabsl_examine_stack.a           -l:lib/libabsl_log_initialize.a                  -l:lib/libabsl_random_seed_gen_exception.a \
-	-l:lib/libabsl_exponential_biased.a      -l:lib/libabsl_log_internal_check_op.a           -l:lib/libabsl_random_seed_sequences.a \
-	-l:lib/libabsl_failure_signal_handler.a  -l:lib/libabsl_log_internal_conditions.a         -l:lib/libabsl_raw_hash_set.a -l:lib/libabsl_raw_hash_set.a
-
-#
-# -lprotoc -lprotobuf-lite -lprotobuf -lprotoc
 
 PROTO_LIBS=-lprotoc -lprotobuf -lprotobuf-mutator -lprotobuf-mutator-libfuzzer # -lutf8_range -lutf8_validity -lgmock
 
@@ -361,13 +238,6 @@ sshd-libprotobuf-mutator: libssh.a	$(LIBCOMPAT) $(SSHDOBJS) fuzz-libprotobuff.o 
 	$(SSHDOBJS) $(LDFLAGS) \
 	-lssh -lopenbsd-compat $(SSHDLIBS) $(LIBS) $(GSSLIBS) $(K5LIBS) $(CHANNELLIBS) `pkg-config --libs protobuf` -pthread -lprotobuf -lpthread -lprotobuf-mutator-libfuzzer  $(PROTO_LIBS)
 
-
-#$(PROTO_LIBS)
-
-
-
-# binary_format.o text_format.o \
-# $(LIBABSL_STATIC) $(LIB_ABSL_CUSTOM) $(LIB_ABSL_CUSTOM_LOCAL)
 #############################################################
 
 
