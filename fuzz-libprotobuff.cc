@@ -7,22 +7,13 @@
 #include <cmath>
 #include <stdio.h>
 
-//#include "libprotobuf-mutator/src/mutator.h"
-//#include "libprotobuf-mutator/port/protobuf.h"
-//#include "libprotobuf-mutator/src/libfuzzer/libfuzzer_macro.h"
 #include <libprotobuf-mutator/port/protobuf.h>
 #include <libprotobuf-mutator/src/mutator.h>
 #include <libprotobuf-mutator/src/libfuzzer/libfuzzer_macro.h>
 
-//#include <cstdlib>
-//#include <iostream>
 
 #include "message.pb.h"
-
-//#include "mutator_src/mutator.h"
-//#include "port/protobuf.h"
-//#include "src/libfuzzer/libfuzzer_macro.h"
-
+#include "src/mutator.h"
 
 extern "C"
 {
@@ -69,15 +60,18 @@ static PostProcessor<google::protobuf::Any> reg2 = {
     }};
 
 DEFINE_PROTO_FUZZER(const Msg& message) {
-  google::protobuf::FileDescriptorProto file;
+//  google::protobuf::FileDescriptorProto file;
 
   // Emulate a bug.
   if (
-      message.optional_uint64() == std::hash<std::string>{}(message.optional_string()) &&
-      message.optional_string() == "abcdefghijklmnopqrstuvwxyz" &&
+//      message.optional_uint64() == std::hash<std::string>{}(message.optional_string()) &&
+      message.optional_string().size() > 0 &&
+      message.optional_string()[0] == 'a' &&
+      message.optional_string().size() > 1 &&
+      message.optional_string()[1] == 'b' &&
       !std::isnan(message.optional_float()) &&
       std::fabs(message.optional_float()) > 1000
-      && message.any().UnpackTo(&file) && !file.name().empty()
+//      && message.any().UnpackTo(&file) && !file.name().empty()
       ) {
     std::cerr << message.DebugString() << "\n";
     abort();

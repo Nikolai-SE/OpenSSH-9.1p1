@@ -4,7 +4,7 @@ syntax = "proto2";
 
 /** Run this
  protoc -I=$SRC_DIR --cpp_out=$DST_DIR $SRC_DIR/message.proto
- */
+*/
 
 import "google/protobuf/any.proto";
 
@@ -12,6 +12,5 @@ message Msg {
   optional float optional_float = 1;
   optional uint64 optional_uint64 = 2;
   optional string optional_string = 3;
-  optional google.protobuf.Any any = 4;
+//  optional google.protobuf.Any any = 4;
 }
-

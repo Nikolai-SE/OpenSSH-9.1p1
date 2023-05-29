@@ -87,7 +87,11 @@ bool GetRandomBool(RandomEngine* random, size_t n = 2) {
 }
 
 bool IsProto3SimpleField(const FieldDescriptor& field) {
-  return !field.is_repeated() && !field.has_presence();
+  assert(field.file()->syntax() == FileDescriptor::SYNTAX_PROTO3 ||
+         field.file()->syntax() == FileDescriptor::SYNTAX_PROTO2);
+  return field.file()->syntax() == FileDescriptor::SYNTAX_PROTO3 &&
+         field.cpp_type() != FieldDescriptor::CPPTYPE_MESSAGE &&
+         !field.containing_oneof() && !field.is_repeated();
 }
 
 struct CreateDefaultField : public FieldFunction<CreateDefaultField> {

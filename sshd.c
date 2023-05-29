@@ -1532,7 +1532,7 @@ prepare_proctitle(int ac, char **av)
 	return ret;
 }
 
-#include "fuzz-libfuzzer.h"
+//#include "fuzz-libfuzzer.h"
 
 #define FUZZ_LIBFUZZER
 /*
