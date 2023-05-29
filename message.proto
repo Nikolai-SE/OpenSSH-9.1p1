@@ -1,4 +1,4 @@
-syntax = "proto2";
+syntax = "proto3";
 //package openssh_package;
 
 
@@ -12,5 +12,5 @@ message Msg {
   optional float optional_float = 1;
   optional uint64 optional_uint64 = 2;
   optional string optional_string = 3;
-//  optional google.protobuf.Any any = 4;
+  optional google.protobuf.Any any = 4;
 }

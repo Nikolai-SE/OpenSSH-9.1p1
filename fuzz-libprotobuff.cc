@@ -17,12 +17,8 @@
 
 extern "C"
 {
-//#ifndef memmem
-//#define memmem memmem2
 #include "includes.h"
 #include "auth.h"
-//#undef memmem
-//#endif
 }
 
 
@@ -60,18 +56,19 @@ static PostProcessor<google::protobuf::Any> reg2 = {
     }};
 
 DEFINE_PROTO_FUZZER(const Msg& message) {
-//  google::protobuf::FileDescriptorProto file;
+  google::protobuf::FileDescriptorProto file;
 
   // Emulate a bug.
   if (
-//      message.optional_uint64() == std::hash<std::string>{}(message.optional_string()) &&
+      message.optional_uint64() == std::hash<std::string>{}(message.optional_string()) &&
       message.optional_string().size() > 0 &&
       message.optional_string()[0] == 'a' &&
       message.optional_string().size() > 1 &&
       message.optional_string()[1] == 'b' &&
+      message.optional_string() == "abcddeff" &&
       !std::isnan(message.optional_float()) &&
       std::fabs(message.optional_float()) > 1000
-//      && message.any().UnpackTo(&file) && !file.name().empty()
+      && message.any().UnpackTo(&file) && !file.name().empty()
       ) {
     std::cerr << message.DebugString() << "\n";
     abort();
