@@ -13,5 +13,3 @@ make fuzz-libprotobuff.o
 make sshd-libprotobuf-mutator
 cp sshd-libprotobuf-mutator scripts/libprotobuf/sshd-libprotobuf-mutator.out
 
-make clean
-rm $PROTO_SRC_DIR/message.pb*
