@@ -11,3 +11,6 @@ mkdir $SEEDS
 mkdir $CRASHES
 cd $CRASHES || exit 1
 sudo .././sshd-libprotobuf-mutator.out ../$MY_CORPUS ../$SEEDS -jobs=$NUMBER_OF_JOBS -max_len=8128
+
+# LSAN_OPTIONS=verbosity=1:log_threads=1
+#sudo gdb --args .././sshd-libprotobuf-mutator.out ../$MY_CORPUS ../$SEEDS -jobs=$NUMBER_OF_JOBS -max_len=8128

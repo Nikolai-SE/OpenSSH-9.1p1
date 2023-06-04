@@ -1533,13 +1533,13 @@ prepare_proctitle(int ac, char **av)
 }
 
 //#include "fuzz-libfuzzer.h"
+#include "fuzz-libprotobuff.h"
 
-#define FUZZ_LIBFUZZER
 /*
  * Main program for the daemon.
  */
 int
-#ifdef FUZZ_LIBFUZZER
+#if defined(FUZZ_LIBFUZZER) | defined(FUZZ_LIBPROTOBUFF)
 main_sshd
 #else
 main

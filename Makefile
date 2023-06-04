@@ -43,14 +43,16 @@ PATHS= -DSSHDIR=\"$(sysconfdir)\" \
 	-D_PATH_PRIVSEP_CHROOT_DIR=\"$(PRIVSEP_PATH)\"
 
 
+# comment to build sshd and comment #define FUZZ_LIBPROTOBUFF in fuzz-libprotobuf.h
 LIBFUZZER_FLAG=-fsanitize=address,fuzzer
+#LIBFUZZER_FLAG=-fsanitize=fuzzer
 
 CC=clang
 LD=clang
 CXX=clang++
 LDXX=clang++
-CFLAGS=-g -O2 -pipe -Wno-error=format-truncation -Wall -Wpointer-arith -Wuninitialized -Wsign-compare -Wformat-security -Wsizeof-pointer-memaccess -Wno-pointer-sign -Wno-unused-result -Wimplicit-fallthrough -Wmisleading-indentation -fno-strict-aliasing -D_FORTIFY_SOURCE=2 -ftrapv -fno-builtin-memset -fstack-protector-strong -fPIE $(LIBFUZZER_FLAG)
-CFLAGS_NOPIE=-g -O2 -pipe -Wno-error=format-truncation -Wall -Wpointer-arith -Wuninitialized -Wsign-compare -Wformat-security -Wsizeof-pointer-memaccess -Wno-pointer-sign -Wno-unused-result -Wimplicit-fallthrough -Wmisleading-indentation -fno-strict-aliasing -D_FORTIFY_SOURCE=2 -ftrapv -fno-builtin-memset -fstack-protector-strong $(LIBFUZZER_FLAG)
+CFLAGS=-g3 -O2 -pipe -Wno-error=format-truncation -Wall -Wpointer-arith -Wuninitialized -Wsign-compare -Wformat-security -Wsizeof-pointer-memaccess -Wno-pointer-sign -Wno-unused-result -Wimplicit-fallthrough -Wmisleading-indentation -fno-strict-aliasing -D_FORTIFY_SOURCE=2 -ftrapv -fno-builtin-memset -fstack-protector-strong -fPIE $(LIBFUZZER_FLAG)
+CFLAGS_NOPIE=-g3 -O2 -pipe -Wno-error=format-truncation -Wall -Wpointer-arith -Wuninitialized -Wsign-compare -Wformat-security -Wsizeof-pointer-memaccess -Wno-pointer-sign -Wno-unused-result -Wimplicit-fallthrough -Wmisleading-indentation -fno-strict-aliasing -D_FORTIFY_SOURCE=2 -ftrapv -fno-builtin-memset -fstack-protector-strong $(LIBFUZZER_FLAG)
 CPPFLAGS=-I. -I$(srcdir) -I/usr/local/openssl -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE $(PATHS) -DHAVE_CONFIG_H
 PICFLAG=#-fPIC
 LIBS=-ldl -lutil  -lresolv
