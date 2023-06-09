@@ -1,0 +1,91 @@
+nik@debian:~/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/scripts/libprotobuf$ /bin/bash /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/scripts/libprotobuf/run_gdb.sh
+mkdir: невозможно создать каталог «sshd-libprotobuf-mutator-corpus»: Файл существует
+mkdir: невозможно создать каталог «sshd-libprotobuf-mutator-seeds»: Файл существует
+mkdir: невозможно создать каталог «sshd-libprotobuf-mutator-crashes»: Файл существует
+GNU gdb (Debian 10.1-1.7) 10.1.90.20210103-git
+Copyright (C) 2021 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+--Type <RET> for more, q to quit, c to continue without paging--
+Reading symbols from .././sshd-libprotobuf-mutator.out...
+(gdb) set follow-fork-mode child
+(gdb) directory /home/nik/glibc-2.31
+Source directories searched: /home/nik/glibc-2.31:$cdir:$cwd
+(gdb) r
+Starting program: /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/scripts/libprotobuf/sshd-libprotobuf-mutator.out ../sshd-libprotobuf-mutator-corpus ../sshd-libprotobuf-mutator-seeds -jobs=1 -max_len=8128
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+INFO: found LLVMFuzzerCustomMutator (0x5642e0). Disabling -len_control by default.
+[New Thread 0x7ffff3bff700 (LWP 140557)]
+[New Thread 0x7ffff33fe700 (LWP 140558)]
+/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/scripts/libprotobuf/sshd-libprotobuf-mutator.out ../sshd-libprotobuf-mutator-corpus ../sshd-libprotobuf-mutator-seeds -max_len=8128 >fuzz-0.log 2>&1
+[Attaching after Thread 0x7ffff33fe700 (LWP 140558) vfork to child process 140559]
+[New inferior 2 (process 140559)]
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+[Detaching vfork parent process 140553 after child exec]
+[Inferior 1 (process 140553) detached]
+process 140559 is executing new program: /usr/bin/dash
+[Attaching after Thread 0x7ffff33fe700 (LWP 140559) vfork to child process 140560]
+[New inferior 3 (process 140560)]
+[Detaching vfork parent process 140559 after child exec]
+[Inferior 2 (process 140559) detached]
+process 140560 is executing new program: /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/scripts/libprotobuf/sshd-libprotobuf-mutator.out
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+[New Thread 0x7ffff2379700 (LWP 140561)]
+--Type <RET> for more, q to quit, c to continue without paging--
+
+Thread 3.2 "sshd-libprotobu" received signal SIG33, Real-time event 33.
+[Switching to Thread 0x7ffff2379700 (LWP 140561)]
+0x00007ffff724a1a1 in __GI___clock_nanosleep (clock_id=clock_id@entry=0, flags=flags@entry=0, req=req@entry=0x7ffff2378dc0, rem=rem@entry=0x7ffff2378dc0)
+    at ../sysdeps/unix/sysv/linux/clock_nanosleep.c:48
+48        r = INTERNAL_SYSCALL_CANCEL (clock_nanosleep_time64, err, clock_id,
+(gdb) c
+Continuing.
+
+Thread 3.2 "sshd-libprotobu" received signal SIG33, Real-time event 33.
+0x00007ffff724a1a1 in __GI___clock_nanosleep (clock_id=clock_id@entry=0, flags=flags@entry=0, req=req@entry=0x7ffff2378dc0, rem=rem@entry=0x7ffff2378dc0)
+    at ../sysdeps/unix/sysv/linux/clock_nanosleep.c:48
+48        r = INTERNAL_SYSCALL_CANCEL (clock_nanosleep_time64, err, clock_id,
+(gdb) c
+Continuing.
+[Attaching after Thread 0x7ffff7183800 (LWP 140560) fork to child process 140570]
+[New inferior 4 (process 140570)]
+[Detaching after fork from parent process 140560]
+[Inferior 3 (process 140560) detached]
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Thread 4.1 "sshd-libprotobu" received signal SIGXFSZ, File size limit exceeded.
+[Switching to Thread 0x7ffff7183800 (LWP 140570)]
+__libc_write (nbytes=880, buf=0x619000007d80, fd=4) at ../sysdeps/unix/sysv/linux/write.c:26
+26        return SYSCALL_CANCEL (write, fd, buf, nbytes);
+(gdb) backtrace
+#0  __libc_write (nbytes=880, buf=0x619000007d80, fd=4) at ../sysdeps/unix/sysv/linux/write.c:26
+#1  __libc_write (fd=4, buf=0x619000007d80, nbytes=880) at ../sysdeps/unix/sysv/linux/write.c:24
+#2  0x00000000004cf3e0 in write ()
+#3  0x0000000000773bc3 in ssh_packet_write_poll (ssh=0x61d000005a80) at packet.c:1983
+#4  0x0000000000769bf9 in ssh_packet_write_wait (ssh=0x61d000005a80) at packet.c:2012
+#5  0x0000000000768fb9 in ssh_packet_read_seqnr (ssh=0x61d000005a80, typep=0x7fffffffca40 "\001", seqnr_p=0x7fffffffca50) at packet.c:1339
+#6  0x000000000078f799 in ssh_dispatch_run (ssh=0x61d000005a80, mode=0, done=0x61d000006508) at dispatch.c:96
+#7  0x00000000007900e1 in ssh_dispatch_run_fatal (ssh=0x61d000005a80, mode=0, done=0x61d000006508) at dispatch.c:133
+#8  0x00000000005d2c60 in do_ssh2_kex (ssh=0x61d000005a80) at sshd.c:2432
+#9  0x00000000005cac0a in main_sshd (ac=9, av=0x607000003ba0) at sshd.c:2259
+#10 0x000000000056510f in TestOneProtoInput(Msg const&) ()
+#11 0x0000000000564bd6 in LLVMFuzzerTestOneInput ()
+#12 0x000000000046a032 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) ()
+#13 0x000000000046b4a7 in fuzzer::Fuzzer::ReadAndExecuteSeedCorpora(std::__Fuzzer::vector<fuzzer::SizedFile, fuzzer::fuzzer_allocator<fuzzer::SizedFile> >&) ()
+#14 0x000000000046b91a in fuzzer::Fuzzer::Loop(std::__Fuzzer::vector<fuzzer::SizedFile, fuzzer::fuzzer_allocator<fuzzer::SizedFile> >&) ()
+--Type <RET> for more, q to quit, c to continue without paging--

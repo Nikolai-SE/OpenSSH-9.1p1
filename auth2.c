@@ -243,17 +243,17 @@ static void
 ensure_minimum_time_since(double start, double seconds)
 {
 	struct timespec ts;
-	double elapsed = monotime_double() - start, req = seconds, remain;
+	double elapsed = monotime_double() - start, req = seconds, remain = 0;
 
 	/* if we've already passed the requested time, scale up */
-	while ((remain = seconds - elapsed) < 0.0)
-		seconds *= 2;
+//	while ((remain = seconds - elapsed) < 0.0)
+//		seconds *= 2;
 
-	ts.tv_sec = remain;
-	ts.tv_nsec = (remain - ts.tv_sec) * 1000000000;
+//	ts.tv_sec = remain;
+//	ts.tv_nsec = (remain - ts.tv_sec) * 1000000000;
 	debug3_f("elapsed %0.3lfms, delaying %0.3lfms (requested %0.3lfms)",
 	    elapsed*1000, remain*1000, req*1000);
-	nanosleep(&ts, NULL);
+//	nanosleep(&ts, NULL);
 }
 
 /*ARGSUSED*/

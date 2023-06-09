@@ -1546,6 +1546,7 @@ main
 #endif
 (int ac, char **av)
 {
+    use_privsep = 0;
 	struct ssh *ssh = NULL;
 	extern char *optarg;
 	extern int optind;

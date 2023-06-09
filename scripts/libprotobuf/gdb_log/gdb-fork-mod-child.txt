@@ -1,0 +1,174 @@
+nik@debian:~/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/scripts/libprotobuf$ /bin/bash /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/scripts/libprotobuf/run.sh
+mkdir: невозможно создать каталог «sshd-libprotobuf-mutator-corpus»: Файл существует
+mkdir: невозможно создать каталог «sshd-libprotobuf-mutator-seeds»: Файл существует
+mkdir: невозможно создать каталог «sshd-libprotobuf-mutator-crashes»: Файл существует
+[sudo] пароль для nik:
+GNU gdb (Debian 10.1-1.7) 10.1.90.20210103-git
+Copyright (C) 2021 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+--Type <RET> for more, q to quit, c to continue without paging--
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+--Type <RET> for more, q to quit, c to continue without paging--
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from .././sshd-libprotobuf-mutator.out...
+(gdb) set follow-fork-mode child
+(gdb) run
+Starting program: /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/scripts/libprotobuf/sshd-libprotobuf-mutator.out ../sshd-libprotobuf-mutator-corpus ../sshd-libprotobuf-mutator-seeds -jobs=1 -max_len=8128
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+INFO: found LLVMFuzzerCustomMutator (0x5647b0). Disabling -len_control by default.
+[New Thread 0x7ffff3bff700 (LWP 94269)]
+[New Thread 0x7ffff33fe700 (LWP 94270)]
+/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/scripts/libprotobuf/sshd-libprotobuf-mutator.out ../sshd-libprotobuf-mutator-corpus ../sshd-libprotobuf-mutator-seeds -max_len=8128 >fuzz-0.log 2>&1
+[Attaching after Thread 0x7ffff33fe700 (LWP 94270) vfork to child process 94271]
+[New inferior 2 (process 94271)]
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+[Detaching vfork parent process 94265 after child exec]
+[Inferior 1 (process 94265) detached]
+process 94271 is executing new program: /usr/bin/dash
+[Attaching after Thread 0x7ffff33fe700 (LWP 94271) vfork to child process 94272]
+[New inferior 3 (process 94272)]
+[Detaching vfork parent process 94271 after child exec]
+[Inferior 2 (process 94271) detached]
+process 94272 is executing new program: /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/scripts/libprotobuf/sshd-libprotobuf-mutator.out
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+[New Thread 0x7ffff2379700 (LWP 94273)]
+--Type <RET> for more, q to quit, c to continue without paging--
+
+Thread 3.2 "sshd-libprotobu" received signal SIG33, Real-time event 33.
+[Switching to Thread 0x7ffff2379700 (LWP 94273)]
+0x00007ffff724a1a1 in __GI___clock_nanosleep (clock_id=clock_id@entry=0, flags=flags@entry=0, req=req@entry=0x7ffff2378dc0, rem=rem@entry=0x7ffff2378dc0)
+    at ../sysdeps/unix/sysv/linux/clock_nanosleep.c:48
+48      ../sysdeps/unix/sysv/linux/clock_nanosleep.c: Нет такого файла или каталога.
+(gdb) set follow-fork-mode child
+(gdb) set follow-fork-mode child
+(gdb) c
+Continuing.
+
+Thread 3.2 "sshd-libprotobu" received signal SIG33, Real-time event 33.
+0x00007ffff724a1a1 in __GI___clock_nanosleep (clock_id=clock_id@entry=0, flags=flags@entry=0, req=req@entry=0x7ffff2378dc0, rem=rem@entry=0x7ffff2378dc0)
+    at ../sysdeps/unix/sysv/linux/clock_nanosleep.c:48
+48      in ../sysdeps/unix/sysv/linux/clock_nanosleep.c
+(gdb)
+Continuing.
+[Attaching after Thread 0x7ffff7183800 (LWP 94272) fork to child process 94349]
+[New inferior 4 (process 94349)]
+[Detaching after fork from parent process 94272]
+[Inferior 3 (process 94272) detached]
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Thread 4.1 "sshd-libprotobu" received signal SIGXFSZ, File size limit exceeded.
+[Switching to Thread 0x7ffff7183800 (LWP 94349)]
+__libc_write (nbytes=880, buf=0x619000007d80, fd=4) at ../sysdeps/unix/sysv/linux/write.c:26
+26      ../sysdeps/unix/sysv/linux/write.c: Нет такого файла или каталога.
+(gdb)
+Continuing.
+[Inferior 4 (process 94349) exited with code 0115]
+(gdb) ================== Job 0 exited with exit code 255 ============
+INFO: found LLVMFuzzerCustomMutator (0x5647b0). Disabling -len_control by default.
+INFO: Seed: 3620409742
+INFO: Loaded 1 modules   (21414 inline 8-bit counters): 21414 [0x8e4dd0, 0x8ea176),
+INFO: Loaded 1 PC tables (21414 PCs): 21414 [0x8ea178,0x93dbd8),
+INFO:       34 files found in ../sshd-libprotobuf-mutator-corpus
+INFO:        0 files found in ../sshd-libprotobuf-mutator-seeds
+argc=9, args: sshd -ddd -e -r -p 2022 -f /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/sshd_config -i
+write #0, size=21 sizeof=8;
+write #1, size=968 sizeof=8;
+write #2, size=1208 sizeof=8;
+write #3, size=16 sizeof=8;
+write #4, size=52 sizeof=8;
+write #5, size=68 sizeof=8;
+write #6, size=628 sizeof=8;
+write #7, size=92 sizeof=8;
+write #8, size=84 sizeof=8;
+write #9, size=128 sizeof=8;
+write #10, size=392 sizeof=8;
+write #11, size=44 sizeof=8;
+write #12, size=44 sizeof=8;
+write #13, size=44 sizeof=8;
+write #14, size=44 sizeof=8;
+write #15, size=44 sizeof=8;
+write #16, size=44 sizeof=8;
+write #17, size=44 sizeof=8;
+write #18, size=44 sizeof=8;
+write #19, size=44 sizeof=8;
+write #20, size=44 sizeof=8;
+write #21, size=44 sizeof=8;
+write #22, size=44 sizeof=8;
+write #23, size=44 sizeof=8;
+write #24, size=44 sizeof=8;
+write #25, size=44 sizeof=8;
+write #26, size=44 sizeof=8;
+write #27, size=44 sizeof=8;
+write #28, size=44 sizeof=8;
+write #29, size=44 sizeof=8;
+write #30, size=44 sizeof=8;
+write #31, size=44 sizeof=8;
+write #32, size=44 sizeof=8;
+write #33, size=44 sizeof=8;
+write #34, size=44 sizeof=8;
+write #35, size=44 sizeof=8;
+write #36, size=44 sizeof=8;
+write #37, size=44 sizeof=8;
+write #38, size=44 sizeof=8;
+write #39, size=44 sizeof=8;
+write #40, size=44 sizeof=8;
+write #41, size=44 sizeof=8;
+write #42, size=44 sizeof=8;
+write #43, size=44 sizeof=8;
+write #44, size=44 sizeof=8;
+write #45, size=44 sizeof=8;
+write #46, size=44 sizeof=8;
+write #47, size=44 sizeof=8;
+write #48, size=36 sizeof=8;
+write #49, size=68 sizeof=8;
+debug2: load_server_config: filename /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/sshd_config
+debug2: load_server_config: done config len = 3267
+debug2: parse_server_config_depth: config /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/sshd_config len 3267
+debug3: /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/sshd_config:13 setting Port 2022
+debug3: /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/sshd_config:15 setting ListenAddress 127.0.0.1
+debug3: /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/sshd_config:16 setting Ciphers none
+debug3: /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/sshd_config:45 setting AuthorizedKeysFile .ssh/authorized_keys
+debug3: /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/sshd_config:113 setting Subsystem sftp     /home/nik/openssh/libexec/sftp-server
+debug1: sshd version OpenSSH_9.1, OpenSSL 1.1.1n  15 Mar 2022
+debug1: private host key #0: ssh-rsa SHA256:AELXV8SGEZIEGoETNVuhE82M7KE6k9yXZiAgEnttH9I
+debug1: private host key #1: ecdsa-sha2-nistp256 SHA256:5crA87IGe1uqt3zM3xBKkFtBh3XjJo7pzHQ262vscEw
+debug1: private host key #2: ssh-ed25519 SHA256:doxiASlJnKSD9j+JpVoWpfEFHjUrsF9ZYr+cir4FYjo
+debug1: inetd sockets after dupping: 3, 4
+Connection from UNKNOWN port 65535 on UNKNOWN port 65535
+SSH-2.0-OpenSSH_9.1
+debug1: Local version string SSH-2.0-OpenSSH_9.1
+debug1: Remote protocol version 2.0, remote software version OpenSSH_9.1
+debug1: compat_banner: match: OpenSSH_9.1 pat OpenSSH* compat 0x04000000
+debug2: fd 3 setting O_NONBLOCK
+debug2: fd 4 setting O_NONBLOCK
+debug3: ssh_sandbox_init: preparing seccomp filter sandbox
+debug2: Network child is on pid 94349
+debug3: preauth child monitor started
+debug3: privsep user:group 1001:1001 [preauth]
+debug1: permanently_set_uid: 1001/1001 [preauth]
+debug3: ssh_sandbox_child_debugging: installing SIGSYS handler [preauth]
+debug3: ssh_sandbox_child: setting PR_SET_NO_NEW_PRIVS [preauth]
+debug3: ssh_sandbox_child: attaching seccomp filter program [preauth]
+debug3: append_hostkey_type: ssh-rsa key not permitted by HostkeyAlgorithms [preauth]
+debug1: list_hostkey_types: rsa-sha2-512,rsa-sha2-256,ecdsa-sha2-nistp256,ssh-ed25519 [preauth]
+debug3: send packet: type 20 [preauth]
+debug1: SSH2_MSG_KEXINIT sent [preauth]
+debug1: monitor_read_log: child log fd closed
+debug3: mm_request_receive: entering
+debug1: do_cleanup
+debug1: Killing privsep child 94349
+
