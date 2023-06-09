@@ -21,7 +21,7 @@ sudo gdb --args .././sshd-libprotobuf-mutator.out ../$MY_CORPUS ../$SEEDS -jobs=
 # directory /home/nik/glibc-2.31
 # directory /home/nik/glibc
 # handle SIG33 nostop
-# handle all nosto=-098
+# handle all nostop
 
 # b sshd.c:1591 +
 # b sshd.c:1805 -
