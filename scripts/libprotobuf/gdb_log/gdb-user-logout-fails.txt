@@ -1,0 +1,224 @@
+
+Thread 2 "sshd-libprotobu" received signal SIG33, Real-time event 33.
+debug2: load_server_config: filename /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/sshd_config
+debug2: load_server_config: done config len = 3295
+debug2: parse_server_config_depth: config /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/sshd_config len 3295
+debug3: /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/sshd_config:14 setting UsePrivilegeSeparation no
+/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/sshd_config line 14: Deprecated option UsePrivilegeSeparation
+debug3: /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/sshd_config:16 setting Port 2022
+debug3: /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/sshd_config:18 setting ListenAddress 127.0.0.1
+debug3: /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/sshd_config:19 setting Ciphers none
+debug3: /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/sshd_config:48 setting AuthorizedKeysFile .ssh/authorized_keys
+debug3: /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/sshd_config:116 setting Subsystem sftp     /home/nik/openssh/libexec/sftp-server
+debug1: sshd version OpenSSH_9.1, OpenSSL 1.1.1n  15 Mar 2022
+debug1: private host key #0: ssh-rsa SHA256:uHzbHOWMpUOiABzo9RfKskNfF9JiymEu9SA9j3K0Ifs
+debug1: private host key #1: ecdsa-sha2-nistp256 SHA256:JbmtC74DUmn3zum4xAZH9pM99WrzQwInRnaTWKluQ5k
+debug1: private host key #2: ssh-ed25519 SHA256:doxiASlJnKSD9j+JpVoWpfEFHjUrsF9ZYr+cir4FYjo
+
+Thread 2 "sshd-libprotobu" received signal SIG33, Real-time event 33.
+debug1: inetd sockets after dupping: 3, 4
+Connection from UNKNOWN port 65535 on UNKNOWN port 65535
+SSH-2.0-OpenSSH_9.1
+debug1: Local version string SSH-2.0-OpenSSH_9.1
+debug1: Remote protocol version 2.0, remote software version OpenSSH_9.1
+debug1: compat_banner: match: OpenSSH_9.1 pat OpenSSH* compat 0x04000000
+debug2: fd 3 setting O_NONBLOCK
+debug2: fd 4 setting O_NONBLOCK
+debug3: append_hostkey_type: ssh-rsa key not permitted by HostkeyAlgorithms
+debug1: list_hostkey_types: rsa-sha2-512,rsa-sha2-256,ecdsa-sha2-nistp256,ssh-ed25519
+debug3: send packet: type 20
+debug1: SSH2_MSG_KEXINIT sent
+l                                                                                                                                       sntrup761x25519-sha512@openssh.com,curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group14-sha2569rsa-sha2-512,rsa-sha2-256,ecdsa-sha2-nistp256,ssh-ed25519   none,none       none,none�umac-64-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,umac-64@openssh.com,umac-128@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1�umac-64-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,umac-64@openssh.com,umac-128@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1none,zlib@openssh.comnone,zlib@openssh.comdebug3: receive packet: type 20
+debug1: SSH2_MSG_KEXINIT received
+debug2: local server KEXINIT proposal
+debug2: KEX algorithms: sntrup761x25519-sha512@openssh.com,curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group14-sha256
+debug2: host key algorithms: rsa-sha2-512,rsa-sha2-256,ecdsa-sha2-nistp256,ssh-ed25519
+debug2: ciphers ctos: none,none
+debug2: ciphers stoc: none,none
+debug2: MACs ctos: umac-64-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,umac-64@openssh.com,umac-128@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+debug2: MACs stoc: umac-64-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,umac-64@openssh.com,umac-128@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+debug2: compression ctos: none,zlib@openssh.com
+debug2: compression stoc: none,zlib@openssh.com
+debug2: languages ctos:
+debug2: languages stoc:
+debug2: first_kex_follows 0
+debug2: reserved 0
+debug2: peer client KEXINIT proposal
+debug2: KEX algorithms: sntrup761x25519-sha512@openssh.com,curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group14-sha256,ext-info-c
+debug2: host key algorithms: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,sk-ssh-ed25519-cert-v01@openssh.com,sk-ecdsa-sha2-nistp256-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ssh-ed25519,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,sk-ssh-ed25519@openssh.com,sk-ecdsa-sha2-nistp256@openssh.com,rsa-sha2-512,rsa-sha2-256
+debug2: ciphers ctos: none,none
+debug2: ciphers stoc: none,none
+debug2: MACs ctos: none,hmac-md5,hmac-sha1,umac-64@openssh.com
+debug2: MACs stoc: none,hmac-md5,hmac-sha1,umac-64@openssh.com
+debug2: compression ctos: none,zlib@openssh.com,zlib
+debug2: compression stoc: none,zlib@openssh.com,zlib
+debug2: languages ctos:
+debug2: languages stoc:
+debug2: first_kex_follows 0
+debug2: reserved 0
+debug1: kex: algorithm: sntrup761x25519-sha512@openssh.com
+debug1: kex: host key algorithm: ssh-ed25519
+debug1: kex: client->server cipher: none MAC: hmac-sha1 compression: none
+debug1: kex: server->client cipher: none MAC: hmac-sha1 compression: none
+debug1: expecting SSH2_MSG_KEX_ECDH_INIT
+debug3: receive packet: type 30
+debug1: SSH2_MSG_KEX_ECDH_INIT received
+debug3: send packet: type 31
+debug3: send packet: type 21
+debug2: ssh_set_newkeys: mode 1
+debug1: rekey out after 134217728 blocks
+debug1: SSH2_MSG_NEWKEYS sent
+debug1: Sending SSH2_MSG_EXT_INFO
+debug3: send packet: type 7
+debug1: expecting SSH2_MSG_NEWKEYS
+�       3
+         ssh-ed25519 �$8Z��[d�x�`/�ّ���kŎ���5��/T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7T7***********************************************************************************************����������������������������������������������������������������������������������������������֗������������������������QQQQQQQQQQQ�m�m�m�m�m�T@@`��|J
+                    ���N�sZ�Y΁t�[y~r�����W�K5�#�^nN%gr%4�
+                                                           u=
+                                                             �=�!S
+                                                                  ssh-ed25519@Кd/�!�Ђ�d
+                                                                                       7�_�P���+���(Ox��S ���W��x�O�ԗ9�����3����}
+
+$server-sig-algs�ssh-ed25519,sk-ssh-ed25519@openssh.com,ssh-rsa,rsa-sha2-256,rsa-sha2-512,ssh-dss,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,sk-ecdsa-sha2-nistp256@openssh.com,webauthn-sk-ecdsa-sha2-nistp256@openssh.compublickey-hostbound@openssh.com0NT��hc��6Q�"F�B�fg�debug3: receive packet: type 21
+debug1: SSH2_MSG_NEWKEYS received
+debug2: ssh_set_newkeys: mode 0
+debug1: rekey in after 134217728 blocks
+debug1: KEX done
+debug3: receive packet: type 5
+debug3: send packet: type 6
+
+
+ssh-userauth�~={?_�kci���N�C�debug3: receive packet: type 50
+debug1: userauth-request for user user service ssh-connection method none
+debug1: attempt 0 failures 0
+debug2: parse_server_config_depth: config reprocess config len 3295
+debug3: auth_shadow_acctexpired: today 19518 sp_expire -1 days left -19519
+debug3: account expiration disabled
+debug2: input_userauth_request: setting up authctxt for user
+debug2: input_userauth_request: try method none
+debug3: user_specific_delay: user specific delay 0.000ms
+debug3: ensure_minimum_time_since: elapsed 3.792ms, delaying 0.000ms (requested 7.572ms)
+Failed none for user from UNKNOWN port 65535 ssh2
+debug3: userauth_finish: failure partial=0 next methods="publickey,password,keyboard-interactive"
+debug3: send packet: type 51
+43'publickey,password,keyboard-interactive
+݈9δ��2 O=
+         R�debug3: receive packet: type 50
+debug1: userauth-request for user user service ssh-connection method publickey
+debug1: attempt 1 failures 0
+debug2: input_userauth_request: try method publickey
+debug2: userauth_pubkey: valid user user querying public key rsa-sha2-512 AAAAB3NzaC1yc2EAAAADAQABAAACAQDXWzqcWJDjr3aMMNvjtna0e0ow9s7nPMtpZqpOoo4wQiXBsgc7j4fQJ7oD2lwOI7EqOjroVO6VrrTokTFuS/muExSpUaEqs6+X0qjWXhAzrCubJXNtizJNcu/SZKcR2aPqz7h662n5Sv0sT9+st7M5kVKjrwFD/+o2TqhH9jWqyZaZ+w/nhmB441cUxvtWg80wMfvUXZB/PVJObfTQftbO0FOki6vEKSHAs6vdJQo+9LXT1kOoOj/Zexl8QyhEYeYqlBmSKayN3pmCcCsDHA2sJj0n2YMPmlEjIEYL5r7KzvdmyuLEYFeU+mAOKq4Vf17K7qI/rmHbWCmoNTaXyjPVCPQ6LjYJ1qez29tAsDY7TlXKEZIZ/5npX1WT8h1Hm9e/UienMHiYXNKP87lY+PzK3Ie3OZf17sRbJFHPHQU8NuVWAo0cMDudczTatEq02EfYeEZJsZU4H7QDvk9tS2uox93nmtY6HNqUUSAai8nHB8eA5HX8XFjKPO2baguycRG56Zw8ufj0ZshbiRsv33xDm4PYM9mHve7m3z5igahhJ5gbK4K4yuCZXNSD3Bkst+8x6OrmQuYr8cQCBydxHNLl74V0XvpxxDfC83BC0DSF/BiGi2RhCDZS167EM7/cSLWSs2MJKq7ijmIC5oYMFL/se7gTHyRrbX4+enjai72dtw==
+debug1: userauth_pubkey: publickey test pkalg rsa-sha2-512 pkblob RSA SHA256:cA2x8Hla1fhUGgwtjH8eq9hOQxrC+B9dYRq4fMeXiOE
+debug1: temporarily_use_uid: 1002/1002 (e=0/0)
+
+Thread 2 "sshd-libprotobu" received signal SIG33, Real-time event 33.
+
+Thread 2 "sshd-libprotobu" received signal SIG33, Real-time event 33.
+
+Thread 2 "sshd-libprotobu" received signal SIG33, Real-time event 33.
+
+Thread 2 "sshd-libprotobu" received signal SIG33, Real-time event 33.
+debug1: trying public key file /home/user/.ssh/authorized_keys
+debug1: Could not open user 'user' authorized keys '/home/user/.ssh/authorized_keys': No such file or directory
+debug1: restore_uid: 0/0
+--Type <RET> for more, q to quit, c to continue without paging--
+
+Thread 2 "sshd-libprotobu" received signal SIG33, Real-time event 33.
+
+Thread 2 "sshd-libprotobu" received signal SIG33, Real-time event 33.
+
+Thread 2 "sshd-libprotobu" received signal SIG33, Real-time event 33.
+debug2: userauth_pubkey: authenticated 0 pkalg rsa-sha2-512
+debug3: user_specific_delay: user specific delay 0.000ms
+debug3: ensure_minimum_time_since: elapsed 2794.662ms, delaying 0.000ms (requested 7.572ms)
+Failed publickey for user from UNKNOWN port 65535 ssh2
+debug3: userauth_finish: failure partial=0 next methods="publickey,password,keyboard-interactive"
+debug3: send packet: type 51
+43'publickey,password,keyboard-interactive
+                                          !Šf.�G�'ܥ�O��debug3: receive packet: type 50
+debug1: userauth-request for user user service ssh-connection method keyboard-interactive
+debug1: attempt 2 failures 1
+debug2: input_userauth_request: try method keyboard-interactive
+debug1: keyboard-interactive devs
+debug1: auth2_challenge: user=user devs=
+debug1: kbdint_alloc: devices ''
+debug2: auth2_challenge_start: devices
+debug3: user_specific_delay: user specific delay 0.000ms
+debug3: ensure_minimum_time_since: elapsed 0.171ms, delaying 0.000ms (requested 7.572ms)
+Failed keyboard-interactive for user from UNKNOWN port 65535 ssh2
+debug3: userauth_finish: failure partial=0 next methods="publickey,password,keyboard-interactive"
+debug3: send packet: type 51
+43'publickey,password,keyboard-interactivet�9~%�1oN��n�>]��debug3: receive packet: type 50
+debug1: userauth-request for user user service ssh-connection method password
+debug1: attempt 3 failures 2
+debug2: input_userauth_request: try method password
+debug3: auth_shadow_pwexpired: today 19518 sp_lstchg 19515 sp_max 99999
+debug3: user_specific_delay: user specific delay 0.000ms
+debug3: ensure_minimum_time_since: elapsed 22.494ms, delaying 0.000ms (requested 7.572ms)
+Accepted password for user from UNKNOWN port 65535 ssh2
+debug3: send packet: type 52
+
+
+4l
+v,
+  �A��]A����2:@rdebug3: notify_hostkeys: key 0: ssh-rsa SHA256:uHzbHOWMpUOiABzo9RfKskNfF9JiymEu9SA9j3K0Ifs
+debug3: notify_hostkeys: key 1: ecdsa-sha2-nistp256 SHA256:JbmtC74DUmn3zum4xAZH9pM99WrzQwInRnaTWKluQ5k
+debug3: notify_hostkeys: key 2: ssh-ed25519 SHA256:doxiASlJnKSD9j+JpVoWpfEFHjUrsF9ZYr+cir4FYjo
+debug3: notify_hostkeys: sent 3 hostkeys
+debug3: send packet: type 80
+debug1: active: key options: agent-forwarding port-forwarding pty user-rc x11-forwarding
+debug1: Entering interactive session for SSH2.
+debug1: server_init_dispatch
+debug3: receive packet: type 90
+debug1: server_input_channel_open: ctype session rchan 0 win 1048576 max 16384
+debug1: input_session_request
+debug1: channel 0: new [server-session]
+debug2: session_new: allocate (allocated 0 max 10)
+debug3: session_unused: session id 0 unused
+debug1: session_new: session 0
+debug1: session_open: channel 0
+debug1: session_open: session 0: link with channel 0
+debug1: server_input_channel_open: confirm session
+debug3: send packet: type 91
+debug3: receive packet: type 80
+debug1: server_input_global_request: rtype no-more-sessions@openssh.com want_reply 0
+debug3: receive packet: type 98
+debug1: server_input_channel_req: channel 0 request pty-req reply 1
+debug1: session_by_channel: session 0 channel 0
+debug1: session_input_channel_req: session 0 req pty-req
+debug1: Allocating pty.
+debug1: session_pty_req: session 0 alloc /dev/pts/22
+debug3: send packet: type 99
+debug3: receive packet: type 98
+debug1: server_input_channel_req: channel 0 request shell reply 1
+debug1: session_by_channel: session 0 channel 0
+debug1: session_input_channel_req: session 0 req shell
+Starting session: shell on pts/22 for user from UNKNOWN port 65535 id 0
+[Attaching after Thread 0x7ffff7183800 (LWP 177092) fork to child process 177098]
+[New inferior 2 (process 177098)]
+[Detaching after fork from parent process 177092]
+[Inferior 1 (process 177092) detached]
+debug2: channel 0: rfd 7 isatty
+debug2: fd 7 setting O_NONBLOCK
+debug3: fd 5 is O_NONBLOCK
+debug3: send packet: type 99
+debug3: receive packet: type 97
+debug2: channel 0: rcvd close
+debug2: channel 0: output open -> drain
+debug2: chan_shutdown_read: channel 0: (i0 o1 sock -1 wfd 7 efd -1 [closed])
+debug2: channel 0: input open -> closed
+debug3: receive packet: type 1
+Received disconnect from UNKNOWN port 65535:11: disconnected by user
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+Disconnected from user user UNKNOWN port 65535
+debug1: do_cleanup
+debug1: session_pty_cleanup2: session 0 release /dev/pts/22
+debug1: Setting controlling tty using TIOCSCTTY.
+process 177098 is executing new program: /usr/bin/bash
+
+--Type <RET> for more, q to quit, c to continue without paging--
+Thread 2.1 "bash" received signal SIGHUP, Hangup.
+[Switching to process 177098]
+0x00007ffff7fd3090 in _start () from /lib64/ld-linux-x86-64.so.2
+(gdb)
