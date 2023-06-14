@@ -103,7 +103,7 @@ _rs_init(u_char *buf, size_t n)
 
 	if (rs == NULL) {
 		if (_rs_allocate(&rs, &rsx) == -1)
-			_exit(1);
+			pthread_exit(1);
 	}
 
 	chacha_keysetup(&rsx->rs_chacha, buf, KEYSZ * 8);

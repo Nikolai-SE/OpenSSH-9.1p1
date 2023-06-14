@@ -376,7 +376,7 @@ ssh_sandbox_violation(int signum, siginfo_t *info, void *void_context)
 	    "%s: unexpected system call (arch:0x%x,syscall:%d @ %p)",
 	    __func__, info->si_arch, info->si_syscall, info->si_call_addr);
 	mm_log_handler(SYSLOG_LEVEL_FATAL, 0, msg, pmonitor);
-	_exit(1);
+	pthread_exit(1);
 }
 
 static void

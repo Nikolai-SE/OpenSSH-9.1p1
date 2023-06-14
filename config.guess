@@ -596,9 +596,9 @@ EOF
 		main()
 			{
 			if (!__power_pc())
-				exit(1);
+				pthread_exit(1);
 			puts("powerpc-ibm-aix3.2.5");
-			exit(0);
+			pthread_exit(0);
 			}
 EOF
 		if $CC_FOR_BUILD -o "$dummy" "$dummy.c" && SYSTEM_NAME=`"$dummy"`

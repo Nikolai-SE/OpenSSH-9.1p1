@@ -1471,14 +1471,14 @@ sanitise_stdfd(void)
 	if ((nullfd = dupfd = open(_PATH_DEVNULL, O_RDWR)) == -1) {
 		fprintf(stderr, "Couldn't open /dev/null: %s\n",
 		    strerror(errno));
-		exit(1);
+		pthread_exit(1);
 	}
 	while (++dupfd <= STDERR_FILENO) {
 		/* Only populate closed fds. */
 		if (fcntl(dupfd, F_GETFL) == -1 && errno == EBADF) {
 			if (dup2(nullfd, dupfd) == -1) {
 				fprintf(stderr, "dup2: %s\n", strerror(errno));
-				exit(1);
+				pthread_exit(1);
 			}
 		}
 	}
@@ -2724,11 +2724,11 @@ subprocess(const char *tag, const char *command,
 		if ((devnull = open(_PATH_DEVNULL, O_RDWR)) == -1) {
 			error("%s: open %s: %s", tag, _PATH_DEVNULL,
 			    strerror(errno));
-			_exit(1);
+			pthread_exit(1);
 		}
 		if (dup2(devnull, STDIN_FILENO) == -1) {
 			error("%s: dup2: %s", tag, strerror(errno));
-			_exit(1);
+			pthread_exit(1);
 		}
 
 		/* Set up stdout as requested; leave stderr in place for now. */
@@ -2739,7 +2739,7 @@ subprocess(const char *tag, const char *command,
 			fd = devnull;
 		if (fd != -1 && dup2(fd, STDOUT_FILENO) == -1) {
 			error("%s: dup2: %s", tag, strerror(errno));
-			_exit(1);
+			pthread_exit(1);
 		}
 		closefrom(STDERR_FILENO + 1);
 
@@ -2747,23 +2747,23 @@ subprocess(const char *tag, const char *command,
 		    initgroups(pw->pw_name, pw->pw_gid) == -1) {
 			error("%s: initgroups(%s, %u): %s", tag,
 			    pw->pw_name, (u_int)pw->pw_gid, strerror(errno));
-			_exit(1);
+			pthread_exit(1);
 		}
 		if (setresgid(pw->pw_gid, pw->pw_gid, pw->pw_gid) == -1) {
 			error("%s: setresgid %u: %s", tag, (u_int)pw->pw_gid,
 			    strerror(errno));
-			_exit(1);
+			pthread_exit(1);
 		}
 		if (setresuid(pw->pw_uid, pw->pw_uid, pw->pw_uid) == -1) {
 			error("%s: setresuid %u: %s", tag, (u_int)pw->pw_uid,
 			    strerror(errno));
-			_exit(1);
+			pthread_exit(1);
 		}
 		/* stdin is pointed to /dev/null at this point */
 		if ((flags & SSH_SUBPROCESS_STDOUT_DISCARD) != 0 &&
 		    dup2(STDIN_FILENO, STDERR_FILENO) == -1) {
 			error("%s: dup2: %s", tag, strerror(errno));
-			_exit(1);
+			pthread_exit(1);
 		}
 		if (env != NULL)
 			execve(av[0], av, env);
@@ -2771,7 +2771,7 @@ subprocess(const char *tag, const char *command,
 			execv(av[0], av);
 		error("%s %s \"%s\": %s", tag, env == NULL ? "execv" : "execve",
 		    command, strerror(errno));
-		_exit(127);
+		pthread_exit(127);
 	default: /* parent */
 		break;
 	}

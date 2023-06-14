@@ -1881,7 +1881,7 @@ sftp_server_cleanup_exit(int i)
 		logit("session closed for local user %s from [%s]",
 		    pw->pw_name, client_addr);
 	}
-	_exit(i);
+	pthread_exit(i);
 }
 
 static void

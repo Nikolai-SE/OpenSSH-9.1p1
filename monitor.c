@@ -1648,12 +1648,12 @@ mm_answer_term(struct ssh *ssh, int sock, struct sshbuf *req)
 
 	while (waitpid(pmonitor->m_pid, &status, 0) == -1)
 		if (errno != EINTR)
-			exit(1);
+			pthread_exit(1);
 
 	res = WIFEXITED(status) ? WEXITSTATUS(status) : 1;
 
 	/* Terminate process */
-	exit(res);
+	pthread_exit(res);
 }
 
 #ifdef SSH_AUDIT_EVENTS

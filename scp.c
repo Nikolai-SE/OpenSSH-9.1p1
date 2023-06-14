@@ -195,8 +195,8 @@ killchild(int signo)
 	}
 
 	if (signo)
-		_exit(1);
-	exit(1);
+		pthread_exit(1);
+	pthread_exit(1);
 }
 
 static void
@@ -242,7 +242,7 @@ do_local_cmd(arglist *a)
 	if (pid == 0) {
 		execvp(a->list[0], a->list);
 		perror(a->list[0]);
-		exit(1);
+		pthread_exit(1);
 	}
 
 	do_cmd_pid = pid;
@@ -332,7 +332,7 @@ do_cmd(char *program, char *host, char *remuser, int port, int subsystem,
 
 		execvp(program, args.list);
 		perror(program);
-		exit(1);
+		pthread_exit(1);
 	} else if (*pid == -1) {
 		fatal("fork: %s", strerror(errno));
 	}
@@ -390,7 +390,7 @@ do_cmd2(char *host, char *remuser, int port, char *cmd,
 
 		execvp(ssh_program, args.list);
 		perror(ssh_program);
-		exit(1);
+		pthread_exit(1);
 	} else if (pid == -1) {
 		fatal("fork: %s", strerror(errno));
 	}
@@ -607,7 +607,7 @@ main(int argc, char **argv)
 		if (pledge("stdio rpath wpath cpath fattr tty proc exec",
 		    NULL) == -1) {
 			perror("pledge");
-			exit(1);
+			pthread_exit(1);
 		}
 	}
 
@@ -618,12 +618,12 @@ main(int argc, char **argv)
 		/* Follow "protocol", send data. */
 		(void) response();
 		source(argc, argv);
-		exit(errs != 0);
+		pthread_exit(errs != 0);
 	}
 	if (tflag) {
 		/* Receive data. */
 		sink(argc, argv, NULL);
-		exit(errs != 0);
+		pthread_exit(errs != 0);
 	}
 	if (argc < 2)
 		usage();
@@ -663,7 +663,7 @@ main(int argc, char **argv)
 				errs = 1;
 		}
 	}
-	exit(errs != 0);
+	pthread_exit(errs != 0);
 }
 
 /* Callback from atomicio6 to update progress meter and limit bandwidth */
@@ -1069,13 +1069,13 @@ toremote(int argc, char **argv, enum scp_mode_e mode, char *sftp_direct)
 				    *src == '-' ? "-- " : "", src);
 				if (do_cmd(ssh_program, host, suser, sport, 0,
 				    bp, &remin, &remout, &do_cmd_pid) < 0)
-					exit(1);
+					pthread_exit(1);
 				free(bp);
 				xasprintf(&bp, "%s -t %s%s", cmd,
 				    *targ == '-' ? "-- " : "", targ);
 				if (do_cmd2(thost, tuser, tport, bp,
 				    remin, remout) < 0)
-					exit(1);
+					pthread_exit(1);
 				free(bp);
 				(void) close(remin);
 				(void) close(remout);
@@ -1147,9 +1147,9 @@ toremote(int argc, char **argv, enum scp_mode_e mode, char *sftp_direct)
 				    *targ == '-' ? "-- " : "", targ);
 				if (do_cmd(ssh_program, thost, tuser, tport, 0,
 				    bp, &remin, &remout, &do_cmd_pid) < 0)
-					exit(1);
+					pthread_exit(1);
 				if (response() < 0)
-					exit(1);
+					pthread_exit(1);
 				free(bp);
 			}
 			source(1, argv + i);
@@ -1608,7 +1608,7 @@ sink(int argc, char **argv, const char *src)
 		(void) umask(mask);
 	if (argc != 1) {
 		run_err("ambiguous target");
-		exit(1);
+		pthread_exit(1);
 	}
 	targ = *argv;
 	if (targetshouldbedirectory)
@@ -1648,7 +1648,7 @@ sink(int argc, char **argv, const char *src)
 				    visbuf, strlen(visbuf));
 			}
 			if (buf[0] == '\02')
-				exit(1);
+				pthread_exit(1);
 			++errs;
 			continue;
 		}
@@ -1700,7 +1700,7 @@ sink(int argc, char **argv, const char *src)
 			 */
 			if (first) {
 				run_err("%s", cp);
-				exit(1);
+				pthread_exit(1);
 			}
 			SCREWUP("expected control record");
 		}
@@ -1727,7 +1727,7 @@ sink(int argc, char **argv, const char *src)
 		if (*cp == '\0' || strchr(cp, '/') != NULL ||
 		    strcmp(cp, ".") == 0 || strcmp(cp, "..") == 0) {
 			run_err("error: unexpected filename: %s", cp);
-			exit(1);
+			pthread_exit(1);
 		}
 		if (npatterns > 0) {
 			for (n = 0; n < npatterns; n++) {
@@ -1799,7 +1799,7 @@ bad:			run_err("%s: %s", np, strerror(errno));
 
 		/*
 		 * NB. do not use run_err() unless immediately followed by
-		 * exit() below as it may send a spurious reply that might
+		 * pthread_exit() below as it may send a spurious reply that might
 		 * desyncronise us from the peer. Use note_err() instead.
 		 */
 		statbytes = 0;
@@ -1818,7 +1818,7 @@ bad:			run_err("%s: %s", np, strerror(errno));
 					run_err("%s", j != EPIPE ?
 					    strerror(errno) :
 					    "dropped connection");
-					exit(1);
+					pthread_exit(1);
 				}
 				amt -= j;
 				cp += j;
@@ -1894,7 +1894,7 @@ screwup:
 		free(patterns[n]);
 	free(patterns);
 	run_err("protocol error: %s", why);
-	exit(1);
+	pthread_exit(1);
 }
 
 void
@@ -2003,7 +2003,7 @@ response(void)
 		++errs;
 		if (resp == 1)
 			return (-1);
-		exit(1);
+		pthread_exit(1);
 	}
 	/* NOTREACHED */
 }
@@ -2015,7 +2015,7 @@ usage(void)
 	    "usage: scp [-346ABCOpqRrsTv] [-c cipher] [-D sftp_server_path] [-F ssh_config]\n"
 	    "           [-i identity_file] [-J destination] [-l limit]\n"
 	    "           [-o ssh_option] [-P port] [-S program] source ... target\n");
-	exit(1);
+	pthread_exit(1);
 }
 
 void
@@ -2149,9 +2149,9 @@ lostconn(int signo)
 	if (!iamremote)
 		(void)write(STDERR_FILENO, "lost connection\n", 16);
 	if (signo)
-		_exit(1);
+		pthread_exit(1);
 	else
-		exit(1);
+		pthread_exit(1);
 }
 
 void
@@ -2169,5 +2169,5 @@ cleanup_exit(int i)
 		waitpid(do_cmd_pid, NULL, 0);
 	if (do_cmd_pid2 > 0)
 		waitpid(do_cmd_pid2, NULL, 0);
-	exit(i);
+	pthread_exit(i);
 }

@@ -28,5 +28,5 @@
 void
 cleanup_exit(int i)
 {
-	_exit(i);
+	pthread_exit(i);
 }

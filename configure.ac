@@ -293,7 +293,7 @@ AC_COMPILE_IFELSE(
     [AC_LANG_PROGRAM([[
 #include <stdlib.h>
 __attribute__((__unused__)) static void foo(void){return;}]],
-    [[ exit(0); ]])],
+    [[ pthread_exit(0); ]])],
     [ AC_MSG_RESULT([yes]) ],
     [ AC_MSG_RESULT([no])
       AC_DEFINE(NO_ATTRIBUTE_ON_RETURN_TYPE, 1,
@@ -305,7 +305,7 @@ AC_COMPILE_IFELSE(
     [AC_LANG_PROGRAM([[
 #include <stdlib.h>
 typedef void foo(const char *, ...) __attribute__((format(printf, 1, 2)));]],
-    [[ exit(0); ]])],
+    [[ pthread_exit(0); ]])],
     [ AC_MSG_RESULT([yes]) ],
     [ AC_MSG_RESULT([no])
       AC_DEFINE(NO_ATTRIBUTE_ON_PROTOTYPE_ARGS, 1,
@@ -315,7 +315,7 @@ typedef void foo(const char *, ...) __attribute__((format(printf, 1, 2)));]],
 AC_MSG_CHECKING([if compiler supports variable length arrays])
 AC_COMPILE_IFELSE(
     [AC_LANG_PROGRAM([[#include <stdlib.h>]],
-    [[ int i; for (i=0; i<3; i++){int a[i]; a[i-1]=0;} exit(0); ]])],
+    [[ int i; for (i=0; i<3; i++){int a[i]; a[i-1]=0;} pthread_exit(0); ]])],
     [ AC_MSG_RESULT([yes])
       AC_DEFINE(VARIABLE_LENGTH_ARRAYS, [1],
 	 [compiler supports variable length arrays]) ],
@@ -325,7 +325,7 @@ AC_COMPILE_IFELSE(
 AC_MSG_CHECKING([if compiler accepts variable declarations after code])
 AC_COMPILE_IFELSE(
     [AC_LANG_PROGRAM([[#include <stdlib.h>]],
-    [[ int a; a = 1; int b = 1; exit(a-b); ]])],
+    [[ int a; a = 1; int b = 1; pthread_exit(a-b); ]])],
     [ AC_MSG_RESULT([yes])
       AC_DEFINE(VARIABLE_DECLARATION_AFTER_CODE, [1],
 	 [compiler variable declarations after code]) ],
@@ -594,7 +594,7 @@ case "$host" in
 	    [AC_LANG_PROGRAM([[
 #define testmacro foo
 #define testmacro bar]],
-	    [[ exit(0); ]])],
+	    [[ pthread_exit(0); ]])],
 	    [ AC_MSG_RESULT([yes]) ],
 	    [ AC_MSG_RESULT([no])
 	      CC="`echo $CC | sed 's/-qlanglvl\=ansi//g'`"
@@ -714,9 +714,9 @@ case "$host" in
 #include <mach-o/dyld.h>
 #include <stdlib.h>
 main() { if (NSVersionOfRunTimeLibrary("System") >= (60 << 16))
-		exit(0);
+		pthread_exit(0);
 	else
-		exit(1);
+		pthread_exit(1);
 }
 			]])],
 	[AC_MSG_RESULT([working])],
@@ -1311,7 +1311,7 @@ EOD
 esac
 
 AC_MSG_CHECKING([compiler and flags for sanity])
-AC_RUN_IFELSE([AC_LANG_PROGRAM([[ #include <stdlib.h> ]], [[ exit(0); ]])],
+AC_RUN_IFELSE([AC_LANG_PROGRAM([[ #include <stdlib.h> ]], [[ pthread_exit(0); ]])],
 	[	AC_MSG_RESULT([yes]) ],
 	[
 		AC_MSG_RESULT([no])
@@ -1343,9 +1343,9 @@ int main(int argc, char **argv) {
     strncpy(buf,"/etc", 32);
     s = dirname(buf);
     if (!s || strncmp(s, "/", 32) != 0) {
-	exit(1);
+	pthread_exit(1);
     } else {
-	exit(0);
+	pthread_exit(0);
     }
 }
 				]])],
@@ -1444,19 +1444,19 @@ else
 	int a=0, b=0, c=0, d=0, n, v;
 	n = sscanf(ZLIB_VERSION, "%d.%d.%d.%d", &a, &b, &c, &d);
 	if (n != 3 && n != 4)
-		exit(1);
+		pthread_exit(1);
 	v = a*1000000 + b*10000 + c*100 + d;
 	fprintf(stderr, "found zlib version %s (%d)\n", ZLIB_VERSION, v);
 
 	/* 1.1.4 is OK */
 	if (a == 1 && b == 1 && c >= 4)
-		exit(0);
+		pthread_exit(0);
 
 	/* 1.2.3 and up are OK */
 	if (v >= 1020300)
-		exit(0);
+		pthread_exit(0);
 
-	exit(2);
+	pthread_exit(2);
 	]])],
 	AC_MSG_RESULT([no]),
 	[ AC_MSG_RESULT([yes])
@@ -1516,7 +1516,7 @@ AC_MSG_CHECKING([if calloc(0, N) returns non-null])
 AC_RUN_IFELSE(
 	[AC_LANG_PROGRAM(
 		[[ #include <stdlib.h> ]],
-		[[ void *p = calloc(0, 1); exit(p == NULL); ]]
+		[[ void *p = calloc(0, 1); pthread_exit(p == NULL); ]]
 	)],
 	[ func_calloc_0_nonnull=yes ],
 	[ func_calloc_0_nonnull=no ],
@@ -1599,7 +1599,7 @@ AC_RUN_IFELSE(
 	]],
 	[[
 	struct dirent d;
-	exit(sizeof(d.d_name)<=sizeof(char));
+	pthread_exit(sizeof(d.d_name)<=sizeof(char));
 	]])],
 	[AC_MSG_RESULT([yes])],
 	[
@@ -1658,7 +1658,7 @@ AC_ARG_WITH(ldns,
 # include <stdint.h>
 #endif
 #include <ldns/ldns.h>
-int main() { ldns_status status = ldns_verify_trusted(NULL, NULL, NULL, NULL); status=LDNS_STATUS_OK; exit(0); }
+int main() { ldns_status status = ldns_verify_trusted(NULL, NULL, NULL, NULL); status=LDNS_STATUS_OK; pthread_exit(0); }
 			]])
 		],
 			[AC_MSG_RESULT(yes)],
@@ -1716,7 +1716,7 @@ AC_ARG_WITH([libedit],
 		    [[
 	int i = H_SETSIZE;
 	el_init("", NULL, NULL, NULL);
-	exit(0);
+	pthread_exit(0);
 		    ]])],
 		    [ AC_MSG_RESULT([yes]) ],
 		    [ AC_MSG_RESULT([no])
@@ -1829,7 +1829,7 @@ AC_MSG_CHECKING([whether -fPIC is accepted])
 SAVED_CFLAGS="$CFLAGS"
 CFLAGS="$CFLAGS -fPIC"
 AC_COMPILE_IFELSE(
-	[AC_LANG_PROGRAM( [[ #include <stdlib.h> ]], [[ exit(0); ]] )],
+	[AC_LANG_PROGRAM( [[ #include <stdlib.h> ]], [[ pthread_exit(0); ]] )],
    [AC_MSG_RESULT([yes])
     PICFLAG="-fPIC"; ],
    [AC_MSG_RESULT([no])
@@ -1995,8 +1995,8 @@ AC_RUN_IFELSE(
 	]], [[
 	char *loc = setlocale(LC_CTYPE, "en_US.UTF-8");
 	if (loc != NULL)
-		exit(0);
-	exit(1);
+		pthread_exit(0);
+	pthread_exit(1);
 	]])],
 	AC_MSG_RESULT(yes),
 	[AC_MSG_RESULT(no)
@@ -2174,9 +2174,9 @@ AC_CHECK_FUNCS([setresuid], [
 	errno=0;
 	setresuid(0,0,0);
 	if (errno==ENOSYS)
-		exit(1);
+		pthread_exit(1);
 	else
-		exit(0);
+		pthread_exit(0);
 		]])],
 		[AC_MSG_RESULT([yes])],
 		[AC_DEFINE([BROKEN_SETRESUID], [1],
@@ -2197,9 +2197,9 @@ AC_CHECK_FUNCS([setresgid], [
 	errno=0;
 	setresgid(0,0,0);
 	if (errno==ENOSYS)
-		exit(1);
+		pthread_exit(1);
 	else
-		exit(0);
+		pthread_exit(0);
 		]])],
 		[AC_MSG_RESULT([yes])],
 		[AC_DEFINE([BROKEN_SETRESGID], [1],
@@ -2215,7 +2215,7 @@ AC_RUN_IFELSE(
 #include <stdio.h>
 #include <stdlib.h>
 	]],
-	[[fflush(NULL); exit(0);]])],
+	[[fflush(NULL); pthread_exit(0);]])],
 	AC_MSG_RESULT([yes]),
 	[AC_MSG_RESULT([no])
 	 AC_DEFINE([FFLUSH_NULL_BUG], [1],
@@ -2258,7 +2258,7 @@ if test "x$ac_cv_func_snprintf" = "xyes" ; then
 		[[
 	char b[5];
 	snprintf(b,5,"123456789");
-	exit(b[4]!='\0');
+	pthread_exit(b[4]!='\0');
 		]])],
 		[AC_MSG_RESULT([yes])],
 		[
@@ -2284,7 +2284,7 @@ if test "x$ac_cv_func_snprintf" = "xyes" ; then
 	size_t a = 1, b = 2;
 	char z[128];
 	snprintf(z, sizeof z, "%zu%zu", a, b);
-	exit(strcmp(z, "12"));
+	pthread_exit(strcmp(z, "12"));
 		]])],
 		[AC_MSG_RESULT([yes])],
 		[
@@ -2382,22 +2382,22 @@ if test ! -z "$check_for_openpty_ctty_bug"; then
 
 	pid = fork();
 	if (pid < 0) {		/* failed */
-		exit(1);
+		pthread_exit(1);
 	} else if (pid > 0) {	/* parent */
 		waitpid(pid, &status, 0);
 		if (WIFEXITED(status))
-			exit(WEXITSTATUS(status));
+			pthread_exit(WEXITSTATUS(status));
 		else
-			exit(2);
+			pthread_exit(2);
 	} else {		/* child */
 		close(0); close(1); close(2);
 		setsid();
 		openpty(&ptyfd, &ttyfd, NULL, NULL, NULL);
 		fd = open("/dev/tty", O_RDWR | O_NOCTTY);
 		if (fd >= 0)
-			exit(3);	/* Acquired ctty: broken */
+			pthread_exit(3);	/* Acquired ctty: broken */
 		else
-			exit(0);	/* Did not acquire ctty: OK */
+			pthread_exit(0);	/* Did not acquire ctty: OK */
 	}
 		]])],
 		[
@@ -2439,7 +2439,7 @@ if test "x$ac_cv_func_getaddrinfo" = "xyes" && \
 	err = getaddrinfo(name, TEST_PORT, &hints, &gai_ai);
 	if (err != 0) {
 		fprintf(stderr, "getaddrinfo failed (%s)", gai_strerror(err));
-		exit(1);
+		pthread_exit(1);
 	}
 
 	for (ai = gai_ai; ai != NULL; ai = ai->ai_next) {
@@ -2456,7 +2456,7 @@ if test "x$ac_cv_func_getaddrinfo" = "xyes" && \
 			else
 				fprintf(stderr, "getnameinfo failed: %s\n",
 				    gai_strerror(err));
-			exit(2);
+			pthread_exit(2);
 		}
 
 		sock = socket(ai->ai_family, ai->ai_socktype, ai->ai_protocol);
@@ -2464,10 +2464,10 @@ if test "x$ac_cv_func_getaddrinfo" = "xyes" && \
 			perror("socket");
 		if (bind(sock, ai->ai_addr, ai->ai_addrlen) < 0) {
 			if (errno == EBADF)
-				exit(3);
+				pthread_exit(3);
 		}
 	}
-	exit(0);
+	pthread_exit(0);
 		]])],
 		[
 			AC_MSG_RESULT([yes])
@@ -2508,7 +2508,7 @@ if test "x$ac_cv_func_getaddrinfo" = "xyes" && \
 	err = getaddrinfo(name, TEST_PORT, &hints, &gai_ai);
 	if (err != 0) {
 		fprintf(stderr, "getaddrinfo failed (%s)", gai_strerror(err));
-		exit(1);
+		pthread_exit(1);
 	}
 
 	for (ai = gai_ai; ai != NULL; ai = ai->ai_next) {
@@ -2521,10 +2521,10 @@ if test "x$ac_cv_func_getaddrinfo" = "xyes" && \
 
 		if (ai->ai_family == AF_INET && err != 0) {
 			perror("getnameinfo");
-			exit(2);
+			pthread_exit(2);
 		}
 	}
-	exit(0);
+	pthread_exit(0);
 		]])],
 		[
 			AC_MSG_RESULT([yes])
@@ -2555,7 +2555,7 @@ if test "x$check_for_conflicting_getspnam" = "x1"; then
 #include <shadow.h>
 #include <stdlib.h>
 		]],
-		[[ exit(0); ]])],
+		[[ pthread_exit(0); ]])],
 		[
 			AC_MSG_RESULT([no])
 		],
@@ -2586,14 +2586,14 @@ if test "x$ac_cv_func_strnvis" = "xyes"; then
 #include <string.h>
 #include <unistd.h>
 #include <vis.h>
-static void sighandler(int sig) { _exit(1); }
+static void sighandler(int sig) { pthread_exit(1); }
 		]], [[
 	char dst[16];
 
 	signal(SIGSEGV, sighandler);
 	if (strnvis(dst, "src", 4, 0) && strcmp(dst, "src") == 0)
-		exit(0);
-	exit(1)
+		pthread_exit(0);
+	pthread_exit(1)
 		]])],
 		[AC_MSG_RESULT([yes])],
 		[AC_MSG_RESULT([no])
@@ -2630,11 +2630,11 @@ static void sighandler(int sig) { }
 		sleep(1);
 		if (getppid() == pid) /* if parent did not exit, shoot it */
 			kill(pid, SIGKILL);
-		exit(0);
+		pthread_exit(0);
 	} else { /* parent */
 		r = select(0, NULL, NULL, NULL, NULL);
 	}
-	exit(r == -1 ? 0 : 1);
+	pthread_exit(r == -1 ? 0 : 1);
 	]])],
 	[AC_MSG_RESULT([yes])],
 	[AC_MSG_RESULT([no])

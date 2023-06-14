@@ -2621,5 +2621,5 @@ cleanup_exit(int i)
 	if (options.control_path != NULL && muxserver_sock != -1)
 		unlink(options.control_path);
 	ssh_kill_proxy_command();
-	_exit(i);
+	pthread_exit(i);
 }

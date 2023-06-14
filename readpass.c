@@ -281,7 +281,7 @@ notify_start(int force_askpass, const char *fmt, ...)
 		setenv("SSH_ASKPASS_PROMPT", "none", 1); /* hint to UI */
 		execlp(askpass, askpass, prompt, (char *)NULL);
 		error_f("exec(%s): %s", askpass, strerror(errno));
-		_exit(1);
+		pthread_exit(1);
 		/* NOTREACHED */
 	}
  out_ctx:

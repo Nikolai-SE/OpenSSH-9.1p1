@@ -87,7 +87,7 @@ start_helper(int *fdp, pid_t *pidp, void (**osigchldp)(int))
 		if ((dup2(pair[1], STDIN_FILENO) == -1) ||
 		    (dup2(pair[1], STDOUT_FILENO) == -1)) {
 			error_f("dup2: %s", strerror(errno));
-			_exit(1);
+			pthread_exit(1);
 		}
 		close(pair[0]);
 		close(pair[1]);
@@ -96,7 +96,7 @@ start_helper(int *fdp, pid_t *pidp, void (**osigchldp)(int))
 		    verbosity == NULL ? "" : verbosity);
 		execlp(helper, helper, verbosity, (char *)NULL);
 		error_f("execlp: %s", strerror(errno));
-		_exit(1);
+		pthread_exit(1);
 	}
 	close(pair[1]);
 

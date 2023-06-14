@@ -203,7 +203,7 @@ log_init(const char *av0, LogLevel level, SyslogFacility facility,
 	if (log_change_level(level) != 0) {
 		fprintf(stderr, "Unrecognized internal syslog level code %d\n",
 		    (int) level);
-		exit(1);
+		pthread_exit(1);
 	}
 
 	log_handler = NULL;
@@ -256,7 +256,7 @@ log_init(const char *av0, LogLevel level, SyslogFacility facility,
 		fprintf(stderr,
 		    "Unrecognized internal syslog facility code %d\n",
 		    (int) facility);
-		exit(1);
+		pthread_exit(1);
 	}
 
 	/*
@@ -457,7 +457,7 @@ sshsigdie(const char *file, const char *func, int line, int showfunc,
 	sshlogv(file, func, line, showfunc, SYSLOG_LEVEL_FATAL,
 	    suffix, fmt, args);
 	va_end(args);
-	_exit(1);
+	pthread_exit(1);
 }
 
 void

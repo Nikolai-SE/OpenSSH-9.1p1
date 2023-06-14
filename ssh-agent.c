@@ -1959,7 +1959,7 @@ void
 cleanup_exit(int i)
 {
 	cleanup_socket();
-	_exit(i);
+	pthread_exit(i);
 }
 
 /*ARGSUSED*/
@@ -1970,7 +1970,7 @@ cleanup_handler(int sig)
 #ifdef ENABLE_PKCS11
 	pkcs11_terminate();
 #endif
-	_exit(2);
+	pthread_exit(2);
 }
 
 static void
@@ -1983,7 +1983,7 @@ check_parent_exists(void)
 	if (parent_pid != -1 && getppid() != parent_pid) {
 		/* printf("Parent has died - Authentication agent exiting.\n"); */
 		cleanup_socket();
-		_exit(2);
+		pthread_exit(2);
 	}
 }
 
@@ -1996,7 +1996,7 @@ usage(void)
 	    "       ssh-agent [-a bind_address] [-E fingerprint_hash] [-P allowed_providers]\n"
 	    "                 [-t life] command [arg ...]\n"
 	    "       ssh-agent [-c | -s] -k\n");
-	exit(1);
+	pthread_exit(1);
 }
 
 int
@@ -2112,24 +2112,24 @@ main(int ac, char **av)
 		if (pidstr == NULL) {
 			fprintf(stderr, "%s not set, cannot kill agent\n",
 			    SSH_AGENTPID_ENV_NAME);
-			exit(1);
+			pthread_exit(1);
 		}
 		pid = (int)strtonum(pidstr, 2, INT_MAX, &errstr);
 		if (errstr) {
 			fprintf(stderr,
 			    "%s=\"%s\", which is not a good PID: %s\n",
 			    SSH_AGENTPID_ENV_NAME, pidstr, errstr);
-			exit(1);
+			pthread_exit(1);
 		}
 		if (kill(pid, SIGTERM) == -1) {
 			perror("kill");
-			exit(1);
+			pthread_exit(1);
 		}
 		format = c_flag ? "unsetenv %s;\n" : "unset %s;\n";
 		printf(format, SSH_AUTHSOCKET_ENV_NAME);
 		printf(format, SSH_AGENTPID_ENV_NAME);
 		printf("echo Agent pid %ld killed;\n", (long)pid);
-		exit(0);
+		pthread_exit(0);
 	}
 
 	/*

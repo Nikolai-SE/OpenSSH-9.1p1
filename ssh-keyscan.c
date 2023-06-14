@@ -280,7 +280,7 @@ keygrab_ssh2(con *c)
 	if ((r = kex_setup(c->c_ssh, myproposal)) != 0) {
 		free(c->c_ssh);
 		fprintf(stderr, "kex_setup: %s\n", ssh_err(r));
-		exit(1);
+		pthread_exit(1);
 	}
 #ifdef WITH_OPENSSL
 	c->c_ssh->kex->kex[KEX_DH_GRP1_SHA1] = kex_gen_client;
@@ -664,7 +664,7 @@ usage(void)
 	    "usage: %s [-46cDHv] [-f file] [-p port] [-T timeout] [-t type]\n"
 	    "\t\t   [host | addrlist namelist]\n",
 	    __progname);
-	exit(1);
+	pthread_exit(1);
 }
 
 int
@@ -704,7 +704,7 @@ main(int argc, char **argv)
 			ssh_port = a2port(optarg);
 			if (ssh_port <= 0) {
 				fprintf(stderr, "Bad port '%s'\n", optarg);
-				exit(1);
+				pthread_exit(1);
 			}
 			break;
 		case 'T':

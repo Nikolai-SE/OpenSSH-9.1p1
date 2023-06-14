@@ -2502,7 +2502,7 @@ load_server_config(const char *filename, struct sshbuf *conf)
 	debug2_f("filename %s", filename);
 	if ((f = fopen(filename, "r")) == NULL) {
 		perror(filename);
-		exit(1);
+		pthread_exit(1);
 	}
 	sshbuf_reset(conf);
 	/* grow buffer, so realloc is avoided for large config files */

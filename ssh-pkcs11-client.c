@@ -293,7 +293,7 @@ pkcs11_start_helper(void)
 		if ((dup2(pair[1], STDIN_FILENO) == -1) ||
 		    (dup2(pair[1], STDOUT_FILENO) == -1)) {
 			fprintf(stderr, "dup2: %s\n", strerror(errno));
-			_exit(1);
+			pthread_exit(1);
 		}
 		close(pair[0]);
 		close(pair[1]);
@@ -304,7 +304,7 @@ pkcs11_start_helper(void)
 		    verbosity == NULL ? "" : verbosity);
 		execlp(helper, helper, verbosity, (char *)NULL);
 		fprintf(stderr, "exec: %s: %s\n", helper, strerror(errno));
-		_exit(1);
+		pthread_exit(1);
 	}
 	close(pair[1]);
 	fd = pair[0];

@@ -166,7 +166,7 @@ ssh_proxy_fdpass_connect(struct ssh *ssh, const char *host,
 		 */
 		execv(argv[0], argv);
 		perror(argv[0]);
-		exit(1);
+		pthread_exit(1);
 	}
 	/* Parent. */
 	if (pid == -1)
@@ -250,7 +250,7 @@ ssh_proxy_connect(struct ssh *ssh, const char *host, const char *host_arg,
 		ssh_signal(SIGPIPE, SIG_DFL);
 		execv(argv[0], argv);
 		perror(argv[0]);
-		exit(1);
+		pthread_exit(1);
 	}
 	/* Parent. */
 	if (pid == -1)
@@ -1660,7 +1660,7 @@ ssh_local_cmd(const char *args)
 		execl(shell, shell, "-c", args, (char *)NULL);
 		error("Couldn't execute %s -c \"%s\": %s",
 		    shell, args, strerror(errno));
-		_exit(1);
+		pthread_exit(1);
 	} else if (pid == -1)
 		fatal("fork failed: %.100s", strerror(errno));
 	while (waitpid(pid, &status, 0) == -1)

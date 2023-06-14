@@ -312,7 +312,7 @@ void
 cleanup_exit(int i)
 {
 	/* XXX */
-	_exit(i);
+	pthread_exit(i);
 }
 
 
@@ -344,7 +344,7 @@ main(int argc, char **argv)
 			break;
 		default:
 			fprintf(stderr, "usage: %s [-v]\n", __progname);
-			exit(1);
+			pthread_exit(1);
 		}
 	}
 
@@ -423,7 +423,7 @@ main(int argc, char **argv)
 void
 cleanup_exit(int i)
 {
-	_exit(i);
+	pthread_exit(i);
 }
 
 int

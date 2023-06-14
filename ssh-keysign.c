@@ -190,7 +190,7 @@ main(int argc, char **argv)
 
 	/* Ensure that stdin and stdout are connected */
 	if ((fd = open(_PATH_DEVNULL, O_RDWR)) < 2)
-		exit(1);
+		pthread_exit(1);
 	/* Leave /dev/null fd iff it is attached to stderr */
 	if (fd > 2)
 		close(fd);

@@ -557,7 +557,7 @@ execute_in_shell(const char *cmd)
 		/* Die with signal to make this error apparent to parent. */
 		ssh_signal(SIGTERM, SIG_DFL);
 		kill(getpid(), SIGTERM);
-		_exit(1);
+		pthread_exit(1);
 	}
 	/* Parent. */
 	if (pid == -1)

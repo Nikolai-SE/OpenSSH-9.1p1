@@ -319,7 +319,7 @@ sighup_restart(void)
 	execv(saved_argv[0], saved_argv);
 	logit("RESTART FAILED: av[0]='%.100s', error: %.100s.", saved_argv[0],
 	    strerror(errno));
-	exit(1);
+	pthread_exit(1);
 }
 
 /*
@@ -563,7 +563,7 @@ privsep_postauth(struct ssh *ssh, Authctxt *authctxt)
 		monitor_child_postauth(ssh, pmonitor);
 
 		/* NEVERREACHED */
-		exit(0);
+		pthread_exit(0);
 	}
 
 	/* child */
@@ -905,7 +905,7 @@ usage(void)
 "            [-E log_file] [-f config_file] [-g login_grace_time]\n"
 "            [-h host_key_file] [-o option] [-p port] [-u len]\n"
 	);
-	exit(1);
+	pthread_exit(1);
 }
 
 static void
@@ -1174,7 +1174,7 @@ server_accept_loop(int *sock_in, int *sock_out, int *newsock, int *config_s)
 			close_listen_socks();
 			if (options.pid_file != NULL)
 				unlink(options.pid_file);
-			exit(received_sigterm == SIGTERM ? 0 : 255);
+			pthread_exit(received_sigterm == SIGTERM ? 0 : 255);
 		}
 		if (ostartups != startups) {
 			setproctitle("%s [listener] %d of %d-%d startups",
@@ -1547,6 +1547,12 @@ main
 (int ac, char **av)
 {
     use_privsep = 0;
+
+    fprintf(stderr, "main_sshd started with: argc=%d, args: ", ac);
+    for(int i = 0; i < ac; ++i)
+        fprintf(stderr, "%s ", av[i]);
+    fprintf(stderr, "\n");
+
 	struct ssh *ssh = NULL;
 	extern char *optarg;
 	extern int optind;
@@ -1650,18 +1656,18 @@ main
 			options.ports_from_cmdline = 1;
 			if (options.num_ports >= MAX_PORTS) {
 				fprintf(stderr, "too many ports.\n");
-				exit(1);
+				pthread_exit(1);
 			}
 			options.ports[options.num_ports++] = a2port(optarg);
 			if (options.ports[options.num_ports-1] <= 0) {
 				fprintf(stderr, "Bad port number.\n");
-				exit(1);
+				pthread_exit(1);
 			}
 			break;
 		case 'g':
 			if ((options.login_grace_time = convtime(optarg)) == -1) {
 				fprintf(stderr, "Invalid login grace time.\n");
-				exit(1);
+				pthread_exit(1);
 			}
 			break;
 		case 'k':
@@ -1681,20 +1687,20 @@ main
 			connection_info = get_connection_info(ssh, 0, 0);
 			if (parse_server_match_testspec(connection_info,
 			    optarg) == -1)
-				exit(1);
+				pthread_exit(1);
 			break;
 		case 'u':
 			utmp_len = (u_int)strtonum(optarg, 0, HOST_NAME_MAX+1+1, NULL);
 			if (utmp_len > HOST_NAME_MAX+1) {
 				fprintf(stderr, "Invalid utmp length.\n");
-				exit(1);
+				pthread_exit(1);
 			}
 			break;
 		case 'o':
 			line = xstrdup(optarg);
 			if (process_server_config_line(&options, line,
 			    "command-line", 0, NULL, NULL, &includes) != 0)
-				exit(1);
+				pthread_exit(1);
 			free(line);
 			break;
 		case '?':
@@ -1804,7 +1810,7 @@ main
 	/* Check that there are no remaining arguments. */
 	if (optind < ac) {
 		fprintf(stderr, "Extra argument %s.\n", av[optind]);
-		exit(1);
+		pthread_exit(1);
 	}
 
 	debug("sshd version %s, %s", SSH_VERSION, SSH_OPENSSL_VERSION);
@@ -1926,7 +1932,7 @@ main
 	accumulate_host_timing_secret(cfg, NULL);
 	if (!sensitive_data.have_ssh2_key) {
 		logit("sshd: no hostkeys available -- exiting.");
-		exit(1);
+		pthread_exit(1);
 	}
 
 	/*
@@ -2005,7 +2011,7 @@ main
 
 	/* Configuration looks good, so exit if in test mode. */
 	if (test_flag)
-		exit(0);
+		pthread_exit(0);
 
 	/*
 	 * Clear out any supplemental groups we may have inherited.  This
@@ -2267,7 +2273,7 @@ main
 	if (use_privsep) {
 		mm_send_keystate(ssh, pmonitor);
 		ssh_packet_clear_keys(ssh);
-		exit(0);
+		pthread_exit(0);
 	}
 
  authenticated:
@@ -2340,7 +2346,7 @@ main
 	if (use_privsep)
 		mm_terminate();
 
-	exit(0);
+	pthread_exit(0);
 }
 
 int
@@ -2467,5 +2473,5 @@ cleanup_exit(int i)
 	if (the_active_state != NULL && (!use_privsep || mm_is_monitor()))
 		audit_event(the_active_state, SSH_CONNECTION_ABANDON);
 #endif
-	_exit(i);
+	pthread_exit(i);
 }

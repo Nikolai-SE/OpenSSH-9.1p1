@@ -229,7 +229,7 @@ killchild(int signo)
 		waitpid(pid, NULL, 0);
 	}
 
-	_exit(1);
+	pthread_exit(1);
 }
 
 /* ARGSUSED */
@@ -349,7 +349,7 @@ local_do_shell(const char *args)
 		}
 		fprintf(stderr, "Couldn't execute \"%s\": %s\n", shell,
 		    strerror(errno));
-		_exit(1);
+		pthread_exit(1);
 	}
 	while (waitpid(pid, &status, 0) == -1)
 		if (errno != EINTR)
@@ -2368,7 +2368,7 @@ connect_to_server(char *path, char **args, int *in, int *out)
 		if ((dup2(c_in, STDIN_FILENO) == -1) ||
 		    (dup2(c_out, STDOUT_FILENO) == -1)) {
 			fprintf(stderr, "dup2: %s\n", strerror(errno));
-			_exit(1);
+			pthread_exit(1);
 		}
 		close(*in);
 		close(*out);
@@ -2386,7 +2386,7 @@ connect_to_server(char *path, char **args, int *in, int *out)
 		ssh_signal(SIGTERM, SIG_DFL);
 		execvp(path, args);
 		fprintf(stderr, "exec: %s: %s\n", path, strerror(errno));
-		_exit(1);
+		pthread_exit(1);
 	}
 
 	ssh_signal(SIGTERM, killchild);
@@ -2412,7 +2412,7 @@ usage(void)
 	    "          [-R num_requests] [-S program] [-s subsystem | sftp_server]\n"
 	    "          destination\n",
 	    __progname);
-	exit(1);
+	pthread_exit(1);
 }
 
 int
@@ -2652,5 +2652,5 @@ main(int argc, char **argv)
 			fatal("Couldn't wait for ssh process: %s",
 			    strerror(errno));
 
-	exit(err == 0 ? 0 : 1);
+	pthread_exit(err == 0 ? 0 : 1);
 }

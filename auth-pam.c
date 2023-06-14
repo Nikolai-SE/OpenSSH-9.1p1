@@ -184,7 +184,7 @@ sshpam_sigchld_handler(int sig)
 static void
 pthread_exit(void *value)
 {
-	_exit(0);
+	pthread_exit(0);
 }
 
 /* ARGSUSED */
@@ -204,7 +204,7 @@ pthread_create(sp_pthread_t *thread, const void *attr,
 		close(ctx->pam_psock);
 		ctx->pam_psock = -1;
 		thread_start(arg);
-		_exit(1);
+		pthread_exit(1);
 	default:
 		*thread = pid;
 		close(ctx->pam_csock);

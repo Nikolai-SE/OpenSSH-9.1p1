@@ -59,7 +59,7 @@ daemon(int nochdir, int noclose)
 	case 0:
 		break;
 	default:
-		_exit(0);
+		pthread_exit(0);
 	}
 
 	if (setsid() == -1)

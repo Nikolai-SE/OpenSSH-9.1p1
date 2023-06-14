@@ -23,5 +23,5 @@ sshfatal(const char *file, const char *func, int line, int showfunc,
 	if (suffix != NULL)
 		fprintf(stderr, ": %s", suffix);
 	fputc('\n', stderr);
-	_exit(1);
+	pthread_exit(1);
 }
