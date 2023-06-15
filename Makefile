@@ -226,7 +226,7 @@ CXX_STD=-std=c++14
 #    pkg-config --cflags --libs protobuf  # print both
 
 fuzz-libprotobuff.o: message.pb.cc fuzz-libprotobuff.cc src/mutator.cc
-	$(CXX) -c $(CXX_STD) -I. `pkg-config --cflags protobuf ` -I/usr/local/include/libprotobuf-mutator \
+	$(CXX) -c $(CXX_STD) -I. -I/usr/include/pthread.h  `pkg-config --cflags protobuf ` -I/usr/local/include/libprotobuf-mutator \
 	message.pb.cc fuzz-libprotobuff.cc src/mutator.cc \
 	$(LIBFUZZER_FLAG)
 

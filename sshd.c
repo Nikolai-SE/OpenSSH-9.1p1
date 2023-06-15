@@ -1546,12 +1546,19 @@ main
 #endif
 (int ac, char **av)
 {
-    use_privsep = 0;
-
+    use_privsep = 0; // "UsePrivilegeSeparation no" in sshd_config don't work
     fprintf(stderr, "main_sshd started with: argc=%d, args: ", ac);
     for(int i = 0; i < ac; ++i)
         fprintf(stderr, "%s ", av[i]);
     fprintf(stderr, "\n");
+
+    /* Emulation bugs for test fuzzer */
+//    void* double_free_ptr1 = malloc(4);
+//    void* double_free_ptr2 = malloc(4);
+//    free(double_free_ptr1);
+//    free(double_free_ptr2);
+//    free(double_free_ptr1);
+//    abort();
 
 	struct ssh *ssh = NULL;
 	extern char *optarg;
