@@ -6,6 +6,8 @@
 
 #ifdef __cplusplus
 
+#define SHOW_LOG
+
 #include <cmath>
 #include <stdio.h>
 #include <string.h>
@@ -43,7 +45,7 @@ const char *PORT = "2022";
 //const char* args_literals[] = {"sshd", "-ddd", "-e", "-r", "-p", PORT,
 //                "-f", "/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/sshd_config", "-i"};
 //const char* args_literals[] = {"sshd", "-ddd", "-e", "-f", "/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/sshd_config", "-i"};
-const char *args_literals[] = {"sshd", "-d", "-e", "-f", "/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/sshd_config",
+const char *args_literals[] = {"sshd", "-ddd", "-e", "-f", "/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/sshd_config",
                                "-i"};
 
 char **args = nullptr;
@@ -172,7 +174,7 @@ struct packet {
     static constexpr size_t SIZE_OF_PACKET_LENGTH = 4;
     static constexpr size_t SIZE_OF_PADDING_LENGTH = 1;
     static constexpr size_t ADDITION_LENGTH = SIZE_OF_PACKET_LENGTH + SIZE_OF_PADDING_LENGTH;
-    static constexpr const char* padding_padding = "PADDINGPADDINGPADDINGPADDING";
+    static constexpr const char *padding_padding = "PADDINGPADDINGPADDINGPADDING";
 
     static packet create_packet(const char *payload, size_t payload_size, size_t mac_length = 0) {
         constexpr size_t redundancy_ratio = 8;
@@ -320,11 +322,41 @@ const std::vector<std::pair<const char *, size_t>> payload_format = {
 
 std::vector<packet> ProtoToPacket(const PacketsData &data) {
     std::vector<packet> packets;
-//    packets.emplace_back(data.optional_string_client_type() + "\r\n");
-    packets.emplace_back("SSH-2.0-OpenSSH_9.1" "\r\n");
 
-    const char username[] = "user";
-    const char user_password[] = "user";
+//    packets.emplace_back("SSH-2.0-" + data.optional_string_client_type() + "\r\n");
+//    packets.emplace_back("SSH-2.0-OpenSSH_9.1" "\r\n");
+    {
+        /**
+         * cve-2023-25136
+         * f"SSH-2.0-{CLIENT_ID}" "PuTTY_Release_0.64"
+         */
+        packets.emplace_back("SSH-2.0-PuTTY_Release_0.64" "\r\n");
+        /*
+         * ==169464==ERROR: AddressSanitizer: heap-use-after-free on address 0x612000011140 at pc 0x0000007f34c0 bp 0x7f2e5a3c81d0 sp 0x7f2e5a3c81c8
+    READ of size 1 at 0x612000011140 thread T2
+        #0 0x7f34bf in kex_assemble_names /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/kex.c:234:24
+        #1 0x60175a in assemble_algorithms /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/servconf.c:233:2
+        #2 0x61e993 in copy_set_server_options /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/servconf.c:2658:2
+        #3 0x615d88 in parse_server_match_config /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/servconf.c:2539:2
+        #4 0x639eaf in getpwnamallow /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/auth.c:478:2
+        #5 0x644ba2 in input_userauth_request /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/auth2.c:286:18
+        #6 0x7aac8d in ssh_dispatch_run /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/dispatch.c:113:8
+        #7 0x7aaf90 in ssh_dispatch_run_fatal /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/dispatch.c:133:11
+        #8 0x63e6f6 in do_authentication2 /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/auth2.c:177:2
+        #9 0x5e5b78 in main_sshd /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/sshd.c:2275:2
+        #10 0x572c39 in int std::__invoke_impl<int, int (*)(int, char**), int, char**>(std::__invoke_other, int (*&&)(int, char**), int&&, char**&&) (/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/scripts/libprotobuf/sshd-libprotobuf-mutator.out+0x572c39)
+        #11 0x572986 in std::__invoke_result<int (*)(int, char**), int, char**>::type std::__invoke<int (*)(int, char**), int, char**>(int (*&&)(int, char**), int&&, char**&&) (/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/scripts/libprotobuf/sshd-libprotobuf-mutator.out+0x572986)
+        #12 0x5728dd in int std::thread::_Invoker<std::tuple<int (*)(int, char**), int, char**> >::_M_invoke<0ul, 1ul, 2ul>(std::_Index_tuple<0ul, 1ul, 2ul>) (/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/scripts/libprotobuf/sshd-libprotobuf-mutator.out+0x5728dd)
+        #13 0x572834 in std::thread::_Invoker<std::tuple<int (*)(int, char**), int, char**> >::operator()() (/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/scripts/libprotobuf/sshd-libprotobuf-mutator.out+0x572834)
+        #14 0x57223e in std::thread::_State_impl<std::thread::_Invoker<std::tuple<int (*)(int, char**), int, char**> > >::_M_run() (/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/scripts/libprotobuf/sshd-libprotobuf-mutator.out+0x57223e)
+        #15 0x7f2e5fd29ecf  (/lib/x86_64-linux-gnu/libstdc++.so.6+0xceecf)
+        #16 0x7f2e5fbe0ea6 in start_thread nptl/pthread_create.c:477:8
+        #17 0x7f2e5f0fba2e in clone misc/../sysdeps/unix/sysv/linux/x86_64/clone.S:95
+         */
+    }
+
+    auto username = data.optional_string_user_name();
+    auto user_password = data.optional_string_user_password();
     std::map<size_t, std::vector<std::string>> args_map{
             {5, {username}},
             {6, {username}},
@@ -353,7 +385,9 @@ std::vector<packet> ProtoToPacket(const PacketsData &data) {
 
 DEFINE_PROTO_FUZZER(const PacketsData &data) {
     init_args();
+#ifdef SHOW_LOG
     fprintf(stderr, "\n Test \n");
+#endif
 
     char data_file_name[100]{};
     sprintf(data_file_name, "data%d.in", gettid());
@@ -361,27 +395,41 @@ DEFINE_PROTO_FUZZER(const PacketsData &data) {
     {
         FILE *data_in = fopen(data_file_name, "wb");
         std::vector<packet> packs = ProtoToPacket(data);
-        for (auto & pack : packs) {
+        for (auto &pack: packs) {
             write(fileno(data_in), pack.data(), pack.size);
         }
         fclose(data_in);
+#ifdef SHOW_LOG
         fprintf(stderr, "write %zu packets;\n", packs.size());
+#endif
     }
     {
         int fd1 = open(data_file_name, O_RDONLY);
         if (dup2(fd1, STDIN_FILENO) == -1) {
             printf("error: could not redirect %s to stdin", data_file_name);
+            assert(false);
         }
         close(fd1);
     }
+#ifdef SHOW_LOG
     printf("thread will creating\n");
+#endif
+
     std::thread main_sshd_thread(main_sshd, argc, args);
+#ifdef SHOW_LOG
     printf("thread is runned\n");
+#endif
+
     main_sshd_thread.join();
+#ifdef SHOW_LOG
     printf("thread was joined\n");
+#endif
 
     free_args();
 }
 
+#ifdef SHOW_LOG
+#undef SHOW_LOG
+#endif
 
 #endif // __cplusplus
