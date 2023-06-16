@@ -323,11 +323,13 @@ std::vector<packet> ProtoToPacket(const PacketsData &data) {
 //    packets.emplace_back(data.optional_string_client_type() + "\r\n");
     packets.emplace_back("SSH-2.0-OpenSSH_9.1" "\r\n");
 
+    const char username[] = "user";
+    const char user_password[] = "user";
     std::map<size_t, std::vector<std::string>> args_map{
-            {5, {"user"}},
-            {6, {"user"}},
-            {7, {"user"}},
-            {8, {"user", "user"}}
+            {5, {username}},
+            {6, {username}},
+            {7, {username}},
+            {8, {username, user_password}}
     };
 
     for (size_t i = 1; i < payload_format.size(); ++i) {
