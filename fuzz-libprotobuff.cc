@@ -6,7 +6,7 @@
 
 #ifdef __cplusplus
 
-#define SHOW_LOG
+//#define SHOW_LOG
 
 #include <cmath>
 #include <stdio.h>
@@ -44,9 +44,7 @@ const char *PORT = "2022";
 ////              -ddd -e -p $PORT -r -f $BUILD_PATH/etc/sshd_config -i
 //const char* args_literals[] = {"sshd", "-ddd", "-e", "-r", "-p", PORT,
 //                "-f", "/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/sshd_config", "-i"};
-//const char* args_literals[] = {"sshd", "-ddd", "-e", "-f", "/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/sshd_config", "-i"};
-const char *args_literals[] = {"sshd", "-ddd", "-e", "-f", "/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/sshd_config",
-                               "-i"};
+const char *args_literals[] = {"sshd", "-d", "-e", "-f", "/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/sshd_config", "-i"};
 
 char **args = nullptr;
 const int argc = sizeof(args_literals) / sizeof(const char *);
@@ -72,12 +70,27 @@ template<class Proto>
 using PostProcessor =
         protobuf_mutator::libfuzzer::PostProcessorRegistration<Proto>;
 
+static PostProcessor<PacketsData> reg1 = {
+    [](PacketsData* packet, unsigned int seed) {
+        packet->set_optional_string_client_type("SSH-2.0-" + packet->optional_string_client_type());
+
+        switch (packet->optional_uint64_user_id() % 2) {
+            case 0:
+                packet->set_optional_string_user_name("user");
+                packet->set_optional_string_user_password("user");
+                break;
+            default:
+                break;
+        }
+    }};
+
+//// Example
 //static PostProcessor<Msg> reg1 = {
 //    [](Msg* message, unsigned int seed) {
 //      message->set_optional_uint64(
 //          std::hash<std::string>{}(message->optional_string()));
 //    }};
-//
+
 //static PostProcessor<google::protobuf::Any> reg2 = {
 //    [](google::protobuf::Any* any, unsigned int seed) {
 //      // Guide mutator to usefull 'Any' types.
@@ -93,7 +106,6 @@ using PostProcessor =
 //        any->set_type_url(expected_types[seed % num]);
 //      }
 //    }};
-
 
 size_t
 format_with_zero(const char *format_array, size_t format_array_length, const std::vector<std::string> &format_args,
@@ -323,14 +335,18 @@ const std::vector<std::pair<const char *, size_t>> payload_format = {
 std::vector<packet> ProtoToPacket(const PacketsData &data) {
     std::vector<packet> packets;
 
-//    packets.emplace_back("SSH-2.0-" + data.optional_string_client_type() + "\r\n");
+#ifdef SHOW_LOG
+    printf("Client type:%s\n", data.optional_string_client_type().c_str());
+#endif
+
+    packets.emplace_back(data.optional_string_client_type() + "\r\n");
 //    packets.emplace_back("SSH-2.0-OpenSSH_9.1" "\r\n");
     {
         /**
          * cve-2023-25136
          * f"SSH-2.0-{CLIENT_ID}" "PuTTY_Release_0.64"
          */
-        packets.emplace_back("SSH-2.0-PuTTY_Release_0.64" "\r\n");
+//        packets.emplace_back("SSH-2.0-PuTTY_Release_0.64" "\r\n");
         /*
          * ==169464==ERROR: AddressSanitizer: heap-use-after-free on address 0x612000011140 at pc 0x0000007f34c0 bp 0x7f2e5a3c81d0 sp 0x7f2e5a3c81c8
     READ of size 1 at 0x612000011140 thread T2
