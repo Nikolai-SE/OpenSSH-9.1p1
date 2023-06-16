@@ -13,7 +13,7 @@ cd $CRASHES || exit 1
 
 export LSAN_OPTIONS=verbosity=1:log_threads=1
 export ASAN_OPTIONS=report_objects=1:sleep_before_dying=1
-sudo gdb --args .././sshd-libprotobuf-mutator.out ../$MY_CORPUS ../$SEEDS -jobs=$NUMBER_OF_JOBS -max_len=8128
+sudo gdb --args .././sshd-libprotobuf-mutator.out ../$MY_CORPUS ../$SEEDS -max_len=8128
 # set follow-fork-mode child
 
 ### apt source glibc
@@ -22,6 +22,11 @@ sudo gdb --args .././sshd-libprotobuf-mutator.out ../$MY_CORPUS ../$SEEDS -jobs=
 # directory /home/nik/glibc
 # handle SIG33 nostop
 # handle all nostop
+# catch syscall exit_group
+
+# b fuzz-libprotobuff.cc:357
+# b fuzz-libprotobuff.cc:358
+# b fuzz-libprotobuff.cc:359
 
 # b sshd.c:1591 +
 # b sshd.c:1805 -

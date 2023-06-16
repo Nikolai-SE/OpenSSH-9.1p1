@@ -3,6 +3,7 @@
 //
 
 // comment to build sshd and comment LIBFUZZER_FLAG in Makefile
+#ifndef FUZZ_LIBPROTOBUFF
 #define FUZZ_LIBPROTOBUFF
 
 
@@ -17,4 +18,8 @@
 //#define pthread_exit(x); pthread_exit(x);
 //#define _exit(x) pthread_exit(x)
 //#define _exit(...); pthread_exit(__VA_ARGS__);
+#endif
+
+
+
 #endif
