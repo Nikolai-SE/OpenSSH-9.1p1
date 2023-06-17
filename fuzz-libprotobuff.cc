@@ -49,6 +49,17 @@ const char *args_literals[] = {"sshd", "-d", "-e", "-f", "/home/nik/Fuzzing/Open
 char **args = nullptr;
 const int argc = sizeof(args_literals) / sizeof(const char *);
 
+void print_buf(char *title, const char *buf, size_t buf_len)
+{
+    size_t i = 0;
+    const unsigned char * buf_ = (const unsigned char *)buf;
+    fprintf(stderr, "%s length: %d\nData:\n", title, buf_len);
+    for (i = 0; i < buf_len; ++i) {
+        fprintf(stderr, "%02X%s", buf_[i],
+             ( i + 1 ) % 16 == 0 ? "\r\n" : " " );
+    }
+}
+
 void init_args() {
     args = new char *[argc];
     for (int i = 0; i < argc; ++i) {
@@ -91,14 +102,9 @@ static PostProcessor<PacketsData> reg1 = {
         }
 
 #ifdef SHOW_LOG
-        fprintf(stderr, "\n I'm here \n"
-                        "packet->optional_string_client_type(): %s\n"
-                        "packet->optional_string_user_name(): %s\n"
-                        "packet->optional_string_user_password(): %s\n",
-                        packet->optional_string_client_type().c_str(),
-                        packet->optional_string_user_name().c_str(),
-                        packet->optional_string_user_password().c_str()
-                        );
+        print_buf("Name",       packet->optional_string_user_name().c_str(),        packet->optional_string_user_name().length());
+        print_buf("Password",   packet->optional_string_user_password().c_str(),    packet->optional_string_user_password().length());
+        print_buf("Client",     packet->optional_string_client_type().c_str(),      packet->optional_string_user_name().length());
 #endif
 
     }};
@@ -354,11 +360,11 @@ const std::vector<std::pair<const char *, size_t>> payload_format = {
 std::vector<packet> ProtoToPacket(const PacketsData &data) {
     std::vector<packet> packets;
 
-#ifdef SHOW_LOG
-    fprintf(stderr,"Client type:%s\n", data.optional_string_client_type().c_str());
-#endif
+//#ifdef SHOW_LOG
+    //fprintf(stderr,"Client type:%s\n", data.optional_string_client_type().c_str());
+//#endif
 
-    packets.emplace_back("SSH-2.0-PuTTY" + data.optional_string_client_type() + "\r\n");
+    packets.emplace_back("SSH-2.0-PuTTY_Release_" + data.optional_string_client_type() + "\r\n");
 //    packets.emplace_back("SSH-2.0-OpenSSH_9.1" "\r\n");
     {
         /**
