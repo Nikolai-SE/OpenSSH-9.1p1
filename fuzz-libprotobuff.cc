@@ -6,7 +6,7 @@
 
 #ifdef __cplusplus
 
-//#define SHOW_LOG
+#define SHOW_LOG
 
 #include <cmath>
 #include <stdio.h>
@@ -90,6 +90,18 @@ static PostProcessor<PacketsData> reg1 = {
                 packet->set_optional_string_user_password("");
                 break;
         }
+
+#ifdef SHOW_LOG
+        fprintf(stderr, "\n I'm here \n"
+                        "packet->optional_string_client_type(): %s\n"
+                        "packet->optional_string_user_name(): %s\n"
+                        "packet->optional_string_user_password(): %s\n",
+                        packet->optional_string_client_type().c_str(),
+                        packet->optional_string_user_name().c_str(),
+                        packet->optional_string_user_password().c_str()
+                        );
+#endif
+
     }};
 
 //// Example
