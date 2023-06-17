@@ -356,7 +356,7 @@ std::vector<packet> ProtoToPacket(const PacketsData &data) {
     std::vector<packet> packets;
 
 #ifdef SHOW_LOG
-    printf("Client type:%s\n", data.optional_string_client_type().c_str());
+    fprintf(stderr,"Client type:%s\n", data.optional_string_client_type().c_str());
 #endif
 
     packets.emplace_back(data.optional_string_client_type() + "\r\n");
@@ -442,24 +442,24 @@ DEFINE_PROTO_FUZZER(const PacketsData &data) {
     {
         int fd1 = open(data_file_name, O_RDONLY);
         if (dup2(fd1, STDIN_FILENO) == -1) {
-            printf("error: could not redirect %s to stdin", data_file_name);
+            fprintf(stderr,"error: could not redirect %s to stdin", data_file_name);
             assert(false);
         }
         close(fd1);
         remove(data_file_name);
     }
 #ifdef SHOW_LOG
-    printf("thread will creating\n");
+    fprintf(stderr,"thread will creating\n");
 #endif
 
     std::thread main_sshd_thread(main_sshd, argc, args);
 #ifdef SHOW_LOG
-    printf("thread is runned\n");
+    fprintf(stderr,"thread is runned\n");
 #endif
 
     main_sshd_thread.join();
 #ifdef SHOW_LOG
-    printf("thread was joined\n");
+    fprintf(stderr,"thread was joined\n");
 #endif
 
     free_args();
