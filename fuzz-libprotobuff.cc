@@ -73,7 +73,6 @@ using PostProcessor =
 static PostProcessor<PacketsData> reg1 = {
     [](PacketsData* packet, unsigned int seed) {
         // SSH-2.0-PuTTY_Release_0.64
-        packet->set_optional_string_client_type("SSH-2.0-PuTTY_Release_0." + packet->optional_string_client_type());
 //        packet->set_optional_string_client_type("SSH-2.0-PuTTY_Release_0.64");
 
         switch (packet->optional_uint64_user_id()) {
@@ -359,7 +358,7 @@ std::vector<packet> ProtoToPacket(const PacketsData &data) {
     fprintf(stderr,"Client type:%s\n", data.optional_string_client_type().c_str());
 #endif
 
-    packets.emplace_back(data.optional_string_client_type() + "\r\n");
+    packets.emplace_back("SSH-2.0-PuTTY" + data.optional_string_client_type() + "\r\n");
 //    packets.emplace_back("SSH-2.0-OpenSSH_9.1" "\r\n");
     {
         /**
