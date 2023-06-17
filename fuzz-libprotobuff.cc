@@ -55,9 +55,9 @@ void print_buf(char *title, const char *buf, size_t buf_len)
     const unsigned char * buf_ = (const unsigned char *)buf;
     fprintf(stderr, "%s length: %d\nData:\n", title, buf_len);
     for (i = 0; i < buf_len; ++i) {
-        fprintf(stderr, "%02X%s", buf_[i],
-             ( i + 1 ) % 16 == 0 ? "\r\n" : " " );
+        fprintf(stderr, "%02X%s", buf_[i], ( i + 1 ) % 16 == 0 ? "\r\n" : " " );
     }
+    fprintf(stderr, "\n");
 }
 
 void init_args() {
@@ -104,7 +104,7 @@ static PostProcessor<PacketsData> reg1 = {
 #ifdef SHOW_LOG
         print_buf("Name",       packet->optional_string_user_name().c_str(),        packet->optional_string_user_name().length());
         print_buf("Password",   packet->optional_string_user_password().c_str(),    packet->optional_string_user_password().length());
-        print_buf("Client",     packet->optional_string_client_type().c_str(),      packet->optional_string_user_name().length());
+        print_buf("Client",     packet->optional_string_client_type().c_str(),      packet->optional_string_client_type().length());
 #endif
 
     }};
@@ -364,7 +364,7 @@ std::vector<packet> ProtoToPacket(const PacketsData &data) {
     //fprintf(stderr,"Client type:%s\n", data.optional_string_client_type().c_str());
 //#endif
 
-    packets.emplace_back("SSH-2.0-PuTTY_Release_" + data.optional_string_client_type() + "\r\n");
+    packets.emplace_back("SSH-2.0-PuTTY_Rele" + data.optional_string_client_type() + "\r\n");
 //    packets.emplace_back("SSH-2.0-OpenSSH_9.1" "\r\n");
     {
         /**
