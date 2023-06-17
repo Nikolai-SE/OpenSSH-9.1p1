@@ -72,14 +72,22 @@ using PostProcessor =
 
 static PostProcessor<PacketsData> reg1 = {
     [](PacketsData* packet, unsigned int seed) {
-        packet->set_optional_string_client_type("SSH-2.0-" + packet->optional_string_client_type());
+        // SSH-2.0-PuTTY_Release_0.64
+        packet->set_optional_string_client_type("SSH-2.0-PuTTY_Release_0." + packet->optional_string_client_type());
+//        packet->set_optional_string_client_type("SSH-2.0-PuTTY_Release_0.64");
 
-        switch (packet->optional_uint64_user_id() % 2) {
+        switch (packet->optional_uint64_user_id()) {
             case 0:
                 packet->set_optional_string_user_name("user");
                 packet->set_optional_string_user_password("user");
                 break;
+            case 1:
+                packet->set_optional_string_user_name("nik");
+                packet->set_optional_string_user_password("nik");
+                break;
             default:
+                packet->set_optional_string_user_name("");
+                packet->set_optional_string_user_password("");
                 break;
         }
     }};
@@ -426,6 +434,7 @@ DEFINE_PROTO_FUZZER(const PacketsData &data) {
             assert(false);
         }
         close(fd1);
+        remove(data_file_name);
     }
 #ifdef SHOW_LOG
     printf("thread will creating\n");
