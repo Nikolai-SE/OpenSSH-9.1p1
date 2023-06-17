@@ -16,9 +16,9 @@ message Msg {
 }
 
 message PacketsData {
-  optional uint64 optional_uint64_client_type = 1;
-  optional string optional_string_client_type = 2;
-  optional uint64 optional_uint64 = 3;
-  optional string optional_string_user_name = 4;
-  optional string optional_string_user_password = 5;
+  optional string optional_string_client_type = 1;
+  optional uint64 optional_uint64_user_id = 2;
+  optional string optional_string_user_name = 3;
+  optional string optional_string_user_password = 4;
+//  optional uint64 optional_uint64_client_type = 5;
 }
