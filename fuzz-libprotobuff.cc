@@ -44,7 +44,7 @@ const char *PORT = "2022";
 ////              -ddd -e -p $PORT -r -f $BUILD_PATH/etc/sshd_config -i
 //const char* args_literals[] = {"sshd", "-ddd", "-e", "-r", "-p", PORT,
 //                "-f", "/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/sshd_config", "-i"};
-const char *args_literals[] = {"sshd", "-d", "-e", "-f", "/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/sshd_config", "-i"};
+const char *args_literals[] = {"sshd", "-d", "-e", "-f", "/home/user/openssh_fuzz/etc/sshd_config", "-i"};
 
 char **args = nullptr;
 const int argc = sizeof(args_literals) / sizeof(const char *);
@@ -364,7 +364,7 @@ std::vector<packet> ProtoToPacket(const PacketsData &data) {
     //fprintf(stderr,"Client type:%s\n", data.optional_string_client_type().c_str());
 //#endif
 
-    packets.emplace_back("SSH-2.0-PuTTY_Rele" + data.optional_string_client_type() + "\r\n");
+    packets.emplace_back("SSH-2.0-PuTTY_Release_0" + data.optional_string_client_type() + "\r\n");
 //    packets.emplace_back("SSH-2.0-OpenSSH_9.1" "\r\n");
     {
         /**
