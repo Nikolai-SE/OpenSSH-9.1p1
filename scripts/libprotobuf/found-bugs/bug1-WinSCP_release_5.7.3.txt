@@ -1,0 +1,122 @@
+main_sshd started with: argc=6, args: sshd -d -e -f /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/sshd_config -i
+/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/sshd_config line 14: Deprecated option UsePrivilegeSeparation
+Bad remote protocol version identification: 'SSH-2.0-'
+banner exchange: Connection from UNKNOWN port 65535: invalid format
+Name length: 4
+Data:user
+ Bytes:75 73 65 72
+Password length: 4
+Data:user
+ Bytes:75 73 65 72
+Client length: 20
+Data:WinSCP_release_5.7.3
+ Bytes:57 69 6E 53 43 50 5F 72 65 6C 65 61 73 65 5F 35
+2E 37 2E 33
+main_sshd started with: argc=6, args: sshd -d -e -f /home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/sshd_config -i
+/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/sshd_config line 14: Deprecated option UsePrivilegeSeparation
+=================================================================
+==1856942==ERROR: AddressSanitizer: heap-use-after-free on address 0x6120001042c0 at pc 0x0000007f6c10 bp 0x7f197921e1d0 sp 0x7f197921e1c8
+READ of size 1 at 0x6120001042c0 thread T43
+    #0 0x7f6c0f  (/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/scripts/libprotobuf/sshd-libprotobuf-mutator.out+0x7f6c0f)
+    #1 0x604eaa  (/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/scripts/libprotobuf/sshd-libprotobuf-mutator.out+0x604eaa)
+    #2 0x6220e3  (/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/scripts/libprotobuf/sshd-libprotobuf-mutator.out+0x6220e3)
+    #3 0x6194d8  (/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/scripts/libprotobuf/sshd-libprotobuf-mutator.out+0x6194d8)
+    #4 0x63d5ff  (/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/scripts/libprotobuf/sshd-libprotobuf-mutator.out+0x63d5ff)
+    #5 0x6482f2  (/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/scripts/libprotobuf/sshd-libprotobuf-mutator.out+0x6482f2)
+    #6 0x7ae3dd  (/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/scripts/libprotobuf/sshd-libprotobuf-mutator.out+0x7ae3dd)
+    #7 0x7ae6e0  (/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/scripts/libprotobuf/sshd-libprotobuf-mutator.out+0x7ae6e0)
+    #8 0x641e46  (/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/scripts/libprotobuf/sshd-libprotobuf-mutator.out+0x641e46)
+    #9 0x5e92c8  (/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/scripts/libprotobuf/sshd-libprotobuf-mutator.out+0x5e92c8)
+    #10 0x573d49  (/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/scripts/libprotobuf/sshd-libprotobuf-mutator.out+0x573d49)
+    #11 0x573a96  (/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/scripts/libprotobuf/sshd-libprotobuf-mutator.out+0x573a96)
+    #12 0x5739ed  (/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/scripts/libprotobuf/sshd-libprotobuf-mutator.out+0x5739ed)
+    #13 0x573944  (/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/scripts/libprotobuf/sshd-libprotobuf-mutator.out+0x573944)
+    #14 0x57334e  (/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/scripts/libprotobuf/sshd-libprotobuf-mutator.out+0x57334e)
+    #15 0x7f197eb7fecf  (/lib/x86_64-linux-gnu/libstdc++.so.6+0xceecf)
+    #16 0x7f197ea36ea6  (/lib/x86_64-linux-gnu/libpthread.so.0+0x7ea6)
+    #17 0x7f197df51a2e  (/lib/x86_64-linux-gnu/libc.so.6+0xfba2e)
+
+0x6120001042c0 is located 0 bytes inside of 266-byte region [0x6120001042c0,0x6120001043ca)
+freed by thread T43 here:
+    #0 0x532c6d  (/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/scripts/libprotobuf/sshd-libprotobuf-mutator.out+0x532c6d)
+    #1 0x7640bb  (/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/scripts/libprotobuf/sshd-libprotobuf-mutator.out+0x7640bb)
+    #2 0x5f0b40  (/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/scripts/libprotobuf/sshd-libprotobuf-mutator.out+0x5f0b40)
+    #3 0x5e92bc  (/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/scripts/libprotobuf/sshd-libprotobuf-mutator.out+0x5e92bc)
+    #4 0x573d49  (/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/scripts/libprotobuf/sshd-libprotobuf-mutator.out+0x573d49)
+    #5 0x573a96  (/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/scripts/libprotobuf/sshd-libprotobuf-mutator.out+0x573a96)
+    #6 0x5739ed  (/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/scripts/libprotobuf/sshd-libprotobuf-mutator.out+0x5739ed)
+    #7 0x573944  (/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/scripts/libprotobuf/sshd-libprotobuf-mutator.out+0x573944)
+    #8 0x57334e  (/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/scripts/libprotobuf/sshd-libprotobuf-mutator.out+0x57334e)
+    #9 0x7f197eb7fecf  (/lib/x86_64-linux-gnu/libstdc++.so.6+0xceecf)
+
+previously allocated by thread T43 here:
+    #0 0x51ef04  (/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/scripts/libprotobuf/sshd-libprotobuf-mutator.out+0x51ef04)
+    #1 0x7f6c51  (/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/scripts/libprotobuf/sshd-libprotobuf-mutator.out+0x7f6c51)
+    #2 0x604eaa  (/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/scripts/libprotobuf/sshd-libprotobuf-mutator.out+0x604eaa)
+    #3 0x6035e2  (/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/scripts/libprotobuf/sshd-libprotobuf-mutator.out+0x6035e2)
+    #4 0x5e424f  (/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/scripts/libprotobuf/sshd-libprotobuf-mutator.out+0x5e424f)
+    #5 0x573d49  (/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/scripts/libprotobuf/sshd-libprotobuf-mutator.out+0x573d49)
+    #6 0x573a96  (/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/scripts/libprotobuf/sshd-libprotobuf-mutator.out+0x573a96)
+    #7 0x5739ed  (/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/scripts/libprotobuf/sshd-libprotobuf-mutator.out+0x5739ed)
+    #8 0x573944  (/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/scripts/libprotobuf/sshd-libprotobuf-mutator.out+0x573944)
+    #9 0x57334e  (/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/scripts/libprotobuf/sshd-libprotobuf-mutator.out+0x57334e)
+    #10 0x7f197eb7fecf  (/lib/x86_64-linux-gnu/libstdc++.so.6+0xceecf)
+
+Thread T43 created by T0 here:
+    #0 0x51d91a  (/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/scripts/libprotobuf/sshd-libprotobuf-mutator.out+0x51d91a)
+    #1 0x7f197eb80144  (/lib/x86_64-linux-gnu/libstdc++.so.6+0xcf144)
+    #2 0x56f0e1  (/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/scripts/libprotobuf/sshd-libprotobuf-mutator.out+0x56f0e1)
+    #3 0x56ea85  (/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/scripts/libprotobuf/sshd-libprotobuf-mutator.out+0x56ea85)
+    #4 0x46c231  (/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/scripts/libprotobuf/sshd-libprotobuf-mutator.out+0x46c231)
+    #5 0x46b975  (/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/scripts/libprotobuf/sshd-libprotobuf-mutator.out+0x46b975)
+    #6 0x46d3a0  (/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/scripts/libprotobuf/sshd-libprotobuf-mutator.out+0x46d3a0)
+    #7 0x46de15  (/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/scripts/libprotobuf/sshd-libprotobuf-mutator.out+0x46de15)
+    #8 0x45d825  (/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/scripts/libprotobuf/sshd-libprotobuf-mutator.out+0x45d825)
+    #9 0x485472  (/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/scripts/libprotobuf/sshd-libprotobuf-mutator.out+0x485472)
+    #10 0x7f197de79d09  (/lib/x86_64-linux-gnu/libc.so.6+0x23d09)
+
+SUMMARY: AddressSanitizer: heap-use-after-free (/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/scripts/libprotobuf/sshd-libprotobuf-mutator.out+0x7f6c0f)
+Shadow bytes around the buggy address:
+  0x0c2480018800: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x0c2480018810: fd fd fd fd fd fd fd fd fd fd fa fa fa fa fa fa
+  0x0c2480018820: fa fa fa fa fa fa fa fa fd fd fd fd fd fd fd fd
+  0x0c2480018830: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x0c2480018840: fd fd fd fd fd fd fd fd fd fd fa fa fa fa fa fa
+=>0x0c2480018850: fa fa fa fa fa fa fa fa[fd]fd fd fd fd fd fd fd
+  0x0c2480018860: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x0c2480018870: fd fd fd fd fd fd fd fd fd fd fa fa fa fa fa fa
+  0x0c2480018880: fa fa fa fa fa fa fa fa fd fd fd fd fd fd fd fd
+  0x0c2480018890: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x0c24800188a0: fd fd fd fd fd fd fd fd fd fd fd fd fd fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+  Shadow gap:              cc
+==1856942==ABORTING
+MS: 4 CustomCrossOver-CustomCrossOver-ManualDict-Custom- DE: "WinSCP_release_5.7.3"-; base unit: 162c754abfb51f1c047fbdadbbcde4b59dd1d230
+0x6f,0x70,0x74,0x69,0x6f,0x6e,0x61,0x6c,0x5f,0x73,0x74,0x72,0x69,0x6e,0x67,0x5f,0x63,0x6c,0x69,0x65,0x6e,0x74,0x5f,0x74,0x79,0x70,0x65,0x3a,0x20,0x22,0x57,0x69,0x6e,0x53,0x43,0x50,0x5f,0x72,0x65,0x6c,0x65,0x61,0x73,0x65,0x5f,0x35,0x2e,0x37,0x2e,0x33,0x22,0xa,0x6f,0x70,0x74,0x69,0x6f,0x6e,0x61,0x6c,0x5f,0x75,0x69,0x6e,0x74,0x36,0x34,0x5f,0x75,0x73,0x65,0x72,0x5f,0x69,0x64,0x3a,0x20,0x30,0xa,0x6f,0x70,0x74,0x69,0x6f,0x6e,0x61,0x6c,0x5f,0x73,0x74,0x72,0x69,0x6e,0x67,0x5f,0x75,0x73,0x65,0x72,0x5f,0x6e,0x61,0x6d,0x65,0x3a,0x20,0x22,0x75,0x73,0x65,0x72,0x22,0xa,0x6f,0x70,0x74,0x69,0x6f,0x6e,0x61,0x6c,0x5f,0x73,0x74,0x72,0x69,0x6e,0x67,0x5f,0x75,0x73,0x65,0x72,0x5f,0x70,0x61,0x73,0x73,0x77,0x6f,0x72,0x64,0x3a,0x20,0x22,0x75,0x73,0x65,0x72,0x22,0xa,
+optional_string_client_type: \"WinSCP_release_5.7.3\"\x0aoptional_uint64_user_id: 0\x0aoptional_string_user_name: \"user\"\x0aoptional_string_user_password: \"user\"\x0a
+artifact_prefix='./'; Test unit written to ./crash-d6e414ffcb1c9099a9ff61bb95c57a1e4c49ca5b
+Base64: b3B0aW9uYWxfc3RyaW5nX2NsaWVudF90eXBlOiAiV2luU0NQX3JlbGVhc2VfNS43LjMiCm9wdGlvbmFsX3VpbnQ2NF91c2VyX2lkOiAwCm9wdGlvbmFsX3N0cmluZ191c2VyX25hbWU6ICJ1c2VyIgpvcHRpb25hbF9zdHJpbmdfdXNlcl9wYXNzd29yZDogInVzZXIiCg==
+stat::number_of_executed_units: 42
+stat::average_exec_per_sec:     3
+stat::new_units_added:          7
+stat::slowest_unit_time_sec:    0
+stat::peak_rss_mb:              98
+INFO: exiting: 1 time: 90s
