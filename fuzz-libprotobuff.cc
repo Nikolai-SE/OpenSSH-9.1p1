@@ -6,7 +6,7 @@
 
 #ifdef __cplusplus
 
-#define SHOW_LOG
+//#define SHOW_LOG
 
 #include <cmath>
 #include <stdio.h>
@@ -41,9 +41,6 @@ int main_sshd(int ac, char **av);
 }
 
 const char *PORT = "2022";
-////              -ddd -e -p $PORT -r -f $BUILD_PATH/etc/sshd_config -i
-//const char* args_literals[] = {"sshd", "-ddd", "-e", "-r", "-p", PORT,
-//                "-f", "/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/sshd_config", "-i"};
 const char *args_literals[] = {"sshd", "-d", "-e", "-f", "/home/nik/Fuzzing/OpenSSH/OpenSSH-9.1p1-copy/sshd_config", "-i"};
 
 char **args = nullptr;
@@ -66,15 +63,23 @@ void free_args() {
     args = nullptr;
 }
 
+void print_buf(const char *title, const char *buf, size_t buf_len)
+{
+    size_t i = 0;
+    const unsigned char * buf_ = (const unsigned char *)buf;
+    fprintf(stderr, "%s length: %zu\nData:%s\n Bytes:", title, buf_len, buf);
+    for (i = 0; i < buf_len; ++i) {
+        fprintf(stderr, "%02X%s", buf_[i], ( i + 1 ) % 16 == 0 ? "\r\n" : " " );
+    }
+    fprintf(stderr, "\n");
+}
+
 template<class Proto>
 using PostProcessor =
         protobuf_mutator::libfuzzer::PostProcessorRegistration<Proto>;
 
 static PostProcessor<PacketsData> reg1 = {
     [](PacketsData* packet, unsigned int seed) {
-        // SSH-2.0-PuTTY_Release_0.64
-//        packet->set_optional_string_client_type("SSH-2.0-PuTTY_Release_0.64");
-
         switch (packet->optional_uint64_user_id()) {
             case 0:
                 packet->set_optional_string_user_name("user");
@@ -89,42 +94,12 @@ static PostProcessor<PacketsData> reg1 = {
                 packet->set_optional_string_user_password("");
                 break;
         }
-
 #ifdef SHOW_LOG
-        fprintf(stderr, "\n I'm here \n"
-                        "packet->optional_string_client_type(): %s\n"
-                        "packet->optional_string_user_name(): %s\n"
-                        "packet->optional_string_user_password(): %s\n",
-                        packet->optional_string_client_type().c_str(),
-                        packet->optional_string_user_name().c_str(),
-                        packet->optional_string_user_password().c_str()
-                        );
+        print_buf("Name",       packet->optional_string_user_name().c_str(),        packet->optional_string_user_name().length());
+        print_buf("Password",   packet->optional_string_user_password().c_str(),    packet->optional_string_user_password().length());
+        print_buf("Client",     packet->optional_string_client_type().c_str(),      packet->optional_string_client_type().length());
 #endif
-
     }};
-
-//// Example
-//static PostProcessor<Msg> reg1 = {
-//    [](Msg* message, unsigned int seed) {
-//      message->set_optional_uint64(
-//          std::hash<std::string>{}(message->optional_string()));
-//    }};
-
-//static PostProcessor<google::protobuf::Any> reg2 = {
-//    [](google::protobuf::Any* any, unsigned int seed) {
-//      // Guide mutator to usefull 'Any' types.
-//      static const char* const expected_types[] = {
-//          "type.googleapis.com/google.protobuf.DescriptorProto",
-//          "type.googleapis.com/google.protobuf.FileDescriptorProto",
-//      };
-//
-//      if (!std::count(std::begin(expected_types), std::end(expected_types),
-//                      any->type_url())) {
-//        const size_t num =
-//            (std::end(expected_types) - std::begin(expected_types));
-//        any->set_type_url(expected_types[seed % num]);
-//      }
-//    }};
 
 size_t
 format_with_zero(const char *format_array, size_t format_array_length, const std::vector<std::string> &format_args,
@@ -358,7 +333,8 @@ std::vector<packet> ProtoToPacket(const PacketsData &data) {
     fprintf(stderr,"Client type:%s\n", data.optional_string_client_type().c_str());
 #endif
 
-    packets.emplace_back("SSH-2.0-PuTTY" + data.optional_string_client_type() + "\r\n");
+    packets.emplace_back("SSH-2.0-" + data.optional_string_client_type() + "\r\n");
+//    packets.emplace_back("SSH-2.0-PuTTY_Release_0." + data.optional_string_client_type() + "\r\n");
 //    packets.emplace_back("SSH-2.0-OpenSSH_9.1" "\r\n");
     {
         /**
@@ -424,7 +400,7 @@ DEFINE_PROTO_FUZZER(const PacketsData &data) {
     fprintf(stderr, "\n Test \n");
 #endif
 
-    char data_file_name[100]{};
+    char data_file_name[64]{};
     sprintf(data_file_name, "data%d.in", gettid());
 
     {
@@ -445,7 +421,6 @@ DEFINE_PROTO_FUZZER(const PacketsData &data) {
             assert(false);
         }
         close(fd1);
-        remove(data_file_name);
     }
 #ifdef SHOW_LOG
     fprintf(stderr,"thread will creating\n");
@@ -461,7 +436,10 @@ DEFINE_PROTO_FUZZER(const PacketsData &data) {
     fprintf(stderr,"thread was joined\n");
 #endif
 
-    free_args();
+    {
+//        remove(data_file_name);
+        free_args();
+    }
 }
 
 #ifdef SHOW_LOG
